@@ -1,0 +1,1325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SGLT2 Cardiovascular Outcome Trials | Validation Plan</title>
+    <link rel="icon" href="data:," />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f6fb;
+        --ink: #16213e;
+        --muted: #5b657a;
+        --card: #ffffff;
+        --line: #d8e0f0;
+        --accent: #0f5c7a;
+        --accent-soft: #e0f1f8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 44%, #ffffff 100%);
+        color: var(--ink);
+        font: 16px/1.55 "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      }
+      main {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 20px 56px;
+      }
+      .hero {
+        display: grid;
+        gap: 16px;
+        padding: 28px;
+        background: radial-gradient(circle at top left, #dceefe 0%, #ffffff 55%);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 16px 48px rgba(15, 52, 96, 0.08);
+      }
+      .kicker {
+        margin: 0;
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+      h1, h2 { margin: 0; }
+      p { margin: 0; color: var(--muted); }
+      .grid {
+        display: grid;
+        gap: 16px;
+        margin-top: 22px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+      }
+      .card strong {
+        display: block;
+        font-size: 1.75rem;
+        color: var(--ink);
+      }
+      .section {
+        margin-top: 24px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px;
+      }
+      pre {
+        margin: 12px 0 0;
+        white-space: pre-wrap;
+        overflow-x: auto;
+        background: #0d1b2a;
+        color: #eff6ff;
+        padding: 14px;
+        border-radius: 14px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+        padding: 10px 8px;
+      }
+      th {
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .pillbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .pill {
+        background: var(--accent-soft);
+        border: 1px solid #b9d9e7;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        color: var(--ink);
+      }
+      iframe {
+        width: 100%;
+        min-height: 420px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #111827;
+      }
+      a { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <p class="kicker">CT.gov Validation Pack</p>
+        <h1>SGLT2 Cardiovascular Outcome Trials</h1>
+        <p>Separate cardiovascular living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-03-28. Only randomized comparative records with posted results and extractable numeric outcomes are eligible.</p>
+        <div class="pillbar">
+          <span class="pill">Priority tier: Build Now</span>
+          <span class="pill">Included RCTs: 17</span>
+          <span class="pill">Scanned records: 104</span>
+          <span class="pill">Pages fetched: 2</span>
+          <span class="pill">Domain: Lipid Disorders</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card"><span>Base query</span><strong>(&quot;type 2 diabetes&quot;) AND (empagliflozin OR canagliflozin OR dapagliflozin OR ertugliflozin OR sotagliflozin)</strong></article>
+        <article class="card"><span>Keyword pack</span><strong>EMPA-REG, CANVAS, DECLARE, VERTIS, SCORED</strong></article>
+        <article class="card"><span>Validation files</span><strong><a href="validation.json">validation.json</a></strong></article>
+        <article class="card"><span>App entry</span><strong><a href="index.html">index.html</a></strong></article>
+      </section>
+
+      <section class="section">
+        <h2>Protocol Framing And Review Question</h2>
+        <p>This plan treats the registry-native topic as a living protocol artifact rather than a link collection. The PICO framing and workflow below define what enters the snapshot, how records are screened, and how benchmark reconciliation should be performed before review sign-off.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Population</td><td>Heart Failure; Diabetes Mellitus, Type 2; Cardiovascular Diseases; Risk Factors; Type 2 Diabetes Mellitus; Hepatic Impairment</td></tr>
+            <tr><td>Interventions</td><td>Placebo; 10 mg Empagliflozin; Canagliflozin 100 mg; Canagliflozin 300 mg; Canagliflozin (Total); Ertugliflozin 5 mg (Overall Cardiovascular Study); Ertugliflozin 15 mg (Overall Cardiovascular Study); Placebo (Overall Cardiovascular Study)</td></tr>
+            <tr><td>Comparators</td><td>10 mg Empagliflozin vs Placebo; Canagliflozin 100 mg vs Placebo | Canagliflozin 300 mg vs Placebo; Ertugliflozin 5 mg (Overall Cardiovascular Study) vs Placebo (Overall Cardiovascular Study) | Ertugliflozin 15 mg (Overall Cardiovascular Study) vs Placebo (Overall Cardiovascular Study); Empagliflozin 10 mg vs Placebo | Empagliflozin 25 mg vs Placebo; Ertugliflozin 15 mg (Normal Hepatic Function) vs Ertugliflozin 15 mg (Moderate Hepatic Impairment); Treatment Group vs Control Group</td></tr>
+            <tr><td>Outcomes</td><td>Percentage of Pairwise Comparisons With Wins of Clinical Benefit, a Composite of Death, Number of Heart Failure Events (HFEs), Time to the First HFE and ≥5-point Difference in CfB in KCCQ-TSS After 90 Days of Treatment; Major Adverse Cardiovascular Events (MACE) Composite of Cardiovascular (CV) Death, Non-Fatal Myocardial Infarction (MI), and Non-Fatal Stroke; Time to First Occurrence of MACE (Composite Endpoint of Major Adverse Cardiovascular Events [Cardiovascular Death, Non-fatal Myocardial Infarction or Non-fatal Stroke]) (On-Treatment + 365-day Approach) (Overall Cardiovascular Study); Time to the First Occurrence of Any of the Following Adjudicated Components of the Primary Composite Endpoint (3-point MACE): CV Death (Including Fatal Stroke and Fatal MI), Non-fatal MI (Excluding Silent MI), and Non-fatal Stroke.; Number of Participants Who Experienced an Adverse Event; Change in A1c at the End of Study Period</td></tr>
+            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exact CT.gov Search Query</h2>
+        <pre>(&quot;type 2 diabetes&quot;) AND (empagliflozin OR canagliflozin OR dapagliflozin OR ertugliflozin OR sotagliflozin) AND (&quot;EMPA-REG&quot; OR &quot;CANVAS&quot; OR &quot;DECLARE&quot; OR &quot;VERTIS&quot; OR &quot;SCORED&quot;)</pre>
+      </section>
+
+      <section class="section">
+        <h2>Information Sources And Search History</h2>
+        <p>The project was generated directly from the ClinicalTrials.gov v2 API using the exact query below, then checked against publication-oriented benchmark searches so reviewers can compare the registry-native set against the broader literature.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://clinicaltrials.gov/search?term=(%22type%202%20diabetes%22)%20AND%20(empagliflozin%20OR%20canagliflozin%20OR%20dapagliflozin%20OR%20ertugliflozin%20OR%20sotagliflozin)%20AND%20(%22EMPA-REG%22%20OR%20%22CANVAS%22%20OR%20%22DECLARE%22%20OR%20%22VERTIS%22%20OR%20%22SCORED%22)" target="_blank" rel="noopener">CT.gov query</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22SGLT2%20Cardiovascular%20Outcome%20Trials%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">PubMed meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22SGLT2%20Cardiovascular%20Outcome%20Trials%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">PubMed randomized-trial search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Source</th>
+              <th>Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>CT.gov candidate scan started</td>
+          <td>ClinicalTrials.gov v2 API</td>
+          <td>2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Base query locked</td>
+          <td>Project generator</td>
+          <td>(&quot;type 2 diabetes&quot;) AND (empagliflozin OR canagliflozin OR dapagliflozin OR ertugliflozin OR sotagliflozin)</td>
+        </tr>
+
+        <tr>
+          <td>Keyword expansion applied</td>
+          <td>Project generator</td>
+          <td>5 terms: EMPA-REG, CANVAS, DECLARE, VERTIS, SCORED</td>
+        </tr>
+
+        <tr>
+          <td>Exact query executed</td>
+          <td>ClinicalTrials.gov</td>
+          <td>(&quot;type 2 diabetes&quot;) AND (empagliflozin OR canagliflozin OR dapagliflozin OR ertugliflozin OR sotagliflozin) AND (&quot;EMPA-REG&quot; OR &quot;CANVAS&quot; OR &quot;DECLARE&quot; OR &quot;VERTIS&quot; OR &quot;SCORED&quot;)</td>
+        </tr>
+
+        <tr>
+          <td>Registry records screened</td>
+          <td>ClinicalTrials.gov</td>
+          <td>104 records across 2 page(s)</td>
+        </tr>
+
+        <tr>
+          <td>Hard-gate exclusions applied</td>
+          <td>Generator eligibility rules</td>
+          <td>87 records excluded before synthesis</td>
+        </tr>
+
+        <tr>
+          <td>Quantitative snapshot frozen</td>
+          <td>validation.json</td>
+          <td>17 randomized trials entered the reviewer pack</td>
+        </tr>
+
+        <tr>
+          <td>Project package generated</td>
+          <td>Portfolio build</td>
+          <td>2026-03-28</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Selection And Synthesis Workflow</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Rule</th>
+              <th>Evidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Question framing</td>
+          <td>Topic slug, base query, and keyword pack frozen before generation</td>
+          <td>sglt2-cvot | 2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Registry screening</td>
+          <td>ClinicalTrials.gov v2 API queried with the exact string shown below</td>
+          <td>104 candidate records screened</td>
+        </tr>
+
+        <tr>
+          <td>Eligibility gate</td>
+          <td>Randomized interventional, completed, posted results, &gt;=2 arms, numeric outcome</td>
+          <td>17 included / 87 excluded</td>
+        </tr>
+
+        <tr>
+          <td>Extraction</td>
+          <td>Outcome groups, sponsor, eligibility, documents, and demographics preserved where available</td>
+          <td>17/17 studies with demographics</td>
+        </tr>
+
+        <tr>
+          <td>Reviewer validation</td>
+          <td>Benchmark ledger and topic-aware WebR runner bundled with each topic project</td>
+          <td>validation.json + plan.html + embedded runner</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>PRISMA Flow Summary</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Count</th>
+              <th>Reviewer Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Records identified from the exact CT.gov query</td>
+          <td>104</td>
+          <td>2 page(s) fetched</td>
+        </tr>
+
+        <tr>
+          <td>Records excluded by registry hard gates</td>
+          <td>87</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+        </tr>
+
+        <tr>
+          <td>Trials entering the quantitative snapshot</td>
+          <td>17</td>
+          <td>Included in validation.json and the live topic app</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Eligibility Rules</h2>
+        <div class="pillbar">
+          <span class="pill">Interventional</span>
+          <span class="pill">Randomized</span>
+          <span class="pill">Completed</span>
+          <span class="pill">Posted CT.gov results</span>
+          <span class="pill">At least 2 arms</span>
+          <span class="pill">Numeric outcome extractable</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <span>Protocol metadata coverage</span>
+          <strong>17/17</strong>
+          <p>Trials with a retained CT.gov brief summary excerpt.</p>
+        </article>
+        <article class="card">
+          <span>Demographics coverage</span>
+          <strong>17/17</strong>
+          <p>Trials with a retained baseline characteristics snapshot.</p>
+        </article>
+        <article class="card">
+          <span>Document coverage</span>
+          <strong>12/17</strong>
+          <p>Trials with protocol or source documents listed on CT.gov.</p>
+        </article>
+        <article class="card">
+          <span>Total reported enrollment</span>
+          <strong>47994</strong>
+          <p>Summed from the CT.gov enrollment field across included studies.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Included Trial Ledger</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Sponsor</th>
+              <th>Phase</th>
+              <th>Enrollment</th>
+              <th>Status</th>
+              <th>Start</th>
+              <th>Completion</th>
+              <th>Arms</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04157751" target="_blank" rel="noopener">NCT04157751</a></td>
+          <td>A Study to Test the Effect of Empagliflozin in Patients Who Are in Hospital for Acute Heart Failure</td>
+          <td>Boehringer Ingelheim (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>530 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2020-05-18</td>
+          <td>2021-06-02</td>
+          <td>Arm 1 | Arm 2</td>
+          <td>Percentage of Pairwise Comparisons With Wins of Clinical Benefit, a Composite of Death, Number of Heart Failure Events (HFEs), Time to the First HFE and ≥5-point Difference in CfB in KCCQ-TSS After 90 Days of Treatment</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01032629" target="_blank" rel="noopener">NCT01032629</a></td>
+          <td>CANVAS - CANagliflozin cardioVascular Assessment Study</td>
+          <td>Janssen Research &amp; Development, LLC (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>4330 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2009-12-09</td>
+          <td>2017-02-22</td>
+          <td>Each patient will receive placebo (inactive medication) on background standard of care for diabetes once daily for the duration of the study | Each patient will receive canagliflozin (JNJ-28431754) 100 mg once daily on background standard of care for diabetes once daily for the duration of the study | Each patient will receive canagliflozin (JNJ-28431754) 300 mg once daily on background standard of care for diabetes once daily for the duration of the study</td>
+          <td>Major Adverse Cardiovascular Events (MACE) Composite of Cardiovascular (CV) Death, Non-Fatal Myocardial Infarction (MI), and Non-Fatal Stroke</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01986881" target="_blank" rel="noopener">NCT01986881</a></td>
+          <td>Cardiovascular Outcomes Following Ertugliflozin Treatment in Type 2 Diabetes Mellitus Participants With Vascular Disease, The VERTIS CV Study (MK-8835-004)</td>
+          <td>Merck Sharp &amp; Dohme LLC (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>8246 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2013-11-04</td>
+          <td>2019-12-27</td>
+          <td>Ertugliflozin 15 mg administered orally once daily for up to approximately 6 years | Ertugliflozin 5 mg administered orally once daily for up to approximately 6 years | Matching placebo to ertugliflozin administered orally once daily for up to approximately 6 years</td>
+          <td>Time to First Occurrence of MACE (Composite Endpoint of Major Adverse Cardiovascular Events [Cardiovascular Death, Non-fatal Myocardial Infarction or Non-fatal Stroke]) (On-Treatment + 365-day Approach) (Overall Cardiovascular Study)</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01131676" target="_blank" rel="noopener">NCT01131676</a></td>
+          <td>BI 10773 (Empagliflozin) Cardiovascular Outcome Event Trial in Type 2 Diabetes Mellitus Patients (EMPA-REG OUTCOME).</td>
+          <td>Boehringer Ingelheim (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>7064 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2010-07-01</td>
+          <td>2015-04-01</td>
+          <td>BI 10773 tablets once daily | BI 10773 tablets once daily | Placebo tablets matching BI 10773</td>
+          <td>Time to the First Occurrence of Any of the Following Adjudicated Components of the Primary Composite Endpoint (3-point MACE): CV Death (Including Fatal Stroke and Fatal MI), Non-fatal MI (Excluding Silent MI), and Non-fatal Stroke.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02115347" target="_blank" rel="noopener">NCT02115347</a></td>
+          <td>Pharmacokinetics, Safety, and Tolerability of Ertugliflozin (MK-8835/PF-04971729) in Participants With Hepatic Impairment and in Healthy Participants (MK-8835-014)</td>
+          <td>Merck Sharp &amp; Dohme LLC (INDUSTRY)</td>
+          <td>Phase 1</td>
+          <td>16 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2014-09-19</td>
+          <td>2015-01-19</td>
+          <td>Participants receive a single 15 mg oral dose (tablet) of ertugliflozin | Participants receive a single 15 mg oral dose (tablet) of ertugliflozin | Participants receive a single 15 mg oral dose (tablet) of ertugliflozin</td>
+          <td>Number of Participants Who Experienced an Adverse Event</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02846233" target="_blank" rel="noopener">NCT02846233</a></td>
+          <td>Stepping-down Approach in Patients With Chronic Poorly-controlled Diabetes on Advanced Insulin Therapy?</td>
+          <td>University of California, San Francisco (OTHER)</td>
+          <td>NA</td>
+          <td>22 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2016-08-01</td>
+          <td>2018-12-01</td>
+          <td>Interventions: All prandial insulin injections, usually 3 times daily before meals, will be discontinued. Basal insulin, usually once daily at bed time, will be continued at 80 % of the home dose. Albiglutide OR Dulaglutide AND Empagliflozin will be added to metformin and a basal insulin. | Interventions: There will not be any change in insulin therapy, and they will continue to have the usual and standard care through the primary care provider. They should not receive SGLT2i and GLP1 RA during the study period.</td>
+          <td>Change in A1c at the End of Study Period</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02863328" target="_blank" rel="noopener">NCT02863328</a></td>
+          <td>Efficacy and Safety of Oral Semaglutide Versus Empagliflozin in Subjects With Type 2 Diabetes Mellitus</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>822 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2016-08-10</td>
+          <td>2018-03-08</td>
+          <td>Arm 1 | Arm 2</td>
+          <td>Change in HbA1c</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04249778" target="_blank" rel="noopener">NCT04249778</a></td>
+          <td>Dapagliflozin at Discharge on Hospital Heart Failure Readmission</td>
+          <td>Emory University (OTHER)</td>
+          <td>Phase 4</td>
+          <td>105 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2020-07-29</td>
+          <td>2022-03-03</td>
+          <td>Patients admitted with exacerbation of chronic heart failure by clinical and radiologic features randomized to receive 10 mg of dapagliflozin, once daily for 26 weeks. | Patients admitted with exacerbation of chronic heart failure by clinical and radiologic features randomized to receive a placebo to match 10 mg of dapagliflozin, once daily for 26 weeks.</td>
+          <td>Number of Participants With Hospital Admissions, Emergency Department Visits, Urgent Clinic Visits, and Death</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03136484" target="_blank" rel="noopener">NCT03136484</a></td>
+          <td>Efficacy and Safety of Semaglutide Versus Canagliflozin as add-on to Metformin in Subjects With Type 2 Diabetes</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>788 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2017-03-15</td>
+          <td>2018-11-16</td>
+          <td>Arm 1 | Arm 2</td>
+          <td>Change in HbA1c</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01989754" target="_blank" rel="noopener">NCT01989754</a></td>
+          <td>A Study of the Effects of Canagliflozin (JNJ-28431754) on Renal Endpoints in Adult Participants With Type 2 Diabetes Mellitus</td>
+          <td>Janssen Research &amp; Development, LLC (INDUSTRY)</td>
+          <td>Phase 4</td>
+          <td>5813 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2014-01-16</td>
+          <td>2017-02-23</td>
+          <td>Each patient will receive canagliflozin (JNJ-28431754) 100 mg once daily during the first 13 weeks, then the dose may be increased to 300 mg once daily. | Each patient will receive placebo (inactive medication) once daily.</td>
+          <td>Progression of Albuminuria</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01958671" target="_blank" rel="noopener">NCT01958671</a></td>
+          <td>A Study of the Efficacy and Safety of Ertugliflozin Monotherapy in the Treatment of Participants With Type 2 Diabetes Mellitus and Inadequate Glycemic Control Despite Diet and Exercise (MK-8835-003, VERTIS MONO)</td>
+          <td>Merck Sharp &amp; Dohme LLC (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>461 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2013-10-09</td>
+          <td>2016-07-28</td>
+          <td>Phase A: Ertugliflozin 5 mg administered once daily for 26 weeks. Participants requiring rescue therapy will receive open-label metformin. Phase B: Ertugliflozin 5 mg administered once daily for 26 weeks. Participants not rescued with metformin in Phase A, will receive placebo to metformin. Participants rescued with metformin in Phase A will continue to receive metformin. Participants requiring rescue therapy during Phase B will receive open-label glimepiride. | Phase A: Ertugliflozin 15 mg administered once daily for 26 weeks. Participants requiring rescue therapy will receive open-label metformin. Phase B: Ertugliflozin 15 mg administered once daily for 26 weeks. Participants not rescued with metformin in Phase A, will receive placebo to metformin. Participants rescued with metformin in Phase A will continue to receive metformin. Participants requiring rescue therapy during Phase B will receive open-label glimepiride. | Phase A: Placebo to ertugliflozin administered once daily for 26 weeks. Participants requiring rescue therapy will receive open-label metformin. Phase B: Participants not rescued with open-label metformin in Phase A will also receive blinded metformin up to twice daily for 26 weeks in addition to placebo. Participants rescued with metformin in Phase A will continue to receive open-label metformin. Participants requiring rescue therapy during Phase B will receive open-label glimepiride.</td>
+          <td>Change From Baseline In A1C at Week 26</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01730534" target="_blank" rel="noopener">NCT01730534</a></td>
+          <td>Multicenter Trial to Evaluate the Effect of Dapagliflozin on the Incidence of Cardiovascular Events</td>
+          <td>AstraZeneca (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>17190 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2013-04-25</td>
+          <td>2018-09-11</td>
+          <td>Dapagliflozin + standard of care therapy for Type 2 Diabetes and for co-morbidities and cardiovascular risk factors | Placebo + standard of care therapy for Type 2 Diabetes and for co-morbidities and cardiovascular risk factors</td>
+          <td>Subjects Included in the Composite Endpoint of CV Death, MI or Ischemic Stroke</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03200860" target="_blank" rel="noopener">NCT03200860</a></td>
+          <td>Effects of Empagliflozin on Clinical Outcomes in Patients With Acute Decompensated Heart Failure</td>
+          <td>University Medical Center Groningen (OTHER)</td>
+          <td>Phase 2</td>
+          <td>80 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2017-12-18</td>
+          <td>2019-09-18</td>
+          <td>Empagliflozin 10 mg daily, oral, 30 days | Matching Placebo 10 mg daily, oral, 30 days</td>
+          <td>Dyspnea</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02099110" target="_blank" rel="noopener">NCT02099110</a></td>
+          <td>Ertugliflozin and Sitagliptin Co-administration Factorial Study (VERTIS FACTORAL, MK-8835-005)</td>
+          <td>Merck Sharp &amp; Dohme LLC (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>1233 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2014-04-22</td>
+          <td>2016-05-26</td>
+          <td>Ertugliflozin 5 mg + sitagliptin 100 mg, oral, once daily for 52 weeks | Ertugliflozin 15 mg + sitagliptin 100 mg, oral, once daily for 52 weeks | Ertugliflozin 5 mg, oral, once daily for 52 weeks | Ertugliflozin, oral, once daily for 52 weeks | Sitagliptin 100 mg, oral, once daily for 52 weeks</td>
+          <td>Change From Baseline in A1C at Week 26: Excluding Rescue Approach</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03030235" target="_blank" rel="noopener">NCT03030235</a></td>
+          <td>Dapagliflozin in PRESERVED Ejection Fraction Heart Failure</td>
+          <td>Saint Luke&#39;s Health System (OTHER)</td>
+          <td>Phase 4</td>
+          <td>324 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2017-03-01</td>
+          <td>2021-08-13</td>
+          <td>Dapagliflozin 10 mg oral tablet, once daily, for 12 weeks | Dapagliflozin matching placebo oral tablet, once daily, for 12 weeks</td>
+          <td>Effect of Dapagliflozin, as Compared With Placebo, on Heart Failure Related Health Status Using the Kansas City Cardiomyopathy Questionnaire Clinical Summary Summary Score (KCCQ-CS)</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02036515" target="_blank" rel="noopener">NCT02036515</a></td>
+          <td>Safety and Efficacy of Ertugliflozin in the Treatment of Participants With Type 2 Diabetes Mellitus Who Have Inadequate Glycemic Control on Metformin and Sitagliptin (MK-8835-006; VERTIS SITA2)</td>
+          <td>Merck Sharp &amp; Dohme LLC (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>464 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2014-03-12</td>
+          <td>2016-06-06</td>
+          <td>Ertugliflozin, 5 mg, oral, once daily for 52 weeks | Ertugliflozin, 15 mg, oral, once daily for 52 weeks | Matching placebo to ertuglifozin, oral, once daily for 52 weeks</td>
+          <td>Change From Baseline in Hemoglobin A1C at Week 26</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02630706" target="_blank" rel="noopener">NCT02630706</a></td>
+          <td>A Study to Evaluate the Efficacy and Safety of Ertugliflozin in Asian Participants With Type 2 Diabetes and Inadequate Glycemic Control on Metformin Monotherapy (MK-8835-012)</td>
+          <td>Merck Sharp &amp; Dohme LLC (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>506 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2015-12-16</td>
+          <td>2017-12-27</td>
+          <td>Ertugliflozin 5 mg oral and matching placebo for ertugliflozin 10 mg, oral, once daily for 26 weeks, while maintaining metformin at a stable dose (\&gt;=1500 mg/day). Glycemic rescue therapy with open-label glimepiride was initiated in participants with glucose values exceeding protocol-specified values. | Ertugliflozin 15 mg (ertugliflozin 5 mg + ertugliflozin 10 mg) administered orally once daily for 26 weeks, while maintaining metformin at a stable dose (\&gt;=1500 mg/day). Glycemic rescue therapy with open-label glimepiride was initiated in participants with glucose values exceeding protocol-specified values. | Placebo matching ertugliflozin administered orally once daily for 26 weeks, while maintaining metformin at a stable dose (\&gt;=1500 mg/day). Glycemic rescue therapy with open-label glimepiride was initiated in participants with glucose values exceeding protocol-specified values.</td>
+          <td>Change From Baseline in A1C (%) at Week 26 (Excluding Rescue Approach)</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Study Eligibility And Demographics</h2>
+        <p>This table keeps the trial-level age, sex, participant-count, and registry eligibility fields next to the inclusion decision so readers can challenge the clinical comparability of the pooled set.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Eligibility</th>
+              <th>Participant Counts</th>
+              <th>Age Snapshot</th>
+              <th>Sex Snapshot</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04157751" target="_blank" rel="noopener">NCT04157751</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Placebo: 265 Participants | 10 mg Empagliflozin: 265 Participants | Total: 530 Participants</td>
+          <td>Placebo: 68.1 +/- 13.8 Years | 10 mg Empagliflozin: 68.9 +/- 12.6 Years | Total: 68.5 +/- 13.2 Years</td>
+          <td>Placebo: F 93 / M 172 | 10 mg Empagliflozin: F 86 / M 179 | Total: F 179 / M 351</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01032629" target="_blank" rel="noopener">NCT01032629</a></td>
+          <td>Sex: ALL | Age: 30 Years to NR | Healthy volunteers: No</td>
+          <td>Placebo: 1442 Participants | Canagliflozin 100 mg: 1445 Participants | Canagliflozin 300 mg: 1443 Participants | Total: 4330 Participants</td>
+          <td>Placebo: 62.3 +/- 7.94 Years | Canagliflozin 100 mg: 62.2 +/- 8 Years | Canagliflozin 300 mg: 62.8 +/- 8.13 Years | Total: 62.4 +/- 8.02 Years</td>
+          <td>Placebo: F 486 / M 956 | Canagliflozin 100 mg: F 484 / M 961 | Canagliflozin 300 mg: F 499 / M 944 | Total: F 1469 / M 2861</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01986881" target="_blank" rel="noopener">NCT01986881</a></td>
+          <td>Sex: ALL | Age: 40 Years to NR | Healthy volunteers: No</td>
+          <td>Ertugliflozin 5 mg (Overall Cardiovascular Study): 2752 Participants | Ertugliflozin 15 mg (Overall Cardiovascular Study): 2747 Participants | Placebo (Overall Cardiovascular Study): 2747 Participants | Total: 8246 Participants</td>
+          <td>Ertugliflozin 5 mg (Overall Cardiovascular Study): 64.3 +/- 8.2 Years | Ertugliflozin 15 mg (Overall Cardiovascular Study): 64.4 +/- 8.0 Years | Placebo (Overall Cardiovascular Study): 64.4 +/- 8.0 Years | Total: 64.4 +/- 8.1 Years</td>
+          <td>Ertugliflozin 5 mg (Overall Cardiovascular Study): F 801 / M 1951 | Ertugliflozin 15 mg (Overall Cardiovascular Study): F 832 / M 1915 | Placebo (Overall Cardiovascular Study): F 844 / M 1903 | Total: F 2477 / M 5769</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01131676" target="_blank" rel="noopener">NCT01131676</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Placebo: 2333 Participants | Empagliflozin 10 mg: 2345 Participants | Empagliflozin 25 mg: 2342 Participants | Total: 7020 Participants</td>
+          <td>Placebo: 63.2 +/- 8.8 years | Empagliflozin 10 mg: 63.0 +/- 8.6 years | Empagliflozin 25 mg: 63.2 +/- 8.6 years | Total: 63.1 +/- 8.6 years</td>
+          <td>Placebo: F 653 / M 1680 | Empagliflozin 10 mg: F 692 / M 1653 | Empagliflozin 25 mg: F 659 / M 1683 | Total: F 2004 / M 5016</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02115347" target="_blank" rel="noopener">NCT02115347</a></td>
+          <td>Sex: ALL | Age: 18 Years to 75 Years | Healthy volunteers: Yes</td>
+          <td>Ertugliflozin 15 mg (Moderate Hepatic Impairment): 8 Participants | Ertugliflozin 15 mg (Normal Hepatic Function): 8 Participants | Total: 16 Participants</td>
+          <td>Ertugliflozin 15 mg (Moderate Hepatic Impairment): 55.1 +/- 3.4 Years | Ertugliflozin 15 mg (Normal Hepatic Function): 55.5 +/- 3.0 Years | Total: 55.3 Years</td>
+          <td>Ertugliflozin 15 mg (Moderate Hepatic Impairment): F 4 / M 4 | Ertugliflozin 15 mg (Normal Hepatic Function): F 4 / M 4 | Total: F 8 / M 8</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02846233" target="_blank" rel="noopener">NCT02846233</a></td>
+          <td>Sex: ALL | Age: 21 Years to NR | Healthy volunteers: No</td>
+          <td>Treatment Group: 10 Participants | Control Group: 8 Participants | Total: 18 Participants</td>
+          <td>Treatment Group: 51.8 +/- 11.14 years | Control Group: 55.65 +/- 11.78 years | Total: 53.5 +/- 10.94 years</td>
+          <td>Treatment Group: F 4 / M 6 | Control Group: F 5 / M 3 | Total: F 9 / M 9</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02863328" target="_blank" rel="noopener">NCT02863328</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Oral Semaglutide 14 mg: 411 Participants | Empagliflozin 25 mg: 410 Participants | Total: 821 Participants</td>
+          <td>Oral Semaglutide 14 mg: 57 +/- 10 years | Empagliflozin 25 mg: 58 +/- 10 years | Total: 58 +/- 10 years</td>
+          <td>Oral Semaglutide 14 mg: F 205 / M 206 | Empagliflozin 25 mg: F 201 / M 209 | Total: F 406 / M 415</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04249778" target="_blank" rel="noopener">NCT04249778</a></td>
+          <td>Sex: ALL | Age: 18 Years to 90 Years | Healthy volunteers: No</td>
+          <td>Dapagliflozin: 50 Participants | Placebo: 55 Participants | Total: 105 Participants</td>
+          <td>Dapagliflozin: 56.12 +/- 13.47 years | Placebo: 55.49 +/- 11.63 years | Total: 55.79 +/- 12.48 years</td>
+          <td>Dapagliflozin: F 30 / M 20 | Placebo: F 10 / M 45 | Total: F 40 / M 65</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03136484" target="_blank" rel="noopener">NCT03136484</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Semaglutide + Canagliflozin Placebo: 394 Participants | Canagliflozin + Semaglutide Placebo: 394 Participants | Total: 788 Participants</td>
+          <td>Semaglutide + Canagliflozin Placebo: 55.7 +/- 11.1 Years | Canagliflozin + Semaglutide Placebo: 57.5 +/- 10.7 Years | Total: 56.6 +/- 10.9 Years</td>
+          <td>Semaglutide + Canagliflozin Placebo: F 171 / M 223 | Canagliflozin + Semaglutide Placebo: F 193 / M 201 | Total: F 364 / M 424</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01989754" target="_blank" rel="noopener">NCT01989754</a></td>
+          <td>Sex: ALL | Age: 30 Years to NR | Healthy volunteers: No</td>
+          <td>Placebo (Placebo): 2905 Participants | Canagliflozin (Experimental): 2907 Participants | Total: 5812 Participants</td>
+          <td>Placebo (Placebo): 64 +/- 8.28 years | Canagliflozin (Experimental): 63.9 +/- 8.42 years | Total: 64 +/- 8.35 years</td>
+          <td>Placebo (Placebo): F 1111 / M 1794 | Canagliflozin (Experimental): F 1053 / M 1854 | Total: F 2164 / M 3648</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01958671" target="_blank" rel="noopener">NCT01958671</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Ertugliflozin 5 mg/Ertugliflozin 5 mg: 156 Participants | Ertugliflozin 15 mg/Ertugliflozin 15 mg: 152 Participants | Placebo/Metformin: 153 Participants | Total: 461 Participants</td>
+          <td>Ertugliflozin 5 mg/Ertugliflozin 5 mg: 56.8 +/- 11.4 Years | Ertugliflozin 15 mg/Ertugliflozin 15 mg: 56.2 +/- 10.8 Years | Placebo/Metformin: 56.1 +/- 10.9 Years | Total: 56.4 +/- 11.0 Years</td>
+          <td>Ertugliflozin 5 mg/Ertugliflozin 5 mg: F 67 / M 89 | Ertugliflozin 15 mg/Ertugliflozin 15 mg: F 62 / M 90 | Placebo/Metformin: F 71 / M 82 | Total: F 200 / M 261</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01730534" target="_blank" rel="noopener">NCT01730534</a></td>
+          <td>Sex: ALL | Age: 40 Years to 130 Years | Healthy volunteers: No</td>
+          <td>Dapa 10 mg: 8582 Participants | Placebo: 8578 Participants | Total: 17160 Participants</td>
+          <td>Dapa 10 mg: 63.9 +/- 6.8 years | Placebo: 64.0 +/- 6.8 years | Total: 63.9 +/- 6.8 years</td>
+          <td>Dapa 10 mg: F 3171 / M 5411 | Placebo: F 3251 / M 5327 | Total: F 6422 / M 10738</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03200860" target="_blank" rel="noopener">NCT03200860</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Empagliflozin: 40 Participants | Placebo: 39 Participants | Total: 79 Participants</td>
+          <td>Not reported</td>
+          <td>Empagliflozin: F 16 / M 24 | Placebo: F 10 / M 29 | Total: F 26 / M 53</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02099110" target="_blank" rel="noopener">NCT02099110</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Ertugliflozin 5 mg: 250 Participants | Ertugliflozin 15 mg: 248 Participants | Sitagliptin 100 mg: 247 Participants | Ertugliflozin 5 mg + Sitagliptin 100 mg: 243 Participants | Ertugliflozin 15 mg + Sitagliptin 100 mg: 244 Participants | Total: 1232 Participants</td>
+          <td>Ertugliflozin 5 mg: 55.1 +/- 10.1 Years | Ertugliflozin 15 mg: 55.3 +/- 9.5 Years | Sitagliptin 100 mg: 54.8 +/- 10.7 Years | Ertugliflozin 5 mg + Sitagliptin 100 mg: 55.2 +/- 10.4 Years | Ertugliflozin 15 mg + Sitagliptin 100 mg: 55.1 +/- 9.8 Years | Total: 55.1 +/- 10.1 Years</td>
+          <td>Ertugliflozin 5 mg: F 123 / M 127 | Ertugliflozin 15 mg: F 114 / M 134 | Sitagliptin 100 mg: F 93 / M 154 | Ertugliflozin 5 mg + Sitagliptin 100 mg: F 120 / M 123 | Ertugliflozin 15 mg + Sitagliptin 100 mg: F 118 / M 126 | Total: F 568 / M 664</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03030235" target="_blank" rel="noopener">NCT03030235</a></td>
+          <td>Sex: ALL | Age: 19 Years to 119 Years | Healthy volunteers: No</td>
+          <td>Dapagliflozin: 162 Participants | Placebo: 162 Participants | Total: 324 Participants</td>
+          <td>Not reported</td>
+          <td>Dapagliflozin: F 92 / M 70 | Placebo: F 92 / M 70 | Total: F 184 / M 140</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02036515" target="_blank" rel="noopener">NCT02036515</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Ertugliflozin 5 mg: 156 Participants | Ertugliflozin 15 mg: 153 Participants | Placebo: 153 Participants | Total: 462 Participants</td>
+          <td>Ertugliflozin 5 mg: 59.2 +/- 9.3 Years | Ertugliflozin 15 mg: 59.7 +/- 8.6 Years | Placebo: 58.3 +/- 9.2 Years | Total: 59.1 +/- 9.0 Years</td>
+          <td>Ertugliflozin 5 mg: F 75 / M 81 | Ertugliflozin 15 mg: F 71 / M 82 | Placebo: F 53 / M 100 | Total: F 199 / M 263</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02630706" target="_blank" rel="noopener">NCT02630706</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Ertugliflozin 5 mg: 170 Participants | Ertugliflozin 15 mg: 169 Participants | Placebo: 167 Participants | Total: 506 Participants</td>
+          <td>Ertugliflozin 5 mg: 56.1 +/- 9.0 Years | Ertugliflozin 15 mg: 56.3 +/- 9.3 Years | Placebo: 56.9 +/- 9.0 Years | Total: 56.5 +/- 9.1 Years</td>
+          <td>Ertugliflozin 5 mg: F 75 / M 95 | Ertugliflozin 15 mg: F 71 / M 98 | Placebo: F 79 / M 88 | Total: F 225 / M 281</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Record Excerpts</h2>
+        <p>Brief summaries, eligibility text, primary outcome descriptions, and source documents are surfaced here so reviewers can verify that the extracted numerical contrast is clinically aligned with the underlying registry record.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Brief Summary</th>
+              <th>Eligibility Excerpt</th>
+              <th>Primary Outcome Excerpt</th>
+              <th>Source Documents</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04157751" target="_blank" rel="noopener">NCT04157751</a></td>
+          <td>This is a study in adults who are in hospital for acute heart failure. The purpose of this study is to find out whether starting to take a medicine called empagliflozin soon after first being treated in hospital helps people with acute heart failure. Participants are in the study for about 3 months. At the beginning...</td>
+          <td>Inclusion Criteria: * Currently hospitalised for the primary diagnosis of acute heart failure (de novo or decompensated chronic HF), regardless of ejection fraction (EF). Patients with a diagnosis of hospitalized heart failure must have HF symptoms at the t...</td>
+          <td>Percentage of Pairwise Comparisons With Wins of Clinical Benefit, a Composite of Death, Number of Heart Failure Events (HFEs), Time to the First HFE and ≥5-point Difference in CfB in KCCQ-TSS After 90 Days of Treatment | Time frame: Up to 90 days. For KCCQ-TSS: at baseline and at day 90. | Clinical benefit, a compos...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2020-06-04)</span>
+<span class="pill">Statistical Analysis Plan (2021-03-11)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01032629" target="_blank" rel="noopener">NCT01032629</a></td>
+          <td>The study will assess canagliflozin (JNJ-28431754) in the treatment of patients with type 2 diabetes mellitus (T2DM) with regard to cardiovascular (CV) risk for major adverse cardiac events (MACE). Other objectives include evaluating the overall safety, tolerability, and effectiveness of canagliflozin. The data from...</td>
+          <td>Inclusion Criteria: * Patients must have a diagnosis of type 2 diabetes mellitus and greater than or equal to (\&gt;=) 30 yrs old with history of cardiovascular (CV) event, or \&gt;= 50 yrs old with high risk of CV events * Patients must have inadequate diabetes...</td>
+          <td>Major Adverse Cardiovascular Events (MACE) Composite of Cardiovascular (CV) Death, Non-Fatal Myocardial Infarction (MI), and Non-Fatal Stroke | Time frame: Up to approximately 8 years | MACE, defined as a composite of CV death, non-fatal MI, and nonfatal stroke. Adjudication of these events by the Endpoint Adjudicat...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2016-05-05)</span>
+<span class="pill">Statistical Analysis Plan (2017-03-20)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01986881" target="_blank" rel="noopener">NCT01986881</a></td>
+          <td>An overall study of the cardiovascular outcomes following treatment with ertugliflozin in participants with type 2 diabetes mellitus (T2DM) and established vascular disease. The main objective of this study is to assess the cardiovascular safety of ertugliflozin. This trial includes 3 pre-defined glycemic sub-studie...</td>
+          <td>Inclusion Criteria (Overall Cardiovascular Study): * Diagnosis of T2DM in accordance with American Diabetes Association (ADA) guidelines * Hemoglobin A1c (A1C) at the start of study participation of 7.0-10.5% (53-91 mmol/mol) * On stable allowable anti-hype...</td>
+          <td>Time to First Occurrence of MACE (Composite Endpoint of Major Adverse Cardiovascular Events [Cardiovascular Death, Non-fatal Myocardial Infarction or Non-fatal Stroke]) (On-Treatment + 365-day Approach) (Overall Cardiovascular Study) | Time frame: Up to approximately 6 years | Time to the first occurrence of any of...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2016-03-11)</span>
+<span class="pill">Statistical Analysis Plan (2020-03-20)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01131676" target="_blank" rel="noopener">NCT01131676</a></td>
+          <td>The aim of the present study is to investigate the safety of BI 10773 treatment in patients with Type 2 Diabetes Mellitus and high cardiovascular risk.</td>
+          <td>Inclusion criteria: 1. Diagnosis of type 2 diabetes mellitus prior to informed consent 2. Male or female patients on diet and exercise regimen who are drug naive or pre treated with any background therapy. Antidiabetic therapy has to be unchanged for 12 wee...</td>
+          <td>Time to the First Occurrence of Any of the Following Adjudicated Components of the Primary Composite Endpoint (3-point MACE): CV Death (Including Fatal Stroke and Fatal MI), Non-fatal MI (Excluding Silent MI), and Non-fatal Stroke. | Time frame: From randomisation to individual end of observation, up to 4.6 years |...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02115347" target="_blank" rel="noopener">NCT02115347</a></td>
+          <td>This is a study to assess the pharmacokinetics and safety of ertugliflozin (MK-8835, PF-04971729) in participants with hepatic impairment versus healthy participants. In Part 1 of the study, participants with moderate hepatic impairment (Child-Pugh score 7-9) and matched healthy participants will be enrolled; depend...</td>
+          <td>Inclusion Criteria: ALL PARTICIPANTS: * Body Mass Index (BMI) of 18 to 40 kg/m\^2; and a total body weight \&gt;50 kg (110 lbs) * Male or female not of reproductive potential * If a female of reproductive potential, agrees to remain abstinent from heterosexual...</td>
+          <td>Area Under the Plasma Concentration-Time Curve From Time 0 to Time of the Last Quantifiable Concentration (AUClast) for Ertugliflozin | Time frame: Hour 0 (predose), and at 0.5, 1, 1.5, 2, 3, 4, 6, 8, 10, 12, 24, 48, 72, and 96 hours | Area under the plasma concentration-time profile from time zero to time of the la...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02846233" target="_blank" rel="noopener">NCT02846233</a></td>
+          <td>In traditional step-up approach, the patients with poorly-controlled type 2 diabetes are instructed to take up to 4 insulin injections daily or multiple daily injections (MDI) as the most advanced therapy. However, a significant number of these patients continue to have poor diabetes control. The most common reason...</td>
+          <td>Inclusion Criteria: The following patients with diabetes mellitus type 2 who can give written consent will be eligible for enrollment. They must meet all criteria. 1. \&gt; 21 years of age 2. Body mass index (BMI) ≥30 kg/m2 3. On insulin at least 2 times daily...</td>
+          <td>Change in A1c at the End of Study Period | Time frame: 16 weeks (from baseline to end of study at 16 weeks) | change in A1c (%) from baseline to end of study at 16 weeks</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2019-05-02)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02863328" target="_blank" rel="noopener">NCT02863328</a></td>
+          <td>This trial is conducted globally. The aim of this trial is to investigate Efficacy and Safety of Oral Semaglutide versus Empagliflozin in Subjects with Type 2 Diabetes Mellitus.</td>
+          <td>Inclusion Criteria: * Informed consent obtained before any trial-related activities. Trial-related activities are any procedures that are carried out as part of the trial, including activities to determine suitability for the trial * Male or female, age abo...</td>
+          <td>Change in HbA1c | Time frame: Week 0, week 26 | Change from baseline (week 0) in glycosylated haemoglobin (HbA1c) was evaluated at week 26. The endpoint was evaluated based on data from the in-trial observation period which was the time period from when a participant was randomised until the final scheduled visit, i...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2018-10-02)</span>
+<span class="pill">Statistical Analysis Plan (2018-10-02)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04249778" target="_blank" rel="noopener">NCT04249778</a></td>
+          <td>This study will evaluate the safety and efficacy of dapagliflozin treatment in preventing hospital re-admissions, emergency room (ER) visits, urgent clinic visits, and death in patients with and without type 2 diabetes (T2D) after hospital admission for heart failure.</td>
+          <td>Inclusion Criteria: 1. Males or females between the ages of 18 and 90 years, with ADHF, and New York Heart Association (NYHA) class II, III, or IV symptoms discharged after hospital admission with a clinical diagnosis ADHF 2. Elevated natriuretic peptide te...</td>
+          <td>Number of Participants With Hospital Admissions, Emergency Department Visits, Urgent Clinic Visits, and Death | Time frame: Up to 26 weeks | The number of participants meeting criteria for a composite of hospital admissions, emergency department visits, urgent clinic visits for heart failure and death after admissio...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2021-07-06)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03136484" target="_blank" rel="noopener">NCT03136484</a></td>
+          <td>This trial is conducted in Africa, Asia, Europe, North and South America. The aim of the trial is to compare the effect of once-weekly (OW) dosing of subcutaneous semaglutide (1.0 mg) versus once-daily dosing of oral canagliflozin (300 mg) on glycaemic control in subjects with type 2 diabetes (T2D) on a background t...</td>
+          <td>Inclusion Criteria: - Informed consent obtained before any trial-related activities. Trial-related activities are any procedures that are carried out as part of the trial, including activities to determine suitability for the trial - Male or female, age equ...</td>
+          <td>Change in HbA1c | Time frame: Week 0, week 52 | Change from baseline (week 0) to week 52 in HbA1c (glycosylated haemoglobin) was evaluated. Results are based on the &#39;on-treatment without rescue medication&#39; observation period, which started at the date of first dose to either the day of last dose plus 7 days or first...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2019-06-03)</span>
+<span class="pill">Statistical Analysis Plan (2019-06-03)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01989754" target="_blank" rel="noopener">NCT01989754</a></td>
+          <td>The purpose of this study is to assess the effect of canagliflozin compared to placebo on progression of albuminuria in participants with Type 2 Diabetes Mellitus receiving standard care but with inadequate glycemic control and at elevated risk of cardiovascular events.</td>
+          <td>Inclusion Criteria: * Must have a diagnosis of type 2 diabetes mellitus * Must have inadequate diabetes control (as defined by glycosylated hemoglobin level \&gt;=7.0% to \&lt;=10.5% at screening) * Greater than or equal to (\&gt;=) 30 yrs old with history of cardio...</td>
+          <td>Progression of Albuminuria | Time frame: Up to 3 years | Progression defined as the development of micro-albuminuria (Urine Albumin Creatinine Ratio \[UACR\] 30 to 300 milligram per gram \[mg/g\]) or macroalbuminuria (Albumin/creatinine ratio \[ACR\] of greater than \[\&gt;\] 300 mg/g) in a participant with baseline no...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2016-09-01)</span>
+<span class="pill">Statistical Analysis Plan (2017-03-20)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01958671" target="_blank" rel="noopener">NCT01958671</a></td>
+          <td>This trial will evaluate the efficacy and safety of ertugliflozin monotherapy in the treatment of participants with type 2 diabetes mellitus (T2DM) and inadequate glycemic control on diet and exercise. This trial consists of a run-in period of 3 to 11 weeks, a 26-week placebo-controlled treatment period (Phase A), a...</td>
+          <td>Inclusion Criteria: * Diagnosis of T2DM in accordance to American Diabetes Association guidelines * Participants with no prior allowable oral anti-hyperglycemic agents (AHA) for at least 8 weeks prior to study participation or participants on a single allow...</td>
+          <td>Change From Baseline In A1C at Week 26 | Time frame: Baseline and Week 26 | A1C is measured as percent. The change from baseline is the Week 26 A1C percent minus the Week 0 A1C percent. Laboratory measurements were performed after an overnight fast ≥10 hours in duration. Data presented exclude data following the ini...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01730534" target="_blank" rel="noopener">NCT01730534</a></td>
+          <td>This study is being carried out to determine the effect of dapagliflozin on cardiovacular outcomes when added to current background therapy in patients with type 2 diabetes with either established cardiovacular disease or cardiovascular risk factors.</td>
+          <td>Inclusion Criteria: * Provision of informed consent prior to any study specific procedures * Female or male aged ≥40 years * Diagnosed with Type 2 Diabetes * High Risk for Cardiovascular events Exclusion Criteria: * Diagnosis of Type 1 diabetes mellitus His...</td>
+          <td>Subjects Included in the Composite Endpoint of CV Death, MI or Ischemic Stroke | Time frame: up to 5.2 years | Safety and co-primary efficacy || Subjects Included in the Composite Endpoint of CV Death or Hospitalization Due to Heart Failure. | Time frame: up to 5.2 years | Co-primary efficacy</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2016-09-25)</span>
+<span class="pill">Statistical Analysis Plan (2018-05-31)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03200860" target="_blank" rel="noopener">NCT03200860</a></td>
+          <td>Acute decompensated heart failure is the fastest growing disease in the world and the leading cause of hospital admissions worldwide. Short term mortality and rehospitalization are extremely high (20-30% within 3-6 months) and there is no therapy available that improves clinical outcome in these patients. Empagliflo...</td>
+          <td>Inclusion Criteria: * Male or female \&gt;18 years of age; Women of non-child-bearing potential must have a documentation of surgical sterilization (hysterectomy and/or bilateral oophorectomy) OR must have experienced menopause (no menses for \&gt;12 months). Wom...</td>
+          <td>Dyspnea | Time frame: From baseline to Day 4 | Change in Dyspnea on VAS analogue scale (AUC) VAS Score is a measure/scale where patients on a scale from 0 to 100 can assign their current dyspnea score. 0 means there can be no worse dyspnea, 100 means it cannot get any better (perfect). The change in Dyspnea VAS mean...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2017-10-20)</span>
+<span class="pill">Statistical Analysis Plan (2019-09-03)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02099110" target="_blank" rel="noopener">NCT02099110</a></td>
+          <td>This is a study of co-administration of ertugliflozin (MK-8835/PF-04971729) and sitagliptin given together or alone along with metformin in participants with Type 2 diabetes mellitus (T2DM) and inadequate glycemic control on metformin monotherapy. The primary hypothesis of this study is that ertugliflozin 15 mg dail...</td>
+          <td>Inclusion Criteria: * Type 2 diabetes mellitus as per American Diabetes Association guidelines * On metformin monotherapy (\&gt;=1500 mg/day) for \&gt;=8 weeks with a Visit 1/Screening A1C \&gt;=7.5% and \&lt;=11.0% (\&gt;=58 mmol/mol and \&lt;=97 mmol/mol) OR On metformin m...</td>
+          <td>Change From Baseline in A1C at Week 26: Excluding Rescue Approach | Time frame: Baseline and Week 26 | A1C is blood marker used to report average blood glucose levels over prolonged periods of time and is reported as a percentage (%). This change from baseline reflects the Week 26 A1C minus the Week 0 A1C. Excluding...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03030235" target="_blank" rel="noopener">NCT03030235</a></td>
+          <td>The primary purpose of this study is to evaluate the impact of dapagliflozin, as compared with placebo, on heart failure, disease specific biomarkers, symptoms, health status and quality of life in patients with chronic heart failure with preserved systolic function.</td>
+          <td>Inclusion Criteria: 1. Symptoms of dyspnea (NYHA class II-IV) without evidence of a non-cardiac or ischemic explanation for dyspnea 2. Ejection fraction (EF) ≥ 45% as determined on imaging study within 24 months of enrolment with no change in clinical statu...</td>
+          <td>Effect of Dapagliflozin, as Compared With Placebo, on Heart Failure Related Health Status Using the Kansas City Cardiomyopathy Questionnaire Clinical Summary Summary Score (KCCQ-CS) | Time frame: Baseline to Week 12 | Kansas City Cardiomyopathy Questionnaire clinical summary score (KCCQ-CS) at Week 12. The KCCQ is a...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2020-03-20)</span>
+<span class="pill">Statistical Analysis Plan (2021-08-12)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02036515" target="_blank" rel="noopener">NCT02036515</a></td>
+          <td>This is a safety and efficacy study of ertugliflozin (MK-8835/PF-04971729) in the treatment of participants with type 2 diabetes mellitus who have inadequate glycemic control on metformin and sitagliptin. The primary objective of the trial is to assess the hemoglobin A1C (A1C)-lowering efficacy of the addition of er...</td>
+          <td>Inclusion Criteria: * Diagnosis of type 2 diabetes mellitus (T2DM) * On stable diabetes therapy of metformin with either sitagliptin or another dipeptidyl peptidase-4 (DPP-4) inhibitor or a sulfonylurea (SU) prior to study participation and is willing to wa...</td>
+          <td>Change From Baseline in Hemoglobin A1C at Week 26 | Time frame: Baseline and Week 26 | A1C is measured as percent. Thus this change from baseline reflects the Week 26 A1C percent minus the Week 0 A1C percent. Laboratory measurements were performed after an overnight fast ≥10 hours in duration. Data presented exclude...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02630706" target="_blank" rel="noopener">NCT02630706</a></td>
+          <td>This is a study to evaluate the efficacy and safety of the addition of ertugliflozin to metformin monotherapy in Asian participants with Type 2 diabetes mellitis (T2DM) who have inadequate glycemic control on metformin monotherapy. The primary hypothesis is that the mean reduction from baseline in HbA1C for 15 mg an...</td>
+          <td>Inclusion Criteria: * Asian participants ≥18 years of age at the time of initial Screening. * Type 2 diabetes mellitus as per American Diabetes Association guidelines. * Metformin monotherapy (≥1500 mg/day) with an initial Screening A1C of 7.0-10.5% (53-91...</td>
+          <td>Change From Baseline in A1C (%) at Week 26 (Excluding Rescue Approach) | Time frame: Baseline and Week 26 | A1C is blood marker used to report average blood glucose levels over prolonged periods of time. Percentage A1C is the ratio of glycated hemoglobin to total hemoglobin x 100. Thus, this change from baseline ref...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2014-03-09)</span></div>
+          </td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exclusion Reason Counts</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Reason</th>
+              <th>Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>No Extractable Numeric Outcome</td>
+          <td>79</td>
+        </tr>
+
+        <tr>
+          <td>No Results Posted</td>
+          <td>77</td>
+        </tr>
+
+        <tr>
+          <td>Not Completed</td>
+          <td>50</td>
+        </tr>
+
+        <tr>
+          <td>Not Randomized Interventional</td>
+          <td>31</td>
+        </tr>
+
+        <tr>
+          <td>Fewer Than Two Arms</td>
+          <td>15</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Excluded Sample Records</h2>
+        <p>The first 20 excluded records are listed here with excerpts so reviewers can quickly verify why the registry pull did not enter them into the meta-analysis snapshot.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Reasons</th>
+              <th>Record Excerpt</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02985242" target="_blank" rel="noopener">NCT02985242</a></td>
+          <td>Empagliflozin Reduces Progression of Diabetic Retinopathy in Patients With High Risk of Diabetic Macular Edema</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>This is a prospective, randomized, active control, two-arm parallel, double-blind, monocenter phase IV clinical trial. The trial compares empagliflozin to glimepiride in patients with type 2 diabetes mellitus in addition to standard of care treatment. Patie...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04700839" target="_blank" rel="noopener">NCT04700839</a></td>
+          <td>SGLT2 Inhibitors in Patients With PCOS</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Polycystic ovary syndrome (PCOS) is a common endocrine disorder, with a prevalence of 5% to 15% in premenopausal women. Patients with PCOS presents as abnormal menstruation, ovulation disorders and/or hyperandrogenemia, and often accompanied by insulin resi...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06083675" target="_blank" rel="noopener">NCT06083675</a></td>
+          <td>Research Study to Compare Semaglutide Tablets With Empagliflozin or Metformin Tablets in People With Type 2 Diabetes</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>This study compares the medicines semaglutide with empagliflozin or metformin in people with newly diagnosed type 2 diabetes. This study will look mainly at how well participant&#39;s blood sugar and body weight are controlled when they are taking the study med...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06706791" target="_blank" rel="noopener">NCT06706791</a></td>
+          <td>Effect of Empagliflozin on Quality of Life in Chronic Heart Failure Patients With Diabetes Mellitus Type II</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Effect of Empagliflozin on Quality of Life in patient of Chronic Heart Failure with Diabetes Mellitus Type II. As per ESC Guidelines Empagliflozin is recommended as part of the first-line treatment for HFrEF, irrespective of diabetes status. As per American...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04976283" target="_blank" rel="noopener">NCT04976283</a></td>
+          <td>Effect of Oral Anti-diabetic Medication on Liver Fat in Subjects With Type II Diabetes and Non-alcoholic Fatty Liver</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>This randomized clinical trial aims to compare the effect of the pioglitazone and SGLT2 inhibitor combination on liver fat mass, as compared to either drug used alone, with or without background medical therapy of metformin and/or DDP4 inhibitors.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT07472920" target="_blank" rel="noopener">NCT07472920</a></td>
+          <td>Empagliflozin Adjunctive Therapy in Bipolar Depression</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>Bipolar disorder is a long-term mental health condition that causes mood changes, with depressive episodes being the most frequent and disabling. Many people do not fully recover with current treatments, showing the need for new therapeutic options. Recent...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06719661" target="_blank" rel="noopener">NCT06719661</a></td>
+          <td>The Impact of Clinical Pharmacist Intervention and Dapagliflozin as Add-On Therapy in the Management of Type 2 Diabetes Mellitus.</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Diabetes mellitus is a progressive endocrine disease characterized by insulin deficiency with or without insulin resistance. Management of type 2 diabetes requires a comprehensive team following and monitoring the disease carefully. Dapagliflozin is a sodiu...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02964715" target="_blank" rel="noopener">NCT02964715</a></td>
+          <td>The Effect of Empagliflozin on NAFLD in Asian Patients With Type 2 Diabetes</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>Non-Alcoholic Fatty Liver Disease( NAFLD) is common in patients with type 2 diabetes. Empagliflozin, an FDA-approved oral medication used to treat type 2 diabetes, has been shown to reduce production and deposition of fat in the liver in animal experiments....</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02719132" target="_blank" rel="noopener">NCT02719132</a></td>
+          <td>Effect of DapagliFLOzin on Quality of Life in Patients With Type 2 Diabetes in a Real Clinical PrActice</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>This is a multicenter, randomised, open-label, crossover, 2-period comparative phase IV study. The primary objective is to compare the effect of dapagliflozin 10 mg once daily in combination with metformin at a daily dose of ≤1,500 mg vs. metformin monother...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06192108" target="_blank" rel="noopener">NCT06192108</a></td>
+          <td>A Study of Orforglipron (LY3502970) Compared With Dapagliflozin in Adult Participants With Type 2 Diabetes and Inadequate Glycemic Control With Metformin</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The main purpose of this study is to assess the safety and efficacy of orforglipron compared with dapagliflozin in improving blood sugar control in participants with type 2 diabetes (T2D) with inadequate glycemic control using metformin. The study will last...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03315143" target="_blank" rel="noopener">NCT03315143</a></td>
+          <td>Effect of Sotagliflozin on Cardiovascular and Renal Events in Participants With Type 2 Diabetes and Moderate Renal Impairment Who Are at Cardiovascular Risk</td>
+          <td>Not Completed</td>
+          <td>The primary objective of the study was to compare the effect of sotagliflozin to placebo on total occurrences of cardiovascular (CV) death, hospitalization for heart failure \[HHF\], and urgent visit for heart failure \[HF\] in participants with type 2 diab...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT07228195" target="_blank" rel="noopener">NCT07228195</a></td>
+          <td>SGLT2i Therapy in Islet Transplantation (SIT)</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>This pilot clinical trial is designed to gather preliminary data on the efficacy and safety of empagliflozin, a diabetes drug in the sodium-glucose cotransporter 2 inhibitor (SGLT2i) class, in islet autotransplant recipients who have partial islet function.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05313529" target="_blank" rel="noopener">NCT05313529</a></td>
+          <td>LIGHT-MCI Trial: GLP-1 Agonist, SGLT2 Inhibitor, and DPP-4 Inhibitor for MCI Remission in Type 2 Diabetes</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>This is an investigator-led prospective, randomized, open label, parallel study to explore and evaluate the therapeutic effects of Liraglutide, Empagliflozin and Linagliptin on the cognitive function in T2DM patients with mild cognitive impairment (MCI), co...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06326034" target="_blank" rel="noopener">NCT06326034</a></td>
+          <td>Impact of Dapagliflozin as Add-on Therapy on Glycemic Status and Quality of Life in Type 2 Diabetic Patients</td>
+          <td>No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>Type 2 Diabetes Mellitus (T2DM) is a syndrome of metabolic dysregulation that needs a multifactorial behavioral and pharmacological treatments to prevent or delay complications, morbidity and mortality. Uncontrolled hyperglycemia can be negatively affecting...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06099067" target="_blank" rel="noopener">NCT06099067</a></td>
+          <td>Harmonizing RCT-Duplicate Emulations In A Real World Replication Program (HARRP)</td>
+          <td>No Results Posted, Not Randomized Interventional, No Extractable Numeric Outcome</td>
+          <td>Replication of three clinical trial emulations CANVAS, LEADER, and SAVOR TIMI that form part of the RCT-Duplicate initiative, sponsored by the FDA and delivered by the Brigham and Women&#39;s Hospital and Harvard Medical School. AstraZeneca will use the Instant...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05233163" target="_blank" rel="noopener">NCT05233163</a></td>
+          <td>SGLT2 Inhibitors in Transthyretin Amyloid Cardiomyopathy</td>
+          <td>Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>This is a single center, single arm, prospective, 12 week open label pilot trial of the sodium-glucose cotransporter 2 inhibitor (SGLT2i), empagliflozin 10 mg oral daily, in patients with transthyretin amyloid cardiomyopathy (ATTR-CM). The target population...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06229678" target="_blank" rel="noopener">NCT06229678</a></td>
+          <td>Ketones, SGLT2, HFrEF</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The study team will examine the effects of elevated plasma ketone levels following initiation of SGLT2 inhibitor therapy in high-risk type 2 diabetes mellitus (T2DM) individuals with heart failure (HF) with reduced ejection fraction (HFrEF) providing an ene...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05465317" target="_blank" rel="noopener">NCT05465317</a></td>
+          <td>Evaluating Comparative Effectiveness of Empagliflozin in Type 2 Diabetes Population With and Without Chronic Kidney Disease</td>
+          <td>Not Randomized Interventional</td>
+          <td>The primary purpose of this research study is to determine the cardiovascular and renal effectiveness and safety of empagliflozin compared to dipeptidyl peptidase-4 inhibitors (DPP4i) in patients with Type 2 Diabetes Mellitus (T2DM) with and without establi...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05590143" target="_blank" rel="noopener">NCT05590143</a></td>
+          <td>proMoting Effective Renoprotection in Cardiac sURgery Patients by Inhibition of SGLT-2</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Multi-centre, triple-blinded (patients, physicians, investigators), parallel-group, balanced (1:1), stratified (sex, type 2 diabetes mellitus), randomized, controlled (placebo), phase IV clinical trial to investigate the potential of preoperative initiation...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02688075" target="_blank" rel="noopener">NCT02688075</a></td>
+          <td>An Observational Study to Assess the Canagliflozin Treatment in Type 2 Diabetes Mellitus in a Usual Clinical Practice in Canada</td>
+          <td>No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>The purpose of this study is to evaluate canagliflozin use in the treatment of type 2 diabetes mellitus (T2DM) and generate evidence of its effectiveness, safety and patient-reported outcome (PRO) in a usual clinical practice in Canada.</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Benchmark Reconciliation Ledger</h2>
+        <p>This ledger turns the benchmark step into a structured reviewer task. Use the NCT IDs, contrasts, and outcome definitions below to check study overlap, arm collapsing, and endpoint alignment against published syntheses.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22SGLT2%20Cardiovascular%20Outcome%20Trials%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22SGLT2%20Cardiovascular%20Outcome%20Trials%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT</th>
+              <th>Registry Contrast</th>
+              <th>Outcome</th>
+              <th>Enrollment</th>
+              <th>Benchmark Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT04157751" target="_blank" rel="noopener">NCT04157751</a></td>
+        <td>10 mg Empagliflozin vs Placebo</td>
+        <td>Percentage of Pairwise Comparisons With Wins of Clinical Benefit, a Composite of Death, Number of Heart Failure Events (HFEs), Time to the First HFE and ≥5-point Difference in CfB in KCCQ-TSS After 90 Days of Treatment</td>
+        <td>530 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01032629" target="_blank" rel="noopener">NCT01032629</a></td>
+        <td>Canagliflozin 100 mg vs Placebo | Canagliflozin 300 mg vs Placebo</td>
+        <td>Major Adverse Cardiovascular Events (MACE) Composite of Cardiovascular (CV) Death, Non-Fatal Myocardial Infarction (MI), and Non-Fatal Stroke</td>
+        <td>4330 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01986881" target="_blank" rel="noopener">NCT01986881</a></td>
+        <td>Ertugliflozin 5 mg (Overall Cardiovascular Study) vs Placebo (Overall Cardiovascular Study) | Ertugliflozin 15 mg (Overall Cardiovascular Study) vs Placebo (Overall Cardiovascular Study)</td>
+        <td>Time to First Occurrence of MACE (Composite Endpoint of Major Adverse Cardiovascular Events [Cardiovascular Death, Non-fatal Myocardial Infarction or Non-fatal Stroke]) (On-Treatment + 365-day Approach) (Overall Cardiovascular Study)</td>
+        <td>8246 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01131676" target="_blank" rel="noopener">NCT01131676</a></td>
+        <td>Empagliflozin 10 mg vs Placebo | Empagliflozin 25 mg vs Placebo</td>
+        <td>Time to the First Occurrence of Any of the Following Adjudicated Components of the Primary Composite Endpoint (3-point MACE): CV Death (Including Fatal Stroke and Fatal MI), Non-fatal MI (Excluding Silent MI), and Non-fatal Stroke.</td>
+        <td>7064 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02115347" target="_blank" rel="noopener">NCT02115347</a></td>
+        <td>Ertugliflozin 15 mg (Normal Hepatic Function) vs Ertugliflozin 15 mg (Moderate Hepatic Impairment)</td>
+        <td>Number of Participants Who Experienced an Adverse Event</td>
+        <td>16 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02846233" target="_blank" rel="noopener">NCT02846233</a></td>
+        <td>Treatment Group vs Control Group</td>
+        <td>Change in A1c at the End of Study Period</td>
+        <td>22 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02863328" target="_blank" rel="noopener">NCT02863328</a></td>
+        <td>Empagliflozin 25 mg vs Oral Semaglutide 14 mg</td>
+        <td>Change in HbA1c</td>
+        <td>822 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT04249778" target="_blank" rel="noopener">NCT04249778</a></td>
+        <td>Dapagliflozin vs Placebo</td>
+        <td>Number of Participants With Hospital Admissions, Emergency Department Visits, Urgent Clinic Visits, and Death</td>
+        <td>105 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03136484" target="_blank" rel="noopener">NCT03136484</a></td>
+        <td>Canagliflozin + Semaglutide Placebo vs Semaglutide + Canagliflozin Placebo</td>
+        <td>Change in HbA1c</td>
+        <td>788 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01989754" target="_blank" rel="noopener">NCT01989754</a></td>
+        <td>Canagliflozin (Experimental) vs Placebo</td>
+        <td>Progression of Albuminuria</td>
+        <td>5813 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01958671" target="_blank" rel="noopener">NCT01958671</a></td>
+        <td>Ertugliflozin 5 mg vs Placebo | Ertugliflozin 15 mg vs Placebo</td>
+        <td>Change From Baseline In A1C at Week 26</td>
+        <td>461 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01730534" target="_blank" rel="noopener">NCT01730534</a></td>
+        <td>Dapa 10 mg vs Placebo</td>
+        <td>Subjects Included in the Composite Endpoint of CV Death, MI or Ischemic Stroke</td>
+        <td>17190 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03200860" target="_blank" rel="noopener">NCT03200860</a></td>
+        <td>Empagliflozin vs Placebo</td>
+        <td>Dyspnea</td>
+        <td>80 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02099110" target="_blank" rel="noopener">NCT02099110</a></td>
+        <td>Ertugliflozin 15 mg vs Ertugliflozin 5 mg | Sitagliptin 100 mg vs Ertugliflozin 5 mg</td>
+        <td>Change From Baseline in A1C at Week 26: Excluding Rescue Approach</td>
+        <td>1233 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03030235" target="_blank" rel="noopener">NCT03030235</a></td>
+        <td>Dapagliflozin vs Placebo</td>
+        <td>Effect of Dapagliflozin, as Compared With Placebo, on Heart Failure Related Health Status Using the Kansas City Cardiomyopathy Questionnaire Clinical Summary Summary Score (KCCQ-CS)</td>
+        <td>324 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02036515" target="_blank" rel="noopener">NCT02036515</a></td>
+        <td>Ertugliflozin 5 mg vs Placebo | Ertugliflozin 15 mg vs Placebo</td>
+        <td>Change From Baseline in Hemoglobin A1C at Week 26</td>
+        <td>464 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Reviewer Validation And Benchmarking</h2>
+        <p>The embedded panel below now runs the shared R benchmark suites plus topic-specific checks for the current CT.gov snapshot. Reviewers should compare the registry-native ledger above against published syntheses, inspect <code>validation.json</code>, and then confirm that the topic-aware runner resolves with the same study universe.</p>
+        <div class="pillbar">
+          <a class="pill" href="validation.json">Open validation.json</a>
+          <a class="pill" href="index.html">Open interactive topic app</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22SGLT2%20Cardiovascular%20Outcome%20Trials%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22SGLT2%20Cardiovascular%20Outcome%20Trials%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+          <a class="pill" href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fsglt2-cvot%2Fvalidation.json&amp;topic=sglt2-cvot&amp;label=SGLT2+Cardiovascular+Outcome+Trials" target="_blank" rel="noopener">Open topic-aware WebR runner</a>
+        </div>
+        <iframe id="reviewerValidationFrame" src="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fsglt2-cvot%2Fvalidation.json&amp;topic=sglt2-cvot&amp;label=SGLT2+Cardiovascular+Outcome+Trials" title="WebR reviewer validation" loading="lazy"></iframe>
+        <script>
+(() => {
+  const iframe = document.getElementById("reviewerValidationFrame");
+  const context = {"source":"ctgov-portfolio-generator","topicId":"sglt2-cvot","label":"SGLT2 Cardiovascular Outcome Trials","query":"(\"type 2 diabetes\") AND (empagliflozin OR canagliflozin OR dapagliflozin OR ertugliflozin OR sotagliflozin) AND (\"EMPA-REG\" OR \"CANVAS\" OR \"DECLARE\" OR \"VERTIS\" OR \"SCORED\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":17,"excludedCount":87,"totalEnrollment":47994,"demographicsCoverage":17,"documentCoverage":12,"comparisons":[{"studyId":"NCT04157751","title":"A Study to Test the Effect of Empagliflozin in Patients Who Are in Hospital for Acute Heart Failure","t1":"10 mg Empagliflozin","t2":"Placebo","measure":"logRR","effect":0.5783211153874385,"se":0.6238474401237195,"n1":39162,"n0":39162,"totalN":78324,"sampleSize":78324},{"studyId":"NCT01032629","title":"CANVAS - CANagliflozin cardioVascular Assessment Study","t1":"Canagliflozin 100 mg","t2":"Placebo","measure":"logRR","effect":-0.06846303936297084,"se":0.2583629757799752,"n1":1445,"n0":1442,"totalN":2887,"sampleSize":2887},{"studyId":"NCT01032629","title":"CANVAS - CANagliflozin cardioVascular Assessment Study","t1":"Canagliflozin 300 mg","t2":"Placebo","measure":"logRR","effect":-0.180251819845215,"se":0.2663986266233422,"n1":1443,"n0":1442,"totalN":2885,"sampleSize":2885},{"studyId":"NCT01032629","title":"CANVAS - CANagliflozin cardioVascular Assessment Study","t1":"Canagliflozin (Total)","t2":"Placebo","measure":"logRR","effect":-0.8159046644144783,"se":0.2628438332553654,"n1":2888,"n0":1442,"totalN":4330,"sampleSize":4330},{"studyId":"NCT01986881","title":"Cardiovascular Outcomes Following Ertugliflozin Treatment in Type 2 Diabetes Mellitus Participants With Vascular Disease, The VERTIS CV Study (MK-8835-004)","t1":"Ertugliflozin 5 mg (Overall Cardiovascular Study)","t2":"Placebo (Overall Cardiovascular Study)","measure":"logRR","effect":-0.09717179205411375,"se":0.7234454841548797,"n1":2746,"n0":2745,"totalN":5491,"sampleSize":5491},{"studyId":"NCT01986881","title":"Cardiovascular Outcomes Following Ertugliflozin Treatment in Type 2 Diabetes Mellitus Participants With Vascular Disease, The VERTIS CV Study (MK-8835-004)","t1":"Ertugliflozin 15 mg (Overall Cardiovascular Study)","t2":"Placebo (Overall Cardiovascular Study)","measure":"logRR","effect":0.03599550080305115,"se":0.6993088314700959,"n1":2747,"n0":2745,"totalN":5492,"sampleSize":5492},{"studyId":"NCT01986881","title":"Cardiovascular Outcomes Following Ertugliflozin Treatment in Type 2 Diabetes Mellitus Participants With Vascular Disease, The VERTIS CV Study (MK-8835-004)","t1":"All Ertugliflozin (Overall Cardiovascular Study)","t2":"Placebo (Overall Cardiovascular Study)","measure":"logRR","effect":-0.7215081675818665,"se":0.7108026916149978,"n1":5493,"n0":2745,"totalN":8238,"sampleSize":8238},{"studyId":"NCT01131676","title":"BI 10773 (Empagliflozin) Cardiovascular Outcome Event Trial in Type 2 Diabetes Mellitus Patients (EMPA-REG OUTCOME).","t1":"Empagliflozin 10 mg","t2":"Placebo","measure":"logRR","effect":-0.15653005531431802,"se":0.42183338222431077,"n1":2345,"n0":2333,"totalN":4678,"sampleSize":4678},{"studyId":"NCT01131676","title":"BI 10773 (Empagliflozin) Cardiovascular Outcome Event Trial in Type 2 Diabetes Mellitus Patients (EMPA-REG OUTCOME).","t1":"Empagliflozin 25 mg","t2":"Placebo","measure":"logRR","effect":-0.14568046757545045,"se":0.42074589147485014,"n1":2342,"n0":2333,"totalN":4675,"sampleSize":4675},{"studyId":"NCT01131676","title":"BI 10773 (Empagliflozin) Cardiovascular Outcome Event Trial in Type 2 Diabetes Mellitus Patients (EMPA-REG OUTCOME).","t1":"All Empagliflozin","t2":"Placebo","measure":"logRR","effect":-0.8394679213404938,"se":0.42099968477914984,"n1":4687,"n0":2333,"totalN":7020,"sampleSize":7020},{"studyId":"NCT02115347","title":"Pharmacokinetics, Safety, and Tolerability of Ertugliflozin (MK-8835/PF-04971729) in Participants With Hepatic Impairment and in Healthy Participants (MK-8835-014)","t1":"Ertugliflozin 15 mg (Normal Hepatic Function)","t2":"Ertugliflozin 15 mg (Moderate Hepatic Impairment)","measure":"logRR","effect":0.4054651081081644,"se":0.7637626158259733,"n1":8,"n0":8,"totalN":16,"sampleSize":16},{"studyId":"NCT02846233","title":"Stepping-down Approach in Patients With Chronic Poorly-controlled Diabetes on Advanced Insulin Therapy?","t1":"Treatment Group","t2":"Control Group","measure":"MD","effect":-1.5499999999999998,"se":0.6851045409181523,"n1":10,"n0":8,"totalN":18,"sampleSize":18},{"studyId":"NCT02863328","title":"Efficacy and Safety of Oral Semaglutide Versus Empagliflozin in Subjects With Type 2 Diabetes Mellitus","t1":"Empagliflozin 25 mg","t2":"Oral Semaglutide 14 mg","measure":"MD","effect":0.4,"se":0.07014020733885772,"n1":410,"n0":411,"totalN":821,"sampleSize":821},{"studyId":"NCT04249778","title":"Dapagliflozin at Discharge on Hospital Heart Failure Readmission","t1":"Dapagliflozin","t2":"Placebo","measure":"logRR","effect":-1.8876412409313374,"se":1.547652448399128,"n1":46,"n0":53,"totalN":99,"sampleSize":99},{"studyId":"NCT03136484","title":"Efficacy and Safety of Semaglutide Versus Canagliflozin as add-on to Metformin in Subjects With Type 2 Diabetes","t1":"Canagliflozin + Semaglutide Placebo","t2":"Semaglutide + Canagliflozin Placebo","measure":"MD","effect":0.7,"se":0.07489417237567662,"n1":394,"n0":394,"totalN":788,"sampleSize":788},{"studyId":"NCT01989754","title":"A Study of the Effects of Canagliflozin (JNJ-28431754) on Renal Endpoints in Adult Participants With Type 2 Diabetes Mellitus","t1":"Canagliflozin (Experimental)","t2":"Placebo","measure":"logRR","effect":-0.42802332668916804,"se":0.1259655877895888,"n1":2907,"n0":2905,"totalN":5812,"sampleSize":5812},{"studyId":"NCT01958671","title":"A Study of the Efficacy and Safety of Ertugliflozin Monotherapy in the Treatment of Participants With Type 2 Diabetes Mellitus and Inadequate Glycemic Control Despite Diet and Exercise (MK-8835-003, VERTIS MONO)","t1":"Ertugliflozin 5 mg","t2":"Placebo","measure":"MD","effect":-0.99,"se":0.120978629605912,"n1":156,"n0":153,"totalN":309,"sampleSize":309},{"studyId":"NCT01958671","title":"A Study of the Efficacy and Safety of Ertugliflozin Monotherapy in the Treatment of Participants With Type 2 Diabetes Mellitus and Inadequate Glycemic Control Despite Diet and Exercise (MK-8835-003, VERTIS MONO)","t1":"Ertugliflozin 15 mg","t2":"Placebo","measure":"MD","effect":-1.16,"se":0.12097862960591202,"n1":151,"n0":153,"totalN":304,"sampleSize":304},{"studyId":"NCT01730534","title":"Multicenter Trial to Evaluate the Effect of Dapagliflozin on the Incidence of Cardiovascular Events","t1":"Dapa 10 mg","t2":"Placebo","measure":"logRR","effect":-0.06077953824187294,"se":0.048321642039967146,"n1":8582,"n0":8578,"totalN":17160,"sampleSize":17160},{"studyId":"NCT03200860","title":"Effects of Empagliflozin on Clinical Outcomes in Patients With Acute Decompensated Heart Failure","t1":"Empagliflozin","t2":"Placebo","measure":"MD","effect":-386,"se":286.9613455046059,"n1":37,"n0":36,"totalN":73,"sampleSize":73},{"studyId":"NCT02099110","title":"Ertugliflozin and Sitagliptin Co-administration Factorial Study (VERTIS FACTORAL, MK-8835-005)","t1":"Ertugliflozin 15 mg","t2":"Ertugliflozin 5 mg","measure":"MD","effect":-0.06000000000000005,"se":0.0865845038187609,"n1":248,"n0":250,"totalN":498,"sampleSize":498},{"studyId":"NCT02099110","title":"Ertugliflozin and Sitagliptin Co-administration Factorial Study (VERTIS FACTORAL, MK-8835-005)","t1":"Sitagliptin 100 mg","t2":"Ertugliflozin 5 mg","measure":"MD","effect":-0.030000000000000027,"se":0.08658450381876089,"n1":247,"n0":250,"totalN":497,"sampleSize":497},{"studyId":"NCT02099110","title":"Ertugliflozin and Sitagliptin Co-administration Factorial Study (VERTIS FACTORAL, MK-8835-005)","t1":"Ertugliflozin 5 mg + Sitagliptin 100 mg","t2":"Ertugliflozin 5 mg","measure":"MD","effect":-0.47,"se":0.08840675230185435,"n1":243,"n0":250,"totalN":493,"sampleSize":493},{"studyId":"NCT02099110","title":"Ertugliflozin and Sitagliptin Co-administration Factorial Study (VERTIS FACTORAL, MK-8835-005)","t1":"Ertugliflozin 15 mg + Sitagliptin 100 mg","t2":"Ertugliflozin 5 mg","measure":"MD","effect":-0.5,"se":0.0865845038187609,"n1":244,"n0":250,"totalN":494,"sampleSize":494},{"studyId":"NCT03030235","title":"Dapagliflozin in PRESERVED Ejection Fraction Heart Failure","t1":"Dapagliflozin","t2":"Placebo","measure":"MD","effect":5.799999999999997,"se":1.7498214938410723,"n1":162,"n0":162,"totalN":324,"sampleSize":324},{"studyId":"NCT02036515","title":"Safety and Efficacy of Ertugliflozin in the Treatment of Participants With Type 2 Diabetes Mellitus Who Have Inadequate Glycemic Control on Metformin and Sitagliptin (MK-8835-006; VERTIS SITA2)","t1":"Ertugliflozin 5 mg","t2":"Placebo","measure":"MD","effect":-0.6900000000000001,"se":0.08214919483726846,"n1":156,"n0":153,"totalN":309,"sampleSize":309},{"studyId":"NCT02036515","title":"Safety and Efficacy of Ertugliflozin in the Treatment of Participants With Type 2 Diabetes Mellitus Who Have Inadequate Glycemic Control on Metformin and Sitagliptin (MK-8835-006; VERTIS SITA2)","t1":"Ertugliflozin 15 mg","t2":"Placebo","measure":"MD","effect":-0.77,"se":0.08422231642458763,"n1":153,"n0":153,"totalN":306,"sampleSize":306},{"studyId":"NCT02630706","title":"A Study to Evaluate the Efficacy and Safety of Ertugliflozin in Asian Participants With Type 2 Diabetes and Inadequate Glycemic Control on Metformin Monotherapy (MK-8835-012)","t1":"Ertugliflozin 5 mg","t2":"Placebo","measure":"MD","effect":-0.8,"se":0.0884067523018544,"n1":170,"n0":167,"totalN":337,"sampleSize":337},{"studyId":"NCT02630706","title":"A Study to Evaluate the Efficacy and Safety of Ertugliflozin in Asian Participants With Type 2 Diabetes and Inadequate Glycemic Control on Metformin Monotherapy (MK-8835-012)","t1":"Ertugliflozin 15 mg","t2":"Placebo","measure":"MD","effect":-0.69,"se":0.08840675230185437,"n1":169,"n0":167,"totalN":336,"sampleSize":336}],"includedStudies":[{"nctId":"NCT04157751","title":"A Study to Test the Effect of Empagliflozin in Patients Who Are in Hospital for Acute Heart Failure","status":"COMPLETED","enrollment":530,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Percentage of Pairwise Comparisons With Wins of Clinical Benefit, a Composite of Death, Number of Heart Failure Events (HFEs), Time to the First HFE and ≥5-point Difference in CfB in KCCQ-TSS After 90 Days of Treatment","groups":[{"title":"Placebo","n":39162,"events":4.01,"mean":null,"sd":null},{"title":"10 mg Empagliflozin","n":39162,"events":7.15,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Percentage of Pairwise Comparisons With Wins of Clinical Benefit, a Composite of Death, Number of Heart Failure Events (HFEs), Time to the First HFE and ≥5-point Difference in CfB in KCCQ-TSS After 90 Days of Treatment","timeFrame":"Up to 90 days. For KCCQ-TSS: at baseline and at day 90."}]},{"nctId":"NCT01032629","title":"CANVAS - CANagliflozin cardioVascular Assessment Study","status":"COMPLETED","enrollment":4330,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Major Adverse Cardiovascular Events (MACE) Composite of Cardiovascular (CV) Death, Non-Fatal Myocardial Infarction (MI), and Non-Fatal Stroke","groups":[{"title":"Placebo","n":1442,"events":30.36,"mean":null,"sd":null},{"title":"Canagliflozin 100 mg","n":1445,"events":28.41,"mean":null,"sd":null},{"title":"Canagliflozin 300 mg","n":1443,"events":25.37,"mean":null,"sd":null},{"title":"Canagliflozin (Total)","n":2888,"events":26.89,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Major Adverse Cardiovascular Events (MACE) Composite of Cardiovascular (CV) Death, Non-Fatal Myocardial Infarction (MI), and Non-Fatal Stroke","timeFrame":"Up to approximately 8 years"}]},{"nctId":"NCT01986881","title":"Cardiovascular Outcomes Following Ertugliflozin Treatment in Type 2 Diabetes Mellitus Participants With Vascular Disease, The VERTIS CV Study (MK-8835-004)","status":"COMPLETED","enrollment":8246,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Time to First Occurrence of MACE (Composite Endpoint of Major Adverse Cardiovascular Events [Cardiovascular Death, Non-fatal Myocardial Infarction or Non-fatal Stroke]) (On-Treatment + 365-day Approach) (Overall Cardiovascular Study)","groups":[{"title":"Ertugliflozin 5 mg (Overall Cardiovascular Study)","n":2746,"events":3.64,"mean":null,"sd":null},{"title":"Ertugliflozin 15 mg (Overall Cardiovascular Study)","n":2747,"events":4.16,"mean":null,"sd":null},{"title":"Placebo (Overall Cardiovascular Study)","n":2745,"events":4.01,"mean":null,"sd":null},{"title":"All Ertugliflozin (Overall Cardiovascular Study)","n":5493,"events":3.9,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time to First Occurrence of MACE (Composite Endpoint of Major Adverse Cardiovascular Events [Cardiovascular Death, Non-fatal Myocardial Infarction or Non-fatal Stroke]) (On-Treatment + 365-day Approach) (Overall Cardiovascular Study)","timeFrame":"Up to approximately 6 years"},{"measure":"Baseline Hemoglobin A1C (A1C) (Insulin With or Without Metformin Add-on Glycemic Sub-study)","timeFrame":"Baseline"}]},{"nctId":"NCT01131676","title":"BI 10773 (Empagliflozin) Cardiovascular Outcome Event Trial in Type 2 Diabetes Mellitus Patients (EMPA-REG OUTCOME).","status":"COMPLETED","enrollment":7064,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Time to the First Occurrence of Any of the Following Adjudicated Components of the Primary Composite Endpoint (3-point MACE): CV Death (Including Fatal Stroke and Fatal MI), Non-fatal MI (Excluding Silent MI), and Non-fatal Stroke.","groups":[{"title":"Placebo","n":2333,"events":12.1,"mean":null,"sd":null},{"title":"Empagliflozin 10 mg","n":2345,"events":10.4,"mean":null,"sd":null},{"title":"Empagliflozin 25 mg","n":2342,"events":10.5,"mean":null,"sd":null},{"title":"All Empagliflozin","n":4687,"events":10.5,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time to the First Occurrence of Any of the Following Adjudicated Components of the Primary Composite Endpoint (3-point MACE): CV Death (Including Fatal Stroke and Fatal MI), Non-fatal MI (Excluding Silent MI), and Non-fatal Stroke.","timeFrame":"From randomisation to individual end of observation, up to 4.6 years"}]},{"nctId":"NCT02115347","title":"Pharmacokinetics, Safety, and Tolerability of Ertugliflozin (MK-8835/PF-04971729) in Participants With Hepatic Impairment and in Healthy Participants (MK-8835-014)","status":"COMPLETED","enrollment":16,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants Who Experienced an Adverse Event","groups":[{"title":"Ertugliflozin 15 mg (Moderate Hepatic Impairment)","n":8,"events":2,"mean":null,"sd":null},{"title":"Ertugliflozin 15 mg (Normal Hepatic Function)","n":8,"events":3,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Area Under the Plasma Concentration-Time Curve From Time 0 to Time of the Last Quantifiable Concentration (AUClast) for Ertugliflozin","timeFrame":"Hour 0 (predose), and at 0.5, 1, 1.5, 2, 3, 4, 6, 8, 10, 12, 24, 48, 72, and 96 hours"},{"measure":"AUC From Hour 0 to Infinity (AUCinf) for Ertugliflozin","timeFrame":"Hour 0 (predose), and at 0.5, 1, 1.5, 2, 3, 4, 6, 8, 10, 12, 24, 48, 72, and 96 hours"}]},{"nctId":"NCT02846233","title":"Stepping-down Approach in Patients With Chronic Poorly-controlled Diabetes on Advanced Insulin Therapy?","status":"COMPLETED","enrollment":22,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in A1c at the End of Study Period","groups":[{"title":"Treatment Group","n":10,"events":null,"mean":-2.38,"sd":0.8873738332105148},{"title":"Control Group","n":8,"events":null,"mean":-0.83,"sd":1.7677669529663687}]},"primaryOutcomes":[{"measure":"Change in A1c at the End of Study Period","timeFrame":"16 weeks (from baseline to end of study at 16 weeks)"}]},{"nctId":"NCT02863328","title":"Efficacy and Safety of Oral Semaglutide Versus Empagliflozin in Subjects With Type 2 Diabetes Mellitus","status":"COMPLETED","enrollment":822,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in HbA1c","groups":[{"title":"Oral Semaglutide 14 mg","n":411,"events":null,"mean":-1.3,"sd":1.1},{"title":"Empagliflozin 25 mg","n":410,"events":null,"mean":-0.9,"sd":0.9}]},"primaryOutcomes":[{"measure":"Change in HbA1c","timeFrame":"Week 0, week 26"}]},{"nctId":"NCT04249778","title":"Dapagliflozin at Discharge on Hospital Heart Failure Readmission","status":"COMPLETED","enrollment":105,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants With Hospital Admissions, Emergency Department Visits, Urgent Clinic Visits, and Death","groups":[{"title":"Dapagliflozin","n":46,"events":0,"mean":null,"sd":null},{"title":"Placebo","n":53,"events":3,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Participants With Hospital Admissions, Emergency Department Visits, Urgent Clinic Visits, and Death","timeFrame":"Up to 26 weeks"}]},{"nctId":"NCT03136484","title":"Efficacy and Safety of Semaglutide Versus Canagliflozin as add-on to Metformin in Subjects With Type 2 Diabetes","status":"COMPLETED","enrollment":788,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in HbA1c","groups":[{"title":"Semaglutide + Canagliflozin Placebo","n":394,"events":null,"mean":-1.7,"sd":1.1},{"title":"Canagliflozin + Semaglutide Placebo","n":394,"events":null,"mean":-1,"sd":1}]},"primaryOutcomes":[{"measure":"Change in HbA1c","timeFrame":"Week 0, week 52"}]},{"nctId":"NCT01989754","title":"A Study of the Effects of Canagliflozin (JNJ-28431754) on Renal Endpoints in Adult Participants With Type 2 Diabetes Mellitus","status":"COMPLETED","enrollment":5813,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Progression of Albuminuria","groups":[{"title":"Placebo","n":2905,"events":153.01,"mean":null,"sd":null},{"title":"Canagliflozin (Experimental)","n":2907,"events":99.8,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Progression of Albuminuria","timeFrame":"Up to 3 years"}]},{"nctId":"NCT01958671","title":"A Study of the Efficacy and Safety of Ertugliflozin Monotherapy in the Treatment of Participants With Type 2 Diabetes Mellitus and Inadequate Glycemic Control Despite Diet and Exercise (MK-8835-003, VERTIS MONO)","status":"COMPLETED","enrollment":461,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change From Baseline In A1C at Week 26","groups":[{"title":"Ertugliflozin 5 mg","n":156,"events":null,"mean":-0.79,"sd":1.0195915099425956},{"title":"Ertugliflozin 15 mg","n":151,"events":null,"mean":-0.96,"sd":1.0031188348934295},{"title":"Placebo","n":153,"events":null,"mean":0.2,"sd":1.104403292576159}]},"primaryOutcomes":[{"measure":"Change From Baseline In A1C at Week 26","timeFrame":"Baseline and Week 26"},{"measure":"Percentage of Participants Experiencing An Adverse Event (AE)","timeFrame":"Up to 54 weeks (including 2 weeks following last dose)"}]},{"nctId":"NCT01730534","title":"Multicenter Trial to Evaluate the Effect of Dapagliflozin on the Incidence of Cardiovascular Events","status":"COMPLETED","enrollment":17190,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Subjects Included in the Composite Endpoint of CV Death, MI or Ischemic Stroke","groups":[{"title":"Dapa 10 mg","n":8582,"events":756,"mean":null,"sd":null},{"title":"Placebo","n":8578,"events":803,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Subjects Included in the Composite Endpoint of CV Death, MI or Ischemic Stroke","timeFrame":"up to 5.2 years"},{"measure":"Subjects Included in the Composite Endpoint of CV Death or Hospitalization Due to Heart Failure.","timeFrame":"up to 5.2 years"}]},{"nctId":"NCT03200860","title":"Effects of Empagliflozin on Clinical Outcomes in Patients With Acute Decompensated Heart Failure","status":"COMPLETED","enrollment":80,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Dyspnea","groups":[{"title":"Empagliflozin","n":37,"events":null,"mean":1264,"sd":1211},{"title":"Placebo","n":36,"events":null,"mean":1650,"sd":1240}]},"primaryOutcomes":[{"measure":"Dyspnea","timeFrame":"From baseline to Day 4"},{"measure":"Diuretic Response","timeFrame":"Total weight change from baseline to Day 4"}]},{"nctId":"NCT02099110","title":"Ertugliflozin and Sitagliptin Co-administration Factorial Study (VERTIS FACTORAL, MK-8835-005)","status":"COMPLETED","enrollment":1233,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change From Baseline in A1C at Week 26: Excluding Rescue Approach","groups":[{"title":"Ertugliflozin 5 mg","n":250,"events":null,"mean":-1.02,"sd":0.9680441816841973},{"title":"Ertugliflozin 15 mg","n":248,"events":null,"mean":-1.08,"sd":0.964164229470834},{"title":"Sitagliptin 100 mg","n":247,"events":null,"mean":-1.05,"sd":0.962218386459288},{"title":"Ertugliflozin 5 mg + Sitagliptin 100 mg","n":243,"events":null,"mean":-1.49,"sd":0.994161815568871},{"title":"Ertugliflozin 15 mg + Sitagliptin 100 mg","n":244,"events":null,"mean":-1.52,"sd":0.9563571031722433}]},"primaryOutcomes":[{"measure":"Change From Baseline in A1C at Week 26: Excluding Rescue Approach","timeFrame":"Baseline and Week 26"},{"measure":"Percentage of Participants Who Experienced an Adverse Event (AE): Including Rescue Approach","timeFrame":"Up to 54 weeks"}]},{"nctId":"NCT03030235","title":"Dapagliflozin in PRESERVED Ejection Fraction Heart Failure","status":"COMPLETED","enrollment":324,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Effect of Dapagliflozin, as Compared With Placebo, on Heart Failure Related Health Status Using the Kansas City Cardiomyopathy Questionnaire Clinical Summary Summary Score (KCCQ-CS)","groups":[{"title":"Dapagliflozin","n":162,"events":null,"mean":68.6,"sd":15.585210687376957},{"title":"Placebo","n":162,"events":null,"mean":62.8,"sd":15.909902576697313}]},"primaryOutcomes":[{"measure":"Effect of Dapagliflozin, as Compared With Placebo, on Heart Failure Related Health Status Using the Kansas City Cardiomyopathy Questionnaire Clinical Summary Summary Score (KCCQ-CS)","timeFrame":"Baseline to Week 12"}]},{"nctId":"NCT02036515","title":"Safety and Efficacy of Ertugliflozin in the Treatment of Participants With Type 2 Diabetes Mellitus Who Have Inadequate Glycemic Control on Metformin and Sitagliptin (MK-8835-006; VERTIS SITA2)","status":"COMPLETED","enrollment":464,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change From Baseline in Hemoglobin A1C at Week 26","groups":[{"title":"Ertugliflozin 5 mg","n":156,"events":null,"mean":-0.78,"sd":0.8284181018283591},{"title":"Ertugliflozin 15 mg","n":153,"events":null,"mean":-0.86,"sd":0.851968254273037},{"title":"Placebo","n":153,"events":null,"mean":-0.09,"sd":0.5995332159699148}]},"primaryOutcomes":[{"measure":"Change From Baseline in Hemoglobin A1C at Week 26","timeFrame":"Baseline and Week 26"},{"measure":"Percentage of Participants Experiencing An Adverse Event (AE)","timeFrame":"Up to Week 54"}]},{"nctId":"NCT02630706","title":"A Study to Evaluate the Efficacy and Safety of Ertugliflozin in Asian Participants With Type 2 Diabetes and Inadequate Glycemic Control on Metformin Monotherapy (MK-8835-012)","status":"COMPLETED","enrollment":506,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change From Baseline in A1C (%) at Week 26 (Excluding Rescue Approach)","groups":[{"title":"Ertugliflozin 5 mg","n":170,"events":null,"mean":-1,"sd":0.7982696822697125},{"title":"Ertugliflozin 15 mg","n":169,"events":null,"mean":-0.89,"sd":0.7959183673469388},{"title":"Placebo","n":167,"events":null,"mean":-0.2,"sd":0.8241612234260259}]},"primaryOutcomes":[{"measure":"Change From Baseline in A1C (%) at Week 26 (Excluding Rescue Approach)","timeFrame":"Baseline and Week 26"},{"measure":"Change From Baseline in A1C (%) at Week 26 (Excluding Rescue Approach) (China Subpopulation)","timeFrame":"Baseline and Week 26"}]}]};
+  if (!iframe || !context) return;
+  const sendContext = () => {
+    if (!iframe.contentWindow) return;
+    iframe.contentWindow.postMessage({ type: "esc-topic-validation-context", payload: context }, "*");
+  };
+  iframe.addEventListener("load", sendContext);
+  window.addEventListener("message", event => {
+    if (event.source === iframe.contentWindow && event.data?.type === "esc-topic-validation-request") {
+      sendContext();
+    }
+  });
+  window.setTimeout(sendContext, 250);
+})();
+</script>
+      </section>
+    </main>
+  </body>
+</html>

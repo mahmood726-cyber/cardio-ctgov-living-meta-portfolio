@@ -1,0 +1,1582 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vericiguat in Heart Failure | CT.gov Living Meta-Analysis</title>
+    <link rel="icon" href="data:," />
+        <meta name="description" content="Vericiguat in Heart Failure living meta-analysis built only from randomized comparative ClinicalTrials.gov records with posted results." />
+    <link rel="stylesheet" href="../../../esc-acs-living-meta/styles.css" />
+    <!-- jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+</head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="hero__title">
+          <p class="kicker" id="appKicker">Registry-Native Cardiovascular Evidence</p>
+          <h1 id="appTitle">Vericiguat in Heart Failure Living Meta-Analysis</h1>
+          <p class="subtitle" id="appSubtitle">Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.</p>
+        </div>
+        <div class="hero__controls">
+          <div class="control-card">
+            <label>
+              New RCT window start
+              <input id="startDate" type="date" />
+            </label>
+            <label>
+              Status filter
+              <select id="statusFilter" multiple>
+                <option value="COMPLETED" selected>Completed</option>
+                <option value="ACTIVE_NOT_RECRUITING" selected>Active, not recruiting</option>
+                <option value="RECRUITING">Recruiting</option>
+                <option value="NOT_YET_RECRUITING">Not yet recruiting</option>
+                <option value="TERMINATED">Terminated</option>
+              </select>
+            </label>
+            <label>
+              Single outcome rule
+              <select id="outcomeRule">
+                <option value="primary">Primary outcome with numeric results</option>
+                <option value="results">Any outcome with numeric results</option>
+              </select>
+            </label>
+            <label>
+              Reference treatment (NMA)
+              <input id="referenceTx" type="text" placeholder="e.g., Standard care" />
+            </label>
+            <button id="updateBtn" class="btn btn--primary">Update from ClinicalTrials.gov</button>
+            <button id="fixtureBtn" class="btn">Load Offline Fixture</button>
+            <button id="clearBtn" class="btn">Clear cache</button>
+            <button id="importDatasetBtn" class="btn btn--secondary">Import R Dataset</button>
+            <p class="meta">Last update: <span id="lastUpdate">Never</span></p>
+          </div>
+          <div class="control-card">
+            <label>
+              Prior meta-analysis trial IDs (one per line)
+              <textarea id="priorTrials" rows="6" placeholder="NCT01234567"></textarea>
+            </label>
+            <button id="compareBtn" class="btn">Compare Coverage</button>
+            <div id="coverageSummary" class="coverage"></div>
+          </div>
+        </div>
+      </header>
+
+      
+      <section class="panel validation-snapshot">
+        <div class="panel__header">
+          <h2>CT.gov Validation Snapshot</h2>
+          <div class="panel__meta">Generated 2026-03-28</div>
+        </div>
+        <div class="panel__body">
+          <div class="summary-grid">
+            <div class="summary-card">
+              <h3>Registry Gate</h3>
+              <div class="pill">Included RCTs: 5</div>
+              <div class="pill">Scanned records: 9</div>
+              <div class="pill">Pages fetched: 1</div>
+              <div class="pill">Priority tier: Build Now</div>
+            </div>
+            <div class="summary-card">
+              <h3>Eligibility Rules</h3>
+              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, and at least one extractable numeric outcome.</p>
+              <p>The validation scan completed within the configured CT.gov page cap.</p>
+            </div>
+            <div class="summary-card">
+              <h3>Audit Trail</h3>
+              <div class="pill"><a href="validation.json">validation.json</a></div>
+              <div class="pill"><a href="plan.html">plan.html</a></div>
+              <div class="pill"><a href="https://clinicaltrials.gov/search?term=(%22heart%20failure%22)%20AND%20vericiguat%20AND%20(%22VICTORIA%22%20OR%20%22SOCRATES%22)" target="_blank" rel="noopener">CT.gov search</a></div>
+              <div class="pill"><a href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fvericiguat-heart-failure%2Fvalidation.json&amp;topic=vericiguat-heart-failure&amp;label=Vericiguat+in+Heart+Failure" target="_blank" rel="noopener">Topic-aware WebR runner</a></div>
+            </div>
+          </div>
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Exact Query</h3>
+            <pre style="white-space: pre-wrap; overflow-x: auto;">(&quot;heart failure&quot;) AND vericiguat AND (&quot;VICTORIA&quot; OR &quot;SOCRATES&quot;)</pre>
+          </div>
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Included Trial Records</h3>
+            <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
+              
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT03547583" target="_blank" rel="noopener">
+          NCT03547583
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01951638" target="_blank" rel="noopener">
+          NCT01951638
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01951625" target="_blank" rel="noopener">
+          NCT01951625
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02861534" target="_blank" rel="noopener">
+          NCT02861534
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT05093933" target="_blank" rel="noopener">
+          NCT05093933
+        </a>
+            </div>
+          </div>
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Top Exclusion Reasons</h3>
+            <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
+              
+        <div class="pill">
+          No Extractable Numeric Outcome: 4
+        </div>
+
+        <div class="pill">
+          No Results Posted: 4
+        </div>
+
+        <div class="pill">
+          Not Randomized Interventional: 3
+        </div>
+
+        <div class="pill">
+          Fewer Than Two Arms: 2
+        </div>
+
+        <div class="pill">
+          Not Completed: 1
+        </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel reviewer-pack">
+        <div class="panel__header">
+          <h2>Reviewer Transparency Pack</h2>
+          <div class="panel__meta">Built to expose source search, eligibility, excerpts, benchmarking, and topic-aware validation before the live analysis workspace.</div>
+        </div>
+        <div class="panel__body">
+          <div class="summary-grid">
+            <div class="summary-card">
+              <h3>Protocol And Administrative Information</h3>
+              <div class="pill">Included trials: 5</div>
+              <div class="pill">Total enrollment reported: 12878</div>
+              <div class="pill">Sponsor coverage: 5/5</div>
+              <div class="pill">Demographics coverage: 5/5</div>
+              <div class="pill">CT.gov document coverage: 3/5</div>
+            </div>
+            <div class="summary-card">
+              <h3>Reviewer Route</h3>
+              <p>Use this pack to verify the search history, protocol framing, demographics capture, benchmark ledger, and topic-aware validation before reading the interactive estimates below.</p>
+              <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
+                <a class="pill" href="plan.html">Full validation plan</a>
+                <a class="pill" href="validation.json">validation.json</a>
+                <a class="pill" href="https://clinicaltrials.gov/search?term=(%22heart%20failure%22)%20AND%20vericiguat%20AND%20(%22VICTORIA%22%20OR%20%22SOCRATES%22)" target="_blank" rel="noopener">CT.gov search</a>
+                <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Vericiguat%20in%20Heart%20Failure%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">PubMed meta search</a>
+                <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Vericiguat%20in%20Heart%20Failure%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">PubMed RCT search</a>
+              </div>
+            </div>
+            <div class="summary-card">
+              <h3>Review Question And PICO</h3>
+              <p><strong>Population:</strong> Chronic Heart Failure With Preserved Ejection Fraction; Heart Failure; Chronic Heart Failure With Reduced Ejection Fraction</p>
+              <p><strong>Interventions:</strong> Vericiguat up to 10 mg; Vericiguat up to 15 mg; Placebo; BAY1021189 1.25 mg; BAY1021189 2.5 mg; BAY1021189 2.5 mg to 5 mg; BAY1021189 2.5 mg to 10 mg; BAY1021189 1.25 Milligram (mg)</p>
+              <p><strong>Comparators:</strong> Vericiguat up to 10 mg vs Placebo | Vericiguat up to 15 mg vs Placebo; BAY1021189 1.25 mg vs Placebo | BAY1021189 2.5 mg vs Placebo; BAY1021189 1.25 Milligram (mg) vs Placebo | BAY1021189 2.5 mg vs Placebo; Vericiguat vs Placebo</p>
+              <p><strong>Outcomes:</strong> Change in KCCQ Physical Limitation Score From Baseline to Week 24; Change From Baseline to Week 12 in Log-transformed N-terminal Pro-brain Natriuretic Peptide (NT-proBNP); Change From Baseline in Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) to Week 12; Time to the First Occurrence of CV Death; Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization: Participants With an Event Per 100 Patient-Years</p>
+              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</p>
+            </div>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Search History Log</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>Source</th>
+                  <th>Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td>CT.gov candidate scan started</td>
+          <td>ClinicalTrials.gov v2 API</td>
+          <td>2026-03-28</td>
+        </tr>
+        <tr>
+          <td>Base query locked</td>
+          <td>Project generator</td>
+          <td>(&quot;heart failure&quot;) AND vericiguat</td>
+        </tr>
+        <tr>
+          <td>Keyword expansion applied</td>
+          <td>Project generator</td>
+          <td>2 terms: VICTORIA, SOCRATES</td>
+        </tr>
+        <tr>
+          <td>Exact query executed</td>
+          <td>ClinicalTrials.gov</td>
+          <td>(&quot;heart failure&quot;) AND vericiguat AND (&quot;VICTORIA&quot; OR &quot;SOCRATES&quot;)</td>
+        </tr>
+        <tr>
+          <td>Registry records screened</td>
+          <td>ClinicalTrials.gov</td>
+          <td>9 records across 1 page(s)</td>
+        </tr>
+        <tr>
+          <td>Hard-gate exclusions applied</td>
+          <td>Generator eligibility rules</td>
+          <td>4 records excluded before synthesis</td>
+        </tr>
+        <tr>
+          <td>Quantitative snapshot frozen</td>
+          <td>validation.json</td>
+          <td>5 randomized trials entered the reviewer pack</td>
+        </tr>
+        <tr>
+          <td>Project package generated</td>
+          <td>Portfolio build</td>
+          <td>2026-03-28</td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>PRISMA Flow Summary</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>Stage</th>
+                  <th>Count</th>
+                  <th>Reviewer Note</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td>Records identified from the exact CT.gov query</td>
+          <td>9</td>
+          <td>1 page(s) fetched</td>
+        </tr>
+        <tr>
+          <td>Records excluded by registry hard gates</td>
+          <td>4</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+        </tr>
+        <tr>
+          <td>Trials entering the quantitative snapshot</td>
+          <td>5</td>
+          <td>Included in validation.json and the live topic app</td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>PRISMA Style Screening Summary</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>Reason</th>
+                  <th>Count</th>
+                </tr>
+              </thead>
+              <tbody><tr><td>No Extractable Numeric Outcome</td><td>4</td></tr><tr><td>No Results Posted</td><td>4</td></tr><tr><td>Not Randomized Interventional</td><td>3</td></tr><tr><td>Fewer Than Two Arms</td><td>2</td></tr><tr><td>Not Completed</td><td>1</td></tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Study Eligibility And Demographics</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>NCT</th>
+                  <th>Title</th>
+                  <th>Sponsor</th>
+                  <th>Phase</th>
+                  <th>Enrollment</th>
+                  <th>Eligibility</th>
+                  <th>Demographics</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03547583" target="_blank" rel="noopener">NCT03547583</a></td>
+          <td>Patient-reported Outcomes in Vericiguat-treated Patients With HFpEF</td>
+          <td>Bayer (INDUSTRY)</td>
+          <td>Phase 2</td>
+          <td>789 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 45 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Vericiguat up to 10 mg: 263 Participants | Vericiguat up to 15 mg: 264 Participants | Placebo: 262 Participants | Total: 789 Participants | Age Vericiguat up to 10 mg: 72.2 +/- 9.7 years | Vericiguat up to 15 mg: 73.1 +/- 9.1 years | Placebo: 72.8 +/- 9.4 years | Total: 72.7 +/- 9.4 years | Sex Vericiguat up to 10 mg: F 124 / M 139 | Vericiguat up to 15 mg: F 140 / M 124 | Placebo: F 121 / M 141 | Total: F 385 / M 404</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01951638" target="_blank" rel="noopener">NCT01951638</a></td>
+          <td>Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)</td>
+          <td>Bayer (INDUSTRY)</td>
+          <td>Phase 2</td>
+          <td>477 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants BAY1021189 1.25 mg: 96 Participants | Placebo: 93 Participants | BAY1021189 2.5 mg: 96 Participants | BAY1021189 2.5 mg to 5 mg: 96 Participants | BAY1021189 2.5 mg to 10 mg: 96 Participants | Total: 477 Participants | Age BAY1021189 1.25 mg: 73.8 +/- 10 years | Placebo: 73.7 +/- 9.1 years | BAY1021189 2.5 mg: 72 +/- 10.7 years | BAY1021189 2.5 mg to 5 mg: 73.9 +/- 7.9 years | BAY1021189 2.5 mg to 10 mg: 72.5 +/- 10.2 years | Total: 73.2 +/- 9.6 years | Sex BAY1021189 1.25 mg: F 51 / M 45 | Placebo: F 46 / M 47 | BAY1021189 2.5 mg: F 43 / M 53 | BAY1021189 2.5 mg to 5 mg: F 43 / M 53 | BAY1021189 2.5 mg to 10 mg: F 44 / M 52 | Total: F 227 / M 250</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01951625" target="_blank" rel="noopener">NCT01951625</a></td>
+          <td>Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)</td>
+          <td>Bayer (INDUSTRY)</td>
+          <td>Phase 2</td>
+          <td>456 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Placebo: 92 Participants | BAY1021189 1.25 Milligram (mg): 91 Participants | BAY1021189 2.5 mg: 91 Participants | BAY1021189 From 2.5 to 5 mg: 91 Participants | BAY1021189 From 2.5 to 10 mg: 91 Participants | Total: 456 Participants | Age Placebo: 67 +/- 13.1 years | BAY1021189 1.25 Milligram (mg): 67.6 +/- 12.9 years | BAY1021189 2.5 mg: 67.6 +/- 11.5 years | BAY1021189 From 2.5 to 5 mg: 66.7 +/- 11.6 years | BAY1021189 From 2.5 to 10 mg: 68.9 +/- 12.4 years | Total: 67.6 +/- 12.3 years | Sex Placebo: F 19 / M 73 | BAY1021189 1.25 Milligram (mg): F 21 / M 70 | BAY1021189 2.5 mg: F 19 / M 72 | BAY1021189 From 2.5 to 5 mg: F 17 / M 74 | BAY1021189 From 2.5 to 10 mg: F 14 / M 77 | Total: F 90 / M 366</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02861534" target="_blank" rel="noopener">NCT02861534</a></td>
+          <td>A Study of Vericiguat in Participants With Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-001)</td>
+          <td>Merck Sharp &amp; Dohme LLC (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>5050 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Vericiguat: 2526 Participants | Placebo: 2524 Participants | Total: 5050 Participants | Age Vericiguat: 67.5 +/- 12.2 Years | Placebo: 67.2 +/- 12.2 Years | Total: 67.3 +/- 12.2 Years | Sex Vericiguat: F 605 / M 1921 | Placebo: F 603 / M 1921 | Total: F 1208 / M 3842</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05093933" target="_blank" rel="noopener">NCT05093933</a></td>
+          <td>A Study of Vericiguat (MK-1242) in Participants With Chronic Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-035)</td>
+          <td>Merck Sharp &amp; Dohme LLC (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>6106 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Vericiguat: 3053 Participants | Placebo: 3052 Participants | Total: 6105 Participants | Age Vericiguat: 67.1 +/- 11.0 Years | Placebo: 67.0 +/- 11.0 Years | Total: 67.0 +/- 11.0 Years | Sex Vericiguat: F 727 / M 2326 | Placebo: F 713 / M 2339 | Total: F 1440 / M 4665</td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Record Excerpts</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>NCT</th>
+                  <th>Brief Summary</th>
+                  <th>Eligibility Excerpt</th>
+                  <th>Primary Outcome Excerpt</th>
+                  <th>Source Documents</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03547583" target="_blank" rel="noopener">NCT03547583</a></td>
+          <td>The primary hypothesis in this trial is that the treatment with vericiguat 10 mg or 15 mg in patients with HFpEF improves the KCCQ PLS (Kansas City Cardiomyopathy Questionnaire Physical limitation score) compared to placebo after 24 week...</td>
+          <td>Inclusion Criteria: * Previous diagnosis of chronic heart failure (HF) * HF decompensation within 6 months prior to randomization, defined as hospitalization for HF or intravenous (IV) diuretic treatment for HF withou...</td>
+          <td>Change in KCCQ Physical Limitation Score From Baseline to Week 24 | Time frame: From baseline to Week 24 | The City Cardiomyopathy Questionnaire (KCCQ) measures the impact of patients&#39; heart failure, or its treatment, on 6 domains; Physical Limitation, Symp...</td>
+          <td><span class="pill">Study Protocol (2018-02-22)</span>
+<span class="pill">Statistical Analysis Plan (2019-11-21)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01951638" target="_blank" rel="noopener">NCT01951638</a></td>
+          <td>Objective of the study is to find the optimal dose of the once daily oral soluble guanylate cyclase stimulator (sGC) BAY1021189 for Phase III that can be given in addition to standard diuretic and comorbidity treatment for heart failure...</td>
+          <td>Inclusion Criteria: * Worsening chronic heart failure (WCHF) requiring hospitalization (or intravenous diuretic treatment for HF without hospitalization) with initiation of study treatment after clinical stabilization...</td>
+          <td>Change From Baseline to Week 12 in Log-transformed N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) | Time frame: Baseline, Week 12 (end of treatment [EOT]) | NTproBNP is a circulating plasma biomarker of cardiovascular function and prognosis in heart f...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01951625" target="_blank" rel="noopener">NCT01951625</a></td>
+          <td>Objective of the study is to find the optimal dose of the once daily oral soluble guanylate cyclase stimulator (sGC) BAY1021189 for Phase III that can be given in addition to standard therapy for heart failure with reduced ejection fract...</td>
+          <td>Inclusion Criteria: * Worsening chronic heart failure (WCHF) requiring hospitalization (or intravenous diuretic treatment for HF without hospitalization) with initiation of study treatment after clinical stabilization...</td>
+          <td>Change From Baseline in Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) to Week 12 | Time frame: Baseline, Week 12 | Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) is a circulating plasma biomarker of cardiovascular...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02861534" target="_blank" rel="noopener">NCT02861534</a></td>
+          <td>This is a randomized, placebo-controlled, parallel-group, multi-center, double-blind, event driven study of vericiguat (MK-1242) in participants with heart failure with reduced ejection fraction (HFrEF). The primary hypothesis is vericig...</td>
+          <td>Inclusion Criteria: * History of chronic HF (New York Heart Association \[NYHA\] Class II-IV) on standard therapy before qualifying HF decompensation * Previous HF hospitalization within 6 months prior to randomizatio...</td>
+          <td>Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization | Time frame: Up to approximately 33 months (through primary analysis database cutoff date of 18-June-2019) | Time to First Occurrence of Compo...</td>
+          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2017-12-20)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05093933" target="_blank" rel="noopener">NCT05093933</a></td>
+          <td>The purpose of this study is to evaluate the efficacy and safety of vericiguat in participants with chronic heart failure with reduced ejection fraction (HFrEF), specifically those with symptomatic chronic HFrEF who have not had a recent...</td>
+          <td>Inclusion Criteria: * History of chronic HF \[New York Heart Association (NYHA) Class II to IV\] on guideline-directed medical therapy for heart failure (GDMT) with no HF hospitalization within 6 months or outpatient...</td>
+          <td>Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization: Participants With an Event Per 100 Patient-Years | Time frame: Up to approximately 36 months (from randomization to the primary completion dat...</td>
+          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2024-01-25)</span></td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Benchmark Reconciliation Ledger</h3>
+            <p>Use this registry-native ledger to check study overlap, comparator definitions, and outcome alignment against published syntheses before accepting pooled estimates as publication-ready.</p>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>NCT</th>
+                  <th>Registry Contrast</th>
+                  <th>Outcome</th>
+                  <th>Enrollment</th>
+                  <th>Benchmark Use</th>
+                </tr>
+              </thead>
+              <tbody>
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03547583" target="_blank" rel="noopener">NCT03547583</a></td>
+        <td>Vericiguat up to 10 mg vs Placebo | Vericiguat up to 15 mg vs Placebo</td>
+        <td>Change in KCCQ Physical Limitation Score From Baseline to Week 24</td>
+        <td>789 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01951638" target="_blank" rel="noopener">NCT01951638</a></td>
+        <td>BAY1021189 1.25 mg vs Placebo | BAY1021189 2.5 mg vs Placebo</td>
+        <td>Change From Baseline to Week 12 in Log-transformed N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)</td>
+        <td>477 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01951625" target="_blank" rel="noopener">NCT01951625</a></td>
+        <td>BAY1021189 1.25 Milligram (mg) vs Placebo | BAY1021189 2.5 mg vs Placebo</td>
+        <td>Change From Baseline in Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) to Week 12</td>
+        <td>456 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02861534" target="_blank" rel="noopener">NCT02861534</a></td>
+        <td>Vericiguat vs Placebo</td>
+        <td>Time to the First Occurrence of CV Death</td>
+        <td>5050 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT05093933" target="_blank" rel="noopener">NCT05093933</a></td>
+        <td>Vericiguat vs Placebo</td>
+        <td>Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization: Participants With an Event Per 100 Patient-Years</td>
+        <td>6106 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Reviewer Validation</h3>
+            <p>The embedded panel below now runs the shared R benchmark suites plus topic-specific checks for the current CT.gov snapshot. Reviewers should pair it with <code>validation.json</code> and the benchmark ledger above.</p>
+            <div class="topic-stats" style="flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+              <a class="pill" href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fvericiguat-heart-failure%2Fvalidation.json&amp;topic=vericiguat-heart-failure&amp;label=Vericiguat+in+Heart+Failure" target="_blank" rel="noopener">Open topic-aware WebR runner</a>
+              <a class="pill" href="validation.json">Open topic validation.json</a>
+            </div>
+            <iframe
+              id="reviewerValidationFrame"
+              src="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fvericiguat-heart-failure%2Fvalidation.json&amp;topic=vericiguat-heart-failure&amp;label=Vericiguat+in+Heart+Failure"
+              title="WebR reviewer validation"
+              loading="lazy"
+              style="width: 100%; min-height: 420px; border: 1px solid rgba(148, 163, 184, 0.25); border-radius: 18px; background: rgba(15, 23, 42, 0.88);"
+            ></iframe>
+            <script>
+(() => {
+  const iframe = document.getElementById("reviewerValidationFrame");
+  const context = {"source":"ctgov-portfolio-generator","topicId":"vericiguat-heart-failure","label":"Vericiguat in Heart Failure","query":"(\"heart failure\") AND vericiguat AND (\"VICTORIA\" OR \"SOCRATES\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":5,"excludedCount":4,"totalEnrollment":12878,"demographicsCoverage":5,"documentCoverage":3,"comparisons":[{"studyId":"NCT03547583","title":"Patient-reported Outcomes in Vericiguat-treated Patients With HFpEF","t1":"Vericiguat up to 10 mg","t2":"Placebo","measure":"MD","effect":-0.5199999999999996,"se":2.2114902215474523,"n1":254,"n0":252,"totalN":506,"sampleSize":506},{"studyId":"NCT03547583","title":"Patient-reported Outcomes in Vericiguat-treated Patients With HFpEF","t1":"Vericiguat up to 15 mg","t2":"Placebo","measure":"MD","effect":-1.46,"se":2.1729401740498977,"n1":255,"n0":252,"totalN":507,"sampleSize":507},{"studyId":"NCT01951638","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)","t1":"BAY1021189 1.25 mg","t2":"Placebo","measure":"MD","effect":0.051000000000000004,"se":0.12788967681577512,"n1":77,"n0":73,"totalN":150,"sampleSize":150},{"studyId":"NCT01951638","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)","t1":"BAY1021189 2.5 mg","t2":"Placebo","measure":"MD","effect":0.16899999999999998,"se":0.1298848507884905,"n1":78,"n0":73,"totalN":151,"sampleSize":151},{"studyId":"NCT01951638","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)","t1":"BAY1021189 2.5 mg to 5 mg","t2":"Placebo","measure":"MD","effect":0.155,"se":0.14163085287443863,"n1":57,"n0":73,"totalN":130,"sampleSize":130},{"studyId":"NCT01951638","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)","t1":"BAY1021189 2.5 mg to 10 mg","t2":"Placebo","measure":"MD","effect":0.07500000000000001,"se":0.12874514221451472,"n1":60,"n0":73,"totalN":133,"sampleSize":133},{"studyId":"NCT01951625","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)","t1":"BAY1021189 1.25 Milligram (mg)","t2":"Placebo","measure":"MD","effect":0.015000000000000013,"se":0.13504469093868385,"n1":69,"n0":69,"totalN":138,"sampleSize":138},{"studyId":"NCT01951625","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)","t1":"BAY1021189 2.5 mg","t2":"Placebo","measure":"MD","effect":-0.03999999999999998,"se":0.13442435840213074,"n1":73,"n0":69,"totalN":142,"sampleSize":142},{"studyId":"NCT01951625","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)","t1":"BAY1021189 From 2.5 to 5 mg","t2":"Placebo","measure":"MD","effect":-0.07299999999999995,"se":0.14240496454894105,"n1":67,"n0":69,"totalN":136,"sampleSize":136},{"studyId":"NCT01951625","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)","t1":"BAY1021189 From 2.5 to 10 mg","t2":"Placebo","measure":"MD","effect":-0.249,"se":0.14844470090816617,"n1":73,"n0":69,"totalN":142,"sampleSize":142},{"studyId":"NCT01951625","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)","t1":"Pooled 2.5 mg up to 10 mg","t2":"Placebo","measure":"MD","effect":-0.122,"se":0.11494573429678523,"n1":213,"n0":69,"totalN":282,"sampleSize":282},{"studyId":"NCT02861534","title":"A Study of Vericiguat in Participants With Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-001)","t1":"Vericiguat","t2":"Placebo","measure":"logRR","effect":-0.07545360801835227,"se":0.38557716031421047,"n1":2526,"n0":2524,"totalN":5050,"sampleSize":5050},{"studyId":"NCT05093933","title":"A Study of Vericiguat (MK-1242) in Participants With Chronic Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-035)","t1":"Vericiguat","t2":"Placebo","measure":"logRR","effect":-0.0769608263514462,"se":0.4120771622684434,"n1":3053,"n0":3052,"totalN":6105,"sampleSize":6105}],"includedStudies":[{"nctId":"NCT03547583","title":"Patient-reported Outcomes in Vericiguat-treated Patients With HFpEF","status":"COMPLETED","enrollment":789,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in KCCQ Physical Limitation Score From Baseline to Week 24","groups":[{"title":"Vericiguat up to 10 mg","n":254,"events":null,"mean":6.41,"sd":25.372304901210693},{"title":"Vericiguat up to 15 mg","n":255,"events":null,"mean":5.47,"sd":24.559890472068478},{"title":"Placebo","n":252,"events":null,"mean":6.93,"sd":24.367369574904878}]},"primaryOutcomes":[{"measure":"Change in KCCQ Physical Limitation Score From Baseline to Week 24","timeFrame":"From baseline to Week 24"}]},{"nctId":"NCT01951638","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)","status":"COMPLETED","enrollment":477,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change From Baseline to Week 12 in Log-transformed N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)","groups":[{"title":"Placebo","n":73,"events":null,"mean":-0.098,"sd":0.778},{"title":"BAY1021189 1.25 mg","n":77,"events":null,"mean":-0.047,"sd":0.788},{"title":"BAY1021189 2.5 mg","n":78,"events":null,"mean":0.071,"sd":0.818},{"title":"BAY1021189 2.5 mg to 5 mg","n":57,"events":null,"mean":0.057,"sd":0.819},{"title":"BAY1021189 2.5 mg to 10 mg","n":60,"events":null,"mean":-0.023,"sd":0.705}]},"primaryOutcomes":[{"measure":"Change From Baseline to Week 12 in Log-transformed N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)","timeFrame":"Baseline, Week 12 (end of treatment [EOT])"},{"measure":"Change From Baseline to Week 12 in Left Atrial Volume (LAV)","timeFrame":"Baseline, Week 12 (EOT)"}]},{"nctId":"NCT01951625","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)","status":"COMPLETED","enrollment":456,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change From Baseline in Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) to Week 12","groups":[{"title":"Placebo","n":69,"events":null,"mean":-0.28,"sd":0.8197},{"title":"BAY1021189 1.25 Milligram (mg)","n":69,"events":null,"mean":-0.265,"sd":0.7658},{"title":"BAY1021189 2.5 mg","n":73,"events":null,"mean":-0.32,"sd":0.7799},{"title":"BAY1021189 From 2.5 to 5 mg","n":67,"events":null,"mean":-0.353,"sd":0.8404},{"title":"BAY1021189 From 2.5 to 10 mg","n":73,"events":null,"mean":-0.529,"sd":0.9475},{"title":"Pooled 2.5 mg up to 10 mg","n":213,"events":null,"mean":-0.402,"sd":0.8603}]},"primaryOutcomes":[{"measure":"Change From Baseline in Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) to Week 12","timeFrame":"Baseline, Week 12"}]},{"nctId":"NCT02861534","title":"A Study of Vericiguat in Participants With Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-001)","status":"COMPLETED","enrollment":5050,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Time to the First Occurrence of CV Death","groups":[{"title":"Vericiguat","n":2526,"events":12.9,"mean":null,"sd":null},{"title":"Placebo","n":2524,"events":13.9,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization","timeFrame":"Up to approximately 33 months (through primary analysis database cutoff date of 18-June-2019)"}]},{"nctId":"NCT05093933","title":"A Study of Vericiguat (MK-1242) in Participants With Chronic Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-035)","status":"COMPLETED","enrollment":6106,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization: Participants With an Event Per 100 Patient-Years","groups":[{"title":"Vericiguat","n":3053,"events":11.3,"mean":null,"sd":null},{"title":"Placebo","n":3052,"events":12.2,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization: Participants With an Event Per 100 Patient-Years","timeFrame":"Up to approximately 36 months (from randomization to the primary completion data cutoff)"}]}]};
+  if (!iframe || !context) return;
+  const sendContext = () => {
+    if (!iframe.contentWindow) return;
+    iframe.contentWindow.postMessage({ type: "esc-topic-validation-context", payload: context }, "*");
+  };
+  iframe.addEventListener("load", sendContext);
+  window.addEventListener("message", event => {
+    if (event.source === iframe.contentWindow && event.data?.type === "esc-topic-validation-request") {
+      sendContext();
+    }
+  });
+  window.setTimeout(sendContext, 250);
+})();
+</script>
+          </div>
+        </div>
+      </section>
+
+      <main class="layout">
+        <section class="panel topics">
+          <div class="panel__header">
+            <h2 id="topicPanelTitle">CT.gov-validated topic (5 eligible RCTs in snapshot)</h2>
+            <div class="topic-stats">
+              <span id="topicCount">0</span> topics -
+              <span id="trialCount">0</span> trials
+            </div>
+          </div>
+          <div class="panel__body">
+            <div id="topicList" class="topic-list"></div>
+          </div>
+        </section>
+
+        <section class="panel detail">
+          <div class="panel__header">
+            <h2 id="topicTitle">Select a topic</h2>
+            <div class="panel__meta" id="topicMeta"></div>
+            <div class="export-buttons">
+              <button id="exportCsvBtn" class="btn btn--small">CSV</button>
+              <button id="exportJsonBtn" class="btn btn--small">JSON</button>
+              <button id="exportPdfBtn" class="btn btn--small btn--accent">PDF Report</button>
+              <button id="exportRBtn" class="btn btn--small">R Script</button>
+              <button id="addStudyBtn" class="btn btn--small btn--secondary">+ Add Study</button>
+            </div>
+          </div>
+          <div class="panel__body">
+            <div class="tabs">
+              <button class="tab active" data-tab="overview">Overview</button>
+              <button class="tab" data-tab="trials">Trials</button>
+              <button class="tab" data-tab="pairwise">Pairwise Meta</button>
+              <button class="tab" data-tab="network">Network</button>
+              <button class="tab" data-tab="dose">Dose Response</button>
+              <button class="tab" data-tab="grade">GRADE</button>
+              <button class="tab" data-tab="cumulative">Cumulative</button>
+              <button class="tab" data-tab="diagnostics">Diagnostics</button>
+              <button class="tab" data-tab="raw">Raw Records</button>
+              <button class="tab" data-tab="transparency">Transparency</button>
+            </div>
+            <div class="tab-content active" id="tab-overview">
+              <div class="summary-grid">
+                <div class="summary-card">
+                  <h3>Evidence Snapshot</h3>
+                  <div id="overviewSnapshot"></div>
+                </div>
+                <div class="summary-card">
+                  <h3>Meta Summary</h3>
+                  <div id="metaSummary"></div>
+                </div>
+                <div class="summary-card">
+                  <h3>Key Warnings</h3>
+                  <div id="warningList"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-trials">
+              <div id="trialTable"></div>
+            </div>
+            <div class="tab-content" id="tab-pairwise">
+              <div class="forest-container">
+                <div class="forest-controls">
+                  <button id="forestResetBtn" class="btn btn--small">Reset Exclusions</button>
+                  <span id="forestExcludedCount" class="muted"></span>
+                </div>
+                <div class="forest-wrapper">
+                  <canvas id="forestChart" width="900" height="460"></canvas>
+                  <div id="forestTooltip" class="forest-tooltip hidden"></div>
+                </div>
+              </div>
+              <div id="pairwiseTable"></div>
+            </div>
+            <div class="tab-content" id="tab-network">
+              <canvas id="networkChart" width="900" height="460"></canvas>
+              <div id="networkTable"></div>
+            </div>
+            <div class="tab-content" id="tab-dose">
+              <canvas id="doseChart" width="900" height="460"></canvas>
+              <div id="doseTable"></div>
+            </div>
+            <div class="tab-content" id="tab-grade">
+              <div class="grade-assessment">
+                <h3>GRADE Certainty of Evidence</h3>
+                <div id="gradeTable"></div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-cumulative">
+              <canvas id="cumulativeChart" width="900" height="460"></canvas>
+              <div id="cumulativeTable"></div>
+            </div>
+            <div class="tab-content" id="tab-diagnostics">
+              <div class="diagnostics-grid">
+                <div class="diagnostic-section">
+                  <h4>Funnel Plot</h4>
+                  <canvas id="funnelChart" width="500" height="400"></canvas>
+                </div>
+                <div class="diagnostic-section">
+                  <div id="diagnosticTable"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-raw">
+              <pre id="rawJson"></pre>
+            </div>
+            <div class="tab-content" id="tab-transparency">
+              <div class="summary-card">
+                <h3>Transparency Summary</h3>
+                <div id="transparencySummary"></div>
+              </div>
+              <div class="summary-card" style="margin-top: 16px;">
+                <h3>Record Ledger</h3>
+                <div id="transparencyLedger"></div>
+              </div>
+              <div class="summary-card" style="margin-top: 16px;">
+                <h3>Reviewer Links</h3>
+                <div id="transparencyBenchmarks"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <section class="panel log">
+        <div class="panel__header">
+          <h2>Update Log</h2>
+        </div>
+        <div class="panel__body">
+          <div id="logStream" class="log-stream"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Dataset Import Modal -->
+    <div id="datasetModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Import R Package Dataset</h2>
+          <button id="closeModalBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="dataset-filters">
+            <label>
+              Source:
+              <select id="datasetSourceFilter">
+                <option value="all">All Sources</option>
+                <option value="metafor">metafor</option>
+                <option value="meta">meta</option>
+                <option value="netmeta">netmeta</option>
+                <option value="mada">mada (DTA)</option>
+                <option value="literature">Published Literature</option>
+              </select>
+            </label>
+            <label>
+              Type:
+              <select id="datasetTypeFilter">
+                <option value="all">All Types</option>
+                <option value="pairwise">Pairwise</option>
+                <option value="network">Network</option>
+                <option value="diagnostic">Diagnostic</option>
+                <option value="continuous">Continuous</option>
+              </select>
+            </label>
+            <label>
+              Relevance:
+              <select id="datasetRelevanceFilter">
+                <option value="all">All</option>
+                <option value="acs">ACS-specific</option>
+                <option value="cardiovascular">Cardiovascular</option>
+                <option value="classic">Classic examples</option>
+              </select>
+            </label>
+            <input type="text" id="datasetSearch" placeholder="Search datasets..." />
+          </div>
+          <div id="datasetList" class="dataset-list"></div>
+          <div id="datasetPreview" class="dataset-preview hidden">
+            <h3 id="previewTitle"></h3>
+            <p id="previewDescription"></p>
+            <div id="previewStats" class="preview-stats"></div>
+            <div id="previewCitation" class="preview-citation"></div>
+            <table id="previewTable" class="preview-table"></table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="import-options">
+            <label>
+              <input type="checkbox" id="createTopicCheck" checked />
+              Create as new topic
+            </label>
+            <input type="text" id="customTopicName" placeholder="Custom topic name (optional)" />
+          </div>
+          <button id="importDatasetConfirmBtn" class="btn btn--primary" disabled>Import Selected Dataset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Manual Study Entry Modal -->
+    <div id="studyEntryModal" class="modal hidden">
+      <div class="modal-content modal-content--medium">
+        <div class="modal-header">
+          <h2>Add Study Manually</h2>
+          <button id="closeStudyEntryBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-section">
+            <h4>Study Information</h4>
+            <div class="form-row">
+              <label>
+                Study Name/ID *
+                <input type="text" id="entryStudyName" placeholder="e.g., COMPLETE 2019" required />
+              </label>
+              <label>
+                Year
+                <input type="number" id="entryStudyYear" placeholder="2019" min="1900" max="2100" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h4>Outcome Type</h4>
+            <div class="form-row">
+              <label class="radio-label">
+                <input type="radio" name="outcomeType" value="binary" checked /> Binary (events/n)
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="outcomeType" value="continuous" /> Continuous (mean/SD/n)
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="outcomeType" value="precomputed" /> Pre-computed (HR/OR/RR with CI)
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section" id="binaryOutcomeSection">
+            <h4>Binary Outcome Data</h4>
+            <div class="form-row">
+              <label>
+                Treatment Arm Label
+                <input type="text" id="entryTreat1Label" placeholder="e.g., Complete revasc" />
+              </label>
+              <label>
+                Events
+                <input type="number" id="entryTreat1Events" min="0" />
+              </label>
+              <label>
+                Total N
+                <input type="number" id="entryTreat1N" min="1" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Control Arm Label
+                <input type="text" id="entryTreat2Label" placeholder="e.g., Culprit-only" />
+              </label>
+              <label>
+                Events
+                <input type="number" id="entryTreat2Events" min="0" />
+              </label>
+              <label>
+                Total N
+                <input type="number" id="entryTreat2N" min="1" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section hidden" id="continuousOutcomeSection">
+            <h4>Continuous Outcome Data</h4>
+            <div class="form-row">
+              <label>
+                Treatment Arm Label
+                <input type="text" id="entryContTreat1Label" placeholder="e.g., Intervention" />
+              </label>
+              <label>
+                Mean
+                <input type="number" id="entryContTreat1Mean" step="any" />
+              </label>
+              <label>
+                SD
+                <input type="number" id="entryContTreat1SD" step="any" min="0" />
+              </label>
+              <label>
+                N
+                <input type="number" id="entryContTreat1N" min="1" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Control Arm Label
+                <input type="text" id="entryContTreat2Label" placeholder="e.g., Control" />
+              </label>
+              <label>
+                Mean
+                <input type="number" id="entryContTreat2Mean" step="any" />
+              </label>
+              <label>
+                SD
+                <input type="number" id="entryContTreat2SD" step="any" min="0" />
+              </label>
+              <label>
+                N
+                <input type="number" id="entryContTreat2N" min="1" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section hidden" id="precomputedSection">
+            <h4>Pre-computed Effect Size</h4>
+            <div class="form-row">
+              <label>
+                Effect Measure
+                <select id="entryEffectMeasure">
+                  <option value="HR">Hazard Ratio (HR)</option>
+                  <option value="OR">Odds Ratio (OR)</option>
+                  <option value="RR">Risk Ratio (RR)</option>
+                  <option value="MD">Mean Difference (MD)</option>
+                  <option value="SMD">Standardized Mean Difference (SMD)</option>
+                </select>
+              </label>
+              <label>
+                Point Estimate
+                <input type="number" id="entryEffectValue" step="any" placeholder="e.g., 0.74" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                95% CI Lower
+                <input type="number" id="entryCILower" step="any" />
+              </label>
+              <label>
+                95% CI Upper
+                <input type="number" id="entryCIUpper" step="any" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Treatment Label
+                <input type="text" id="entryPreTreat1" placeholder="e.g., Treatment" />
+              </label>
+              <label>
+                Control Label
+                <input type="text" id="entryPreTreat2" placeholder="e.g., Control" />
+              </label>
+            </div>
+          </div>
+
+          <div id="entryPreview" class="entry-preview hidden">
+            <h4>Preview</h4>
+            <div id="entryPreviewContent"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="previewStudyBtn" class="btn">Preview</button>
+          <button id="addStudyConfirmBtn" class="btn btn--primary" disabled>Add Study to Topic</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROB2 Risk of Bias Modal -->
+    <div id="robModal" class="modal hidden">
+      <div class="modal-content modal-content--medium">
+        <div class="modal-header">
+          <h2>Risk of Bias Assessment (ROB2)</h2>
+          <button id="closeRobModalBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="rob-study-info">
+            <strong>Study:</strong> <span id="robStudyName">-</span>
+          </div>
+          <div class="rob-domains">
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D1: Randomization process</span>
+                <select id="robD1" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD1Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D2: Deviations from intended interventions</span>
+                <select id="robD2" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD2Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D3: Missing outcome data</span>
+                <select id="robD3" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD3Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D4: Measurement of the outcome</span>
+                <select id="robD4" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD4Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D5: Selection of reported result</span>
+                <select id="robD5" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD5Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+          </div>
+          <div class="rob-overall">
+            <label>
+              <strong>Overall Risk of Bias:</strong>
+              <span id="robOverallCalc" class="rob-overall-calc">-</span>
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="saveRobBtn" class="btn btn--primary">Save Assessment</button>
+          <button id="clearRobBtn" class="btn">Clear</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- External Import Modal -->
+    <div id="externalImportModal" class="modal hidden">
+      <div class="modal-content modal-content--small">
+        <div class="modal-header">
+          <h2>Import from External Source</h2>
+          <button id="closeExternalModalBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="import-tabs">
+            <button class="import-tab active" data-source="zenodo">Zenodo</button>
+            <button class="import-tab" data-source="github">GitHub</button>
+            <button class="import-tab" data-source="csv">CSV Upload</button>
+          </div>
+          <div class="import-panel active" id="zenodo-panel">
+            <label>
+              Zenodo DOI or Record ID:
+              <input type="text" id="zenodoDoi" placeholder="10.5281/zenodo.1234567 or 1234567" />
+            </label>
+            <button id="fetchZenodoBtn" class="btn">Fetch Record</button>
+            <div id="zenodoResult" class="import-result"></div>
+          </div>
+          <div class="import-panel" id="github-panel">
+            <label>
+              GitHub Raw URL:
+              <input type="text" id="githubUrl" placeholder="https://raw.githubusercontent.com/..." />
+            </label>
+            <button id="fetchGithubBtn" class="btn">Fetch File</button>
+            <div id="githubResult" class="import-result"></div>
+          </div>
+          <div class="import-panel" id="csv-panel">
+            <label>
+              Upload CSV/JSON file:
+              <input type="file" id="csvUpload" accept=".csv,.json" />
+            </label>
+            <div id="csvResult" class="import-result"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="openExternalImportBtn" class="btn btn--secondary">Import from URL/File</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Start Wizard Modal -->
+    <div id="quickStartModal" class="modal">
+      <div class="modal-content modal-content--wizard">
+        <div class="wizard-header">
+          <h2 id="welcomeTitle">Vericiguat in Heart Failure CT.gov review</h2>
+          <p class="wizard-subtitle">Quick Start Guide (2 minutes)</p>
+        </div>
+        <div class="wizard-body">
+          <div class="wizard-step active" data-step="1">
+            <div class="wizard-step-icon">1</div>
+            <h3>Select a Topic</h3>
+            <p>Choose from 47 pre-configured ACS topics in the left sidebar. Each topic is aligned with ESC Guidelines questions.</p>
+            <div class="wizard-highlight" data-target="topicList">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150' viewBox='0 0 300 150'%3E%3Crect fill='%231a1a2e' width='300' height='150'/%3E%3Ctext fill='%2300d4ff' x='150' y='75' text-anchor='middle' font-size='14'%3ETopics appear here%3C/text%3E%3C/svg%3E" alt="Topic list">
+            </div>
+          </div>
+          <div class="wizard-step" data-step="2">
+            <div class="wizard-step-icon">2</div>
+            <h3>Load Evidence</h3>
+            <p>Click "Update from ClinicalTrials.gov" to automatically fetch RCT data, or import from R datasets.</p>
+            <ul class="wizard-tips">
+              <li>Auto-extracts study arms, outcomes, and sample sizes</li>
+              <li>Deduplicates against existing data</li>
+              <li>Works offline after first load</li>
+            </ul>
+          </div>
+          <div class="wizard-step" data-step="3">
+            <div class="wizard-step-icon">3</div>
+            <h3>Review Analysis Tabs</h3>
+            <p>Navigate through the analysis tabs to explore your evidence:</p>
+            <ul class="wizard-tabs-preview">
+              <li><strong>Overview</strong> - Evidence snapshot and warnings</li>
+              <li><strong>Pairwise Meta</strong> - Forest plot with click-to-exclude</li>
+              <li><strong>Network</strong> - NMA with treatment rankings</li>
+              <li><strong>GRADE</strong> - Automated certainty assessment</li>
+            </ul>
+          </div>
+          <div class="wizard-step" data-step="4">
+            <div class="wizard-step-icon">4</div>
+            <h3>Export Results</h3>
+            <p>Generate publication-ready outputs for your guideline panel:</p>
+            <ul class="wizard-exports">
+              <li><strong>PDF Report</strong> - Complete analysis summary</li>
+              <li><strong>R Script</strong> - Reproducible code for verification</li>
+              <li><strong>CSV/JSON</strong> - Data for further analysis</li>
+            </ul>
+          </div>
+        </div>
+        <div class="wizard-footer">
+          <div class="wizard-progress">
+            <span class="wizard-dot active" data-step="1"></span>
+            <span class="wizard-dot" data-step="2"></span>
+            <span class="wizard-dot" data-step="3"></span>
+            <span class="wizard-dot" data-step="4"></span>
+          </div>
+          <div class="wizard-buttons">
+            <button id="wizardPrevBtn" class="btn btn--outline" disabled>Previous</button>
+            <button id="wizardNextBtn" class="btn btn--primary">Next</button>
+            <button id="wizardFinishBtn" class="btn btn--accent hidden">Get Started</button>
+          </div>
+          <label class="wizard-dismiss">
+            <input type="checkbox" id="dontShowAgain"> Don't show this again
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contextual Help Tooltip System -->
+    <div id="helpTooltip" class="help-tooltip hidden">
+      <div class="help-tooltip-content"></div>
+      <div class="help-tooltip-arrow"></div>
+    </div>
+
+    <!-- Interactive Tour Overlay -->
+    <div id="tourOverlay" class="tour-overlay hidden">
+      <div class="tour-spotlight"></div>
+      <div class="tour-tooltip">
+        <div class="tour-tooltip-header">
+          <span class="tour-step-indicator">Step 1 of 8</span>
+          <button class="tour-close">&times;</button>
+        </div>
+        <div class="tour-tooltip-body">
+          <h4 class="tour-title"></h4>
+          <p class="tour-description"></p>
+        </div>
+        <div class="tour-tooltip-footer">
+          <button class="tour-prev btn btn--small btn--outline">Previous</button>
+          <button class="tour-next btn btn--small btn--primary">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Help Button (Fixed Position) -->
+    <button id="helpBtn" class="help-fab" title="Help & Tutorials">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+      </svg>
+    </button>
+
+    <!-- Help Menu -->
+    <div id="helpMenu" class="help-menu hidden">
+      <div class="help-menu-header">
+        <h3>Help & Learning</h3>
+        <button class="help-menu-close">&times;</button>
+      </div>
+      <div class="help-menu-body">
+        <button class="help-menu-item" data-action="quickstart">
+          <span class="help-menu-icon">🚀</span>
+          <div>
+            <strong>Quick Start Guide</strong>
+            <small>2-minute introduction</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="tour">
+          <span class="help-menu-icon">🎯</span>
+          <div>
+            <strong>Interactive Tour</strong>
+            <small>Step-by-step walkthrough</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="shortcuts">
+          <span class="help-menu-icon">⌨️</span>
+          <div>
+            <strong>Keyboard Shortcuts</strong>
+            <small>Speed up your workflow</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="grade">
+          <span class="help-menu-icon">📊</span>
+          <div>
+            <strong>GRADE Assessment Help</strong>
+            <small>Understanding certainty ratings</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="nma">
+          <span class="help-menu-icon">🔗</span>
+          <div>
+            <strong>Network Meta-Analysis</strong>
+            <small>Interpreting NMA results</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="manual">
+          <span class="help-menu-icon">📖</span>
+          <div>
+            <strong>Full User Manual</strong>
+            <small>Complete documentation</small>
+          </div>
+        </button>
+      </div>
+      <div class="help-menu-footer">
+        <small>Press <kbd>?</kbd> anytime for help</small>
+      </div>
+    </div>
+
+    <script>
+      window.__ESC_ACS_TOPICS_OVERRIDE__ = {
+  "baseQuery": "(\"heart failure\") AND vericiguat",
+  "topics": [
+    {
+      "id": "vericiguat-heart-failure",
+      "label": "Vericiguat in Heart Failure",
+      "keywords": [
+        "VICTORIA",
+        "SOCRATES"
+      ]
+    }
+  ],
+  "appConfig": {
+    "pageTitle": "Vericiguat in Heart Failure | CT.gov Living Meta-Analysis",
+    "kicker": "Registry-Native Cardiovascular Evidence",
+    "title": "Vericiguat in Heart Failure Living Meta-Analysis",
+    "subtitle": "Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.",
+    "topicPanelTitle": "CT.gov-validated topic (5 eligible RCTs in snapshot)",
+    "welcomeTitle": "Vericiguat in Heart Failure CT.gov review",
+    "eligibilityTrialMinimum": 1,
+    "analysisStudioName": "Vericiguat in Heart Failure CT.gov Living Meta-Analysis Studio",
+    "defaultStatuses": [
+      "COMPLETED"
+    ],
+    "defaultOutcomeRule": "results",
+    "requirePostedResults": true,
+    "requireNumericOutcome": true,
+    "requireComparatorArms": true,
+    "enforceConditionFilter": false,
+    "autoUpdateOnLoad": true,
+    "rValidationHref": "../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fvericiguat-heart-failure%2Fvalidation.json&topic=vericiguat-heart-failure&label=Vericiguat+in+Heart+Failure",
+    "rValidationContext": {
+      "source": "ctgov-portfolio-generator",
+      "topicId": "vericiguat-heart-failure",
+      "label": "Vericiguat in Heart Failure",
+      "query": "(\"heart failure\") AND vericiguat AND (\"VICTORIA\" OR \"SOCRATES\")",
+      "generatedAt": "2026-03-28T18:45:05.888Z",
+      "includedCount": 5,
+      "excludedCount": 4,
+      "totalEnrollment": 12878,
+      "demographicsCoverage": 5,
+      "documentCoverage": 3,
+      "comparisons": [
+        {
+          "studyId": "NCT03547583",
+          "title": "Patient-reported Outcomes in Vericiguat-treated Patients With HFpEF",
+          "t1": "Vericiguat up to 10 mg",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": -0.5199999999999996,
+          "se": 2.2114902215474523,
+          "n1": 254,
+          "n0": 252,
+          "totalN": 506,
+          "sampleSize": 506
+        },
+        {
+          "studyId": "NCT03547583",
+          "title": "Patient-reported Outcomes in Vericiguat-treated Patients With HFpEF",
+          "t1": "Vericiguat up to 15 mg",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": -1.46,
+          "se": 2.1729401740498977,
+          "n1": 255,
+          "n0": 252,
+          "totalN": 507,
+          "sampleSize": 507
+        },
+        {
+          "studyId": "NCT01951638",
+          "title": "Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)",
+          "t1": "BAY1021189 1.25 mg",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": 0.051000000000000004,
+          "se": 0.12788967681577512,
+          "n1": 77,
+          "n0": 73,
+          "totalN": 150,
+          "sampleSize": 150
+        },
+        {
+          "studyId": "NCT01951638",
+          "title": "Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)",
+          "t1": "BAY1021189 2.5 mg",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": 0.16899999999999998,
+          "se": 0.1298848507884905,
+          "n1": 78,
+          "n0": 73,
+          "totalN": 151,
+          "sampleSize": 151
+        },
+        {
+          "studyId": "NCT01951638",
+          "title": "Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)",
+          "t1": "BAY1021189 2.5 mg to 5 mg",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": 0.155,
+          "se": 0.14163085287443863,
+          "n1": 57,
+          "n0": 73,
+          "totalN": 130,
+          "sampleSize": 130
+        },
+        {
+          "studyId": "NCT01951638",
+          "title": "Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)",
+          "t1": "BAY1021189 2.5 mg to 10 mg",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": 0.07500000000000001,
+          "se": 0.12874514221451472,
+          "n1": 60,
+          "n0": 73,
+          "totalN": 133,
+          "sampleSize": 133
+        },
+        {
+          "studyId": "NCT01951625",
+          "title": "Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)",
+          "t1": "BAY1021189 1.25 Milligram (mg)",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": 0.015000000000000013,
+          "se": 0.13504469093868385,
+          "n1": 69,
+          "n0": 69,
+          "totalN": 138,
+          "sampleSize": 138
+        },
+        {
+          "studyId": "NCT01951625",
+          "title": "Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)",
+          "t1": "BAY1021189 2.5 mg",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": -0.03999999999999998,
+          "se": 0.13442435840213074,
+          "n1": 73,
+          "n0": 69,
+          "totalN": 142,
+          "sampleSize": 142
+        },
+        {
+          "studyId": "NCT01951625",
+          "title": "Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)",
+          "t1": "BAY1021189 From 2.5 to 5 mg",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": -0.07299999999999995,
+          "se": 0.14240496454894105,
+          "n1": 67,
+          "n0": 69,
+          "totalN": 136,
+          "sampleSize": 136
+        },
+        {
+          "studyId": "NCT01951625",
+          "title": "Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)",
+          "t1": "BAY1021189 From 2.5 to 10 mg",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": -0.249,
+          "se": 0.14844470090816617,
+          "n1": 73,
+          "n0": 69,
+          "totalN": 142,
+          "sampleSize": 142
+        },
+        {
+          "studyId": "NCT01951625",
+          "title": "Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)",
+          "t1": "Pooled 2.5 mg up to 10 mg",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": -0.122,
+          "se": 0.11494573429678523,
+          "n1": 213,
+          "n0": 69,
+          "totalN": 282,
+          "sampleSize": 282
+        },
+        {
+          "studyId": "NCT02861534",
+          "title": "A Study of Vericiguat in Participants With Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-001)",
+          "t1": "Vericiguat",
+          "t2": "Placebo",
+          "measure": "logRR",
+          "effect": -0.07545360801835227,
+          "se": 0.38557716031421047,
+          "n1": 2526,
+          "n0": 2524,
+          "totalN": 5050,
+          "sampleSize": 5050
+        },
+        {
+          "studyId": "NCT05093933",
+          "title": "A Study of Vericiguat (MK-1242) in Participants With Chronic Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-035)",
+          "t1": "Vericiguat",
+          "t2": "Placebo",
+          "measure": "logRR",
+          "effect": -0.0769608263514462,
+          "se": 0.4120771622684434,
+          "n1": 3053,
+          "n0": 3052,
+          "totalN": 6105,
+          "sampleSize": 6105
+        }
+      ],
+      "includedStudies": [
+        {
+          "nctId": "NCT03547583",
+          "title": "Patient-reported Outcomes in Vericiguat-treated Patients With HFpEF",
+          "status": "COMPLETED",
+          "enrollment": 789,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change in KCCQ Physical Limitation Score From Baseline to Week 24",
+            "groups": [
+              {
+                "title": "Vericiguat up to 10 mg",
+                "n": 254,
+                "events": null,
+                "mean": 6.41,
+                "sd": 25.372304901210693
+              },
+              {
+                "title": "Vericiguat up to 15 mg",
+                "n": 255,
+                "events": null,
+                "mean": 5.47,
+                "sd": 24.559890472068478
+              },
+              {
+                "title": "Placebo",
+                "n": 252,
+                "events": null,
+                "mean": 6.93,
+                "sd": 24.367369574904878
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change in KCCQ Physical Limitation Score From Baseline to Week 24",
+              "timeFrame": "From baseline to Week 24"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01951638",
+          "title": "Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)",
+          "status": "COMPLETED",
+          "enrollment": 477,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change From Baseline to Week 12 in Log-transformed N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)",
+            "groups": [
+              {
+                "title": "Placebo",
+                "n": 73,
+                "events": null,
+                "mean": -0.098,
+                "sd": 0.778
+              },
+              {
+                "title": "BAY1021189 1.25 mg",
+                "n": 77,
+                "events": null,
+                "mean": -0.047,
+                "sd": 0.788
+              },
+              {
+                "title": "BAY1021189 2.5 mg",
+                "n": 78,
+                "events": null,
+                "mean": 0.071,
+                "sd": 0.818
+              },
+              {
+                "title": "BAY1021189 2.5 mg to 5 mg",
+                "n": 57,
+                "events": null,
+                "mean": 0.057,
+                "sd": 0.819
+              },
+              {
+                "title": "BAY1021189 2.5 mg to 10 mg",
+                "n": 60,
+                "events": null,
+                "mean": -0.023,
+                "sd": 0.705
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change From Baseline to Week 12 in Log-transformed N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)",
+              "timeFrame": "Baseline, Week 12 (end of treatment [EOT])"
+            },
+            {
+              "measure": "Change From Baseline to Week 12 in Left Atrial Volume (LAV)",
+              "timeFrame": "Baseline, Week 12 (EOT)"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01951625",
+          "title": "Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)",
+          "status": "COMPLETED",
+          "enrollment": 456,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change From Baseline in Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) to Week 12",
+            "groups": [
+              {
+                "title": "Placebo",
+                "n": 69,
+                "events": null,
+                "mean": -0.28,
+                "sd": 0.8197
+              },
+              {
+                "title": "BAY1021189 1.25 Milligram (mg)",
+                "n": 69,
+                "events": null,
+                "mean": -0.265,
+                "sd": 0.7658
+              },
+              {
+                "title": "BAY1021189 2.5 mg",
+                "n": 73,
+                "events": null,
+                "mean": -0.32,
+                "sd": 0.7799
+              },
+              {
+                "title": "BAY1021189 From 2.5 to 5 mg",
+                "n": 67,
+                "events": null,
+                "mean": -0.353,
+                "sd": 0.8404
+              },
+              {
+                "title": "BAY1021189 From 2.5 to 10 mg",
+                "n": 73,
+                "events": null,
+                "mean": -0.529,
+                "sd": 0.9475
+              },
+              {
+                "title": "Pooled 2.5 mg up to 10 mg",
+                "n": 213,
+                "events": null,
+                "mean": -0.402,
+                "sd": 0.8603
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change From Baseline in Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) to Week 12",
+              "timeFrame": "Baseline, Week 12"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT02861534",
+          "title": "A Study of Vericiguat in Participants With Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-001)",
+          "status": "COMPLETED",
+          "enrollment": 5050,
+          "documentsCount": 1,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Time to the First Occurrence of CV Death",
+            "groups": [
+              {
+                "title": "Vericiguat",
+                "n": 2526,
+                "events": 12.9,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Placebo",
+                "n": 2524,
+                "events": 13.9,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization",
+              "timeFrame": "Up to approximately 33 months (through primary analysis database cutoff date of 18-June-2019)"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT05093933",
+          "title": "A Study of Vericiguat (MK-1242) in Participants With Chronic Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-035)",
+          "status": "COMPLETED",
+          "enrollment": 6106,
+          "documentsCount": 1,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization: Participants With an Event Per 100 Patient-Years",
+            "groups": [
+              {
+                "title": "Vericiguat",
+                "n": 3053,
+                "events": 11.3,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Placebo",
+                "n": 3052,
+                "events": 12.2,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization: Participants With an Event Per 100 Patient-Years",
+              "timeFrame": "Up to approximately 36 months (from randomization to the primary completion data cutoff)"
+            }
+          ]
+        }
+      ]
+    }
+  }
+};
+    </script>
+    <script type="module" src="../../../esc-acs-living-meta/app.js"></script>
+    <script type="module" src="../../../esc-acs-living-meta/help-system.js"></script>
+  </body>
+</html>

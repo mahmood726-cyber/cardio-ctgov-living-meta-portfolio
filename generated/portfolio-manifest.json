@@ -1,0 +1,412 @@
+{
+  "generatedAt": "2026-03-28T18:45:05.888Z",
+  "sourceValidation": "generated/topic-validation.json",
+  "totalEligibleTopics": 27,
+  "topics": [
+    {
+      "slug": "glp1-cvot",
+      "label": "GLP-1 Receptor Agonist Cardiovascular Outcome Trials",
+      "domain": "Lipid Disorders",
+      "includedCount": 21,
+      "scannedRecords": 42,
+      "pagesFetched": 1,
+      "priorityTier": "build-now",
+      "query": "(\"type 2 diabetes\") AND (liraglutide OR semaglutide OR dulaglutide OR exenatide OR albiglutide OR efpeglenatide) AND (\"LEADER\" OR \"SUSTAIN\" OR \"REWIND\" OR \"HARMONY\" OR \"AMPLITUDE-O\")",
+      "links": {
+        "app": "projects/glp1-cvot/index.html",
+        "plan": "projects/glp1-cvot/plan.html",
+        "validation": "projects/glp1-cvot/validation.json"
+      }
+    },
+    {
+      "slug": "sglt2-cvot",
+      "label": "SGLT2 Cardiovascular Outcome Trials",
+      "domain": "Lipid Disorders",
+      "includedCount": 17,
+      "scannedRecords": 104,
+      "pagesFetched": 2,
+      "priorityTier": "build-now",
+      "query": "(\"type 2 diabetes\") AND (empagliflozin OR canagliflozin OR dapagliflozin OR ertugliflozin OR sotagliflozin) AND (\"EMPA-REG\" OR \"CANVAS\" OR \"DECLARE\" OR \"VERTIS\" OR \"SCORED\")",
+      "links": {
+        "app": "projects/sglt2-cvot/index.html",
+        "plan": "projects/sglt2-cvot/plan.html",
+        "validation": "projects/sglt2-cvot/validation.json"
+      }
+    },
+    {
+      "slug": "arni-heart-failure",
+      "label": "ARNI in Heart Failure",
+      "domain": "Heart Failure",
+      "includedCount": 13,
+      "scannedRecords": 98,
+      "pagesFetched": 1,
+      "priorityTier": "build-now",
+      "query": "(\"heart failure\") AND (\"sacubitril valsartan\" OR ARNI) AND (\"PARADIGM-HF\" OR \"PARAGON-HF\" OR \"PIONEER-HF\" OR \"LIFE\")",
+      "links": {
+        "app": "projects/arni-heart-failure/index.html",
+        "plan": "projects/arni-heart-failure/plan.html",
+        "validation": "projects/arni-heart-failure/validation.json"
+      }
+    },
+    {
+      "slug": "ivus-oct-guided-pci",
+      "label": "IVUS or OCT Guided PCI",
+      "domain": "Coronary Artery Disease",
+      "includedCount": 12,
+      "scannedRecords": 478,
+      "pagesFetched": 5,
+      "priorityTier": "build-now",
+      "query": "(PCI OR coronary stent) AND (IVUS OR OCT OR \"intravascular ultrasound\" OR \"optical coherence tomography\") AND (\"ULTIMATE\" OR \"ILUMIEN\" OR \"OCTOBER\" OR \"RENOVATE-COMPLEX-PCI\")",
+      "links": {
+        "app": "projects/ivus-oct-guided-pci/index.html",
+        "plan": "projects/ivus-oct-guided-pci/plan.html",
+        "validation": "projects/ivus-oct-guided-pci/validation.json"
+      }
+    },
+    {
+      "slug": "pcsk9-ascvd",
+      "label": "PCSK9 Inhibition in Atherosclerotic Cardiovascular Disease",
+      "domain": "Lipid Disorders",
+      "includedCount": 11,
+      "scannedRecords": 19,
+      "pagesFetched": 1,
+      "priorityTier": "build-now",
+      "query": "(\"cardiovascular disease\" OR \"acute coronary syndrome\" OR coronary) AND (evolocumab OR alirocumab OR inclisiran OR PCSK9) AND (\"FOURIER\" OR \"ODYSSEY\" OR \"EVOPACS\" OR \"PACMAN-AMI\")",
+      "links": {
+        "app": "projects/pcsk9-ascvd/index.html",
+        "plan": "projects/pcsk9-ascvd/plan.html",
+        "validation": "projects/pcsk9-ascvd/validation.json"
+      }
+    },
+    {
+      "slug": "gpiibiiia-pci",
+      "label": "GP IIb/IIIa Inhibitors in ACS or PCI",
+      "domain": "Coronary Artery Disease",
+      "includedCount": 8,
+      "scannedRecords": 63,
+      "pagesFetched": 1,
+      "priorityTier": "build-now",
+      "query": "(ACS OR PCI OR coronary) AND (\"glycoprotein IIb/IIIa\" OR tirofiban OR abciximab OR eptifibatide) AND (\"EARLY ACS\" OR \"TARGET\" OR \"ADVANCE\" OR \"ON-TIME\")",
+      "links": {
+        "app": "projects/gpiibiiia-pci/index.html",
+        "plan": "projects/gpiibiiia-pci/plan.html",
+        "validation": "projects/gpiibiiia-pci/validation.json"
+      }
+    },
+    {
+      "slug": "renal-denervation-hypertension",
+      "label": "Renal Denervation in Hypertension",
+      "domain": "Hypertension",
+      "includedCount": 6,
+      "scannedRecords": 69,
+      "pagesFetched": 1,
+      "priorityTier": "build-now",
+      "query": "(hypertension OR \"blood pressure\") AND (\"renal denervation\" OR \"catheter-based renal denervation\") AND (\"SYMPLICITY\" OR \"SPYRAL\" OR \"RADIANCE\" OR \"TARGET BP\")",
+      "links": {
+        "app": "projects/renal-denervation-hypertension/index.html",
+        "plan": "projects/renal-denervation-hypertension/plan.html",
+        "validation": "projects/renal-denervation-hypertension/validation.json"
+      }
+    },
+    {
+      "slug": "doac-vs-warfarin-af",
+      "label": "Direct Oral Anticoagulants vs Warfarin in Atrial Fibrillation",
+      "domain": "Arrhythmia",
+      "includedCount": 5,
+      "scannedRecords": 16,
+      "pagesFetched": 1,
+      "priorityTier": "build-now",
+      "query": "(\"atrial fibrillation\") AND (apixaban OR rivaroxaban OR dabigatran OR edoxaban) AND (warfarin OR \"vitamin K antagonist\") AND (\"ARISTOTLE\" OR \"ROCKET AF\" OR \"RE-LY\" OR \"ENGAGE AF\")",
+      "links": {
+        "app": "projects/doac-vs-warfarin-af/index.html",
+        "plan": "projects/doac-vs-warfarin-af/plan.html",
+        "validation": "projects/doac-vs-warfarin-af/validation.json"
+      }
+    },
+    {
+      "slug": "vericiguat-heart-failure",
+      "label": "Vericiguat in Heart Failure",
+      "domain": "Heart Failure",
+      "includedCount": 5,
+      "scannedRecords": 9,
+      "pagesFetched": 1,
+      "priorityTier": "build-now",
+      "query": "(\"heart failure\") AND vericiguat AND (\"VICTORIA\" OR \"SOCRATES\")",
+      "links": {
+        "app": "projects/vericiguat-heart-failure/index.html",
+        "plan": "projects/vericiguat-heart-failure/plan.html",
+        "validation": "projects/vericiguat-heart-failure/validation.json"
+      }
+    },
+    {
+      "slug": "bivalirudin-vs-heparin",
+      "label": "Bivalirudin vs Heparin in ACS or PCI",
+      "domain": "Coronary Artery Disease",
+      "includedCount": 4,
+      "scannedRecords": 7,
+      "pagesFetched": 1,
+      "priorityTier": "promising",
+      "query": "(ACS OR PCI OR coronary) AND (bivalirudin AND heparin) AND (\"HORIZONS\" OR \"EUROMAX\" OR \"HEAT-PPCI\" OR \"BRIGHT\")",
+      "links": {
+        "app": "projects/bivalirudin-vs-heparin/index.html",
+        "plan": "projects/bivalirudin-vs-heparin/plan.html",
+        "validation": "projects/bivalirudin-vs-heparin/validation.json"
+      }
+    },
+    {
+      "slug": "laao-af",
+      "label": "Left Atrial Appendage Occlusion vs Anticoagulation",
+      "domain": "Arrhythmia",
+      "includedCount": 4,
+      "scannedRecords": 25,
+      "pagesFetched": 1,
+      "priorityTier": "promising",
+      "query": "(\"atrial fibrillation\") AND (\"left atrial appendage\" OR WATCHMAN OR Amulet) AND (\"PROTECT-AF\" OR \"PREVAIL\" OR \"Amulet IDE\" OR \"CHAMPION-AF\" OR \"OPTION\")",
+      "links": {
+        "app": "projects/laao-af/index.html",
+        "plan": "projects/laao-af/plan.html",
+        "validation": "projects/laao-af/validation.json"
+      }
+    },
+    {
+      "slug": "sglt2-heart-failure",
+      "label": "SGLT2 Inhibitors in Heart Failure",
+      "domain": "Heart Failure",
+      "includedCount": 4,
+      "scannedRecords": 37,
+      "pagesFetched": 1,
+      "priorityTier": "promising",
+      "query": "(\"heart failure\") AND (dapagliflozin OR empagliflozin OR sotagliflozin OR canagliflozin OR ertugliflozin) AND (\"DAPA-HF\" OR \"DELIVER\" OR \"EMPEROR\" OR \"SOLOIST\" OR \"EMPEROR-Preserved\")",
+      "links": {
+        "app": "projects/sglt2-heart-failure/index.html",
+        "plan": "projects/sglt2-heart-failure/plan.html",
+        "validation": "projects/sglt2-heart-failure/validation.json"
+      }
+    },
+    {
+      "slug": "ablation-vs-drugs-af",
+      "label": "Catheter Ablation vs Drug Therapy for Atrial Fibrillation",
+      "domain": "Arrhythmia",
+      "includedCount": 3,
+      "scannedRecords": 9,
+      "pagesFetched": 1,
+      "priorityTier": "promising",
+      "query": "(\"atrial fibrillation\") AND (\"catheter ablation\") AND (\"antiarrhythmic drug\" OR \"drug therapy\" OR medical) AND (\"CABANA\" OR \"EAST-AFNET\" OR \"STOP AF First\" OR \"EARLY-AF\")",
+      "links": {
+        "app": "projects/ablation-vs-drugs-af/index.html",
+        "plan": "projects/ablation-vs-drugs-af/plan.html",
+        "validation": "projects/ablation-vs-drugs-af/validation.json"
+      }
+    },
+    {
+      "slug": "ffr-ifr-guided-pci",
+      "label": "FFR or iFR Guided PCI",
+      "domain": "Coronary Artery Disease",
+      "includedCount": 3,
+      "scannedRecords": 39,
+      "pagesFetched": 1,
+      "priorityTier": "promising",
+      "query": "(PCI OR coronary disease) AND (FFR OR iFR OR \"fractional flow reserve\" OR \"instantaneous wave-free\") AND (\"FAME\" OR \"DEFINE-FLAIR\" OR \"iFR-SWEDEHEART\" OR \"FUTURE\")",
+      "links": {
+        "app": "projects/ffr-ifr-guided-pci/index.html",
+        "plan": "projects/ffr-ifr-guided-pci/plan.html",
+        "validation": "projects/ffr-ifr-guided-pci/validation.json"
+      }
+    },
+    {
+      "slug": "omecamtiv-heart-failure",
+      "label": "Omecamtiv Mecarbil in Heart Failure",
+      "domain": "Heart Failure",
+      "includedCount": 3,
+      "scannedRecords": 5,
+      "pagesFetched": 1,
+      "priorityTier": "promising",
+      "query": "(\"heart failure\") AND (\"omecamtiv mecarbil\" OR omecamtiv) AND (\"GALACTIC-HF\" OR \"ATOMIC-AHF\" OR \"COSMIC-HF\" OR \"METEORIC-HF\")",
+      "links": {
+        "app": "projects/omecamtiv-heart-failure/index.html",
+        "plan": "projects/omecamtiv-heart-failure/plan.html",
+        "validation": "projects/omecamtiv-heart-failure/validation.json"
+      }
+    },
+    {
+      "slug": "omega3-cvot",
+      "label": "Omega-3 Cardiovascular Outcome Trials",
+      "domain": "Lipid Disorders",
+      "includedCount": 3,
+      "scannedRecords": 19,
+      "pagesFetched": 1,
+      "priorityTier": "promising",
+      "query": "(\"cardiovascular disease\" OR diabetes OR hypertriglyceridemia) AND (icosapent OR eicosapentaenoic OR omega-3 OR EPA) AND (\"REDUCE-IT\" OR \"STRENGTH\" OR \"OMEMI\")",
+      "links": {
+        "app": "projects/omega3-cvot/index.html",
+        "plan": "projects/omega3-cvot/plan.html",
+        "validation": "projects/omega3-cvot/validation.json"
+      }
+    },
+    {
+      "slug": "tavi-vs-savr",
+      "label": "TAVI/TAVR vs Surgical AVR",
+      "domain": "Valvular Disease",
+      "includedCount": 3,
+      "scannedRecords": 66,
+      "pagesFetched": 1,
+      "priorityTier": "promising",
+      "query": "(\"aortic stenosis\") AND (TAVR OR TAVI OR \"transcatheter aortic valve\") AND (surgery OR SAVR OR surgical) AND (\"PARTNER\" OR \"CoreValve\" OR \"SURTAVI\" OR \"Evolut\" OR \"NOTION\")",
+      "links": {
+        "app": "projects/tavi-vs-savr/index.html",
+        "plan": "projects/tavi-vs-savr/plan.html",
+        "validation": "projects/tavi-vs-savr/validation.json"
+      }
+    },
+    {
+      "slug": "tavi-antithrombotic",
+      "label": "Antithrombotic Strategies After TAVI/TAVR",
+      "domain": "Valvular Disease",
+      "includedCount": 2,
+      "scannedRecords": 8,
+      "pagesFetched": 1,
+      "priorityTier": "early",
+      "query": "(\"aortic stenosis\" OR TAVI OR TAVR OR \"transcatheter aortic valve\") AND (anticoagulation OR antiplatelet OR apixaban OR edoxaban OR rivaroxaban) AND (\"ATLANTIS\" OR \"ENVISAGE-TAVI AF\" OR \"POPular TAVI\" OR \"GALILEO\" OR \"ADAPT-TAVR\")",
+      "links": {
+        "app": "projects/tavi-antithrombotic/index.html",
+        "plan": "projects/tavi-antithrombotic/plan.html",
+        "validation": "projects/tavi-antithrombotic/validation.json"
+      }
+    },
+    {
+      "slug": "cangrelor-pci",
+      "label": "Cangrelor in PCI",
+      "domain": "Coronary Artery Disease",
+      "includedCount": 2,
+      "scannedRecords": 4,
+      "pagesFetched": 1,
+      "priorityTier": "early",
+      "query": "(PCI OR coronary intervention) AND cangrelor AND (\"CHAMPION\" OR \"BRIDGE\")",
+      "links": {
+        "app": "projects/cangrelor-pci/index.html",
+        "plan": "projects/cangrelor-pci/plan.html",
+        "validation": "projects/cangrelor-pci/validation.json"
+      }
+    },
+    {
+      "slug": "doac-antiplatelet-af-pci",
+      "label": "DOAC Plus Antiplatelet Therapy in AF With PCI or ACS",
+      "domain": "Arrhythmia",
+      "includedCount": 2,
+      "scannedRecords": 7,
+      "pagesFetched": 1,
+      "priorityTier": "early",
+      "query": "(\"atrial fibrillation\" AND (PCI OR \"acute coronary syndrome\")) AND (rivaroxaban OR apixaban OR dabigatran OR edoxaban) AND (\"PIONEER AF-PCI\" OR \"RE-DUAL PCI\" OR \"AUGUSTUS\" OR \"ENTRUST-AF PCI\")",
+      "links": {
+        "app": "projects/doac-antiplatelet-af-pci/index.html",
+        "plan": "projects/doac-antiplatelet-af-pci/plan.html",
+        "validation": "projects/doac-antiplatelet-af-pci/validation.json"
+      }
+    },
+    {
+      "slug": "finerenone-cardiorenal",
+      "label": "Finerenone Cardiorenal Outcome Trials",
+      "domain": "Cardiorenal Disease",
+      "includedCount": 2,
+      "scannedRecords": 6,
+      "pagesFetched": 1,
+      "priorityTier": "early",
+      "query": "(\"chronic kidney disease\" AND \"type 2 diabetes\") AND finerenone AND (\"FIDELIO-DKD\" OR \"FIGARO-DKD\" OR \"FINEARTS\")",
+      "links": {
+        "app": "projects/finerenone-cardiorenal/index.html",
+        "plan": "projects/finerenone-cardiorenal/plan.html",
+        "validation": "projects/finerenone-cardiorenal/validation.json"
+      }
+    },
+    {
+      "slug": "iron-heart-failure",
+      "label": "Intravenous Iron in Heart Failure",
+      "domain": "Heart Failure",
+      "includedCount": 2,
+      "scannedRecords": 7,
+      "pagesFetched": 1,
+      "priorityTier": "early",
+      "query": "(\"heart failure\") AND (\"ferric carboxymaltose\" OR \"intravenous iron\" OR iron) AND (\"AFFIRM-AHF\" OR \"FAIR-HF\" OR \"CONFIRM-HF\" OR \"IRONMAN\" OR \"HEART-FID\")",
+      "links": {
+        "app": "projects/iron-heart-failure/index.html",
+        "plan": "projects/iron-heart-failure/plan.html",
+        "validation": "projects/iron-heart-failure/validation.json"
+      }
+    },
+    {
+      "slug": "ivabradine-heart-failure",
+      "label": "Ivabradine in Heart Failure or LV Dysfunction",
+      "domain": "Heart Failure",
+      "includedCount": 2,
+      "scannedRecords": 4,
+      "pagesFetched": 1,
+      "priorityTier": "early",
+      "query": "(\"heart failure\" OR \"left ventricular dysfunction\") AND ivabradine AND (\"SHIFT\" OR \"BEAUTIFUL\" OR \"EDIFY\")",
+      "links": {
+        "app": "projects/ivabradine-heart-failure/index.html",
+        "plan": "projects/ivabradine-heart-failure/plan.html",
+        "validation": "projects/ivabradine-heart-failure/validation.json"
+      }
+    },
+    {
+      "slug": "pfo-closure",
+      "label": "Patent Foramen Ovale Closure vs Medical Therapy",
+      "domain": "Vascular Disease",
+      "includedCount": 2,
+      "scannedRecords": 31,
+      "pagesFetched": 1,
+      "priorityTier": "early",
+      "query": "(\"patent foramen ovale\") AND (closure OR device) AND (\"RESPECT\" OR \"REDUCE\" OR \"CLOSE\" OR \"DEFENSE-PFO\")",
+      "links": {
+        "app": "projects/pfo-closure/index.html",
+        "plan": "projects/pfo-closure/plan.html",
+        "validation": "projects/pfo-closure/validation.json"
+      }
+    },
+    {
+      "slug": "thrombus-aspiration-stemi",
+      "label": "Thrombus Aspiration in STEMI",
+      "domain": "Coronary Artery Disease",
+      "includedCount": 2,
+      "scannedRecords": 46,
+      "pagesFetched": 1,
+      "priorityTier": "early",
+      "query": "(STEMI OR myocardial infarction) AND (\"thrombus aspiration\" OR thrombectomy) AND (\"TASTE\" OR \"TOTAL\" OR \"TAPAS\")",
+      "links": {
+        "app": "projects/thrombus-aspiration-stemi/index.html",
+        "plan": "projects/thrombus-aspiration-stemi/plan.html",
+        "validation": "projects/thrombus-aspiration-stemi/validation.json"
+      }
+    },
+    {
+      "slug": "ticagrelor-vs-clopidogrel",
+      "label": "Ticagrelor vs Clopidogrel in ACS",
+      "domain": "Coronary Artery Disease",
+      "includedCount": 2,
+      "scannedRecords": 42,
+      "pagesFetched": 1,
+      "priorityTier": "early",
+      "query": "(\"acute coronary syndrome\" OR myocardial infarction OR NSTEMI OR STEMI) AND (ticagrelor AND clopidogrel) AND (\"PLATO\" OR \"PHILO\" OR \"POPular AGE\")",
+      "links": {
+        "app": "projects/ticagrelor-vs-clopidogrel/index.html",
+        "plan": "projects/ticagrelor-vs-clopidogrel/plan.html",
+        "validation": "projects/ticagrelor-vs-clopidogrel/validation.json"
+      }
+    },
+    {
+      "slug": "ticagrelor-vs-prasugrel-acs",
+      "label": "Ticagrelor vs Prasugrel in ACS",
+      "domain": "Coronary Artery Disease",
+      "includedCount": 2,
+      "scannedRecords": 9,
+      "pagesFetched": 1,
+      "priorityTier": "early",
+      "query": "(\"acute coronary syndrome\" OR myocardial infarction OR NSTEMI OR STEMI) AND (ticagrelor AND prasugrel) AND (\"ISAR-REACT\" OR \"PRAGUE\" OR \"DUBIUS\")",
+      "links": {
+        "app": "projects/ticagrelor-vs-prasugrel-acs/index.html",
+        "plan": "projects/ticagrelor-vs-prasugrel-acs/plan.html",
+        "validation": "projects/ticagrelor-vs-prasugrel-acs/validation.json"
+      }
+    }
+  ]
+}

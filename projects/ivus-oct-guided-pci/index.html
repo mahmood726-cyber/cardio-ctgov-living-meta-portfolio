@@ -1,0 +1,2004 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IVUS or OCT Guided PCI | CT.gov Living Meta-Analysis</title>
+    <link rel="icon" href="data:," />
+        <meta name="description" content="IVUS or OCT Guided PCI living meta-analysis built only from randomized comparative ClinicalTrials.gov records with posted results." />
+    <link rel="stylesheet" href="../../../esc-acs-living-meta/styles.css" />
+    <!-- jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+</head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="hero__title">
+          <p class="kicker" id="appKicker">Registry-Native Cardiovascular Evidence</p>
+          <h1 id="appTitle">IVUS or OCT Guided PCI Living Meta-Analysis</h1>
+          <p class="subtitle" id="appSubtitle">Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.</p>
+        </div>
+        <div class="hero__controls">
+          <div class="control-card">
+            <label>
+              New RCT window start
+              <input id="startDate" type="date" />
+            </label>
+            <label>
+              Status filter
+              <select id="statusFilter" multiple>
+                <option value="COMPLETED" selected>Completed</option>
+                <option value="ACTIVE_NOT_RECRUITING" selected>Active, not recruiting</option>
+                <option value="RECRUITING">Recruiting</option>
+                <option value="NOT_YET_RECRUITING">Not yet recruiting</option>
+                <option value="TERMINATED">Terminated</option>
+              </select>
+            </label>
+            <label>
+              Single outcome rule
+              <select id="outcomeRule">
+                <option value="primary">Primary outcome with numeric results</option>
+                <option value="results">Any outcome with numeric results</option>
+              </select>
+            </label>
+            <label>
+              Reference treatment (NMA)
+              <input id="referenceTx" type="text" placeholder="e.g., Standard care" />
+            </label>
+            <button id="updateBtn" class="btn btn--primary">Update from ClinicalTrials.gov</button>
+            <button id="fixtureBtn" class="btn">Load Offline Fixture</button>
+            <button id="clearBtn" class="btn">Clear cache</button>
+            <button id="importDatasetBtn" class="btn btn--secondary">Import R Dataset</button>
+            <p class="meta">Last update: <span id="lastUpdate">Never</span></p>
+          </div>
+          <div class="control-card">
+            <label>
+              Prior meta-analysis trial IDs (one per line)
+              <textarea id="priorTrials" rows="6" placeholder="NCT01234567"></textarea>
+            </label>
+            <button id="compareBtn" class="btn">Compare Coverage</button>
+            <div id="coverageSummary" class="coverage"></div>
+          </div>
+        </div>
+      </header>
+
+      
+      <section class="panel validation-snapshot">
+        <div class="panel__header">
+          <h2>CT.gov Validation Snapshot</h2>
+          <div class="panel__meta">Generated 2026-03-28</div>
+        </div>
+        <div class="panel__body">
+          <div class="summary-grid">
+            <div class="summary-card">
+              <h3>Registry Gate</h3>
+              <div class="pill">Included RCTs: 12</div>
+              <div class="pill">Scanned records: 478</div>
+              <div class="pill">Pages fetched: 5</div>
+              <div class="pill">Priority tier: Build Now</div>
+            </div>
+            <div class="summary-card">
+              <h3>Eligibility Rules</h3>
+              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, and at least one extractable numeric outcome.</p>
+              <p>The validation scan completed within the configured CT.gov page cap.</p>
+            </div>
+            <div class="summary-card">
+              <h3>Audit Trail</h3>
+              <div class="pill"><a href="validation.json">validation.json</a></div>
+              <div class="pill"><a href="plan.html">plan.html</a></div>
+              <div class="pill"><a href="https://clinicaltrials.gov/search?term=(PCI%20OR%20coronary%20stent)%20AND%20(IVUS%20OR%20OCT%20OR%20%22intravascular%20ultrasound%22%20OR%20%22optical%20coherence%20tomography%22)%20AND%20(%22ULTIMATE%22%20OR%20%22ILUMIEN%22%20OR%20%22OCTOBER%22%20OR%20%22RENOVATE-COMPLEX-PCI%22)" target="_blank" rel="noopener">CT.gov search</a></div>
+              <div class="pill"><a href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fivus-oct-guided-pci%2Fvalidation.json&amp;topic=ivus-oct-guided-pci&amp;label=IVUS+or+OCT+Guided+PCI" target="_blank" rel="noopener">Topic-aware WebR runner</a></div>
+            </div>
+          </div>
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Exact Query</h3>
+            <pre style="white-space: pre-wrap; overflow-x: auto;">(PCI OR coronary stent) AND (IVUS OR OCT OR &quot;intravascular ultrasound&quot; OR &quot;optical coherence tomography&quot;) AND (&quot;ULTIMATE&quot; OR &quot;ILUMIEN&quot; OR &quot;OCTOBER&quot; OR &quot;RENOVATE-COMPLEX-PCI&quot;)</pre>
+          </div>
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Included Trial Records</h3>
+            <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
+              
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01788150" target="_blank" rel="noopener">
+          NCT01788150
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT00733304" target="_blank" rel="noopener">
+          NCT00733304
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02098876" target="_blank" rel="noopener">
+          NCT02098876
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02870985" target="_blank" rel="noopener">
+          NCT02870985
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01751906" target="_blank" rel="noopener">
+          NCT01751906
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02073565" target="_blank" rel="noopener">
+          NCT02073565
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT05307965" target="_blank" rel="noopener">
+          NCT05307965
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01270139" target="_blank" rel="noopener">
+          NCT01270139
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT03111940" target="_blank" rel="noopener">
+          NCT03111940
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT03507777" target="_blank" rel="noopener">
+          NCT03507777
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02471586" target="_blank" rel="noopener">
+          NCT02471586
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT03115580" target="_blank" rel="noopener">
+          NCT03115580
+        </a>
+            </div>
+          </div>
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Top Exclusion Reasons</h3>
+            <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
+              
+        <div class="pill">
+          No Extractable Numeric Outcome: 461
+        </div>
+
+        <div class="pill">
+          No Results Posted: 453
+        </div>
+
+        <div class="pill">
+          Not Completed: 304
+        </div>
+
+        <div class="pill">
+          Not Randomized Interventional: 204
+        </div>
+
+        <div class="pill">
+          Fewer Than Two Arms: 163
+        </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel reviewer-pack">
+        <div class="panel__header">
+          <h2>Reviewer Transparency Pack</h2>
+          <div class="panel__meta">Built to expose source search, eligibility, excerpts, benchmarking, and topic-aware validation before the live analysis workspace.</div>
+        </div>
+        <div class="panel__body">
+          <div class="summary-grid">
+            <div class="summary-card">
+              <h3>Protocol And Administrative Information</h3>
+              <div class="pill">Included trials: 12</div>
+              <div class="pill">Total enrollment reported: 6611</div>
+              <div class="pill">Sponsor coverage: 12/12</div>
+              <div class="pill">Demographics coverage: 12/12</div>
+              <div class="pill">CT.gov document coverage: 7/12</div>
+            </div>
+            <div class="summary-card">
+              <h3>Reviewer Route</h3>
+              <p>Use this pack to verify the search history, protocol framing, demographics capture, benchmark ledger, and topic-aware validation before reading the interactive estimates below.</p>
+              <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
+                <a class="pill" href="plan.html">Full validation plan</a>
+                <a class="pill" href="validation.json">validation.json</a>
+                <a class="pill" href="https://clinicaltrials.gov/search?term=(PCI%20OR%20coronary%20stent)%20AND%20(IVUS%20OR%20OCT%20OR%20%22intravascular%20ultrasound%22%20OR%20%22optical%20coherence%20tomography%22)%20AND%20(%22ULTIMATE%22%20OR%20%22ILUMIEN%22%20OR%20%22OCTOBER%22%20OR%20%22RENOVATE-COMPLEX-PCI%22)" target="_blank" rel="noopener">CT.gov search</a>
+                <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22IVUS%20or%20OCT%20Guided%20PCI%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">PubMed meta search</a>
+                <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22IVUS%20or%20OCT%20Guided%20PCI%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">PubMed RCT search</a>
+              </div>
+            </div>
+            <div class="summary-card">
+              <h3>Review Question And PICO</h3>
+              <p><strong>Population:</strong> Coronary Artery Disease; Macular Degeneration; Coronary Artery Stenosis; Coronary Disease; Coronary Stenosis; Coronary Arteriosclerosis</p>
+              <p><strong>Interventions:</strong> Svelte Drug-Eluting Coronary Stent; Medtronic Resolute Integrity Drug-Eluting Stent; 5 mg/mL TID; 2 mg/mL TID; 5 mg/mL QD; Resolute Integrity DES; Xience Xpedition DES; BIOTRONIK Orsiro SES</p>
+              <p><strong>Comparators:</strong> Medtronic Resolute Integrity Drug-Eluting Stent vs Svelte Drug-Eluting Coronary Stent; 2 mg/mL TID vs 5 mg/mL TID | 5 mg/mL QD vs 5 mg/mL TID; Xience Xpedition DES vs Resolute Integrity DES; Abbott Xience Prime™ EES vs BIOTRONIK Orsiro SES; XIENCE vs Absorb BVS; Everolimus Eluting Stent (EES) vs Combo</p>
+              <p><strong>Outcomes:</strong> Angiographic In-Stent Late Lumen Loss (LL); Change From Baseline (Day 1) in Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) Over Period; In Stent Mean Cross-sectional Area of Neo-intimal Tissue Coverage; In-stent Late Lumen Loss at 9 Months as Assessed by the Core Laboratory QCA Analysis; Number of Cardiac Death/TV-MI/ID-TLR (TLF); Number of Participants With Target Vessel Failure (TVF)</p>
+              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</p>
+            </div>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Search History Log</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>Source</th>
+                  <th>Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td>CT.gov candidate scan started</td>
+          <td>ClinicalTrials.gov v2 API</td>
+          <td>2026-03-28</td>
+        </tr>
+        <tr>
+          <td>Base query locked</td>
+          <td>Project generator</td>
+          <td>(PCI OR coronary stent) AND (IVUS OR OCT OR &quot;intravascular ultrasound&quot; OR &quot;optical coherence tomography&quot;)</td>
+        </tr>
+        <tr>
+          <td>Keyword expansion applied</td>
+          <td>Project generator</td>
+          <td>4 terms: ULTIMATE, ILUMIEN, OCTOBER, RENOVATE-COMPLEX-PCI</td>
+        </tr>
+        <tr>
+          <td>Exact query executed</td>
+          <td>ClinicalTrials.gov</td>
+          <td>(PCI OR coronary stent) AND (IVUS OR OCT OR &quot;intravascular ultrasound&quot; OR &quot;optical coherence tomography&quot;) AND (&quot;ULTIMATE&quot; OR &quot;ILUMIEN&quot; OR &quot;OCTOBER&quot; OR &quot;RENOVATE-COMPLEX-PCI&quot;)</td>
+        </tr>
+        <tr>
+          <td>Registry records screened</td>
+          <td>ClinicalTrials.gov</td>
+          <td>478 records across 5 page(s)</td>
+        </tr>
+        <tr>
+          <td>Hard-gate exclusions applied</td>
+          <td>Generator eligibility rules</td>
+          <td>466 records excluded before synthesis</td>
+        </tr>
+        <tr>
+          <td>Quantitative snapshot frozen</td>
+          <td>validation.json</td>
+          <td>12 randomized trials entered the reviewer pack</td>
+        </tr>
+        <tr>
+          <td>Project package generated</td>
+          <td>Portfolio build</td>
+          <td>2026-03-28</td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>PRISMA Flow Summary</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>Stage</th>
+                  <th>Count</th>
+                  <th>Reviewer Note</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td>Records identified from the exact CT.gov query</td>
+          <td>478</td>
+          <td>5 page(s) fetched</td>
+        </tr>
+        <tr>
+          <td>Records excluded by registry hard gates</td>
+          <td>466</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+        </tr>
+        <tr>
+          <td>Trials entering the quantitative snapshot</td>
+          <td>12</td>
+          <td>Included in validation.json and the live topic app</td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>PRISMA Style Screening Summary</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>Reason</th>
+                  <th>Count</th>
+                </tr>
+              </thead>
+              <tbody><tr><td>No Extractable Numeric Outcome</td><td>461</td></tr><tr><td>No Results Posted</td><td>453</td></tr><tr><td>Not Completed</td><td>304</td></tr><tr><td>Not Randomized Interventional</td><td>204</td></tr><tr><td>Fewer Than Two Arms</td><td>163</td></tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Study Eligibility And Demographics</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>NCT</th>
+                  <th>Title</th>
+                  <th>Sponsor</th>
+                  <th>Phase</th>
+                  <th>Enrollment</th>
+                  <th>Eligibility</th>
+                  <th>Demographics</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01788150" target="_blank" rel="noopener">NCT01788150</a></td>
+          <td>Safety and Efficacy Study of the Svelte Drug-Eluting Coronary Stent Delivery System</td>
+          <td>Svelte Medical Systems, Inc. (INDUSTRY)</td>
+          <td>NA</td>
+          <td>159 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Svelte Drug-Eluting Coronary Stent: 108 Participants | Medtronic Resolute Integrity Drug-Eluting Stent: 51 Participants | Total: 159 Participants | Age Svelte Drug-Eluting Coronary Stent: 62.7 +/- 9.9 years | Medtronic Resolute Integrity Drug-Eluting Stent: 64.2 +/- 12.4 years | Total: 63.2 +/- 10.8 years | Sex Svelte Drug-Eluting Coronary Stent: F 26 / M 82 | Medtronic Resolute Integrity Drug-Eluting Stent: F 17 / M 34 | Total: F 43 / M 116</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00733304" target="_blank" rel="noopener">NCT00733304</a></td>
+          <td>An Extension to Study MD7108240</td>
+          <td>GlaxoSmithKline (INDUSTRY)</td>
+          <td>Phase 2</td>
+          <td>42 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 50 Years to NR | Healthy volunteers: No</td>
+          <td>Participants 5 mg/mL TID: 19 Participants | 2 mg/mL TID: 15 Participants | 5 mg/mL QD: 8 Participants | Total: 42 Participants | Sex 5 mg/mL TID: F 15 / M 4 | 2 mg/mL TID: F 7 / M 8 | 5 mg/mL QD: F 5 / M 3 | Total: F 27 / M 15</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02098876" target="_blank" rel="noopener">NCT02098876</a></td>
+          <td>Wall Shear Stress and Neointimal Healing Following PCI in Angulated Coronary Vessels</td>
+          <td>Emory University (OTHER)</td>
+          <td>NA</td>
+          <td>86 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 30 Years to 80 Years | Healthy volunteers: No</td>
+          <td>Participants Resolute Integrity DES: 45 Participants | Xience Xpedition DES: 41 Participants | Total: 86 Participants | Age Resolute Integrity DES: 62.6 +/- 11.6 years | Xience Xpedition DES: 63.8 +/- 10.6 years | Total: 63.2 +/- 11.1 years | Sex Resolute Integrity DES: F 9 / M 36 | Xience Xpedition DES: F 7 / M 34 | Total: F 16 / M 70</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02870985" target="_blank" rel="noopener">NCT02870985</a></td>
+          <td>BIOTRONIK Orsiro Pre-Marketing Registration</td>
+          <td>Biotronik (Beijing) Medical Device Ltd. (INDUSTRY)</td>
+          <td>NA</td>
+          <td>440 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to 75 Years | Healthy volunteers: No</td>
+          <td>Participants Abbott Xience Prime™ EES: 220 Participants | BIOTRONIK Orsiro SES: 220 Participants | Total: 440 Participants | Age Abbott Xience Prime™ EES: 58.38 +/- 8.62 years | BIOTRONIK Orsiro SES: 59.05 +/- 8.48 years | Total: 58.715 +/- 8.56 years | Sex Abbott Xience Prime™ EES: F 78 / M 142 | BIOTRONIK Orsiro SES: F 60 / M 160 | Total: F 138 / M 302</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01751906" target="_blank" rel="noopener">NCT01751906</a></td>
+          <td>ABSORB III Randomized Controlled Trial (RCT)</td>
+          <td>Abbott Medical Devices (INDUSTRY)</td>
+          <td>NA</td>
+          <td>2008 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Absorb BVS: 1322 Participants | XIENCE: 686 Participants | Total: 2008 Participants | Age Absorb BVS: 63.5 +/- 10.6 years | XIENCE: 63.6 +/- 10.3 years | Total: 63.5 +/- 10.5 years | Sex Absorb BVS: F 388 / M 934 | XIENCE: F 205 / M 481 | Total: F 593 / M 1415</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02073565" target="_blank" rel="noopener">NCT02073565</a></td>
+          <td>HARMONEE - Japan-USA Harmonized Assessment by Randomized, Multi-Center Study of OrbusNEich&#39;s Combo StEnt</td>
+          <td>OrbusNeich (INDUSTRY)</td>
+          <td>NA</td>
+          <td>572 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 20 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Combo: 287 Participants | Everolimus Eluting Stent (EES): 285 Participants | Total: 572 Participants | Age Combo: 67.6 +/- 9.6 years | Everolimus Eluting Stent (EES): 66.5 +/- 10.4 years | Total: 67.0 +/- 10.0 years | Sex Combo: F 76 / M 211 | Everolimus Eluting Stent (EES): F 73 / M 212 | Total: F 149 / M 423</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05307965" target="_blank" rel="noopener">NCT05307965</a></td>
+          <td>RETRIEVE-AMI Study</td>
+          <td>Oxford University Hospitals NHS Trust (OTHER)</td>
+          <td>NA</td>
+          <td>81 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to 90 Years | Healthy volunteers: No</td>
+          <td>Participants Standalone Percutaneous Coronary Intervention: 27 Participants | Percutaneous Coronary Intervention and Thrombus Aspiration: 27 Participants | Percutaneous Coronary Intervention and Retriever Thrombectomy: 27 Participants | Total: 81 Participants | Age Standalone Percutaneous Coronary Intervention: 67 +/- 12 years | Percutaneous Coronary Intervention and Thrombus Aspiration: 63 +/- 12 years | Percutaneous Coronary Intervention and Retriever Thrombectomy: 63 +/- 13 years | Total: 64 +/- 12 years | Sex Standalone Percutaneous Coronary Intervention: F 3 / M 24 | Percutaneous Coronary Intervention and Thrombus Aspiration: F 5 / M 22 | Percutaneous Coronary Intervention and Retriever Thrombectomy: F 4 / M 23 | Total: F 12 / M 69</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01270139" target="_blank" rel="noopener">NCT01270139</a></td>
+          <td>Plasmonic Nanophotothermal Therapy of Atherosclerosis</td>
+          <td>Ural State Medical University (OTHER)</td>
+          <td>NA</td>
+          <td>180 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 45 Years to 65 Years | Healthy volunteers: No</td>
+          <td>Participants Nano Group: 60 Participants | Ferro Group: 60 Participants | Stenting Control: 60 Participants | Total: 180 Participants | Age Nano Group: 51.2 +/- 10.3 years | Ferro Group: 50.9 +/- 8.8 years | Stenting Control: 52.6 +/- 6.8 years | Total: 51.6 +/- 8.6 years | Sex Nano Group: F 11 / M 49 | Ferro Group: F 16 / M 44 | Stenting Control: F 14 / M 46 | Total: F 41 / M 139</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03111940" target="_blank" rel="noopener">NCT03111940</a></td>
+          <td>The Oxford Optimisation of PCI Study (OXOPT-PCI Study)</td>
+          <td>Oxford University Hospitals NHS Trust (OTHER)</td>
+          <td>NA</td>
+          <td>35 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 30 Years to 90 Years | Healthy volunteers: No</td>
+          <td>Participants Group 1 Patients With a Suboptimal Functional Result (FFR &lt;0.90) After Conventional PCI: 21 Participants | Group 2 Patients With a Satisfactory Functional Result (FFR ≥0.90) After Conventional PCI: 14 Participants | Total: 35 Participants | Age Group 1 Patients With a Suboptimal Functional Result (FFR &lt;0.90) After Conventional PCI: 64.4 +/- 8.4 years | Group 2 Patients With a Satisfactory Functional Result (FFR ≥0.90) After Conventional PCI: 64.8 +/- 8.2 years | Total: 64.4 +/- 8.4 years | Sex Group 1 Patients With a Suboptimal Functional Result (FFR &lt;0.90) After Conventional PCI: F 3 / M 18 | Group 2 Patients With a Satisfactory Functional Result (FFR ≥0.90) After Conventional PCI: F 3 / M 11 | Total: F 6 / M 29</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03507777" target="_blank" rel="noopener">NCT03507777</a></td>
+          <td>ILUMIEN IV: OPTIMAL Percutaneous Coronary Intervention (PCI)</td>
+          <td>Abbott Medical Devices (INDUSTRY)</td>
+          <td>NA</td>
+          <td>2487 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Coronary PCI Guided by OCT: 1233 Participants | Coronary PCI Guided by Angiography: 1254 Participants | Total: 2487 Participants | Age Coronary PCI Guided by OCT: 65.5 +/- 10.5 Years | Coronary PCI Guided by Angiography: 65.7 +/- 10.3 Years | Total: 65.6 +/- 10.4 Years | Sex Coronary PCI Guided by OCT: F 265 / M 968 | Coronary PCI Guided by Angiography: F 298 / M 956 | Total: F 563 / M 1924</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02471586" target="_blank" rel="noopener">NCT02471586</a></td>
+          <td>OPTIMIZE PCI: Multicenter Randomized Trial of OCT Compared to IVUS and Angiography to Guide Coronary Stent Implantation</td>
+          <td>Abbott Medical Devices (INDUSTRY)</td>
+          <td>NA</td>
+          <td>450 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Coronary PCI Guided by OCT: 158 Participants | Coronary PCI Guided by IVUS: 146 Participants | Coronary PCI Guided by Angiography: 146 Participants | Total: 450 Participants | Age Coronary PCI Guided by OCT: 65.5 +/- 9.3 years | Coronary PCI Guided by IVUS: 65.8 +/- 9.5 years | Coronary PCI Guided by Angiography: 65.4 +/- 11.2 years | Total: 65.6 +/- 10.0 years | Sex Coronary PCI Guided by OCT: F 49 / M 109 | Coronary PCI Guided by IVUS: F 39 / M 107 | Coronary PCI Guided by Angiography: F 39 / M 107 | Total: F 127 / M 323</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03115580" target="_blank" rel="noopener">NCT03115580</a></td>
+          <td>Side Branch FFR After Provisional Stenting</td>
+          <td>Icahn School of Medicine at Mount Sinai (OTHER)</td>
+          <td>NA</td>
+          <td>71 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Rotational Atherectomy: 35 Participants | CBA/PTCA: 36 Participants | Total: 71 Participants | Age Rotational Atherectomy: 67.8 +/- 10.5 years | CBA/PTCA: 66.6 +/- 9.9 years | Total: 67.2 +/- 10.1 years | Sex Rotational Atherectomy: F 7 / M 28 | CBA/PTCA: F 14 / M 22 | Total: F 21 / M 50</td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Record Excerpts</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>NCT</th>
+                  <th>Brief Summary</th>
+                  <th>Eligibility Excerpt</th>
+                  <th>Primary Outcome Excerpt</th>
+                  <th>Source Documents</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01788150" target="_blank" rel="noopener">NCT01788150</a></td>
+          <td>A prospective, randomized, active-control, multi-center clinical trial comparing the safety and efficacy of the Svelte Drug-Eluting Coronary Stent Integrated Delivery System (IDS) to that of the commercially available Resolute IntegrityT...</td>
+          <td>Inclusion Criteria: General Inclusion Criteria 1. Patient is ≥18 years old; 2. Patient is eligible for percutaneous coronary intervention (PCI); 3. Patient is an acceptable candidate for emergent coronary artery bypas...</td>
+          <td>Angiographic In-Stent Late Lumen Loss (LL) | Time frame: 6-months post-procedure | Defined as the measurements either within the stented segment or within 5 mm proximal and distal to the stent edges.</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00733304" target="_blank" rel="noopener">NCT00733304</a></td>
+          <td>This is a two month study to allow continued treatment with pazopanib eye drops. Study may be extended to 5 months.</td>
+          <td>Inclusion Criteria: * Subjects who participated in Phase IIa study MD7108240 and who did not experience AMD disease progression requiring rescue therapy during pazopanib treatment or require discontinuation of pazopan...</td>
+          <td>Change From Baseline (Day 1) in Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) Over Period | Time frame: Baseline (Day 1) and approximately up to 6 months | Change from Baseline is the value at indicated time point minus the Baseline value...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02098876" target="_blank" rel="noopener">NCT02098876</a></td>
+          <td>Stents are metallic tubular supports placed inside a blood vessel to relieve an obstruction and restore blood flow to the heart muscle. Stents could also be coated with a drug (drug-eluting stents - DES) that improves local healing and i...</td>
+          <td>Inclusion Criteria: 1. Patient must be 30 to 80 years old 2. Severe coronary lesion in a vessel with ≥ 30-degree angulation requiring percutaneous coronary intervention (PCI) 3. Lesion treatable by a single Resolute I...</td>
+          <td>In Stent Mean Cross-sectional Area of Neo-intimal Tissue Coverage | Time frame: 1 year | Cross-sectional area in neointimal hyperplasia by Optical Coherence Tomography (OCT) at 1 year following stent placement</td>
+          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2020-09-04)</span>
+<span class="pill">Informed Consent Form (2015-12-10)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02870985" target="_blank" rel="noopener">NCT02870985</a></td>
+          <td>The clinical investigation is a non-inferiority, multicenter, blinding evaluation, randomized, parallel controlled clinical study enrolling up to 440 subjects. All subjects will be randomized 1:1 to receive the BIOTRONIK Orsiro SES or th...</td>
+          <td>Inclusion Criteria-Clinical 1. Subject who can understand the investigation&#39;s goal has provided written informed consent, and is willing to comply with the study&#39;s follow-up requirements. 2. Subject is ≥ 18 years and...</td>
+          <td>In-stent Late Lumen Loss at 9 Months as Assessed by the Core Laboratory QCA Analysis | Time frame: At 9 months post procedure | QCA data will be provided by an independent core laboratory. A separate report with descriptive statistics will be provided by th...</td>
+          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2015-12-15)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01751906" target="_blank" rel="noopener">NCT01751906</a></td>
+          <td>The ABSORB III RCT is a prospective randomized, single-blind, multi-center trial. It is the pivotal trial to support the US pre-market approval (PMA) of Absorb™ Bioresorbable Vascular Scaffold (BVS). The ABSORB III includes additional tw...</td>
+          <td>General Inclusion Criteria: 1. Subject must be at least 18 years of age. 2. Subject or a legally authorized representative must provide written Informed Consent prior to any study related procedure, per site requireme...</td>
+          <td>Number of Cardiac Death/TV-MI/ID-TLR (TLF) | Time frame: 1 year | TLF is defined as composite of Cardiac Death, Myocardial Infarction (per protocol-defined MI definition), attributable to Target Vessel (TV-MI), or Ischemic-Driven Target Lesion Revasculariza...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02073565" target="_blank" rel="noopener">NCT02073565</a></td>
+          <td>This is a multi-center, single-blind, randomized, active-controlled, clinical trial in Percutaneous Coronary Intervention (PCI) subjects. Subjects will be randomized to receive the Combo stent as the investigational treatment arm or an E...</td>
+          <td>Inclusion Criteria To be eligible for this trial, subjects must meet all of the following criteria: 1. Subject is able to verbally confirm understanding of risks, benefits, and treatment alternatives of Combo vs EES s...</td>
+          <td>Number of Participants With Target Vessel Failure (TVF) | Time frame: 1 year follow-up | The primary clinical endpoint of Target Vessel Failure (TVF), defined as cardiac death, target-vessel myocardial infarction (MI), or ischemia-driven Target Vessel Revas...</td>
+          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2015-03-16)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05307965" target="_blank" rel="noopener">NCT05307965</a></td>
+          <td>Heart attacks are caused by the sudden formation of a clot inside a diseased coronary artery which reduces blood flow beyond the blockage site. During conventional treatment of the blockage with what is known as a stent; a stainless stee...</td>
+          <td>Inclusion Criteria: * Primary PCI patient with ST elevation myocardial infarction (STEMI) * TIMI 0/1 flow at presentation * Angiographic thrombus score ≥ 4 * Vessel diameter at site of occlusion ≥ 3.0 mm (measured by...</td>
+          <td>Thrombus Volume (mm^3) | Time frame: During PCI prior to stent implantation (typically 30 min from start of procedure) | Assessed with Optical Coherence Tomography \[OCT\]</td>
+          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2024-04-22)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01270139" target="_blank" rel="noopener">NCT01270139</a></td>
+          <td>The investigators hypothesize that the nanoburning is a very challenging technique to demolish and reverse the plaque especially in combination with stem cell technologies promising the functional restoration of the vessel wall. The comp...</td>
+          <td>Inclusion Criteria: * age 45-65 years old * male and female * single- or multi-vessel CAD with flow-limiting lesions * no indications for coronary artery bypass surgery (CABG) * stable angina with indications for perc...</td>
+          <td>Total Atheroma Volume | Time frame: at 12-month follow-up | Total atheroma volume (TAV, plaque-media volume, mm3) at 12 months. Quantitative coronary angiography (QCA) and Intravascular Ultrasound (IVUS) were performed pre-, post-procedure and at 12-month f...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03111940" target="_blank" rel="noopener">NCT03111940</a></td>
+          <td>The OxOPT-PCI study addresses patients with coronary artery disease who are referred to the John Radcliffe Hospital because of the need for treatment with an intra-coronary stent (metal scaffold) for clinical reasons. Although, this has...</td>
+          <td>Inclusion Criteria: * participant is willing and able to give informed consent for participation in the study * angiogram shows haemodynamically relevant lesion suitable for PCI and suitable for the use of intravascul...</td>
+          <td>Final Fractional Flow Reserve (FFR) After Intracoronary Stenting | Time frame: Immediately post-stenting for Group 1A and 1B, and post FFR/OCT-guided optimisation for Group 1A | After administration of intracoronary nitrates, FFR was measured under maximal...</td>
+          <td><span class="pill">Study Protocol (2016-09-14)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03507777" target="_blank" rel="noopener">NCT03507777</a></td>
+          <td>The objective of this prospective, single-blind clinical investigation is to demonstrate the superiority of an Optical Coherence Tomography (OCT)-guided stent implantation strategy as compared to an angiography-guided stent implantation...</td>
+          <td>Inclusion Criteria (all must be present) 1. Subject must be at least 18 years of age. 2. Subject must have evidence of myocardial ischemia (e.g., stable angina, silent ischemia (ischemia in the absence of chest pain o...</td>
+          <td>Imaging Outcome (Powered): Minimal Stent Area (MSA) | Time frame: Final Post-PCI Measurement (average of 24 hours). | Minimal Stent Area (per target lesion basis) assessed by OCT in each randomized arm, measured at an independent OCT core laboratory blinded...</td>
+          <td><span class="pill">Study Protocol (2022-10-06)</span>
+<span class="pill">Statistical Analysis Plan (2022-10-10)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02471586" target="_blank" rel="noopener">NCT02471586</a></td>
+          <td>The objective of this clinical investigation is to demonstrate the safety and efficacy of an OCT guided strategy for stent implantation</td>
+          <td>General Inclusion Criteria: 1. Age ≥ 18 years. 2. Patient with an indication for PCI including: * Angina (stable or unstable), * Silent ischemia (a visually estimated target lesion diameter stenosis of ≥70%, a positiv...</td>
+          <td>Primary Efficacy Endpoint (Powered): Post-PCI Median Minimum Stent Area (MSA) | Time frame: Post-procedure within 1 hour | Post-PCI MSA will be assessed by OCT in each randomized arm, measured at the independent OCT core laboratory blinded to imaging modali...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03115580" target="_blank" rel="noopener">NCT03115580</a></td>
+          <td>The purpose of this study is to predict any changes in the side branch after stenting the main branch blood vessel using three dimensional intravascular images. (Frequency domain optical coherence tomography FD OCT). Optical coherence to...</td>
+          <td>Inclusion Criteria: * All patients over 18 years of age presenting with stable coronary artery disease. * Patients must have a clinical indication for coronary intervention. * Creatinine Kinase Myocardial-Band Isoenzy...</td>
+          <td>Number of Participants With Side Branch Compromise | Time frame: Day 1 | Number of participants with Side Branch (SB) compromise which is defined as SB DS \&gt; 70%, or dissection or TIMI \&lt; 3</td>
+          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2017-01-19)</span></td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Benchmark Reconciliation Ledger</h3>
+            <p>Use this registry-native ledger to check study overlap, comparator definitions, and outcome alignment against published syntheses before accepting pooled estimates as publication-ready.</p>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>NCT</th>
+                  <th>Registry Contrast</th>
+                  <th>Outcome</th>
+                  <th>Enrollment</th>
+                  <th>Benchmark Use</th>
+                </tr>
+              </thead>
+              <tbody>
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01788150" target="_blank" rel="noopener">NCT01788150</a></td>
+        <td>Medtronic Resolute Integrity Drug-Eluting Stent vs Svelte Drug-Eluting Coronary Stent</td>
+        <td>Angiographic In-Stent Late Lumen Loss (LL)</td>
+        <td>159 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT00733304" target="_blank" rel="noopener">NCT00733304</a></td>
+        <td>2 mg/mL TID vs 5 mg/mL TID | 5 mg/mL QD vs 5 mg/mL TID</td>
+        <td>Change From Baseline (Day 1) in Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) Over Period</td>
+        <td>42 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02098876" target="_blank" rel="noopener">NCT02098876</a></td>
+        <td>Xience Xpedition DES vs Resolute Integrity DES</td>
+        <td>In Stent Mean Cross-sectional Area of Neo-intimal Tissue Coverage</td>
+        <td>86 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02870985" target="_blank" rel="noopener">NCT02870985</a></td>
+        <td>Abbott Xience Prime™ EES vs BIOTRONIK Orsiro SES</td>
+        <td>In-stent Late Lumen Loss at 9 Months as Assessed by the Core Laboratory QCA Analysis</td>
+        <td>440 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01751906" target="_blank" rel="noopener">NCT01751906</a></td>
+        <td>XIENCE vs Absorb BVS</td>
+        <td>Number of Cardiac Death/TV-MI/ID-TLR (TLF)</td>
+        <td>2008 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02073565" target="_blank" rel="noopener">NCT02073565</a></td>
+        <td>Everolimus Eluting Stent (EES) vs Combo</td>
+        <td>Number of Participants With Target Vessel Failure (TVF)</td>
+        <td>572 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT05307965" target="_blank" rel="noopener">NCT05307965</a></td>
+        <td>Percutaneous Coronary Intervention and Thrombus Aspiration vs Standalone Percutaneous Coronary Intervention | Percutaneous Coronary Intervention and Retriever Thrombectomy vs Standalone Percutaneous Coronary Intervention</td>
+        <td>Device-related Target Vessel Complications</td>
+        <td>81 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01270139" target="_blank" rel="noopener">NCT01270139</a></td>
+        <td>Nano Group vs Stenting Control | Ferro Group vs Stenting Control</td>
+        <td>Total Atheroma Volume</td>
+        <td>180 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03111940" target="_blank" rel="noopener">NCT03111940</a></td>
+        <td>Group 1B: No PCI Optimisation Performed vs Group 1A: OCT-guided PCI Optimisation</td>
+        <td>Final Fractional Flow Reserve (FFR) After Intracoronary Stenting</td>
+        <td>35 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03507777" target="_blank" rel="noopener">NCT03507777</a></td>
+        <td>Coronary PCI Guided by Angiography vs Coronary PCI Guided by OCT</td>
+        <td>Imaging Outcome (Powered): Minimal Stent Area (MSA)</td>
+        <td>2487 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Reviewer Validation</h3>
+            <p>The embedded panel below now runs the shared R benchmark suites plus topic-specific checks for the current CT.gov snapshot. Reviewers should pair it with <code>validation.json</code> and the benchmark ledger above.</p>
+            <div class="topic-stats" style="flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+              <a class="pill" href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fivus-oct-guided-pci%2Fvalidation.json&amp;topic=ivus-oct-guided-pci&amp;label=IVUS+or+OCT+Guided+PCI" target="_blank" rel="noopener">Open topic-aware WebR runner</a>
+              <a class="pill" href="validation.json">Open topic validation.json</a>
+            </div>
+            <iframe
+              id="reviewerValidationFrame"
+              src="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fivus-oct-guided-pci%2Fvalidation.json&amp;topic=ivus-oct-guided-pci&amp;label=IVUS+or+OCT+Guided+PCI"
+              title="WebR reviewer validation"
+              loading="lazy"
+              style="width: 100%; min-height: 420px; border: 1px solid rgba(148, 163, 184, 0.25); border-radius: 18px; background: rgba(15, 23, 42, 0.88);"
+            ></iframe>
+            <script>
+(() => {
+  const iframe = document.getElementById("reviewerValidationFrame");
+  const context = {"source":"ctgov-portfolio-generator","topicId":"ivus-oct-guided-pci","label":"IVUS or OCT Guided PCI","query":"(PCI OR coronary stent) AND (IVUS OR OCT OR \"intravascular ultrasound\" OR \"optical coherence tomography\") AND (\"ULTIMATE\" OR \"ILUMIEN\" OR \"OCTOBER\" OR \"RENOVATE-COMPLEX-PCI\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":12,"excludedCount":466,"totalEnrollment":6611,"demographicsCoverage":12,"documentCoverage":7,"comparisons":[{"studyId":"NCT01788150","title":"Safety and Efficacy Study of the Svelte Drug-Eluting Coronary Stent Delivery System","t1":"Medtronic Resolute Integrity Drug-Eluting Stent","t2":"Svelte Drug-Eluting Coronary Stent","measure":"MD","effect":0.04000000000000001,"se":0.05387276938211805,"n1":40,"n0":89,"totalN":129,"sampleSize":129},{"studyId":"NCT00733304","title":"An Extension to Study MD7108240","t1":"2 mg/mL TID","t2":"5 mg/mL TID","measure":"MD","effect":-3.9,"se":3.002441988571443,"n1":15,"n0":19,"totalN":34,"sampleSize":34},{"studyId":"NCT00733304","title":"An Extension to Study MD7108240","t1":"5 mg/mL QD","t2":"5 mg/mL TID","measure":"MD","effect":-2.4,"se":2.5081283648842305,"n1":8,"n0":19,"totalN":27,"sampleSize":27},{"studyId":"NCT02098876","title":"Wall Shear Stress and Neointimal Healing Following PCI in Angulated Coronary Vessels","t1":"Xience Xpedition DES","t2":"Resolute Integrity DES","measure":"MD","effect":-0.43200000000000005,"se":0.2229447961780161,"n1":35,"n0":32,"totalN":67,"sampleSize":67},{"studyId":"NCT02870985","title":"BIOTRONIK Orsiro Pre-Marketing Registration","t1":"Abbott Xience Prime™ EES","t2":"BIOTRONIK Orsiro SES","measure":"MD","effect":0.020000000000000004,"se":0.020504988306618108,"n1":220,"n0":220,"totalN":440,"sampleSize":440},{"studyId":"NCT01751906","title":"ABSORB III Randomized Controlled Trial (RCT)","t1":"XIENCE","t2":"Absorb BVS","measure":"logRR","effect":-0.24900214518944205,"se":0.1787608625332168,"n1":677,"n0":1313,"totalN":1990,"sampleSize":1990},{"studyId":"NCT02073565","title":"HARMONEE - Japan-USA Harmonized Assessment by Randomized, Multi-Center Study of OrbusNEich's Combo StEnt","t1":"Everolimus Eluting Stent (EES)","t2":"Combo","measure":"logRR","effect":-0.50383258827502,"se":0.3554437238804724,"n1":285,"n0":287,"totalN":572,"sampleSize":572},{"studyId":"NCT01270139","title":"Plasmonic Nanophotothermal Therapy of Atherosclerosis","t1":"Nano Group","t2":"Stenting Control","measure":"MD","effect":-69.8,"se":8.705936671796627,"n1":60,"n0":60,"totalN":120,"sampleSize":120},{"studyId":"NCT01270139","title":"Plasmonic Nanophotothermal Therapy of Atherosclerosis","t1":"Ferro Group","t2":"Stenting Control","measure":"MD","effect":-62.400000000000006,"se":10.694827410170458,"n1":60,"n0":60,"totalN":120,"sampleSize":120},{"studyId":"NCT03111940","title":"The Oxford Optimisation of PCI Study (OXOPT-PCI Study)","t1":"Group 1B: No PCI Optimisation Performed","t2":"Group 1A: OCT-guided PCI Optimisation","measure":"MD","effect":0.039999999999999925,"se":0.01196951255353495,"n1":8,"n0":13,"totalN":21,"sampleSize":21},{"studyId":"NCT03507777","title":"ILUMIEN IV: OPTIMAL Percutaneous Coronary Intervention (PCI)","t1":"Coronary PCI Guided by Angiography","t2":"Coronary PCI Guided by OCT","measure":"MD","effect":-0.35999999999999943,"se":0.08086967636253221,"n1":1201,"n0":1147,"totalN":2348,"sampleSize":2348},{"studyId":"NCT02471586","title":"OPTIMIZE PCI: Multicenter Randomized Trial of OCT Compared to IVUS and Angiography to Guide Coronary Stent Implantation","t1":"Coronary PCI Guided by IVUS","t2":"Coronary PCI Guided by OCT","measure":"logRR","effect":-1.3073059498012602,"se":1.1121248001044919,"n1":146,"n0":158,"totalN":304,"sampleSize":304},{"studyId":"NCT02471586","title":"OPTIMIZE PCI: Multicenter Randomized Trial of OCT Compared to IVUS and Angiography to Guide Coronary Stent Implantation","t1":"Coronary PCI Guided by Angiography","t2":"Coronary PCI Guided by OCT","measure":"logRR","effect":-1.3073059498012602,"se":1.1121248001044919,"n1":146,"n0":158,"totalN":304,"sampleSize":304},{"studyId":"NCT03115580","title":"Side Branch FFR After Provisional Stenting","t1":"CBA/PTCA","t2":"Rotational Atherectomy","measure":"logRR","effect":0.22314355131420976,"se":0.4445436397239843,"n1":36,"n0":35,"totalN":71,"sampleSize":71}],"includedStudies":[{"nctId":"NCT01788150","title":"Safety and Efficacy Study of the Svelte Drug-Eluting Coronary Stent Delivery System","status":"COMPLETED","enrollment":159,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Angiographic In-Stent Late Lumen Loss (LL)","groups":[{"title":"Svelte Drug-Eluting Coronary Stent","n":89,"events":null,"mean":0.09,"sd":0.31},{"title":"Medtronic Resolute Integrity Drug-Eluting Stent","n":40,"events":null,"mean":0.13,"sd":0.27}]},"primaryOutcomes":[{"measure":"Angiographic In-Stent Late Lumen Loss (LL)","timeFrame":"6-months post-procedure"}]},{"nctId":"NCT00733304","title":"An Extension to Study MD7108240","status":"COMPLETED","enrollment":42,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change From Baseline (Day 1) in Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) Over Period","groups":[{"title":"5 mg/mL TID","n":19,"events":null,"mean":3.5,"sd":9.05},{"title":"2 mg/mL TID","n":15,"events":null,"mean":-0.4,"sd":8.4},{"title":"5 mg/mL QD","n":8,"events":null,"mean":1.1,"sd":3.98}]},"primaryOutcomes":[{"measure":"Change From Baseline (Day 1) in Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) Over Period","timeFrame":"Baseline (Day 1) and approximately up to 6 months"},{"measure":"Change From Baseline (Day 1) in Heart Rate Over Period","timeFrame":"Baseline (Day 1) and approximately up to 6 months"}]},{"nctId":"NCT02098876","title":"Wall Shear Stress and Neointimal Healing Following PCI in Angulated Coronary Vessels","status":"COMPLETED","enrollment":86,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"In Stent Mean Cross-sectional Area of Neo-intimal Tissue Coverage","groups":[{"title":"Resolute Integrity DES","n":32,"events":null,"mean":1.381,"sd":1.026},{"title":"Xience Xpedition DES","n":35,"events":null,"mean":0.949,"sd":0.767}]},"primaryOutcomes":[{"measure":"In Stent Mean Cross-sectional Area of Neo-intimal Tissue Coverage","timeFrame":"1 year"}]},{"nctId":"NCT02870985","title":"BIOTRONIK Orsiro Pre-Marketing Registration","status":"COMPLETED","enrollment":440,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"continuous","title":"In-stent Late Lumen Loss at 9 Months as Assessed by the Core Laboratory QCA Analysis","groups":[{"title":"BIOTRONIK Orsiro SES","n":220,"events":null,"mean":0.05,"sd":0.21},{"title":"Abbott Xience Prime™ EES","n":220,"events":null,"mean":0.07,"sd":0.22}]},"primaryOutcomes":[{"measure":"In-stent Late Lumen Loss at 9 Months as Assessed by the Core Laboratory QCA Analysis","timeFrame":"At 9 months post procedure"}]},{"nctId":"NCT01751906","title":"ABSORB III Randomized Controlled Trial (RCT)","status":"COMPLETED","enrollment":2008,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Cardiac Death/TV-MI/ID-TLR (TLF)","groups":[{"title":"Absorb BVS","n":1313,"events":102,"mean":null,"sd":null},{"title":"XIENCE","n":677,"events":41,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Cardiac Death/TV-MI/ID-TLR (TLF)","timeFrame":"1 year"}]},{"nctId":"NCT02073565","title":"HARMONEE - Japan-USA Harmonized Assessment by Randomized, Multi-Center Study of OrbusNEich's Combo StEnt","status":"COMPLETED","enrollment":572,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants With Target Vessel Failure (TVF)","groups":[{"title":"Combo","n":287,"events":20,"mean":null,"sd":null},{"title":"Everolimus Eluting Stent (EES)","n":285,"events":12,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Participants With Target Vessel Failure (TVF)","timeFrame":"1 year follow-up"}]},{"nctId":"NCT05307965","title":"RETRIEVE-AMI Study","status":"COMPLETED","enrollment":81,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Device-related Target Vessel Complications","groups":[{"title":"Standalone Percutaneous Coronary Intervention","n":27,"events":0,"mean":null,"sd":null},{"title":"Percutaneous Coronary Intervention and Thrombus Aspiration","n":27,"events":0,"mean":null,"sd":null},{"title":"Percutaneous Coronary Intervention and Retriever Thrombectomy","n":27,"events":0,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Thrombus Volume (mm^3)","timeFrame":"During PCI prior to stent implantation (typically 30 min from start of procedure)"},{"measure":"Device-related Target Vessel Complications","timeFrame":"During PCI prior to stent implantation (typically 30 min from start of procedure)"}]},{"nctId":"NCT01270139","title":"Plasmonic Nanophotothermal Therapy of Atherosclerosis","status":"COMPLETED","enrollment":180,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Total Atheroma Volume","groups":[{"title":"Nano Group","n":60,"events":null,"mean":108.2,"sd":42.2},{"title":"Ferro Group","n":60,"events":null,"mean":115.6,"sd":64},{"title":"Stenting Control","n":60,"events":null,"mean":178,"sd":52.6}]},"primaryOutcomes":[{"measure":"Total Atheroma Volume","timeFrame":"at 12-month follow-up"},{"measure":"MACE (Major Adverse Cardiovascular Events)-Free Survival","timeFrame":"at 60 months follow-up"}]},{"nctId":"NCT03111940","title":"The Oxford Optimisation of PCI Study (OXOPT-PCI Study)","status":"COMPLETED","enrollment":35,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"continuous","title":"Final Fractional Flow Reserve (FFR) After Intracoronary Stenting","groups":[{"title":"Group 1A: OCT-guided PCI Optimisation","n":13,"events":null,"mean":0.8,"sd":0.02},{"title":"Group 1B: No PCI Optimisation Performed","n":8,"events":null,"mean":0.84,"sd":0.03}]},"primaryOutcomes":[{"measure":"Final Fractional Flow Reserve (FFR) After Intracoronary Stenting","timeFrame":"Immediately post-stenting for Group 1A and 1B, and post FFR/OCT-guided optimisation for Group 1A"}]},{"nctId":"NCT03507777","title":"ILUMIEN IV: OPTIMAL Percutaneous Coronary Intervention (PCI)","status":"COMPLETED","enrollment":2487,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Imaging Outcome (Powered): Minimal Stent Area (MSA)","groups":[{"title":"Coronary PCI Guided by OCT","n":1147,"events":null,"mean":5.72,"sd":2.04},{"title":"Coronary PCI Guided by Angiography","n":1201,"events":null,"mean":5.36,"sd":1.87}]},"primaryOutcomes":[{"measure":"Imaging Outcome (Powered): Minimal Stent Area (MSA)","timeFrame":"Final Post-PCI Measurement (average of 24 hours)."},{"measure":"Number of Participants With Target Vessel Failure (TVF)","timeFrame":"At 2 years"}]},{"nctId":"NCT02471586","title":"OPTIMIZE PCI: Multicenter Randomized Trial of OCT Compared to IVUS and Angiography to Guide Coronary Stent Implantation","status":"COMPLETED","enrollment":450,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Primary Safety Endpoint (Non-powered): Number of Participants With Procedural MACE (Major Adverse Cardiac Event)","groups":[{"title":"Coronary PCI Guided by OCT","n":158,"events":4,"mean":null,"sd":null},{"title":"Coronary PCI Guided by IVUS","n":146,"events":1,"mean":null,"sd":null},{"title":"Coronary PCI Guided by Angiography","n":146,"events":1,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Primary Efficacy Endpoint (Powered): Post-PCI Median Minimum Stent Area (MSA)","timeFrame":"Post-procedure within 1 hour"},{"measure":"Primary Safety Endpoint (Non-powered): Number of Participants With Procedural MACE (Major Adverse Cardiac Event)","timeFrame":"During procedure, an average of 1 hour"}]},{"nctId":"NCT03115580","title":"Side Branch FFR After Provisional Stenting","status":"COMPLETED","enrollment":71,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants With Side Branch Compromise","groups":[{"title":"Rotational Atherectomy","n":35,"events":7,"mean":null,"sd":null},{"title":"CBA/PTCA","n":36,"events":9,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Participants With Side Branch Compromise","timeFrame":"Day 1"}]}]};
+  if (!iframe || !context) return;
+  const sendContext = () => {
+    if (!iframe.contentWindow) return;
+    iframe.contentWindow.postMessage({ type: "esc-topic-validation-context", payload: context }, "*");
+  };
+  iframe.addEventListener("load", sendContext);
+  window.addEventListener("message", event => {
+    if (event.source === iframe.contentWindow && event.data?.type === "esc-topic-validation-request") {
+      sendContext();
+    }
+  });
+  window.setTimeout(sendContext, 250);
+})();
+</script>
+          </div>
+        </div>
+      </section>
+
+      <main class="layout">
+        <section class="panel topics">
+          <div class="panel__header">
+            <h2 id="topicPanelTitle">CT.gov-validated topic (12 eligible RCTs in snapshot)</h2>
+            <div class="topic-stats">
+              <span id="topicCount">0</span> topics -
+              <span id="trialCount">0</span> trials
+            </div>
+          </div>
+          <div class="panel__body">
+            <div id="topicList" class="topic-list"></div>
+          </div>
+        </section>
+
+        <section class="panel detail">
+          <div class="panel__header">
+            <h2 id="topicTitle">Select a topic</h2>
+            <div class="panel__meta" id="topicMeta"></div>
+            <div class="export-buttons">
+              <button id="exportCsvBtn" class="btn btn--small">CSV</button>
+              <button id="exportJsonBtn" class="btn btn--small">JSON</button>
+              <button id="exportPdfBtn" class="btn btn--small btn--accent">PDF Report</button>
+              <button id="exportRBtn" class="btn btn--small">R Script</button>
+              <button id="addStudyBtn" class="btn btn--small btn--secondary">+ Add Study</button>
+            </div>
+          </div>
+          <div class="panel__body">
+            <div class="tabs">
+              <button class="tab active" data-tab="overview">Overview</button>
+              <button class="tab" data-tab="trials">Trials</button>
+              <button class="tab" data-tab="pairwise">Pairwise Meta</button>
+              <button class="tab" data-tab="network">Network</button>
+              <button class="tab" data-tab="dose">Dose Response</button>
+              <button class="tab" data-tab="grade">GRADE</button>
+              <button class="tab" data-tab="cumulative">Cumulative</button>
+              <button class="tab" data-tab="diagnostics">Diagnostics</button>
+              <button class="tab" data-tab="raw">Raw Records</button>
+              <button class="tab" data-tab="transparency">Transparency</button>
+            </div>
+            <div class="tab-content active" id="tab-overview">
+              <div class="summary-grid">
+                <div class="summary-card">
+                  <h3>Evidence Snapshot</h3>
+                  <div id="overviewSnapshot"></div>
+                </div>
+                <div class="summary-card">
+                  <h3>Meta Summary</h3>
+                  <div id="metaSummary"></div>
+                </div>
+                <div class="summary-card">
+                  <h3>Key Warnings</h3>
+                  <div id="warningList"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-trials">
+              <div id="trialTable"></div>
+            </div>
+            <div class="tab-content" id="tab-pairwise">
+              <div class="forest-container">
+                <div class="forest-controls">
+                  <button id="forestResetBtn" class="btn btn--small">Reset Exclusions</button>
+                  <span id="forestExcludedCount" class="muted"></span>
+                </div>
+                <div class="forest-wrapper">
+                  <canvas id="forestChart" width="900" height="460"></canvas>
+                  <div id="forestTooltip" class="forest-tooltip hidden"></div>
+                </div>
+              </div>
+              <div id="pairwiseTable"></div>
+            </div>
+            <div class="tab-content" id="tab-network">
+              <canvas id="networkChart" width="900" height="460"></canvas>
+              <div id="networkTable"></div>
+            </div>
+            <div class="tab-content" id="tab-dose">
+              <canvas id="doseChart" width="900" height="460"></canvas>
+              <div id="doseTable"></div>
+            </div>
+            <div class="tab-content" id="tab-grade">
+              <div class="grade-assessment">
+                <h3>GRADE Certainty of Evidence</h3>
+                <div id="gradeTable"></div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-cumulative">
+              <canvas id="cumulativeChart" width="900" height="460"></canvas>
+              <div id="cumulativeTable"></div>
+            </div>
+            <div class="tab-content" id="tab-diagnostics">
+              <div class="diagnostics-grid">
+                <div class="diagnostic-section">
+                  <h4>Funnel Plot</h4>
+                  <canvas id="funnelChart" width="500" height="400"></canvas>
+                </div>
+                <div class="diagnostic-section">
+                  <div id="diagnosticTable"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-raw">
+              <pre id="rawJson"></pre>
+            </div>
+            <div class="tab-content" id="tab-transparency">
+              <div class="summary-card">
+                <h3>Transparency Summary</h3>
+                <div id="transparencySummary"></div>
+              </div>
+              <div class="summary-card" style="margin-top: 16px;">
+                <h3>Record Ledger</h3>
+                <div id="transparencyLedger"></div>
+              </div>
+              <div class="summary-card" style="margin-top: 16px;">
+                <h3>Reviewer Links</h3>
+                <div id="transparencyBenchmarks"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <section class="panel log">
+        <div class="panel__header">
+          <h2>Update Log</h2>
+        </div>
+        <div class="panel__body">
+          <div id="logStream" class="log-stream"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Dataset Import Modal -->
+    <div id="datasetModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Import R Package Dataset</h2>
+          <button id="closeModalBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="dataset-filters">
+            <label>
+              Source:
+              <select id="datasetSourceFilter">
+                <option value="all">All Sources</option>
+                <option value="metafor">metafor</option>
+                <option value="meta">meta</option>
+                <option value="netmeta">netmeta</option>
+                <option value="mada">mada (DTA)</option>
+                <option value="literature">Published Literature</option>
+              </select>
+            </label>
+            <label>
+              Type:
+              <select id="datasetTypeFilter">
+                <option value="all">All Types</option>
+                <option value="pairwise">Pairwise</option>
+                <option value="network">Network</option>
+                <option value="diagnostic">Diagnostic</option>
+                <option value="continuous">Continuous</option>
+              </select>
+            </label>
+            <label>
+              Relevance:
+              <select id="datasetRelevanceFilter">
+                <option value="all">All</option>
+                <option value="acs">ACS-specific</option>
+                <option value="cardiovascular">Cardiovascular</option>
+                <option value="classic">Classic examples</option>
+              </select>
+            </label>
+            <input type="text" id="datasetSearch" placeholder="Search datasets..." />
+          </div>
+          <div id="datasetList" class="dataset-list"></div>
+          <div id="datasetPreview" class="dataset-preview hidden">
+            <h3 id="previewTitle"></h3>
+            <p id="previewDescription"></p>
+            <div id="previewStats" class="preview-stats"></div>
+            <div id="previewCitation" class="preview-citation"></div>
+            <table id="previewTable" class="preview-table"></table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="import-options">
+            <label>
+              <input type="checkbox" id="createTopicCheck" checked />
+              Create as new topic
+            </label>
+            <input type="text" id="customTopicName" placeholder="Custom topic name (optional)" />
+          </div>
+          <button id="importDatasetConfirmBtn" class="btn btn--primary" disabled>Import Selected Dataset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Manual Study Entry Modal -->
+    <div id="studyEntryModal" class="modal hidden">
+      <div class="modal-content modal-content--medium">
+        <div class="modal-header">
+          <h2>Add Study Manually</h2>
+          <button id="closeStudyEntryBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-section">
+            <h4>Study Information</h4>
+            <div class="form-row">
+              <label>
+                Study Name/ID *
+                <input type="text" id="entryStudyName" placeholder="e.g., COMPLETE 2019" required />
+              </label>
+              <label>
+                Year
+                <input type="number" id="entryStudyYear" placeholder="2019" min="1900" max="2100" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h4>Outcome Type</h4>
+            <div class="form-row">
+              <label class="radio-label">
+                <input type="radio" name="outcomeType" value="binary" checked /> Binary (events/n)
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="outcomeType" value="continuous" /> Continuous (mean/SD/n)
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="outcomeType" value="precomputed" /> Pre-computed (HR/OR/RR with CI)
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section" id="binaryOutcomeSection">
+            <h4>Binary Outcome Data</h4>
+            <div class="form-row">
+              <label>
+                Treatment Arm Label
+                <input type="text" id="entryTreat1Label" placeholder="e.g., Complete revasc" />
+              </label>
+              <label>
+                Events
+                <input type="number" id="entryTreat1Events" min="0" />
+              </label>
+              <label>
+                Total N
+                <input type="number" id="entryTreat1N" min="1" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Control Arm Label
+                <input type="text" id="entryTreat2Label" placeholder="e.g., Culprit-only" />
+              </label>
+              <label>
+                Events
+                <input type="number" id="entryTreat2Events" min="0" />
+              </label>
+              <label>
+                Total N
+                <input type="number" id="entryTreat2N" min="1" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section hidden" id="continuousOutcomeSection">
+            <h4>Continuous Outcome Data</h4>
+            <div class="form-row">
+              <label>
+                Treatment Arm Label
+                <input type="text" id="entryContTreat1Label" placeholder="e.g., Intervention" />
+              </label>
+              <label>
+                Mean
+                <input type="number" id="entryContTreat1Mean" step="any" />
+              </label>
+              <label>
+                SD
+                <input type="number" id="entryContTreat1SD" step="any" min="0" />
+              </label>
+              <label>
+                N
+                <input type="number" id="entryContTreat1N" min="1" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Control Arm Label
+                <input type="text" id="entryContTreat2Label" placeholder="e.g., Control" />
+              </label>
+              <label>
+                Mean
+                <input type="number" id="entryContTreat2Mean" step="any" />
+              </label>
+              <label>
+                SD
+                <input type="number" id="entryContTreat2SD" step="any" min="0" />
+              </label>
+              <label>
+                N
+                <input type="number" id="entryContTreat2N" min="1" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section hidden" id="precomputedSection">
+            <h4>Pre-computed Effect Size</h4>
+            <div class="form-row">
+              <label>
+                Effect Measure
+                <select id="entryEffectMeasure">
+                  <option value="HR">Hazard Ratio (HR)</option>
+                  <option value="OR">Odds Ratio (OR)</option>
+                  <option value="RR">Risk Ratio (RR)</option>
+                  <option value="MD">Mean Difference (MD)</option>
+                  <option value="SMD">Standardized Mean Difference (SMD)</option>
+                </select>
+              </label>
+              <label>
+                Point Estimate
+                <input type="number" id="entryEffectValue" step="any" placeholder="e.g., 0.74" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                95% CI Lower
+                <input type="number" id="entryCILower" step="any" />
+              </label>
+              <label>
+                95% CI Upper
+                <input type="number" id="entryCIUpper" step="any" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Treatment Label
+                <input type="text" id="entryPreTreat1" placeholder="e.g., Treatment" />
+              </label>
+              <label>
+                Control Label
+                <input type="text" id="entryPreTreat2" placeholder="e.g., Control" />
+              </label>
+            </div>
+          </div>
+
+          <div id="entryPreview" class="entry-preview hidden">
+            <h4>Preview</h4>
+            <div id="entryPreviewContent"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="previewStudyBtn" class="btn">Preview</button>
+          <button id="addStudyConfirmBtn" class="btn btn--primary" disabled>Add Study to Topic</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROB2 Risk of Bias Modal -->
+    <div id="robModal" class="modal hidden">
+      <div class="modal-content modal-content--medium">
+        <div class="modal-header">
+          <h2>Risk of Bias Assessment (ROB2)</h2>
+          <button id="closeRobModalBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="rob-study-info">
+            <strong>Study:</strong> <span id="robStudyName">-</span>
+          </div>
+          <div class="rob-domains">
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D1: Randomization process</span>
+                <select id="robD1" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD1Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D2: Deviations from intended interventions</span>
+                <select id="robD2" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD2Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D3: Missing outcome data</span>
+                <select id="robD3" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD3Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D4: Measurement of the outcome</span>
+                <select id="robD4" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD4Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D5: Selection of reported result</span>
+                <select id="robD5" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD5Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+          </div>
+          <div class="rob-overall">
+            <label>
+              <strong>Overall Risk of Bias:</strong>
+              <span id="robOverallCalc" class="rob-overall-calc">-</span>
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="saveRobBtn" class="btn btn--primary">Save Assessment</button>
+          <button id="clearRobBtn" class="btn">Clear</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- External Import Modal -->
+    <div id="externalImportModal" class="modal hidden">
+      <div class="modal-content modal-content--small">
+        <div class="modal-header">
+          <h2>Import from External Source</h2>
+          <button id="closeExternalModalBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="import-tabs">
+            <button class="import-tab active" data-source="zenodo">Zenodo</button>
+            <button class="import-tab" data-source="github">GitHub</button>
+            <button class="import-tab" data-source="csv">CSV Upload</button>
+          </div>
+          <div class="import-panel active" id="zenodo-panel">
+            <label>
+              Zenodo DOI or Record ID:
+              <input type="text" id="zenodoDoi" placeholder="10.5281/zenodo.1234567 or 1234567" />
+            </label>
+            <button id="fetchZenodoBtn" class="btn">Fetch Record</button>
+            <div id="zenodoResult" class="import-result"></div>
+          </div>
+          <div class="import-panel" id="github-panel">
+            <label>
+              GitHub Raw URL:
+              <input type="text" id="githubUrl" placeholder="https://raw.githubusercontent.com/..." />
+            </label>
+            <button id="fetchGithubBtn" class="btn">Fetch File</button>
+            <div id="githubResult" class="import-result"></div>
+          </div>
+          <div class="import-panel" id="csv-panel">
+            <label>
+              Upload CSV/JSON file:
+              <input type="file" id="csvUpload" accept=".csv,.json" />
+            </label>
+            <div id="csvResult" class="import-result"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="openExternalImportBtn" class="btn btn--secondary">Import from URL/File</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Start Wizard Modal -->
+    <div id="quickStartModal" class="modal">
+      <div class="modal-content modal-content--wizard">
+        <div class="wizard-header">
+          <h2 id="welcomeTitle">IVUS or OCT Guided PCI CT.gov review</h2>
+          <p class="wizard-subtitle">Quick Start Guide (2 minutes)</p>
+        </div>
+        <div class="wizard-body">
+          <div class="wizard-step active" data-step="1">
+            <div class="wizard-step-icon">1</div>
+            <h3>Select a Topic</h3>
+            <p>Choose from 47 pre-configured ACS topics in the left sidebar. Each topic is aligned with ESC Guidelines questions.</p>
+            <div class="wizard-highlight" data-target="topicList">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150' viewBox='0 0 300 150'%3E%3Crect fill='%231a1a2e' width='300' height='150'/%3E%3Ctext fill='%2300d4ff' x='150' y='75' text-anchor='middle' font-size='14'%3ETopics appear here%3C/text%3E%3C/svg%3E" alt="Topic list">
+            </div>
+          </div>
+          <div class="wizard-step" data-step="2">
+            <div class="wizard-step-icon">2</div>
+            <h3>Load Evidence</h3>
+            <p>Click "Update from ClinicalTrials.gov" to automatically fetch RCT data, or import from R datasets.</p>
+            <ul class="wizard-tips">
+              <li>Auto-extracts study arms, outcomes, and sample sizes</li>
+              <li>Deduplicates against existing data</li>
+              <li>Works offline after first load</li>
+            </ul>
+          </div>
+          <div class="wizard-step" data-step="3">
+            <div class="wizard-step-icon">3</div>
+            <h3>Review Analysis Tabs</h3>
+            <p>Navigate through the analysis tabs to explore your evidence:</p>
+            <ul class="wizard-tabs-preview">
+              <li><strong>Overview</strong> - Evidence snapshot and warnings</li>
+              <li><strong>Pairwise Meta</strong> - Forest plot with click-to-exclude</li>
+              <li><strong>Network</strong> - NMA with treatment rankings</li>
+              <li><strong>GRADE</strong> - Automated certainty assessment</li>
+            </ul>
+          </div>
+          <div class="wizard-step" data-step="4">
+            <div class="wizard-step-icon">4</div>
+            <h3>Export Results</h3>
+            <p>Generate publication-ready outputs for your guideline panel:</p>
+            <ul class="wizard-exports">
+              <li><strong>PDF Report</strong> - Complete analysis summary</li>
+              <li><strong>R Script</strong> - Reproducible code for verification</li>
+              <li><strong>CSV/JSON</strong> - Data for further analysis</li>
+            </ul>
+          </div>
+        </div>
+        <div class="wizard-footer">
+          <div class="wizard-progress">
+            <span class="wizard-dot active" data-step="1"></span>
+            <span class="wizard-dot" data-step="2"></span>
+            <span class="wizard-dot" data-step="3"></span>
+            <span class="wizard-dot" data-step="4"></span>
+          </div>
+          <div class="wizard-buttons">
+            <button id="wizardPrevBtn" class="btn btn--outline" disabled>Previous</button>
+            <button id="wizardNextBtn" class="btn btn--primary">Next</button>
+            <button id="wizardFinishBtn" class="btn btn--accent hidden">Get Started</button>
+          </div>
+          <label class="wizard-dismiss">
+            <input type="checkbox" id="dontShowAgain"> Don't show this again
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contextual Help Tooltip System -->
+    <div id="helpTooltip" class="help-tooltip hidden">
+      <div class="help-tooltip-content"></div>
+      <div class="help-tooltip-arrow"></div>
+    </div>
+
+    <!-- Interactive Tour Overlay -->
+    <div id="tourOverlay" class="tour-overlay hidden">
+      <div class="tour-spotlight"></div>
+      <div class="tour-tooltip">
+        <div class="tour-tooltip-header">
+          <span class="tour-step-indicator">Step 1 of 8</span>
+          <button class="tour-close">&times;</button>
+        </div>
+        <div class="tour-tooltip-body">
+          <h4 class="tour-title"></h4>
+          <p class="tour-description"></p>
+        </div>
+        <div class="tour-tooltip-footer">
+          <button class="tour-prev btn btn--small btn--outline">Previous</button>
+          <button class="tour-next btn btn--small btn--primary">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Help Button (Fixed Position) -->
+    <button id="helpBtn" class="help-fab" title="Help & Tutorials">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+      </svg>
+    </button>
+
+    <!-- Help Menu -->
+    <div id="helpMenu" class="help-menu hidden">
+      <div class="help-menu-header">
+        <h3>Help & Learning</h3>
+        <button class="help-menu-close">&times;</button>
+      </div>
+      <div class="help-menu-body">
+        <button class="help-menu-item" data-action="quickstart">
+          <span class="help-menu-icon">🚀</span>
+          <div>
+            <strong>Quick Start Guide</strong>
+            <small>2-minute introduction</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="tour">
+          <span class="help-menu-icon">🎯</span>
+          <div>
+            <strong>Interactive Tour</strong>
+            <small>Step-by-step walkthrough</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="shortcuts">
+          <span class="help-menu-icon">⌨️</span>
+          <div>
+            <strong>Keyboard Shortcuts</strong>
+            <small>Speed up your workflow</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="grade">
+          <span class="help-menu-icon">📊</span>
+          <div>
+            <strong>GRADE Assessment Help</strong>
+            <small>Understanding certainty ratings</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="nma">
+          <span class="help-menu-icon">🔗</span>
+          <div>
+            <strong>Network Meta-Analysis</strong>
+            <small>Interpreting NMA results</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="manual">
+          <span class="help-menu-icon">📖</span>
+          <div>
+            <strong>Full User Manual</strong>
+            <small>Complete documentation</small>
+          </div>
+        </button>
+      </div>
+      <div class="help-menu-footer">
+        <small>Press <kbd>?</kbd> anytime for help</small>
+      </div>
+    </div>
+
+    <script>
+      window.__ESC_ACS_TOPICS_OVERRIDE__ = {
+  "baseQuery": "(PCI OR coronary stent) AND (IVUS OR OCT OR \"intravascular ultrasound\" OR \"optical coherence tomography\")",
+  "topics": [
+    {
+      "id": "ivus-oct-guided-pci",
+      "label": "IVUS or OCT Guided PCI",
+      "keywords": [
+        "ULTIMATE",
+        "ILUMIEN",
+        "OCTOBER",
+        "RENOVATE-COMPLEX-PCI"
+      ]
+    }
+  ],
+  "appConfig": {
+    "pageTitle": "IVUS or OCT Guided PCI | CT.gov Living Meta-Analysis",
+    "kicker": "Registry-Native Cardiovascular Evidence",
+    "title": "IVUS or OCT Guided PCI Living Meta-Analysis",
+    "subtitle": "Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.",
+    "topicPanelTitle": "CT.gov-validated topic (12 eligible RCTs in snapshot)",
+    "welcomeTitle": "IVUS or OCT Guided PCI CT.gov review",
+    "eligibilityTrialMinimum": 1,
+    "analysisStudioName": "IVUS or OCT Guided PCI CT.gov Living Meta-Analysis Studio",
+    "defaultStatuses": [
+      "COMPLETED"
+    ],
+    "defaultOutcomeRule": "results",
+    "requirePostedResults": true,
+    "requireNumericOutcome": true,
+    "requireComparatorArms": true,
+    "enforceConditionFilter": false,
+    "autoUpdateOnLoad": true,
+    "rValidationHref": "../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fivus-oct-guided-pci%2Fvalidation.json&topic=ivus-oct-guided-pci&label=IVUS+or+OCT+Guided+PCI",
+    "rValidationContext": {
+      "source": "ctgov-portfolio-generator",
+      "topicId": "ivus-oct-guided-pci",
+      "label": "IVUS or OCT Guided PCI",
+      "query": "(PCI OR coronary stent) AND (IVUS OR OCT OR \"intravascular ultrasound\" OR \"optical coherence tomography\") AND (\"ULTIMATE\" OR \"ILUMIEN\" OR \"OCTOBER\" OR \"RENOVATE-COMPLEX-PCI\")",
+      "generatedAt": "2026-03-28T18:45:05.888Z",
+      "includedCount": 12,
+      "excludedCount": 466,
+      "totalEnrollment": 6611,
+      "demographicsCoverage": 12,
+      "documentCoverage": 7,
+      "comparisons": [
+        {
+          "studyId": "NCT01788150",
+          "title": "Safety and Efficacy Study of the Svelte Drug-Eluting Coronary Stent Delivery System",
+          "t1": "Medtronic Resolute Integrity Drug-Eluting Stent",
+          "t2": "Svelte Drug-Eluting Coronary Stent",
+          "measure": "MD",
+          "effect": 0.04000000000000001,
+          "se": 0.05387276938211805,
+          "n1": 40,
+          "n0": 89,
+          "totalN": 129,
+          "sampleSize": 129
+        },
+        {
+          "studyId": "NCT00733304",
+          "title": "An Extension to Study MD7108240",
+          "t1": "2 mg/mL TID",
+          "t2": "5 mg/mL TID",
+          "measure": "MD",
+          "effect": -3.9,
+          "se": 3.002441988571443,
+          "n1": 15,
+          "n0": 19,
+          "totalN": 34,
+          "sampleSize": 34
+        },
+        {
+          "studyId": "NCT00733304",
+          "title": "An Extension to Study MD7108240",
+          "t1": "5 mg/mL QD",
+          "t2": "5 mg/mL TID",
+          "measure": "MD",
+          "effect": -2.4,
+          "se": 2.5081283648842305,
+          "n1": 8,
+          "n0": 19,
+          "totalN": 27,
+          "sampleSize": 27
+        },
+        {
+          "studyId": "NCT02098876",
+          "title": "Wall Shear Stress and Neointimal Healing Following PCI in Angulated Coronary Vessels",
+          "t1": "Xience Xpedition DES",
+          "t2": "Resolute Integrity DES",
+          "measure": "MD",
+          "effect": -0.43200000000000005,
+          "se": 0.2229447961780161,
+          "n1": 35,
+          "n0": 32,
+          "totalN": 67,
+          "sampleSize": 67
+        },
+        {
+          "studyId": "NCT02870985",
+          "title": "BIOTRONIK Orsiro Pre-Marketing Registration",
+          "t1": "Abbott Xience Prime™ EES",
+          "t2": "BIOTRONIK Orsiro SES",
+          "measure": "MD",
+          "effect": 0.020000000000000004,
+          "se": 0.020504988306618108,
+          "n1": 220,
+          "n0": 220,
+          "totalN": 440,
+          "sampleSize": 440
+        },
+        {
+          "studyId": "NCT01751906",
+          "title": "ABSORB III Randomized Controlled Trial (RCT)",
+          "t1": "XIENCE",
+          "t2": "Absorb BVS",
+          "measure": "logRR",
+          "effect": -0.24900214518944205,
+          "se": 0.1787608625332168,
+          "n1": 677,
+          "n0": 1313,
+          "totalN": 1990,
+          "sampleSize": 1990
+        },
+        {
+          "studyId": "NCT02073565",
+          "title": "HARMONEE - Japan-USA Harmonized Assessment by Randomized, Multi-Center Study of OrbusNEich's Combo StEnt",
+          "t1": "Everolimus Eluting Stent (EES)",
+          "t2": "Combo",
+          "measure": "logRR",
+          "effect": -0.50383258827502,
+          "se": 0.3554437238804724,
+          "n1": 285,
+          "n0": 287,
+          "totalN": 572,
+          "sampleSize": 572
+        },
+        {
+          "studyId": "NCT01270139",
+          "title": "Plasmonic Nanophotothermal Therapy of Atherosclerosis",
+          "t1": "Nano Group",
+          "t2": "Stenting Control",
+          "measure": "MD",
+          "effect": -69.8,
+          "se": 8.705936671796627,
+          "n1": 60,
+          "n0": 60,
+          "totalN": 120,
+          "sampleSize": 120
+        },
+        {
+          "studyId": "NCT01270139",
+          "title": "Plasmonic Nanophotothermal Therapy of Atherosclerosis",
+          "t1": "Ferro Group",
+          "t2": "Stenting Control",
+          "measure": "MD",
+          "effect": -62.400000000000006,
+          "se": 10.694827410170458,
+          "n1": 60,
+          "n0": 60,
+          "totalN": 120,
+          "sampleSize": 120
+        },
+        {
+          "studyId": "NCT03111940",
+          "title": "The Oxford Optimisation of PCI Study (OXOPT-PCI Study)",
+          "t1": "Group 1B: No PCI Optimisation Performed",
+          "t2": "Group 1A: OCT-guided PCI Optimisation",
+          "measure": "MD",
+          "effect": 0.039999999999999925,
+          "se": 0.01196951255353495,
+          "n1": 8,
+          "n0": 13,
+          "totalN": 21,
+          "sampleSize": 21
+        },
+        {
+          "studyId": "NCT03507777",
+          "title": "ILUMIEN IV: OPTIMAL Percutaneous Coronary Intervention (PCI)",
+          "t1": "Coronary PCI Guided by Angiography",
+          "t2": "Coronary PCI Guided by OCT",
+          "measure": "MD",
+          "effect": -0.35999999999999943,
+          "se": 0.08086967636253221,
+          "n1": 1201,
+          "n0": 1147,
+          "totalN": 2348,
+          "sampleSize": 2348
+        },
+        {
+          "studyId": "NCT02471586",
+          "title": "OPTIMIZE PCI: Multicenter Randomized Trial of OCT Compared to IVUS and Angiography to Guide Coronary Stent Implantation",
+          "t1": "Coronary PCI Guided by IVUS",
+          "t2": "Coronary PCI Guided by OCT",
+          "measure": "logRR",
+          "effect": -1.3073059498012602,
+          "se": 1.1121248001044919,
+          "n1": 146,
+          "n0": 158,
+          "totalN": 304,
+          "sampleSize": 304
+        },
+        {
+          "studyId": "NCT02471586",
+          "title": "OPTIMIZE PCI: Multicenter Randomized Trial of OCT Compared to IVUS and Angiography to Guide Coronary Stent Implantation",
+          "t1": "Coronary PCI Guided by Angiography",
+          "t2": "Coronary PCI Guided by OCT",
+          "measure": "logRR",
+          "effect": -1.3073059498012602,
+          "se": 1.1121248001044919,
+          "n1": 146,
+          "n0": 158,
+          "totalN": 304,
+          "sampleSize": 304
+        },
+        {
+          "studyId": "NCT03115580",
+          "title": "Side Branch FFR After Provisional Stenting",
+          "t1": "CBA/PTCA",
+          "t2": "Rotational Atherectomy",
+          "measure": "logRR",
+          "effect": 0.22314355131420976,
+          "se": 0.4445436397239843,
+          "n1": 36,
+          "n0": 35,
+          "totalN": 71,
+          "sampleSize": 71
+        }
+      ],
+      "includedStudies": [
+        {
+          "nctId": "NCT01788150",
+          "title": "Safety and Efficacy Study of the Svelte Drug-Eluting Coronary Stent Delivery System",
+          "status": "COMPLETED",
+          "enrollment": 159,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Angiographic In-Stent Late Lumen Loss (LL)",
+            "groups": [
+              {
+                "title": "Svelte Drug-Eluting Coronary Stent",
+                "n": 89,
+                "events": null,
+                "mean": 0.09,
+                "sd": 0.31
+              },
+              {
+                "title": "Medtronic Resolute Integrity Drug-Eluting Stent",
+                "n": 40,
+                "events": null,
+                "mean": 0.13,
+                "sd": 0.27
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Angiographic In-Stent Late Lumen Loss (LL)",
+              "timeFrame": "6-months post-procedure"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT00733304",
+          "title": "An Extension to Study MD7108240",
+          "status": "COMPLETED",
+          "enrollment": 42,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change From Baseline (Day 1) in Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) Over Period",
+            "groups": [
+              {
+                "title": "5 mg/mL TID",
+                "n": 19,
+                "events": null,
+                "mean": 3.5,
+                "sd": 9.05
+              },
+              {
+                "title": "2 mg/mL TID",
+                "n": 15,
+                "events": null,
+                "mean": -0.4,
+                "sd": 8.4
+              },
+              {
+                "title": "5 mg/mL QD",
+                "n": 8,
+                "events": null,
+                "mean": 1.1,
+                "sd": 3.98
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change From Baseline (Day 1) in Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) Over Period",
+              "timeFrame": "Baseline (Day 1) and approximately up to 6 months"
+            },
+            {
+              "measure": "Change From Baseline (Day 1) in Heart Rate Over Period",
+              "timeFrame": "Baseline (Day 1) and approximately up to 6 months"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT02098876",
+          "title": "Wall Shear Stress and Neointimal Healing Following PCI in Angulated Coronary Vessels",
+          "status": "COMPLETED",
+          "enrollment": 86,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "In Stent Mean Cross-sectional Area of Neo-intimal Tissue Coverage",
+            "groups": [
+              {
+                "title": "Resolute Integrity DES",
+                "n": 32,
+                "events": null,
+                "mean": 1.381,
+                "sd": 1.026
+              },
+              {
+                "title": "Xience Xpedition DES",
+                "n": 35,
+                "events": null,
+                "mean": 0.949,
+                "sd": 0.767
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "In Stent Mean Cross-sectional Area of Neo-intimal Tissue Coverage",
+              "timeFrame": "1 year"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT02870985",
+          "title": "BIOTRONIK Orsiro Pre-Marketing Registration",
+          "status": "COMPLETED",
+          "enrollment": 440,
+          "documentsCount": 1,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "In-stent Late Lumen Loss at 9 Months as Assessed by the Core Laboratory QCA Analysis",
+            "groups": [
+              {
+                "title": "BIOTRONIK Orsiro SES",
+                "n": 220,
+                "events": null,
+                "mean": 0.05,
+                "sd": 0.21
+              },
+              {
+                "title": "Abbott Xience Prime™ EES",
+                "n": 220,
+                "events": null,
+                "mean": 0.07,
+                "sd": 0.22
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "In-stent Late Lumen Loss at 9 Months as Assessed by the Core Laboratory QCA Analysis",
+              "timeFrame": "At 9 months post procedure"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01751906",
+          "title": "ABSORB III Randomized Controlled Trial (RCT)",
+          "status": "COMPLETED",
+          "enrollment": 2008,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Number of Cardiac Death/TV-MI/ID-TLR (TLF)",
+            "groups": [
+              {
+                "title": "Absorb BVS",
+                "n": 1313,
+                "events": 102,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "XIENCE",
+                "n": 677,
+                "events": 41,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Number of Cardiac Death/TV-MI/ID-TLR (TLF)",
+              "timeFrame": "1 year"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT02073565",
+          "title": "HARMONEE - Japan-USA Harmonized Assessment by Randomized, Multi-Center Study of OrbusNEich's Combo StEnt",
+          "status": "COMPLETED",
+          "enrollment": 572,
+          "documentsCount": 1,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Number of Participants With Target Vessel Failure (TVF)",
+            "groups": [
+              {
+                "title": "Combo",
+                "n": 287,
+                "events": 20,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Everolimus Eluting Stent (EES)",
+                "n": 285,
+                "events": 12,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Number of Participants With Target Vessel Failure (TVF)",
+              "timeFrame": "1 year follow-up"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT05307965",
+          "title": "RETRIEVE-AMI Study",
+          "status": "COMPLETED",
+          "enrollment": 81,
+          "documentsCount": 1,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Device-related Target Vessel Complications",
+            "groups": [
+              {
+                "title": "Standalone Percutaneous Coronary Intervention",
+                "n": 27,
+                "events": 0,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Percutaneous Coronary Intervention and Thrombus Aspiration",
+                "n": 27,
+                "events": 0,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Percutaneous Coronary Intervention and Retriever Thrombectomy",
+                "n": 27,
+                "events": 0,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Thrombus Volume (mm^3)",
+              "timeFrame": "During PCI prior to stent implantation (typically 30 min from start of procedure)"
+            },
+            {
+              "measure": "Device-related Target Vessel Complications",
+              "timeFrame": "During PCI prior to stent implantation (typically 30 min from start of procedure)"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01270139",
+          "title": "Plasmonic Nanophotothermal Therapy of Atherosclerosis",
+          "status": "COMPLETED",
+          "enrollment": 180,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Total Atheroma Volume",
+            "groups": [
+              {
+                "title": "Nano Group",
+                "n": 60,
+                "events": null,
+                "mean": 108.2,
+                "sd": 42.2
+              },
+              {
+                "title": "Ferro Group",
+                "n": 60,
+                "events": null,
+                "mean": 115.6,
+                "sd": 64
+              },
+              {
+                "title": "Stenting Control",
+                "n": 60,
+                "events": null,
+                "mean": 178,
+                "sd": 52.6
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Total Atheroma Volume",
+              "timeFrame": "at 12-month follow-up"
+            },
+            {
+              "measure": "MACE (Major Adverse Cardiovascular Events)-Free Survival",
+              "timeFrame": "at 60 months follow-up"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT03111940",
+          "title": "The Oxford Optimisation of PCI Study (OXOPT-PCI Study)",
+          "status": "COMPLETED",
+          "enrollment": 35,
+          "documentsCount": 1,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Final Fractional Flow Reserve (FFR) After Intracoronary Stenting",
+            "groups": [
+              {
+                "title": "Group 1A: OCT-guided PCI Optimisation",
+                "n": 13,
+                "events": null,
+                "mean": 0.8,
+                "sd": 0.02
+              },
+              {
+                "title": "Group 1B: No PCI Optimisation Performed",
+                "n": 8,
+                "events": null,
+                "mean": 0.84,
+                "sd": 0.03
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Final Fractional Flow Reserve (FFR) After Intracoronary Stenting",
+              "timeFrame": "Immediately post-stenting for Group 1A and 1B, and post FFR/OCT-guided optimisation for Group 1A"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT03507777",
+          "title": "ILUMIEN IV: OPTIMAL Percutaneous Coronary Intervention (PCI)",
+          "status": "COMPLETED",
+          "enrollment": 2487,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Imaging Outcome (Powered): Minimal Stent Area (MSA)",
+            "groups": [
+              {
+                "title": "Coronary PCI Guided by OCT",
+                "n": 1147,
+                "events": null,
+                "mean": 5.72,
+                "sd": 2.04
+              },
+              {
+                "title": "Coronary PCI Guided by Angiography",
+                "n": 1201,
+                "events": null,
+                "mean": 5.36,
+                "sd": 1.87
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Imaging Outcome (Powered): Minimal Stent Area (MSA)",
+              "timeFrame": "Final Post-PCI Measurement (average of 24 hours)."
+            },
+            {
+              "measure": "Number of Participants With Target Vessel Failure (TVF)",
+              "timeFrame": "At 2 years"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT02471586",
+          "title": "OPTIMIZE PCI: Multicenter Randomized Trial of OCT Compared to IVUS and Angiography to Guide Coronary Stent Implantation",
+          "status": "COMPLETED",
+          "enrollment": 450,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Primary Safety Endpoint (Non-powered): Number of Participants With Procedural MACE (Major Adverse Cardiac Event)",
+            "groups": [
+              {
+                "title": "Coronary PCI Guided by OCT",
+                "n": 158,
+                "events": 4,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Coronary PCI Guided by IVUS",
+                "n": 146,
+                "events": 1,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Coronary PCI Guided by Angiography",
+                "n": 146,
+                "events": 1,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Primary Efficacy Endpoint (Powered): Post-PCI Median Minimum Stent Area (MSA)",
+              "timeFrame": "Post-procedure within 1 hour"
+            },
+            {
+              "measure": "Primary Safety Endpoint (Non-powered): Number of Participants With Procedural MACE (Major Adverse Cardiac Event)",
+              "timeFrame": "During procedure, an average of 1 hour"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT03115580",
+          "title": "Side Branch FFR After Provisional Stenting",
+          "status": "COMPLETED",
+          "enrollment": 71,
+          "documentsCount": 1,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Number of Participants With Side Branch Compromise",
+            "groups": [
+              {
+                "title": "Rotational Atherectomy",
+                "n": 35,
+                "events": 7,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "CBA/PTCA",
+                "n": 36,
+                "events": 9,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Number of Participants With Side Branch Compromise",
+              "timeFrame": "Day 1"
+            }
+          ]
+        }
+      ]
+    }
+  }
+};
+    </script>
+    <script type="module" src="../../../esc-acs-living-meta/app.js"></script>
+    <script type="module" src="../../../esc-acs-living-meta/help-system.js"></script>
+  </body>
+</html>

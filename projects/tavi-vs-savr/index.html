@@ -1,0 +1,1330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TAVI/TAVR vs Surgical AVR | CT.gov Living Meta-Analysis</title>
+    <link rel="icon" href="data:," />
+        <meta name="description" content="TAVI/TAVR vs Surgical AVR living meta-analysis built only from randomized comparative ClinicalTrials.gov records with posted results." />
+    <link rel="stylesheet" href="../../../esc-acs-living-meta/styles.css" />
+    <!-- jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+</head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="hero__title">
+          <p class="kicker" id="appKicker">Registry-Native Cardiovascular Evidence</p>
+          <h1 id="appTitle">TAVI/TAVR vs Surgical AVR Living Meta-Analysis</h1>
+          <p class="subtitle" id="appSubtitle">Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.</p>
+        </div>
+        <div class="hero__controls">
+          <div class="control-card">
+            <label>
+              New RCT window start
+              <input id="startDate" type="date" />
+            </label>
+            <label>
+              Status filter
+              <select id="statusFilter" multiple>
+                <option value="COMPLETED" selected>Completed</option>
+                <option value="ACTIVE_NOT_RECRUITING" selected>Active, not recruiting</option>
+                <option value="RECRUITING">Recruiting</option>
+                <option value="NOT_YET_RECRUITING">Not yet recruiting</option>
+                <option value="TERMINATED">Terminated</option>
+              </select>
+            </label>
+            <label>
+              Single outcome rule
+              <select id="outcomeRule">
+                <option value="primary">Primary outcome with numeric results</option>
+                <option value="results">Any outcome with numeric results</option>
+              </select>
+            </label>
+            <label>
+              Reference treatment (NMA)
+              <input id="referenceTx" type="text" placeholder="e.g., Standard care" />
+            </label>
+            <button id="updateBtn" class="btn btn--primary">Update from ClinicalTrials.gov</button>
+            <button id="fixtureBtn" class="btn">Load Offline Fixture</button>
+            <button id="clearBtn" class="btn">Clear cache</button>
+            <button id="importDatasetBtn" class="btn btn--secondary">Import R Dataset</button>
+            <p class="meta">Last update: <span id="lastUpdate">Never</span></p>
+          </div>
+          <div class="control-card">
+            <label>
+              Prior meta-analysis trial IDs (one per line)
+              <textarea id="priorTrials" rows="6" placeholder="NCT01234567"></textarea>
+            </label>
+            <button id="compareBtn" class="btn">Compare Coverage</button>
+            <div id="coverageSummary" class="coverage"></div>
+          </div>
+        </div>
+      </header>
+
+      
+      <section class="panel validation-snapshot">
+        <div class="panel__header">
+          <h2>CT.gov Validation Snapshot</h2>
+          <div class="panel__meta">Generated 2026-03-28</div>
+        </div>
+        <div class="panel__body">
+          <div class="summary-grid">
+            <div class="summary-card">
+              <h3>Registry Gate</h3>
+              <div class="pill">Included RCTs: 3</div>
+              <div class="pill">Scanned records: 66</div>
+              <div class="pill">Pages fetched: 1</div>
+              <div class="pill">Priority tier: Promising</div>
+            </div>
+            <div class="summary-card">
+              <h3>Eligibility Rules</h3>
+              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, and at least one extractable numeric outcome.</p>
+              <p>The validation scan completed within the configured CT.gov page cap.</p>
+            </div>
+            <div class="summary-card">
+              <h3>Audit Trail</h3>
+              <div class="pill"><a href="validation.json">validation.json</a></div>
+              <div class="pill"><a href="plan.html">plan.html</a></div>
+              <div class="pill"><a href="https://clinicaltrials.gov/search?term=(%22aortic%20stenosis%22)%20AND%20(TAVR%20OR%20TAVI%20OR%20%22transcatheter%20aortic%20valve%22)%20AND%20(surgery%20OR%20SAVR%20OR%20surgical)%20AND%20(%22PARTNER%22%20OR%20%22CoreValve%22%20OR%20%22SURTAVI%22%20OR%20%22Evolut%22%20OR%20%22NOTION%22)" target="_blank" rel="noopener">CT.gov search</a></div>
+              <div class="pill"><a href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Ftavi-vs-savr%2Fvalidation.json&amp;topic=tavi-vs-savr&amp;label=TAVI%2FTAVR+vs+Surgical+AVR" target="_blank" rel="noopener">Topic-aware WebR runner</a></div>
+            </div>
+          </div>
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Exact Query</h3>
+            <pre style="white-space: pre-wrap; overflow-x: auto;">(&quot;aortic stenosis&quot;) AND (TAVR OR TAVI OR &quot;transcatheter aortic valve&quot;) AND (surgery OR SAVR OR surgical) AND (&quot;PARTNER&quot; OR &quot;CoreValve&quot; OR &quot;SURTAVI&quot; OR &quot;Evolut&quot; OR &quot;NOTION&quot;)</pre>
+          </div>
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Included Trial Records</h3>
+            <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
+              
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01240902" target="_blank" rel="noopener">
+          NCT01240902
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01531374" target="_blank" rel="noopener">
+          NCT01531374
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01314313" target="_blank" rel="noopener">
+          NCT01314313
+        </a>
+            </div>
+          </div>
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Top Exclusion Reasons</h3>
+            <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
+              
+        <div class="pill">
+          No Extractable Numeric Outcome: 52
+        </div>
+
+        <div class="pill">
+          No Results Posted: 44
+        </div>
+
+        <div class="pill">
+          Not Randomized Interventional: 37
+        </div>
+
+        <div class="pill">
+          Not Completed: 35
+        </div>
+
+        <div class="pill">
+          Fewer Than Two Arms: 28
+        </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel reviewer-pack">
+        <div class="panel__header">
+          <h2>Reviewer Transparency Pack</h2>
+          <div class="panel__meta">Built to expose source search, eligibility, excerpts, benchmarking, and topic-aware validation before the live analysis workspace.</div>
+        </div>
+        <div class="panel__body">
+          <div class="summary-grid">
+            <div class="summary-card">
+              <h3>Protocol And Administrative Information</h3>
+              <div class="pill">Included trials: 3</div>
+              <div class="pill">Total enrollment reported: 6262</div>
+              <div class="pill">Sponsor coverage: 3/3</div>
+              <div class="pill">Demographics coverage: 3/3</div>
+              <div class="pill">CT.gov document coverage: 0/3</div>
+            </div>
+            <div class="summary-card">
+              <h3>Reviewer Route</h3>
+              <p>Use this pack to verify the search history, protocol framing, demographics capture, benchmark ledger, and topic-aware validation before reading the interactive estimates below.</p>
+              <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
+                <a class="pill" href="plan.html">Full validation plan</a>
+                <a class="pill" href="validation.json">validation.json</a>
+                <a class="pill" href="https://clinicaltrials.gov/search?term=(%22aortic%20stenosis%22)%20AND%20(TAVR%20OR%20TAVI%20OR%20%22transcatheter%20aortic%20valve%22)%20AND%20(surgery%20OR%20SAVR%20OR%20surgical)%20AND%20(%22PARTNER%22%20OR%20%22CoreValve%22%20OR%20%22SURTAVI%22%20OR%20%22Evolut%22%20OR%20%22NOTION%22)" target="_blank" rel="noopener">CT.gov search</a>
+                <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22TAVI%2FTAVR%20vs%20Surgical%20AVR%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">PubMed meta search</a>
+                <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22TAVI%2FTAVR%20vs%20Surgical%20AVR%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">PubMed RCT search</a>
+              </div>
+            </div>
+            <div class="summary-card">
+              <h3>Review Question And PICO</h3>
+              <p><strong>Population:</strong> Severe Aortic Stenosis; Symptomatic Severe Aortic Stenosis</p>
+              <p><strong>Interventions:</strong> Extreme Risk: TAVI Iliofemoral; Extreme Risk: TAVI Non-Iliofemoral; High Risk: TAVI; High Risk: SAVR; Extreme Risk: Iliofemoral; Extreme Risk: Non-Iliofemoral; High Risk; PIIA: SAPIEN XT</p>
+              <p><strong>Comparators:</strong> Extreme Risk: TAVI Non-Iliofemoral vs Extreme Risk: TAVI Iliofemoral | High Risk: TAVI vs Extreme Risk: TAVI Iliofemoral; Extreme Risk: Non-Iliofemoral vs Extreme Risk: Iliofemoral | High Risk vs Extreme Risk: Iliofemoral; PIIA: SAPIEN XT vs Control: SAVR</p>
+              <p><strong>Outcomes:</strong> Extreme Risk: All-cause Death or Major Stroke; High Risk Surgical: All-cause Mortality; All-cause Death or Disabling Stroke to Two Years</p>
+              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</p>
+            </div>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Search History Log</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>Source</th>
+                  <th>Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td>CT.gov candidate scan started</td>
+          <td>ClinicalTrials.gov v2 API</td>
+          <td>2026-03-28</td>
+        </tr>
+        <tr>
+          <td>Base query locked</td>
+          <td>Project generator</td>
+          <td>(&quot;aortic stenosis&quot;) AND (TAVR OR TAVI OR &quot;transcatheter aortic valve&quot;) AND (surgery OR SAVR OR surgical)</td>
+        </tr>
+        <tr>
+          <td>Keyword expansion applied</td>
+          <td>Project generator</td>
+          <td>5 terms: PARTNER, CoreValve, SURTAVI, Evolut, NOTION</td>
+        </tr>
+        <tr>
+          <td>Exact query executed</td>
+          <td>ClinicalTrials.gov</td>
+          <td>(&quot;aortic stenosis&quot;) AND (TAVR OR TAVI OR &quot;transcatheter aortic valve&quot;) AND (surgery OR SAVR OR surgical) AND (&quot;PARTNER&quot; OR &quot;CoreValve&quot; OR &quot;SURTAVI&quot; OR &quot;Evolut&quot; OR &quot;NOTION&quot;)</td>
+        </tr>
+        <tr>
+          <td>Registry records screened</td>
+          <td>ClinicalTrials.gov</td>
+          <td>66 records across 1 page(s)</td>
+        </tr>
+        <tr>
+          <td>Hard-gate exclusions applied</td>
+          <td>Generator eligibility rules</td>
+          <td>63 records excluded before synthesis</td>
+        </tr>
+        <tr>
+          <td>Quantitative snapshot frozen</td>
+          <td>validation.json</td>
+          <td>3 randomized trials entered the reviewer pack</td>
+        </tr>
+        <tr>
+          <td>Project package generated</td>
+          <td>Portfolio build</td>
+          <td>2026-03-28</td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>PRISMA Flow Summary</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>Stage</th>
+                  <th>Count</th>
+                  <th>Reviewer Note</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td>Records identified from the exact CT.gov query</td>
+          <td>66</td>
+          <td>1 page(s) fetched</td>
+        </tr>
+        <tr>
+          <td>Records excluded by registry hard gates</td>
+          <td>63</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+        </tr>
+        <tr>
+          <td>Trials entering the quantitative snapshot</td>
+          <td>3</td>
+          <td>Included in validation.json and the live topic app</td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>PRISMA Style Screening Summary</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>Reason</th>
+                  <th>Count</th>
+                </tr>
+              </thead>
+              <tbody><tr><td>No Extractable Numeric Outcome</td><td>52</td></tr><tr><td>No Results Posted</td><td>44</td></tr><tr><td>Not Randomized Interventional</td><td>37</td></tr><tr><td>Not Completed</td><td>35</td></tr><tr><td>Fewer Than Two Arms</td><td>28</td></tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Study Eligibility And Demographics</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>NCT</th>
+                  <th>Title</th>
+                  <th>Sponsor</th>
+                  <th>Phase</th>
+                  <th>Enrollment</th>
+                  <th>Eligibility</th>
+                  <th>Demographics</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01240902" target="_blank" rel="noopener">NCT01240902</a></td>
+          <td>Safety and Efficacy Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in High Risk and Very High Risk Subjects Who Need Aortic Valve Replacement</td>
+          <td>Medtronic Cardiovascular (INDUSTRY)</td>
+          <td>NA</td>
+          <td>1453 (ACTUAL)</td>
+          <td>Sex: ALL | Healthy volunteers: No</td>
+          <td>Participants Extreme Risk: TAVI Iliofemoral: 489 Participants | Extreme Risk: TAVI Non-Iliofemoral: 150 Participants | High Risk: TAVI: 391 Participants | High Risk: SAVR: 359 Participants | Total: 1389 Participants | Age Extreme Risk: TAVI Iliofemoral: 83.2 +/- 8.7 years | Extreme Risk: TAVI Non-Iliofemoral: 81.3 +/- 7.4 years | High Risk: TAVI: 83.2 +/- 7.1 years | High Risk: SAVR: 83.3 +/- 6.4 years | Total: 83.0 +/- 7.6 years | Sex Extreme Risk: TAVI Iliofemoral: F 255 / M 234 | Extreme Risk: TAVI Non-Iliofemoral: F 82 / M 68 | High Risk: TAVI: F 184 / M 207 | High Risk: SAVR: F 171 / M 188 | Total: F 692 / M 697</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01531374" target="_blank" rel="noopener">NCT01531374</a></td>
+          <td>Safety and Efficacy Continued Access Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in Very High Risk Subjects and High Risk Subjects Who Need Aortic Valve Replacement</td>
+          <td>Medtronic Cardiovascular (INDUSTRY)</td>
+          <td>NA</td>
+          <td>2777 (ACTUAL)</td>
+          <td>Sex: ALL | Healthy volunteers: No</td>
+          <td>Participants Extreme Risk: Iliofemoral: 1257 Participants | Extreme Risk: Non-Iliofemoral: 367 Participants | High Risk: 1108 Participants | Total: 2732 Participants | Age Extreme Risk: Iliofemoral: 83.5 +/- 8.1 years | Extreme Risk: Non-Iliofemoral: 81.9 +/- 8.2 years | High Risk: 83.6 +/- 7.1 years | Total: 83.3 +/- 7.7 years | Sex Extreme Risk: Iliofemoral: F 568 / M 689 | Extreme Risk: Non-Iliofemoral: F 185 / M 182 | High Risk: F 456 / M 652 | Total: F 1209 / M 1523</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01314313" target="_blank" rel="noopener">NCT01314313</a></td>
+          <td>PARTNER II Trial: Placement of AoRTic TraNscathetER Valves II - XT Intermediate and High Risk</td>
+          <td>Edwards Lifesciences (INDUSTRY)</td>
+          <td>NA</td>
+          <td>2032 (ACTUAL)</td>
+          <td>Sex: ALL | Healthy volunteers: No</td>
+          <td>Participants PIIA: SAPIEN XT: 1011 Participants | Control: SAVR: 1021 Participants | Total: 2032 Participants | Age PIIA: SAPIEN XT: 81.5 +/- 6.70 years | Control: SAVR: 81.7 +/- 6.71 years | Total: 81.6 +/- 6.70 years | Sex PIIA: SAPIEN XT: F 463 / M 548 | Control: SAVR: F 461 / M 560 | Total: F 924 / M 1108</td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Record Excerpts</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>NCT</th>
+                  <th>Brief Summary</th>
+                  <th>Eligibility Excerpt</th>
+                  <th>Primary Outcome Excerpt</th>
+                  <th>Source Documents</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01240902" target="_blank" rel="noopener">NCT01240902</a></td>
+          <td>The purpose of the study is to evaluate the safety and efficacy of the Medtronic CoreValve® System in the treatment of symptomatic severe aortic stenosis in subjects who have a predicted high risk for aortic valve surgery and/or very hig...</td>
+          <td>Inclusion Criteria: * Extreme Risk Only: Subject must have comorbidities such that one cardiologist and two cardiac surgeons agree that medical factors preclude operation, based on a conclusion that the probability of...</td>
+          <td>Extreme Risk: All-cause Death or Major Stroke; High Risk Surgical: All-cause Mortality | Time frame: 1 year | All-cause Death or Major Stroke (Extreme Risk- Medtronic CoreValve® System); All-cause Mortality (High Risk Surgical- Medtronic CoreValve® System v...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01531374" target="_blank" rel="noopener">NCT01531374</a></td>
+          <td>The purpose of the study is to evaluate the safety and efficacy of the Medtronic CoreValve® System in the treatment of symptomatic severe aortic stenosis in subjects who have a predicted very high risk and high risk for aortic valve surg...</td>
+          <td>Inclusion Criteria: 1. High Risk: Subject must have co-morbidities such that one cardiologist and two cardiac surgeons agree that predicted risk of operative mortality is ≥15% (and predicted operative mortality or ser...</td>
+          <td>Extreme Risk: All-cause Death or Major Stroke; High Risk Surgical: All-cause Mortality | Time frame: 1 year | All-cause Death or Major Stroke (Extreme Risk- Medtronic CoreValve® System); All-cause Mortality (High Risk Surgical- Medtronic CoreValve® System v...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01314313" target="_blank" rel="noopener">NCT01314313</a></td>
+          <td>The purpose of this trial is to determine the safety and effectiveness of the Edwards SAPIEN XT transcatheter heart valve and delivery systems which are intended for use in patients with symptomatic, calcific, severe aortic stenosis.</td>
+          <td>Inclusion Criteria 1. Patient has senile degenerative aortic valve stenosis with echocardiographically derived criteria: mean gradient \&gt;40 mmHg or jet velocity greater than 4.0 m/s and an initial aortic valve area (A...</td>
+          <td>All-cause Death or Disabling Stroke to Two Years | Time frame: 2 Years | All-cause Death or Disabling Stroke (Edwards SAPIEN XT THV vs SAVR)</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Benchmark Reconciliation Ledger</h3>
+            <p>Use this registry-native ledger to check study overlap, comparator definitions, and outcome alignment against published syntheses before accepting pooled estimates as publication-ready.</p>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>NCT</th>
+                  <th>Registry Contrast</th>
+                  <th>Outcome</th>
+                  <th>Enrollment</th>
+                  <th>Benchmark Use</th>
+                </tr>
+              </thead>
+              <tbody>
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01240902" target="_blank" rel="noopener">NCT01240902</a></td>
+        <td>Extreme Risk: TAVI Non-Iliofemoral vs Extreme Risk: TAVI Iliofemoral | High Risk: TAVI vs Extreme Risk: TAVI Iliofemoral</td>
+        <td>Extreme Risk: All-cause Death or Major Stroke; High Risk Surgical: All-cause Mortality</td>
+        <td>1453 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01531374" target="_blank" rel="noopener">NCT01531374</a></td>
+        <td>Extreme Risk: Non-Iliofemoral vs Extreme Risk: Iliofemoral | High Risk vs Extreme Risk: Iliofemoral</td>
+        <td>Extreme Risk: All-cause Death or Major Stroke; High Risk Surgical: All-cause Mortality</td>
+        <td>2777 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01314313" target="_blank" rel="noopener">NCT01314313</a></td>
+        <td>PIIA: SAPIEN XT vs Control: SAVR</td>
+        <td>All-cause Death or Disabling Stroke to Two Years</td>
+        <td>2032 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Reviewer Validation</h3>
+            <p>The embedded panel below now runs the shared R benchmark suites plus topic-specific checks for the current CT.gov snapshot. Reviewers should pair it with <code>validation.json</code> and the benchmark ledger above.</p>
+            <div class="topic-stats" style="flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+              <a class="pill" href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Ftavi-vs-savr%2Fvalidation.json&amp;topic=tavi-vs-savr&amp;label=TAVI%2FTAVR+vs+Surgical+AVR" target="_blank" rel="noopener">Open topic-aware WebR runner</a>
+              <a class="pill" href="validation.json">Open topic validation.json</a>
+            </div>
+            <iframe
+              id="reviewerValidationFrame"
+              src="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Ftavi-vs-savr%2Fvalidation.json&amp;topic=tavi-vs-savr&amp;label=TAVI%2FTAVR+vs+Surgical+AVR"
+              title="WebR reviewer validation"
+              loading="lazy"
+              style="width: 100%; min-height: 420px; border: 1px solid rgba(148, 163, 184, 0.25); border-radius: 18px; background: rgba(15, 23, 42, 0.88);"
+            ></iframe>
+            <script>
+(() => {
+  const iframe = document.getElementById("reviewerValidationFrame");
+  const context = {"source":"ctgov-portfolio-generator","topicId":"tavi-vs-savr","label":"TAVI/TAVR vs Surgical AVR","query":"(\"aortic stenosis\") AND (TAVR OR TAVI OR \"transcatheter aortic valve\") AND (surgery OR SAVR OR surgical) AND (\"PARTNER\" OR \"CoreValve\" OR \"SURTAVI\" OR \"Evolut\" OR \"NOTION\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":3,"excludedCount":63,"totalEnrollment":6262,"demographicsCoverage":3,"documentCoverage":0,"comparisons":[{"studyId":"NCT01240902","title":"Safety and Efficacy Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in High Risk and Very High Risk Subjects Who Need Aortic Valve Replacement","t1":"Extreme Risk: TAVI Non-Iliofemoral","t2":"Extreme Risk: TAVI Iliofemoral","measure":"logRR","effect":1.5948551762323495,"se":0.2349365332184116,"n1":150,"n0":489,"totalN":639,"sampleSize":639},{"studyId":"NCT01240902","title":"Safety and Efficacy Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in High Risk and Very High Risk Subjects Who Need Aortic Valve Replacement","t1":"High Risk: TAVI","t2":"Extreme Risk: TAVI Iliofemoral","measure":"logRR","effect":-0.3882668111478531,"se":0.32369891835632836,"n1":391,"n0":489,"totalN":880,"sampleSize":880},{"studyId":"NCT01240902","title":"Safety and Efficacy Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in High Risk and Very High Risk Subjects Who Need Aortic Valve Replacement","t1":"High Risk: SAVR","t2":"Extreme Risk: TAVI Iliofemoral","measure":"logRR","effect":-0.009894514969292204,"se":0.29417866386977487,"n1":359,"n0":489,"totalN":848,"sampleSize":848},{"studyId":"NCT01531374","title":"Safety and Efficacy Continued Access Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in Very High Risk Subjects and High Risk Subjects Who Need Aortic Valve Replacement","t1":"Extreme Risk: Non-Iliofemoral","t2":"Extreme Risk: Iliofemoral","measure":"logRR","effect":1.5451207413048316,"se":0.27090890779625604,"n1":367,"n0":1257,"totalN":1624,"sampleSize":1624},{"studyId":"NCT01531374","title":"Safety and Efficacy Continued Access Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in Very High Risk Subjects and High Risk Subjects Who Need Aortic Valve Replacement","t1":"High Risk","t2":"Extreme Risk: Iliofemoral","measure":"logRR","effect":-0.10814551062931671,"se":0.31452527354926735,"n1":1108,"n0":1257,"totalN":2365,"sampleSize":2365},{"studyId":"NCT01314313","title":"PARTNER II Trial: Placement of AoRTic TraNscathetER Valves II - XT Intermediate and High Risk","t1":"PIIA: SAPIEN XT","t2":"Control: SAVR","measure":"logRR","effect":-0.04092972622922901,"se":0.09050014789974478,"n1":1011,"n0":1021,"totalN":2032,"sampleSize":2032}],"includedStudies":[{"nctId":"NCT01240902","title":"Safety and Efficacy Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in High Risk and Very High Risk Subjects Who Need Aortic Valve Replacement","status":"COMPLETED","enrollment":1453,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Extreme Risk: All-cause Death or Major Stroke; High Risk Surgical: All-cause Mortality","groups":[{"title":"Extreme Risk: TAVI Iliofemoral","n":489,"events":26,"mean":null,"sd":null},{"title":"Extreme Risk: TAVI Non-Iliofemoral","n":150,"events":39.3,"mean":null,"sd":null},{"title":"High Risk: TAVI","n":391,"events":14.1,"mean":null,"sd":null},{"title":"High Risk: SAVR","n":359,"events":18.9,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Extreme Risk: All-cause Death or Major Stroke; High Risk Surgical: All-cause Mortality","timeFrame":"1 year"}]},{"nctId":"NCT01531374","title":"Safety and Efficacy Continued Access Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in Very High Risk Subjects and High Risk Subjects Who Need Aortic Valve Replacement","status":"COMPLETED","enrollment":2777,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Extreme Risk: All-cause Death or Major Stroke; High Risk Surgical: All-cause Mortality","groups":[{"title":"Extreme Risk: Iliofemoral","n":1257,"events":22.5,"mean":null,"sd":null},{"title":"Extreme Risk: Non-Iliofemoral","n":367,"events":30.8,"mean":null,"sd":null},{"title":"High Risk","n":1108,"events":17.8,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Extreme Risk: All-cause Death or Major Stroke; High Risk Surgical: All-cause Mortality","timeFrame":"1 year"}]},{"nctId":"NCT01314313","title":"PARTNER II Trial: Placement of AoRTic TraNscathetER Valves II - XT Intermediate and High Risk","status":"COMPLETED","enrollment":2032,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"All-cause Death or Disabling Stroke to Two Years","groups":[{"title":"PIIA: SAPIEN XT","n":1011,"events":192,"mean":null,"sd":null},{"title":"Control: SAVR","n":1021,"events":202,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"All-cause Death or Disabling Stroke to Two Years","timeFrame":"2 Years"}]}]};
+  if (!iframe || !context) return;
+  const sendContext = () => {
+    if (!iframe.contentWindow) return;
+    iframe.contentWindow.postMessage({ type: "esc-topic-validation-context", payload: context }, "*");
+  };
+  iframe.addEventListener("load", sendContext);
+  window.addEventListener("message", event => {
+    if (event.source === iframe.contentWindow && event.data?.type === "esc-topic-validation-request") {
+      sendContext();
+    }
+  });
+  window.setTimeout(sendContext, 250);
+})();
+</script>
+          </div>
+        </div>
+      </section>
+
+      <main class="layout">
+        <section class="panel topics">
+          <div class="panel__header">
+            <h2 id="topicPanelTitle">CT.gov-validated topic (3 eligible RCTs in snapshot)</h2>
+            <div class="topic-stats">
+              <span id="topicCount">0</span> topics -
+              <span id="trialCount">0</span> trials
+            </div>
+          </div>
+          <div class="panel__body">
+            <div id="topicList" class="topic-list"></div>
+          </div>
+        </section>
+
+        <section class="panel detail">
+          <div class="panel__header">
+            <h2 id="topicTitle">Select a topic</h2>
+            <div class="panel__meta" id="topicMeta"></div>
+            <div class="export-buttons">
+              <button id="exportCsvBtn" class="btn btn--small">CSV</button>
+              <button id="exportJsonBtn" class="btn btn--small">JSON</button>
+              <button id="exportPdfBtn" class="btn btn--small btn--accent">PDF Report</button>
+              <button id="exportRBtn" class="btn btn--small">R Script</button>
+              <button id="addStudyBtn" class="btn btn--small btn--secondary">+ Add Study</button>
+            </div>
+          </div>
+          <div class="panel__body">
+            <div class="tabs">
+              <button class="tab active" data-tab="overview">Overview</button>
+              <button class="tab" data-tab="trials">Trials</button>
+              <button class="tab" data-tab="pairwise">Pairwise Meta</button>
+              <button class="tab" data-tab="network">Network</button>
+              <button class="tab" data-tab="dose">Dose Response</button>
+              <button class="tab" data-tab="grade">GRADE</button>
+              <button class="tab" data-tab="cumulative">Cumulative</button>
+              <button class="tab" data-tab="diagnostics">Diagnostics</button>
+              <button class="tab" data-tab="raw">Raw Records</button>
+              <button class="tab" data-tab="transparency">Transparency</button>
+            </div>
+            <div class="tab-content active" id="tab-overview">
+              <div class="summary-grid">
+                <div class="summary-card">
+                  <h3>Evidence Snapshot</h3>
+                  <div id="overviewSnapshot"></div>
+                </div>
+                <div class="summary-card">
+                  <h3>Meta Summary</h3>
+                  <div id="metaSummary"></div>
+                </div>
+                <div class="summary-card">
+                  <h3>Key Warnings</h3>
+                  <div id="warningList"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-trials">
+              <div id="trialTable"></div>
+            </div>
+            <div class="tab-content" id="tab-pairwise">
+              <div class="forest-container">
+                <div class="forest-controls">
+                  <button id="forestResetBtn" class="btn btn--small">Reset Exclusions</button>
+                  <span id="forestExcludedCount" class="muted"></span>
+                </div>
+                <div class="forest-wrapper">
+                  <canvas id="forestChart" width="900" height="460"></canvas>
+                  <div id="forestTooltip" class="forest-tooltip hidden"></div>
+                </div>
+              </div>
+              <div id="pairwiseTable"></div>
+            </div>
+            <div class="tab-content" id="tab-network">
+              <canvas id="networkChart" width="900" height="460"></canvas>
+              <div id="networkTable"></div>
+            </div>
+            <div class="tab-content" id="tab-dose">
+              <canvas id="doseChart" width="900" height="460"></canvas>
+              <div id="doseTable"></div>
+            </div>
+            <div class="tab-content" id="tab-grade">
+              <div class="grade-assessment">
+                <h3>GRADE Certainty of Evidence</h3>
+                <div id="gradeTable"></div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-cumulative">
+              <canvas id="cumulativeChart" width="900" height="460"></canvas>
+              <div id="cumulativeTable"></div>
+            </div>
+            <div class="tab-content" id="tab-diagnostics">
+              <div class="diagnostics-grid">
+                <div class="diagnostic-section">
+                  <h4>Funnel Plot</h4>
+                  <canvas id="funnelChart" width="500" height="400"></canvas>
+                </div>
+                <div class="diagnostic-section">
+                  <div id="diagnosticTable"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-raw">
+              <pre id="rawJson"></pre>
+            </div>
+            <div class="tab-content" id="tab-transparency">
+              <div class="summary-card">
+                <h3>Transparency Summary</h3>
+                <div id="transparencySummary"></div>
+              </div>
+              <div class="summary-card" style="margin-top: 16px;">
+                <h3>Record Ledger</h3>
+                <div id="transparencyLedger"></div>
+              </div>
+              <div class="summary-card" style="margin-top: 16px;">
+                <h3>Reviewer Links</h3>
+                <div id="transparencyBenchmarks"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <section class="panel log">
+        <div class="panel__header">
+          <h2>Update Log</h2>
+        </div>
+        <div class="panel__body">
+          <div id="logStream" class="log-stream"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Dataset Import Modal -->
+    <div id="datasetModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Import R Package Dataset</h2>
+          <button id="closeModalBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="dataset-filters">
+            <label>
+              Source:
+              <select id="datasetSourceFilter">
+                <option value="all">All Sources</option>
+                <option value="metafor">metafor</option>
+                <option value="meta">meta</option>
+                <option value="netmeta">netmeta</option>
+                <option value="mada">mada (DTA)</option>
+                <option value="literature">Published Literature</option>
+              </select>
+            </label>
+            <label>
+              Type:
+              <select id="datasetTypeFilter">
+                <option value="all">All Types</option>
+                <option value="pairwise">Pairwise</option>
+                <option value="network">Network</option>
+                <option value="diagnostic">Diagnostic</option>
+                <option value="continuous">Continuous</option>
+              </select>
+            </label>
+            <label>
+              Relevance:
+              <select id="datasetRelevanceFilter">
+                <option value="all">All</option>
+                <option value="acs">ACS-specific</option>
+                <option value="cardiovascular">Cardiovascular</option>
+                <option value="classic">Classic examples</option>
+              </select>
+            </label>
+            <input type="text" id="datasetSearch" placeholder="Search datasets..." />
+          </div>
+          <div id="datasetList" class="dataset-list"></div>
+          <div id="datasetPreview" class="dataset-preview hidden">
+            <h3 id="previewTitle"></h3>
+            <p id="previewDescription"></p>
+            <div id="previewStats" class="preview-stats"></div>
+            <div id="previewCitation" class="preview-citation"></div>
+            <table id="previewTable" class="preview-table"></table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="import-options">
+            <label>
+              <input type="checkbox" id="createTopicCheck" checked />
+              Create as new topic
+            </label>
+            <input type="text" id="customTopicName" placeholder="Custom topic name (optional)" />
+          </div>
+          <button id="importDatasetConfirmBtn" class="btn btn--primary" disabled>Import Selected Dataset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Manual Study Entry Modal -->
+    <div id="studyEntryModal" class="modal hidden">
+      <div class="modal-content modal-content--medium">
+        <div class="modal-header">
+          <h2>Add Study Manually</h2>
+          <button id="closeStudyEntryBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-section">
+            <h4>Study Information</h4>
+            <div class="form-row">
+              <label>
+                Study Name/ID *
+                <input type="text" id="entryStudyName" placeholder="e.g., COMPLETE 2019" required />
+              </label>
+              <label>
+                Year
+                <input type="number" id="entryStudyYear" placeholder="2019" min="1900" max="2100" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h4>Outcome Type</h4>
+            <div class="form-row">
+              <label class="radio-label">
+                <input type="radio" name="outcomeType" value="binary" checked /> Binary (events/n)
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="outcomeType" value="continuous" /> Continuous (mean/SD/n)
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="outcomeType" value="precomputed" /> Pre-computed (HR/OR/RR with CI)
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section" id="binaryOutcomeSection">
+            <h4>Binary Outcome Data</h4>
+            <div class="form-row">
+              <label>
+                Treatment Arm Label
+                <input type="text" id="entryTreat1Label" placeholder="e.g., Complete revasc" />
+              </label>
+              <label>
+                Events
+                <input type="number" id="entryTreat1Events" min="0" />
+              </label>
+              <label>
+                Total N
+                <input type="number" id="entryTreat1N" min="1" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Control Arm Label
+                <input type="text" id="entryTreat2Label" placeholder="e.g., Culprit-only" />
+              </label>
+              <label>
+                Events
+                <input type="number" id="entryTreat2Events" min="0" />
+              </label>
+              <label>
+                Total N
+                <input type="number" id="entryTreat2N" min="1" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section hidden" id="continuousOutcomeSection">
+            <h4>Continuous Outcome Data</h4>
+            <div class="form-row">
+              <label>
+                Treatment Arm Label
+                <input type="text" id="entryContTreat1Label" placeholder="e.g., Intervention" />
+              </label>
+              <label>
+                Mean
+                <input type="number" id="entryContTreat1Mean" step="any" />
+              </label>
+              <label>
+                SD
+                <input type="number" id="entryContTreat1SD" step="any" min="0" />
+              </label>
+              <label>
+                N
+                <input type="number" id="entryContTreat1N" min="1" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Control Arm Label
+                <input type="text" id="entryContTreat2Label" placeholder="e.g., Control" />
+              </label>
+              <label>
+                Mean
+                <input type="number" id="entryContTreat2Mean" step="any" />
+              </label>
+              <label>
+                SD
+                <input type="number" id="entryContTreat2SD" step="any" min="0" />
+              </label>
+              <label>
+                N
+                <input type="number" id="entryContTreat2N" min="1" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section hidden" id="precomputedSection">
+            <h4>Pre-computed Effect Size</h4>
+            <div class="form-row">
+              <label>
+                Effect Measure
+                <select id="entryEffectMeasure">
+                  <option value="HR">Hazard Ratio (HR)</option>
+                  <option value="OR">Odds Ratio (OR)</option>
+                  <option value="RR">Risk Ratio (RR)</option>
+                  <option value="MD">Mean Difference (MD)</option>
+                  <option value="SMD">Standardized Mean Difference (SMD)</option>
+                </select>
+              </label>
+              <label>
+                Point Estimate
+                <input type="number" id="entryEffectValue" step="any" placeholder="e.g., 0.74" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                95% CI Lower
+                <input type="number" id="entryCILower" step="any" />
+              </label>
+              <label>
+                95% CI Upper
+                <input type="number" id="entryCIUpper" step="any" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Treatment Label
+                <input type="text" id="entryPreTreat1" placeholder="e.g., Treatment" />
+              </label>
+              <label>
+                Control Label
+                <input type="text" id="entryPreTreat2" placeholder="e.g., Control" />
+              </label>
+            </div>
+          </div>
+
+          <div id="entryPreview" class="entry-preview hidden">
+            <h4>Preview</h4>
+            <div id="entryPreviewContent"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="previewStudyBtn" class="btn">Preview</button>
+          <button id="addStudyConfirmBtn" class="btn btn--primary" disabled>Add Study to Topic</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROB2 Risk of Bias Modal -->
+    <div id="robModal" class="modal hidden">
+      <div class="modal-content modal-content--medium">
+        <div class="modal-header">
+          <h2>Risk of Bias Assessment (ROB2)</h2>
+          <button id="closeRobModalBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="rob-study-info">
+            <strong>Study:</strong> <span id="robStudyName">-</span>
+          </div>
+          <div class="rob-domains">
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D1: Randomization process</span>
+                <select id="robD1" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD1Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D2: Deviations from intended interventions</span>
+                <select id="robD2" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD2Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D3: Missing outcome data</span>
+                <select id="robD3" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD3Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D4: Measurement of the outcome</span>
+                <select id="robD4" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD4Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D5: Selection of reported result</span>
+                <select id="robD5" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD5Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+          </div>
+          <div class="rob-overall">
+            <label>
+              <strong>Overall Risk of Bias:</strong>
+              <span id="robOverallCalc" class="rob-overall-calc">-</span>
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="saveRobBtn" class="btn btn--primary">Save Assessment</button>
+          <button id="clearRobBtn" class="btn">Clear</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- External Import Modal -->
+    <div id="externalImportModal" class="modal hidden">
+      <div class="modal-content modal-content--small">
+        <div class="modal-header">
+          <h2>Import from External Source</h2>
+          <button id="closeExternalModalBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="import-tabs">
+            <button class="import-tab active" data-source="zenodo">Zenodo</button>
+            <button class="import-tab" data-source="github">GitHub</button>
+            <button class="import-tab" data-source="csv">CSV Upload</button>
+          </div>
+          <div class="import-panel active" id="zenodo-panel">
+            <label>
+              Zenodo DOI or Record ID:
+              <input type="text" id="zenodoDoi" placeholder="10.5281/zenodo.1234567 or 1234567" />
+            </label>
+            <button id="fetchZenodoBtn" class="btn">Fetch Record</button>
+            <div id="zenodoResult" class="import-result"></div>
+          </div>
+          <div class="import-panel" id="github-panel">
+            <label>
+              GitHub Raw URL:
+              <input type="text" id="githubUrl" placeholder="https://raw.githubusercontent.com/..." />
+            </label>
+            <button id="fetchGithubBtn" class="btn">Fetch File</button>
+            <div id="githubResult" class="import-result"></div>
+          </div>
+          <div class="import-panel" id="csv-panel">
+            <label>
+              Upload CSV/JSON file:
+              <input type="file" id="csvUpload" accept=".csv,.json" />
+            </label>
+            <div id="csvResult" class="import-result"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="openExternalImportBtn" class="btn btn--secondary">Import from URL/File</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Start Wizard Modal -->
+    <div id="quickStartModal" class="modal">
+      <div class="modal-content modal-content--wizard">
+        <div class="wizard-header">
+          <h2 id="welcomeTitle">TAVI/TAVR vs Surgical AVR CT.gov review</h2>
+          <p class="wizard-subtitle">Quick Start Guide (2 minutes)</p>
+        </div>
+        <div class="wizard-body">
+          <div class="wizard-step active" data-step="1">
+            <div class="wizard-step-icon">1</div>
+            <h3>Select a Topic</h3>
+            <p>Choose from 47 pre-configured ACS topics in the left sidebar. Each topic is aligned with ESC Guidelines questions.</p>
+            <div class="wizard-highlight" data-target="topicList">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150' viewBox='0 0 300 150'%3E%3Crect fill='%231a1a2e' width='300' height='150'/%3E%3Ctext fill='%2300d4ff' x='150' y='75' text-anchor='middle' font-size='14'%3ETopics appear here%3C/text%3E%3C/svg%3E" alt="Topic list">
+            </div>
+          </div>
+          <div class="wizard-step" data-step="2">
+            <div class="wizard-step-icon">2</div>
+            <h3>Load Evidence</h3>
+            <p>Click "Update from ClinicalTrials.gov" to automatically fetch RCT data, or import from R datasets.</p>
+            <ul class="wizard-tips">
+              <li>Auto-extracts study arms, outcomes, and sample sizes</li>
+              <li>Deduplicates against existing data</li>
+              <li>Works offline after first load</li>
+            </ul>
+          </div>
+          <div class="wizard-step" data-step="3">
+            <div class="wizard-step-icon">3</div>
+            <h3>Review Analysis Tabs</h3>
+            <p>Navigate through the analysis tabs to explore your evidence:</p>
+            <ul class="wizard-tabs-preview">
+              <li><strong>Overview</strong> - Evidence snapshot and warnings</li>
+              <li><strong>Pairwise Meta</strong> - Forest plot with click-to-exclude</li>
+              <li><strong>Network</strong> - NMA with treatment rankings</li>
+              <li><strong>GRADE</strong> - Automated certainty assessment</li>
+            </ul>
+          </div>
+          <div class="wizard-step" data-step="4">
+            <div class="wizard-step-icon">4</div>
+            <h3>Export Results</h3>
+            <p>Generate publication-ready outputs for your guideline panel:</p>
+            <ul class="wizard-exports">
+              <li><strong>PDF Report</strong> - Complete analysis summary</li>
+              <li><strong>R Script</strong> - Reproducible code for verification</li>
+              <li><strong>CSV/JSON</strong> - Data for further analysis</li>
+            </ul>
+          </div>
+        </div>
+        <div class="wizard-footer">
+          <div class="wizard-progress">
+            <span class="wizard-dot active" data-step="1"></span>
+            <span class="wizard-dot" data-step="2"></span>
+            <span class="wizard-dot" data-step="3"></span>
+            <span class="wizard-dot" data-step="4"></span>
+          </div>
+          <div class="wizard-buttons">
+            <button id="wizardPrevBtn" class="btn btn--outline" disabled>Previous</button>
+            <button id="wizardNextBtn" class="btn btn--primary">Next</button>
+            <button id="wizardFinishBtn" class="btn btn--accent hidden">Get Started</button>
+          </div>
+          <label class="wizard-dismiss">
+            <input type="checkbox" id="dontShowAgain"> Don't show this again
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contextual Help Tooltip System -->
+    <div id="helpTooltip" class="help-tooltip hidden">
+      <div class="help-tooltip-content"></div>
+      <div class="help-tooltip-arrow"></div>
+    </div>
+
+    <!-- Interactive Tour Overlay -->
+    <div id="tourOverlay" class="tour-overlay hidden">
+      <div class="tour-spotlight"></div>
+      <div class="tour-tooltip">
+        <div class="tour-tooltip-header">
+          <span class="tour-step-indicator">Step 1 of 8</span>
+          <button class="tour-close">&times;</button>
+        </div>
+        <div class="tour-tooltip-body">
+          <h4 class="tour-title"></h4>
+          <p class="tour-description"></p>
+        </div>
+        <div class="tour-tooltip-footer">
+          <button class="tour-prev btn btn--small btn--outline">Previous</button>
+          <button class="tour-next btn btn--small btn--primary">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Help Button (Fixed Position) -->
+    <button id="helpBtn" class="help-fab" title="Help & Tutorials">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+      </svg>
+    </button>
+
+    <!-- Help Menu -->
+    <div id="helpMenu" class="help-menu hidden">
+      <div class="help-menu-header">
+        <h3>Help & Learning</h3>
+        <button class="help-menu-close">&times;</button>
+      </div>
+      <div class="help-menu-body">
+        <button class="help-menu-item" data-action="quickstart">
+          <span class="help-menu-icon">🚀</span>
+          <div>
+            <strong>Quick Start Guide</strong>
+            <small>2-minute introduction</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="tour">
+          <span class="help-menu-icon">🎯</span>
+          <div>
+            <strong>Interactive Tour</strong>
+            <small>Step-by-step walkthrough</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="shortcuts">
+          <span class="help-menu-icon">⌨️</span>
+          <div>
+            <strong>Keyboard Shortcuts</strong>
+            <small>Speed up your workflow</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="grade">
+          <span class="help-menu-icon">📊</span>
+          <div>
+            <strong>GRADE Assessment Help</strong>
+            <small>Understanding certainty ratings</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="nma">
+          <span class="help-menu-icon">🔗</span>
+          <div>
+            <strong>Network Meta-Analysis</strong>
+            <small>Interpreting NMA results</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="manual">
+          <span class="help-menu-icon">📖</span>
+          <div>
+            <strong>Full User Manual</strong>
+            <small>Complete documentation</small>
+          </div>
+        </button>
+      </div>
+      <div class="help-menu-footer">
+        <small>Press <kbd>?</kbd> anytime for help</small>
+      </div>
+    </div>
+
+    <script>
+      window.__ESC_ACS_TOPICS_OVERRIDE__ = {
+  "baseQuery": "(\"aortic stenosis\") AND (TAVR OR TAVI OR \"transcatheter aortic valve\") AND (surgery OR SAVR OR surgical)",
+  "topics": [
+    {
+      "id": "tavi-vs-savr",
+      "label": "TAVI/TAVR vs Surgical AVR",
+      "keywords": [
+        "PARTNER",
+        "CoreValve",
+        "SURTAVI",
+        "Evolut",
+        "NOTION"
+      ]
+    }
+  ],
+  "appConfig": {
+    "pageTitle": "TAVI/TAVR vs Surgical AVR | CT.gov Living Meta-Analysis",
+    "kicker": "Registry-Native Cardiovascular Evidence",
+    "title": "TAVI/TAVR vs Surgical AVR Living Meta-Analysis",
+    "subtitle": "Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.",
+    "topicPanelTitle": "CT.gov-validated topic (3 eligible RCTs in snapshot)",
+    "welcomeTitle": "TAVI/TAVR vs Surgical AVR CT.gov review",
+    "eligibilityTrialMinimum": 1,
+    "analysisStudioName": "TAVI/TAVR vs Surgical AVR CT.gov Living Meta-Analysis Studio",
+    "defaultStatuses": [
+      "COMPLETED"
+    ],
+    "defaultOutcomeRule": "results",
+    "requirePostedResults": true,
+    "requireNumericOutcome": true,
+    "requireComparatorArms": true,
+    "enforceConditionFilter": false,
+    "autoUpdateOnLoad": true,
+    "rValidationHref": "../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Ftavi-vs-savr%2Fvalidation.json&topic=tavi-vs-savr&label=TAVI%2FTAVR+vs+Surgical+AVR",
+    "rValidationContext": {
+      "source": "ctgov-portfolio-generator",
+      "topicId": "tavi-vs-savr",
+      "label": "TAVI/TAVR vs Surgical AVR",
+      "query": "(\"aortic stenosis\") AND (TAVR OR TAVI OR \"transcatheter aortic valve\") AND (surgery OR SAVR OR surgical) AND (\"PARTNER\" OR \"CoreValve\" OR \"SURTAVI\" OR \"Evolut\" OR \"NOTION\")",
+      "generatedAt": "2026-03-28T18:45:05.888Z",
+      "includedCount": 3,
+      "excludedCount": 63,
+      "totalEnrollment": 6262,
+      "demographicsCoverage": 3,
+      "documentCoverage": 0,
+      "comparisons": [
+        {
+          "studyId": "NCT01240902",
+          "title": "Safety and Efficacy Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in High Risk and Very High Risk Subjects Who Need Aortic Valve Replacement",
+          "t1": "Extreme Risk: TAVI Non-Iliofemoral",
+          "t2": "Extreme Risk: TAVI Iliofemoral",
+          "measure": "logRR",
+          "effect": 1.5948551762323495,
+          "se": 0.2349365332184116,
+          "n1": 150,
+          "n0": 489,
+          "totalN": 639,
+          "sampleSize": 639
+        },
+        {
+          "studyId": "NCT01240902",
+          "title": "Safety and Efficacy Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in High Risk and Very High Risk Subjects Who Need Aortic Valve Replacement",
+          "t1": "High Risk: TAVI",
+          "t2": "Extreme Risk: TAVI Iliofemoral",
+          "measure": "logRR",
+          "effect": -0.3882668111478531,
+          "se": 0.32369891835632836,
+          "n1": 391,
+          "n0": 489,
+          "totalN": 880,
+          "sampleSize": 880
+        },
+        {
+          "studyId": "NCT01240902",
+          "title": "Safety and Efficacy Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in High Risk and Very High Risk Subjects Who Need Aortic Valve Replacement",
+          "t1": "High Risk: SAVR",
+          "t2": "Extreme Risk: TAVI Iliofemoral",
+          "measure": "logRR",
+          "effect": -0.009894514969292204,
+          "se": 0.29417866386977487,
+          "n1": 359,
+          "n0": 489,
+          "totalN": 848,
+          "sampleSize": 848
+        },
+        {
+          "studyId": "NCT01531374",
+          "title": "Safety and Efficacy Continued Access Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in Very High Risk Subjects and High Risk Subjects Who Need Aortic Valve Replacement",
+          "t1": "Extreme Risk: Non-Iliofemoral",
+          "t2": "Extreme Risk: Iliofemoral",
+          "measure": "logRR",
+          "effect": 1.5451207413048316,
+          "se": 0.27090890779625604,
+          "n1": 367,
+          "n0": 1257,
+          "totalN": 1624,
+          "sampleSize": 1624
+        },
+        {
+          "studyId": "NCT01531374",
+          "title": "Safety and Efficacy Continued Access Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in Very High Risk Subjects and High Risk Subjects Who Need Aortic Valve Replacement",
+          "t1": "High Risk",
+          "t2": "Extreme Risk: Iliofemoral",
+          "measure": "logRR",
+          "effect": -0.10814551062931671,
+          "se": 0.31452527354926735,
+          "n1": 1108,
+          "n0": 1257,
+          "totalN": 2365,
+          "sampleSize": 2365
+        },
+        {
+          "studyId": "NCT01314313",
+          "title": "PARTNER II Trial: Placement of AoRTic TraNscathetER Valves II - XT Intermediate and High Risk",
+          "t1": "PIIA: SAPIEN XT",
+          "t2": "Control: SAVR",
+          "measure": "logRR",
+          "effect": -0.04092972622922901,
+          "se": 0.09050014789974478,
+          "n1": 1011,
+          "n0": 1021,
+          "totalN": 2032,
+          "sampleSize": 2032
+        }
+      ],
+      "includedStudies": [
+        {
+          "nctId": "NCT01240902",
+          "title": "Safety and Efficacy Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in High Risk and Very High Risk Subjects Who Need Aortic Valve Replacement",
+          "status": "COMPLETED",
+          "enrollment": 1453,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Extreme Risk: All-cause Death or Major Stroke; High Risk Surgical: All-cause Mortality",
+            "groups": [
+              {
+                "title": "Extreme Risk: TAVI Iliofemoral",
+                "n": 489,
+                "events": 26,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Extreme Risk: TAVI Non-Iliofemoral",
+                "n": 150,
+                "events": 39.3,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "High Risk: TAVI",
+                "n": 391,
+                "events": 14.1,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "High Risk: SAVR",
+                "n": 359,
+                "events": 18.9,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Extreme Risk: All-cause Death or Major Stroke; High Risk Surgical: All-cause Mortality",
+              "timeFrame": "1 year"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01531374",
+          "title": "Safety and Efficacy Continued Access Study of the Medtronic CoreValve® System in the Treatment of Symptomatic Severe Aortic Stenosis in Very High Risk Subjects and High Risk Subjects Who Need Aortic Valve Replacement",
+          "status": "COMPLETED",
+          "enrollment": 2777,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Extreme Risk: All-cause Death or Major Stroke; High Risk Surgical: All-cause Mortality",
+            "groups": [
+              {
+                "title": "Extreme Risk: Iliofemoral",
+                "n": 1257,
+                "events": 22.5,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Extreme Risk: Non-Iliofemoral",
+                "n": 367,
+                "events": 30.8,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "High Risk",
+                "n": 1108,
+                "events": 17.8,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Extreme Risk: All-cause Death or Major Stroke; High Risk Surgical: All-cause Mortality",
+              "timeFrame": "1 year"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01314313",
+          "title": "PARTNER II Trial: Placement of AoRTic TraNscathetER Valves II - XT Intermediate and High Risk",
+          "status": "COMPLETED",
+          "enrollment": 2032,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "All-cause Death or Disabling Stroke to Two Years",
+            "groups": [
+              {
+                "title": "PIIA: SAPIEN XT",
+                "n": 1011,
+                "events": 192,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Control: SAVR",
+                "n": 1021,
+                "events": 202,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "All-cause Death or Disabling Stroke to Two Years",
+              "timeFrame": "2 Years"
+            }
+          ]
+        }
+      ]
+    }
+  }
+};
+    </script>
+    <script type="module" src="../../../esc-acs-living-meta/app.js"></script>
+    <script type="module" src="../../../esc-acs-living-meta/help-system.js"></script>
+  </body>
+</html>

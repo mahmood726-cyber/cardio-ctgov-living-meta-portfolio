@@ -1,0 +1,1263 @@
+{
+  "generatedAt": "2026-03-28T18:45:05.888Z",
+  "sourceStartedAt": "2026-03-28T18:44:01.927Z",
+  "minIncludedTrials": 2,
+  "pageSize": 100,
+  "maxPages": 8,
+  "topic": {
+    "slug": "finerenone-cardiorenal",
+    "label": "Finerenone Cardiorenal Outcome Trials",
+    "domain": "Cardiorenal Disease",
+    "baseQuery": "(\"chronic kidney disease\" AND \"type 2 diabetes\") AND finerenone",
+    "keywords": [
+      "FIDELIO-DKD",
+      "FIGARO-DKD",
+      "FINEARTS"
+    ],
+    "query": "(\"chronic kidney disease\" AND \"type 2 diabetes\") AND finerenone AND (\"FIDELIO-DKD\" OR \"FIGARO-DKD\" OR \"FINEARTS\")",
+    "scannedRecords": 6,
+    "pagesFetched": 1,
+    "truncated": false,
+    "includedCount": 2,
+    "excludedCount": 4,
+    "includedStudies": [
+      {
+        "nctId": "NCT02540993",
+        "title": "Efficacy and Safety of Finerenone in Subjects With Type 2 Diabetes Mellitus and Diabetic Kidney Disease",
+        "status": "COMPLETED",
+        "startDate": "2015-09-17",
+        "completionDate": "2020-04-14",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "A Randomized, Double-blind, Placebo-controlled, Parallel-group, Multicenter, Event-driven Phase 3 Study to Investigate the Safety and Efficacy of Finerenone, in Addition to Standard of Care, on the Progression of Kidney Disease in Subjects With Type 2 Diabetes Mellitus and the Clinical Diagnosis of Diabetic Kidney Disease",
+        "acronym": "FIDELIO-DKD",
+        "briefSummary": "The primary objective of this study was to demonstrate whether, in addition to standard of care, finerenone is superior to placebo in delaying the progression of kidney disease, as measured by the composite endpoint of time to first occurrence of kidney failure, a sustained decrease of estimated glomerular filtration rate (eGFR) ≥40% from baseline over at least 4 weeks, or renal death.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Bayer",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 5734,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Chronic Kidney Disease"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Men or women ≥18 years of age * Type 2 diabetes mellitus (T2D) as defined by the American Diabetes Association * Diagnosis of chronic kidney disease (CKD) with at least one of the following criteria at run-in and screening visits: * persistent high albuminuria (UACR ≥30 to \\<300 mg/g in 2 out of 3 first morning void samples) and estimated glomerular filtration rate (eGFR) ≥25 but \\<60 mL/min/1.73 m² (CKD EPI) and presence of diabetic retinopathy or * persistent very high albuminuria (UACR ≥300 mg/g in 2 out of 3 first morning void samples) and eGFR ≥25 to \\<75 mL/min/1.73 m² (CKD-EPI) * Prior treatment with angiotensin-converting enzyme inhibitors (ACEIs) and angiotensin receptor blockers (ARBs) as follows: * For at least 4 weeks prior to the run-in visit, subjects should be treated with either an ACEI or ARB, or both * Starting with the run-in visit, subjects should be treated with only an ACEI or ARB * For at least 4 weeks prior to the screening visit, subjects should be treated with the maximum tolerated labeled dose (but not below the minimal labeled dose) of only an ACEI or an ARB (not both) preferably without any adjustments to dose or choice of agent or to any other antihypertensive or antiglycemic treatment * Serum potassium ≤4.8 mmol/L at both the run-in and the screening visit Exclusion Criteria: * Known significant non-diabetic renal disease, including clinically relevant renal artery stenosis * Uncontrolled arterial hypertension (ie, mean..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "The First Occurrence of the Composite Endpoint of Onset of Kidney Failure, a Sustained Decrease of eGFR ≥40% From Baseline Over at Least 4 Weeks, or Renal Death",
+            "description": "Count of participants and time from randomization to the first occurrence of the primary renal composite outcome, onset of kidney failure, a sustained decrease of eGFR ≥40% from baseline over at least 4 weeks, or renal death were evaluated. Number of participants with the outcome event is reported as descriptive result and hazard ratio is reported as statistical analysis.",
+            "timeFrame": "From randomization up until the first occurrence of the primary renal composite endpoint, or censoring at the end of the study, with an average follow-up time of 32 months"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "The First Occurrence of the Composite Endpoint of Cardiovascular Death, Non-fatal Myocardial Infarction, Non-fatal Stroke, or Hospitalization for Heart Failure",
+            "description": "Count of participants and time from randomization to the first occurrence of the key secondary cardiovascular (CV) composite outcome, CV death, non-fatal myocardial infarction (MI), non-fatal stroke, or hospitalization for heart failure were evaluated. Number of participants with the outcome event is reported as descriptive result and hazard ratio is reported as statistical analysis.",
+            "timeFrame": "From randomization up until the first occurrence of the key secondary CV composite endpoint, or censoring at the end of the study, with an average of 32 months"
+          },
+          {
+            "measure": "All-cause Mortality",
+            "description": "Count of participants and time from randomization until death due to any cause were evaluated. Number of participants with outcome death is reported as descriptive result and hazard ratio is reported as statistical analysis. Number of participants with outcome death reported here includes deaths occurred after randomization until the end of the study visit. Deaths after end of study visit are not included in this table.",
+            "timeFrame": "From randomization up until death due to any cause, or censoring at the end of the study visit, with an average of 32 months"
+          },
+          {
+            "measure": "All-cause Hospitalization",
+            "description": "Count of participants and time from randomization to the first occurrence of a hospitalization event were evaluated. Number of participants with the event is reported as descriptive result and hazard ratio is reported as statistical analysis.",
+            "timeFrame": "From randomization up until the first occurrence of the hospitalization due to any cause, or censoring at the end of study, with an average of 32 months"
+          }
+        ],
+        "documents": [
+          {
+            "label": "Study Protocol",
+            "filename": "Prot_000.pdf",
+            "date": "2019-02-26",
+            "hasSap": false,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          },
+          {
+            "label": "Statistical Analysis Plan",
+            "filename": "SAP_001.pdf",
+            "date": "2020-02-14",
+            "hasSap": true,
+            "hasIcf": false,
+            "hasProtocol": false,
+            "url": ""
+          }
+        ],
+        "demographics": {
+          "populationDescription": "Full analysis set (FAS): the FAS comprised all randomized participants (except those with critical GCP violations)",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Finerenone",
+              "description": "Participants received finerenone 10 mg or 20 mg once daily in addition to standard of care therapy"
+            },
+            {
+              "id": "BG001",
+              "title": "Placebo",
+              "description": "Participants received matching placebo once daily in addition to standard of care therapy"
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Finerenone",
+              "value": 2833,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": 2841,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 5674,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Finerenone",
+              "value": "65.44",
+              "spread": "8.94",
+              "unit": "Years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": "65.67",
+              "spread": "9.16",
+              "unit": "Years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "65.56",
+              "spread": "9.05",
+              "unit": "Years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Finerenone",
+              "female": 880,
+              "male": 1953
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "female": 811,
+              "male": 2030
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 1691,
+              "male": 3983
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "Years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "65.44",
+                      "spread": "8.94"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "65.67",
+                      "spread": "9.16"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "65.56",
+                      "spread": "9.05"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "880",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "811",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1691",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "1953",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "2030",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "3983",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Ethnicity (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "447",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "431",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "878",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Not Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "2376",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "2397",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "4773",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Unknown or Not Reported",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "10",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "13",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "23",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Race (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "American Indian or Alaska Native",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "78",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "76",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "154",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Asian",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "717",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "723",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1440",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Native Hawaiian or Other Pacific Islander",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "11",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "7",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "18",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Black or African American",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "140",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "124",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "264",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Participants received finerenone 10 mg or 20 mg once daily in addition to standard of care therapy"
+          },
+          {
+            "id": "2",
+            "title": "Participants received matching placebo once daily in addition to standard of care therapy"
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "The First Occurrence of the Composite Endpoint of Onset of Kidney Failure, a Sustained Decrease of eGFR ≥40% From Baseline Over at Least 4 Weeks, or Renal Death",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Finerenone",
+              "n": 2833,
+              "events": 504
+            },
+            {
+              "id": "OG001",
+              "title": "Placebo",
+              "n": 2841,
+              "events": 600
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      },
+      {
+        "nctId": "NCT05013008",
+        "title": "An add-on Study to the FIGARO-DKD Study Called FIGARO-BM to Learn About the Link Between Biomarkers (Substances in the Blood Used as Indicators of Biological Processes, Disease Processes or Responses to Medication) and Finerenone in FIGARO-DKD Participants",
+        "status": "COMPLETED",
+        "startDate": "2021-08-18",
+        "completionDate": "2021-12-31",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "A Non-blinded Retrospective Biomarker add-on Study to FIGARO-DKD for Bioprofiling the Pharmacodynamic Response to Finerenone in FIGARO-DKD Subjects",
+        "acronym": "FIGARO-BM",
+        "briefSummary": "Researchers are looking for a better way to treat people who have chronic kidney disease (CKD), a long-term, progressive decrease in the kidneys' ability to work properly. When CKD happens in people with type 2 diabetes mellitus, a condition characterized by high blood sugar levels, CKD is also referred to as diabetic kidney disease (DKD). FIGARO-BM is an add-on study in which blood draws that were collected in the FIGARO-DKD study are further analyzed. No additional blood draws (also referred to as biological samples) or data will be obtained from the participants, nor will any additional or new study intervention be introduced. No visit or patient contact other than for obtaining the agreement by the patients (also called informed consent) will be required. Inflammation and scarring are both seen as responsible for worsening of chronic kidney disease. There is much information from animal studies that the study treatment finerenone (BAY94-8862) works against inflammation and against scarring (also called fibrosis) in organs such as the kidney. In this exploratory study researchers want to learn more about the study treatment finerenone (BAY94-8862). To find this out, this study will examine substances called biomarkers in blood draws from participants in the FIGARO-DKD study. Biomarkers are used as indicators of biological processes, disease processes or responses to medication. The biomarkers that will be examined stand for inflammation, organ scarring (also called fibr...",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Bayer",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE2"
+        ],
+        "enrollment": {
+          "count": 951,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Chronic Kidney Disease",
+          "Type 2 Diabetes Mellitus"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * This study will only include participants who were enrolled in the FIGARO-DKD study (NCT02545049) and had received up to 20 mg finerenone or placebo for ≥24 months. * For each participant, pharmacokinetic (PK) plasma samples from Visit 3 and at least 2 other Visits (Visit 5, Visit 8, Visit 11) must be available on storage from the main study FIGARO-DKD. Exclusion Criteria: * Participants which did not show overall compliance of 80 to 120% with study intervention in FIGARO-DKD. * Participants which were not part of the full analysis set (FAS) of FIGARO-DKD. * Participants with known fatal outcome. * Participants with baseline estimated glomerular filtration rate (eGFR) ≤25 mL/min/1.73m\\^2. * Participants with low baseline risk (normal albuminuria and eGFR≥60 mL/min/1.73m\\^2). * Sponsor request (after discussion with the investigator), for reasons such as a significant protocol deviation."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Mean Change in Plasma Biomarker Levels After 36 Months of Treatment Versus 4 Months of Treatment in a Set of 27 Pre-defined Biomarkers",
+            "description": "The normalized protein expression (NPX) of biomarker levels were analyzed for the set of 27 pre-defined plasma biomarkers. NPX is a unit on log2-scale that is logarithmically related to protein concentration. Linear NPX (2\\^NPX) was calcuated for descriptive analyses of the biomarker levels at each visit. Ratios of Visit 11 (36 months of treatment) to Visit 3 (4 months of treatment) were calculated to show the change in the plasma biomarker levels. Visit 3 (4 months of treatment) data were considered as baseline for the biomarker measurements as no pre-dose samples were available from FIGARO-DKD. Note, NPX units (Olink concentration units) are always relative units and can only be interpr...",
+            "timeFrame": "At 4 months (Visit 3) of treatment and 36 months (Visit 11) of treatment"
+          }
+        ],
+        "secondaryOutcomes": [],
+        "documents": [
+          {
+            "label": "Study Protocol",
+            "filename": "Prot_000.pdf",
+            "date": "2021-06-24",
+            "hasSap": false,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          },
+          {
+            "label": "Statistical Analysis Plan",
+            "filename": "SAP_001.pdf",
+            "date": "2022-07-13",
+            "hasSap": true,
+            "hasIcf": false,
+            "hasProtocol": false,
+            "url": ""
+          }
+        ],
+        "demographics": {
+          "populationDescription": "Modified biomarker full analysis set (mBFAS): All participants with valid informed consent for this biomarker study, which met the following criteria: a. Study enrollment criteria as defined in the study protocol. b. Analyzed biomarker samples at Visit 3 (4 months) and Visit 11 (36 months); Biomarker samples that were shipped at ambient temperatures were not analyzed. c. On Treatment at Visit 3...",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Finerenone",
+              "description": "Participants received finerenone 10 mg or 20 mg once daily in addition to standard of care therapy in previous interventional Phase 3 trial FIGARO-DKD. No new intervention was administered in this biomarker study."
+            },
+            {
+              "id": "BG001",
+              "title": "Placebo",
+              "description": "Participants received matching placebo once daily in addition to standard of care therapy in previous interventional Phase 3 trial FIGARO-DKD. No new intervention was administered in this biomarker study."
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Finerenone",
+              "value": 478,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": 443,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 921,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Finerenone",
+              "value": "63.55",
+              "spread": "9.50",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": "64.15",
+              "spread": "9.65",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "63.84",
+              "spread": "9.57",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Finerenone",
+              "female": 120,
+              "male": 358
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "female": 112,
+              "male": 331
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 232,
+              "male": 689
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "63.55",
+                      "spread": "9.50"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "64.15",
+                      "spread": "9.65"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "63.84",
+                      "spread": "9.57"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "120",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "112",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "232",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "358",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "331",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "689",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Race (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "American Indian or Alaska Native",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "1",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Asian",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "173",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "151",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "324",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Native Hawaiian or Other Pacific Islander",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "1",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Black or African American",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "8",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "7",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "15",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Plasma biomarker levels after 4 months of treatment",
+              "paramType": "GEOMETRIC_MEAN",
+              "unit": "Linear NPX (2^NPX)",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "19.618",
+                      "spread": "1.148"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "18.956",
+                      "spread": "1.203"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "NA",
+                      "spread": "NA"
+                    }
+                  ]
+                },
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "3.200",
+                      "spread": "1.793"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "2.338",
+                      "spread": "1.629"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "NA",
+                      "spread": "NA"
+                    }
+                  ]
+                },
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "1.600",
+                      "spread": "1.337"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "1.578",
+                      "spread": "1.374"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "NA",
+                      "spread": "NA"
+                    }
+                  ]
+                },
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Finerenone",
+                      "value": "1.480",
+                      "spread": "1.327"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "1.425",
+                      "spread": "1.349"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "NA",
+                      "spread": "NA"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Participants received finerenone 10 mg or 20 mg once daily in addition to standard of care therapy in previous interventional Phase 3 trial FIGARO-DKD. No new intervention was administered in this biomarker study."
+          },
+          {
+            "id": "2",
+            "title": "Participants received matching placebo once daily in addition to standard of care therapy in previous interventional Phase 3 trial FIGARO-DKD. No new intervention was administered in this biomarker study."
+          }
+        ],
+        "outcome": {
+          "type": "continuous",
+          "title": "Mean Change in Plasma Biomarker Levels After 36 Months of Treatment Versus 4 Months of Treatment in a Set of 27 Pre-defined Biomarkers",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Finerenone",
+              "n": 478,
+              "mean": 1.014,
+              "sd": 1.125
+            },
+            {
+              "id": "OG001",
+              "title": "Placebo",
+              "n": 443,
+              "mean": 1.062,
+              "sd": 1.201
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      }
+    ],
+    "excludedStudies": [
+      {
+        "nctId": "NCT05640180",
+        "title": "An Observational Study Called FLAMINgO to Learn More About the Treatment Combination of Finerenone and SGLT2 Inhibitors in People With Long-term Kidney Disease (Chronic Kidney Disease) Together With Type 2 Diabetes by Using Routine Medical Care Data and Past Clinical Study Results",
+        "status": "COMPLETED",
+        "startDate": "2022-11-23",
+        "completionDate": "2023-12-20",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "Finerenone on Top of SGLT2is: A coMparatIve Hybrid Study Based oN RCT/RWE Data Of Patients With Chronic Kidney Disease Associated With Type 2 Diabetes",
+        "acronym": "FLAMINGO",
+        "briefSummary": "This is an observational study, in which data from the past of people with chronic kidney disease (CKD) together with type 2 diabetes (T2D) are studied. The participants in this study were treated in the past with a type of drug called SGLT2 inhibitor alone or with SGLT2 inhibitors in combination with finerenone. In observational studies, only observations are made without specified advice or interventions. CKD is a long-term progressive decrease in the kidneys' ability to work properly. In people with T2D, the body does not make enough of a hormone called insulin, or does not use insulin well enough, resulting in high blood sugar levels that can cause damage to the kidneys. Chronic kidney disease often occurs together with / as a consequence of type 2 diabetes. SGLT2 inhibitors lower blood sugar levels by increasing sugar removal from the blood into the urine. SGLT2 inhibitors are the standard of care (SOC) treatment for CKD and T2D. SOC is the treatment that medical experts consider most appropriate for a disease. The drug finerenone works by blocking certain proteins, called mineralocorticoid receptors. By doing this, finerenone reduces damage to kidneys, heart and blood vessels. It is available and approved for doctors to prescribe to people with CKD together with T2D. Results from two earlier clinical studies called FIDELIO-DKD and FIGARO-DKD in participants with CKD together with T2D are available. These results suggest that the treatment combination of finerenone an...",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Bayer",
+          "class": "INDUSTRY"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 17847,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Chronic Kidney Disease",
+          "Type 2 Diabetes"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * FIDELIO-DKD patients: Participants with a clinical diagnosis of DKD based on either of the following criteria at the Run-in and Screening Visit: Persistent high albuminuria or Persistent very high albuminuria. * FIGARO-DKD patients: Participants with a clinical diagnosis of DKD based on either of the following criteria at the Run-in and Screening Visit: Persistent high albuminuria or Persistent very high albuminuria. * Men or women aged 18 years and older * Women of childbearing potential can only be included in the study if a pregnancy test is negative at the Screening Visit and if they agree to use adequate contraception. * Diagnosed with type 2 diabetes. * Prior treatment with Angiotensin-converting-enzyme inhibitors (ACEIs) and Angiotensin receptor blockers (ARBs) as follows: * For at least 4 weeks prior to the Run-in Visit, subjects should be treated with either an ACEI or ARB, or both * Starting with the Run-in Visit, subjects should be treated with only an ACEI or ARB * For at least 4 weeks prior to the Screening Visit, subjects should be treated with the maximum tolerated labeled dose (but not below the minimal labeled dose) of only an ACEI or an ARB (not both) preferably without any adjustments to dose or choice of agent or to any other antihypertensive or antiglycemic treatment. * Serum potassium ≤4.8 mmol/L at both the Run-in and the Screening Visit. * SGLT2 inhibitor use at baseline: Canagliflozin, Dapagliflozin, Empagliflozin, Ertuglifloz..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Time to the first occurrence of the composite endpoint of onset of kidney failure, a sustained decrease of eGFR ≥ 40% from baseline over at least 4 weeks, or renal death",
+            "description": "",
+            "timeFrame": "From randomization up until the first occurrence of the primary renal composite endpoint, or censoring at the end of the study, with a maximum follow-up time of 48 months"
+          },
+          {
+            "measure": "Time to first occurrence of the composite endpoint of Cardiovascular (CV) death or non-fatal CV event (i.e. myocardial infarction, stroke, or hospitalization for heart failure)",
+            "description": "",
+            "timeFrame": "From randomization up until the first occurrence of the key secondary CV composite endpoint, or censoring at the end of the study, with a maximum follow-up time of 48 months"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Time to all-cause hospitalization",
+            "description": "",
+            "timeFrame": "From randomization up until the first occurrence of the hospitalization due to any cause, or censoring at the end of study, with a maximum follow-up time of 48 months"
+          },
+          {
+            "measure": "Time to all-cause mortality",
+            "description": "",
+            "timeFrame": "From randomization up until death due to any cause, or censoring at the end of the study, with a maximum follow-up time of 48 months"
+          },
+          {
+            "measure": "Change in urine albumin-creatinine ratio (UACR) from baseline to Month 4",
+            "description": "",
+            "timeFrame": "From baseline to Month 4"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "ECA built from patients from Optum® Electronic Health Records (EHR) real world data (RWD) that closely match Sodium/glucose cotransporter-2 inhibitors (SGLT2i) subgroups from the randomized clinical trials (RCTs)."
+          },
+          {
+            "id": "2",
+            "title": "ICA built from participants from two RCTs called FIDELIO-DKD and FIGARO-DKD pooled for the FIDELITY analyses. FIDELIO-DKD/FIGARO-DKD placebo controls treated with SGLT2is at baseline."
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "not_randomized_interventional",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT04795726",
+        "title": "A Study That Uses Data From Routine Eye Examinations of Patients Participating in Studies FIDELIO-DKD and FIGARO-DKD to Explore Whether Finerenone Can Delay the Progression of a Diabetes Complication That Affects the Eyes (Diabetic Retinopathy, DR)",
+        "status": "COMPLETED",
+        "startDate": "2021-03-10",
+        "completionDate": "2021-06-30",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "A Clinical Trial Collecting Data From Routine Ophthalmological Examinations of Patients Who Were Randomized to Either Finerenone or Placebo in the Two Bayer-sponsored Phase 3 Clinical Trials FIDELIO-DKD and FIGARO-DKD to Investigate the Effect of Finerenone on Delaying the Progression of Diabetic Retinopathy",
+        "acronym": "DeFineDR",
+        "briefSummary": "Diabetic retinopathy (DR) is a diabetes complication caused by damage to the small blood vessels inside the retina at the back of the eye. Diabetic retinopathy may cause mild vision problems or eventually blindness. Diabetes is a condition that makes your blood sugar levels higher than they should be. In the early stages of diabetic retinopathy - called non-proliferative diabetic retinopathy (NPDR)- increased blood sugar levels lead to damage to the tiny blood vessels of the retina. This damage results in small outpouchings of the vessel lumens leading to rupture. At the same time the blood vessels can leak and making the retina swell and can cause so called macula edema. In these early stages of DR current treatment to reduce the risk of this eye complication is focused on controlling blood sugar levels and blood pressure. Participants in this study have NPDR, Type 2 Diabetes (T2D) and Chronic Kidney Disease (CKD), a condition in which the kidneys become damaged and do not work as they should. These participants are already taking part in one of the phase 3 studies (FIDELIO-DKD and FIGARO-DKD). They study the effect of Finerenone on delaying kidney disease progression and reducing the risk of events that may cause damage to the heart and blood vessels To learn more about the effect of Finerenone on diabetic retinopathy, data from routine eye examinations performed during the two phase 3 studies will be collected and analyzed. All male and female participants included in t...",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Bayer",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "NA"
+        ],
+        "enrollment": {
+          "count": 70,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Diabetic Retinopathy"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Signed informed consent to participate in DeFineDR * Included in FIDELIO-DKD or FIGARO-DKD, and with DR as medical history * Documented NPDR in at least one eye, as documented by ophthalmological records within 6 months prior to baseline in FIDELIO-DKD or FIGARO-DKD, and up to one month after baseline in FIDELIO-DKD or FIGARO-DKD * An ophthalmological assessment available 6 month before or maximum 1 month after the baseline examination in FIDELIO-DKD or FIGARO-DKD, and at least one additional assessment afterwards. Exclusion Criteria: * Participants with PDR, macular edema or anterior segment complications present at baseline in FIDELIO-DKD or FIGARO-DKD in at least one eye. * Participants with any documentation of prior or planned retinal laser treatment, intravitreal injection or vitrectomy at baseline in FIDELIO-DKD or FIGARO-DKD in at least one eye. * Participants with any other retinal disease documented at baseline in FIDELIO-DKD or FIGARO-DKD in at least one eye that would likely interfere with the study objectives (e.g. neovascular age-related macular degeneration or retinal vein occlusion)."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Proportion of participants with progression of non-proliferative diabetic retinopathy (NPDR)",
+            "description": "Progression of non-proliferative diabetic retinopathy (NPDR) defined by the occurrence of vision-threatening events i.e. proliferative diabetic retinopathy (PDR), diabetic macular edema (DME), anterior segment neovascularization (ASN) until the end of Year 2 after start of treatment",
+            "timeFrame": "After start of treatment until end of Year 2"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Proportion of participants with progression of non-proliferative diabetic retinopathy (NPDR)",
+            "description": "Progression of non-proliferative diabetic retinopathy (NPDR) defined by the occurrence of vision-threatening events i.e. proliferative diabetic retinopathy (PDR), diabetic macular edema (DME), anterior segment neovascularization (ASN) until the end of Year 1 after start of treatment",
+            "timeFrame": "After start of treatment until end of Year 1"
+          },
+          {
+            "measure": "Proportion of participants with progression of NPDR to Proliferative Diabetic Retinopathy (PDR)",
+            "description": "",
+            "timeFrame": "After start of treatment until end of Year 1, and until the end of Year 2"
+          },
+          {
+            "measure": "Proportion of participants with diabetic macular edema (DME)",
+            "description": "",
+            "timeFrame": "After start of treatment until end of Year 1 and end of Year 2"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Patients received treatment in phase 3 clinical trials FIDELIO-DKD (16244) and FIGARO-DKD (17530)."
+          },
+          {
+            "id": "2",
+            "title": "Patients received placebo in phase 3 clinical trials FIDELIO-DKD (16244) and FIGARO-DKD (17530)."
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT04477707",
+        "title": "A Study That Uses Data From Routine Eye Examinations of Patients Participating in Studies FIDELIO-DKD and FIGARO-DKD to Explore Whether Finerenone Can Delay the Progression of a Diabetes Complication That Affects the Eyes (Diabetic Retinopathy ,DR)",
+        "status": "COMPLETED",
+        "startDate": "2020-07-23",
+        "completionDate": "2021-06-25",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "Observational Study of Routine Ophthalmological Examinations of Patients Included in the 2 Bayer Sponsored Phase 3 Clinical Trials FIDELIO and FIGARO to Investigate the Effect of Finerenone on Delaying the Progression of Diabetic Retinopathy",
+        "acronym": "ReFineDR",
+        "briefSummary": "Diabetic retinopathy (DR) is a diabetes complication caused by damage to the small blood vessels inside the retina at the back of the eye. Diabetic retinopathy may cause mild vision problems or eventually blindness. Diabetes is a condition that makes your blood sugar levels higher than they should be. In the early stages of diabetic retinopathy - called non-proliferative diabetic retinopathy (NPDR)- increased blood sugar levels lead to damage to the tiny blood vessels of the retina. This damage results in small outpouchings of the vessel lumens leading to rupture. At the same time the blood vessels can leak and making the retina swell and can cause so called macula edema. In these early stages of DR current treatment to reduce the risk of this eye complication is focused on controlling blood sugar levels and blood pressure. Participants in this study have NPDR, Type 2 Diabetes (T2D) and Chronic Kidney Disease (CKD), a condition in which the kidneys become damaged and do not work as they should. These participants are already taking part in one of the phase 3 studies (FIDELIO-DKD and FIGARO-DKD). They study the effect of Finerenone on delaying kidney disease progression and reducing the risk of events that may cause damage to the heart and blood vessels To learn more about the effect of Finerenone on diabetic retinopathy, data from routine eye examinations performed during the two phase 3 studies will be collected and analyzed. All male and female participants included in t...",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Bayer",
+          "class": "INDUSTRY"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 206,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Diabetic Retinopathy"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Signed informed consent to participate in ReFineDR * Included in FIDELIO or FIGARO, and with DR as medical history * Documented NPDR in at least one eye, as documented by ophthalmological records within 6 months prior to baseline in FIDELIO or FIGARO, and up to one month after baseline in FIDELIO or FIGARO * An ophthalmological assessment available 6 month before or maximum 1 month after the baseline examination in FIDELIO or FIGARO, and at least one additional assessment afterwards. Exclusion Criteria: * Patients with PDR, macular edema or anterior segment complications present at baseline in FIDELIO or FIGARO in at least one eye. * Patients with any documentation of prior or planned retinal laser treatment, intravitreal injection or vitrectomy at baseline in FIDELIO or FIGARO in at least one eye. * Patients with any other retinal disease documented at baseline in FIDELIO or FIGARO in at least one eye that would likely interfere with the study objectives (e.g. neovascular age-related macular degeneration or retinal vein occlusion)."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Progression of non-proliferative diabetic retinopathy (NPDR)",
+            "description": "Progression of non-proliferative diabetic retinopathy (NPDR) defined by the occurrence of vision-threatening events i.e. proliferative diabetic retinopathy (PDR), diabetic macular edema (DME), anterior segment neovascularization (ASN) until the end of Year 2 after start of treatment",
+            "timeFrame": "After start of treatment until end of Year 2"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Progression of non-proliferative diabetic retinopathy (NPDR)",
+            "description": "Progression of non-proliferative diabetic retinopathy (NPDR) defined by the occurrence of vision-threatening events i.e. proliferative diabetic retinopathy (PDR), diabetic macular edema (DME), anterior segment neovascularization (ASN) until the end of Year 1 after start of treatment",
+            "timeFrame": "After start of treatment until end of Year 1"
+          },
+          {
+            "measure": "Progression of non-proliferative diabetic retinopathy (NPDR) to proliferative diabetic retinopathy (PDR)",
+            "description": "",
+            "timeFrame": "After start of treatment until end of Year 1 and end of Year 2"
+          },
+          {
+            "measure": "Occurrence of diabetic macular edema (DME)",
+            "description": "",
+            "timeFrame": "After start of treatment until end of Year 1 and end of Year 2"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Patients received treatment in phase 3 clinical trials FIDELIO or FIGARO."
+          },
+          {
+            "id": "2",
+            "title": "Patients received placebo in phase 3 clinical trials FIDELIO or FIGARO."
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "not_randomized_interventional",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT07056595",
+        "title": "Finerenone in Patients With IgA-nephropathy: Prospective Interventional Trial",
+        "status": "RECRUITING",
+        "startDate": "2025-05-21",
+        "completionDate": "2026-05-21",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "NON_RANDOMIZED",
+        "officialTitle": "Finerenone in Patients With IgA-nephropathy: Prospective Interventional Trial",
+        "acronym": "",
+        "briefSummary": ": IgA-nephropathy is the most common glomerulonephritis with the unfavorable prognosis in patients with persistent albuminuria. Finerenone is a new nonsteroidal mineralocorticoid receptor antagonist that has demonstrated efficacy in reducing albuminuria in patients with CKD and type 2 diabetes in two major trials, FIGARO-DKD and FIDELIO. This finding supported the approval of finerenone by the U.S. Food and Drug Administration (FDA) for the treatment of chronic kidney disease (CKD). A subgroup analysis in the pooled FIDELITY trial demonstrated that in patients with CKD stages 1-4 and type 2 diabetes (T2D), the cardio- and nephroprotective effects of finerenone were independent of concomitant therapy with SGLT-2 inhibitors or GLP-1 receptor agonists. Thus, the role of finerenone in slowing CKD progression in T2D can be considered well-established. Given its albuminuria-reducing effects, finerenone is being investigated in multiple trials, including studies on non-diabetic kidney disease and IgA nephropathy, though no published results are available yet. In this trial finerenone will be used as a nephroprotective agent above standard treatment in terms of assessing adverse events and potential efficacy.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Botkin Hospital",
+          "class": "OTHER"
+        },
+        "phases": [
+          "NA"
+        ],
+        "enrollment": {
+          "count": 30,
+          "type": "ESTIMATED"
+        },
+        "conditions": [
+          "IgA Nephropathy (IgAN)"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Adults (\\> 18 years) with the primary IgAN diagnosed by kidney biopsy; * Treatment with stable doses of iRAS or/and iSGLT2 inhibitors for at least 3 months prior inclusion into the trial; * Blood pressure \\< 140/90 mm Hg * 24-hour urinary albumin excretion \\> 300 mg Exclusion Criteria: * Kidney transplantation in medical history * Chronic hepatic disease, including hepatitis, malignant tumor, active malignancy; * Heart failure with ejection fraction \\<40%; * Acute myocardial infarction and/or stroke less then 3 months before including in trial; * Presence ANCA in serum * Ongoing immunosuppressive treatment * eGFR \\< 20 ml/min * Pregnancy and breastfeeding * Uncontrolled blood pressure"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Median change in albuminuria from baseline",
+            "description": "24-hour urinary albumin excretion",
+            "timeFrame": "6 months"
+          }
+        ],
+        "secondaryOutcomes": [],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Arm 1"
+          },
+          {
+            "id": "2",
+            "title": "Arm 2"
+          },
+          {
+            "id": "3",
+            "title": "Arm 3"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      }
+    ],
+    "exclusionReasons": {
+      "no_results_posted": 4,
+      "not_randomized_interventional": 2,
+      "no_extractable_numeric_outcome": 4,
+      "not_completed": 1
+    },
+    "portfolioEligible": true,
+    "priorityTier": "early"
+  }
+}

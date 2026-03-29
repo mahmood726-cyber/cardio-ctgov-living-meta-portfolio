@@ -1,0 +1,1153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>IVUS or OCT Guided PCI | Validation Plan</title>
+    <link rel="icon" href="data:," />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f6fb;
+        --ink: #16213e;
+        --muted: #5b657a;
+        --card: #ffffff;
+        --line: #d8e0f0;
+        --accent: #0f5c7a;
+        --accent-soft: #e0f1f8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 44%, #ffffff 100%);
+        color: var(--ink);
+        font: 16px/1.55 "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      }
+      main {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 20px 56px;
+      }
+      .hero {
+        display: grid;
+        gap: 16px;
+        padding: 28px;
+        background: radial-gradient(circle at top left, #dceefe 0%, #ffffff 55%);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 16px 48px rgba(15, 52, 96, 0.08);
+      }
+      .kicker {
+        margin: 0;
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+      h1, h2 { margin: 0; }
+      p { margin: 0; color: var(--muted); }
+      .grid {
+        display: grid;
+        gap: 16px;
+        margin-top: 22px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+      }
+      .card strong {
+        display: block;
+        font-size: 1.75rem;
+        color: var(--ink);
+      }
+      .section {
+        margin-top: 24px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px;
+      }
+      pre {
+        margin: 12px 0 0;
+        white-space: pre-wrap;
+        overflow-x: auto;
+        background: #0d1b2a;
+        color: #eff6ff;
+        padding: 14px;
+        border-radius: 14px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+        padding: 10px 8px;
+      }
+      th {
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .pillbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .pill {
+        background: var(--accent-soft);
+        border: 1px solid #b9d9e7;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        color: var(--ink);
+      }
+      iframe {
+        width: 100%;
+        min-height: 420px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #111827;
+      }
+      a { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <p class="kicker">CT.gov Validation Pack</p>
+        <h1>IVUS or OCT Guided PCI</h1>
+        <p>Separate cardiovascular living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-03-28. Only randomized comparative records with posted results and extractable numeric outcomes are eligible.</p>
+        <div class="pillbar">
+          <span class="pill">Priority tier: Build Now</span>
+          <span class="pill">Included RCTs: 12</span>
+          <span class="pill">Scanned records: 478</span>
+          <span class="pill">Pages fetched: 5</span>
+          <span class="pill">Domain: Coronary Artery Disease</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card"><span>Base query</span><strong>(PCI OR coronary stent) AND (IVUS OR OCT OR &quot;intravascular ultrasound&quot; OR &quot;optical coherence tomography&quot;)</strong></article>
+        <article class="card"><span>Keyword pack</span><strong>ULTIMATE, ILUMIEN, OCTOBER, RENOVATE-COMPLEX-PCI</strong></article>
+        <article class="card"><span>Validation files</span><strong><a href="validation.json">validation.json</a></strong></article>
+        <article class="card"><span>App entry</span><strong><a href="index.html">index.html</a></strong></article>
+      </section>
+
+      <section class="section">
+        <h2>Protocol Framing And Review Question</h2>
+        <p>This plan treats the registry-native topic as a living protocol artifact rather than a link collection. The PICO framing and workflow below define what enters the snapshot, how records are screened, and how benchmark reconciliation should be performed before review sign-off.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Population</td><td>Coronary Artery Disease; Macular Degeneration; Coronary Artery Stenosis; Coronary Disease; Coronary Stenosis; Coronary Arteriosclerosis</td></tr>
+            <tr><td>Interventions</td><td>Svelte Drug-Eluting Coronary Stent; Medtronic Resolute Integrity Drug-Eluting Stent; 5 mg/mL TID; 2 mg/mL TID; 5 mg/mL QD; Resolute Integrity DES; Xience Xpedition DES; BIOTRONIK Orsiro SES</td></tr>
+            <tr><td>Comparators</td><td>Medtronic Resolute Integrity Drug-Eluting Stent vs Svelte Drug-Eluting Coronary Stent; 2 mg/mL TID vs 5 mg/mL TID | 5 mg/mL QD vs 5 mg/mL TID; Xience Xpedition DES vs Resolute Integrity DES; Abbott Xience Prime™ EES vs BIOTRONIK Orsiro SES; XIENCE vs Absorb BVS; Everolimus Eluting Stent (EES) vs Combo</td></tr>
+            <tr><td>Outcomes</td><td>Angiographic In-Stent Late Lumen Loss (LL); Change From Baseline (Day 1) in Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) Over Period; In Stent Mean Cross-sectional Area of Neo-intimal Tissue Coverage; In-stent Late Lumen Loss at 9 Months as Assessed by the Core Laboratory QCA Analysis; Number of Cardiac Death/TV-MI/ID-TLR (TLF); Number of Participants With Target Vessel Failure (TVF)</td></tr>
+            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exact CT.gov Search Query</h2>
+        <pre>(PCI OR coronary stent) AND (IVUS OR OCT OR &quot;intravascular ultrasound&quot; OR &quot;optical coherence tomography&quot;) AND (&quot;ULTIMATE&quot; OR &quot;ILUMIEN&quot; OR &quot;OCTOBER&quot; OR &quot;RENOVATE-COMPLEX-PCI&quot;)</pre>
+      </section>
+
+      <section class="section">
+        <h2>Information Sources And Search History</h2>
+        <p>The project was generated directly from the ClinicalTrials.gov v2 API using the exact query below, then checked against publication-oriented benchmark searches so reviewers can compare the registry-native set against the broader literature.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://clinicaltrials.gov/search?term=(PCI%20OR%20coronary%20stent)%20AND%20(IVUS%20OR%20OCT%20OR%20%22intravascular%20ultrasound%22%20OR%20%22optical%20coherence%20tomography%22)%20AND%20(%22ULTIMATE%22%20OR%20%22ILUMIEN%22%20OR%20%22OCTOBER%22%20OR%20%22RENOVATE-COMPLEX-PCI%22)" target="_blank" rel="noopener">CT.gov query</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22IVUS%20or%20OCT%20Guided%20PCI%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">PubMed meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22IVUS%20or%20OCT%20Guided%20PCI%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">PubMed randomized-trial search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Source</th>
+              <th>Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>CT.gov candidate scan started</td>
+          <td>ClinicalTrials.gov v2 API</td>
+          <td>2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Base query locked</td>
+          <td>Project generator</td>
+          <td>(PCI OR coronary stent) AND (IVUS OR OCT OR &quot;intravascular ultrasound&quot; OR &quot;optical coherence tomography&quot;)</td>
+        </tr>
+
+        <tr>
+          <td>Keyword expansion applied</td>
+          <td>Project generator</td>
+          <td>4 terms: ULTIMATE, ILUMIEN, OCTOBER, RENOVATE-COMPLEX-PCI</td>
+        </tr>
+
+        <tr>
+          <td>Exact query executed</td>
+          <td>ClinicalTrials.gov</td>
+          <td>(PCI OR coronary stent) AND (IVUS OR OCT OR &quot;intravascular ultrasound&quot; OR &quot;optical coherence tomography&quot;) AND (&quot;ULTIMATE&quot; OR &quot;ILUMIEN&quot; OR &quot;OCTOBER&quot; OR &quot;RENOVATE-COMPLEX-PCI&quot;)</td>
+        </tr>
+
+        <tr>
+          <td>Registry records screened</td>
+          <td>ClinicalTrials.gov</td>
+          <td>478 records across 5 page(s)</td>
+        </tr>
+
+        <tr>
+          <td>Hard-gate exclusions applied</td>
+          <td>Generator eligibility rules</td>
+          <td>466 records excluded before synthesis</td>
+        </tr>
+
+        <tr>
+          <td>Quantitative snapshot frozen</td>
+          <td>validation.json</td>
+          <td>12 randomized trials entered the reviewer pack</td>
+        </tr>
+
+        <tr>
+          <td>Project package generated</td>
+          <td>Portfolio build</td>
+          <td>2026-03-28</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Selection And Synthesis Workflow</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Rule</th>
+              <th>Evidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Question framing</td>
+          <td>Topic slug, base query, and keyword pack frozen before generation</td>
+          <td>ivus-oct-guided-pci | 2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Registry screening</td>
+          <td>ClinicalTrials.gov v2 API queried with the exact string shown below</td>
+          <td>478 candidate records screened</td>
+        </tr>
+
+        <tr>
+          <td>Eligibility gate</td>
+          <td>Randomized interventional, completed, posted results, &gt;=2 arms, numeric outcome</td>
+          <td>12 included / 466 excluded</td>
+        </tr>
+
+        <tr>
+          <td>Extraction</td>
+          <td>Outcome groups, sponsor, eligibility, documents, and demographics preserved where available</td>
+          <td>12/12 studies with demographics</td>
+        </tr>
+
+        <tr>
+          <td>Reviewer validation</td>
+          <td>Benchmark ledger and topic-aware WebR runner bundled with each topic project</td>
+          <td>validation.json + plan.html + embedded runner</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>PRISMA Flow Summary</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Count</th>
+              <th>Reviewer Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Records identified from the exact CT.gov query</td>
+          <td>478</td>
+          <td>5 page(s) fetched</td>
+        </tr>
+
+        <tr>
+          <td>Records excluded by registry hard gates</td>
+          <td>466</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+        </tr>
+
+        <tr>
+          <td>Trials entering the quantitative snapshot</td>
+          <td>12</td>
+          <td>Included in validation.json and the live topic app</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Eligibility Rules</h2>
+        <div class="pillbar">
+          <span class="pill">Interventional</span>
+          <span class="pill">Randomized</span>
+          <span class="pill">Completed</span>
+          <span class="pill">Posted CT.gov results</span>
+          <span class="pill">At least 2 arms</span>
+          <span class="pill">Numeric outcome extractable</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <span>Protocol metadata coverage</span>
+          <strong>12/12</strong>
+          <p>Trials with a retained CT.gov brief summary excerpt.</p>
+        </article>
+        <article class="card">
+          <span>Demographics coverage</span>
+          <strong>12/12</strong>
+          <p>Trials with a retained baseline characteristics snapshot.</p>
+        </article>
+        <article class="card">
+          <span>Document coverage</span>
+          <strong>7/12</strong>
+          <p>Trials with protocol or source documents listed on CT.gov.</p>
+        </article>
+        <article class="card">
+          <span>Total reported enrollment</span>
+          <strong>6611</strong>
+          <p>Summed from the CT.gov enrollment field across included studies.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Included Trial Ledger</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Sponsor</th>
+              <th>Phase</th>
+              <th>Enrollment</th>
+              <th>Status</th>
+              <th>Start</th>
+              <th>Completion</th>
+              <th>Arms</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01788150" target="_blank" rel="noopener">NCT01788150</a></td>
+          <td>Safety and Efficacy Study of the Svelte Drug-Eluting Coronary Stent Delivery System</td>
+          <td>Svelte Medical Systems, Inc. (INDUSTRY)</td>
+          <td>NA</td>
+          <td>159 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2013-01-01</td>
+          <td>2019-05-31</td>
+          <td>Coronary Stenting | Coronary Stenting</td>
+          <td>Angiographic In-Stent Late Lumen Loss (LL)</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00733304" target="_blank" rel="noopener">NCT00733304</a></td>
+          <td>An Extension to Study MD7108240</td>
+          <td>GlaxoSmithKline (INDUSTRY)</td>
+          <td>Phase 2</td>
+          <td>42 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2008-06-25</td>
+          <td>2009-09-09</td>
+          <td>eligible participants received 5 mg/ml Pazopanib eye drops three times daily (TID) | eligible participants received 2 mg/ml Pazopanib eye drops three times daily | eligible participants received 5 mg/ml Pazopanib eye drops once daily (QD)</td>
+          <td>Change From Baseline (Day 1) in Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) Over Period</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02098876" target="_blank" rel="noopener">NCT02098876</a></td>
+          <td>Wall Shear Stress and Neointimal Healing Following PCI in Angulated Coronary Vessels</td>
+          <td>Emory University (OTHER)</td>
+          <td>NA</td>
+          <td>86 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2014-05-01</td>
+          <td>2020-12-01</td>
+          <td>Resolute Integrity zotarolimus eluting stent | Xience Xpedition everolimus eluting stent</td>
+          <td>In Stent Mean Cross-sectional Area of Neo-intimal Tissue Coverage</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02870985" target="_blank" rel="noopener">NCT02870985</a></td>
+          <td>BIOTRONIK Orsiro Pre-Marketing Registration</td>
+          <td>Biotronik (Beijing) Medical Device Ltd. (INDUSTRY)</td>
+          <td>NA</td>
+          <td>440 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2015-07-14</td>
+          <td>2021-12-01</td>
+          <td>Preparation and percutaneous access should be performed according to the standard hospital practice. Both femoral and radial accesses are accepted. The procedure begins once percutaneous access has been made.Following intracoronary injection of nitroglycerin or isosorbide dinitrate, a baseline angiography of the target vessel must be performed according to the QCA corelab guidelines.The subjects randomized to the experimental arm will be implanted with BIOTRONIK sirolimus eluting coronary stent(Orsiro). | Preparation and percutaneous access should be performed according to the standard hospital practice. Both femoral and radial accesses are accepted. The procedure begins once percutaneous access has been made.Following intracoronary injection of nitroglycerin or isosorbide dinitrate, a baseline angiography of the target vessel must be performed according to the QCA corelab guidelines.The subjects randomized to the comparator arm will be implanted with Abbott everolimus eluting coronary stent(Xience Prime™).</td>
+          <td>In-stent Late Lumen Loss at 9 Months as Assessed by the Core Laboratory QCA Analysis</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01751906" target="_blank" rel="noopener">NCT01751906</a></td>
+          <td>ABSORB III Randomized Controlled Trial (RCT)</td>
+          <td>Abbott Medical Devices (INDUSTRY)</td>
+          <td>NA</td>
+          <td>2008 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2012-12-01</td>
+          <td>2020-10-01</td>
+          <td>Subjects receiving Absorb BVS | Subjects receiving XIENCE V, XIENCE PRIME, or XIENCE Xpedition</td>
+          <td>Number of Cardiac Death/TV-MI/ID-TLR (TLF)</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02073565" target="_blank" rel="noopener">NCT02073565</a></td>
+          <td>HARMONEE - Japan-USA Harmonized Assessment by Randomized, Multi-Center Study of OrbusNEich&#39;s Combo StEnt</td>
+          <td>OrbusNeich (INDUSTRY)</td>
+          <td>NA</td>
+          <td>572 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2014-02-01</td>
+          <td>2021-12-01</td>
+          <td>The Combo Stent is composed of the OrbusNeich R stent™, with an abluminal coating of a bioabsorbable polymer matrix formulated with sirolimus for sustained release, and an anti-CD34 antibody cell capture coating on the luminal surface. | Everolimus Eluting Stent (EES) (Xience V, Xience Prime, Xience Xpedition stents, Abbott Vascular/Abbott Vascular Japan). Xience Prime inherited the clinical result of Xience V and is a product that obtains efficiency essentially equal to Xience V.</td>
+          <td>Number of Participants With Target Vessel Failure (TVF)</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05307965" target="_blank" rel="noopener">NCT05307965</a></td>
+          <td>RETRIEVE-AMI Study</td>
+          <td>Oxford University Hospitals NHS Trust (OTHER)</td>
+          <td>NA</td>
+          <td>81 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2022-05-06</td>
+          <td>2025-05-28</td>
+          <td>Participants will have standard of care treatment. They will undergo PCI with devices and techniques driven by clinical decision making at the patient level and institutional level, and carried out in accordance with the Oxford University Hospitals NHS Foundation Trust department guidelines. | Participants will have standard of care treatment with manual thrombectomy catheter and PCI. They will undergo PCI with devices and techniques driven by clinical decision making at the patient level and institutional level, and carried out in accordance with the Oxford University Hospitals NHS Foundation Trust department guidelines. | Participants randomised to the stent-retriever thrombectomy arm of the RETRIEVE AMI trial will undergo stent-retriever thrombectomy with the SolitaireTM X Revascularisation Device.</td>
+          <td>Device-related Target Vessel Complications</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01270139" target="_blank" rel="noopener">NCT01270139</a></td>
+          <td>Plasmonic Nanophotothermal Therapy of Atherosclerosis</td>
+          <td>Ural State Medical University (OTHER)</td>
+          <td>NA</td>
+          <td>180 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2007-04-01</td>
+          <td>2016-08-01</td>
+          <td>60 patients in Nano group were treated with transplantation of nanoparticles (NP), particularly with a bioengineered patch that was grown with allogenous stem cells pre-cultivated in the medium with NP. After the admission, patients were examined with QCA, and allocated to the trial. The implantation of the patch onto the artery was undergone by the minimally invasive cardiac surgery (MICS CABG) with fixation of the graft to the epicardial myocardium. MICS CABG implies a beating-heart multi-vessel heart surgery performed through several small incisions under direct vision through an anterolateral mini-thoracotomy in the 4th-6th intercostal spaces. The patients can expect high quality of life resuming all everyday activities within a few weeks of their operation. NP were activated with NIR laser at 7 days after the intervention. Patients were treated with bolus of bivalirudin on the day of NP detonation. | 60 patients in Ferro group were managed with transplantation of iron-bearing nanoparticles (NP), particularly with intracoronary infusion of allogenous stem cells or CD68 targeted micro-bubbles pre-cultivated in the medium with iron-bearing NP. Cells and/ or micro-bubbles were infused with QCA- and IVUS-guidance to the target coronary artery via micro-catheter on the day of admission. The destruction of CD68 targeted micro-bubbles was obtained by using a Sonos 5500 machine with an S3 transducer operating in ultraharmonic mode (transmit, 1.3MHz/ receive, 3.6 MHz) with a mechanical index of 1.5 and a depth of 4 cm. The AXIOM Artis dBC (Siemens) magnetic navigation system was used for precise delivery of NP to the atheroma through two permanent computer-controlled external magnets generating a navigational magnetic field of 0.08 Tesla in any direction. NP were detonated with NIR laser under the protection of anti-platelet therapy. | In case of control group (stenting control), XIENCE V stent was implanted to 60 patients. Patients with a single de novo native coronary stenosis of less than 12 mm lesion length, more than 50% stenosis and reference diameter of 3.0 mm as assessed by online QCA were stented by a single stent of 3.0 x 18 mm. The procedure of implantation had to be performed according to common interventional practices including the administration of intracoronary nitroglycerine 0.2 mg of glycerol trinitrate or isosorbide dinitrate and intra-arterial heparin (50-100 U/kg body weight). Predilation with a conventional balloon catheter was recommended before DES deployment according to the manufacturer&#39;s recommendation. The protocol recommended the study stent should cover 2 mm of non-diseased tissue on either side of the target lesion. Postdilatation was allowed with a balloon that was shorter than was the study device.</td>
+          <td>Total Atheroma Volume</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03111940" target="_blank" rel="noopener">NCT03111940</a></td>
+          <td>The Oxford Optimisation of PCI Study (OXOPT-PCI Study)</td>
+          <td>Oxford University Hospitals NHS Trust (OTHER)</td>
+          <td>NA</td>
+          <td>35 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2016-08-01</td>
+          <td>2017-07-01</td>
+          <td>Post PCI FFR below 0.9 | Post PCI FFR 0.9 or higher</td>
+          <td>Final Fractional Flow Reserve (FFR) After Intracoronary Stenting</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03507777" target="_blank" rel="noopener">NCT03507777</a></td>
+          <td>ILUMIEN IV: OPTIMAL Percutaneous Coronary Intervention (PCI)</td>
+          <td>Abbott Medical Devices (INDUSTRY)</td>
+          <td>NA</td>
+          <td>2487 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2018-05-17</td>
+          <td>2023-02-28</td>
+          <td>Intervention = Coronary stenting with planned drug eluting stent (DES).
+
+Stenting will be performed with OCT guidance according to the algorithm described in the protocol. OCT imaging is required pre and post stent implantation.
+
+At the end of the procedure, a final OCT imaging run must be performed. | Intervention = Coronary stenting with planned drug eluting stent (DES).
+
+Stenting will be performed with angiography guidance according to local standard practice.
+
+At the end of the procedure, a blinded OCT shall be performed to document final stent dimensions and results.</td>
+          <td>Imaging Outcome (Powered): Minimal Stent Area (MSA)</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02471586" target="_blank" rel="noopener">NCT02471586</a></td>
+          <td>OPTIMIZE PCI: Multicenter Randomized Trial of OCT Compared to IVUS and Angiography to Guide Coronary Stent Implantation</td>
+          <td>Abbott Medical Devices (INDUSTRY)</td>
+          <td>NA</td>
+          <td>450 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2015-05-01</td>
+          <td>2017-04-25</td>
+          <td>Intervention = Coronary stenting with planned drug eluting stent (DES).
+
+Stenting will be performed with IVUS guidance according to local standard practice. IVUS imaging is required pre and post stent implantation.
+
+At the end of the procedure, a final IVUS imaging run must be performed.
+
+After the final IVUS run, a blinded OCT imaging run shall be performed to document final stent dimensions and results. | Intervention = Coronary stenting with planned drug eluting stent (DES).
+
+Stenting will be performed with OCT guidance according to the algorithm described in the protocol. OCT imaging is required pre and post stent implantation.
+
+At the end of the procedure, a final OCT imaging run must be performed. | Intervention = Coronary stenting with planned drug eluting stent (DES).
+
+Stenting will be performed with angiography guidance according to local standard practice.
+
+At the end of the procedure, a blinded OCT shall be performed to document final stent dimensions and results.</td>
+          <td>Primary Safety Endpoint (Non-powered): Number of Participants With Procedural MACE (Major Adverse Cardiac Event)</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03115580" target="_blank" rel="noopener">NCT03115580</a></td>
+          <td>Side Branch FFR After Provisional Stenting</td>
+          <td>Icahn School of Medicine at Mount Sinai (OTHER)</td>
+          <td>NA</td>
+          <td>71 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2017-05-02</td>
+          <td>2019-03-26</td>
+          <td>Rotational atherectomy (RA) | Cutting Balloon Angioplasty (CBA) or Percutaneous transluminal coronary angioplasty (PTCA)</td>
+          <td>Number of Participants With Side Branch Compromise</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Study Eligibility And Demographics</h2>
+        <p>This table keeps the trial-level age, sex, participant-count, and registry eligibility fields next to the inclusion decision so readers can challenge the clinical comparability of the pooled set.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Eligibility</th>
+              <th>Participant Counts</th>
+              <th>Age Snapshot</th>
+              <th>Sex Snapshot</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01788150" target="_blank" rel="noopener">NCT01788150</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Svelte Drug-Eluting Coronary Stent: 108 Participants | Medtronic Resolute Integrity Drug-Eluting Stent: 51 Participants | Total: 159 Participants</td>
+          <td>Svelte Drug-Eluting Coronary Stent: 62.7 +/- 9.9 years | Medtronic Resolute Integrity Drug-Eluting Stent: 64.2 +/- 12.4 years | Total: 63.2 +/- 10.8 years</td>
+          <td>Svelte Drug-Eluting Coronary Stent: F 26 / M 82 | Medtronic Resolute Integrity Drug-Eluting Stent: F 17 / M 34 | Total: F 43 / M 116</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00733304" target="_blank" rel="noopener">NCT00733304</a></td>
+          <td>Sex: ALL | Age: 50 Years to NR | Healthy volunteers: No</td>
+          <td>5 mg/mL TID: 19 Participants | 2 mg/mL TID: 15 Participants | 5 mg/mL QD: 8 Participants | Total: 42 Participants</td>
+          <td>Not reported</td>
+          <td>5 mg/mL TID: F 15 / M 4 | 2 mg/mL TID: F 7 / M 8 | 5 mg/mL QD: F 5 / M 3 | Total: F 27 / M 15</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02098876" target="_blank" rel="noopener">NCT02098876</a></td>
+          <td>Sex: ALL | Age: 30 Years to 80 Years | Healthy volunteers: No</td>
+          <td>Resolute Integrity DES: 45 Participants | Xience Xpedition DES: 41 Participants | Total: 86 Participants</td>
+          <td>Resolute Integrity DES: 62.6 +/- 11.6 years | Xience Xpedition DES: 63.8 +/- 10.6 years | Total: 63.2 +/- 11.1 years</td>
+          <td>Resolute Integrity DES: F 9 / M 36 | Xience Xpedition DES: F 7 / M 34 | Total: F 16 / M 70</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02870985" target="_blank" rel="noopener">NCT02870985</a></td>
+          <td>Sex: ALL | Age: 18 Years to 75 Years | Healthy volunteers: No</td>
+          <td>Abbott Xience Prime™ EES: 220 Participants | BIOTRONIK Orsiro SES: 220 Participants | Total: 440 Participants</td>
+          <td>Abbott Xience Prime™ EES: 58.38 +/- 8.62 years | BIOTRONIK Orsiro SES: 59.05 +/- 8.48 years | Total: 58.715 +/- 8.56 years</td>
+          <td>Abbott Xience Prime™ EES: F 78 / M 142 | BIOTRONIK Orsiro SES: F 60 / M 160 | Total: F 138 / M 302</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01751906" target="_blank" rel="noopener">NCT01751906</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Absorb BVS: 1322 Participants | XIENCE: 686 Participants | Total: 2008 Participants</td>
+          <td>Absorb BVS: 63.5 +/- 10.6 years | XIENCE: 63.6 +/- 10.3 years | Total: 63.5 +/- 10.5 years</td>
+          <td>Absorb BVS: F 388 / M 934 | XIENCE: F 205 / M 481 | Total: F 593 / M 1415</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02073565" target="_blank" rel="noopener">NCT02073565</a></td>
+          <td>Sex: ALL | Age: 20 Years to NR | Healthy volunteers: No</td>
+          <td>Combo: 287 Participants | Everolimus Eluting Stent (EES): 285 Participants | Total: 572 Participants</td>
+          <td>Combo: 67.6 +/- 9.6 years | Everolimus Eluting Stent (EES): 66.5 +/- 10.4 years | Total: 67.0 +/- 10.0 years</td>
+          <td>Combo: F 76 / M 211 | Everolimus Eluting Stent (EES): F 73 / M 212 | Total: F 149 / M 423</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05307965" target="_blank" rel="noopener">NCT05307965</a></td>
+          <td>Sex: ALL | Age: 18 Years to 90 Years | Healthy volunteers: No</td>
+          <td>Standalone Percutaneous Coronary Intervention: 27 Participants | Percutaneous Coronary Intervention and Thrombus Aspiration: 27 Participants | Percutaneous Coronary Intervention and Retriever Thrombectomy: 27 Participants | Total: 81 Participants</td>
+          <td>Standalone Percutaneous Coronary Intervention: 67 +/- 12 years | Percutaneous Coronary Intervention and Thrombus Aspiration: 63 +/- 12 years | Percutaneous Coronary Intervention and Retriever Thrombectomy: 63 +/- 13 years | Total: 64 +/- 12 years</td>
+          <td>Standalone Percutaneous Coronary Intervention: F 3 / M 24 | Percutaneous Coronary Intervention and Thrombus Aspiration: F 5 / M 22 | Percutaneous Coronary Intervention and Retriever Thrombectomy: F 4 / M 23 | Total: F 12 / M 69</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01270139" target="_blank" rel="noopener">NCT01270139</a></td>
+          <td>Sex: ALL | Age: 45 Years to 65 Years | Healthy volunteers: No</td>
+          <td>Nano Group: 60 Participants | Ferro Group: 60 Participants | Stenting Control: 60 Participants | Total: 180 Participants</td>
+          <td>Nano Group: 51.2 +/- 10.3 years | Ferro Group: 50.9 +/- 8.8 years | Stenting Control: 52.6 +/- 6.8 years | Total: 51.6 +/- 8.6 years</td>
+          <td>Nano Group: F 11 / M 49 | Ferro Group: F 16 / M 44 | Stenting Control: F 14 / M 46 | Total: F 41 / M 139</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03111940" target="_blank" rel="noopener">NCT03111940</a></td>
+          <td>Sex: ALL | Age: 30 Years to 90 Years | Healthy volunteers: No</td>
+          <td>Group 1 Patients With a Suboptimal Functional Result (FFR &lt;0.90) After Conventional PCI: 21 Participants | Group 2 Patients With a Satisfactory Functional Result (FFR ≥0.90) After Conventional PCI: 14 Participants | Total: 35 Participants</td>
+          <td>Group 1 Patients With a Suboptimal Functional Result (FFR &lt;0.90) After Conventional PCI: 64.4 +/- 8.4 years | Group 2 Patients With a Satisfactory Functional Result (FFR ≥0.90) After Conventional PCI: 64.8 +/- 8.2 years | Total: 64.4 +/- 8.4 years</td>
+          <td>Group 1 Patients With a Suboptimal Functional Result (FFR &lt;0.90) After Conventional PCI: F 3 / M 18 | Group 2 Patients With a Satisfactory Functional Result (FFR ≥0.90) After Conventional PCI: F 3 / M 11 | Total: F 6 / M 29</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03507777" target="_blank" rel="noopener">NCT03507777</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Coronary PCI Guided by OCT: 1233 Participants | Coronary PCI Guided by Angiography: 1254 Participants | Total: 2487 Participants</td>
+          <td>Coronary PCI Guided by OCT: 65.5 +/- 10.5 Years | Coronary PCI Guided by Angiography: 65.7 +/- 10.3 Years | Total: 65.6 +/- 10.4 Years</td>
+          <td>Coronary PCI Guided by OCT: F 265 / M 968 | Coronary PCI Guided by Angiography: F 298 / M 956 | Total: F 563 / M 1924</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02471586" target="_blank" rel="noopener">NCT02471586</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Coronary PCI Guided by OCT: 158 Participants | Coronary PCI Guided by IVUS: 146 Participants | Coronary PCI Guided by Angiography: 146 Participants | Total: 450 Participants</td>
+          <td>Coronary PCI Guided by OCT: 65.5 +/- 9.3 years | Coronary PCI Guided by IVUS: 65.8 +/- 9.5 years | Coronary PCI Guided by Angiography: 65.4 +/- 11.2 years | Total: 65.6 +/- 10.0 years</td>
+          <td>Coronary PCI Guided by OCT: F 49 / M 109 | Coronary PCI Guided by IVUS: F 39 / M 107 | Coronary PCI Guided by Angiography: F 39 / M 107 | Total: F 127 / M 323</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03115580" target="_blank" rel="noopener">NCT03115580</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Rotational Atherectomy: 35 Participants | CBA/PTCA: 36 Participants | Total: 71 Participants</td>
+          <td>Rotational Atherectomy: 67.8 +/- 10.5 years | CBA/PTCA: 66.6 +/- 9.9 years | Total: 67.2 +/- 10.1 years</td>
+          <td>Rotational Atherectomy: F 7 / M 28 | CBA/PTCA: F 14 / M 22 | Total: F 21 / M 50</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Record Excerpts</h2>
+        <p>Brief summaries, eligibility text, primary outcome descriptions, and source documents are surfaced here so reviewers can verify that the extracted numerical contrast is clinically aligned with the underlying registry record.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Brief Summary</th>
+              <th>Eligibility Excerpt</th>
+              <th>Primary Outcome Excerpt</th>
+              <th>Source Documents</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01788150" target="_blank" rel="noopener">NCT01788150</a></td>
+          <td>A prospective, randomized, active-control, multi-center clinical trial comparing the safety and efficacy of the Svelte Drug-Eluting Coronary Stent Integrated Delivery System (IDS) to that of the commercially available Resolute IntegrityTM Drug-Eluting Stent. The study objective is to assess the safety and efficacy o...</td>
+          <td>Inclusion Criteria: General Inclusion Criteria 1. Patient is ≥18 years old; 2. Patient is eligible for percutaneous coronary intervention (PCI); 3. Patient is an acceptable candidate for emergent coronary artery bypass graft (CABG) surgery; 4. Patient has c...</td>
+          <td>Angiographic In-Stent Late Lumen Loss (LL) | Time frame: 6-months post-procedure | Defined as the measurements either within the stented segment or within 5 mm proximal and distal to the stent edges.</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00733304" target="_blank" rel="noopener">NCT00733304</a></td>
+          <td>This is a two month study to allow continued treatment with pazopanib eye drops. Study may be extended to 5 months.</td>
+          <td>Inclusion Criteria: * Subjects who participated in Phase IIa study MD7108240 and who did not experience AMD disease progression requiring rescue therapy during pazopanib treatment or require discontinuation of pazopanib eye drops for safety reasons * Best-c...</td>
+          <td>Change From Baseline (Day 1) in Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) Over Period | Time frame: Baseline (Day 1) and approximately up to 6 months | Change from Baseline is the value at indicated time point minus the Baseline value. Baseline measurement was recorded at Day 1. SBP and DBP we...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02098876" target="_blank" rel="noopener">NCT02098876</a></td>
+          <td>Stents are metallic tubular supports placed inside a blood vessel to relieve an obstruction and restore blood flow to the heart muscle. Stents could also be coated with a drug (drug-eluting stents - DES) that improves local healing and inhibits growth of scar tissue within the vessel that otherwise could lead to re-...</td>
+          <td>Inclusion Criteria: 1. Patient must be 30 to 80 years old 2. Severe coronary lesion in a vessel with ≥ 30-degree angulation requiring percutaneous coronary intervention (PCI) 3. Lesion treatable by a single Resolute Integrity or Onyx Abbott Xience Xpedition...</td>
+          <td>In Stent Mean Cross-sectional Area of Neo-intimal Tissue Coverage | Time frame: 1 year | Cross-sectional area in neointimal hyperplasia by Optical Coherence Tomography (OCT) at 1 year following stent placement</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2020-09-04)</span>
+<span class="pill">Informed Consent Form (2015-12-10)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02870985" target="_blank" rel="noopener">NCT02870985</a></td>
+          <td>The clinical investigation is a non-inferiority, multicenter, blinding evaluation, randomized, parallel controlled clinical study enrolling up to 440 subjects. All subjects will be randomized 1:1 to receive the BIOTRONIK Orsiro SES or the Abbott Xience Prime™ EES, in order to evaluate the efficacy and safety of the...</td>
+          <td>Inclusion Criteria-Clinical 1. Subject who can understand the investigation&#39;s goal has provided written informed consent, and is willing to comply with the study&#39;s follow-up requirements. 2. Subject is ≥ 18 years and ≤ 75 years old, male or female without p...</td>
+          <td>In-stent Late Lumen Loss at 9 Months as Assessed by the Core Laboratory QCA Analysis | Time frame: At 9 months post procedure | QCA data will be provided by an independent core laboratory. A separate report with descriptive statistics will be provided by the core laboratory in accordance with their guidelines. For t...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2015-12-15)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01751906" target="_blank" rel="noopener">NCT01751906</a></td>
+          <td>The ABSORB III RCT is a prospective randomized, single-blind, multi-center trial. It is the pivotal trial to support the US pre-market approval (PMA) of Absorb™ Bioresorbable Vascular Scaffold (BVS). The ABSORB III includes additional two trials i.e. ABSORB III PK (pharmacokinetics) sub-study and ABSORB IV RCT trial...</td>
+          <td>General Inclusion Criteria: 1. Subject must be at least 18 years of age. 2. Subject or a legally authorized representative must provide written Informed Consent prior to any study related procedure, per site requirements. 3. Subject must have evidence of my...</td>
+          <td>Number of Cardiac Death/TV-MI/ID-TLR (TLF) | Time frame: 1 year | TLF is defined as composite of Cardiac Death, Myocardial Infarction (per protocol-defined MI definition), attributable to Target Vessel (TV-MI), or Ischemic-Driven Target Lesion Revascularization (ID-TLR).</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02073565" target="_blank" rel="noopener">NCT02073565</a></td>
+          <td>This is a multi-center, single-blind, randomized, active-controlled, clinical trial in Percutaneous Coronary Intervention (PCI) subjects. Subjects will be randomized to receive the Combo stent as the investigational treatment arm or an Everolimus Eluting Stent (EES) as the active-control arm.</td>
+          <td>Inclusion Criteria To be eligible for this trial, subjects must meet all of the following criteria: 1. Subject is able to verbally confirm understanding of risks, benefits, and treatment alternatives of Combo vs EES stent, and the subject or a legally autho...</td>
+          <td>Number of Participants With Target Vessel Failure (TVF) | Time frame: 1 year follow-up | The primary clinical endpoint of Target Vessel Failure (TVF), defined as cardiac death, target-vessel myocardial infarction (MI), or ischemia-driven Target Vessel Revascularization(TVR) by percutaneous or surgical methods, at 1...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2015-03-16)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05307965" target="_blank" rel="noopener">NCT05307965</a></td>
+          <td>Heart attacks are caused by the sudden formation of a clot inside a diseased coronary artery which reduces blood flow beyond the blockage site. During conventional treatment of the blockage with what is known as a stent; a stainless steel tub that keeps the artery open, the clot that has formed is disrupted and is p...</td>
+          <td>Inclusion Criteria: * Primary PCI patient with ST elevation myocardial infarction (STEMI) * TIMI 0/1 flow at presentation * Angiographic thrombus score ≥ 4 * Vessel diameter at site of occlusion ≥ 3.0 mm (measured by quantitative coronary angiography) Exclu...</td>
+          <td>Thrombus Volume (mm^3) | Time frame: During PCI prior to stent implantation (typically 30 min from start of procedure) | Assessed with Optical Coherence Tomography \[OCT\] || Device-related Target Vessel Complications | Time frame: During PCI prior to stent implantation (typically 30 min from start of procedure) | A...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2024-04-22)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01270139" target="_blank" rel="noopener">NCT01270139</a></td>
+          <td>The investigators hypothesize that the nanoburning is a very challenging technique to demolish and reverse the plaque especially in combination with stem cell technologies promising the functional restoration of the vessel wall. The completed (in July 2012) interventional three arms (n=180) first-in-man trial (the N...</td>
+          <td>Inclusion Criteria: * age 45-65 years old * male and female * single- or multi-vessel CAD with flow-limiting lesions * no indications for coronary artery bypass surgery (CABG) * stable angina with indications for percutaneous coronary interventions (PCI) *...</td>
+          <td>Total Atheroma Volume | Time frame: at 12-month follow-up | Total atheroma volume (TAV, plaque-media volume, mm3) at 12 months. Quantitative coronary angiography (QCA) and Intravascular Ultrasound (IVUS) were performed pre-, post-procedure and at 12-month follow-up after a bolus infusion of i.c. nitrate. QCA was und...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03111940" target="_blank" rel="noopener">NCT03111940</a></td>
+          <td>The OxOPT-PCI study addresses patients with coronary artery disease who are referred to the John Radcliffe Hospital because of the need for treatment with an intra-coronary stent (metal scaffold) for clinical reasons. Although, this has become a highly standardised procedure it is still challenging for the clinician...</td>
+          <td>Inclusion Criteria: * participant is willing and able to give informed consent for participation in the study * angiogram shows haemodynamically relevant lesion suitable for PCI and suitable for the use of intravascular imaging (OCT) Exclusion Criteria: * p...</td>
+          <td>Final Fractional Flow Reserve (FFR) After Intracoronary Stenting | Time frame: Immediately post-stenting for Group 1A and 1B, and post FFR/OCT-guided optimisation for Group 1A | After administration of intracoronary nitrates, FFR was measured under maximal hyperaemia, using intravenous adenosine (140 mg kg-1 min-1)...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2016-09-14)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03507777" target="_blank" rel="noopener">NCT03507777</a></td>
+          <td>The objective of this prospective, single-blind clinical investigation is to demonstrate the superiority of an Optical Coherence Tomography (OCT)-guided stent implantation strategy as compared to an angiography-guided stent implantation strategy in achieving larger post-PCI lumen dimensions and improving clinical ca...</td>
+          <td>Inclusion Criteria (all must be present) 1. Subject must be at least 18 years of age. 2. Subject must have evidence of myocardial ischemia (e.g., stable angina, silent ischemia (ischemia in the absence of chest pain or other anginal equivalents), unstable a...</td>
+          <td>Imaging Outcome (Powered): Minimal Stent Area (MSA) | Time frame: Final Post-PCI Measurement (average of 24 hours). | Minimal Stent Area (per target lesion basis) assessed by OCT in each randomized arm, measured at an independent OCT core laboratory blinded to imaging modality assignment. || Number of Participants W...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2022-10-06)</span>
+<span class="pill">Statistical Analysis Plan (2022-10-10)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02471586" target="_blank" rel="noopener">NCT02471586</a></td>
+          <td>The objective of this clinical investigation is to demonstrate the safety and efficacy of an OCT guided strategy for stent implantation</td>
+          <td>General Inclusion Criteria: 1. Age ≥ 18 years. 2. Patient with an indication for PCI including: * Angina (stable or unstable), * Silent ischemia (a visually estimated target lesion diameter stenosis of ≥70%, a positive non-invasive stress test, or FFR ≤0.80...</td>
+          <td>Primary Efficacy Endpoint (Powered): Post-PCI Median Minimum Stent Area (MSA) | Time frame: Post-procedure within 1 hour | Post-PCI MSA will be assessed by OCT in each randomized arm, measured at the independent OCT core laboratory blinded to imaging modality assignment. Hierarchal manner testing will be as follows:...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03115580" target="_blank" rel="noopener">NCT03115580</a></td>
+          <td>The purpose of this study is to predict any changes in the side branch after stenting the main branch blood vessel using three dimensional intravascular images. (Frequency domain optical coherence tomography FD OCT). Optical coherence tomography (OCT) is an established medical imaging technique that uses light to ca...</td>
+          <td>Inclusion Criteria: * All patients over 18 years of age presenting with stable coronary artery disease. * Patients must have a clinical indication for coronary intervention. * Creatinine Kinase Myocardial-Band Isoenzyme (CK-MB) must be less than or equal to...</td>
+          <td>Number of Participants With Side Branch Compromise | Time frame: Day 1 | Number of participants with Side Branch (SB) compromise which is defined as SB DS \&gt; 70%, or dissection or TIMI \&lt; 3</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2017-01-19)</span></div>
+          </td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exclusion Reason Counts</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Reason</th>
+              <th>Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>No Extractable Numeric Outcome</td>
+          <td>461</td>
+        </tr>
+
+        <tr>
+          <td>No Results Posted</td>
+          <td>453</td>
+        </tr>
+
+        <tr>
+          <td>Not Completed</td>
+          <td>304</td>
+        </tr>
+
+        <tr>
+          <td>Not Randomized Interventional</td>
+          <td>204</td>
+        </tr>
+
+        <tr>
+          <td>Fewer Than Two Arms</td>
+          <td>163</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Excluded Sample Records</h2>
+        <p>The first 20 excluded records are listed here with excerpts so reviewers can quickly verify why the registry pull did not enter them into the meta-analysis snapshot.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Reasons</th>
+              <th>Record Excerpt</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02255864" target="_blank" rel="noopener">NCT02255864</a></td>
+          <td>Safety and Efficacy Study of the Amaranth Medical FORTITUDE Bioresorbable Drug-Eluting Coronary Stent</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>The purpose of this study is to evaluate the safety and performance of a new coronary artery stent for treating blockages in the arteries supplying blood to the heart muscle. The Amaranth FORTITUDE scaffold releases a drug (sirolimus) to reduce the likeliho...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04617899" target="_blank" rel="noopener">NCT04617899</a></td>
+          <td>The StUdy to Evaluate the Performance and safEty of the Novasight HybRid System Using Objective PeRformance Criteria</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>This prospective, multicenter, single-arm study aims to evaluate the safety, operability and practicability of the novel hybrid intravascular imaging system/catheter during the percutaneous transluminal coronary intervention.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02645799" target="_blank" rel="noopener">NCT02645799</a></td>
+          <td>BLADE-PCI Trial (BLADE); PHASE IIB LIPOSOMAL ALENDRONATE STUDY</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The main objective of this study is to assess the safety, efficacy and dose response of LABR-312 administered intravenously at the time of percutaneous coronary intervention (PCI) with a drug eluting stent in reducing restenosis as measured by Optical Coher...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03574636" target="_blank" rel="noopener">NCT03574636</a></td>
+          <td>OCT vs IVUS vs QCA to Guide Moderate-to-severe Calcified Lesion Stent Implantation</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>This study is a prospective, multi-center, randomized controlled clinical trial, aims to assess the safety and effectiveness of Optical Coherence Tomography or Intravascular Ultrasound or Quantitative Coronary Analysis to guide Firehawk stent implantation ,...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00759850" target="_blank" rel="noopener">NCT00759850</a></td>
+          <td>Drug Eluting Stent (DES) in Primary Angioplasty</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Stent implantation is the best treatment in patients with acute myocardial infarction (STEMI) referred for primary angioplasty (pPCI). However the occurrence of in stent restenosis is responsible for the need of repeat intervention. Both Sirolimus-eluting s...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01752582" target="_blank" rel="noopener">NCT01752582</a></td>
+          <td>BuMA OCT Study(A Comparative Evaluation of the Extent of Neointima Formation at 3 Months After Implantation Using OCT)</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The objective of this study is a comparative evaluation of BuMA stent and of EXCEL stent in terms of the extent of neointima formation at 3 months after implantation using OCT. This is a prospective, single center, randomized, open-label, non-inferiority st...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05364697" target="_blank" rel="noopener">NCT05364697</a></td>
+          <td>IonMAN Trial- First in Human Study of the IoNIR Ridaforolimus-Eluting Coronary Stent System</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>This is a prospective, multi-center, single-arm, open-label, First in Human clinical trial to provide preliminary evidence for the safety and efficacy of the novel IoNIR stent system.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01078246" target="_blank" rel="noopener">NCT01078246</a></td>
+          <td>Post-Licensure Safety Study of ISENTRESS™ (Raltegravir) in a United States Managed Care Network (MK-0518-268)</td>
+          <td>Not Randomized Interventional</td>
+          <td>The objective of this study is to monitor Health Outcomes of Interest (HOI) in participants with human immunodeficiency virus-1 (HIV-1) infection following treatment with Raltegravir.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03145194" target="_blank" rel="noopener">NCT03145194</a></td>
+          <td>TIMES: Ticagrelor vs. Placebo/ Clopidogrel With Aspirin in Anterior STEMI Patients Treated With Primary PCI</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>This is a single-centred, double blind randomized controlled trial comparing ticagrelor with placebo in clopidogrel and aspirin loaded patients.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01952873" target="_blank" rel="noopener">NCT01952873</a></td>
+          <td>Rapid Inflation/Deflation Compared With Prolonged High-Pressure Balloon Inflation</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>It is universally accepted that high-pressure balloon inflation is required to most effectively deploy a coronary balloon-expandable stent. However, there is not consensus nor are there any guidelines regarding the method of balloon inflation, particularly...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03192579" target="_blank" rel="noopener">NCT03192579</a></td>
+          <td>Effect of Rosuvastatin and Eicosapentaenoic Acid on Neoatherosclerosis: The LINK-IT Trial</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>This study aim to evaluate whether intensive lipid lowering therapy may improve the clinical outcomes in coronary artery disease patients with in-stent neoatherosclerosis, in comparison with standard therapy.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01385631" target="_blank" rel="noopener">NCT01385631</a></td>
+          <td>Ezetimibe In Addition To Atorvastatin Therapy On The Plaque Composition In Patients With Acute Myocardial Infarction.</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The purpose of the study is to examine the effect of the cholesterol lowering agent Ezetimibe when used in addition to optimal treatment with Atorvastatin in patients with acute ST-Elevation Myocardial Infarction (STEMI) who have not been in prior statin th...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02785237" target="_blank" rel="noopener">NCT02785237</a></td>
+          <td>Intra-patient Study With Polymer Free Drug Eluting Stent Versus Abluminal Biodegradable Polymer Drug Eluting Stent With Early OCT (Optical Coherence Tomography) Follow up</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The objective of the study is to evaluate the process of early re-endothelialization of the Coroflex® ISAR Drug-eluting stent compared with the Ultimaster® Drug-eluting stent</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01972022" target="_blank" rel="noopener">NCT01972022</a></td>
+          <td>TRANSFORM OCT TRiple Assessment of Neointima Stent FOrmation to Reabsorbable polyMer With Optical Coherence Tomography</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>First prospective randomized controlled study to evaluate in an &#39;all-comers&#39; population with coronary artery disease whether treatment with a novel everolimus eluting stent (EES) with a biodegradable polymer is superior to a durable polymer zotarolimus elut...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03429894" target="_blank" rel="noopener">NCT03429894</a></td>
+          <td>Evaluation of a Thin Strut Metallic Stent: the Elixir DynamX Clinical Study</td>
+          <td>No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>The DynamX (Bioadaptor) study is a prospective, consecutive enrollment study designed to enroll up to 50 patients requiring treatment of a single, de novo lesion ≤ 24 mm in length located in a vessel ≥ 2.5 mm and ≤ 3.5 mm in diameter. All patients be follow...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04014595" target="_blank" rel="noopener">NCT04014595</a></td>
+          <td>PREPARE-CALC-COMBO: Severely Calcified Coronary Lesions Prepared With Rotational Atherectomy and Modified Balloons</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>A prospective single-arm trial of rotational atherectomy in combination with cutting balloon in severely calcified coronary lesions.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02900937" target="_blank" rel="noopener">NCT02900937</a></td>
+          <td>Safety and Efficacy Study of the Amaranth Medical MAGNITUDE Bioresorbable Drug-Eluting Coronary Stent (RENASCENT III)</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>The purpose of this study is to evaluate the safety and performance of a new version of a coronary artery stent for treating blockages in the arteries supplying blood to the heart muscle. The Amaranth Medical MAGNITUDE scaffold releases a drug (sirolimus) t...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02770651" target="_blank" rel="noopener">NCT02770651</a></td>
+          <td>Late Stent Strut Apposition and Coverage After Drug-Eluting Stent Implantation by OCT in Patients With AMI</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>The purpose of this study is to evaluate the incidence of late incomplete stent apposition (ISA) and un-coverage by optical coherence tomography (OCT) following everolimus-eluting stent (EES) with bioabsorbable polymer (SYNERGY™, Boston Scientific,Nattick,...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT07000045" target="_blank" rel="noopener">NCT07000045</a></td>
+          <td>Intravascular Lithotripsy With or Without Rotational Atherectomy for Coronary Calcified Nodule Treatment</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The NODULE-SHOCK trial is a prospective, investigator-initiated, single-center, randomized controlled trial designed to compare the efficacy of intravascular lithotripsy (IVL) with or without rotational atherectomy (RA) in patients with coronary calcified n...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00815139" target="_blank" rel="noopener">NCT00815139</a></td>
+          <td>Evaluation of Zotarolimus Eluting Stent at 3 Months Using Optical Coherence Tomography</td>
+          <td>No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>Neointimal coverage over stent strut is important for preventing the stent thrombosis. But, there is no data for the duration of complete formation of neointima om zotarolimus eluting stent (ZES). Previously the investigational observational data at 9 month...</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Benchmark Reconciliation Ledger</h2>
+        <p>This ledger turns the benchmark step into a structured reviewer task. Use the NCT IDs, contrasts, and outcome definitions below to check study overlap, arm collapsing, and endpoint alignment against published syntheses.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22IVUS%20or%20OCT%20Guided%20PCI%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22IVUS%20or%20OCT%20Guided%20PCI%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT</th>
+              <th>Registry Contrast</th>
+              <th>Outcome</th>
+              <th>Enrollment</th>
+              <th>Benchmark Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01788150" target="_blank" rel="noopener">NCT01788150</a></td>
+        <td>Medtronic Resolute Integrity Drug-Eluting Stent vs Svelte Drug-Eluting Coronary Stent</td>
+        <td>Angiographic In-Stent Late Lumen Loss (LL)</td>
+        <td>159 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT00733304" target="_blank" rel="noopener">NCT00733304</a></td>
+        <td>2 mg/mL TID vs 5 mg/mL TID | 5 mg/mL QD vs 5 mg/mL TID</td>
+        <td>Change From Baseline (Day 1) in Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) Over Period</td>
+        <td>42 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02098876" target="_blank" rel="noopener">NCT02098876</a></td>
+        <td>Xience Xpedition DES vs Resolute Integrity DES</td>
+        <td>In Stent Mean Cross-sectional Area of Neo-intimal Tissue Coverage</td>
+        <td>86 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02870985" target="_blank" rel="noopener">NCT02870985</a></td>
+        <td>Abbott Xience Prime™ EES vs BIOTRONIK Orsiro SES</td>
+        <td>In-stent Late Lumen Loss at 9 Months as Assessed by the Core Laboratory QCA Analysis</td>
+        <td>440 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01751906" target="_blank" rel="noopener">NCT01751906</a></td>
+        <td>XIENCE vs Absorb BVS</td>
+        <td>Number of Cardiac Death/TV-MI/ID-TLR (TLF)</td>
+        <td>2008 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02073565" target="_blank" rel="noopener">NCT02073565</a></td>
+        <td>Everolimus Eluting Stent (EES) vs Combo</td>
+        <td>Number of Participants With Target Vessel Failure (TVF)</td>
+        <td>572 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT05307965" target="_blank" rel="noopener">NCT05307965</a></td>
+        <td>Percutaneous Coronary Intervention and Thrombus Aspiration vs Standalone Percutaneous Coronary Intervention | Percutaneous Coronary Intervention and Retriever Thrombectomy vs Standalone Percutaneous Coronary Intervention</td>
+        <td>Device-related Target Vessel Complications</td>
+        <td>81 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01270139" target="_blank" rel="noopener">NCT01270139</a></td>
+        <td>Nano Group vs Stenting Control | Ferro Group vs Stenting Control</td>
+        <td>Total Atheroma Volume</td>
+        <td>180 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03111940" target="_blank" rel="noopener">NCT03111940</a></td>
+        <td>Group 1B: No PCI Optimisation Performed vs Group 1A: OCT-guided PCI Optimisation</td>
+        <td>Final Fractional Flow Reserve (FFR) After Intracoronary Stenting</td>
+        <td>35 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03507777" target="_blank" rel="noopener">NCT03507777</a></td>
+        <td>Coronary PCI Guided by Angiography vs Coronary PCI Guided by OCT</td>
+        <td>Imaging Outcome (Powered): Minimal Stent Area (MSA)</td>
+        <td>2487 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02471586" target="_blank" rel="noopener">NCT02471586</a></td>
+        <td>Coronary PCI Guided by IVUS vs Coronary PCI Guided by OCT | Coronary PCI Guided by Angiography vs Coronary PCI Guided by OCT</td>
+        <td>Primary Safety Endpoint (Non-powered): Number of Participants With Procedural MACE (Major Adverse Cardiac Event)</td>
+        <td>450 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03115580" target="_blank" rel="noopener">NCT03115580</a></td>
+        <td>CBA/PTCA vs Rotational Atherectomy</td>
+        <td>Number of Participants With Side Branch Compromise</td>
+        <td>71 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Reviewer Validation And Benchmarking</h2>
+        <p>The embedded panel below now runs the shared R benchmark suites plus topic-specific checks for the current CT.gov snapshot. Reviewers should compare the registry-native ledger above against published syntheses, inspect <code>validation.json</code>, and then confirm that the topic-aware runner resolves with the same study universe.</p>
+        <div class="pillbar">
+          <a class="pill" href="validation.json">Open validation.json</a>
+          <a class="pill" href="index.html">Open interactive topic app</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22IVUS%20or%20OCT%20Guided%20PCI%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22IVUS%20or%20OCT%20Guided%20PCI%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+          <a class="pill" href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fivus-oct-guided-pci%2Fvalidation.json&amp;topic=ivus-oct-guided-pci&amp;label=IVUS+or+OCT+Guided+PCI" target="_blank" rel="noopener">Open topic-aware WebR runner</a>
+        </div>
+        <iframe id="reviewerValidationFrame" src="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fivus-oct-guided-pci%2Fvalidation.json&amp;topic=ivus-oct-guided-pci&amp;label=IVUS+or+OCT+Guided+PCI" title="WebR reviewer validation" loading="lazy"></iframe>
+        <script>
+(() => {
+  const iframe = document.getElementById("reviewerValidationFrame");
+  const context = {"source":"ctgov-portfolio-generator","topicId":"ivus-oct-guided-pci","label":"IVUS or OCT Guided PCI","query":"(PCI OR coronary stent) AND (IVUS OR OCT OR \"intravascular ultrasound\" OR \"optical coherence tomography\") AND (\"ULTIMATE\" OR \"ILUMIEN\" OR \"OCTOBER\" OR \"RENOVATE-COMPLEX-PCI\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":12,"excludedCount":466,"totalEnrollment":6611,"demographicsCoverage":12,"documentCoverage":7,"comparisons":[{"studyId":"NCT01788150","title":"Safety and Efficacy Study of the Svelte Drug-Eluting Coronary Stent Delivery System","t1":"Medtronic Resolute Integrity Drug-Eluting Stent","t2":"Svelte Drug-Eluting Coronary Stent","measure":"MD","effect":0.04000000000000001,"se":0.05387276938211805,"n1":40,"n0":89,"totalN":129,"sampleSize":129},{"studyId":"NCT00733304","title":"An Extension to Study MD7108240","t1":"2 mg/mL TID","t2":"5 mg/mL TID","measure":"MD","effect":-3.9,"se":3.002441988571443,"n1":15,"n0":19,"totalN":34,"sampleSize":34},{"studyId":"NCT00733304","title":"An Extension to Study MD7108240","t1":"5 mg/mL QD","t2":"5 mg/mL TID","measure":"MD","effect":-2.4,"se":2.5081283648842305,"n1":8,"n0":19,"totalN":27,"sampleSize":27},{"studyId":"NCT02098876","title":"Wall Shear Stress and Neointimal Healing Following PCI in Angulated Coronary Vessels","t1":"Xience Xpedition DES","t2":"Resolute Integrity DES","measure":"MD","effect":-0.43200000000000005,"se":0.2229447961780161,"n1":35,"n0":32,"totalN":67,"sampleSize":67},{"studyId":"NCT02870985","title":"BIOTRONIK Orsiro Pre-Marketing Registration","t1":"Abbott Xience Prime™ EES","t2":"BIOTRONIK Orsiro SES","measure":"MD","effect":0.020000000000000004,"se":0.020504988306618108,"n1":220,"n0":220,"totalN":440,"sampleSize":440},{"studyId":"NCT01751906","title":"ABSORB III Randomized Controlled Trial (RCT)","t1":"XIENCE","t2":"Absorb BVS","measure":"logRR","effect":-0.24900214518944205,"se":0.1787608625332168,"n1":677,"n0":1313,"totalN":1990,"sampleSize":1990},{"studyId":"NCT02073565","title":"HARMONEE - Japan-USA Harmonized Assessment by Randomized, Multi-Center Study of OrbusNEich's Combo StEnt","t1":"Everolimus Eluting Stent (EES)","t2":"Combo","measure":"logRR","effect":-0.50383258827502,"se":0.3554437238804724,"n1":285,"n0":287,"totalN":572,"sampleSize":572},{"studyId":"NCT01270139","title":"Plasmonic Nanophotothermal Therapy of Atherosclerosis","t1":"Nano Group","t2":"Stenting Control","measure":"MD","effect":-69.8,"se":8.705936671796627,"n1":60,"n0":60,"totalN":120,"sampleSize":120},{"studyId":"NCT01270139","title":"Plasmonic Nanophotothermal Therapy of Atherosclerosis","t1":"Ferro Group","t2":"Stenting Control","measure":"MD","effect":-62.400000000000006,"se":10.694827410170458,"n1":60,"n0":60,"totalN":120,"sampleSize":120},{"studyId":"NCT03111940","title":"The Oxford Optimisation of PCI Study (OXOPT-PCI Study)","t1":"Group 1B: No PCI Optimisation Performed","t2":"Group 1A: OCT-guided PCI Optimisation","measure":"MD","effect":0.039999999999999925,"se":0.01196951255353495,"n1":8,"n0":13,"totalN":21,"sampleSize":21},{"studyId":"NCT03507777","title":"ILUMIEN IV: OPTIMAL Percutaneous Coronary Intervention (PCI)","t1":"Coronary PCI Guided by Angiography","t2":"Coronary PCI Guided by OCT","measure":"MD","effect":-0.35999999999999943,"se":0.08086967636253221,"n1":1201,"n0":1147,"totalN":2348,"sampleSize":2348},{"studyId":"NCT02471586","title":"OPTIMIZE PCI: Multicenter Randomized Trial of OCT Compared to IVUS and Angiography to Guide Coronary Stent Implantation","t1":"Coronary PCI Guided by IVUS","t2":"Coronary PCI Guided by OCT","measure":"logRR","effect":-1.3073059498012602,"se":1.1121248001044919,"n1":146,"n0":158,"totalN":304,"sampleSize":304},{"studyId":"NCT02471586","title":"OPTIMIZE PCI: Multicenter Randomized Trial of OCT Compared to IVUS and Angiography to Guide Coronary Stent Implantation","t1":"Coronary PCI Guided by Angiography","t2":"Coronary PCI Guided by OCT","measure":"logRR","effect":-1.3073059498012602,"se":1.1121248001044919,"n1":146,"n0":158,"totalN":304,"sampleSize":304},{"studyId":"NCT03115580","title":"Side Branch FFR After Provisional Stenting","t1":"CBA/PTCA","t2":"Rotational Atherectomy","measure":"logRR","effect":0.22314355131420976,"se":0.4445436397239843,"n1":36,"n0":35,"totalN":71,"sampleSize":71}],"includedStudies":[{"nctId":"NCT01788150","title":"Safety and Efficacy Study of the Svelte Drug-Eluting Coronary Stent Delivery System","status":"COMPLETED","enrollment":159,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Angiographic In-Stent Late Lumen Loss (LL)","groups":[{"title":"Svelte Drug-Eluting Coronary Stent","n":89,"events":null,"mean":0.09,"sd":0.31},{"title":"Medtronic Resolute Integrity Drug-Eluting Stent","n":40,"events":null,"mean":0.13,"sd":0.27}]},"primaryOutcomes":[{"measure":"Angiographic In-Stent Late Lumen Loss (LL)","timeFrame":"6-months post-procedure"}]},{"nctId":"NCT00733304","title":"An Extension to Study MD7108240","status":"COMPLETED","enrollment":42,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change From Baseline (Day 1) in Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) Over Period","groups":[{"title":"5 mg/mL TID","n":19,"events":null,"mean":3.5,"sd":9.05},{"title":"2 mg/mL TID","n":15,"events":null,"mean":-0.4,"sd":8.4},{"title":"5 mg/mL QD","n":8,"events":null,"mean":1.1,"sd":3.98}]},"primaryOutcomes":[{"measure":"Change From Baseline (Day 1) in Systolic Blood Pressure (SBP) and Diastolic Blood Pressure (DBP) Over Period","timeFrame":"Baseline (Day 1) and approximately up to 6 months"},{"measure":"Change From Baseline (Day 1) in Heart Rate Over Period","timeFrame":"Baseline (Day 1) and approximately up to 6 months"}]},{"nctId":"NCT02098876","title":"Wall Shear Stress and Neointimal Healing Following PCI in Angulated Coronary Vessels","status":"COMPLETED","enrollment":86,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"In Stent Mean Cross-sectional Area of Neo-intimal Tissue Coverage","groups":[{"title":"Resolute Integrity DES","n":32,"events":null,"mean":1.381,"sd":1.026},{"title":"Xience Xpedition DES","n":35,"events":null,"mean":0.949,"sd":0.767}]},"primaryOutcomes":[{"measure":"In Stent Mean Cross-sectional Area of Neo-intimal Tissue Coverage","timeFrame":"1 year"}]},{"nctId":"NCT02870985","title":"BIOTRONIK Orsiro Pre-Marketing Registration","status":"COMPLETED","enrollment":440,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"continuous","title":"In-stent Late Lumen Loss at 9 Months as Assessed by the Core Laboratory QCA Analysis","groups":[{"title":"BIOTRONIK Orsiro SES","n":220,"events":null,"mean":0.05,"sd":0.21},{"title":"Abbott Xience Prime™ EES","n":220,"events":null,"mean":0.07,"sd":0.22}]},"primaryOutcomes":[{"measure":"In-stent Late Lumen Loss at 9 Months as Assessed by the Core Laboratory QCA Analysis","timeFrame":"At 9 months post procedure"}]},{"nctId":"NCT01751906","title":"ABSORB III Randomized Controlled Trial (RCT)","status":"COMPLETED","enrollment":2008,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Cardiac Death/TV-MI/ID-TLR (TLF)","groups":[{"title":"Absorb BVS","n":1313,"events":102,"mean":null,"sd":null},{"title":"XIENCE","n":677,"events":41,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Cardiac Death/TV-MI/ID-TLR (TLF)","timeFrame":"1 year"}]},{"nctId":"NCT02073565","title":"HARMONEE - Japan-USA Harmonized Assessment by Randomized, Multi-Center Study of OrbusNEich's Combo StEnt","status":"COMPLETED","enrollment":572,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants With Target Vessel Failure (TVF)","groups":[{"title":"Combo","n":287,"events":20,"mean":null,"sd":null},{"title":"Everolimus Eluting Stent (EES)","n":285,"events":12,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Participants With Target Vessel Failure (TVF)","timeFrame":"1 year follow-up"}]},{"nctId":"NCT05307965","title":"RETRIEVE-AMI Study","status":"COMPLETED","enrollment":81,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Device-related Target Vessel Complications","groups":[{"title":"Standalone Percutaneous Coronary Intervention","n":27,"events":0,"mean":null,"sd":null},{"title":"Percutaneous Coronary Intervention and Thrombus Aspiration","n":27,"events":0,"mean":null,"sd":null},{"title":"Percutaneous Coronary Intervention and Retriever Thrombectomy","n":27,"events":0,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Thrombus Volume (mm^3)","timeFrame":"During PCI prior to stent implantation (typically 30 min from start of procedure)"},{"measure":"Device-related Target Vessel Complications","timeFrame":"During PCI prior to stent implantation (typically 30 min from start of procedure)"}]},{"nctId":"NCT01270139","title":"Plasmonic Nanophotothermal Therapy of Atherosclerosis","status":"COMPLETED","enrollment":180,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Total Atheroma Volume","groups":[{"title":"Nano Group","n":60,"events":null,"mean":108.2,"sd":42.2},{"title":"Ferro Group","n":60,"events":null,"mean":115.6,"sd":64},{"title":"Stenting Control","n":60,"events":null,"mean":178,"sd":52.6}]},"primaryOutcomes":[{"measure":"Total Atheroma Volume","timeFrame":"at 12-month follow-up"},{"measure":"MACE (Major Adverse Cardiovascular Events)-Free Survival","timeFrame":"at 60 months follow-up"}]},{"nctId":"NCT03111940","title":"The Oxford Optimisation of PCI Study (OXOPT-PCI Study)","status":"COMPLETED","enrollment":35,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"continuous","title":"Final Fractional Flow Reserve (FFR) After Intracoronary Stenting","groups":[{"title":"Group 1A: OCT-guided PCI Optimisation","n":13,"events":null,"mean":0.8,"sd":0.02},{"title":"Group 1B: No PCI Optimisation Performed","n":8,"events":null,"mean":0.84,"sd":0.03}]},"primaryOutcomes":[{"measure":"Final Fractional Flow Reserve (FFR) After Intracoronary Stenting","timeFrame":"Immediately post-stenting for Group 1A and 1B, and post FFR/OCT-guided optimisation for Group 1A"}]},{"nctId":"NCT03507777","title":"ILUMIEN IV: OPTIMAL Percutaneous Coronary Intervention (PCI)","status":"COMPLETED","enrollment":2487,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Imaging Outcome (Powered): Minimal Stent Area (MSA)","groups":[{"title":"Coronary PCI Guided by OCT","n":1147,"events":null,"mean":5.72,"sd":2.04},{"title":"Coronary PCI Guided by Angiography","n":1201,"events":null,"mean":5.36,"sd":1.87}]},"primaryOutcomes":[{"measure":"Imaging Outcome (Powered): Minimal Stent Area (MSA)","timeFrame":"Final Post-PCI Measurement (average of 24 hours)."},{"measure":"Number of Participants With Target Vessel Failure (TVF)","timeFrame":"At 2 years"}]},{"nctId":"NCT02471586","title":"OPTIMIZE PCI: Multicenter Randomized Trial of OCT Compared to IVUS and Angiography to Guide Coronary Stent Implantation","status":"COMPLETED","enrollment":450,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Primary Safety Endpoint (Non-powered): Number of Participants With Procedural MACE (Major Adverse Cardiac Event)","groups":[{"title":"Coronary PCI Guided by OCT","n":158,"events":4,"mean":null,"sd":null},{"title":"Coronary PCI Guided by IVUS","n":146,"events":1,"mean":null,"sd":null},{"title":"Coronary PCI Guided by Angiography","n":146,"events":1,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Primary Efficacy Endpoint (Powered): Post-PCI Median Minimum Stent Area (MSA)","timeFrame":"Post-procedure within 1 hour"},{"measure":"Primary Safety Endpoint (Non-powered): Number of Participants With Procedural MACE (Major Adverse Cardiac Event)","timeFrame":"During procedure, an average of 1 hour"}]},{"nctId":"NCT03115580","title":"Side Branch FFR After Provisional Stenting","status":"COMPLETED","enrollment":71,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants With Side Branch Compromise","groups":[{"title":"Rotational Atherectomy","n":35,"events":7,"mean":null,"sd":null},{"title":"CBA/PTCA","n":36,"events":9,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Participants With Side Branch Compromise","timeFrame":"Day 1"}]}]};
+  if (!iframe || !context) return;
+  const sendContext = () => {
+    if (!iframe.contentWindow) return;
+    iframe.contentWindow.postMessage({ type: "esc-topic-validation-context", payload: context }, "*");
+  };
+  iframe.addEventListener("load", sendContext);
+  window.addEventListener("message", event => {
+    if (event.source === iframe.contentWindow && event.data?.type === "esc-topic-validation-request") {
+      sendContext();
+    }
+  });
+  window.setTimeout(sendContext, 250);
+})();
+</script>
+      </section>
+    </main>
+  </body>
+</html>

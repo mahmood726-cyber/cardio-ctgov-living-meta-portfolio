@@ -1,0 +1,1348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bivalirudin vs Heparin in ACS or PCI | CT.gov Living Meta-Analysis</title>
+    <link rel="icon" href="data:," />
+        <meta name="description" content="Bivalirudin vs Heparin in ACS or PCI living meta-analysis built only from randomized comparative ClinicalTrials.gov records with posted results." />
+    <link rel="stylesheet" href="../../../esc-acs-living-meta/styles.css" />
+    <!-- jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+</head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="hero__title">
+          <p class="kicker" id="appKicker">Registry-Native Cardiovascular Evidence</p>
+          <h1 id="appTitle">Bivalirudin vs Heparin in ACS or PCI Living Meta-Analysis</h1>
+          <p class="subtitle" id="appSubtitle">Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.</p>
+        </div>
+        <div class="hero__controls">
+          <div class="control-card">
+            <label>
+              New RCT window start
+              <input id="startDate" type="date" />
+            </label>
+            <label>
+              Status filter
+              <select id="statusFilter" multiple>
+                <option value="COMPLETED" selected>Completed</option>
+                <option value="ACTIVE_NOT_RECRUITING" selected>Active, not recruiting</option>
+                <option value="RECRUITING">Recruiting</option>
+                <option value="NOT_YET_RECRUITING">Not yet recruiting</option>
+                <option value="TERMINATED">Terminated</option>
+              </select>
+            </label>
+            <label>
+              Single outcome rule
+              <select id="outcomeRule">
+                <option value="primary">Primary outcome with numeric results</option>
+                <option value="results">Any outcome with numeric results</option>
+              </select>
+            </label>
+            <label>
+              Reference treatment (NMA)
+              <input id="referenceTx" type="text" placeholder="e.g., Standard care" />
+            </label>
+            <button id="updateBtn" class="btn btn--primary">Update from ClinicalTrials.gov</button>
+            <button id="fixtureBtn" class="btn">Load Offline Fixture</button>
+            <button id="clearBtn" class="btn">Clear cache</button>
+            <button id="importDatasetBtn" class="btn btn--secondary">Import R Dataset</button>
+            <p class="meta">Last update: <span id="lastUpdate">Never</span></p>
+          </div>
+          <div class="control-card">
+            <label>
+              Prior meta-analysis trial IDs (one per line)
+              <textarea id="priorTrials" rows="6" placeholder="NCT01234567"></textarea>
+            </label>
+            <button id="compareBtn" class="btn">Compare Coverage</button>
+            <div id="coverageSummary" class="coverage"></div>
+          </div>
+        </div>
+      </header>
+
+      
+      <section class="panel validation-snapshot">
+        <div class="panel__header">
+          <h2>CT.gov Validation Snapshot</h2>
+          <div class="panel__meta">Generated 2026-03-28</div>
+        </div>
+        <div class="panel__body">
+          <div class="summary-grid">
+            <div class="summary-card">
+              <h3>Registry Gate</h3>
+              <div class="pill">Included RCTs: 4</div>
+              <div class="pill">Scanned records: 7</div>
+              <div class="pill">Pages fetched: 1</div>
+              <div class="pill">Priority tier: Promising</div>
+            </div>
+            <div class="summary-card">
+              <h3>Eligibility Rules</h3>
+              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, and at least one extractable numeric outcome.</p>
+              <p>The validation scan completed within the configured CT.gov page cap.</p>
+            </div>
+            <div class="summary-card">
+              <h3>Audit Trail</h3>
+              <div class="pill"><a href="validation.json">validation.json</a></div>
+              <div class="pill"><a href="plan.html">plan.html</a></div>
+              <div class="pill"><a href="https://clinicaltrials.gov/search?term=(ACS%20OR%20PCI%20OR%20coronary)%20AND%20(bivalirudin%20AND%20heparin)%20AND%20(%22HORIZONS%22%20OR%20%22EUROMAX%22%20OR%20%22HEAT-PPCI%22%20OR%20%22BRIGHT%22)" target="_blank" rel="noopener">CT.gov search</a></div>
+              <div class="pill"><a href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fbivalirudin-vs-heparin%2Fvalidation.json&amp;topic=bivalirudin-vs-heparin&amp;label=Bivalirudin+vs+Heparin+in+ACS+or+PCI" target="_blank" rel="noopener">Topic-aware WebR runner</a></div>
+            </div>
+          </div>
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Exact Query</h3>
+            <pre style="white-space: pre-wrap; overflow-x: auto;">(ACS OR PCI OR coronary) AND (bivalirudin AND heparin) AND (&quot;HORIZONS&quot; OR &quot;EUROMAX&quot; OR &quot;HEAT-PPCI&quot; OR &quot;BRIGHT&quot;)</pre>
+          </div>
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Included Trial Records</h3>
+            <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
+              
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01087723" target="_blank" rel="noopener">
+          NCT01087723
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT00433966" target="_blank" rel="noopener">
+          NCT00433966
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01651780" target="_blank" rel="noopener">
+          NCT01651780
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01519518" target="_blank" rel="noopener">
+          NCT01519518
+        </a>
+            </div>
+          </div>
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Top Exclusion Reasons</h3>
+            <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
+              
+        <div class="pill">
+          No Extractable Numeric Outcome: 3
+        </div>
+
+        <div class="pill">
+          No Results Posted: 3
+        </div>
+
+        <div class="pill">
+          Not Completed: 2
+        </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel reviewer-pack">
+        <div class="panel__header">
+          <h2>Reviewer Transparency Pack</h2>
+          <div class="panel__meta">Built to expose source search, eligibility, excerpts, benchmarking, and topic-aware validation before the live analysis workspace.</div>
+        </div>
+        <div class="panel__body">
+          <div class="summary-grid">
+            <div class="summary-card">
+              <h3>Protocol And Administrative Information</h3>
+              <div class="pill">Included trials: 4</div>
+              <div class="pill">Total enrollment reported: 8432</div>
+              <div class="pill">Sponsor coverage: 4/4</div>
+              <div class="pill">Demographics coverage: 4/4</div>
+              <div class="pill">CT.gov document coverage: 0/4</div>
+            </div>
+            <div class="summary-card">
+              <h3>Reviewer Route</h3>
+              <p>Use this pack to verify the search history, protocol framing, demographics capture, benchmark ledger, and topic-aware validation before reading the interactive estimates below.</p>
+              <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
+                <a class="pill" href="plan.html">Full validation plan</a>
+                <a class="pill" href="validation.json">validation.json</a>
+                <a class="pill" href="https://clinicaltrials.gov/search?term=(ACS%20OR%20PCI%20OR%20coronary)%20AND%20(bivalirudin%20AND%20heparin)%20AND%20(%22HORIZONS%22%20OR%20%22EUROMAX%22%20OR%20%22HEAT-PPCI%22%20OR%20%22BRIGHT%22)" target="_blank" rel="noopener">CT.gov search</a>
+                <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Bivalirudin%20vs%20Heparin%20in%20ACS%20or%20PCI%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">PubMed meta search</a>
+                <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Bivalirudin%20vs%20Heparin%20in%20ACS%20or%20PCI%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">PubMed RCT search</a>
+              </div>
+            </div>
+            <div class="summary-card">
+              <h3>Review Question And PICO</h3>
+              <p><strong>Population:</strong> Acute Coronary Syndrome; Myocardial Infarction; Severe Aortic Stenosis; Transcatheter Aortic Valve Replacement; Aortic Valve Replacement; Acute ST Elevation Myocardial Infarction</p>
+              <p><strong>Interventions:</strong> Bivalirudin; Standard of Care: Heparins With Optional GPI; Pharmacology Arm - Bivalirudin; Pharmacology Arm - Unfractionated Heparin; Unfractionated Heparin (UFH); Unfractionated Heparin</p>
+              <p><strong>Comparators:</strong> Bivalirudin vs Standard of Care: Heparins With Optional GPI; Pharmacology Arm - Unfractionated Heparin vs Pharmacology Arm - Bivalirudin; Unfractionated Heparin (UFH) vs Bivalirudin; Bivalirudin vs Unfractionated Heparin</p>
+              <p><strong>Outcomes:</strong> The Composite Incidence of Death and Non-coronary Artery Bypass Graft (CABG) Major Bleeding; Pharmacology Arm - Major Adverse Ischemic Cardiac Events and Major Bleeding Events; Major Bleeding (BARC ≥3b) at 48 Hours or Before Hospital Discharge; Major Adverse Cardiac Events (MACE) in Terms of the Incidence of All Cause Mortality, Cerebrovascular Accident, Re-infarction and Additional Unplanned Target Lesion Revascularization</p>
+              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</p>
+            </div>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Search History Log</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>Source</th>
+                  <th>Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td>CT.gov candidate scan started</td>
+          <td>ClinicalTrials.gov v2 API</td>
+          <td>2026-03-28</td>
+        </tr>
+        <tr>
+          <td>Base query locked</td>
+          <td>Project generator</td>
+          <td>(ACS OR PCI OR coronary) AND (bivalirudin AND heparin)</td>
+        </tr>
+        <tr>
+          <td>Keyword expansion applied</td>
+          <td>Project generator</td>
+          <td>4 terms: HORIZONS, EUROMAX, HEAT-PPCI, BRIGHT</td>
+        </tr>
+        <tr>
+          <td>Exact query executed</td>
+          <td>ClinicalTrials.gov</td>
+          <td>(ACS OR PCI OR coronary) AND (bivalirudin AND heparin) AND (&quot;HORIZONS&quot; OR &quot;EUROMAX&quot; OR &quot;HEAT-PPCI&quot; OR &quot;BRIGHT&quot;)</td>
+        </tr>
+        <tr>
+          <td>Registry records screened</td>
+          <td>ClinicalTrials.gov</td>
+          <td>7 records across 1 page(s)</td>
+        </tr>
+        <tr>
+          <td>Hard-gate exclusions applied</td>
+          <td>Generator eligibility rules</td>
+          <td>3 records excluded before synthesis</td>
+        </tr>
+        <tr>
+          <td>Quantitative snapshot frozen</td>
+          <td>validation.json</td>
+          <td>4 randomized trials entered the reviewer pack</td>
+        </tr>
+        <tr>
+          <td>Project package generated</td>
+          <td>Portfolio build</td>
+          <td>2026-03-28</td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>PRISMA Flow Summary</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>Stage</th>
+                  <th>Count</th>
+                  <th>Reviewer Note</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td>Records identified from the exact CT.gov query</td>
+          <td>7</td>
+          <td>1 page(s) fetched</td>
+        </tr>
+        <tr>
+          <td>Records excluded by registry hard gates</td>
+          <td>3</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+        </tr>
+        <tr>
+          <td>Trials entering the quantitative snapshot</td>
+          <td>4</td>
+          <td>Included in validation.json and the live topic app</td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>PRISMA Style Screening Summary</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>Reason</th>
+                  <th>Count</th>
+                </tr>
+              </thead>
+              <tbody><tr><td>No Extractable Numeric Outcome</td><td>3</td></tr><tr><td>No Results Posted</td><td>3</td></tr><tr><td>Not Completed</td><td>2</td></tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Study Eligibility And Demographics</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>NCT</th>
+                  <th>Title</th>
+                  <th>Sponsor</th>
+                  <th>Phase</th>
+                  <th>Enrollment</th>
+                  <th>Eligibility</th>
+                  <th>Demographics</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01087723" target="_blank" rel="noopener">NCT01087723</a></td>
+          <td>European Ambulance Acute Coronary Syndrome (ACS) Angiography Trial</td>
+          <td>The Medicines Company (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>2198 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Bivalirudin: 1089 Participants | Standard of Care: Heparins With Optional GPI: 1109 Participants | Total: 2198 Participants | Age Bivalirudin: 61.4 +/- 12.8 years | Standard of Care: Heparins With Optional GPI: 62.0 +/- 13.1 years | Total: 61.7 +/- 13.0 years | Sex Bivalirudin: F 275 / M 814 | Standard of Care: Heparins With Optional GPI: F 248 / M 861 | Total: F 523 / M 1675</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00433966" target="_blank" rel="noopener">NCT00433966</a></td>
+          <td>Harmonizing Outcomes With Revascularization and Stents in Acute Myocardial Infarction</td>
+          <td>Cardiovascular Research Foundation, New York (OTHER)</td>
+          <td>Phase 3</td>
+          <td>3602 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Pharmacology Arm - Bivalirudin: 1800 Participants | Pharmacology Arm - Unfractionated Heparin: 1802 Participants | Total: 3602 Participants | Sex Pharmacology Arm - Bivalirudin: F 412 / M 1388 | Pharmacology Arm - Unfractionated Heparin: F 430 / M 1372 | Total: F 842 / M 2760</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01651780" target="_blank" rel="noopener">NCT01651780</a></td>
+          <td>Open-label, Randomized Trial in Participants Undergoing TAVR to Determine Safety &amp; Efficacy of Bivalirudin vs UFH</td>
+          <td>The Medicines Company (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>803 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Bivalirudin: 404 Participants | Unfractionated Heparin (UFH): 398 Participants | Total: 802 Participants | Age Bivalirudin: 82.3 +/- 6.5 years | Unfractionated Heparin (UFH): 82.3 +/- 6.5 years | Total: 82.3 +/- 6.5 years | Sex Bivalirudin: F 195 / M 209 | Unfractionated Heparin (UFH): F 196 / M 202 | Total: F 391 / M 411</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01519518" target="_blank" rel="noopener">NCT01519518</a></td>
+          <td>How Effective Are Antithrombotic Therapies in Primary Percutaneous Coronary Intervention</td>
+          <td>Liverpool Heart and Chest Hospital NHS Foundation Trust (OTHER)</td>
+          <td>Phase 4</td>
+          <td>1829 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Unfractionated Heparin: 907 Participants | Bivalirudin: 905 Participants | Total: 1812 Participants | Sex Unfractionated Heparin: F 244 / M 663 | Bivalirudin: F 258 / M 647 | Total: F 502 / M 1310</td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Record Excerpts</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>NCT</th>
+                  <th>Brief Summary</th>
+                  <th>Eligibility Excerpt</th>
+                  <th>Primary Outcome Excerpt</th>
+                  <th>Source Documents</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01087723" target="_blank" rel="noopener">NCT01087723</a></td>
+          <td>To show that the early administration of bivalirudin improves 30 day outcomes when compared to the current standard of care in participants with ST segment elevation acute coronary syndrome (STE-ACS), intended for a primary percutaneous...</td>
+          <td>Inclusion Criteria: The decision to randomize participants was made by a qualified physician or paramedic who was present at the time. Participants were included in the study if they presented either via ambulance or...</td>
+          <td>The Composite Incidence of Death and Non-coronary Artery Bypass Graft (CABG) Major Bleeding | Time frame: Within 30 days | A participant was defined to have had a composite event if the participant experienced at least 1 of the 2 components (death or non-CA...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00433966" target="_blank" rel="noopener">NCT00433966</a></td>
+          <td>The primary objectives of the trial are: 1. To establish the safety and efficacy of the use of bivalirudin (+ bail-out GP IIb/IIIa inhibitors) compared to the use of unfractionated heparin + GP IIb/IIIa inhibitors in patients with acute...</td>
+          <td>Inclusion Criteria: * Must have clinical symptoms consistent with AMI (e.g., angina or anginal equivalent)lasting \&gt;20 minutes but \&lt;12 hours in duration; * ST-segment elevation of \&gt;1 mm in \&gt;2 contiguous leads, or (...</td>
+          <td>Pharmacology Arm - Major Adverse Ischemic Cardiac Events and Major Bleeding Events | Time frame: 30 Days | Number of participants with major adverse cardiovascular events (death, reinfarction, target-vessel revascularization for ischemia, and stroke) and ma...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01651780" target="_blank" rel="noopener">NCT01651780</a></td>
+          <td>The objective of this study is to assess the safety and efficacy of using bivalirudin instead of unfractionated heparin (UFH) in transcatheter aortic valve replacements (TAVR). The primary hypothesis of BRAVO 3 was that bivalirudin would...</td>
+          <td>Inclusion Criteria: * Males and females, ≥18 years of age * High risk (Euroscore ≥18, or considered inoperable) for surgical aortic valve replacement * Undergoing TAVR via transfemoral arterial access * Provide writte...</td>
+          <td>Major Bleeding (BARC ≥3b) at 48 Hours or Before Hospital Discharge | Time frame: at 48 hours or discharge, whichever occurs first | Major bleeding (Bleeding Academic Research Consortium \[BARC\] type ≥3b) was defined as follows: * Bleeds that were evident c...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01519518" target="_blank" rel="noopener">NCT01519518</a></td>
+          <td>The purpose of this study is to compare unfractionated heparin (UFH) and bivalirudin in the performance and subsequent outcomes of Primary percutaneous coronary intervention. This will be a pragmatic trial. Interventional procedures will...</td>
+          <td>Inclusion Criteria: * All patients presenting with a suspected myocardial infarction event with PPCI as the proposed index reperfusion strategy will be included in the trial Exclusion Criteria: * ≤ 18 years of age * K...</td>
+          <td>Major Adverse Cardiac Events (MACE) in Terms of the Incidence of All Cause Mortality, Cerebrovascular Accident, Re-infarction and Additional Unplanned Target Lesion Revascularization | Time frame: 28 days</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Benchmark Reconciliation Ledger</h3>
+            <p>Use this registry-native ledger to check study overlap, comparator definitions, and outcome alignment against published syntheses before accepting pooled estimates as publication-ready.</p>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>NCT</th>
+                  <th>Registry Contrast</th>
+                  <th>Outcome</th>
+                  <th>Enrollment</th>
+                  <th>Benchmark Use</th>
+                </tr>
+              </thead>
+              <tbody>
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01087723" target="_blank" rel="noopener">NCT01087723</a></td>
+        <td>Bivalirudin vs Standard of Care: Heparins With Optional GPI</td>
+        <td>The Composite Incidence of Death and Non-coronary Artery Bypass Graft (CABG) Major Bleeding</td>
+        <td>2198 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT00433966" target="_blank" rel="noopener">NCT00433966</a></td>
+        <td>Pharmacology Arm - Unfractionated Heparin vs Pharmacology Arm - Bivalirudin</td>
+        <td>Pharmacology Arm - Major Adverse Ischemic Cardiac Events and Major Bleeding Events</td>
+        <td>3602 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01651780" target="_blank" rel="noopener">NCT01651780</a></td>
+        <td>Unfractionated Heparin (UFH) vs Bivalirudin</td>
+        <td>Major Bleeding (BARC ≥3b) at 48 Hours or Before Hospital Discharge</td>
+        <td>803 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01519518" target="_blank" rel="noopener">NCT01519518</a></td>
+        <td>Bivalirudin vs Unfractionated Heparin</td>
+        <td>Major Adverse Cardiac Events (MACE) in Terms of the Incidence of All Cause Mortality, Cerebrovascular Accident, Re-infarction and Additional Unplanned Target Lesion Revascularization</td>
+        <td>1829 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Reviewer Validation</h3>
+            <p>The embedded panel below now runs the shared R benchmark suites plus topic-specific checks for the current CT.gov snapshot. Reviewers should pair it with <code>validation.json</code> and the benchmark ledger above.</p>
+            <div class="topic-stats" style="flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+              <a class="pill" href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fbivalirudin-vs-heparin%2Fvalidation.json&amp;topic=bivalirudin-vs-heparin&amp;label=Bivalirudin+vs+Heparin+in+ACS+or+PCI" target="_blank" rel="noopener">Open topic-aware WebR runner</a>
+              <a class="pill" href="validation.json">Open topic validation.json</a>
+            </div>
+            <iframe
+              id="reviewerValidationFrame"
+              src="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fbivalirudin-vs-heparin%2Fvalidation.json&amp;topic=bivalirudin-vs-heparin&amp;label=Bivalirudin+vs+Heparin+in+ACS+or+PCI"
+              title="WebR reviewer validation"
+              loading="lazy"
+              style="width: 100%; min-height: 420px; border: 1px solid rgba(148, 163, 184, 0.25); border-radius: 18px; background: rgba(15, 23, 42, 0.88);"
+            ></iframe>
+            <script>
+(() => {
+  const iframe = document.getElementById("reviewerValidationFrame");
+  const context = {"source":"ctgov-portfolio-generator","topicId":"bivalirudin-vs-heparin","label":"Bivalirudin vs Heparin in ACS or PCI","query":"(ACS OR PCI OR coronary) AND (bivalirudin AND heparin) AND (\"HORIZONS\" OR \"EUROMAX\" OR \"HEAT-PPCI\" OR \"BRIGHT\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":4,"excludedCount":3,"totalEnrollment":8432,"demographicsCoverage":4,"documentCoverage":0,"comparisons":[{"studyId":"NCT01087723","title":"European Ambulance Acute Coronary Syndrome (ACS) Angiography Trial","t1":"Bivalirudin","t2":"Standard of Care: Heparins With Optional GPI","measure":"logRR","effect":-0.49262675934858413,"se":0.558485007225214,"n1":1089,"n0":1109,"totalN":2198,"sampleSize":2198},{"studyId":"NCT00433966","title":"Harmonizing Outcomes With Revascularization and Stents in Acute Myocardial Infarction","t1":"Pharmacology Arm - Unfractionated Heparin","t2":"Pharmacology Arm - Bivalirudin","measure":"logRR","effect":0.27139678014851865,"se":0.09747183099016148,"n1":1802,"n0":1800,"totalN":3602,"sampleSize":3602},{"studyId":"NCT01651780","title":"Open-label, Randomized Trial in Participants Undergoing TAVR to Determine Safety & Efficacy of Bivalirudin vs UFH","t1":"Unfractionated Heparin (UFH)","t2":"Bivalirudin","measure":"logRR","effect":0.280666038409718,"se":0.5010497350604751,"n1":398,"n0":404,"totalN":802,"sampleSize":802},{"studyId":"NCT01519518","title":"How Effective Are Antithrombotic Therapies in Primary Percutaneous Coronary Intervention","t1":"Bivalirudin","t2":"Unfractionated Heparin","measure":"logRR","effect":0.42506435723524394,"se":0.5368180483355185,"n1":905,"n0":907,"totalN":1812,"sampleSize":1812}],"includedStudies":[{"nctId":"NCT01087723","title":"European Ambulance Acute Coronary Syndrome (ACS) Angiography Trial","status":"COMPLETED","enrollment":2198,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"The Composite Incidence of Death and Non-coronary Artery Bypass Graft (CABG) Major Bleeding","groups":[{"title":"Bivalirudin","n":1089,"events":5.1,"mean":null,"sd":null},{"title":"Standard of Care: Heparins With Optional GPI","n":1109,"events":8.5,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"The Composite Incidence of Death and Non-coronary Artery Bypass Graft (CABG) Major Bleeding","timeFrame":"Within 30 days"}]},{"nctId":"NCT00433966","title":"Harmonizing Outcomes With Revascularization and Stents in Acute Myocardial Infarction","status":"COMPLETED","enrollment":3602,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Pharmacology Arm - Major Adverse Ischemic Cardiac Events and Major Bleeding Events","groups":[{"title":"Pharmacology Arm - Bivalirudin","n":1800,"events":166,"mean":null,"sd":null},{"title":"Pharmacology Arm - Unfractionated Heparin","n":1802,"events":218,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Pharmacology Arm - Major Adverse Ischemic Cardiac Events and Major Bleeding Events","timeFrame":"30 Days"},{"measure":"Stent Arm - Ischemic Target Lesion Revascularization","timeFrame":"1 year"}]},{"nctId":"NCT01651780","title":"Open-label, Randomized Trial in Participants Undergoing TAVR to Determine Safety & Efficacy of Bivalirudin vs UFH","status":"COMPLETED","enrollment":803,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Major Bleeding (BARC ≥3b) at 48 Hours or Before Hospital Discharge","groups":[{"title":"Bivalirudin","n":404,"events":6.9,"mean":null,"sd":null},{"title":"Unfractionated Heparin (UFH)","n":398,"events":9,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Major Bleeding (BARC ≥3b) at 48 Hours or Before Hospital Discharge","timeFrame":"at 48 hours or discharge, whichever occurs first"},{"measure":"Net Adverse Clinical Events (NACE) at up to 30 Days","timeFrame":"up to 30 days after procedure"}]},{"nctId":"NCT01519518","title":"How Effective Are Antithrombotic Therapies in Primary Percutaneous Coronary Intervention","status":"COMPLETED","enrollment":1829,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Major Adverse Cardiac Events (MACE) in Terms of the Incidence of All Cause Mortality, Cerebrovascular Accident, Re-infarction and Additional Unplanned Target Lesion Revascularization","groups":[{"title":"Unfractionated Heparin","n":907,"events":5.7,"mean":null,"sd":null},{"title":"Bivalirudin","n":905,"events":8.7,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Major Adverse Cardiac Events (MACE) in Terms of the Incidence of All Cause Mortality, Cerebrovascular Accident, Re-infarction and Additional Unplanned Target Lesion Revascularization","timeFrame":"28 days"},{"measure":"Type 3-5 Bleeding According to BARC (Bleeding Academic Research Consortium)Definition","timeFrame":"28 days"}]}]};
+  if (!iframe || !context) return;
+  const sendContext = () => {
+    if (!iframe.contentWindow) return;
+    iframe.contentWindow.postMessage({ type: "esc-topic-validation-context", payload: context }, "*");
+  };
+  iframe.addEventListener("load", sendContext);
+  window.addEventListener("message", event => {
+    if (event.source === iframe.contentWindow && event.data?.type === "esc-topic-validation-request") {
+      sendContext();
+    }
+  });
+  window.setTimeout(sendContext, 250);
+})();
+</script>
+          </div>
+        </div>
+      </section>
+
+      <main class="layout">
+        <section class="panel topics">
+          <div class="panel__header">
+            <h2 id="topicPanelTitle">CT.gov-validated topic (4 eligible RCTs in snapshot)</h2>
+            <div class="topic-stats">
+              <span id="topicCount">0</span> topics -
+              <span id="trialCount">0</span> trials
+            </div>
+          </div>
+          <div class="panel__body">
+            <div id="topicList" class="topic-list"></div>
+          </div>
+        </section>
+
+        <section class="panel detail">
+          <div class="panel__header">
+            <h2 id="topicTitle">Select a topic</h2>
+            <div class="panel__meta" id="topicMeta"></div>
+            <div class="export-buttons">
+              <button id="exportCsvBtn" class="btn btn--small">CSV</button>
+              <button id="exportJsonBtn" class="btn btn--small">JSON</button>
+              <button id="exportPdfBtn" class="btn btn--small btn--accent">PDF Report</button>
+              <button id="exportRBtn" class="btn btn--small">R Script</button>
+              <button id="addStudyBtn" class="btn btn--small btn--secondary">+ Add Study</button>
+            </div>
+          </div>
+          <div class="panel__body">
+            <div class="tabs">
+              <button class="tab active" data-tab="overview">Overview</button>
+              <button class="tab" data-tab="trials">Trials</button>
+              <button class="tab" data-tab="pairwise">Pairwise Meta</button>
+              <button class="tab" data-tab="network">Network</button>
+              <button class="tab" data-tab="dose">Dose Response</button>
+              <button class="tab" data-tab="grade">GRADE</button>
+              <button class="tab" data-tab="cumulative">Cumulative</button>
+              <button class="tab" data-tab="diagnostics">Diagnostics</button>
+              <button class="tab" data-tab="raw">Raw Records</button>
+              <button class="tab" data-tab="transparency">Transparency</button>
+            </div>
+            <div class="tab-content active" id="tab-overview">
+              <div class="summary-grid">
+                <div class="summary-card">
+                  <h3>Evidence Snapshot</h3>
+                  <div id="overviewSnapshot"></div>
+                </div>
+                <div class="summary-card">
+                  <h3>Meta Summary</h3>
+                  <div id="metaSummary"></div>
+                </div>
+                <div class="summary-card">
+                  <h3>Key Warnings</h3>
+                  <div id="warningList"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-trials">
+              <div id="trialTable"></div>
+            </div>
+            <div class="tab-content" id="tab-pairwise">
+              <div class="forest-container">
+                <div class="forest-controls">
+                  <button id="forestResetBtn" class="btn btn--small">Reset Exclusions</button>
+                  <span id="forestExcludedCount" class="muted"></span>
+                </div>
+                <div class="forest-wrapper">
+                  <canvas id="forestChart" width="900" height="460"></canvas>
+                  <div id="forestTooltip" class="forest-tooltip hidden"></div>
+                </div>
+              </div>
+              <div id="pairwiseTable"></div>
+            </div>
+            <div class="tab-content" id="tab-network">
+              <canvas id="networkChart" width="900" height="460"></canvas>
+              <div id="networkTable"></div>
+            </div>
+            <div class="tab-content" id="tab-dose">
+              <canvas id="doseChart" width="900" height="460"></canvas>
+              <div id="doseTable"></div>
+            </div>
+            <div class="tab-content" id="tab-grade">
+              <div class="grade-assessment">
+                <h3>GRADE Certainty of Evidence</h3>
+                <div id="gradeTable"></div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-cumulative">
+              <canvas id="cumulativeChart" width="900" height="460"></canvas>
+              <div id="cumulativeTable"></div>
+            </div>
+            <div class="tab-content" id="tab-diagnostics">
+              <div class="diagnostics-grid">
+                <div class="diagnostic-section">
+                  <h4>Funnel Plot</h4>
+                  <canvas id="funnelChart" width="500" height="400"></canvas>
+                </div>
+                <div class="diagnostic-section">
+                  <div id="diagnosticTable"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-raw">
+              <pre id="rawJson"></pre>
+            </div>
+            <div class="tab-content" id="tab-transparency">
+              <div class="summary-card">
+                <h3>Transparency Summary</h3>
+                <div id="transparencySummary"></div>
+              </div>
+              <div class="summary-card" style="margin-top: 16px;">
+                <h3>Record Ledger</h3>
+                <div id="transparencyLedger"></div>
+              </div>
+              <div class="summary-card" style="margin-top: 16px;">
+                <h3>Reviewer Links</h3>
+                <div id="transparencyBenchmarks"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <section class="panel log">
+        <div class="panel__header">
+          <h2>Update Log</h2>
+        </div>
+        <div class="panel__body">
+          <div id="logStream" class="log-stream"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Dataset Import Modal -->
+    <div id="datasetModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Import R Package Dataset</h2>
+          <button id="closeModalBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="dataset-filters">
+            <label>
+              Source:
+              <select id="datasetSourceFilter">
+                <option value="all">All Sources</option>
+                <option value="metafor">metafor</option>
+                <option value="meta">meta</option>
+                <option value="netmeta">netmeta</option>
+                <option value="mada">mada (DTA)</option>
+                <option value="literature">Published Literature</option>
+              </select>
+            </label>
+            <label>
+              Type:
+              <select id="datasetTypeFilter">
+                <option value="all">All Types</option>
+                <option value="pairwise">Pairwise</option>
+                <option value="network">Network</option>
+                <option value="diagnostic">Diagnostic</option>
+                <option value="continuous">Continuous</option>
+              </select>
+            </label>
+            <label>
+              Relevance:
+              <select id="datasetRelevanceFilter">
+                <option value="all">All</option>
+                <option value="acs">ACS-specific</option>
+                <option value="cardiovascular">Cardiovascular</option>
+                <option value="classic">Classic examples</option>
+              </select>
+            </label>
+            <input type="text" id="datasetSearch" placeholder="Search datasets..." />
+          </div>
+          <div id="datasetList" class="dataset-list"></div>
+          <div id="datasetPreview" class="dataset-preview hidden">
+            <h3 id="previewTitle"></h3>
+            <p id="previewDescription"></p>
+            <div id="previewStats" class="preview-stats"></div>
+            <div id="previewCitation" class="preview-citation"></div>
+            <table id="previewTable" class="preview-table"></table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="import-options">
+            <label>
+              <input type="checkbox" id="createTopicCheck" checked />
+              Create as new topic
+            </label>
+            <input type="text" id="customTopicName" placeholder="Custom topic name (optional)" />
+          </div>
+          <button id="importDatasetConfirmBtn" class="btn btn--primary" disabled>Import Selected Dataset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Manual Study Entry Modal -->
+    <div id="studyEntryModal" class="modal hidden">
+      <div class="modal-content modal-content--medium">
+        <div class="modal-header">
+          <h2>Add Study Manually</h2>
+          <button id="closeStudyEntryBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-section">
+            <h4>Study Information</h4>
+            <div class="form-row">
+              <label>
+                Study Name/ID *
+                <input type="text" id="entryStudyName" placeholder="e.g., COMPLETE 2019" required />
+              </label>
+              <label>
+                Year
+                <input type="number" id="entryStudyYear" placeholder="2019" min="1900" max="2100" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h4>Outcome Type</h4>
+            <div class="form-row">
+              <label class="radio-label">
+                <input type="radio" name="outcomeType" value="binary" checked /> Binary (events/n)
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="outcomeType" value="continuous" /> Continuous (mean/SD/n)
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="outcomeType" value="precomputed" /> Pre-computed (HR/OR/RR with CI)
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section" id="binaryOutcomeSection">
+            <h4>Binary Outcome Data</h4>
+            <div class="form-row">
+              <label>
+                Treatment Arm Label
+                <input type="text" id="entryTreat1Label" placeholder="e.g., Complete revasc" />
+              </label>
+              <label>
+                Events
+                <input type="number" id="entryTreat1Events" min="0" />
+              </label>
+              <label>
+                Total N
+                <input type="number" id="entryTreat1N" min="1" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Control Arm Label
+                <input type="text" id="entryTreat2Label" placeholder="e.g., Culprit-only" />
+              </label>
+              <label>
+                Events
+                <input type="number" id="entryTreat2Events" min="0" />
+              </label>
+              <label>
+                Total N
+                <input type="number" id="entryTreat2N" min="1" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section hidden" id="continuousOutcomeSection">
+            <h4>Continuous Outcome Data</h4>
+            <div class="form-row">
+              <label>
+                Treatment Arm Label
+                <input type="text" id="entryContTreat1Label" placeholder="e.g., Intervention" />
+              </label>
+              <label>
+                Mean
+                <input type="number" id="entryContTreat1Mean" step="any" />
+              </label>
+              <label>
+                SD
+                <input type="number" id="entryContTreat1SD" step="any" min="0" />
+              </label>
+              <label>
+                N
+                <input type="number" id="entryContTreat1N" min="1" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Control Arm Label
+                <input type="text" id="entryContTreat2Label" placeholder="e.g., Control" />
+              </label>
+              <label>
+                Mean
+                <input type="number" id="entryContTreat2Mean" step="any" />
+              </label>
+              <label>
+                SD
+                <input type="number" id="entryContTreat2SD" step="any" min="0" />
+              </label>
+              <label>
+                N
+                <input type="number" id="entryContTreat2N" min="1" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section hidden" id="precomputedSection">
+            <h4>Pre-computed Effect Size</h4>
+            <div class="form-row">
+              <label>
+                Effect Measure
+                <select id="entryEffectMeasure">
+                  <option value="HR">Hazard Ratio (HR)</option>
+                  <option value="OR">Odds Ratio (OR)</option>
+                  <option value="RR">Risk Ratio (RR)</option>
+                  <option value="MD">Mean Difference (MD)</option>
+                  <option value="SMD">Standardized Mean Difference (SMD)</option>
+                </select>
+              </label>
+              <label>
+                Point Estimate
+                <input type="number" id="entryEffectValue" step="any" placeholder="e.g., 0.74" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                95% CI Lower
+                <input type="number" id="entryCILower" step="any" />
+              </label>
+              <label>
+                95% CI Upper
+                <input type="number" id="entryCIUpper" step="any" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Treatment Label
+                <input type="text" id="entryPreTreat1" placeholder="e.g., Treatment" />
+              </label>
+              <label>
+                Control Label
+                <input type="text" id="entryPreTreat2" placeholder="e.g., Control" />
+              </label>
+            </div>
+          </div>
+
+          <div id="entryPreview" class="entry-preview hidden">
+            <h4>Preview</h4>
+            <div id="entryPreviewContent"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="previewStudyBtn" class="btn">Preview</button>
+          <button id="addStudyConfirmBtn" class="btn btn--primary" disabled>Add Study to Topic</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROB2 Risk of Bias Modal -->
+    <div id="robModal" class="modal hidden">
+      <div class="modal-content modal-content--medium">
+        <div class="modal-header">
+          <h2>Risk of Bias Assessment (ROB2)</h2>
+          <button id="closeRobModalBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="rob-study-info">
+            <strong>Study:</strong> <span id="robStudyName">-</span>
+          </div>
+          <div class="rob-domains">
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D1: Randomization process</span>
+                <select id="robD1" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD1Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D2: Deviations from intended interventions</span>
+                <select id="robD2" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD2Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D3: Missing outcome data</span>
+                <select id="robD3" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD3Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D4: Measurement of the outcome</span>
+                <select id="robD4" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD4Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D5: Selection of reported result</span>
+                <select id="robD5" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD5Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+          </div>
+          <div class="rob-overall">
+            <label>
+              <strong>Overall Risk of Bias:</strong>
+              <span id="robOverallCalc" class="rob-overall-calc">-</span>
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="saveRobBtn" class="btn btn--primary">Save Assessment</button>
+          <button id="clearRobBtn" class="btn">Clear</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- External Import Modal -->
+    <div id="externalImportModal" class="modal hidden">
+      <div class="modal-content modal-content--small">
+        <div class="modal-header">
+          <h2>Import from External Source</h2>
+          <button id="closeExternalModalBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="import-tabs">
+            <button class="import-tab active" data-source="zenodo">Zenodo</button>
+            <button class="import-tab" data-source="github">GitHub</button>
+            <button class="import-tab" data-source="csv">CSV Upload</button>
+          </div>
+          <div class="import-panel active" id="zenodo-panel">
+            <label>
+              Zenodo DOI or Record ID:
+              <input type="text" id="zenodoDoi" placeholder="10.5281/zenodo.1234567 or 1234567" />
+            </label>
+            <button id="fetchZenodoBtn" class="btn">Fetch Record</button>
+            <div id="zenodoResult" class="import-result"></div>
+          </div>
+          <div class="import-panel" id="github-panel">
+            <label>
+              GitHub Raw URL:
+              <input type="text" id="githubUrl" placeholder="https://raw.githubusercontent.com/..." />
+            </label>
+            <button id="fetchGithubBtn" class="btn">Fetch File</button>
+            <div id="githubResult" class="import-result"></div>
+          </div>
+          <div class="import-panel" id="csv-panel">
+            <label>
+              Upload CSV/JSON file:
+              <input type="file" id="csvUpload" accept=".csv,.json" />
+            </label>
+            <div id="csvResult" class="import-result"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="openExternalImportBtn" class="btn btn--secondary">Import from URL/File</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Start Wizard Modal -->
+    <div id="quickStartModal" class="modal">
+      <div class="modal-content modal-content--wizard">
+        <div class="wizard-header">
+          <h2 id="welcomeTitle">Bivalirudin vs Heparin in ACS or PCI CT.gov review</h2>
+          <p class="wizard-subtitle">Quick Start Guide (2 minutes)</p>
+        </div>
+        <div class="wizard-body">
+          <div class="wizard-step active" data-step="1">
+            <div class="wizard-step-icon">1</div>
+            <h3>Select a Topic</h3>
+            <p>Choose from 47 pre-configured ACS topics in the left sidebar. Each topic is aligned with ESC Guidelines questions.</p>
+            <div class="wizard-highlight" data-target="topicList">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150' viewBox='0 0 300 150'%3E%3Crect fill='%231a1a2e' width='300' height='150'/%3E%3Ctext fill='%2300d4ff' x='150' y='75' text-anchor='middle' font-size='14'%3ETopics appear here%3C/text%3E%3C/svg%3E" alt="Topic list">
+            </div>
+          </div>
+          <div class="wizard-step" data-step="2">
+            <div class="wizard-step-icon">2</div>
+            <h3>Load Evidence</h3>
+            <p>Click "Update from ClinicalTrials.gov" to automatically fetch RCT data, or import from R datasets.</p>
+            <ul class="wizard-tips">
+              <li>Auto-extracts study arms, outcomes, and sample sizes</li>
+              <li>Deduplicates against existing data</li>
+              <li>Works offline after first load</li>
+            </ul>
+          </div>
+          <div class="wizard-step" data-step="3">
+            <div class="wizard-step-icon">3</div>
+            <h3>Review Analysis Tabs</h3>
+            <p>Navigate through the analysis tabs to explore your evidence:</p>
+            <ul class="wizard-tabs-preview">
+              <li><strong>Overview</strong> - Evidence snapshot and warnings</li>
+              <li><strong>Pairwise Meta</strong> - Forest plot with click-to-exclude</li>
+              <li><strong>Network</strong> - NMA with treatment rankings</li>
+              <li><strong>GRADE</strong> - Automated certainty assessment</li>
+            </ul>
+          </div>
+          <div class="wizard-step" data-step="4">
+            <div class="wizard-step-icon">4</div>
+            <h3>Export Results</h3>
+            <p>Generate publication-ready outputs for your guideline panel:</p>
+            <ul class="wizard-exports">
+              <li><strong>PDF Report</strong> - Complete analysis summary</li>
+              <li><strong>R Script</strong> - Reproducible code for verification</li>
+              <li><strong>CSV/JSON</strong> - Data for further analysis</li>
+            </ul>
+          </div>
+        </div>
+        <div class="wizard-footer">
+          <div class="wizard-progress">
+            <span class="wizard-dot active" data-step="1"></span>
+            <span class="wizard-dot" data-step="2"></span>
+            <span class="wizard-dot" data-step="3"></span>
+            <span class="wizard-dot" data-step="4"></span>
+          </div>
+          <div class="wizard-buttons">
+            <button id="wizardPrevBtn" class="btn btn--outline" disabled>Previous</button>
+            <button id="wizardNextBtn" class="btn btn--primary">Next</button>
+            <button id="wizardFinishBtn" class="btn btn--accent hidden">Get Started</button>
+          </div>
+          <label class="wizard-dismiss">
+            <input type="checkbox" id="dontShowAgain"> Don't show this again
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contextual Help Tooltip System -->
+    <div id="helpTooltip" class="help-tooltip hidden">
+      <div class="help-tooltip-content"></div>
+      <div class="help-tooltip-arrow"></div>
+    </div>
+
+    <!-- Interactive Tour Overlay -->
+    <div id="tourOverlay" class="tour-overlay hidden">
+      <div class="tour-spotlight"></div>
+      <div class="tour-tooltip">
+        <div class="tour-tooltip-header">
+          <span class="tour-step-indicator">Step 1 of 8</span>
+          <button class="tour-close">&times;</button>
+        </div>
+        <div class="tour-tooltip-body">
+          <h4 class="tour-title"></h4>
+          <p class="tour-description"></p>
+        </div>
+        <div class="tour-tooltip-footer">
+          <button class="tour-prev btn btn--small btn--outline">Previous</button>
+          <button class="tour-next btn btn--small btn--primary">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Help Button (Fixed Position) -->
+    <button id="helpBtn" class="help-fab" title="Help & Tutorials">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+      </svg>
+    </button>
+
+    <!-- Help Menu -->
+    <div id="helpMenu" class="help-menu hidden">
+      <div class="help-menu-header">
+        <h3>Help & Learning</h3>
+        <button class="help-menu-close">&times;</button>
+      </div>
+      <div class="help-menu-body">
+        <button class="help-menu-item" data-action="quickstart">
+          <span class="help-menu-icon">🚀</span>
+          <div>
+            <strong>Quick Start Guide</strong>
+            <small>2-minute introduction</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="tour">
+          <span class="help-menu-icon">🎯</span>
+          <div>
+            <strong>Interactive Tour</strong>
+            <small>Step-by-step walkthrough</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="shortcuts">
+          <span class="help-menu-icon">⌨️</span>
+          <div>
+            <strong>Keyboard Shortcuts</strong>
+            <small>Speed up your workflow</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="grade">
+          <span class="help-menu-icon">📊</span>
+          <div>
+            <strong>GRADE Assessment Help</strong>
+            <small>Understanding certainty ratings</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="nma">
+          <span class="help-menu-icon">🔗</span>
+          <div>
+            <strong>Network Meta-Analysis</strong>
+            <small>Interpreting NMA results</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="manual">
+          <span class="help-menu-icon">📖</span>
+          <div>
+            <strong>Full User Manual</strong>
+            <small>Complete documentation</small>
+          </div>
+        </button>
+      </div>
+      <div class="help-menu-footer">
+        <small>Press <kbd>?</kbd> anytime for help</small>
+      </div>
+    </div>
+
+    <script>
+      window.__ESC_ACS_TOPICS_OVERRIDE__ = {
+  "baseQuery": "(ACS OR PCI OR coronary) AND (bivalirudin AND heparin)",
+  "topics": [
+    {
+      "id": "bivalirudin-vs-heparin",
+      "label": "Bivalirudin vs Heparin in ACS or PCI",
+      "keywords": [
+        "HORIZONS",
+        "EUROMAX",
+        "HEAT-PPCI",
+        "BRIGHT"
+      ]
+    }
+  ],
+  "appConfig": {
+    "pageTitle": "Bivalirudin vs Heparin in ACS or PCI | CT.gov Living Meta-Analysis",
+    "kicker": "Registry-Native Cardiovascular Evidence",
+    "title": "Bivalirudin vs Heparin in ACS or PCI Living Meta-Analysis",
+    "subtitle": "Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.",
+    "topicPanelTitle": "CT.gov-validated topic (4 eligible RCTs in snapshot)",
+    "welcomeTitle": "Bivalirudin vs Heparin in ACS or PCI CT.gov review",
+    "eligibilityTrialMinimum": 1,
+    "analysisStudioName": "Bivalirudin vs Heparin in ACS or PCI CT.gov Living Meta-Analysis Studio",
+    "defaultStatuses": [
+      "COMPLETED"
+    ],
+    "defaultOutcomeRule": "results",
+    "requirePostedResults": true,
+    "requireNumericOutcome": true,
+    "requireComparatorArms": true,
+    "enforceConditionFilter": false,
+    "autoUpdateOnLoad": true,
+    "rValidationHref": "../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fbivalirudin-vs-heparin%2Fvalidation.json&topic=bivalirudin-vs-heparin&label=Bivalirudin+vs+Heparin+in+ACS+or+PCI",
+    "rValidationContext": {
+      "source": "ctgov-portfolio-generator",
+      "topicId": "bivalirudin-vs-heparin",
+      "label": "Bivalirudin vs Heparin in ACS or PCI",
+      "query": "(ACS OR PCI OR coronary) AND (bivalirudin AND heparin) AND (\"HORIZONS\" OR \"EUROMAX\" OR \"HEAT-PPCI\" OR \"BRIGHT\")",
+      "generatedAt": "2026-03-28T18:45:05.888Z",
+      "includedCount": 4,
+      "excludedCount": 3,
+      "totalEnrollment": 8432,
+      "demographicsCoverage": 4,
+      "documentCoverage": 0,
+      "comparisons": [
+        {
+          "studyId": "NCT01087723",
+          "title": "European Ambulance Acute Coronary Syndrome (ACS) Angiography Trial",
+          "t1": "Bivalirudin",
+          "t2": "Standard of Care: Heparins With Optional GPI",
+          "measure": "logRR",
+          "effect": -0.49262675934858413,
+          "se": 0.558485007225214,
+          "n1": 1089,
+          "n0": 1109,
+          "totalN": 2198,
+          "sampleSize": 2198
+        },
+        {
+          "studyId": "NCT00433966",
+          "title": "Harmonizing Outcomes With Revascularization and Stents in Acute Myocardial Infarction",
+          "t1": "Pharmacology Arm - Unfractionated Heparin",
+          "t2": "Pharmacology Arm - Bivalirudin",
+          "measure": "logRR",
+          "effect": 0.27139678014851865,
+          "se": 0.09747183099016148,
+          "n1": 1802,
+          "n0": 1800,
+          "totalN": 3602,
+          "sampleSize": 3602
+        },
+        {
+          "studyId": "NCT01651780",
+          "title": "Open-label, Randomized Trial in Participants Undergoing TAVR to Determine Safety & Efficacy of Bivalirudin vs UFH",
+          "t1": "Unfractionated Heparin (UFH)",
+          "t2": "Bivalirudin",
+          "measure": "logRR",
+          "effect": 0.280666038409718,
+          "se": 0.5010497350604751,
+          "n1": 398,
+          "n0": 404,
+          "totalN": 802,
+          "sampleSize": 802
+        },
+        {
+          "studyId": "NCT01519518",
+          "title": "How Effective Are Antithrombotic Therapies in Primary Percutaneous Coronary Intervention",
+          "t1": "Bivalirudin",
+          "t2": "Unfractionated Heparin",
+          "measure": "logRR",
+          "effect": 0.42506435723524394,
+          "se": 0.5368180483355185,
+          "n1": 905,
+          "n0": 907,
+          "totalN": 1812,
+          "sampleSize": 1812
+        }
+      ],
+      "includedStudies": [
+        {
+          "nctId": "NCT01087723",
+          "title": "European Ambulance Acute Coronary Syndrome (ACS) Angiography Trial",
+          "status": "COMPLETED",
+          "enrollment": 2198,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "The Composite Incidence of Death and Non-coronary Artery Bypass Graft (CABG) Major Bleeding",
+            "groups": [
+              {
+                "title": "Bivalirudin",
+                "n": 1089,
+                "events": 5.1,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Standard of Care: Heparins With Optional GPI",
+                "n": 1109,
+                "events": 8.5,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "The Composite Incidence of Death and Non-coronary Artery Bypass Graft (CABG) Major Bleeding",
+              "timeFrame": "Within 30 days"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT00433966",
+          "title": "Harmonizing Outcomes With Revascularization and Stents in Acute Myocardial Infarction",
+          "status": "COMPLETED",
+          "enrollment": 3602,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Pharmacology Arm - Major Adverse Ischemic Cardiac Events and Major Bleeding Events",
+            "groups": [
+              {
+                "title": "Pharmacology Arm - Bivalirudin",
+                "n": 1800,
+                "events": 166,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Pharmacology Arm - Unfractionated Heparin",
+                "n": 1802,
+                "events": 218,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Pharmacology Arm - Major Adverse Ischemic Cardiac Events and Major Bleeding Events",
+              "timeFrame": "30 Days"
+            },
+            {
+              "measure": "Stent Arm - Ischemic Target Lesion Revascularization",
+              "timeFrame": "1 year"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01651780",
+          "title": "Open-label, Randomized Trial in Participants Undergoing TAVR to Determine Safety & Efficacy of Bivalirudin vs UFH",
+          "status": "COMPLETED",
+          "enrollment": 803,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Major Bleeding (BARC ≥3b) at 48 Hours or Before Hospital Discharge",
+            "groups": [
+              {
+                "title": "Bivalirudin",
+                "n": 404,
+                "events": 6.9,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Unfractionated Heparin (UFH)",
+                "n": 398,
+                "events": 9,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Major Bleeding (BARC ≥3b) at 48 Hours or Before Hospital Discharge",
+              "timeFrame": "at 48 hours or discharge, whichever occurs first"
+            },
+            {
+              "measure": "Net Adverse Clinical Events (NACE) at up to 30 Days",
+              "timeFrame": "up to 30 days after procedure"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01519518",
+          "title": "How Effective Are Antithrombotic Therapies in Primary Percutaneous Coronary Intervention",
+          "status": "COMPLETED",
+          "enrollment": 1829,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Major Adverse Cardiac Events (MACE) in Terms of the Incidence of All Cause Mortality, Cerebrovascular Accident, Re-infarction and Additional Unplanned Target Lesion Revascularization",
+            "groups": [
+              {
+                "title": "Unfractionated Heparin",
+                "n": 907,
+                "events": 5.7,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Bivalirudin",
+                "n": 905,
+                "events": 8.7,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Major Adverse Cardiac Events (MACE) in Terms of the Incidence of All Cause Mortality, Cerebrovascular Accident, Re-infarction and Additional Unplanned Target Lesion Revascularization",
+              "timeFrame": "28 days"
+            },
+            {
+              "measure": "Type 3-5 Bleeding According to BARC (Bleeding Academic Research Consortium)Definition",
+              "timeFrame": "28 days"
+            }
+          ]
+        }
+      ]
+    }
+  }
+};
+    </script>
+    <script type="module" src="../../../esc-acs-living-meta/app.js"></script>
+    <script type="module" src="../../../esc-acs-living-meta/help-system.js"></script>
+  </body>
+</html>

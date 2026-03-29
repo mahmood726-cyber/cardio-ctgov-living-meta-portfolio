@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ticagrelor vs Prasugrel in ACS | Validation Plan</title>
+    <link rel="icon" href="data:," />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f6fb;
+        --ink: #16213e;
+        --muted: #5b657a;
+        --card: #ffffff;
+        --line: #d8e0f0;
+        --accent: #0f5c7a;
+        --accent-soft: #e0f1f8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 44%, #ffffff 100%);
+        color: var(--ink);
+        font: 16px/1.55 "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      }
+      main {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 20px 56px;
+      }
+      .hero {
+        display: grid;
+        gap: 16px;
+        padding: 28px;
+        background: radial-gradient(circle at top left, #dceefe 0%, #ffffff 55%);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 16px 48px rgba(15, 52, 96, 0.08);
+      }
+      .kicker {
+        margin: 0;
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+      h1, h2 { margin: 0; }
+      p { margin: 0; color: var(--muted); }
+      .grid {
+        display: grid;
+        gap: 16px;
+        margin-top: 22px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+      }
+      .card strong {
+        display: block;
+        font-size: 1.75rem;
+        color: var(--ink);
+      }
+      .section {
+        margin-top: 24px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px;
+      }
+      pre {
+        margin: 12px 0 0;
+        white-space: pre-wrap;
+        overflow-x: auto;
+        background: #0d1b2a;
+        color: #eff6ff;
+        padding: 14px;
+        border-radius: 14px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+        padding: 10px 8px;
+      }
+      th {
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .pillbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .pill {
+        background: var(--accent-soft);
+        border: 1px solid #b9d9e7;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        color: var(--ink);
+      }
+      iframe {
+        width: 100%;
+        min-height: 420px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #111827;
+      }
+      a { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <p class="kicker">CT.gov Validation Pack</p>
+        <h1>Ticagrelor vs Prasugrel in ACS</h1>
+        <p>Separate cardiovascular living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-03-28. Only randomized comparative records with posted results and extractable numeric outcomes are eligible.</p>
+        <div class="pillbar">
+          <span class="pill">Priority tier: Early</span>
+          <span class="pill">Included RCTs: 2</span>
+          <span class="pill">Scanned records: 9</span>
+          <span class="pill">Pages fetched: 1</span>
+          <span class="pill">Domain: Coronary Artery Disease</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card"><span>Base query</span><strong>(&quot;acute coronary syndrome&quot; OR myocardial infarction OR NSTEMI OR STEMI) AND (ticagrelor AND prasugrel)</strong></article>
+        <article class="card"><span>Keyword pack</span><strong>ISAR-REACT, PRAGUE, DUBIUS</strong></article>
+        <article class="card"><span>Validation files</span><strong><a href="validation.json">validation.json</a></strong></article>
+        <article class="card"><span>App entry</span><strong><a href="index.html">index.html</a></strong></article>
+      </section>
+
+      <section class="section">
+        <h2>Protocol Framing And Review Question</h2>
+        <p>This plan treats the registry-native topic as a living protocol artifact rather than a link collection. The PICO framing and workflow below define what enters the snapshot, how records are screened, and how benchmark reconciliation should be performed before review sign-off.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Population</td><td>Acute Coronary Syndrome; Atrial Fibrillation; Percutaneous Coronary Intervention</td></tr>
+            <tr><td>Interventions</td><td>Rivaroxaban 2.5 mg Twice Daily (BID); Acetylsalicylic Acid 100 mg Once Daily (OD); Rivaroxaban 15 mg; Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD); Vitamin K Antagonist (VKA)</td></tr>
+            <tr><td>Comparators</td><td>Acetylsalicylic Acid 100 mg Once Daily (OD) vs Rivaroxaban 2.5 mg Twice Daily (BID); Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD) vs Rivaroxaban 15 mg | Vitamin K Antagonist (VKA) vs Rivaroxaban 15 mg</td></tr>
+            <tr><td>Outcomes</td><td>Number of Participants With Non Coronary Artery Bypass Graft-Related (Non CABG-related) Thrombolysis in Myocardial Infarction (TIMI) Clinically Significant Bleeding Events; Percentage of Participants With Clinically Significant Bleeding</td></tr>
+            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exact CT.gov Search Query</h2>
+        <pre>(&quot;acute coronary syndrome&quot; OR myocardial infarction OR NSTEMI OR STEMI) AND (ticagrelor AND prasugrel) AND (&quot;ISAR-REACT&quot; OR &quot;PRAGUE&quot; OR &quot;DUBIUS&quot;)</pre>
+      </section>
+
+      <section class="section">
+        <h2>Information Sources And Search History</h2>
+        <p>The project was generated directly from the ClinicalTrials.gov v2 API using the exact query below, then checked against publication-oriented benchmark searches so reviewers can compare the registry-native set against the broader literature.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://clinicaltrials.gov/search?term=(%22acute%20coronary%20syndrome%22%20OR%20myocardial%20infarction%20OR%20NSTEMI%20OR%20STEMI)%20AND%20(ticagrelor%20AND%20prasugrel)%20AND%20(%22ISAR-REACT%22%20OR%20%22PRAGUE%22%20OR%20%22DUBIUS%22)" target="_blank" rel="noopener">CT.gov query</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Ticagrelor%20vs%20Prasugrel%20in%20ACS%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">PubMed meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Ticagrelor%20vs%20Prasugrel%20in%20ACS%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">PubMed randomized-trial search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Source</th>
+              <th>Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>CT.gov candidate scan started</td>
+          <td>ClinicalTrials.gov v2 API</td>
+          <td>2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Base query locked</td>
+          <td>Project generator</td>
+          <td>(&quot;acute coronary syndrome&quot; OR myocardial infarction OR NSTEMI OR STEMI) AND (ticagrelor AND prasugrel)</td>
+        </tr>
+
+        <tr>
+          <td>Keyword expansion applied</td>
+          <td>Project generator</td>
+          <td>3 terms: ISAR-REACT, PRAGUE, DUBIUS</td>
+        </tr>
+
+        <tr>
+          <td>Exact query executed</td>
+          <td>ClinicalTrials.gov</td>
+          <td>(&quot;acute coronary syndrome&quot; OR myocardial infarction OR NSTEMI OR STEMI) AND (ticagrelor AND prasugrel) AND (&quot;ISAR-REACT&quot; OR &quot;PRAGUE&quot; OR &quot;DUBIUS&quot;)</td>
+        </tr>
+
+        <tr>
+          <td>Registry records screened</td>
+          <td>ClinicalTrials.gov</td>
+          <td>9 records across 1 page(s)</td>
+        </tr>
+
+        <tr>
+          <td>Hard-gate exclusions applied</td>
+          <td>Generator eligibility rules</td>
+          <td>7 records excluded before synthesis</td>
+        </tr>
+
+        <tr>
+          <td>Quantitative snapshot frozen</td>
+          <td>validation.json</td>
+          <td>2 randomized trials entered the reviewer pack</td>
+        </tr>
+
+        <tr>
+          <td>Project package generated</td>
+          <td>Portfolio build</td>
+          <td>2026-03-28</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Selection And Synthesis Workflow</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Rule</th>
+              <th>Evidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Question framing</td>
+          <td>Topic slug, base query, and keyword pack frozen before generation</td>
+          <td>ticagrelor-vs-prasugrel-acs | 2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Registry screening</td>
+          <td>ClinicalTrials.gov v2 API queried with the exact string shown below</td>
+          <td>9 candidate records screened</td>
+        </tr>
+
+        <tr>
+          <td>Eligibility gate</td>
+          <td>Randomized interventional, completed, posted results, &gt;=2 arms, numeric outcome</td>
+          <td>2 included / 7 excluded</td>
+        </tr>
+
+        <tr>
+          <td>Extraction</td>
+          <td>Outcome groups, sponsor, eligibility, documents, and demographics preserved where available</td>
+          <td>2/2 studies with demographics</td>
+        </tr>
+
+        <tr>
+          <td>Reviewer validation</td>
+          <td>Benchmark ledger and topic-aware WebR runner bundled with each topic project</td>
+          <td>validation.json + plan.html + embedded runner</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>PRISMA Flow Summary</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Count</th>
+              <th>Reviewer Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Records identified from the exact CT.gov query</td>
+          <td>9</td>
+          <td>1 page(s) fetched</td>
+        </tr>
+
+        <tr>
+          <td>Records excluded by registry hard gates</td>
+          <td>7</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+        </tr>
+
+        <tr>
+          <td>Trials entering the quantitative snapshot</td>
+          <td>2</td>
+          <td>Included in validation.json and the live topic app</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Eligibility Rules</h2>
+        <div class="pillbar">
+          <span class="pill">Interventional</span>
+          <span class="pill">Randomized</span>
+          <span class="pill">Completed</span>
+          <span class="pill">Posted CT.gov results</span>
+          <span class="pill">At least 2 arms</span>
+          <span class="pill">Numeric outcome extractable</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <span>Protocol metadata coverage</span>
+          <strong>2/2</strong>
+          <p>Trials with a retained CT.gov brief summary excerpt.</p>
+        </article>
+        <article class="card">
+          <span>Demographics coverage</span>
+          <strong>2/2</strong>
+          <p>Trials with a retained baseline characteristics snapshot.</p>
+        </article>
+        <article class="card">
+          <span>Document coverage</span>
+          <strong>0/2</strong>
+          <p>Trials with protocol or source documents listed on CT.gov.</p>
+        </article>
+        <article class="card">
+          <span>Total reported enrollment</span>
+          <strong>5161</strong>
+          <p>Summed from the CT.gov enrollment field across included studies.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Included Trial Ledger</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Sponsor</th>
+              <th>Phase</th>
+              <th>Enrollment</th>
+              <th>Status</th>
+              <th>Start</th>
+              <th>Completion</th>
+              <th>Arms</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02293395" target="_blank" rel="noopener">NCT02293395</a></td>
+          <td>A Study to Compare the Safety of Rivaroxaban Versus Acetylsalicylic Acid in Addition to Either Clopidogrel or Ticagrelor Therapy in Participants With Acute Coronary Syndrome</td>
+          <td>Janssen Research &amp; Development, LLC (INDUSTRY)</td>
+          <td>Phase 2</td>
+          <td>3037 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2015-04-20</td>
+          <td>2016-10-14</td>
+          <td>Acetylsalicylic acid (ASA) 100 milligram (mg) enteric-coated tablet once daily orally along with clopidogrel 75 mg once daily orally, up to either 180 days after randomization of the last enrolled participant in the study or Day 360, whichever occurs earlier. | Rivaroxaban 2.5 mg tablet twice daily orally along with clopidogrel 75 mg once daily orally, up to either 180 days after randomization of the last enrolled participant in the study or Day 360, whichever occurs earlier. | ASA 100 mg enteric-coated tablet once daily orally along with ticagrelor 90 mg twice daily orally, up to either 180 days after randomization of the last enrolled participant in the study or Day 360, whichever occurs earlier. | Rivaroxaban 2.5 mg tablet twice daily orally along with ticagrelor 90 mg twice daily orally, up to either 180 days after randomization of the last enrolled participant in the study or Day 360, whichever occurs earlier.</td>
+          <td>Number of Participants With Non Coronary Artery Bypass Graft-Related (Non CABG-related) Thrombolysis in Myocardial Infarction (TIMI) Clinically Significant Bleeding Events</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01830543" target="_blank" rel="noopener">NCT01830543</a></td>
+          <td>A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention</td>
+          <td>Janssen Scientific Affairs, LLC (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>2124 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2013-05-10</td>
+          <td>2016-07-28</td>
+          <td>rivaroxaban 2.5 mg tablet twice daily plus low-dose aspirin (ASA) 75 to 100 mg once daily and clopidogrel 75 mg tablet once daily (or prasugrel 10 mg tablet once daily or ticagrelor 90 mg tablet twice daily) followed by rivaroxaban 15 mg tablet (or 10 mg for subjects with moderate renal impairment) once daily plus low-dose ASA for 12 months | dose-adjusted vitamin K antagonist (VKA) once daily (target International Normalized Ratio (INR) 2.0 to 3.0) plus low-dose ASA, 75 to 100 mg per day, and clopidogrel 75 mg once daily (or prasugrel 10 mg tablet once daily or ticagrelor 90 mg tablet twice daily) followed by dose-adjusted VKA once daily (target INR 2.0 to 3.0 or 2.0 to 2.5 at the investigator discretion) plus low-dose ASA for 12 months | rivaroxaban 15 mg (or 10 mg for subjects with moderate renal impairment) once daily plus clopidogrel 75 mg tablet once daily (or prasugrel 10 mg tablet once daily or ticagrelor 90 mg tablet twice daily) for 12 months</td>
+          <td>Percentage of Participants With Clinically Significant Bleeding</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Study Eligibility And Demographics</h2>
+        <p>This table keeps the trial-level age, sex, participant-count, and registry eligibility fields next to the inclusion decision so readers can challenge the clinical comparability of the pooled set.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Eligibility</th>
+              <th>Participant Counts</th>
+              <th>Age Snapshot</th>
+              <th>Sex Snapshot</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02293395" target="_blank" rel="noopener">NCT02293395</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Rivaroxaban 2.5 mg Twice Daily (BID): 1519 Participants | Acetylsalicylic Acid 100 mg Once Daily (OD): 1518 Participants | Total: 3037 Participants</td>
+          <td>Rivaroxaban 2.5 mg Twice Daily (BID): 62.7 +/- 9.14 years | Acetylsalicylic Acid 100 mg Once Daily (OD): 62.9 +/- 8.82 years | Total: 62.8 +/- 8.98 years</td>
+          <td>Rivaroxaban 2.5 mg Twice Daily (BID): F 385 / M 1134 | Acetylsalicylic Acid 100 mg Once Daily (OD): F 377 / M 1141 | Total: F 762 / M 2275</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01830543" target="_blank" rel="noopener">NCT01830543</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Rivaroxaban 15 mg: 709 Participants | Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD): 709 Participants | Vitamin K Antagonist (VKA): 706 Participants | Total: 2124 Participants</td>
+          <td>Rivaroxaban 15 mg: 70.4 +/- 9.12 years | Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD): 70 +/- 9.11 years | Vitamin K Antagonist (VKA): 69.9 +/- 8.67 years | Total: 70.1 +/- 8.97 years</td>
+          <td>Rivaroxaban 15 mg: F 181 / M 528 | Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD): F 174 / M 535 | Vitamin K Antagonist (VKA): F 188 / M 518 | Total: F 543 / M 1581</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Record Excerpts</h2>
+        <p>Brief summaries, eligibility text, primary outcome descriptions, and source documents are surfaced here so reviewers can verify that the extracted numerical contrast is clinically aligned with the underlying registry record.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Brief Summary</th>
+              <th>Eligibility Excerpt</th>
+              <th>Primary Outcome Excerpt</th>
+              <th>Source Documents</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02293395" target="_blank" rel="noopener">NCT02293395</a></td>
+          <td>The purpose of this study is to estimate the risk of bleeding with rivaroxaban, compared with acetylsalicylic acid (ASA), in addition to a single antiplatelet/ platelet adenosine diphosphate P2Y12 receptor antagonist (P2Y12 inhibitor agent: clopidogrel or ticagrelor), in participants with a recent acute coronary syn...</td>
+          <td>Inclusion Criteria: * Participants, 18 years or older, must have symptoms suggestive of acute coronary syndrome (ACS) (angina, or symptoms thought to be equivalent) within 48 hours of hospital presentation, or developed ACS while being hospitalized, and has...</td>
+          <td>Number of Participants With Non Coronary Artery Bypass Graft-Related (Non CABG-related) Thrombolysis in Myocardial Infarction (TIMI) Clinically Significant Bleeding Events | Time frame: From start of study treatment until follow-up (up to 390 days) | Non CABG-related TIMI clinically significant bleeding events are s...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01830543" target="_blank" rel="noopener">NCT01830543</a></td>
+          <td>The primary purpose of this study is to evaluate the safety for 2 different rivaroxaban treatment strategies and one Vitamin K Antagonist (VKA) treatment strategy utilizing various combinations of dual antiplatelet therapy (DAPT) or low-dose aspirin (ASA) or clopidogrel (or prasugrel or ticagrelor).</td>
+          <td>Inclusion Criteria: * Have a documented medical history of paroxysmal, persistent, or permanent non-valvular atrial fibrillation (AF) * Have undergone percutaneous coronary intervention (PCI) procedure (with stent placement) for primary atherosclerotic dise...</td>
+          <td>Percentage of Participants With Clinically Significant Bleeding | Time frame: Up to Month 12 | Clinically significant bleeding is a composite of Thrombolysis in Myocardial Infarction (TIMI) major bleeding, minor bleeding, and bleeding requiring medical attention (BRMA). TIMI major bleeding is defined as any symptoma...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exclusion Reason Counts</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Reason</th>
+              <th>Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>No Extractable Numeric Outcome</td>
+          <td>7</td>
+        </tr>
+
+        <tr>
+          <td>No Results Posted</td>
+          <td>7</td>
+        </tr>
+
+        <tr>
+          <td>Not Completed</td>
+          <td>2</td>
+        </tr>
+
+        <tr>
+          <td>Not Randomized Interventional</td>
+          <td>2</td>
+        </tr>
+
+        <tr>
+          <td>Fewer Than Two Arms</td>
+          <td>1</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Excluded Sample Records</h2>
+        <p>The first 20 excluded records are listed here with excerpts so reviewers can quickly verify why the registry pull did not enter them into the meta-analysis snapshot.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Reasons</th>
+              <th>Record Excerpt</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02808767" target="_blank" rel="noopener">NCT02808767</a></td>
+          <td>Comparison of Prasugrel and Ticagrelor in the Treatment of Acute Myocardial Infarction</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>This study evaluates the efficacy of Prasugrel and Ticagrelor in the treatment of acute myocardial infarction.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05086081" target="_blank" rel="noopener">NCT05086081</a></td>
+          <td>Replication of the ISAR-REACT 5 Antiplatelet Trial in Healthcare Claims Data</td>
+          <td>No Results Posted, Not Randomized Interventional, No Extractable Numeric Outcome</td>
+          <td>Investigators are building an empirical evidence base for real world data through large-scale replication of randomized controlled trials. The investigators&#39; goal is to understand for what types of clinical questions real world data analyses can be conducte...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02735707" target="_blank" rel="noopener">NCT02735707</a></td>
+          <td>Randomized, Embedded, Multifactorial Adaptive Platform Trial for Community- Acquired Pneumonia</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>REMAP-CAP is a randomised, embedded, multifactorial, adaptive platform trial for community-acquired pneumonia. The purpose of this study is to evaluate the effect of a range of interventions to improve outcome of patients admitted to intensive care with com...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02247128" target="_blank" rel="noopener">NCT02247128</a></td>
+          <td>Antiplatelet Therapy for Patients Undergoing Transcatheter Aortic Valve Implantation</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>At present, a variety of antithrombotic regimens are prescribed in the early postprocedure period after transcatheter aortic valve implantation (TAVI). Dual antiplatelet therapy (DAPT) using aspirin and a thienopyridine in the initial period after TAVI is t...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01944800" target="_blank" rel="noopener">NCT01944800</a></td>
+          <td>Prospective, Randomized Trial of Ticagrelor Versus Prasugrel in Patients With Acute Coronary Syndrome</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Aim of the randomized, open-label, multicenter ISAR-REACT 5 trial is to assess whether ticagrelor is superior to prasugrel in patients with acute coronary syndrome and planned invasive strategy in terms of clinical outcomes.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02264912" target="_blank" rel="noopener">NCT02264912</a></td>
+          <td>The Laboratory AntiPlatelet Efficacy and Clinical Outcome Registry</td>
+          <td>No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>The ongoing LAPCOR (Laboratory AntiPlatelet efficacy and Clinical Outcome Registry) registry was initiated in 2008 at a tertiary care cardiac center, and consecutive patients, who underwent intracoronary stent implantation, have been included regardless of...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02618837" target="_blank" rel="noopener">NCT02618837</a></td>
+          <td>Downstream Versus Upstream Strategy for the Administration of P2Y12 Receptor Blockers</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>To evaluate the impact on outcomes of the currently accepted antithrombotic strategies based on the administration of newer P2Y12 receptor blockers (prasugrel and ticagrelor) in a population of non ST elevated ACS (NSTEACS) patients with an initial invasive...</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Benchmark Reconciliation Ledger</h2>
+        <p>This ledger turns the benchmark step into a structured reviewer task. Use the NCT IDs, contrasts, and outcome definitions below to check study overlap, arm collapsing, and endpoint alignment against published syntheses.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Ticagrelor%20vs%20Prasugrel%20in%20ACS%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Ticagrelor%20vs%20Prasugrel%20in%20ACS%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT</th>
+              <th>Registry Contrast</th>
+              <th>Outcome</th>
+              <th>Enrollment</th>
+              <th>Benchmark Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02293395" target="_blank" rel="noopener">NCT02293395</a></td>
+        <td>Acetylsalicylic Acid 100 mg Once Daily (OD) vs Rivaroxaban 2.5 mg Twice Daily (BID)</td>
+        <td>Number of Participants With Non Coronary Artery Bypass Graft-Related (Non CABG-related) Thrombolysis in Myocardial Infarction (TIMI) Clinically Significant Bleeding Events</td>
+        <td>3037 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01830543" target="_blank" rel="noopener">NCT01830543</a></td>
+        <td>Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD) vs Rivaroxaban 15 mg | Vitamin K Antagonist (VKA) vs Rivaroxaban 15 mg</td>
+        <td>Percentage of Participants With Clinically Significant Bleeding</td>
+        <td>2124 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Reviewer Validation And Benchmarking</h2>
+        <p>The embedded panel below now runs the shared R benchmark suites plus topic-specific checks for the current CT.gov snapshot. Reviewers should compare the registry-native ledger above against published syntheses, inspect <code>validation.json</code>, and then confirm that the topic-aware runner resolves with the same study universe.</p>
+        <div class="pillbar">
+          <a class="pill" href="validation.json">Open validation.json</a>
+          <a class="pill" href="index.html">Open interactive topic app</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Ticagrelor%20vs%20Prasugrel%20in%20ACS%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Ticagrelor%20vs%20Prasugrel%20in%20ACS%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+          <a class="pill" href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fticagrelor-vs-prasugrel-acs%2Fvalidation.json&amp;topic=ticagrelor-vs-prasugrel-acs&amp;label=Ticagrelor+vs+Prasugrel+in+ACS" target="_blank" rel="noopener">Open topic-aware WebR runner</a>
+        </div>
+        <iframe id="reviewerValidationFrame" src="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fticagrelor-vs-prasugrel-acs%2Fvalidation.json&amp;topic=ticagrelor-vs-prasugrel-acs&amp;label=Ticagrelor+vs+Prasugrel+in+ACS" title="WebR reviewer validation" loading="lazy"></iframe>
+        <script>
+(() => {
+  const iframe = document.getElementById("reviewerValidationFrame");
+  const context = {"source":"ctgov-portfolio-generator","topicId":"ticagrelor-vs-prasugrel-acs","label":"Ticagrelor vs Prasugrel in ACS","query":"(\"acute coronary syndrome\" OR myocardial infarction OR NSTEMI OR STEMI) AND (ticagrelor AND prasugrel) AND (\"ISAR-REACT\" OR \"PRAGUE\" OR \"DUBIUS\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":2,"excludedCount":7,"totalEnrollment":5161,"demographicsCoverage":2,"documentCoverage":0,"comparisons":[{"studyId":"NCT02293395","title":"A Study to Compare the Safety of Rivaroxaban Versus Acetylsalicylic Acid in Addition to Either Clopidogrel or Ticagrelor Therapy in Participants With Acute Coronary Syndrome","t1":"Acetylsalicylic Acid 100 mg Once Daily (OD)","t2":"Rivaroxaban 2.5 mg Twice Daily (BID)","measure":"logRR","effect":-0.07730299682951418,"se":0.15715095971046064,"n1":1518,"n0":1519,"totalN":3037,"sampleSize":3037},{"studyId":"NCT01830543","title":"A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention","t1":"Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD)","t2":"Rivaroxaban 15 mg","measure":"logRR","effect":0.041476405849412847,"se":0.34796841691057107,"n1":706,"n0":696,"totalN":1402,"sampleSize":1402},{"studyId":"NCT01830543","title":"A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention","t1":"Vitamin K Antagonist (VKA)","t2":"Rivaroxaban 15 mg","measure":"logRR","effect":0.42295736756757896,"se":0.32013970754006693,"n1":697,"n0":696,"totalN":1393,"sampleSize":1393}],"includedStudies":[{"nctId":"NCT02293395","title":"A Study to Compare the Safety of Rivaroxaban Versus Acetylsalicylic Acid in Addition to Either Clopidogrel or Ticagrelor Therapy in Participants With Acute Coronary Syndrome","status":"COMPLETED","enrollment":3037,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants With Non Coronary Artery Bypass Graft-Related (Non CABG-related) Thrombolysis in Myocardial Infarction (TIMI) Clinically Significant Bleeding Events","groups":[{"title":"Rivaroxaban 2.5 mg Twice Daily (BID)","n":1519,"events":80,"mean":null,"sd":null},{"title":"Acetylsalicylic Acid 100 mg Once Daily (OD)","n":1518,"events":74,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Participants With Non Coronary Artery Bypass Graft-Related (Non CABG-related) Thrombolysis in Myocardial Infarction (TIMI) Clinically Significant Bleeding Events","timeFrame":"From start of study treatment until follow-up (up to 390 days)"}]},{"nctId":"NCT01830543","title":"A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention","status":"COMPLETED","enrollment":2124,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Percentage of Participants With Clinically Significant Bleeding","groups":[{"title":"Rivaroxaban 15 mg","n":696,"events":15.7,"mean":null,"sd":null},{"title":"Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD)","n":706,"events":16.6,"mean":null,"sd":null},{"title":"Vitamin K Antagonist (VKA)","n":697,"events":24,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Percentage of Participants With Clinically Significant Bleeding","timeFrame":"Up to Month 12"}]}]};
+  if (!iframe || !context) return;
+  const sendContext = () => {
+    if (!iframe.contentWindow) return;
+    iframe.contentWindow.postMessage({ type: "esc-topic-validation-context", payload: context }, "*");
+  };
+  iframe.addEventListener("load", sendContext);
+  window.addEventListener("message", event => {
+    if (event.source === iframe.contentWindow && event.data?.type === "esc-topic-validation-request") {
+      sendContext();
+    }
+  });
+  window.setTimeout(sendContext, 250);
+})();
+</script>
+      </section>
+    </main>
+  </body>
+</html>

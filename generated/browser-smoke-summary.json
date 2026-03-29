@@ -1,0 +1,224 @@
+{
+    "generatedAt":  "2026-03-28T16:37:42.5954876+00:00",
+    "total":  27,
+    "passed":  15,
+    "failed":  12,
+    "results":  [
+                    {
+                        "slug":  "glp1-cvot",
+                        "expected":  21,
+                        "observed":  21,
+                        "queryPending":  false,
+                        "errorCount":  0,
+                        "pass":  true
+                    },
+                    {
+                        "slug":  "sglt2-cvot",
+                        "expected":  17,
+                        "observed":  17,
+                        "queryPending":  false,
+                        "errorCount":  0,
+                        "pass":  true
+                    },
+                    {
+                        "slug":  "arni-heart-failure",
+                        "expected":  13,
+                        "observed":  13,
+                        "queryPending":  false,
+                        "errorCount":  0,
+                        "pass":  true
+                    },
+                    {
+                        "slug":  "ivus-oct-guided-pci",
+                        "expected":  12,
+                        "observed":  12,
+                        "queryPending":  false,
+                        "errorCount":  0,
+                        "pass":  true
+                    },
+                    {
+                        "slug":  "pcsk9-ascvd",
+                        "expected":  11,
+                        "observed":  11,
+                        "queryPending":  false,
+                        "errorCount":  0,
+                        "pass":  true
+                    },
+                    {
+                        "slug":  "gpiibiiia-pci",
+                        "expected":  8,
+                        "observed":  8,
+                        "queryPending":  false,
+                        "errorCount":  0,
+                        "pass":  true
+                    },
+                    {
+                        "slug":  "renal-denervation-hypertension",
+                        "expected":  6,
+                        "observed":  6,
+                        "queryPending":  false,
+                        "errorCount":  0,
+                        "pass":  true
+                    },
+                    {
+                        "slug":  "doac-vs-warfarin-af",
+                        "expected":  5,
+                        "observed":  5,
+                        "queryPending":  false,
+                        "errorCount":  0,
+                        "pass":  true
+                    },
+                    {
+                        "slug":  "vericiguat-heart-failure",
+                        "expected":  5,
+                        "observed":  5,
+                        "queryPending":  false,
+                        "errorCount":  0,
+                        "pass":  true
+                    },
+                    {
+                        "slug":  "bivalirudin-vs-heparin",
+                        "expected":  4,
+                        "observed":  4,
+                        "queryPending":  false,
+                        "errorCount":  0,
+                        "pass":  true
+                    },
+                    {
+                        "slug":  "laao-af",
+                        "expected":  4,
+                        "observed":  4,
+                        "queryPending":  false,
+                        "errorCount":  0,
+                        "pass":  true
+                    },
+                    {
+                        "slug":  "sglt2-heart-failure",
+                        "expected":  4,
+                        "observed":  4,
+                        "queryPending":  false,
+                        "errorCount":  0,
+                        "pass":  true
+                    },
+                    {
+                        "slug":  "ablation-vs-drugs-af",
+                        "expected":  3,
+                        "observed":  3,
+                        "queryPending":  false,
+                        "errorCount":  0,
+                        "pass":  true
+                    },
+                    {
+                        "slug":  "ffr-ifr-guided-pci",
+                        "expected":  3,
+                        "observed":  3,
+                        "queryPending":  false,
+                        "errorCount":  0,
+                        "pass":  true
+                    },
+                    {
+                        "slug":  "omecamtiv-heart-failure",
+                        "expected":  3,
+                        "observed":  3,
+                        "queryPending":  false,
+                        "errorCount":  0,
+                        "pass":  true
+                    },
+                    {
+                        "slug":  "omega3-cvot",
+                        "expected":  3,
+                        "observed":  null,
+                        "queryPending":  true,
+                        "errorCount":  0,
+                        "pass":  false
+                    },
+                    {
+                        "slug":  "tavi-vs-savr",
+                        "expected":  3,
+                        "observed":  null,
+                        "queryPending":  true,
+                        "errorCount":  0,
+                        "pass":  false
+                    },
+                    {
+                        "slug":  "tavi-antithrombotic",
+                        "expected":  2,
+                        "observed":  null,
+                        "queryPending":  true,
+                        "errorCount":  0,
+                        "pass":  false
+                    },
+                    {
+                        "slug":  "cangrelor-pci",
+                        "expected":  2,
+                        "observed":  null,
+                        "queryPending":  true,
+                        "errorCount":  0,
+                        "pass":  false
+                    },
+                    {
+                        "slug":  "doac-antiplatelet-af-pci",
+                        "expected":  2,
+                        "observed":  null,
+                        "queryPending":  true,
+                        "errorCount":  0,
+                        "pass":  false
+                    },
+                    {
+                        "slug":  "finerenone-cardiorenal",
+                        "expected":  2,
+                        "observed":  null,
+                        "queryPending":  true,
+                        "errorCount":  0,
+                        "pass":  false
+                    },
+                    {
+                        "slug":  "iron-heart-failure",
+                        "expected":  2,
+                        "observed":  null,
+                        "queryPending":  true,
+                        "errorCount":  0,
+                        "pass":  false
+                    },
+                    {
+                        "slug":  "ivabradine-heart-failure",
+                        "expected":  2,
+                        "observed":  null,
+                        "queryPending":  true,
+                        "errorCount":  0,
+                        "pass":  false
+                    },
+                    {
+                        "slug":  "pfo-closure",
+                        "expected":  2,
+                        "observed":  null,
+                        "queryPending":  true,
+                        "errorCount":  0,
+                        "pass":  false
+                    },
+                    {
+                        "slug":  "thrombus-aspiration-stemi",
+                        "expected":  2,
+                        "observed":  null,
+                        "queryPending":  true,
+                        "errorCount":  0,
+                        "pass":  false
+                    },
+                    {
+                        "slug":  "ticagrelor-vs-clopidogrel",
+                        "expected":  2,
+                        "observed":  null,
+                        "queryPending":  true,
+                        "errorCount":  0,
+                        "pass":  false
+                    },
+                    {
+                        "slug":  "ticagrelor-vs-prasugrel-acs",
+                        "expected":  2,
+                        "observed":  null,
+                        "queryPending":  true,
+                        "errorCount":  0,
+                        "pass":  false
+                    }
+                ]
+}

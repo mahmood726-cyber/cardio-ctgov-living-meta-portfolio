@@ -1,0 +1,2782 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GLP-1 Receptor Agonist Cardiovascular Outcome Trials | CT.gov Living Meta-Analysis</title>
+    <link rel="icon" href="data:," />
+        <meta name="description" content="GLP-1 Receptor Agonist Cardiovascular Outcome Trials living meta-analysis built only from randomized comparative ClinicalTrials.gov records with posted results." />
+    <link rel="stylesheet" href="../../../esc-acs-living-meta/styles.css" />
+    <!-- jsPDF for PDF export -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+</head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="hero__title">
+          <p class="kicker" id="appKicker">Registry-Native Cardiovascular Evidence</p>
+          <h1 id="appTitle">GLP-1 Receptor Agonist Cardiovascular Outcome Trials Living Meta-Analysis</h1>
+          <p class="subtitle" id="appSubtitle">Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.</p>
+        </div>
+        <div class="hero__controls">
+          <div class="control-card">
+            <label>
+              New RCT window start
+              <input id="startDate" type="date" />
+            </label>
+            <label>
+              Status filter
+              <select id="statusFilter" multiple>
+                <option value="COMPLETED" selected>Completed</option>
+                <option value="ACTIVE_NOT_RECRUITING" selected>Active, not recruiting</option>
+                <option value="RECRUITING">Recruiting</option>
+                <option value="NOT_YET_RECRUITING">Not yet recruiting</option>
+                <option value="TERMINATED">Terminated</option>
+              </select>
+            </label>
+            <label>
+              Single outcome rule
+              <select id="outcomeRule">
+                <option value="primary">Primary outcome with numeric results</option>
+                <option value="results">Any outcome with numeric results</option>
+              </select>
+            </label>
+            <label>
+              Reference treatment (NMA)
+              <input id="referenceTx" type="text" placeholder="e.g., Standard care" />
+            </label>
+            <button id="updateBtn" class="btn btn--primary">Update from ClinicalTrials.gov</button>
+            <button id="fixtureBtn" class="btn">Load Offline Fixture</button>
+            <button id="clearBtn" class="btn">Clear cache</button>
+            <button id="importDatasetBtn" class="btn btn--secondary">Import R Dataset</button>
+            <p class="meta">Last update: <span id="lastUpdate">Never</span></p>
+          </div>
+          <div class="control-card">
+            <label>
+              Prior meta-analysis trial IDs (one per line)
+              <textarea id="priorTrials" rows="6" placeholder="NCT01234567"></textarea>
+            </label>
+            <button id="compareBtn" class="btn">Compare Coverage</button>
+            <div id="coverageSummary" class="coverage"></div>
+          </div>
+        </div>
+      </header>
+
+      
+      <section class="panel validation-snapshot">
+        <div class="panel__header">
+          <h2>CT.gov Validation Snapshot</h2>
+          <div class="panel__meta">Generated 2026-03-28</div>
+        </div>
+        <div class="panel__body">
+          <div class="summary-grid">
+            <div class="summary-card">
+              <h3>Registry Gate</h3>
+              <div class="pill">Included RCTs: 21</div>
+              <div class="pill">Scanned records: 42</div>
+              <div class="pill">Pages fetched: 1</div>
+              <div class="pill">Priority tier: Build Now</div>
+            </div>
+            <div class="summary-card">
+              <h3>Eligibility Rules</h3>
+              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, and at least one extractable numeric outcome.</p>
+              <p>The validation scan completed within the configured CT.gov page cap.</p>
+            </div>
+            <div class="summary-card">
+              <h3>Audit Trail</h3>
+              <div class="pill"><a href="validation.json">validation.json</a></div>
+              <div class="pill"><a href="plan.html">plan.html</a></div>
+              <div class="pill"><a href="https://clinicaltrials.gov/search?term=(%22type%202%20diabetes%22)%20AND%20(liraglutide%20OR%20semaglutide%20OR%20dulaglutide%20OR%20exenatide%20OR%20albiglutide%20OR%20efpeglenatide)%20AND%20(%22LEADER%22%20OR%20%22SUSTAIN%22%20OR%20%22REWIND%22%20OR%20%22HARMONY%22%20OR%20%22AMPLITUDE-O%22)" target="_blank" rel="noopener">CT.gov search</a></div>
+              <div class="pill"><a href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fglp1-cvot%2Fvalidation.json&amp;topic=glp1-cvot&amp;label=GLP-1+Receptor+Agonist+Cardiovascular+Outcome+Trials" target="_blank" rel="noopener">Topic-aware WebR runner</a></div>
+            </div>
+          </div>
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Exact Query</h3>
+            <pre style="white-space: pre-wrap; overflow-x: auto;">(&quot;type 2 diabetes&quot;) AND (liraglutide OR semaglutide OR dulaglutide OR exenatide OR albiglutide OR efpeglenatide) AND (&quot;LEADER&quot; OR &quot;SUSTAIN&quot; OR &quot;REWIND&quot; OR &quot;HARMONY&quot; OR &quot;AMPLITUDE-O&quot;)</pre>
+          </div>
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Included Trial Records</h3>
+            <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
+              
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01779362" target="_blank" rel="noopener">
+          NCT01779362
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01885208" target="_blank" rel="noopener">
+          NCT01885208
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01179048" target="_blank" rel="noopener">
+          NCT01179048
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02305381" target="_blank" rel="noopener">
+          NCT02305381
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT03086330" target="_blank" rel="noopener">
+          NCT03086330
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01394952" target="_blank" rel="noopener">
+          NCT01394952
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT03689374" target="_blank" rel="noopener">
+          NCT03689374
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02254291" target="_blank" rel="noopener">
+          NCT02254291
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT03191396" target="_blank" rel="noopener">
+          NCT03191396
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01720446" target="_blank" rel="noopener">
+          NCT01720446
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT00917267" target="_blank" rel="noopener">
+          NCT00917267
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT03136484" target="_blank" rel="noopener">
+          NCT03136484
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT00775684" target="_blank" rel="noopener">
+          NCT00775684
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02648204" target="_blank" rel="noopener">
+          NCT02648204
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02207374" target="_blank" rel="noopener">
+          NCT02207374
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT03061214" target="_blank" rel="noopener">
+          NCT03061214
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01930188" target="_blank" rel="noopener">
+          NCT01930188
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02128932" target="_blank" rel="noopener">
+          NCT02128932
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT03989232" target="_blank" rel="noopener">
+          NCT03989232
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01473953" target="_blank" rel="noopener">
+          NCT01473953
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02054897" target="_blank" rel="noopener">
+          NCT02054897
+        </a>
+            </div>
+          </div>
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Top Exclusion Reasons</h3>
+            <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
+              
+        <div class="pill">
+          No Extractable Numeric Outcome: 20
+        </div>
+
+        <div class="pill">
+          No Results Posted: 20
+        </div>
+
+        <div class="pill">
+          Not Completed: 12
+        </div>
+
+        <div class="pill">
+          Not Randomized Interventional: 8
+        </div>
+
+        <div class="pill">
+          Fewer Than Two Arms: 4
+        </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel reviewer-pack">
+        <div class="panel__header">
+          <h2>Reviewer Transparency Pack</h2>
+          <div class="panel__meta">Built to expose source search, eligibility, excerpts, benchmarking, and topic-aware validation before the live analysis workspace.</div>
+        </div>
+        <div class="panel__body">
+          <div class="summary-grid">
+            <div class="summary-card">
+              <h3>Protocol And Administrative Information</h3>
+              <div class="pill">Included trials: 21</div>
+              <div class="pill">Total enrollment reported: 35373</div>
+              <div class="pill">Sponsor coverage: 21/21</div>
+              <div class="pill">Demographics coverage: 21/21</div>
+              <div class="pill">CT.gov document coverage: 9/21</div>
+            </div>
+            <div class="summary-card">
+              <h3>Reviewer Route</h3>
+              <p>Use this pack to verify the search history, protocol framing, demographics capture, benchmark ledger, and topic-aware validation before reading the interactive estimates below.</p>
+              <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
+                <a class="pill" href="plan.html">Full validation plan</a>
+                <a class="pill" href="validation.json">validation.json</a>
+                <a class="pill" href="https://clinicaltrials.gov/search?term=(%22type%202%20diabetes%22)%20AND%20(liraglutide%20OR%20semaglutide%20OR%20dulaglutide%20OR%20exenatide%20OR%20albiglutide%20OR%20efpeglenatide)%20AND%20(%22LEADER%22%20OR%20%22SUSTAIN%22%20OR%20%22REWIND%22%20OR%20%22HARMONY%22%20OR%20%22AMPLITUDE-O%22)" target="_blank" rel="noopener">CT.gov search</a>
+                <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22GLP-1%20Receptor%20Agonist%20Cardiovascular%20Outcome%20Trials%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">PubMed meta search</a>
+                <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22GLP-1%20Receptor%20Agonist%20Cardiovascular%20Outcome%20Trials%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">PubMed RCT search</a>
+              </div>
+            </div>
+            <div class="summary-card">
+              <h3>Review Question And PICO</h3>
+              <p><strong>Population:</strong> Prediabetes; Type 2 Diabetes; Diabetes; Diabetes Mellitus, Type 2; Cardiovascular Disease; Type 2 Diabetes Mellitus</p>
+              <p><strong>Interventions:</strong> Metformin Alone; Glargine Followed by Metformin; Placebo; Liraglutide + Metformin; Semaglutide 1.0 mg; Exenatide ER 2.0 mg; Liraglutide; Semaglutide 0.5 mg</p>
+              <p><strong>Comparators:</strong> Metformin Alone vs Placebo | Glargine Followed by Metformin vs Placebo; Exenatide ER 2.0 mg vs Semaglutide 1.0 mg; Liraglutide vs Placebo; Semaglutide 0.5 mg vs Placebo | Semaglutide 1.0 mg vs Placebo; Semaglutide 1.0 mg vs Placebo; Dulaglutide vs Placebo</p>
+              <p><strong>Outcomes:</strong> ß-cell Response Measured by Hyperglycemic Clamp; Change From Baseline in HbA1c (Glycosylated Haemoglobin); Time From Randomisation to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome); Change in HbA1c (Glycosylated Haemoglobin); Change in HbA1c; Number of Participants Who Experienced an Event For Time, From Randomization to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome)</p>
+              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</p>
+            </div>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Search History Log</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>Step</th>
+                  <th>Source</th>
+                  <th>Detail</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td>CT.gov candidate scan started</td>
+          <td>ClinicalTrials.gov v2 API</td>
+          <td>2026-03-28</td>
+        </tr>
+        <tr>
+          <td>Base query locked</td>
+          <td>Project generator</td>
+          <td>(&quot;type 2 diabetes&quot;) AND (liraglutide OR semaglutide OR dulaglutide OR exenatide OR albiglutide OR efpeglenatide)</td>
+        </tr>
+        <tr>
+          <td>Keyword expansion applied</td>
+          <td>Project generator</td>
+          <td>5 terms: LEADER, SUSTAIN, REWIND, HARMONY, AMPLITUDE-O</td>
+        </tr>
+        <tr>
+          <td>Exact query executed</td>
+          <td>ClinicalTrials.gov</td>
+          <td>(&quot;type 2 diabetes&quot;) AND (liraglutide OR semaglutide OR dulaglutide OR exenatide OR albiglutide OR efpeglenatide) AND (&quot;LEADER&quot; OR &quot;SUSTAIN&quot; OR &quot;REWIND&quot; OR &quot;HARMONY&quot; OR &quot;AMPLITUDE-O&quot;)</td>
+        </tr>
+        <tr>
+          <td>Registry records screened</td>
+          <td>ClinicalTrials.gov</td>
+          <td>42 records across 1 page(s)</td>
+        </tr>
+        <tr>
+          <td>Hard-gate exclusions applied</td>
+          <td>Generator eligibility rules</td>
+          <td>21 records excluded before synthesis</td>
+        </tr>
+        <tr>
+          <td>Quantitative snapshot frozen</td>
+          <td>validation.json</td>
+          <td>21 randomized trials entered the reviewer pack</td>
+        </tr>
+        <tr>
+          <td>Project package generated</td>
+          <td>Portfolio build</td>
+          <td>2026-03-28</td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>PRISMA Flow Summary</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>Stage</th>
+                  <th>Count</th>
+                  <th>Reviewer Note</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td>Records identified from the exact CT.gov query</td>
+          <td>42</td>
+          <td>1 page(s) fetched</td>
+        </tr>
+        <tr>
+          <td>Records excluded by registry hard gates</td>
+          <td>21</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+        </tr>
+        <tr>
+          <td>Trials entering the quantitative snapshot</td>
+          <td>21</td>
+          <td>Included in validation.json and the live topic app</td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>PRISMA Style Screening Summary</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>Reason</th>
+                  <th>Count</th>
+                </tr>
+              </thead>
+              <tbody><tr><td>No Extractable Numeric Outcome</td><td>20</td></tr><tr><td>No Results Posted</td><td>20</td></tr><tr><td>Not Completed</td><td>12</td></tr><tr><td>Not Randomized Interventional</td><td>8</td></tr><tr><td>Fewer Than Two Arms</td><td>4</td></tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Study Eligibility And Demographics</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>NCT</th>
+                  <th>Title</th>
+                  <th>Sponsor</th>
+                  <th>Phase</th>
+                  <th>Enrollment</th>
+                  <th>Eligibility</th>
+                  <th>Demographics</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01779362" target="_blank" rel="noopener">NCT01779362</a></td>
+          <td>RISE Adult Medication Study</td>
+          <td>RISE Study Group (NETWORK)</td>
+          <td>Phase 3</td>
+          <td>267 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 20 Years to 65 Years | Healthy volunteers: Yes</td>
+          <td>Participants Metformin Alone: 65 Participants | Glargine Followed by Metformin: 67 Participants | Placebo: 67 Participants | Liraglutide + Metformin: 68 Participants | Total: 267 Participants | Age Metformin Alone: 55.2 +/- 8.2 years | Glargine Followed by Metformin: 53.5 +/- 9.3 years | Placebo: 52.8 +/- 10.0 years | Liraglutide + Metformin: 54.0 +/- 8.1 years | Total: 53.9 +/- 8.9 years | Sex Metformin Alone: F 37 / M 28 | Glargine Followed by Metformin: F 23 / M 44 | Placebo: F 25 / M 42 | Liraglutide + Metformin: F 29 / M 39 | Total: F 114 / M 153</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01885208" target="_blank" rel="noopener">NCT01885208</a></td>
+          <td>Efficacy and Safety of Semaglutide Once-weekly Versus Exenatide ER 2.0 mg Once-weekly as add-on to 1-2 Oral Antidiabetic Drugs (OADs) in Subjects With Type 2 Diabetes</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>813 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Semaglutide 1.0 mg: 404 Participants | Exenatide ER 2.0 mg: 405 Participants | Total: 809 Participants | Age Semaglutide 1.0 mg: 56.4 +/- 10.3 years | Exenatide ER 2.0 mg: 56.7 +/- 11.1 years | Total: 56.6 +/- 10.7 years | Sex Semaglutide 1.0 mg: F 185 / M 219 | Exenatide ER 2.0 mg: F 177 / M 228 | Total: F 362 / M 447</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01179048" target="_blank" rel="noopener">NCT01179048</a></td>
+          <td>Liraglutide Effect and Action in Diabetes: Evaluation of Cardiovascular Outcome Results</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>9341 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 50 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Liraglutide: 4668 Participants | Placebo: 4672 Participants | Total: 9340 Participants | Age Liraglutide: 64.2 +/- 7.2 years | Placebo: 64.4 +/- 7.2 years | Total: 64.3 +/- 7.2 years | Sex Liraglutide: F 1657 / M 3011 | Placebo: F 1680 / M 2992 | Total: F 3337 / M 6003</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02305381" target="_blank" rel="noopener">NCT02305381</a></td>
+          <td>Efficacy and Safety of Semaglutide Once-weekly Versus Placebo as add-on to Basal Insulin Alone or Basal Insulin in Combination With Metformin in Subjects With Type 2 Diabetes</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>397 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Semaglutide 0.5 mg: 132 Participants | Semaglutide 1.0 mg: 131 Participants | Placebo: 133 Participants | Total: 396 Participants | Age Semaglutide 0.5 mg: 59.1 +/- 10.3 years | Semaglutide 1.0 mg: 58.5 +/- 9.0 years | Placebo: 58.8 +/- 10.9 years | Total: 58.8 +/- 10.1 years | Sex Semaglutide 0.5 mg: F 58 / M 74 | Semaglutide 1.0 mg: F 54 / M 77 | Placebo: F 62 / M 71 | Total: F 174 / M 222</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03086330" target="_blank" rel="noopener">NCT03086330</a></td>
+          <td>Efficacy and Safety of Semaglutide Once-weekly Versus Placebo as add-on to SGLT-2i in Subjects With Type 2 Diabetes Mellitus</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>302 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Semaglutide 1.0 mg: 151 Participants | Placebo: 151 Participants | Total: 302 Participants | Age Semaglutide 1.0 mg: 57.5 +/- 8.9 Years | Placebo: 56.6 +/- 10.1 Years | Total: 57.0 +/- 9.5 Years | Sex Semaglutide 1.0 mg: F 62 / M 89 | Placebo: F 64 / M 87 | Total: F 126 / M 176</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01394952" target="_blank" rel="noopener">NCT01394952</a></td>
+          <td>Researching Cardiovascular Events With a Weekly Incretin in Diabetes (REWIND)</td>
+          <td>Eli Lilly and Company (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>9901 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 50 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Placebo: 4952 Participants | Dulaglutide: 4949 Participants | Total: 9901 Participants | Age Placebo: 66.2 +/- 6.5 years | Dulaglutide: 66.2 +/- 6.5 years | Total: 66.2 +/- 6.5 years | Sex Placebo: F 2283 / M 2669 | Dulaglutide: F 2306 / M 2643 | Total: F 4589 / M 5312</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03689374" target="_blank" rel="noopener">NCT03689374</a></td>
+          <td>A Research Study to Compare Semaglutide to Insulin Aspart, When Taken Together With Metformin and Insulin Glargine, in People With Type 2 Diabetes</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>2274 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Semaglutide: 874 Participants | Insulin Aspart: 874 Participants | Total: 1748 Participants | Age Semaglutide: 60.8 +/- 9.4 Years | Insulin Aspart: 61.5 +/- 9.5 Years | Total: 61.2 +/- 9.4 Years | Sex Semaglutide: F 429 / M 445 | Insulin Aspart: F 425 / M 449 | Total: F 854 / M 894</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02254291" target="_blank" rel="noopener">NCT02254291</a></td>
+          <td>A Trial Comparing the Safety and Efficacy of Semaglutide Once Weekly Versus Sitagliptin Once Daily in Japanese Subjects With Type 2 Diabetes</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>308 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 20 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Semaglutide 0.5 mg: 103 Participants | Semaglutide 1.0 mg: 102 Participants | Sitagliptin: 103 Participants | Total: 308 Participants | Age Semaglutide 0.5 mg: 58.8 +/- 10.4 years | Semaglutide 1.0 mg: 58.1 +/- 11.6 years | Sitagliptin: 57.9 +/- 10.1 years | Total: 58.3 +/- 10.7 years | Sex Semaglutide 0.5 mg: F 24 / M 79 | Semaglutide 1.0 mg: F 27 / M 75 | Sitagliptin: F 22 / M 81 | Total: F 73 / M 235</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03191396" target="_blank" rel="noopener">NCT03191396</a></td>
+          <td>Research Study Comparing a New Medicine Semaglutide to Liraglutide in People With Type 2 Diabetes</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>577 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Semaglutide 1.0 mg: 290 Participants | Liraglutide 1.2 mg: 287 Participants | Total: 577 Participants | Age Semaglutide 1.0 mg: 60.1 +/- 10.5 Years | Liraglutide 1.2 mg: 58.9 +/- 10.0 Years | Total: 59.5 +/- 10.2 Years | Sex Semaglutide 1.0 mg: F 130 / M 160 | Liraglutide 1.2 mg: F 120 / M 167 | Total: F 250 / M 327</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01720446" target="_blank" rel="noopener">NCT01720446</a></td>
+          <td>Trial to Evaluate Cardiovascular and Other Long-term Outcomes With Semaglutide in Subjects With Type 2 Diabetes</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>3297 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 50 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Semaglutide 0.5 mg: 826 Participants | Semaglutide 1.0 mg: 822 Participants | Placebo 0.5 mg: 824 Participants | Placebo 1.0 mg: 825 Participants | Total: 3297 Participants | Sex Semaglutide 0.5 mg: F 331 / M 495 | Semaglutide 1.0 mg: F 304 / M 518 | Placebo 0.5 mg: F 342 / M 482 | Placebo 1.0 mg: F 318 / M 507 | Total: F 1295 / M 2002</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00917267" target="_blank" rel="noopener">NCT00917267</a></td>
+          <td>A Study to Examine the Effects of Exenatide Once-Weekly Injection on Glucose Control and Safety in Asian Subjects</td>
+          <td>AstraZeneca (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>691 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 20 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Exenatide Once Weekly: 340 Participants | Exenatide Twice Daily: 338 Participants | Total: 678 Participants | Age Exenatide Once Weekly: 55.4 +/- 10.59 years | Exenatide Twice Daily: 56.2 +/- 9.99 years | Total: 55.8 +/- 10.30 years | Sex Exenatide Once Weekly: F 157 / M 183 | Exenatide Twice Daily: F 154 / M 184 | Total: F 311 / M 367</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03136484" target="_blank" rel="noopener">NCT03136484</a></td>
+          <td>Efficacy and Safety of Semaglutide Versus Canagliflozin as add-on to Metformin in Subjects With Type 2 Diabetes</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>788 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Semaglutide + Canagliflozin Placebo: 394 Participants | Canagliflozin + Semaglutide Placebo: 394 Participants | Total: 788 Participants | Age Semaglutide + Canagliflozin Placebo: 55.7 +/- 11.1 Years | Canagliflozin + Semaglutide Placebo: 57.5 +/- 10.7 Years | Total: 56.6 +/- 10.9 Years | Sex Semaglutide + Canagliflozin Placebo: F 171 / M 223 | Canagliflozin + Semaglutide Placebo: F 193 / M 201 | Total: F 364 / M 424</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00775684" target="_blank" rel="noopener">NCT00775684</a></td>
+          <td>Effect of Exenatide, Sitagliptin or Glimepiride on Functional ß -Cell Mass</td>
+          <td>University of Pennsylvania (OTHER)</td>
+          <td>NA</td>
+          <td>47 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to 70 Years | Healthy volunteers: No</td>
+          <td>Participants Exenatide: 17 Participants | Sitagliptin: 13 Participants | Glimepiride: 17 Participants | Total: 47 Participants | Age Exenatide: 57 +/- 2 years | Sitagliptin: 57 +/- 3 years | Glimepiride: 52 +/- 3 years | Total: 55.3 +/- 2.6 years | Sex Exenatide: F 6 / M 11 | Sitagliptin: F 4 / M 9 | Glimepiride: F 7 / M 10 | Total: F 17 / M 30</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02648204" target="_blank" rel="noopener">NCT02648204</a></td>
+          <td>Efficacy and Safety of Semaglutide Versus Dulaglutide as add-on to Metformin in Subjects With Type 2 Diabetes.</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>1201 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Semaglutide 0.5 mg: 301 Participants | Semaglutide 1.0 mg: 300 Participants | Dulaglutide 0.75 mg: 299 Participants | Dulaglutide 1.5 mg: 299 Participants | Total: 1199 Participants | Age Semaglutide 0.5 mg: 56 +/- 10.9 years | Semaglutide 1.0 mg: 55 +/- 10.6 years | Dulaglutide 0.75 mg: 55 +/- 10.4 years | Dulaglutide 1.5 mg: 56 +/- 10.6 years | Total: 56 +/- 10.6 years | Sex Semaglutide 0.5 mg: F 169 / M 132 | Semaglutide 1.0 mg: F 162 / M 138 | Dulaglutide 0.75 mg: F 160 / M 139 | Dulaglutide 1.5 mg: F 171 / M 128 | Total: F 662 / M 537</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02207374" target="_blank" rel="noopener">NCT02207374</a></td>
+          <td>A Trial Comparing the Safety and Efficacy of Semaglutide Once Weekly in Monotherapy or in Combination With One OAD in Japanese Subjects With Type 2 Diabetes</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>601 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 20 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Semaglutide 0.5 mg: 239 Participants | Semaglutide 1.0 mg: 241 Participants | Additional OAD: 120 Participants | Total: 600 Participants | Age Semaglutide 0.5 mg: 58.0 +/- 10.6 Years | Semaglutide 1.0 mg: 58.7 +/- 10.2 Years | Additional OAD: 59.2 +/- 10.1 Years | Total: 58.5 +/- 10.3 Years | Sex Semaglutide 0.5 mg: F 73 / M 166 | Semaglutide 1.0 mg: F 67 / M 174 | Additional OAD: F 31 / M 89 | Total: F 171 / M 429</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03061214" target="_blank" rel="noopener">NCT03061214</a></td>
+          <td>Efficacy and Safety of Semaglutide Once-weekly Versus Sitagliptin Once-daily as add-on to Metformin in Subjects With Type 2 Diabetes (SUSTAIN - CHINA MRCT)</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>868 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Semaglutide 0.5 mg: 288 Participants | Semaglutide 1.0 mg: 290 Participants | Sitagliptin: 290 Participants | Total: 868 Participants | Age Semaglutide 0.5 mg: 53.0 +/- 11.4 Years | Semaglutide 1.0 mg: 53.0 +/- 10.6 Years | Sitagliptin: 53.1 +/- 10.4 Years | Total: 53.1 +/- 10.8 Years | Sex Semaglutide 0.5 mg: F 128 / M 160 | Semaglutide 1.0 mg: F 136 / M 154 | Sitagliptin: F 105 / M 185 | Total: F 369 / M 499</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01930188" target="_blank" rel="noopener">NCT01930188</a></td>
+          <td>Efficacy and Safety of Semaglutide Once-weekly Versus Sitagliptin Once-daily as add-on to Metformin and/or TZD in Subjects With Type 2 Diabetes</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>1231 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Semaglutide 0.5 mg + Sitagliptin Placebo: 409 Participants | Semaglutide 1.0 mg + Sitagliptin Placebo: 409 Participants | Sitagliptin + Semaglutide Placebo: 407 Participants | Total: 1225 Participants | Age Semaglutide 0.5 mg + Sitagliptin Placebo: 54.8 +/- 10.2 years | Semaglutide 1.0 mg + Sitagliptin Placebo: 56.0 +/- 9.4 years | Sitagliptin + Semaglutide Placebo: 54.6 +/- 10.4 years | Total: 55.1 +/- 10.0 years | Sex Semaglutide 0.5 mg + Sitagliptin Placebo: F 202 / M 207 | Semaglutide 1.0 mg + Sitagliptin Placebo: F 204 / M 205 | Sitagliptin + Semaglutide Placebo: F 199 / M 208 | Total: F 605 / M 620</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02128932" target="_blank" rel="noopener">NCT02128932</a></td>
+          <td>Efficacy and Safety of Semaglutide Once Weekly Versus Insulin Glargine Once Daily as add-on to Metformin With or Without Sulphonylurea in Insulin-naïve Subjects With Type 2 Diabetes</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>1089 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Semaglutide 0.5mg/Week: 362 Participants | Semaglutide 1.0 mg/Week: 360 Participants | Insulin Glargine: 360 Participants | Total: 1082 Participants | Age Semaglutide 0.5mg/Week: 56.5 +/- 10.3 years | Semaglutide 1.0 mg/Week: 56.7 +/- 10.4 years | Insulin Glargine: 56.2 +/- 10.6 years | Total: 56.5 +/- 10.4 years | Sex Semaglutide 0.5mg/Week: F 165 / M 197 | Semaglutide 1.0 mg/Week: F 178 / M 182 | Insulin Glargine: F 165 / M 195 | Total: F 508 / M 574</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03989232" target="_blank" rel="noopener">NCT03989232</a></td>
+          <td>A Research Study to Compare Two Doses of Semaglutide Taken Once Weekly in People With Type 2 Diabetes</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>961 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Semaglutide 1.0 mg: 481 Participants | Semaglutide 2.0 mg: 480 Participants | Total: 961 Participants | Age Semaglutide 1.0 mg: 58.2 +/- 9.9 Years | Semaglutide 2.0 mg: 57.9 +/- 10.0 Years | Total: 58.0 +/- 10.0 Years | Sex Semaglutide 1.0 mg: F 197 / M 284 | Semaglutide 2.0 mg: F 201 / M 279 | Total: F 398 / M 563</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01473953" target="_blank" rel="noopener">NCT01473953</a></td>
+          <td>Safety, Tolerability and Pharmacokinetics of Liraglutide-depot in Healthy Subjects</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 1</td>
+          <td>31 (ACTUAL)</td>
+          <td>Sex: MALE | Age: 18 Years to 55 Years | Healthy volunteers: No</td>
+          <td>Participants Cohort 1a: Lira-depot 2.25 mg: 6 Participants | Cohort 2a: Lira-depot 6.75 mg: 6 Participants | Cohort 3a: Lira-depot 15 mg: 6 Participants | Cohort 4a: Lira-depot 30 mg: 5 Participants | Placebo: 8 Participants | Total: 31 Participants | Age Cohort 1a: Lira-depot 2.25 mg: 39.8 +/- 11.4 years | Cohort 2a: Lira-depot 6.75 mg: 30.0 +/- 12.6 years | Cohort 3a: Lira-depot 15 mg: 29.8 +/- 7.7 years | Cohort 4a: Lira-depot 30 mg: 39.0 +/- 8.4 years | Placebo: 28.5 +/- 7.9 years | Total: 32.9 +/- 10.3 years | Sex Cohort 1a: Lira-depot 2.25 mg: F 0 / M 6 | Cohort 2a: Lira-depot 6.75 mg: F 0 / M 6 | Cohort 3a: Lira-depot 15 mg: F 0 / M 6 | Cohort 4a: Lira-depot 30 mg: F 0 / M 5 | Placebo: F 0 / M 8 | Total: F 0 / M 31</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02054897" target="_blank" rel="noopener">NCT02054897</a></td>
+          <td>Efficacy and Safety of Semaglutide Once-weekly Versus Placebo in Drug-naïve Subjects With Type 2 Diabetes</td>
+          <td>Novo Nordisk A/S (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>388 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Semaglutide 0.5 mg: 128 Participants | Semaglutide 1.0 mg: 130 Participants | Placebo: 129 Participants | Total: 387 Participants | Age Semaglutide 0.5 mg: 54.6 +/- 11.1 Years | Semaglutide 1.0 mg: 52.7 +/- 11.9 Years | Placebo: 53.9 +/- 11.0 Years | Total: 53.7 +/- 11.3 Years | Sex Semaglutide 0.5 mg: F 68 / M 60 | Semaglutide 1.0 mg: F 50 / M 80 | Placebo: F 59 / M 70 | Total: F 177 / M 210</td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Record Excerpts</h3>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>NCT</th>
+                  <th>Brief Summary</th>
+                  <th>Eligibility Excerpt</th>
+                  <th>Primary Outcome Excerpt</th>
+                  <th>Source Documents</th>
+                </tr>
+              </thead>
+              <tbody>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01779362" target="_blank" rel="noopener">NCT01779362</a></td>
+          <td>The RISE Adult Medication Study is a 4-arm, 3-center, clinical trial of adults with prediabetes and early type 2 diabetes to address the hypothesis that aggressive glucose lowering will lead to recovery of beta-cell function that will be...</td>
+          <td>Inclusion Criteria: 1. Fasting plasma glucose 95-125 mg/dl plus 2-hour glucose ≥140 mg/dl on 75 gm OGTT plus HbA1c ≤7.0%. There is no upper limit for the 2-hour glucose on OGTT. 2. Age 20-65 years 3. Body mass index (...</td>
+          <td>ß-cell Response Measured by Hyperglycemic Clamp | Time frame: 3-months after medication washout (Month 15) | Clamp measures of ß-cell response, co-primary outcomes</td>
+          <td><span class="pill">Study Protocol (2016-08-19)</span>
+<span class="pill">Statistical Analysis Plan (2017-11-01)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01885208" target="_blank" rel="noopener">NCT01885208</a></td>
+          <td>This trial is conducted in Europe and North and South America. The aim of the trial is to investigate the efficacy and safety of semaglutide once-weekly versus exenatide ER (extended release) 2.0 mg once-weekly as add-on to 1-2 oral anti...</td>
+          <td>Inclusion Criteria: - Subjects diagnosed with type 2 diabetes and on stable diabetes treatment with 1-2 OADs (Metformin equal to or above 1500 mg or maximum tolerated dose and/or thiazolidinedione (TZD) and sulfonylur...</td>
+          <td>Change From Baseline in HbA1c (Glycosylated Haemoglobin) | Time frame: Week 0, week 56 | Mean change in HbA1c from baseline to week 56.</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01179048" target="_blank" rel="noopener">NCT01179048</a></td>
+          <td>This trial is conducted in Africa, Asia, Europe, and North and South America. The aim of this trial is to determine the long term effect of liraglutide on cardiovascular events in subjects with type 2 diabetes.</td>
+          <td>Inclusion Criteria: - Type 2 diabetes - Age min. 50 years at screening and concomitant cardiovascular, cerebrovascular or peripheral vascular disease or chronic renal failure or chronic heart failure OR age min. 60 ye...</td>
+          <td>Time From Randomisation to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome) | Time frame: from randomisation (visit 3; month 0) to last contact (visit 16; up to month 60+30 d...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02305381" target="_blank" rel="noopener">NCT02305381</a></td>
+          <td>This trial is conducted in Asia, Europe and the United States of America (USA). The aim of the trial is to investigate efficacy and safety of semaglutide once weekly versus placebo as add-on to basal insulin alone or basal insulin in com...</td>
+          <td>Inclusion Criteria: - Male or female, age at least 18 years at the time of signing inform consent. For Japan: Male or female, age at least 20 years at the time of signing informed consent - Subjects diagnosed with T2D...</td>
+          <td>Change in HbA1c (Glycosylated Haemoglobin) | Time frame: Week 0, week 30 | Estimated mean change from baseline in HbA1c at week 30. The post-baseline responses are analysed using a mixed model for repeated measurements with treatment, country and stratifica...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03086330" target="_blank" rel="noopener">NCT03086330</a></td>
+          <td>This trial is conducted in Asia, Europe and North America. The aim of the trial is to compare the effect of semaglutide s.c. 1.0 mg once-weekly versus placebo as add-on to sodium glucose co-transporter-2 inhibitor (SGLT-2i) monotherapy o...</td>
+          <td>Inclusion Criteria: * Informed consent obtained before any trial-related activities. Trial-related activities are any procedures that are carried out as part of the trial, including activities to determine suitability...</td>
+          <td>Change in HbA1c | Time frame: Week 0, week 30 | Change from baseline (week 0) in HbA1c was evaluated at week 30. Results are based on the &#39;on-treatment without rescue medication&#39; observation period, which started at the date of first dose of trial product a...</td>
+          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2019-02-18)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01394952" target="_blank" rel="noopener">NCT01394952</a></td>
+          <td>The purpose of this trial is to assess whether dulaglutide can reduce major cardiovascular events and other serious outcomes in persons with type 2 diabetes, when added to their anti-hyperglycemic regimen.</td>
+          <td>Inclusion Criteria: * Type 2 diabetes with Hemoglobin A1c equal to or less than 9.5% (equal to or less than 81 mmol/mol) * Anti-hyperglycemic drug naive or treated with up to 2 oral hyperglycemic drugs with or without...</td>
+          <td>Number of Participants Who Experienced an Event For Time, From Randomization to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome) | Time frame: From randomization to first occ...</td>
+          <td><span class="pill">Study Protocol (2016-10-05)</span>
+<span class="pill">Statistical Analysis Plan (2016-10-06)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03689374" target="_blank" rel="noopener">NCT03689374</a></td>
+          <td>This study will compare the effect of semaglutide once weekly to insulin aspart 3 times daily as add on to metformin and insulin glargine in people with type 2 diabetes. Participants will either get insulin glargine and semaglutide or in...</td>
+          <td>Inclusion Criteria: * Male or female, age greater than or equal to 18 years at the time of signing informed consent * Diagnosed with type 2 diabetes greater than or equal to 180 days prior to the day of screening * Tr...</td>
+          <td>Change From Baseline in Glycated Haemoglobin (HbA1c) | Time frame: Baseline (week 0), week 52 | Change from baseline in HbA1c at week 52 is presented. Data is reported for &#39;on-treatment&#39; observation period: from the date of first dose of trial product (week...</td>
+          <td><span class="pill">Study Protocol (2020-07-08)</span>
+<span class="pill">Statistical Analysis Plan (2021-01-25)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02254291" target="_blank" rel="noopener">NCT02254291</a></td>
+          <td>This trial is conducted in Japan. The purpose is to compare the safety of once-weekly dosing of semaglutide (0.5 and 1.0 mg) versus sitagliptin (100 mg) once daily, both as monotherapy during 30 weeks of treatment in Japanese subjects wi...</td>
+          <td>Inclusion Criteria: * Male or female, age 20 years or older at the time of signing informed consent * Glycated hemoglobin (HbA1c) between 6.5% and 9.5% (48-80 mmol/mol) (both inclusive) for subjects treated with oral...</td>
+          <td>Number of Treatment Emergent Adverse Events (TEAEs) | Time frame: Weeks 0-30 | An adverse events (AEs) was defined as any unfavourable and unintended sign (including an abnormal laboratory finding), symptom or disease temporally associated with the use of a...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03191396" target="_blank" rel="noopener">NCT03191396</a></td>
+          <td>This study is conducted in Europe. The aim of the study is to compare the effect of semaglutide subcutaneous (s.c., under the skin) 1.0 mg once-weekly to liraglutide s.c.1.2 mg once-daily on blood sugar levels after 30 weeks of treatment...</td>
+          <td>Inclusion Criteria: - Male or female, age 18 years or older at the time of signing informed consent - Diagnosed with type 2 diabetes mellitus - HbA1c of 7.0-11.0 % (53 - 97 mmol/mol) (both inclusive) - Stable daily do...</td>
+          <td>Change in HbA1c | Time frame: Week 0, week 30 | Mean change from baseline (week 0) to week 30 in glycosylated haemoglobin (HbA1c) %. The endpoint was evaluated based on the &#39;on-treatment without rescue medication period&#39; where subjects were considered treat...</td>
+          <td><span class="pill">Study Protocol (2019-05-27)</span>
+<span class="pill">Statistical Analysis Plan (2019-05-27)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01720446" target="_blank" rel="noopener">NCT01720446</a></td>
+          <td>This trial is conducted globally. The aim of the trial is to evaluate cardiovascular and other long-term outcomes with semaglutide in subjects with type 2 diabetes. The trial is event-driven, i.e. the maximum trial duration (up to max. 1...</td>
+          <td>Inclusion Criteria: - Men and women with type 2 diabetes mellitus - Age above or equal to 50 years at screening and clinical evidence of cardiovascular disease or age above or equal to 60 years at screening and subcli...</td>
+          <td>Time From Randomisation to First Occurrence of a MACE, Defined as Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke | Time frame: Time from randomisation up to end of follow-up (scheduled at week 109) | Percentage of subjects experi...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00917267" target="_blank" rel="noopener">NCT00917267</a></td>
+          <td>Previous studies have suggested that a once-weekly formulation of exenatide may provide sustained glycemic control. These previous studies of exenatide once weekly have been conducted in non-Asian populations, so this study has been deve...</td>
+          <td>Inclusion Criteria: * Have been diagnosed with type 2 diabetes. * Have suboptimal glycemic control as evidenced by an HbA1c between 7.1% and 11.0% inclusive. * Have a body mass index (BMI) of \&gt;21 kg/m2 and \&lt;35 kg/m2...</td>
+          <td>Change in HbA1c From Baseline to Week 26. | Time frame: Baseline, Week 26 | Change in HbA1c from baseline to Week 26.</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03136484" target="_blank" rel="noopener">NCT03136484</a></td>
+          <td>This trial is conducted in Africa, Asia, Europe, North and South America. The aim of the trial is to compare the effect of once-weekly (OW) dosing of subcutaneous semaglutide (1.0 mg) versus once-daily dosing of oral canagliflozin (300 m...</td>
+          <td>Inclusion Criteria: - Informed consent obtained before any trial-related activities. Trial-related activities are any procedures that are carried out as part of the trial, including activities to determine suitability...</td>
+          <td>Change in HbA1c | Time frame: Week 0, week 52 | Change from baseline (week 0) to week 52 in HbA1c (glycosylated haemoglobin) was evaluated. Results are based on the &#39;on-treatment without rescue medication&#39; observation period, which started at the date of fi...</td>
+          <td><span class="pill">Study Protocol (2019-06-03)</span>
+<span class="pill">Statistical Analysis Plan (2019-06-03)</span></td>
+        </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Benchmark Reconciliation Ledger</h3>
+            <p>Use this registry-native ledger to check study overlap, comparator definitions, and outcome alignment against published syntheses before accepting pooled estimates as publication-ready.</p>
+            <table class="table table--small">
+              <thead>
+                <tr>
+                  <th>NCT</th>
+                  <th>Registry Contrast</th>
+                  <th>Outcome</th>
+                  <th>Enrollment</th>
+                  <th>Benchmark Use</th>
+                </tr>
+              </thead>
+              <tbody>
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01779362" target="_blank" rel="noopener">NCT01779362</a></td>
+        <td>Metformin Alone vs Placebo | Glargine Followed by Metformin vs Placebo</td>
+        <td>ß-cell Response Measured by Hyperglycemic Clamp</td>
+        <td>267 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01885208" target="_blank" rel="noopener">NCT01885208</a></td>
+        <td>Exenatide ER 2.0 mg vs Semaglutide 1.0 mg</td>
+        <td>Change From Baseline in HbA1c (Glycosylated Haemoglobin)</td>
+        <td>813 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01179048" target="_blank" rel="noopener">NCT01179048</a></td>
+        <td>Liraglutide vs Placebo</td>
+        <td>Time From Randomisation to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome)</td>
+        <td>9341 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02305381" target="_blank" rel="noopener">NCT02305381</a></td>
+        <td>Semaglutide 0.5 mg vs Placebo | Semaglutide 1.0 mg vs Placebo</td>
+        <td>Change in HbA1c (Glycosylated Haemoglobin)</td>
+        <td>397 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03086330" target="_blank" rel="noopener">NCT03086330</a></td>
+        <td>Semaglutide 1.0 mg vs Placebo</td>
+        <td>Change in HbA1c</td>
+        <td>302 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01394952" target="_blank" rel="noopener">NCT01394952</a></td>
+        <td>Dulaglutide vs Placebo</td>
+        <td>Number of Participants Who Experienced an Event For Time, From Randomization to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome)</td>
+        <td>9901 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03689374" target="_blank" rel="noopener">NCT03689374</a></td>
+        <td>Insulin Aspart vs Semaglutide</td>
+        <td>Change From Baseline in Glycated Haemoglobin (HbA1c)</td>
+        <td>2274 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02254291" target="_blank" rel="noopener">NCT02254291</a></td>
+        <td>Semaglutide 1.0 mg vs Semaglutide 0.5 mg | Sitagliptin vs Semaglutide 0.5 mg</td>
+        <td>Number of Treatment Emergent Adverse Events (TEAEs)</td>
+        <td>308 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03191396" target="_blank" rel="noopener">NCT03191396</a></td>
+        <td>Liraglutide 1.2 mg vs Semaglutide 1.0 mg</td>
+        <td>Change in HbA1c</td>
+        <td>577 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01720446" target="_blank" rel="noopener">NCT01720446</a></td>
+        <td>Semaglutide vs Placebo</td>
+        <td>Time From Randomisation to First Occurrence of a MACE, Defined as Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke</td>
+        <td>3297 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr></tbody>
+            </table>
+          </div>
+
+          <div class="summary-card" style="margin-top: 16px;">
+            <h3>Reviewer Validation</h3>
+            <p>The embedded panel below now runs the shared R benchmark suites plus topic-specific checks for the current CT.gov snapshot. Reviewers should pair it with <code>validation.json</code> and the benchmark ledger above.</p>
+            <div class="topic-stats" style="flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+              <a class="pill" href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fglp1-cvot%2Fvalidation.json&amp;topic=glp1-cvot&amp;label=GLP-1+Receptor+Agonist+Cardiovascular+Outcome+Trials" target="_blank" rel="noopener">Open topic-aware WebR runner</a>
+              <a class="pill" href="validation.json">Open topic validation.json</a>
+            </div>
+            <iframe
+              id="reviewerValidationFrame"
+              src="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fglp1-cvot%2Fvalidation.json&amp;topic=glp1-cvot&amp;label=GLP-1+Receptor+Agonist+Cardiovascular+Outcome+Trials"
+              title="WebR reviewer validation"
+              loading="lazy"
+              style="width: 100%; min-height: 420px; border: 1px solid rgba(148, 163, 184, 0.25); border-radius: 18px; background: rgba(15, 23, 42, 0.88);"
+            ></iframe>
+            <script>
+(() => {
+  const iframe = document.getElementById("reviewerValidationFrame");
+  const context = {"source":"ctgov-portfolio-generator","topicId":"glp1-cvot","label":"GLP-1 Receptor Agonist Cardiovascular Outcome Trials","query":"(\"type 2 diabetes\") AND (liraglutide OR semaglutide OR dulaglutide OR exenatide OR albiglutide OR efpeglenatide) AND (\"LEADER\" OR \"SUSTAIN\" OR \"REWIND\" OR \"HARMONY\" OR \"AMPLITUDE-O\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":21,"excludedCount":21,"totalEnrollment":35373,"demographicsCoverage":21,"documentCoverage":9,"comparisons":[{"studyId":"NCT01779362","title":"RISE Adult Medication Study","t1":"Metformin Alone","t2":"Placebo","measure":"MD","effect":0.04999999999999982,"se":1.943820637658455,"n1":56,"n0":58,"totalN":114,"sampleSize":114},{"studyId":"NCT01779362","title":"RISE Adult Medication Study","t1":"Glargine Followed by Metformin","t2":"Placebo","measure":"MD","effect":-0.020000000000000018,"se":2.2526911343854437,"n1":65,"n0":58,"totalN":123,"sampleSize":123},{"studyId":"NCT01779362","title":"RISE Adult Medication Study","t1":"Liraglutide + Metformin","t2":"Placebo","measure":"MD","effect":0.1299999999999999,"se":2.053230736094578,"n1":53,"n0":58,"totalN":111,"sampleSize":111},{"studyId":"NCT01885208","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Exenatide ER 2.0 mg Once-weekly as add-on to 1-2 Oral Antidiabetic Drugs (OADs) in Subjects With Type 2 Diabetes","t1":"Exenatide ER 2.0 mg","t2":"Semaglutide 1.0 mg","measure":"MD","effect":0.62,"se":0.0848528137423857,"n1":405,"n0":404,"totalN":809,"sampleSize":809},{"studyId":"NCT01179048","title":"Liraglutide Effect and Action in Diabetes: Evaluation of Cardiovascular Outcome Results","t1":"Liraglutide","t2":"Placebo","measure":"logRR","effect":-0.1355553243882603,"se":0.3789576563148374,"n1":4668,"n0":4672,"totalN":9340,"sampleSize":9340},{"studyId":"NCT02305381","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Placebo as add-on to Basal Insulin Alone or Basal Insulin in Combination With Metformin in Subjects With Type 2 Diabetes","t1":"Semaglutide 0.5 mg","t2":"Placebo","measure":"MD","effect":-1.3599999999999999,"se":0.12727922061357855,"n1":132,"n0":133,"totalN":265,"sampleSize":265},{"studyId":"NCT02305381","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Placebo as add-on to Basal Insulin Alone or Basal Insulin in Combination With Metformin in Subjects With Type 2 Diabetes","t1":"Semaglutide 1.0 mg","t2":"Placebo","measure":"MD","effect":-1.76,"se":0.12727922061357858,"n1":131,"n0":133,"totalN":264,"sampleSize":264},{"studyId":"NCT03086330","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Placebo as add-on to SGLT-2i in Subjects With Type 2 Diabetes Mellitus","t1":"Semaglutide 1.0 mg","t2":"Placebo","measure":"MD","effect":-1.4000000000000001,"se":0.09799310693422532,"n1":151,"n0":151,"totalN":302,"sampleSize":302},{"studyId":"NCT01394952","title":"Researching Cardiovascular Events With a Weekly Incretin in Diabetes (REWIND)","t1":"Dulaglutide","t2":"Placebo","measure":"logRR","effect":-0.10928967141067156,"se":0.05279959920636933,"n1":4949,"n0":4952,"totalN":9901,"sampleSize":9901},{"studyId":"NCT03689374","title":"A Research Study to Compare Semaglutide to Insulin Aspart, When Taken Together With Metformin and Insulin Glargine, in People With Type 2 Diabetes","t1":"Insulin Aspart","t2":"Semaglutide","measure":"MD","effect":0.30000000000000004,"se":0.05034879187620907,"n1":783,"n0":795,"totalN":1578,"sampleSize":1578},{"studyId":"NCT02254291","title":"A Trial Comparing the Safety and Efficacy of Semaglutide Once Weekly Versus Sitagliptin Once Daily in Japanese Subjects With Type 2 Diabetes","t1":"Semaglutide 1.0 mg","t2":"Semaglutide 0.5 mg","measure":"logRR","effect":-0.13638572527108755,"se":null,"n1":102,"n0":103,"totalN":205,"sampleSize":205},{"studyId":"NCT02254291","title":"A Trial Comparing the Safety and Efficacy of Semaglutide Once Weekly Versus Sitagliptin Once Daily in Japanese Subjects With Type 2 Diabetes","t1":"Sitagliptin","t2":"Semaglutide 0.5 mg","measure":"logRR","effect":-0.20359895524123942,"se":null,"n1":103,"n0":103,"totalN":206,"sampleSize":206},{"studyId":"NCT03191396","title":"Research Study Comparing a New Medicine Semaglutide to Liraglutide in People With Type 2 Diabetes","t1":"Liraglutide 1.2 mg","t2":"Semaglutide 1.0 mg","measure":"MD","effect":0.5999999999999999,"se":0.07923019630019322,"n1":287,"n0":290,"totalN":577,"sampleSize":577},{"studyId":"NCT01720446","title":"Trial to Evaluate Cardiovascular and Other Long-term Outcomes With Semaglutide in Subjects With Type 2 Diabetes","t1":"Semaglutide","t2":"Placebo","measure":"logRR","effect":-0.2983750156155323,"se":0.5125051002889423,"n1":1648,"n0":1649,"totalN":3297,"sampleSize":3297},{"studyId":"NCT00917267","title":"A Study to Examine the Effects of Exenatide Once-Weekly Injection on Glucose Control and Safety in Asian Subjects","t1":"Exenatide Twice Daily","t2":"Exenatide Once Weekly","measure":"MD","effect":0.30999999999999983,"se":0.09899494936611665,"n1":263,"n0":307,"totalN":570,"sampleSize":570},{"studyId":"NCT03136484","title":"Efficacy and Safety of Semaglutide Versus Canagliflozin as add-on to Metformin in Subjects With Type 2 Diabetes","t1":"Canagliflozin + Semaglutide Placebo","t2":"Semaglutide + Canagliflozin Placebo","measure":"MD","effect":0.7,"se":0.07489417237567662,"n1":394,"n0":394,"totalN":788,"sampleSize":788},{"studyId":"NCT00775684","title":"Effect of Exenatide, Sitagliptin or Glimepiride on Functional ß -Cell Mass","t1":"Sitagliptin","t2":"Exenatide","measure":"MD","effect":-65,"se":63.245553203367585,"n1":12,"n0":14,"totalN":26,"sampleSize":26},{"studyId":"NCT00775684","title":"Effect of Exenatide, Sitagliptin or Glimepiride on Functional ß -Cell Mass","t1":"Glimepiride","t2":"Exenatide","measure":"MD","effect":-81,"se":62.93647591023825,"n1":14,"n0":14,"totalN":28,"sampleSize":28},{"studyId":"NCT02648204","title":"Efficacy and Safety of Semaglutide Versus Dulaglutide as add-on to Metformin in Subjects With Type 2 Diabetes.","t1":"Semaglutide 1.0 mg","t2":"Semaglutide 0.5 mg","measure":"MD","effect":-0.27,"se":0.08485281374238571,"n1":300,"n0":301,"totalN":601,"sampleSize":601},{"studyId":"NCT02648204","title":"Efficacy and Safety of Semaglutide Versus Dulaglutide as add-on to Metformin in Subjects With Type 2 Diabetes.","t1":"Dulaglutide 0.75 mg","t2":"Semaglutide 0.5 mg","measure":"MD","effect":0.3999999999999999,"se":0.07810249675906654,"n1":299,"n0":301,"totalN":600,"sampleSize":600},{"studyId":"NCT02648204","title":"Efficacy and Safety of Semaglutide Versus Dulaglutide as add-on to Metformin in Subjects With Type 2 Diabetes.","t1":"Dulaglutide 1.5 mg","t2":"Semaglutide 0.5 mg","measure":"MD","effect":0.1399999999999999,"se":0.08485281374238571,"n1":299,"n0":301,"totalN":600,"sampleSize":600},{"studyId":"NCT02207374","title":"A Trial Comparing the Safety and Efficacy of Semaglutide Once Weekly in Monotherapy or in Combination With One OAD in Japanese Subjects With Type 2 Diabetes","t1":"Semaglutide 1.0 mg","t2":"Semaglutide 0.5 mg","measure":"logRR","effect":0.039985195711663465,"se":null,"n1":241,"n0":239,"totalN":480,"sampleSize":480},{"studyId":"NCT02207374","title":"A Trial Comparing the Safety and Efficacy of Semaglutide Once Weekly in Monotherapy or in Combination With One OAD in Japanese Subjects With Type 2 Diabetes","t1":"Additional OAD","t2":"Semaglutide 0.5 mg","measure":"logRR","effect":-0.528661905426175,"se":null,"n1":120,"n0":239,"totalN":359,"sampleSize":359},{"studyId":"NCT03061214","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Sitagliptin Once-daily as add-on to Metformin in Subjects With Type 2 Diabetes (SUSTAIN - CHINA MRCT)","t1":"Semaglutide 1.0 mg","t2":"Semaglutide 0.5 mg","measure":"MD","effect":-0.30000000000000004,"se":0.08363308159553104,"n1":290,"n0":288,"totalN":578,"sampleSize":578},{"studyId":"NCT03061214","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Sitagliptin Once-daily as add-on to Metformin in Subjects With Type 2 Diabetes (SUSTAIN - CHINA MRCT)","t1":"Sitagliptin","t2":"Semaglutide 0.5 mg","measure":"MD","effect":0.5,"se":0.08363308159553104,"n1":290,"n0":288,"totalN":578,"sampleSize":578},{"studyId":"NCT01930188","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Sitagliptin Once-daily as add-on to Metformin and/or TZD in Subjects With Type 2 Diabetes","t1":"Semaglutide 1.0 mg + Sitagliptin Placebo","t2":"Semaglutide 0.5 mg + Sitagliptin Placebo","measure":"MD","effect":-0.29000000000000004,"se":0.07071067811865475,"n1":409,"n0":409,"totalN":818,"sampleSize":818},{"studyId":"NCT01930188","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Sitagliptin Once-daily as add-on to Metformin and/or TZD in Subjects With Type 2 Diabetes","t1":"Sitagliptin + Semaglutide Placebo","t2":"Semaglutide 0.5 mg + Sitagliptin Placebo","measure":"MD","effect":0.77,"se":0.07071067811865477,"n1":407,"n0":409,"totalN":816,"sampleSize":816},{"studyId":"NCT02128932","title":"Efficacy and Safety of Semaglutide Once Weekly Versus Insulin Glargine Once Daily as add-on to Metformin With or Without Sulphonylurea in Insulin-naïve Subjects With Type 2 Diabetes","t1":"Semaglutide 1.0 mg/Week","t2":"Semaglutide 0.5mg/Week","measure":"MD","effect":-0.42999999999999994,"se":0.07071067811865475,"n1":360,"n0":362,"totalN":722,"sampleSize":722},{"studyId":"NCT02128932","title":"Efficacy and Safety of Semaglutide Once Weekly Versus Insulin Glargine Once Daily as add-on to Metformin With or Without Sulphonylurea in Insulin-naïve Subjects With Type 2 Diabetes","t1":"Insulin Glargine","t2":"Semaglutide 0.5mg/Week","measure":"MD","effect":0.38,"se":0.07071067811865475,"n1":360,"n0":362,"totalN":722,"sampleSize":722},{"studyId":"NCT03989232","title":"A Research Study to Compare Two Doses of Semaglutide Taken Once Weekly in People With Type 2 Diabetes","t1":"Semaglutide 2.0 mg","t2":"Semaglutide 1.0 mg","measure":"MD","effect":-0.20000000000000018,"se":0.06451616396171903,"n1":480,"n0":481,"totalN":961,"sampleSize":961},{"studyId":"NCT01473953","title":"Safety, Tolerability and Pharmacokinetics of Liraglutide-depot in Healthy Subjects","t1":"Cohort 1a: Lira-depot 2.25 mg","t2":"Placebo","measure":"logRR","effect":-1.178654996341646,"se":0.34436861586059725,"n1":6,"n0":8,"totalN":14,"sampleSize":14},{"studyId":"NCT01473953","title":"Safety, Tolerability and Pharmacokinetics of Liraglutide-depot in Healthy Subjects","t1":"Cohort 2a: Lira-depot 6.75 mg","t2":"Placebo","measure":"logRR","effect":-1.178654996341646,"se":0.34436861586059725,"n1":6,"n0":8,"totalN":14,"sampleSize":14},{"studyId":"NCT01473953","title":"Safety, Tolerability and Pharmacokinetics of Liraglutide-depot in Healthy Subjects","t1":"Cohort 3a: Lira-depot 15 mg","t2":"Placebo","measure":"logRR","effect":-0.8909729238898653,"se":0.18776690404970273,"n1":6,"n0":8,"totalN":14,"sampleSize":14},{"studyId":"NCT01473953","title":"Safety, Tolerability and Pharmacokinetics of Liraglutide-depot in Healthy Subjects","t1":"Cohort 4a: Lira-depot 30 mg","t2":"Placebo","measure":"logRR","effect":0.9495767095076219,"se":null,"n1":5,"n0":8,"totalN":13,"sampleSize":13},{"studyId":"NCT02054897","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Placebo in Drug-naïve Subjects With Type 2 Diabetes","t1":"Semaglutide 0.5 mg","t2":"Placebo","measure":"MD","effect":-1.47,"se":0.12002997445405819,"n1":128,"n0":129,"totalN":257,"sampleSize":257},{"studyId":"NCT02054897","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Placebo in Drug-naïve Subjects With Type 2 Diabetes","t1":"Semaglutide 1.0 mg","t2":"Placebo","measure":"MD","effect":-1.56,"se":0.13598300430476434,"n1":130,"n0":129,"totalN":259,"sampleSize":259}],"includedStudies":[{"nctId":"NCT01779362","title":"RISE Adult Medication Study","status":"COMPLETED","enrollment":267,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"ß-cell Response Measured by Hyperglycemic Clamp","groups":[{"title":"Metformin Alone","n":56,"events":null,"mean":3.65,"sd":9.411413733058945},{"title":"Glargine Followed by Metformin","n":65,"events":null,"mean":3.58,"sd":13.67704439443504},{"title":"Placebo","n":58,"events":null,"mean":3.6,"sd":11.287663710476865},{"title":"Liraglutide + Metformin","n":53,"events":null,"mean":3.73,"sd":10.344441857982776}]},"primaryOutcomes":[{"measure":"ß-cell Response Measured by Hyperglycemic Clamp","timeFrame":"3-months after medication washout (Month 15)"},{"measure":"Insulin Sensitivity, M/I","timeFrame":"3-months after a medication washout"}]},{"nctId":"NCT01885208","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Exenatide ER 2.0 mg Once-weekly as add-on to 1-2 Oral Antidiabetic Drugs (OADs) in Subjects With Type 2 Diabetes","status":"COMPLETED","enrollment":813,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change From Baseline in HbA1c (Glycosylated Haemoglobin)","groups":[{"title":"Semaglutide 1.0 mg","n":404,"events":null,"mean":-1.54,"sd":1.2059850745345067},{"title":"Exenatide ER 2.0 mg","n":405,"events":null,"mean":-0.92,"sd":1.2074767078498865}]},"primaryOutcomes":[{"measure":"Change From Baseline in HbA1c (Glycosylated Haemoglobin)","timeFrame":"Week 0, week 56"}]},{"nctId":"NCT01179048","title":"Liraglutide Effect and Action in Diabetes: Evaluation of Cardiovascular Outcome Results","status":"COMPLETED","enrollment":9341,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Time From Randomisation to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome)","groups":[{"title":"Liraglutide","n":4668,"events":13,"mean":null,"sd":null},{"title":"Placebo","n":4672,"events":14.9,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time From Randomisation to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome)","timeFrame":"from randomisation (visit 3; month 0) to last contact (visit 16; up to month 60+30 days)"}]},{"nctId":"NCT02305381","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Placebo as add-on to Basal Insulin Alone or Basal Insulin in Combination With Metformin in Subjects With Type 2 Diabetes","status":"COMPLETED","enrollment":397,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in HbA1c (Glycosylated Haemoglobin)","groups":[{"title":"Semaglutide 0.5 mg","n":132,"events":null,"mean":-1.45,"sd":1.034021276376845},{"title":"Semaglutide 1.0 mg","n":131,"events":null,"mean":-1.85,"sd":1.0300970828033638},{"title":"Placebo","n":133,"events":null,"mean":-0.09,"sd":1.0379306335203717}]},"primaryOutcomes":[{"measure":"Change in HbA1c (Glycosylated Haemoglobin)","timeFrame":"Week 0, week 30"}]},{"nctId":"NCT03086330","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Placebo as add-on to SGLT-2i in Subjects With Type 2 Diabetes Mellitus","status":"COMPLETED","enrollment":302,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in HbA1c","groups":[{"title":"Semaglutide 1.0 mg","n":151,"events":null,"mean":-1.6,"sd":0.8},{"title":"Placebo","n":151,"events":null,"mean":-0.2,"sd":0.9}]},"primaryOutcomes":[{"measure":"Change in HbA1c","timeFrame":"Week 0, week 30"}]},{"nctId":"NCT01394952","title":"Researching Cardiovascular Events With a Weekly Incretin in Diabetes (REWIND)","status":"COMPLETED","enrollment":9901,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants Who Experienced an Event For Time, From Randomization to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome)","groups":[{"title":"Placebo","n":4952,"events":663,"mean":null,"sd":null},{"title":"Dulaglutide","n":4949,"events":594,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Participants Who Experienced an Event For Time, From Randomization to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome)","timeFrame":"From randomization to first occurrence or death from any cause or study completion (Median Follow-Up of 5.4 Years)"}]},{"nctId":"NCT03689374","title":"A Research Study to Compare Semaglutide to Insulin Aspart, When Taken Together With Metformin and Insulin Glargine, in People With Type 2 Diabetes","status":"COMPLETED","enrollment":2274,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change From Baseline in Glycated Haemoglobin (HbA1c)","groups":[{"title":"Semaglutide","n":795,"events":null,"mean":-1.5,"sd":1},{"title":"Insulin Aspart","n":783,"events":null,"mean":-1.2,"sd":1}]},"primaryOutcomes":[{"measure":"Change From Baseline in Glycated Haemoglobin (HbA1c)","timeFrame":"Baseline (week 0), week 52"}]},{"nctId":"NCT02254291","title":"A Trial Comparing the Safety and Efficacy of Semaglutide Once Weekly Versus Sitagliptin Once Daily in Japanese Subjects With Type 2 Diabetes","status":"COMPLETED","enrollment":308,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Treatment Emergent Adverse Events (TEAEs)","groups":[{"title":"Semaglutide 0.5 mg","n":103,"events":228,"mean":null,"sd":null},{"title":"Semaglutide 1.0 mg","n":102,"events":197,"mean":null,"sd":null},{"title":"Sitagliptin","n":103,"events":186,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Treatment Emergent Adverse Events (TEAEs)","timeFrame":"Weeks 0-30"}]},{"nctId":"NCT03191396","title":"Research Study Comparing a New Medicine Semaglutide to Liraglutide in People With Type 2 Diabetes","status":"COMPLETED","enrollment":577,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in HbA1c","groups":[{"title":"Semaglutide 1.0 mg","n":290,"events":null,"mean":-1.7,"sd":0.9},{"title":"Liraglutide 1.2 mg","n":287,"events":null,"mean":-1.1,"sd":1}]},"primaryOutcomes":[{"measure":"Change in HbA1c","timeFrame":"Week 0, week 30"}]},{"nctId":"NCT01720446","title":"Trial to Evaluate Cardiovascular and Other Long-term Outcomes With Semaglutide in Subjects With Type 2 Diabetes","status":"COMPLETED","enrollment":3297,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Time From Randomisation to First Occurrence of a MACE, Defined as Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke","groups":[{"title":"Semaglutide","n":1648,"events":6.6,"mean":null,"sd":null},{"title":"Placebo","n":1649,"events":8.9,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time From Randomisation to First Occurrence of a MACE, Defined as Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke","timeFrame":"Time from randomisation up to end of follow-up (scheduled at week 109)"}]},{"nctId":"NCT00917267","title":"A Study to Examine the Effects of Exenatide Once-Weekly Injection on Glucose Control and Safety in Asian Subjects","status":"COMPLETED","enrollment":691,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in HbA1c From Baseline to Week 26.","groups":[{"title":"Exenatide Once Weekly","n":307,"events":null,"mean":-1.43,"sd":1.2264990827554663},{"title":"Exenatide Twice Daily","n":263,"events":null,"mean":-1.12,"sd":1.13520923181588}]},"primaryOutcomes":[{"measure":"Change in HbA1c From Baseline to Week 26.","timeFrame":"Baseline, Week 26"}]},{"nctId":"NCT03136484","title":"Efficacy and Safety of Semaglutide Versus Canagliflozin as add-on to Metformin in Subjects With Type 2 Diabetes","status":"COMPLETED","enrollment":788,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in HbA1c","groups":[{"title":"Semaglutide + Canagliflozin Placebo","n":394,"events":null,"mean":-1.7,"sd":1.1},{"title":"Canagliflozin + Semaglutide Placebo","n":394,"events":null,"mean":-1,"sd":1}]},"primaryOutcomes":[{"measure":"Change in HbA1c","timeFrame":"Week 0, week 52"}]},{"nctId":"NCT00775684","title":"Effect of Exenatide, Sitagliptin or Glimepiride on Functional ß -Cell Mass","status":"COMPLETED","enrollment":47,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Effect on Functional Beta-cell Mass as Determined by Change in ß-cell Secretory Capacity at 6 Months (μU/ml)","groups":[{"title":"Exenatide","n":14,"events":null,"mean":214,"sd":224.49944320643647},{"title":"Sitagliptin","n":12,"events":null,"mean":149,"sd":69.28203230275508},{"title":"Glimepiride","n":14,"events":null,"mean":133,"sd":71.09149034870488}]},"primaryOutcomes":[{"measure":"Effect on Functional Beta-cell Mass as Determined by Change in ß-cell Secretory Capacity at 6 Months (μU/ml)","timeFrame":"Baseline and 6 months"},{"measure":"Effect on Functional Beta-cell Mass as Determined by Change in ß-cell Secretory Capacity at 6 Months (pg/mL)","timeFrame":"Baseline and 6 months"}]},{"nctId":"NCT02648204","title":"Efficacy and Safety of Semaglutide Versus Dulaglutide as add-on to Metformin in Subjects With Type 2 Diabetes.","status":"COMPLETED","enrollment":1201,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in HbA1c","groups":[{"title":"Semaglutide 0.5 mg","n":301,"events":null,"mean":-1.51,"sd":1.0409610943738483},{"title":"Semaglutide 1.0 mg","n":300,"events":null,"mean":-1.78,"sd":1.0392304845413265},{"title":"Dulaglutide 0.75 mg","n":299,"events":null,"mean":-1.11,"sd":0.8645808232895291},{"title":"Dulaglutide 1.5 mg","n":299,"events":null,"mean":-1.37,"sd":1.037496987947435}]},"primaryOutcomes":[{"measure":"Change in HbA1c","timeFrame":"Week 0, week 40"}]},{"nctId":"NCT02207374","title":"A Trial Comparing the Safety and Efficacy of Semaglutide Once Weekly in Monotherapy or in Combination With One OAD in Japanese Subjects With Type 2 Diabetes","status":"COMPLETED","enrollment":601,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Treatment Emergent Adverse Events (TEAEs)","groups":[{"title":"Semaglutide 0.5 mg","n":239,"events":909,"mean":null,"sd":null},{"title":"Semaglutide 1.0 mg","n":241,"events":954,"mean":null,"sd":null},{"title":"Additional OAD","n":120,"events":269,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Treatment Emergent Adverse Events (TEAEs)","timeFrame":"Weeks 0-56"}]},{"nctId":"NCT03061214","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Sitagliptin Once-daily as add-on to Metformin in Subjects With Type 2 Diabetes (SUSTAIN - CHINA MRCT)","status":"COMPLETED","enrollment":868,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in HbA1c","groups":[{"title":"Semaglutide 0.5 mg","n":288,"events":null,"mean":-1.5,"sd":1.1},{"title":"Semaglutide 1.0 mg","n":290,"events":null,"mean":-1.8,"sd":0.9},{"title":"Sitagliptin","n":290,"events":null,"mean":-1,"sd":0.9}]},"primaryOutcomes":[{"measure":"Change in HbA1c","timeFrame":"Week 0, week 30"}]},{"nctId":"NCT01930188","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Sitagliptin Once-daily as add-on to Metformin and/or TZD in Subjects With Type 2 Diabetes","status":"COMPLETED","enrollment":1231,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in HbA1c (Glycosylated Haemoglobin) From Baseline","groups":[{"title":"Semaglutide 0.5 mg + Sitagliptin Placebo","n":409,"events":null,"mean":-1.32,"sd":1.0111874208078342},{"title":"Semaglutide 1.0 mg + Sitagliptin Placebo","n":409,"events":null,"mean":-1.61,"sd":1.0111874208078342},{"title":"Sitagliptin + Semaglutide Placebo","n":407,"events":null,"mean":-0.55,"sd":1.008712050091601}]},"primaryOutcomes":[{"measure":"Change in HbA1c (Glycosylated Haemoglobin) From Baseline","timeFrame":"Week 0, week 56"}]},{"nctId":"NCT02128932","title":"Efficacy and Safety of Semaglutide Once Weekly Versus Insulin Glargine Once Daily as add-on to Metformin With or Without Sulphonylurea in Insulin-naïve Subjects With Type 2 Diabetes","status":"COMPLETED","enrollment":1089,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in HbA1c From Baseline","groups":[{"title":"Semaglutide 0.5mg/Week","n":362,"events":null,"mean":-1.21,"sd":0.9513148795220223},{"title":"Semaglutide 1.0 mg/Week","n":360,"events":null,"mean":-1.64,"sd":0.9486832980505139},{"title":"Insulin Glargine","n":360,"events":null,"mean":-0.83,"sd":0.9486832980505139}]},"primaryOutcomes":[{"measure":"Change in HbA1c From Baseline","timeFrame":"Week 0, week 30"}]},{"nctId":"NCT03989232","title":"A Research Study to Compare Two Doses of Semaglutide Taken Once Weekly in People With Type 2 Diabetes","status":"COMPLETED","enrollment":961,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in HbA1c","groups":[{"title":"Semaglutide 1.0 mg","n":481,"events":null,"mean":-2,"sd":1},{"title":"Semaglutide 2.0 mg","n":480,"events":null,"mean":-2.2,"sd":1}]},"primaryOutcomes":[{"measure":"Change in HbA1c","timeFrame":"Week 0, week 40"}]},{"nctId":"NCT01473953","title":"Safety, Tolerability and Pharmacokinetics of Liraglutide-depot in Healthy Subjects","status":"COMPLETED","enrollment":31,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Treatment Emergent Adverse Events (TEAEs)","groups":[{"title":"Cohort 1a: Lira-depot 2.25 mg","n":6,"events":3,"mean":null,"sd":null},{"title":"Cohort 2a: Lira-depot 6.75 mg","n":6,"events":3,"mean":null,"sd":null},{"title":"Cohort 3a: Lira-depot 15 mg","n":6,"events":4,"mean":null,"sd":null},{"title":"Cohort 4a: Lira-depot 30 mg","n":5,"events":21,"mean":null,"sd":null},{"title":"Placebo","n":8,"events":13,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Treatment Emergent Adverse Events (TEAEs)","timeFrame":"Day 0 and up to 21 days after treatment"}]},{"nctId":"NCT02054897","title":"Efficacy and Safety of Semaglutide Once-weekly Versus Placebo in Drug-naïve Subjects With Type 2 Diabetes","status":"COMPLETED","enrollment":388,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in HbA1c (Glycosylated Haemoglobin)","groups":[{"title":"Semaglutide 0.5 mg","n":128,"events":null,"mean":-1.47,"sd":1.02},{"title":"Semaglutide 1.0 mg","n":130,"events":null,"mean":-1.56,"sd":1.26},{"title":"Placebo","n":129,"events":null,"mean":0,"sd":0.9}]},"primaryOutcomes":[{"measure":"Change in HbA1c (Glycosylated Haemoglobin)","timeFrame":"Week 0, week 30"}]}]};
+  if (!iframe || !context) return;
+  const sendContext = () => {
+    if (!iframe.contentWindow) return;
+    iframe.contentWindow.postMessage({ type: "esc-topic-validation-context", payload: context }, "*");
+  };
+  iframe.addEventListener("load", sendContext);
+  window.addEventListener("message", event => {
+    if (event.source === iframe.contentWindow && event.data?.type === "esc-topic-validation-request") {
+      sendContext();
+    }
+  });
+  window.setTimeout(sendContext, 250);
+})();
+</script>
+          </div>
+        </div>
+      </section>
+
+      <main class="layout">
+        <section class="panel topics">
+          <div class="panel__header">
+            <h2 id="topicPanelTitle">CT.gov-validated topic (21 eligible RCTs in snapshot)</h2>
+            <div class="topic-stats">
+              <span id="topicCount">0</span> topics -
+              <span id="trialCount">0</span> trials
+            </div>
+          </div>
+          <div class="panel__body">
+            <div id="topicList" class="topic-list"></div>
+          </div>
+        </section>
+
+        <section class="panel detail">
+          <div class="panel__header">
+            <h2 id="topicTitle">Select a topic</h2>
+            <div class="panel__meta" id="topicMeta"></div>
+            <div class="export-buttons">
+              <button id="exportCsvBtn" class="btn btn--small">CSV</button>
+              <button id="exportJsonBtn" class="btn btn--small">JSON</button>
+              <button id="exportPdfBtn" class="btn btn--small btn--accent">PDF Report</button>
+              <button id="exportRBtn" class="btn btn--small">R Script</button>
+              <button id="addStudyBtn" class="btn btn--small btn--secondary">+ Add Study</button>
+            </div>
+          </div>
+          <div class="panel__body">
+            <div class="tabs">
+              <button class="tab active" data-tab="overview">Overview</button>
+              <button class="tab" data-tab="trials">Trials</button>
+              <button class="tab" data-tab="pairwise">Pairwise Meta</button>
+              <button class="tab" data-tab="network">Network</button>
+              <button class="tab" data-tab="dose">Dose Response</button>
+              <button class="tab" data-tab="grade">GRADE</button>
+              <button class="tab" data-tab="cumulative">Cumulative</button>
+              <button class="tab" data-tab="diagnostics">Diagnostics</button>
+              <button class="tab" data-tab="raw">Raw Records</button>
+              <button class="tab" data-tab="transparency">Transparency</button>
+            </div>
+            <div class="tab-content active" id="tab-overview">
+              <div class="summary-grid">
+                <div class="summary-card">
+                  <h3>Evidence Snapshot</h3>
+                  <div id="overviewSnapshot"></div>
+                </div>
+                <div class="summary-card">
+                  <h3>Meta Summary</h3>
+                  <div id="metaSummary"></div>
+                </div>
+                <div class="summary-card">
+                  <h3>Key Warnings</h3>
+                  <div id="warningList"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-trials">
+              <div id="trialTable"></div>
+            </div>
+            <div class="tab-content" id="tab-pairwise">
+              <div class="forest-container">
+                <div class="forest-controls">
+                  <button id="forestResetBtn" class="btn btn--small">Reset Exclusions</button>
+                  <span id="forestExcludedCount" class="muted"></span>
+                </div>
+                <div class="forest-wrapper">
+                  <canvas id="forestChart" width="900" height="460"></canvas>
+                  <div id="forestTooltip" class="forest-tooltip hidden"></div>
+                </div>
+              </div>
+              <div id="pairwiseTable"></div>
+            </div>
+            <div class="tab-content" id="tab-network">
+              <canvas id="networkChart" width="900" height="460"></canvas>
+              <div id="networkTable"></div>
+            </div>
+            <div class="tab-content" id="tab-dose">
+              <canvas id="doseChart" width="900" height="460"></canvas>
+              <div id="doseTable"></div>
+            </div>
+            <div class="tab-content" id="tab-grade">
+              <div class="grade-assessment">
+                <h3>GRADE Certainty of Evidence</h3>
+                <div id="gradeTable"></div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-cumulative">
+              <canvas id="cumulativeChart" width="900" height="460"></canvas>
+              <div id="cumulativeTable"></div>
+            </div>
+            <div class="tab-content" id="tab-diagnostics">
+              <div class="diagnostics-grid">
+                <div class="diagnostic-section">
+                  <h4>Funnel Plot</h4>
+                  <canvas id="funnelChart" width="500" height="400"></canvas>
+                </div>
+                <div class="diagnostic-section">
+                  <div id="diagnosticTable"></div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-content" id="tab-raw">
+              <pre id="rawJson"></pre>
+            </div>
+            <div class="tab-content" id="tab-transparency">
+              <div class="summary-card">
+                <h3>Transparency Summary</h3>
+                <div id="transparencySummary"></div>
+              </div>
+              <div class="summary-card" style="margin-top: 16px;">
+                <h3>Record Ledger</h3>
+                <div id="transparencyLedger"></div>
+              </div>
+              <div class="summary-card" style="margin-top: 16px;">
+                <h3>Reviewer Links</h3>
+                <div id="transparencyBenchmarks"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <section class="panel log">
+        <div class="panel__header">
+          <h2>Update Log</h2>
+        </div>
+        <div class="panel__body">
+          <div id="logStream" class="log-stream"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Dataset Import Modal -->
+    <div id="datasetModal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Import R Package Dataset</h2>
+          <button id="closeModalBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="dataset-filters">
+            <label>
+              Source:
+              <select id="datasetSourceFilter">
+                <option value="all">All Sources</option>
+                <option value="metafor">metafor</option>
+                <option value="meta">meta</option>
+                <option value="netmeta">netmeta</option>
+                <option value="mada">mada (DTA)</option>
+                <option value="literature">Published Literature</option>
+              </select>
+            </label>
+            <label>
+              Type:
+              <select id="datasetTypeFilter">
+                <option value="all">All Types</option>
+                <option value="pairwise">Pairwise</option>
+                <option value="network">Network</option>
+                <option value="diagnostic">Diagnostic</option>
+                <option value="continuous">Continuous</option>
+              </select>
+            </label>
+            <label>
+              Relevance:
+              <select id="datasetRelevanceFilter">
+                <option value="all">All</option>
+                <option value="acs">ACS-specific</option>
+                <option value="cardiovascular">Cardiovascular</option>
+                <option value="classic">Classic examples</option>
+              </select>
+            </label>
+            <input type="text" id="datasetSearch" placeholder="Search datasets..." />
+          </div>
+          <div id="datasetList" class="dataset-list"></div>
+          <div id="datasetPreview" class="dataset-preview hidden">
+            <h3 id="previewTitle"></h3>
+            <p id="previewDescription"></p>
+            <div id="previewStats" class="preview-stats"></div>
+            <div id="previewCitation" class="preview-citation"></div>
+            <table id="previewTable" class="preview-table"></table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="import-options">
+            <label>
+              <input type="checkbox" id="createTopicCheck" checked />
+              Create as new topic
+            </label>
+            <input type="text" id="customTopicName" placeholder="Custom topic name (optional)" />
+          </div>
+          <button id="importDatasetConfirmBtn" class="btn btn--primary" disabled>Import Selected Dataset</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Manual Study Entry Modal -->
+    <div id="studyEntryModal" class="modal hidden">
+      <div class="modal-content modal-content--medium">
+        <div class="modal-header">
+          <h2>Add Study Manually</h2>
+          <button id="closeStudyEntryBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-section">
+            <h4>Study Information</h4>
+            <div class="form-row">
+              <label>
+                Study Name/ID *
+                <input type="text" id="entryStudyName" placeholder="e.g., COMPLETE 2019" required />
+              </label>
+              <label>
+                Year
+                <input type="number" id="entryStudyYear" placeholder="2019" min="1900" max="2100" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h4>Outcome Type</h4>
+            <div class="form-row">
+              <label class="radio-label">
+                <input type="radio" name="outcomeType" value="binary" checked /> Binary (events/n)
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="outcomeType" value="continuous" /> Continuous (mean/SD/n)
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="outcomeType" value="precomputed" /> Pre-computed (HR/OR/RR with CI)
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section" id="binaryOutcomeSection">
+            <h4>Binary Outcome Data</h4>
+            <div class="form-row">
+              <label>
+                Treatment Arm Label
+                <input type="text" id="entryTreat1Label" placeholder="e.g., Complete revasc" />
+              </label>
+              <label>
+                Events
+                <input type="number" id="entryTreat1Events" min="0" />
+              </label>
+              <label>
+                Total N
+                <input type="number" id="entryTreat1N" min="1" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Control Arm Label
+                <input type="text" id="entryTreat2Label" placeholder="e.g., Culprit-only" />
+              </label>
+              <label>
+                Events
+                <input type="number" id="entryTreat2Events" min="0" />
+              </label>
+              <label>
+                Total N
+                <input type="number" id="entryTreat2N" min="1" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section hidden" id="continuousOutcomeSection">
+            <h4>Continuous Outcome Data</h4>
+            <div class="form-row">
+              <label>
+                Treatment Arm Label
+                <input type="text" id="entryContTreat1Label" placeholder="e.g., Intervention" />
+              </label>
+              <label>
+                Mean
+                <input type="number" id="entryContTreat1Mean" step="any" />
+              </label>
+              <label>
+                SD
+                <input type="number" id="entryContTreat1SD" step="any" min="0" />
+              </label>
+              <label>
+                N
+                <input type="number" id="entryContTreat1N" min="1" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Control Arm Label
+                <input type="text" id="entryContTreat2Label" placeholder="e.g., Control" />
+              </label>
+              <label>
+                Mean
+                <input type="number" id="entryContTreat2Mean" step="any" />
+              </label>
+              <label>
+                SD
+                <input type="number" id="entryContTreat2SD" step="any" min="0" />
+              </label>
+              <label>
+                N
+                <input type="number" id="entryContTreat2N" min="1" />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section hidden" id="precomputedSection">
+            <h4>Pre-computed Effect Size</h4>
+            <div class="form-row">
+              <label>
+                Effect Measure
+                <select id="entryEffectMeasure">
+                  <option value="HR">Hazard Ratio (HR)</option>
+                  <option value="OR">Odds Ratio (OR)</option>
+                  <option value="RR">Risk Ratio (RR)</option>
+                  <option value="MD">Mean Difference (MD)</option>
+                  <option value="SMD">Standardized Mean Difference (SMD)</option>
+                </select>
+              </label>
+              <label>
+                Point Estimate
+                <input type="number" id="entryEffectValue" step="any" placeholder="e.g., 0.74" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                95% CI Lower
+                <input type="number" id="entryCILower" step="any" />
+              </label>
+              <label>
+                95% CI Upper
+                <input type="number" id="entryCIUpper" step="any" />
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Treatment Label
+                <input type="text" id="entryPreTreat1" placeholder="e.g., Treatment" />
+              </label>
+              <label>
+                Control Label
+                <input type="text" id="entryPreTreat2" placeholder="e.g., Control" />
+              </label>
+            </div>
+          </div>
+
+          <div id="entryPreview" class="entry-preview hidden">
+            <h4>Preview</h4>
+            <div id="entryPreviewContent"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="previewStudyBtn" class="btn">Preview</button>
+          <button id="addStudyConfirmBtn" class="btn btn--primary" disabled>Add Study to Topic</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROB2 Risk of Bias Modal -->
+    <div id="robModal" class="modal hidden">
+      <div class="modal-content modal-content--medium">
+        <div class="modal-header">
+          <h2>Risk of Bias Assessment (ROB2)</h2>
+          <button id="closeRobModalBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="rob-study-info">
+            <strong>Study:</strong> <span id="robStudyName">-</span>
+          </div>
+          <div class="rob-domains">
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D1: Randomization process</span>
+                <select id="robD1" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD1Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D2: Deviations from intended interventions</span>
+                <select id="robD2" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD2Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D3: Missing outcome data</span>
+                <select id="robD3" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD3Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D4: Measurement of the outcome</span>
+                <select id="robD4" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD4Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+            <div class="rob-domain-row">
+              <label>
+                <span class="domain-label">D5: Selection of reported result</span>
+                <select id="robD5" class="rob-select">
+                  <option value="">Not assessed</option>
+                  <option value="low">Low risk</option>
+                  <option value="some">Some concerns</option>
+                  <option value="high">High risk</option>
+                </select>
+              </label>
+              <input type="text" id="robD5Notes" placeholder="Notes (optional)" class="rob-notes" />
+            </div>
+          </div>
+          <div class="rob-overall">
+            <label>
+              <strong>Overall Risk of Bias:</strong>
+              <span id="robOverallCalc" class="rob-overall-calc">-</span>
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="saveRobBtn" class="btn btn--primary">Save Assessment</button>
+          <button id="clearRobBtn" class="btn">Clear</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- External Import Modal -->
+    <div id="externalImportModal" class="modal hidden">
+      <div class="modal-content modal-content--small">
+        <div class="modal-header">
+          <h2>Import from External Source</h2>
+          <button id="closeExternalModalBtn" class="modal-close">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="import-tabs">
+            <button class="import-tab active" data-source="zenodo">Zenodo</button>
+            <button class="import-tab" data-source="github">GitHub</button>
+            <button class="import-tab" data-source="csv">CSV Upload</button>
+          </div>
+          <div class="import-panel active" id="zenodo-panel">
+            <label>
+              Zenodo DOI or Record ID:
+              <input type="text" id="zenodoDoi" placeholder="10.5281/zenodo.1234567 or 1234567" />
+            </label>
+            <button id="fetchZenodoBtn" class="btn">Fetch Record</button>
+            <div id="zenodoResult" class="import-result"></div>
+          </div>
+          <div class="import-panel" id="github-panel">
+            <label>
+              GitHub Raw URL:
+              <input type="text" id="githubUrl" placeholder="https://raw.githubusercontent.com/..." />
+            </label>
+            <button id="fetchGithubBtn" class="btn">Fetch File</button>
+            <div id="githubResult" class="import-result"></div>
+          </div>
+          <div class="import-panel" id="csv-panel">
+            <label>
+              Upload CSV/JSON file:
+              <input type="file" id="csvUpload" accept=".csv,.json" />
+            </label>
+            <div id="csvResult" class="import-result"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="openExternalImportBtn" class="btn btn--secondary">Import from URL/File</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Start Wizard Modal -->
+    <div id="quickStartModal" class="modal">
+      <div class="modal-content modal-content--wizard">
+        <div class="wizard-header">
+          <h2 id="welcomeTitle">GLP-1 Receptor Agonist Cardiovascular Outcome Trials CT.gov review</h2>
+          <p class="wizard-subtitle">Quick Start Guide (2 minutes)</p>
+        </div>
+        <div class="wizard-body">
+          <div class="wizard-step active" data-step="1">
+            <div class="wizard-step-icon">1</div>
+            <h3>Select a Topic</h3>
+            <p>Choose from 47 pre-configured ACS topics in the left sidebar. Each topic is aligned with ESC Guidelines questions.</p>
+            <div class="wizard-highlight" data-target="topicList">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='150' viewBox='0 0 300 150'%3E%3Crect fill='%231a1a2e' width='300' height='150'/%3E%3Ctext fill='%2300d4ff' x='150' y='75' text-anchor='middle' font-size='14'%3ETopics appear here%3C/text%3E%3C/svg%3E" alt="Topic list">
+            </div>
+          </div>
+          <div class="wizard-step" data-step="2">
+            <div class="wizard-step-icon">2</div>
+            <h3>Load Evidence</h3>
+            <p>Click "Update from ClinicalTrials.gov" to automatically fetch RCT data, or import from R datasets.</p>
+            <ul class="wizard-tips">
+              <li>Auto-extracts study arms, outcomes, and sample sizes</li>
+              <li>Deduplicates against existing data</li>
+              <li>Works offline after first load</li>
+            </ul>
+          </div>
+          <div class="wizard-step" data-step="3">
+            <div class="wizard-step-icon">3</div>
+            <h3>Review Analysis Tabs</h3>
+            <p>Navigate through the analysis tabs to explore your evidence:</p>
+            <ul class="wizard-tabs-preview">
+              <li><strong>Overview</strong> - Evidence snapshot and warnings</li>
+              <li><strong>Pairwise Meta</strong> - Forest plot with click-to-exclude</li>
+              <li><strong>Network</strong> - NMA with treatment rankings</li>
+              <li><strong>GRADE</strong> - Automated certainty assessment</li>
+            </ul>
+          </div>
+          <div class="wizard-step" data-step="4">
+            <div class="wizard-step-icon">4</div>
+            <h3>Export Results</h3>
+            <p>Generate publication-ready outputs for your guideline panel:</p>
+            <ul class="wizard-exports">
+              <li><strong>PDF Report</strong> - Complete analysis summary</li>
+              <li><strong>R Script</strong> - Reproducible code for verification</li>
+              <li><strong>CSV/JSON</strong> - Data for further analysis</li>
+            </ul>
+          </div>
+        </div>
+        <div class="wizard-footer">
+          <div class="wizard-progress">
+            <span class="wizard-dot active" data-step="1"></span>
+            <span class="wizard-dot" data-step="2"></span>
+            <span class="wizard-dot" data-step="3"></span>
+            <span class="wizard-dot" data-step="4"></span>
+          </div>
+          <div class="wizard-buttons">
+            <button id="wizardPrevBtn" class="btn btn--outline" disabled>Previous</button>
+            <button id="wizardNextBtn" class="btn btn--primary">Next</button>
+            <button id="wizardFinishBtn" class="btn btn--accent hidden">Get Started</button>
+          </div>
+          <label class="wizard-dismiss">
+            <input type="checkbox" id="dontShowAgain"> Don't show this again
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contextual Help Tooltip System -->
+    <div id="helpTooltip" class="help-tooltip hidden">
+      <div class="help-tooltip-content"></div>
+      <div class="help-tooltip-arrow"></div>
+    </div>
+
+    <!-- Interactive Tour Overlay -->
+    <div id="tourOverlay" class="tour-overlay hidden">
+      <div class="tour-spotlight"></div>
+      <div class="tour-tooltip">
+        <div class="tour-tooltip-header">
+          <span class="tour-step-indicator">Step 1 of 8</span>
+          <button class="tour-close">&times;</button>
+        </div>
+        <div class="tour-tooltip-body">
+          <h4 class="tour-title"></h4>
+          <p class="tour-description"></p>
+        </div>
+        <div class="tour-tooltip-footer">
+          <button class="tour-prev btn btn--small btn--outline">Previous</button>
+          <button class="tour-next btn btn--small btn--primary">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Help Button (Fixed Position) -->
+    <button id="helpBtn" class="help-fab" title="Help & Tutorials">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/>
+      </svg>
+    </button>
+
+    <!-- Help Menu -->
+    <div id="helpMenu" class="help-menu hidden">
+      <div class="help-menu-header">
+        <h3>Help & Learning</h3>
+        <button class="help-menu-close">&times;</button>
+      </div>
+      <div class="help-menu-body">
+        <button class="help-menu-item" data-action="quickstart">
+          <span class="help-menu-icon">🚀</span>
+          <div>
+            <strong>Quick Start Guide</strong>
+            <small>2-minute introduction</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="tour">
+          <span class="help-menu-icon">🎯</span>
+          <div>
+            <strong>Interactive Tour</strong>
+            <small>Step-by-step walkthrough</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="shortcuts">
+          <span class="help-menu-icon">⌨️</span>
+          <div>
+            <strong>Keyboard Shortcuts</strong>
+            <small>Speed up your workflow</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="grade">
+          <span class="help-menu-icon">📊</span>
+          <div>
+            <strong>GRADE Assessment Help</strong>
+            <small>Understanding certainty ratings</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="nma">
+          <span class="help-menu-icon">🔗</span>
+          <div>
+            <strong>Network Meta-Analysis</strong>
+            <small>Interpreting NMA results</small>
+          </div>
+        </button>
+        <button class="help-menu-item" data-action="manual">
+          <span class="help-menu-icon">📖</span>
+          <div>
+            <strong>Full User Manual</strong>
+            <small>Complete documentation</small>
+          </div>
+        </button>
+      </div>
+      <div class="help-menu-footer">
+        <small>Press <kbd>?</kbd> anytime for help</small>
+      </div>
+    </div>
+
+    <script>
+      window.__ESC_ACS_TOPICS_OVERRIDE__ = {
+  "baseQuery": "(\"type 2 diabetes\") AND (liraglutide OR semaglutide OR dulaglutide OR exenatide OR albiglutide OR efpeglenatide)",
+  "topics": [
+    {
+      "id": "glp1-cvot",
+      "label": "GLP-1 Receptor Agonist Cardiovascular Outcome Trials",
+      "keywords": [
+        "LEADER",
+        "SUSTAIN",
+        "REWIND",
+        "HARMONY",
+        "AMPLITUDE-O"
+      ]
+    }
+  ],
+  "appConfig": {
+    "pageTitle": "GLP-1 Receptor Agonist Cardiovascular Outcome Trials | CT.gov Living Meta-Analysis",
+    "kicker": "Registry-Native Cardiovascular Evidence",
+    "title": "GLP-1 Receptor Agonist Cardiovascular Outcome Trials Living Meta-Analysis",
+    "subtitle": "Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.",
+    "topicPanelTitle": "CT.gov-validated topic (21 eligible RCTs in snapshot)",
+    "welcomeTitle": "GLP-1 Receptor Agonist Cardiovascular Outcome Trials CT.gov review",
+    "eligibilityTrialMinimum": 1,
+    "analysisStudioName": "GLP-1 Receptor Agonist Cardiovascular Outcome Trials CT.gov Living Meta-Analysis Studio",
+    "defaultStatuses": [
+      "COMPLETED"
+    ],
+    "defaultOutcomeRule": "results",
+    "requirePostedResults": true,
+    "requireNumericOutcome": true,
+    "requireComparatorArms": true,
+    "enforceConditionFilter": false,
+    "autoUpdateOnLoad": true,
+    "rValidationHref": "../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fglp1-cvot%2Fvalidation.json&topic=glp1-cvot&label=GLP-1+Receptor+Agonist+Cardiovascular+Outcome+Trials",
+    "rValidationContext": {
+      "source": "ctgov-portfolio-generator",
+      "topicId": "glp1-cvot",
+      "label": "GLP-1 Receptor Agonist Cardiovascular Outcome Trials",
+      "query": "(\"type 2 diabetes\") AND (liraglutide OR semaglutide OR dulaglutide OR exenatide OR albiglutide OR efpeglenatide) AND (\"LEADER\" OR \"SUSTAIN\" OR \"REWIND\" OR \"HARMONY\" OR \"AMPLITUDE-O\")",
+      "generatedAt": "2026-03-28T18:45:05.888Z",
+      "includedCount": 21,
+      "excludedCount": 21,
+      "totalEnrollment": 35373,
+      "demographicsCoverage": 21,
+      "documentCoverage": 9,
+      "comparisons": [
+        {
+          "studyId": "NCT01779362",
+          "title": "RISE Adult Medication Study",
+          "t1": "Metformin Alone",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": 0.04999999999999982,
+          "se": 1.943820637658455,
+          "n1": 56,
+          "n0": 58,
+          "totalN": 114,
+          "sampleSize": 114
+        },
+        {
+          "studyId": "NCT01779362",
+          "title": "RISE Adult Medication Study",
+          "t1": "Glargine Followed by Metformin",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": -0.020000000000000018,
+          "se": 2.2526911343854437,
+          "n1": 65,
+          "n0": 58,
+          "totalN": 123,
+          "sampleSize": 123
+        },
+        {
+          "studyId": "NCT01779362",
+          "title": "RISE Adult Medication Study",
+          "t1": "Liraglutide + Metformin",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": 0.1299999999999999,
+          "se": 2.053230736094578,
+          "n1": 53,
+          "n0": 58,
+          "totalN": 111,
+          "sampleSize": 111
+        },
+        {
+          "studyId": "NCT01885208",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Exenatide ER 2.0 mg Once-weekly as add-on to 1-2 Oral Antidiabetic Drugs (OADs) in Subjects With Type 2 Diabetes",
+          "t1": "Exenatide ER 2.0 mg",
+          "t2": "Semaglutide 1.0 mg",
+          "measure": "MD",
+          "effect": 0.62,
+          "se": 0.0848528137423857,
+          "n1": 405,
+          "n0": 404,
+          "totalN": 809,
+          "sampleSize": 809
+        },
+        {
+          "studyId": "NCT01179048",
+          "title": "Liraglutide Effect and Action in Diabetes: Evaluation of Cardiovascular Outcome Results",
+          "t1": "Liraglutide",
+          "t2": "Placebo",
+          "measure": "logRR",
+          "effect": -0.1355553243882603,
+          "se": 0.3789576563148374,
+          "n1": 4668,
+          "n0": 4672,
+          "totalN": 9340,
+          "sampleSize": 9340
+        },
+        {
+          "studyId": "NCT02305381",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Placebo as add-on to Basal Insulin Alone or Basal Insulin in Combination With Metformin in Subjects With Type 2 Diabetes",
+          "t1": "Semaglutide 0.5 mg",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": -1.3599999999999999,
+          "se": 0.12727922061357855,
+          "n1": 132,
+          "n0": 133,
+          "totalN": 265,
+          "sampleSize": 265
+        },
+        {
+          "studyId": "NCT02305381",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Placebo as add-on to Basal Insulin Alone or Basal Insulin in Combination With Metformin in Subjects With Type 2 Diabetes",
+          "t1": "Semaglutide 1.0 mg",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": -1.76,
+          "se": 0.12727922061357858,
+          "n1": 131,
+          "n0": 133,
+          "totalN": 264,
+          "sampleSize": 264
+        },
+        {
+          "studyId": "NCT03086330",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Placebo as add-on to SGLT-2i in Subjects With Type 2 Diabetes Mellitus",
+          "t1": "Semaglutide 1.0 mg",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": -1.4000000000000001,
+          "se": 0.09799310693422532,
+          "n1": 151,
+          "n0": 151,
+          "totalN": 302,
+          "sampleSize": 302
+        },
+        {
+          "studyId": "NCT01394952",
+          "title": "Researching Cardiovascular Events With a Weekly Incretin in Diabetes (REWIND)",
+          "t1": "Dulaglutide",
+          "t2": "Placebo",
+          "measure": "logRR",
+          "effect": -0.10928967141067156,
+          "se": 0.05279959920636933,
+          "n1": 4949,
+          "n0": 4952,
+          "totalN": 9901,
+          "sampleSize": 9901
+        },
+        {
+          "studyId": "NCT03689374",
+          "title": "A Research Study to Compare Semaglutide to Insulin Aspart, When Taken Together With Metformin and Insulin Glargine, in People With Type 2 Diabetes",
+          "t1": "Insulin Aspart",
+          "t2": "Semaglutide",
+          "measure": "MD",
+          "effect": 0.30000000000000004,
+          "se": 0.05034879187620907,
+          "n1": 783,
+          "n0": 795,
+          "totalN": 1578,
+          "sampleSize": 1578
+        },
+        {
+          "studyId": "NCT02254291",
+          "title": "A Trial Comparing the Safety and Efficacy of Semaglutide Once Weekly Versus Sitagliptin Once Daily in Japanese Subjects With Type 2 Diabetes",
+          "t1": "Semaglutide 1.0 mg",
+          "t2": "Semaglutide 0.5 mg",
+          "measure": "logRR",
+          "effect": -0.13638572527108755,
+          "se": null,
+          "n1": 102,
+          "n0": 103,
+          "totalN": 205,
+          "sampleSize": 205
+        },
+        {
+          "studyId": "NCT02254291",
+          "title": "A Trial Comparing the Safety and Efficacy of Semaglutide Once Weekly Versus Sitagliptin Once Daily in Japanese Subjects With Type 2 Diabetes",
+          "t1": "Sitagliptin",
+          "t2": "Semaglutide 0.5 mg",
+          "measure": "logRR",
+          "effect": -0.20359895524123942,
+          "se": null,
+          "n1": 103,
+          "n0": 103,
+          "totalN": 206,
+          "sampleSize": 206
+        },
+        {
+          "studyId": "NCT03191396",
+          "title": "Research Study Comparing a New Medicine Semaglutide to Liraglutide in People With Type 2 Diabetes",
+          "t1": "Liraglutide 1.2 mg",
+          "t2": "Semaglutide 1.0 mg",
+          "measure": "MD",
+          "effect": 0.5999999999999999,
+          "se": 0.07923019630019322,
+          "n1": 287,
+          "n0": 290,
+          "totalN": 577,
+          "sampleSize": 577
+        },
+        {
+          "studyId": "NCT01720446",
+          "title": "Trial to Evaluate Cardiovascular and Other Long-term Outcomes With Semaglutide in Subjects With Type 2 Diabetes",
+          "t1": "Semaglutide",
+          "t2": "Placebo",
+          "measure": "logRR",
+          "effect": -0.2983750156155323,
+          "se": 0.5125051002889423,
+          "n1": 1648,
+          "n0": 1649,
+          "totalN": 3297,
+          "sampleSize": 3297
+        },
+        {
+          "studyId": "NCT00917267",
+          "title": "A Study to Examine the Effects of Exenatide Once-Weekly Injection on Glucose Control and Safety in Asian Subjects",
+          "t1": "Exenatide Twice Daily",
+          "t2": "Exenatide Once Weekly",
+          "measure": "MD",
+          "effect": 0.30999999999999983,
+          "se": 0.09899494936611665,
+          "n1": 263,
+          "n0": 307,
+          "totalN": 570,
+          "sampleSize": 570
+        },
+        {
+          "studyId": "NCT03136484",
+          "title": "Efficacy and Safety of Semaglutide Versus Canagliflozin as add-on to Metformin in Subjects With Type 2 Diabetes",
+          "t1": "Canagliflozin + Semaglutide Placebo",
+          "t2": "Semaglutide + Canagliflozin Placebo",
+          "measure": "MD",
+          "effect": 0.7,
+          "se": 0.07489417237567662,
+          "n1": 394,
+          "n0": 394,
+          "totalN": 788,
+          "sampleSize": 788
+        },
+        {
+          "studyId": "NCT00775684",
+          "title": "Effect of Exenatide, Sitagliptin or Glimepiride on Functional ß -Cell Mass",
+          "t1": "Sitagliptin",
+          "t2": "Exenatide",
+          "measure": "MD",
+          "effect": -65,
+          "se": 63.245553203367585,
+          "n1": 12,
+          "n0": 14,
+          "totalN": 26,
+          "sampleSize": 26
+        },
+        {
+          "studyId": "NCT00775684",
+          "title": "Effect of Exenatide, Sitagliptin or Glimepiride on Functional ß -Cell Mass",
+          "t1": "Glimepiride",
+          "t2": "Exenatide",
+          "measure": "MD",
+          "effect": -81,
+          "se": 62.93647591023825,
+          "n1": 14,
+          "n0": 14,
+          "totalN": 28,
+          "sampleSize": 28
+        },
+        {
+          "studyId": "NCT02648204",
+          "title": "Efficacy and Safety of Semaglutide Versus Dulaglutide as add-on to Metformin in Subjects With Type 2 Diabetes.",
+          "t1": "Semaglutide 1.0 mg",
+          "t2": "Semaglutide 0.5 mg",
+          "measure": "MD",
+          "effect": -0.27,
+          "se": 0.08485281374238571,
+          "n1": 300,
+          "n0": 301,
+          "totalN": 601,
+          "sampleSize": 601
+        },
+        {
+          "studyId": "NCT02648204",
+          "title": "Efficacy and Safety of Semaglutide Versus Dulaglutide as add-on to Metformin in Subjects With Type 2 Diabetes.",
+          "t1": "Dulaglutide 0.75 mg",
+          "t2": "Semaglutide 0.5 mg",
+          "measure": "MD",
+          "effect": 0.3999999999999999,
+          "se": 0.07810249675906654,
+          "n1": 299,
+          "n0": 301,
+          "totalN": 600,
+          "sampleSize": 600
+        },
+        {
+          "studyId": "NCT02648204",
+          "title": "Efficacy and Safety of Semaglutide Versus Dulaglutide as add-on to Metformin in Subjects With Type 2 Diabetes.",
+          "t1": "Dulaglutide 1.5 mg",
+          "t2": "Semaglutide 0.5 mg",
+          "measure": "MD",
+          "effect": 0.1399999999999999,
+          "se": 0.08485281374238571,
+          "n1": 299,
+          "n0": 301,
+          "totalN": 600,
+          "sampleSize": 600
+        },
+        {
+          "studyId": "NCT02207374",
+          "title": "A Trial Comparing the Safety and Efficacy of Semaglutide Once Weekly in Monotherapy or in Combination With One OAD in Japanese Subjects With Type 2 Diabetes",
+          "t1": "Semaglutide 1.0 mg",
+          "t2": "Semaglutide 0.5 mg",
+          "measure": "logRR",
+          "effect": 0.039985195711663465,
+          "se": null,
+          "n1": 241,
+          "n0": 239,
+          "totalN": 480,
+          "sampleSize": 480
+        },
+        {
+          "studyId": "NCT02207374",
+          "title": "A Trial Comparing the Safety and Efficacy of Semaglutide Once Weekly in Monotherapy or in Combination With One OAD in Japanese Subjects With Type 2 Diabetes",
+          "t1": "Additional OAD",
+          "t2": "Semaglutide 0.5 mg",
+          "measure": "logRR",
+          "effect": -0.528661905426175,
+          "se": null,
+          "n1": 120,
+          "n0": 239,
+          "totalN": 359,
+          "sampleSize": 359
+        },
+        {
+          "studyId": "NCT03061214",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Sitagliptin Once-daily as add-on to Metformin in Subjects With Type 2 Diabetes (SUSTAIN - CHINA MRCT)",
+          "t1": "Semaglutide 1.0 mg",
+          "t2": "Semaglutide 0.5 mg",
+          "measure": "MD",
+          "effect": -0.30000000000000004,
+          "se": 0.08363308159553104,
+          "n1": 290,
+          "n0": 288,
+          "totalN": 578,
+          "sampleSize": 578
+        },
+        {
+          "studyId": "NCT03061214",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Sitagliptin Once-daily as add-on to Metformin in Subjects With Type 2 Diabetes (SUSTAIN - CHINA MRCT)",
+          "t1": "Sitagliptin",
+          "t2": "Semaglutide 0.5 mg",
+          "measure": "MD",
+          "effect": 0.5,
+          "se": 0.08363308159553104,
+          "n1": 290,
+          "n0": 288,
+          "totalN": 578,
+          "sampleSize": 578
+        },
+        {
+          "studyId": "NCT01930188",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Sitagliptin Once-daily as add-on to Metformin and/or TZD in Subjects With Type 2 Diabetes",
+          "t1": "Semaglutide 1.0 mg + Sitagliptin Placebo",
+          "t2": "Semaglutide 0.5 mg + Sitagliptin Placebo",
+          "measure": "MD",
+          "effect": -0.29000000000000004,
+          "se": 0.07071067811865475,
+          "n1": 409,
+          "n0": 409,
+          "totalN": 818,
+          "sampleSize": 818
+        },
+        {
+          "studyId": "NCT01930188",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Sitagliptin Once-daily as add-on to Metformin and/or TZD in Subjects With Type 2 Diabetes",
+          "t1": "Sitagliptin + Semaglutide Placebo",
+          "t2": "Semaglutide 0.5 mg + Sitagliptin Placebo",
+          "measure": "MD",
+          "effect": 0.77,
+          "se": 0.07071067811865477,
+          "n1": 407,
+          "n0": 409,
+          "totalN": 816,
+          "sampleSize": 816
+        },
+        {
+          "studyId": "NCT02128932",
+          "title": "Efficacy and Safety of Semaglutide Once Weekly Versus Insulin Glargine Once Daily as add-on to Metformin With or Without Sulphonylurea in Insulin-naïve Subjects With Type 2 Diabetes",
+          "t1": "Semaglutide 1.0 mg/Week",
+          "t2": "Semaglutide 0.5mg/Week",
+          "measure": "MD",
+          "effect": -0.42999999999999994,
+          "se": 0.07071067811865475,
+          "n1": 360,
+          "n0": 362,
+          "totalN": 722,
+          "sampleSize": 722
+        },
+        {
+          "studyId": "NCT02128932",
+          "title": "Efficacy and Safety of Semaglutide Once Weekly Versus Insulin Glargine Once Daily as add-on to Metformin With or Without Sulphonylurea in Insulin-naïve Subjects With Type 2 Diabetes",
+          "t1": "Insulin Glargine",
+          "t2": "Semaglutide 0.5mg/Week",
+          "measure": "MD",
+          "effect": 0.38,
+          "se": 0.07071067811865475,
+          "n1": 360,
+          "n0": 362,
+          "totalN": 722,
+          "sampleSize": 722
+        },
+        {
+          "studyId": "NCT03989232",
+          "title": "A Research Study to Compare Two Doses of Semaglutide Taken Once Weekly in People With Type 2 Diabetes",
+          "t1": "Semaglutide 2.0 mg",
+          "t2": "Semaglutide 1.0 mg",
+          "measure": "MD",
+          "effect": -0.20000000000000018,
+          "se": 0.06451616396171903,
+          "n1": 480,
+          "n0": 481,
+          "totalN": 961,
+          "sampleSize": 961
+        },
+        {
+          "studyId": "NCT01473953",
+          "title": "Safety, Tolerability and Pharmacokinetics of Liraglutide-depot in Healthy Subjects",
+          "t1": "Cohort 1a: Lira-depot 2.25 mg",
+          "t2": "Placebo",
+          "measure": "logRR",
+          "effect": -1.178654996341646,
+          "se": 0.34436861586059725,
+          "n1": 6,
+          "n0": 8,
+          "totalN": 14,
+          "sampleSize": 14
+        },
+        {
+          "studyId": "NCT01473953",
+          "title": "Safety, Tolerability and Pharmacokinetics of Liraglutide-depot in Healthy Subjects",
+          "t1": "Cohort 2a: Lira-depot 6.75 mg",
+          "t2": "Placebo",
+          "measure": "logRR",
+          "effect": -1.178654996341646,
+          "se": 0.34436861586059725,
+          "n1": 6,
+          "n0": 8,
+          "totalN": 14,
+          "sampleSize": 14
+        },
+        {
+          "studyId": "NCT01473953",
+          "title": "Safety, Tolerability and Pharmacokinetics of Liraglutide-depot in Healthy Subjects",
+          "t1": "Cohort 3a: Lira-depot 15 mg",
+          "t2": "Placebo",
+          "measure": "logRR",
+          "effect": -0.8909729238898653,
+          "se": 0.18776690404970273,
+          "n1": 6,
+          "n0": 8,
+          "totalN": 14,
+          "sampleSize": 14
+        },
+        {
+          "studyId": "NCT01473953",
+          "title": "Safety, Tolerability and Pharmacokinetics of Liraglutide-depot in Healthy Subjects",
+          "t1": "Cohort 4a: Lira-depot 30 mg",
+          "t2": "Placebo",
+          "measure": "logRR",
+          "effect": 0.9495767095076219,
+          "se": null,
+          "n1": 5,
+          "n0": 8,
+          "totalN": 13,
+          "sampleSize": 13
+        },
+        {
+          "studyId": "NCT02054897",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Placebo in Drug-naïve Subjects With Type 2 Diabetes",
+          "t1": "Semaglutide 0.5 mg",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": -1.47,
+          "se": 0.12002997445405819,
+          "n1": 128,
+          "n0": 129,
+          "totalN": 257,
+          "sampleSize": 257
+        },
+        {
+          "studyId": "NCT02054897",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Placebo in Drug-naïve Subjects With Type 2 Diabetes",
+          "t1": "Semaglutide 1.0 mg",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": -1.56,
+          "se": 0.13598300430476434,
+          "n1": 130,
+          "n0": 129,
+          "totalN": 259,
+          "sampleSize": 259
+        }
+      ],
+      "includedStudies": [
+        {
+          "nctId": "NCT01779362",
+          "title": "RISE Adult Medication Study",
+          "status": "COMPLETED",
+          "enrollment": 267,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "ß-cell Response Measured by Hyperglycemic Clamp",
+            "groups": [
+              {
+                "title": "Metformin Alone",
+                "n": 56,
+                "events": null,
+                "mean": 3.65,
+                "sd": 9.411413733058945
+              },
+              {
+                "title": "Glargine Followed by Metformin",
+                "n": 65,
+                "events": null,
+                "mean": 3.58,
+                "sd": 13.67704439443504
+              },
+              {
+                "title": "Placebo",
+                "n": 58,
+                "events": null,
+                "mean": 3.6,
+                "sd": 11.287663710476865
+              },
+              {
+                "title": "Liraglutide + Metformin",
+                "n": 53,
+                "events": null,
+                "mean": 3.73,
+                "sd": 10.344441857982776
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "ß-cell Response Measured by Hyperglycemic Clamp",
+              "timeFrame": "3-months after medication washout (Month 15)"
+            },
+            {
+              "measure": "Insulin Sensitivity, M/I",
+              "timeFrame": "3-months after a medication washout"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01885208",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Exenatide ER 2.0 mg Once-weekly as add-on to 1-2 Oral Antidiabetic Drugs (OADs) in Subjects With Type 2 Diabetes",
+          "status": "COMPLETED",
+          "enrollment": 813,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change From Baseline in HbA1c (Glycosylated Haemoglobin)",
+            "groups": [
+              {
+                "title": "Semaglutide 1.0 mg",
+                "n": 404,
+                "events": null,
+                "mean": -1.54,
+                "sd": 1.2059850745345067
+              },
+              {
+                "title": "Exenatide ER 2.0 mg",
+                "n": 405,
+                "events": null,
+                "mean": -0.92,
+                "sd": 1.2074767078498865
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change From Baseline in HbA1c (Glycosylated Haemoglobin)",
+              "timeFrame": "Week 0, week 56"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01179048",
+          "title": "Liraglutide Effect and Action in Diabetes: Evaluation of Cardiovascular Outcome Results",
+          "status": "COMPLETED",
+          "enrollment": 9341,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Time From Randomisation to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome)",
+            "groups": [
+              {
+                "title": "Liraglutide",
+                "n": 4668,
+                "events": 13,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Placebo",
+                "n": 4672,
+                "events": 14.9,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Time From Randomisation to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome)",
+              "timeFrame": "from randomisation (visit 3; month 0) to last contact (visit 16; up to month 60+30 days)"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT02305381",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Placebo as add-on to Basal Insulin Alone or Basal Insulin in Combination With Metformin in Subjects With Type 2 Diabetes",
+          "status": "COMPLETED",
+          "enrollment": 397,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change in HbA1c (Glycosylated Haemoglobin)",
+            "groups": [
+              {
+                "title": "Semaglutide 0.5 mg",
+                "n": 132,
+                "events": null,
+                "mean": -1.45,
+                "sd": 1.034021276376845
+              },
+              {
+                "title": "Semaglutide 1.0 mg",
+                "n": 131,
+                "events": null,
+                "mean": -1.85,
+                "sd": 1.0300970828033638
+              },
+              {
+                "title": "Placebo",
+                "n": 133,
+                "events": null,
+                "mean": -0.09,
+                "sd": 1.0379306335203717
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change in HbA1c (Glycosylated Haemoglobin)",
+              "timeFrame": "Week 0, week 30"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT03086330",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Placebo as add-on to SGLT-2i in Subjects With Type 2 Diabetes Mellitus",
+          "status": "COMPLETED",
+          "enrollment": 302,
+          "documentsCount": 1,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change in HbA1c",
+            "groups": [
+              {
+                "title": "Semaglutide 1.0 mg",
+                "n": 151,
+                "events": null,
+                "mean": -1.6,
+                "sd": 0.8
+              },
+              {
+                "title": "Placebo",
+                "n": 151,
+                "events": null,
+                "mean": -0.2,
+                "sd": 0.9
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change in HbA1c",
+              "timeFrame": "Week 0, week 30"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01394952",
+          "title": "Researching Cardiovascular Events With a Weekly Incretin in Diabetes (REWIND)",
+          "status": "COMPLETED",
+          "enrollment": 9901,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Number of Participants Who Experienced an Event For Time, From Randomization to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome)",
+            "groups": [
+              {
+                "title": "Placebo",
+                "n": 4952,
+                "events": 663,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Dulaglutide",
+                "n": 4949,
+                "events": 594,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Number of Participants Who Experienced an Event For Time, From Randomization to First Occurrence of Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke (a Composite Cardiovascular Outcome)",
+              "timeFrame": "From randomization to first occurrence or death from any cause or study completion (Median Follow-Up of 5.4 Years)"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT03689374",
+          "title": "A Research Study to Compare Semaglutide to Insulin Aspart, When Taken Together With Metformin and Insulin Glargine, in People With Type 2 Diabetes",
+          "status": "COMPLETED",
+          "enrollment": 2274,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change From Baseline in Glycated Haemoglobin (HbA1c)",
+            "groups": [
+              {
+                "title": "Semaglutide",
+                "n": 795,
+                "events": null,
+                "mean": -1.5,
+                "sd": 1
+              },
+              {
+                "title": "Insulin Aspart",
+                "n": 783,
+                "events": null,
+                "mean": -1.2,
+                "sd": 1
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change From Baseline in Glycated Haemoglobin (HbA1c)",
+              "timeFrame": "Baseline (week 0), week 52"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT02254291",
+          "title": "A Trial Comparing the Safety and Efficacy of Semaglutide Once Weekly Versus Sitagliptin Once Daily in Japanese Subjects With Type 2 Diabetes",
+          "status": "COMPLETED",
+          "enrollment": 308,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Number of Treatment Emergent Adverse Events (TEAEs)",
+            "groups": [
+              {
+                "title": "Semaglutide 0.5 mg",
+                "n": 103,
+                "events": 228,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Semaglutide 1.0 mg",
+                "n": 102,
+                "events": 197,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Sitagliptin",
+                "n": 103,
+                "events": 186,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Number of Treatment Emergent Adverse Events (TEAEs)",
+              "timeFrame": "Weeks 0-30"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT03191396",
+          "title": "Research Study Comparing a New Medicine Semaglutide to Liraglutide in People With Type 2 Diabetes",
+          "status": "COMPLETED",
+          "enrollment": 577,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change in HbA1c",
+            "groups": [
+              {
+                "title": "Semaglutide 1.0 mg",
+                "n": 290,
+                "events": null,
+                "mean": -1.7,
+                "sd": 0.9
+              },
+              {
+                "title": "Liraglutide 1.2 mg",
+                "n": 287,
+                "events": null,
+                "mean": -1.1,
+                "sd": 1
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change in HbA1c",
+              "timeFrame": "Week 0, week 30"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01720446",
+          "title": "Trial to Evaluate Cardiovascular and Other Long-term Outcomes With Semaglutide in Subjects With Type 2 Diabetes",
+          "status": "COMPLETED",
+          "enrollment": 3297,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Time From Randomisation to First Occurrence of a MACE, Defined as Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke",
+            "groups": [
+              {
+                "title": "Semaglutide",
+                "n": 1648,
+                "events": 6.6,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Placebo",
+                "n": 1649,
+                "events": 8.9,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Time From Randomisation to First Occurrence of a MACE, Defined as Cardiovascular Death, Non-fatal Myocardial Infarction, or Non-fatal Stroke",
+              "timeFrame": "Time from randomisation up to end of follow-up (scheduled at week 109)"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT00917267",
+          "title": "A Study to Examine the Effects of Exenatide Once-Weekly Injection on Glucose Control and Safety in Asian Subjects",
+          "status": "COMPLETED",
+          "enrollment": 691,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change in HbA1c From Baseline to Week 26.",
+            "groups": [
+              {
+                "title": "Exenatide Once Weekly",
+                "n": 307,
+                "events": null,
+                "mean": -1.43,
+                "sd": 1.2264990827554663
+              },
+              {
+                "title": "Exenatide Twice Daily",
+                "n": 263,
+                "events": null,
+                "mean": -1.12,
+                "sd": 1.13520923181588
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change in HbA1c From Baseline to Week 26.",
+              "timeFrame": "Baseline, Week 26"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT03136484",
+          "title": "Efficacy and Safety of Semaglutide Versus Canagliflozin as add-on to Metformin in Subjects With Type 2 Diabetes",
+          "status": "COMPLETED",
+          "enrollment": 788,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change in HbA1c",
+            "groups": [
+              {
+                "title": "Semaglutide + Canagliflozin Placebo",
+                "n": 394,
+                "events": null,
+                "mean": -1.7,
+                "sd": 1.1
+              },
+              {
+                "title": "Canagliflozin + Semaglutide Placebo",
+                "n": 394,
+                "events": null,
+                "mean": -1,
+                "sd": 1
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change in HbA1c",
+              "timeFrame": "Week 0, week 52"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT00775684",
+          "title": "Effect of Exenatide, Sitagliptin or Glimepiride on Functional ß -Cell Mass",
+          "status": "COMPLETED",
+          "enrollment": 47,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Effect on Functional Beta-cell Mass as Determined by Change in ß-cell Secretory Capacity at 6 Months (μU/ml)",
+            "groups": [
+              {
+                "title": "Exenatide",
+                "n": 14,
+                "events": null,
+                "mean": 214,
+                "sd": 224.49944320643647
+              },
+              {
+                "title": "Sitagliptin",
+                "n": 12,
+                "events": null,
+                "mean": 149,
+                "sd": 69.28203230275508
+              },
+              {
+                "title": "Glimepiride",
+                "n": 14,
+                "events": null,
+                "mean": 133,
+                "sd": 71.09149034870488
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Effect on Functional Beta-cell Mass as Determined by Change in ß-cell Secretory Capacity at 6 Months (μU/ml)",
+              "timeFrame": "Baseline and 6 months"
+            },
+            {
+              "measure": "Effect on Functional Beta-cell Mass as Determined by Change in ß-cell Secretory Capacity at 6 Months (pg/mL)",
+              "timeFrame": "Baseline and 6 months"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT02648204",
+          "title": "Efficacy and Safety of Semaglutide Versus Dulaglutide as add-on to Metformin in Subjects With Type 2 Diabetes.",
+          "status": "COMPLETED",
+          "enrollment": 1201,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change in HbA1c",
+            "groups": [
+              {
+                "title": "Semaglutide 0.5 mg",
+                "n": 301,
+                "events": null,
+                "mean": -1.51,
+                "sd": 1.0409610943738483
+              },
+              {
+                "title": "Semaglutide 1.0 mg",
+                "n": 300,
+                "events": null,
+                "mean": -1.78,
+                "sd": 1.0392304845413265
+              },
+              {
+                "title": "Dulaglutide 0.75 mg",
+                "n": 299,
+                "events": null,
+                "mean": -1.11,
+                "sd": 0.8645808232895291
+              },
+              {
+                "title": "Dulaglutide 1.5 mg",
+                "n": 299,
+                "events": null,
+                "mean": -1.37,
+                "sd": 1.037496987947435
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change in HbA1c",
+              "timeFrame": "Week 0, week 40"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT02207374",
+          "title": "A Trial Comparing the Safety and Efficacy of Semaglutide Once Weekly in Monotherapy or in Combination With One OAD in Japanese Subjects With Type 2 Diabetes",
+          "status": "COMPLETED",
+          "enrollment": 601,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Number of Treatment Emergent Adverse Events (TEAEs)",
+            "groups": [
+              {
+                "title": "Semaglutide 0.5 mg",
+                "n": 239,
+                "events": 909,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Semaglutide 1.0 mg",
+                "n": 241,
+                "events": 954,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Additional OAD",
+                "n": 120,
+                "events": 269,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Number of Treatment Emergent Adverse Events (TEAEs)",
+              "timeFrame": "Weeks 0-56"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT03061214",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Sitagliptin Once-daily as add-on to Metformin in Subjects With Type 2 Diabetes (SUSTAIN - CHINA MRCT)",
+          "status": "COMPLETED",
+          "enrollment": 868,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change in HbA1c",
+            "groups": [
+              {
+                "title": "Semaglutide 0.5 mg",
+                "n": 288,
+                "events": null,
+                "mean": -1.5,
+                "sd": 1.1
+              },
+              {
+                "title": "Semaglutide 1.0 mg",
+                "n": 290,
+                "events": null,
+                "mean": -1.8,
+                "sd": 0.9
+              },
+              {
+                "title": "Sitagliptin",
+                "n": 290,
+                "events": null,
+                "mean": -1,
+                "sd": 0.9
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change in HbA1c",
+              "timeFrame": "Week 0, week 30"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01930188",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Sitagliptin Once-daily as add-on to Metformin and/or TZD in Subjects With Type 2 Diabetes",
+          "status": "COMPLETED",
+          "enrollment": 1231,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change in HbA1c (Glycosylated Haemoglobin) From Baseline",
+            "groups": [
+              {
+                "title": "Semaglutide 0.5 mg + Sitagliptin Placebo",
+                "n": 409,
+                "events": null,
+                "mean": -1.32,
+                "sd": 1.0111874208078342
+              },
+              {
+                "title": "Semaglutide 1.0 mg + Sitagliptin Placebo",
+                "n": 409,
+                "events": null,
+                "mean": -1.61,
+                "sd": 1.0111874208078342
+              },
+              {
+                "title": "Sitagliptin + Semaglutide Placebo",
+                "n": 407,
+                "events": null,
+                "mean": -0.55,
+                "sd": 1.008712050091601
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change in HbA1c (Glycosylated Haemoglobin) From Baseline",
+              "timeFrame": "Week 0, week 56"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT02128932",
+          "title": "Efficacy and Safety of Semaglutide Once Weekly Versus Insulin Glargine Once Daily as add-on to Metformin With or Without Sulphonylurea in Insulin-naïve Subjects With Type 2 Diabetes",
+          "status": "COMPLETED",
+          "enrollment": 1089,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change in HbA1c From Baseline",
+            "groups": [
+              {
+                "title": "Semaglutide 0.5mg/Week",
+                "n": 362,
+                "events": null,
+                "mean": -1.21,
+                "sd": 0.9513148795220223
+              },
+              {
+                "title": "Semaglutide 1.0 mg/Week",
+                "n": 360,
+                "events": null,
+                "mean": -1.64,
+                "sd": 0.9486832980505139
+              },
+              {
+                "title": "Insulin Glargine",
+                "n": 360,
+                "events": null,
+                "mean": -0.83,
+                "sd": 0.9486832980505139
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change in HbA1c From Baseline",
+              "timeFrame": "Week 0, week 30"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT03989232",
+          "title": "A Research Study to Compare Two Doses of Semaglutide Taken Once Weekly in People With Type 2 Diabetes",
+          "status": "COMPLETED",
+          "enrollment": 961,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change in HbA1c",
+            "groups": [
+              {
+                "title": "Semaglutide 1.0 mg",
+                "n": 481,
+                "events": null,
+                "mean": -2,
+                "sd": 1
+              },
+              {
+                "title": "Semaglutide 2.0 mg",
+                "n": 480,
+                "events": null,
+                "mean": -2.2,
+                "sd": 1
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change in HbA1c",
+              "timeFrame": "Week 0, week 40"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01473953",
+          "title": "Safety, Tolerability and Pharmacokinetics of Liraglutide-depot in Healthy Subjects",
+          "status": "COMPLETED",
+          "enrollment": 31,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "binary",
+            "title": "Number of Treatment Emergent Adverse Events (TEAEs)",
+            "groups": [
+              {
+                "title": "Cohort 1a: Lira-depot 2.25 mg",
+                "n": 6,
+                "events": 3,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Cohort 2a: Lira-depot 6.75 mg",
+                "n": 6,
+                "events": 3,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Cohort 3a: Lira-depot 15 mg",
+                "n": 6,
+                "events": 4,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Cohort 4a: Lira-depot 30 mg",
+                "n": 5,
+                "events": 21,
+                "mean": null,
+                "sd": null
+              },
+              {
+                "title": "Placebo",
+                "n": 8,
+                "events": 13,
+                "mean": null,
+                "sd": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Number of Treatment Emergent Adverse Events (TEAEs)",
+              "timeFrame": "Day 0 and up to 21 days after treatment"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT02054897",
+          "title": "Efficacy and Safety of Semaglutide Once-weekly Versus Placebo in Drug-naïve Subjects With Type 2 Diabetes",
+          "status": "COMPLETED",
+          "enrollment": 388,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "outcome": {
+            "type": "continuous",
+            "title": "Change in HbA1c (Glycosylated Haemoglobin)",
+            "groups": [
+              {
+                "title": "Semaglutide 0.5 mg",
+                "n": 128,
+                "events": null,
+                "mean": -1.47,
+                "sd": 1.02
+              },
+              {
+                "title": "Semaglutide 1.0 mg",
+                "n": 130,
+                "events": null,
+                "mean": -1.56,
+                "sd": 1.26
+              },
+              {
+                "title": "Placebo",
+                "n": 129,
+                "events": null,
+                "mean": 0,
+                "sd": 0.9
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change in HbA1c (Glycosylated Haemoglobin)",
+              "timeFrame": "Week 0, week 30"
+            }
+          ]
+        }
+      ]
+    }
+  }
+};
+    </script>
+    <script type="module" src="../../../esc-acs-living-meta/app.js"></script>
+    <script type="module" src="../../../esc-acs-living-meta/help-system.js"></script>
+  </body>
+</html>

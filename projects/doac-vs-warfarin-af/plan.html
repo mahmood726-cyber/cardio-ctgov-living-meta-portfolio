@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Direct Oral Anticoagulants vs Warfarin in Atrial Fibrillation | Validation Plan</title>
+    <link rel="icon" href="data:," />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f6fb;
+        --ink: #16213e;
+        --muted: #5b657a;
+        --card: #ffffff;
+        --line: #d8e0f0;
+        --accent: #0f5c7a;
+        --accent-soft: #e0f1f8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 44%, #ffffff 100%);
+        color: var(--ink);
+        font: 16px/1.55 "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      }
+      main {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 20px 56px;
+      }
+      .hero {
+        display: grid;
+        gap: 16px;
+        padding: 28px;
+        background: radial-gradient(circle at top left, #dceefe 0%, #ffffff 55%);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 16px 48px rgba(15, 52, 96, 0.08);
+      }
+      .kicker {
+        margin: 0;
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+      h1, h2 { margin: 0; }
+      p { margin: 0; color: var(--muted); }
+      .grid {
+        display: grid;
+        gap: 16px;
+        margin-top: 22px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+      }
+      .card strong {
+        display: block;
+        font-size: 1.75rem;
+        color: var(--ink);
+      }
+      .section {
+        margin-top: 24px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px;
+      }
+      pre {
+        margin: 12px 0 0;
+        white-space: pre-wrap;
+        overflow-x: auto;
+        background: #0d1b2a;
+        color: #eff6ff;
+        padding: 14px;
+        border-radius: 14px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+        padding: 10px 8px;
+      }
+      th {
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .pillbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .pill {
+        background: var(--accent-soft);
+        border: 1px solid #b9d9e7;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        color: var(--ink);
+      }
+      iframe {
+        width: 100%;
+        min-height: 420px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #111827;
+      }
+      a { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <p class="kicker">CT.gov Validation Pack</p>
+        <h1>Direct Oral Anticoagulants vs Warfarin in Atrial Fibrillation</h1>
+        <p>Separate cardiovascular living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-03-28. Only randomized comparative records with posted results and extractable numeric outcomes are eligible.</p>
+        <div class="pillbar">
+          <span class="pill">Priority tier: Build Now</span>
+          <span class="pill">Included RCTs: 5</span>
+          <span class="pill">Scanned records: 16</span>
+          <span class="pill">Pages fetched: 1</span>
+          <span class="pill">Domain: Arrhythmia</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card"><span>Base query</span><strong>(&quot;atrial fibrillation&quot;) AND (apixaban OR rivaroxaban OR dabigatran OR edoxaban) AND (warfarin OR &quot;vitamin K antagonist&quot;)</strong></article>
+        <article class="card"><span>Keyword pack</span><strong>ARISTOTLE, ROCKET AF, RE-LY, ENGAGE AF</strong></article>
+        <article class="card"><span>Validation files</span><strong><a href="validation.json">validation.json</a></strong></article>
+        <article class="card"><span>App entry</span><strong><a href="index.html">index.html</a></strong></article>
+      </section>
+
+      <section class="section">
+        <h2>Protocol Framing And Review Question</h2>
+        <p>This plan treats the registry-native topic as a living protocol artifact rather than a link collection. The PICO framing and workflow below define what enters the snapshot, how records are screened, and how benchmark reconciliation should be performed before review sign-off.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Population</td><td>Stroke; Atrial Fibrillation; Embolism; Ischemic Stroke; Transient Ischemic Attack; Atrial Flutter</td></tr>
+            <tr><td>Interventions</td><td>Low Dose Edoxaban/Placebo Warfarin; High Dose Edoxaban/Placebo Warfarin; Warfarin/Placebo Edoxaban; Dabigatran 110 mg; Dabigatran 150 mg; Warfarin; Rivaroxaban; Apixaban</td></tr>
+            <tr><td>Comparators</td><td>High Dose Edoxaban/Placebo Warfarin vs Low Dose Edoxaban/Placebo Warfarin | Warfarin/Placebo Edoxaban vs Low Dose Edoxaban/Placebo Warfarin; Dabigatran 150 mg vs Dabigatran 110 mg | Warfarin vs Dabigatran 110 mg; Warfarin vs Rivaroxaban; Warfarin vs Apixaban</td></tr>
+            <tr><td>Outcomes</td><td>Compare Edoxaban to Warfarin for Composite of Stroke and Systemic Embolic Events (SEE).; Yearly Event Rate for Composite Endpoint of Stroke/SEE; The Composite Event of Stroke/Non-CNS Systemic Embolism: Primary Efficacy (Non-Inferiority); Number of Participants With Intracranial Bleeding and/or Recurrent Ischemic Lesion as Confirmed by MRI Imaging; Number of Participants With First Event of Ischemic/Unspecified Stroke, Hemorrhagic Stroke, or Systemic Embolism (SE) During the Intended Treatment Period</td></tr>
+            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exact CT.gov Search Query</h2>
+        <pre>(&quot;atrial fibrillation&quot;) AND (apixaban OR rivaroxaban OR dabigatran OR edoxaban) AND (warfarin OR &quot;vitamin K antagonist&quot;) AND (&quot;ARISTOTLE&quot; OR &quot;ROCKET AF&quot; OR &quot;RE-LY&quot; OR &quot;ENGAGE AF&quot;)</pre>
+      </section>
+
+      <section class="section">
+        <h2>Information Sources And Search History</h2>
+        <p>The project was generated directly from the ClinicalTrials.gov v2 API using the exact query below, then checked against publication-oriented benchmark searches so reviewers can compare the registry-native set against the broader literature.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://clinicaltrials.gov/search?term=(%22atrial%20fibrillation%22)%20AND%20(apixaban%20OR%20rivaroxaban%20OR%20dabigatran%20OR%20edoxaban)%20AND%20(warfarin%20OR%20%22vitamin%20K%20antagonist%22)%20AND%20(%22ARISTOTLE%22%20OR%20%22ROCKET%20AF%22%20OR%20%22RE-LY%22%20OR%20%22ENGAGE%20AF%22)" target="_blank" rel="noopener">CT.gov query</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Direct%20Oral%20Anticoagulants%20vs%20Warfarin%20in%20Atrial%20Fibrillation%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">PubMed meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Direct%20Oral%20Anticoagulants%20vs%20Warfarin%20in%20Atrial%20Fibrillation%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">PubMed randomized-trial search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Source</th>
+              <th>Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>CT.gov candidate scan started</td>
+          <td>ClinicalTrials.gov v2 API</td>
+          <td>2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Base query locked</td>
+          <td>Project generator</td>
+          <td>(&quot;atrial fibrillation&quot;) AND (apixaban OR rivaroxaban OR dabigatran OR edoxaban) AND (warfarin OR &quot;vitamin K antagonist&quot;)</td>
+        </tr>
+
+        <tr>
+          <td>Keyword expansion applied</td>
+          <td>Project generator</td>
+          <td>4 terms: ARISTOTLE, ROCKET AF, RE-LY, ENGAGE AF</td>
+        </tr>
+
+        <tr>
+          <td>Exact query executed</td>
+          <td>ClinicalTrials.gov</td>
+          <td>(&quot;atrial fibrillation&quot;) AND (apixaban OR rivaroxaban OR dabigatran OR edoxaban) AND (warfarin OR &quot;vitamin K antagonist&quot;) AND (&quot;ARISTOTLE&quot; OR &quot;ROCKET AF&quot; OR &quot;RE-LY&quot; OR &quot;ENGAGE AF&quot;)</td>
+        </tr>
+
+        <tr>
+          <td>Registry records screened</td>
+          <td>ClinicalTrials.gov</td>
+          <td>16 records across 1 page(s)</td>
+        </tr>
+
+        <tr>
+          <td>Hard-gate exclusions applied</td>
+          <td>Generator eligibility rules</td>
+          <td>11 records excluded before synthesis</td>
+        </tr>
+
+        <tr>
+          <td>Quantitative snapshot frozen</td>
+          <td>validation.json</td>
+          <td>5 randomized trials entered the reviewer pack</td>
+        </tr>
+
+        <tr>
+          <td>Project package generated</td>
+          <td>Portfolio build</td>
+          <td>2026-03-28</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Selection And Synthesis Workflow</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Rule</th>
+              <th>Evidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Question framing</td>
+          <td>Topic slug, base query, and keyword pack frozen before generation</td>
+          <td>doac-vs-warfarin-af | 2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Registry screening</td>
+          <td>ClinicalTrials.gov v2 API queried with the exact string shown below</td>
+          <td>16 candidate records screened</td>
+        </tr>
+
+        <tr>
+          <td>Eligibility gate</td>
+          <td>Randomized interventional, completed, posted results, &gt;=2 arms, numeric outcome</td>
+          <td>5 included / 11 excluded</td>
+        </tr>
+
+        <tr>
+          <td>Extraction</td>
+          <td>Outcome groups, sponsor, eligibility, documents, and demographics preserved where available</td>
+          <td>5/5 studies with demographics</td>
+        </tr>
+
+        <tr>
+          <td>Reviewer validation</td>
+          <td>Benchmark ledger and topic-aware WebR runner bundled with each topic project</td>
+          <td>validation.json + plan.html + embedded runner</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>PRISMA Flow Summary</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Count</th>
+              <th>Reviewer Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Records identified from the exact CT.gov query</td>
+          <td>16</td>
+          <td>1 page(s) fetched</td>
+        </tr>
+
+        <tr>
+          <td>Records excluded by registry hard gates</td>
+          <td>11</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+        </tr>
+
+        <tr>
+          <td>Trials entering the quantitative snapshot</td>
+          <td>5</td>
+          <td>Included in validation.json and the live topic app</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Eligibility Rules</h2>
+        <div class="pillbar">
+          <span class="pill">Interventional</span>
+          <span class="pill">Randomized</span>
+          <span class="pill">Completed</span>
+          <span class="pill">Posted CT.gov results</span>
+          <span class="pill">At least 2 arms</span>
+          <span class="pill">Numeric outcome extractable</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <span>Protocol metadata coverage</span>
+          <strong>5/5</strong>
+          <p>Trials with a retained CT.gov brief summary excerpt.</p>
+        </article>
+        <article class="card">
+          <span>Demographics coverage</span>
+          <strong>5/5</strong>
+          <p>Trials with a retained baseline characteristics snapshot.</p>
+        </article>
+        <article class="card">
+          <span>Document coverage</span>
+          <strong>0/5</strong>
+          <p>Trials with protocol or source documents listed on CT.gov.</p>
+        </article>
+        <article class="card">
+          <span>Total reported enrollment</span>
+          <strong>74658</strong>
+          <p>Summed from the CT.gov enrollment field across included studies.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Included Trial Ledger</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Sponsor</th>
+              <th>Phase</th>
+              <th>Enrollment</th>
+              <th>Status</th>
+              <th>Start</th>
+              <th>Completion</th>
+              <th>Arms</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00781391" target="_blank" rel="noopener">NCT00781391</a></td>
+          <td>Global Study to Assess the Safety and Effectiveness of Edoxaban (DU-176b) vs Standard Practice of Dosing With Warfarin in Patients With Atrial Fibrillation</td>
+          <td>Daiichi Sankyo (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>21105 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2008-11-01</td>
+          <td>2013-05-01</td>
+          <td>Warfarin tablets plus placebo Edoxaban tablets | Edoxaban tablets (60mg) plus warfarin placebo tablets | Edoxaban tablets (30mg) plus warfarin placebo tablets</td>
+          <td>Compare Edoxaban to Warfarin for Composite of Stroke and Systemic Embolic Events (SEE).</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00262600" target="_blank" rel="noopener">NCT00262600</a></td>
+          <td>Randomized Evaluation of Long Term Anticoagulant Therapy (RE-LY) With Dabigatran Etexilate</td>
+          <td>Boehringer Ingelheim (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>18113 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2005-12-01</td>
+          <td>Not reported</td>
+          <td>twice a day | once a day | twice a day</td>
+          <td>Yearly Event Rate for Composite Endpoint of Stroke/SEE</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00403767" target="_blank" rel="noopener">NCT00403767</a></td>
+          <td>An Efficacy and Safety Study of Rivaroxaban With Warfarin for the Prevention of Stroke and Non-Central Nervous System Systemic Embolism in Patients With Non-Valvular Atrial Fibrillation</td>
+          <td>Johnson &amp; Johnson Pharmaceutical Research &amp; Development, L.L.C. (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>14269 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2006-12-01</td>
+          <td>2010-09-01</td>
+          <td>Arm 1 | Arm 2</td>
+          <td>The Composite Event of Stroke/Non-CNS Systemic Embolism: Primary Efficacy (Non-Inferiority)</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02042534" target="_blank" rel="noopener">NCT02042534</a></td>
+          <td>Rivaroxaban Versus Warfarin in Acute Ischemic Stroke With Atrial Fibrillation</td>
+          <td>Asan Medical Center (OTHER)</td>
+          <td>Phase 2</td>
+          <td>195 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2014-01-01</td>
+          <td>2015-12-01</td>
+          <td>Rivaroxaban group for 1 month : initial 5 days after randomization rivaroxaban 10mg QD will be administered. Rivaroxaban 20mg QD, but 15mg in case of Cr CL will be administered for remaining 25 days. | Patients allocated to warfarin receive warfarin plus aspirin 100mg until INR value exceed 1.7 followed by warfarin monotherapy with target INR value of 2.5 \[2.0 - 3.0\].</td>
+          <td>Number of Participants With Intracranial Bleeding and/or Recurrent Ischemic Lesion as Confirmed by MRI Imaging</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00412984" target="_blank" rel="noopener">NCT00412984</a></td>
+          <td>Apixaban for the Prevention of Stroke in Subjects With Atrial Fibrillation</td>
+          <td>Bristol-Myers Squibb (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>20976 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2006-12-31</td>
+          <td>2011-05-25</td>
+          <td>Arm 1 | Arm 2</td>
+          <td>Number of Participants With First Event of Ischemic/Unspecified Stroke, Hemorrhagic Stroke, or Systemic Embolism (SE) During the Intended Treatment Period</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Study Eligibility And Demographics</h2>
+        <p>This table keeps the trial-level age, sex, participant-count, and registry eligibility fields next to the inclusion decision so readers can challenge the clinical comparability of the pooled set.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Eligibility</th>
+              <th>Participant Counts</th>
+              <th>Age Snapshot</th>
+              <th>Sex Snapshot</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00781391" target="_blank" rel="noopener">NCT00781391</a></td>
+          <td>Sex: ALL | Age: 21 Years to NR | Healthy volunteers: No</td>
+          <td>Warfarin/Placebo Edoxaban: 7012 Participants | High Dose Edoxaban/Placebo Warfarin: 7012 Participants | Low Dose Edoxaban/Placebo Warfarin: 7002 Participants | Total: 21026 Participants</td>
+          <td>Warfarin/Placebo Edoxaban: 70.5 +/- 9.44 years | High Dose Edoxaban/Placebo Warfarin: 70.6 +/- 9.51 years | Low Dose Edoxaban/Placebo Warfarin: 70.6 +/- 9.31 years | Total: 70.6 +/- 9.42 years</td>
+          <td>Warfarin/Placebo Edoxaban: F 2629 / M 4383 | High Dose Edoxaban/Placebo Warfarin: F 2659 / M 4353 | Low Dose Edoxaban/Placebo Warfarin: F 2718 / M 4284 | Total: F 8006 / M 13020</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00262600" target="_blank" rel="noopener">NCT00262600</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Dabigatran 110 mg: 6015 Participants | Dabigatran 150 mg: 6076 Participants | Warfarin: 6022 Participants | Total: 18113 Participants</td>
+          <td>Dabigatran 110 mg: 71.4 +/- 8.6 years | Dabigatran 150 mg: 71.5 +/- 8.8 years | Warfarin: 71.6 +/- 8.6 years | Total: 71.5 +/- 8.7 years</td>
+          <td>Not reported</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00403767" target="_blank" rel="noopener">NCT00403767</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Rivaroxaban: 7111 Participants | Warfarin: 7125 Participants | Total: 14236 Participants</td>
+          <td>Rivaroxaban: 71.2 +/- 9.45 years | Warfarin: 71.2 +/- 9.39 years | Total: 71.2 +/- 9.42 years</td>
+          <td>Rivaroxaban: F 2819 / M 4292 | Warfarin: F 2826 / M 4299 | Total: F 5645 / M 8591</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02042534" target="_blank" rel="noopener">NCT02042534</a></td>
+          <td>Sex: ALL | Age: 19 Years to NR | Healthy volunteers: No</td>
+          <td>Rivaroxaban: 95 Participants | Warfarin: 88 Participants | Total: 183 Participants</td>
+          <td>Rivaroxaban: 70.2 +/- 10.1 years | Warfarin: 70.6 +/- 10.9 years | Total: 70.4 +/- 10.4 years</td>
+          <td>Rivaroxaban: F 40 / M 55 | Warfarin: F 36 / M 52 | Total: F 76 / M 107</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00412984" target="_blank" rel="noopener">NCT00412984</a></td>
+          <td>Sex: ALL | Healthy volunteers: No</td>
+          <td>Apixaban: 9120 Participants | Warfarin: 9081 Participants | Total: 18201 Participants</td>
+          <td>Apixaban: 69.1 +/- 9.61 years | Warfarin: 69.0 +/- 9.74 years | Total: 69.1 +/- 9.68 years</td>
+          <td>Apixaban: F 3234 / M 5886 | Warfarin: F 3182 / M 5899 | Total: F 6416 / M 11785</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Record Excerpts</h2>
+        <p>Brief summaries, eligibility text, primary outcome descriptions, and source documents are surfaced here so reviewers can verify that the extracted numerical contrast is clinically aligned with the underlying registry record.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Brief Summary</th>
+              <th>Eligibility Excerpt</th>
+              <th>Primary Outcome Excerpt</th>
+              <th>Source Documents</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00781391" target="_blank" rel="noopener">NCT00781391</a></td>
+          <td>This study is to demonstrate the safety and efficacy profile, in two different dose regimens of Edoxaban (DU-176b), (an investigational new drug being tested for the prevention of stroke/systemic embolic events (SEE)), in individuals with atrial fibrillation. Patients will be randomized to one of three treatment gro...</td>
+          <td>Inclusion Criteria: * 21 years of age or older; male or female. * Able to provide written informed consent. * History of documented AF within the prior 12 months * A moderate to high risk of stroke, as defined by CHADS2 index score of at least 2 Exclusion C...</td>
+          <td>Compare Edoxaban to Warfarin for Composite of Stroke and Systemic Embolic Events (SEE). | Time frame: on-treatment period 2.5 years of median study drug exposure and 2.8 year of median follow-up | The composite of stroke and Systemic Embolic Events (SEE) during the on treatment period in the mITT analysis population...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00262600" target="_blank" rel="noopener">NCT00262600</a></td>
+          <td>The primary objective of this trial is to demonstrate the efficacy and safety of dabigatran etexilate in patients with non-valvular atrial fibrillation for the prevention of stroke and systemic embolism.</td>
+          <td>Inclusion criteria Patients with non-valvular atrial fibrillation (AF), at moderate to high risk of stroke, or systemic embolism with at least one additional risk factor (i.e. previous ischemic stroke, TIA, or systemic embolism, left ventricular dysfunction...</td>
+          <td>Yearly Event Rate for Composite Endpoint of Stroke/SEE | Time frame: 36 months | Time to first occurrence of stroke or systemic embolic event. Yearly event rate (%) = number of subjects with event / subject-years \* 100. Subject years = sum(date of study termination - date of randomization + 1) of all randomized sub...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00403767" target="_blank" rel="noopener">NCT00403767</a></td>
+          <td>The purpose of this study is to compare the efficacy and safety of rivaroxaban with warfarin for the prevention of blood clots in the brain (referred to as stroke) and blood clots in other parts of the body referred to as non-central nervous system systemic embolism) in patients with non-valvular atrial fibrillation...</td>
+          <td>Inclusion Criteria: * Patients must have documented atrial fibrillation on 2 separate occasions within 6 months before screening * History of a prior stroke, transient ischemic attack or non-neurologic systemic embolism believed to be cardiac in origin, or...</td>
+          <td>The Composite Event of Stroke/Non-CNS Systemic Embolism: Primary Efficacy (Non-Inferiority) | Time frame: Up to 4 years | The number of patients with the first occurrence of a stroke or non-CNS systemic embolism while on treatment (defined as the time interval from the first dose to the last dose of study drug plus...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02042534" target="_blank" rel="noopener">NCT02042534</a></td>
+          <td>Rationale Acute ischemic stroke due to atrial fibrillation (AF) carries a high risk for early recurrence. In acute stage, guidelines recommend aspirin, but do not recommend anticoagulation due to the increased risk of intracranial bleeding. Since, aspirin has a limited efficacy of preventing recurrent stroke in AF,...</td>
+          <td>Inclusion Criteria: All of below * Acute ischemic stroke or TIA presumed to be cardioembolic origin (within 5 days from stroke onset) with mild severity: infarct size on DWI less than 1/3 of MCA territory, 1/2 of ACA territory, 1/2 of PCA territory, and 1/2...</td>
+          <td>Number of Participants With Intracranial Bleeding and/or Recurrent Ischemic Lesion as Confirmed by MRI Imaging | Time frame: 1 month after randomization | Intracranial bleeding: symptomatic hemorrhage confirmed by CT or MRI or asymptomatic hemorrhage on follow-up GRE or SWI imaging at 1 month Recurrent ischemic lesi...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00412984" target="_blank" rel="noopener">NCT00412984</a></td>
+          <td>The trial seeks to determine if apixaban, an investigational anticoagulant (blood-thinner) is as effective as standard therapy (warfarin) in preventing stroke and systemic embolism in subjects with atrial fibrillation and risk factors for stroke.</td>
+          <td>Inclusion Criteria: * Males and females ≥ 18 yrs with atrial fibrillation (AF) and one or more of the following risk factors for stroke: * Age ≥ 75, previous stroke * transient ischemic attack (TIA) or Systemic Embolism (SE) * Symptomatic congestive heart f...</td>
+          <td>Number of Participants With First Event of Ischemic/Unspecified Stroke, Hemorrhagic Stroke, or Systemic Embolism (SE) During the Intended Treatment Period | Time frame: Time to first event in &quot;Intended Treatment Period&quot;: started on day of randomization, ended at efficacy cut-off date (date target number of primary e...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exclusion Reason Counts</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Reason</th>
+              <th>Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>No Extractable Numeric Outcome</td>
+          <td>11</td>
+        </tr>
+
+        <tr>
+          <td>No Results Posted</td>
+          <td>11</td>
+        </tr>
+
+        <tr>
+          <td>Not Randomized Interventional</td>
+          <td>7</td>
+        </tr>
+
+        <tr>
+          <td>Not Completed</td>
+          <td>6</td>
+        </tr>
+
+        <tr>
+          <td>Fewer Than Two Arms</td>
+          <td>4</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Excluded Sample Records</h2>
+        <p>The first 20 excluded records are listed here with excerpts so reviewers can quickly verify why the registry pull did not enter them into the meta-analysis snapshot.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Reasons</th>
+              <th>Record Excerpt</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05773222" target="_blank" rel="noopener">NCT05773222</a></td>
+          <td>Efficacy and Safety of Apixaban in Korean Frail Atrial Fibrillation Patient</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>Atrial fibrillation (AF) is the most common arrhythmia, and its prevalence is increasing with the aging population \[1\]. As the prevalence of AF is significantly rising among the population over 70-80 years old and considering the population is at high ris...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04593056" target="_blank" rel="noopener">NCT04593056</a></td>
+          <td>Replication of the ROCKET-AF Anticoagulant Trial in Healthcare Claims Data</td>
+          <td>No Results Posted, Not Randomized Interventional, No Extractable Numeric Outcome</td>
+          <td>Investigators are building an empirical evidence base for real world data through large-scale replication of randomized controlled trials. The investigators&#39; goal is to understand for what types of clinical questions real world data analyses can be conducte...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02185027" target="_blank" rel="noopener">NCT02185027</a></td>
+          <td>Observatory of Invasive Procedures and Bleeding in Patients Treated With New Oral Anticoagulants</td>
+          <td>No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>The arrival on the market of direct oral factor Xa and factor IIa inhibitors (dabigatran (Pradaxa®), rivaroxaban (Xarelto®), apixaban (Eliquis®) and others soon to come) raises novel questions among clinicians confronted with the emergency management of pat...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06045858" target="_blank" rel="noopener">NCT06045858</a></td>
+          <td>Safety and Efficacy of Apixaban Versus Warfarin in Peritoneal Dialysis Patients With Non Valvular Atrial Fibrillation: a Prospective, Randomised, Open-label, Blinded End-point Trial (APIDP2)</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Introduction: Several randomised controlled trials have demonstrated that novel oral anticoagulants (NOACs) are safer compared to vitamin K antagonists for the management of non valvular atrial fibrillation (NVAF) to prevent thromboembolic events, in the ge...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02987062" target="_blank" rel="noopener">NCT02987062</a></td>
+          <td>MultiCenter expeRience in AFib Patients Treated With OAC (CRAFT)</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, No Extractable Numeric Outcome</td>
+          <td>According to current guidelines for non-valvular atrial fibrillation treatment, the first line drugs are non-vitamin K oral anticoagulants (NOACs), which are preferred over vitamin K antagonists (VKAs). However, it is not clearly confirmed, how the success...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03490994" target="_blank" rel="noopener">NCT03490994</a></td>
+          <td>Rivaroxaban Once Daily Versus Dose-adjusted Vitamin K Antagonist on the Biomarkers in Acute Decompensated Heart Failure and Atrial Fibrillation (ROAD HF-AF)</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Vitamin K antagonists (VKAs) are used to reduce the risk of stroke (cerebral vascular dysfunction) in AF patients. However, VKAs interact with drugs/food and the drug level is influenced by worsening of renal function, liver congestion or hemodynamic altera...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03399305" target="_blank" rel="noopener">NCT03399305</a></td>
+          <td>Safety and Efficacy of Apixaban in Severe Renal Impairment</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>Despite emergence of new anticoagulants over the last few years, patients with advanced chronic kidney disease still have limited options and are usually managed with warfarin after venous thromboembolism or diagnosis of atrial fibrillation. The use of all...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04593030" target="_blank" rel="noopener">NCT04593030</a></td>
+          <td>Replication of the ARISTOTLE Anticoagulant Trial in Healthcare Claims Data</td>
+          <td>No Results Posted, Not Randomized Interventional, No Extractable Numeric Outcome</td>
+          <td>Investigators are building an empirical evidence base for real world data through large-scale replication of randomized controlled trials. The investigators&#39; goal is to understand for what types of clinical questions real world data analyses can be conducte...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03456648" target="_blank" rel="noopener">NCT03456648</a></td>
+          <td>Apixaban in End-stage Kidney Disease : A Pharmacokinetics Study</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Apixaban is a novel oral direct factor Xa inhibitor; In patients with atrial fibrillation, apixaban was superior to warfarin in preventing stroke or systemic embolism, caused less bleeding, and resulted in lower mortality (the ARISTOTLE trial). Given its fa...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02642419" target="_blank" rel="noopener">NCT02642419</a></td>
+          <td>Atrial Fibrillation and Ischemic Events With Rivaroxaban in Patients With Stable Coronary Artery Disease Study</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>In patients with atrial fibrillation (AF) complicated with coronary artery disease (CAD), antiplatelet drugs are commonly used for the prevention of recurrence of stent thrombosis and cardiovascular events in combination with anticoagulant drugs. Based on t...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03749057" target="_blank" rel="noopener">NCT03749057</a></td>
+          <td>Early Rivaroxaban for Acute Ischemic Stroke or TIA Patients With Atrial Fibrillation</td>
+          <td>No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>Anticoagulant treatment for non-valvular atrial fibrillation (AF) associated with cerebral infarction/ TIA is one of the recognized treatment of stroke prevention. The ACC/AHA and national guidelines for the management of anticoagulation recommend that most...</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Benchmark Reconciliation Ledger</h2>
+        <p>This ledger turns the benchmark step into a structured reviewer task. Use the NCT IDs, contrasts, and outcome definitions below to check study overlap, arm collapsing, and endpoint alignment against published syntheses.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Direct%20Oral%20Anticoagulants%20vs%20Warfarin%20in%20Atrial%20Fibrillation%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Direct%20Oral%20Anticoagulants%20vs%20Warfarin%20in%20Atrial%20Fibrillation%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT</th>
+              <th>Registry Contrast</th>
+              <th>Outcome</th>
+              <th>Enrollment</th>
+              <th>Benchmark Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT00781391" target="_blank" rel="noopener">NCT00781391</a></td>
+        <td>High Dose Edoxaban/Placebo Warfarin vs Low Dose Edoxaban/Placebo Warfarin | Warfarin/Placebo Edoxaban vs Low Dose Edoxaban/Placebo Warfarin</td>
+        <td>Compare Edoxaban to Warfarin for Composite of Stroke and Systemic Embolic Events (SEE).</td>
+        <td>21105 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT00262600" target="_blank" rel="noopener">NCT00262600</a></td>
+        <td>Dabigatran 150 mg vs Dabigatran 110 mg | Warfarin vs Dabigatran 110 mg</td>
+        <td>Yearly Event Rate for Composite Endpoint of Stroke/SEE</td>
+        <td>18113 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT00403767" target="_blank" rel="noopener">NCT00403767</a></td>
+        <td>Warfarin vs Rivaroxaban</td>
+        <td>The Composite Event of Stroke/Non-CNS Systemic Embolism: Primary Efficacy (Non-Inferiority)</td>
+        <td>14269 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02042534" target="_blank" rel="noopener">NCT02042534</a></td>
+        <td>Warfarin vs Rivaroxaban</td>
+        <td>Number of Participants With Intracranial Bleeding and/or Recurrent Ischemic Lesion as Confirmed by MRI Imaging</td>
+        <td>195 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT00412984" target="_blank" rel="noopener">NCT00412984</a></td>
+        <td>Warfarin vs Apixaban</td>
+        <td>Number of Participants With First Event of Ischemic/Unspecified Stroke, Hemorrhagic Stroke, or Systemic Embolism (SE) During the Intended Treatment Period</td>
+        <td>20976 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Reviewer Validation And Benchmarking</h2>
+        <p>The embedded panel below now runs the shared R benchmark suites plus topic-specific checks for the current CT.gov snapshot. Reviewers should compare the registry-native ledger above against published syntheses, inspect <code>validation.json</code>, and then confirm that the topic-aware runner resolves with the same study universe.</p>
+        <div class="pillbar">
+          <a class="pill" href="validation.json">Open validation.json</a>
+          <a class="pill" href="index.html">Open interactive topic app</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Direct%20Oral%20Anticoagulants%20vs%20Warfarin%20in%20Atrial%20Fibrillation%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Direct%20Oral%20Anticoagulants%20vs%20Warfarin%20in%20Atrial%20Fibrillation%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+          <a class="pill" href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fdoac-vs-warfarin-af%2Fvalidation.json&amp;topic=doac-vs-warfarin-af&amp;label=Direct+Oral+Anticoagulants+vs+Warfarin+in+Atrial+Fibrillation" target="_blank" rel="noopener">Open topic-aware WebR runner</a>
+        </div>
+        <iframe id="reviewerValidationFrame" src="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fdoac-vs-warfarin-af%2Fvalidation.json&amp;topic=doac-vs-warfarin-af&amp;label=Direct+Oral+Anticoagulants+vs+Warfarin+in+Atrial+Fibrillation" title="WebR reviewer validation" loading="lazy"></iframe>
+        <script>
+(() => {
+  const iframe = document.getElementById("reviewerValidationFrame");
+  const context = {"source":"ctgov-portfolio-generator","topicId":"doac-vs-warfarin-af","label":"Direct Oral Anticoagulants vs Warfarin in Atrial Fibrillation","query":"(\"atrial fibrillation\") AND (apixaban OR rivaroxaban OR dabigatran OR edoxaban) AND (warfarin OR \"vitamin K antagonist\") AND (\"ARISTOTLE\" OR \"ROCKET AF\" OR \"RE-LY\" OR \"ENGAGE AF\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":5,"excludedCount":11,"totalEnrollment":74658,"demographicsCoverage":5,"documentCoverage":0,"comparisons":[{"studyId":"NCT00781391","title":"Global Study to Assess the Safety and Effectiveness of Edoxaban (DU-176b) vs Standard Practice of Dosing With Warfarin in Patients With Atrial Fibrillation","t1":"High Dose Edoxaban/Placebo Warfarin","t2":"Low Dose Edoxaban/Placebo Warfarin","measure":"logRR","effect":-0.330809946177239,"se":0.0957164858437266,"n1":7012,"n0":7002,"totalN":14014,"sampleSize":14014},{"studyId":"NCT00781391","title":"Global Study to Assess the Safety and Effectiveness of Edoxaban (DU-176b) vs Standard Practice of Dosing With Warfarin in Patients With Atrial Fibrillation","t1":"Warfarin/Placebo Edoxaban","t2":"Low Dose Edoxaban/Placebo Warfarin","measure":"logRR","effect":-0.08807926158772432,"se":0.0893167677166669,"n1":7012,"n0":7002,"totalN":14014,"sampleSize":14014},{"studyId":"NCT00262600","title":"Randomized Evaluation of Long Term Anticoagulant Therapy (RE-LY) With Dabigatran Etexilate","t1":"Dabigatran 150 mg","t2":"Dabigatran 110 mg","measure":"logRR","effect":-0.3375126364081792,"se":1.2449581186733407,"n1":6076,"n0":6015,"totalN":12091,"sampleSize":12091},{"studyId":"NCT00262600","title":"Randomized Evaluation of Long Term Anticoagulant Therapy (RE-LY) With Dabigatran Etexilate","t1":"Warfarin","t2":"Dabigatran 110 mg","measure":"logRR","effect":0.10354787345613084,"se":1.1107716516732398,"n1":6022,"n0":6015,"totalN":12037,"sampleSize":12037},{"studyId":"NCT00403767","title":"An Efficacy and Safety Study of Rivaroxaban With Warfarin for the Prevention of Stroke and Non-Central Nervous System Systemic Embolism in Patients With Non-Valvular Atrial Fibrillation","t1":"Warfarin","t2":"Rivaroxaban","measure":"logRR","effect":0.2417656329668506,"se":0.09582291747328353,"n1":7004,"n0":6958,"totalN":13962,"sampleSize":13962},{"studyId":"NCT02042534","title":"Rivaroxaban Versus Warfarin in Acute Ischemic Stroke With Atrial Fibrillation","t1":"Warfarin","t2":"Rivaroxaban","measure":"logRR","effect":0.09759348632016666,"se":0.14219696524505765,"n1":88,"n0":95,"totalN":183,"sampleSize":183},{"studyId":"NCT00412984","title":"Apixaban for the Prevention of Stroke in Subjects With Atrial Fibrillation","t1":"Warfarin","t2":"Apixaban","measure":"logRR","effect":0.0886728776560962,"se":0.10885718094489334,"n1":9081,"n0":9120,"totalN":18201,"sampleSize":18201}],"includedStudies":[{"nctId":"NCT00781391","title":"Global Study to Assess the Safety and Effectiveness of Edoxaban (DU-176b) vs Standard Practice of Dosing With Warfarin in Patients With Atrial Fibrillation","status":"COMPLETED","enrollment":21105,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Compare Edoxaban to Warfarin for Composite of Stroke and Systemic Embolic Events (SEE).","groups":[{"title":"Low Dose Edoxaban/Placebo Warfarin","n":7002,"events":253,"mean":null,"sd":null},{"title":"High Dose Edoxaban/Placebo Warfarin","n":7012,"events":182,"mean":null,"sd":null},{"title":"Warfarin/Placebo Edoxaban","n":7012,"events":232,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Compare Edoxaban to Warfarin for Composite of Stroke and Systemic Embolic Events (SEE).","timeFrame":"on-treatment period 2.5 years of median study drug exposure and 2.8 year of median follow-up"},{"measure":"Compare Edoxaban to Warfarin for Composite of Stroke and Systemic Embolic Events (SEE).","timeFrame":"overall study period 2.5 years of median study drug exposure and 2.8 year of median follow-up"}]},{"nctId":"NCT00262600","title":"Randomized Evaluation of Long Term Anticoagulant Therapy (RE-LY) With Dabigatran Etexilate","status":"COMPLETED","enrollment":18113,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Yearly Event Rate for Composite Endpoint of Stroke/SEE","groups":[{"title":"Dabigatran 110 mg","n":6015,"events":1.54,"mean":null,"sd":null},{"title":"Dabigatran 150 mg","n":6076,"events":1.11,"mean":null,"sd":null},{"title":"Warfarin","n":6022,"events":1.71,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Yearly Event Rate for Composite Endpoint of Stroke/SEE","timeFrame":"36 months"}]},{"nctId":"NCT00403767","title":"An Efficacy and Safety Study of Rivaroxaban With Warfarin for the Prevention of Stroke and Non-Central Nervous System Systemic Embolism in Patients With Non-Valvular Atrial Fibrillation","status":"COMPLETED","enrollment":14269,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"The Composite Event of Stroke/Non-CNS Systemic Embolism: Primary Efficacy (Non-Inferiority)","groups":[{"title":"Rivaroxaban","n":6958,"events":188,"mean":null,"sd":null},{"title":"Warfarin","n":7004,"events":241,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"The Composite Event of Stroke/Non-CNS Systemic Embolism: Primary Efficacy (Non-Inferiority)","timeFrame":"Up to 4 years"},{"measure":"The Composite of Event of Stroke/Non-CNS Systemic Embolism: Primary Efficacy (Superiority)","timeFrame":"Up to 4 years"}]},{"nctId":"NCT02042534","title":"Rivaroxaban Versus Warfarin in Acute Ischemic Stroke With Atrial Fibrillation","status":"COMPLETED","enrollment":195,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants With Intracranial Bleeding and/or Recurrent Ischemic Lesion as Confirmed by MRI Imaging","groups":[{"title":"Rivaroxaban","n":95,"events":47,"mean":null,"sd":null},{"title":"Warfarin","n":88,"events":48,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Participants With Intracranial Bleeding and/or Recurrent Ischemic Lesion as Confirmed by MRI Imaging","timeFrame":"1 month after randomization"}]},{"nctId":"NCT00412984","title":"Apixaban for the Prevention of Stroke in Subjects With Atrial Fibrillation","status":"COMPLETED","enrollment":20976,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants With First Event of Ischemic/Unspecified Stroke, Hemorrhagic Stroke, or Systemic Embolism (SE) During the Intended Treatment Period","groups":[{"title":"Apixaban","n":9120,"events":159,"mean":null,"sd":null},{"title":"Warfarin","n":9081,"events":173,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Participants With First Event of Ischemic/Unspecified Stroke, Hemorrhagic Stroke, or Systemic Embolism (SE) During the Intended Treatment Period","timeFrame":"Time to first event in \"Intended Treatment Period\": started on day of randomization, ended at efficacy cut-off date (date target number of primary efficacy events [448] was expected to have occurred; set to 30-Jan-2011, prior to unblinding)."},{"measure":"Rate of Adjudicated Stroke or Systemic Embolism (SE) During the Intended Treatment Period","timeFrame":"\"Intended Treatment Period\" started on the day of randomization and ended at the efficacy cut-off date (date on which it was expected that the target number of primary efficacy events [448] would have occurred; set to 30-Jan-2011, prior to unblinding)."}]}]};
+  if (!iframe || !context) return;
+  const sendContext = () => {
+    if (!iframe.contentWindow) return;
+    iframe.contentWindow.postMessage({ type: "esc-topic-validation-context", payload: context }, "*");
+  };
+  iframe.addEventListener("load", sendContext);
+  window.addEventListener("message", event => {
+    if (event.source === iframe.contentWindow && event.data?.type === "esc-topic-validation-request") {
+      sendContext();
+    }
+  });
+  window.setTimeout(sendContext, 250);
+})();
+</script>
+      </section>
+    </main>
+  </body>
+</html>

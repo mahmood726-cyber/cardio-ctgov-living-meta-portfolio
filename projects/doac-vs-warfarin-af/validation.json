@@ -1,0 +1,3113 @@
+{
+  "generatedAt": "2026-03-28T18:45:05.888Z",
+  "sourceStartedAt": "2026-03-28T18:44:01.927Z",
+  "minIncludedTrials": 2,
+  "pageSize": 100,
+  "maxPages": 8,
+  "topic": {
+    "slug": "doac-vs-warfarin-af",
+    "label": "Direct Oral Anticoagulants vs Warfarin in Atrial Fibrillation",
+    "domain": "Arrhythmia",
+    "baseQuery": "(\"atrial fibrillation\") AND (apixaban OR rivaroxaban OR dabigatran OR edoxaban) AND (warfarin OR \"vitamin K antagonist\")",
+    "keywords": [
+      "ARISTOTLE",
+      "ROCKET AF",
+      "RE-LY",
+      "ENGAGE AF"
+    ],
+    "query": "(\"atrial fibrillation\") AND (apixaban OR rivaroxaban OR dabigatran OR edoxaban) AND (warfarin OR \"vitamin K antagonist\") AND (\"ARISTOTLE\" OR \"ROCKET AF\" OR \"RE-LY\" OR \"ENGAGE AF\")",
+    "scannedRecords": 16,
+    "pagesFetched": 1,
+    "truncated": false,
+    "includedCount": 5,
+    "excludedCount": 11,
+    "includedStudies": [
+      {
+        "nctId": "NCT00781391",
+        "title": "Global Study to Assess the Safety and Effectiveness of Edoxaban (DU-176b) vs Standard Practice of Dosing With Warfarin in Patients With Atrial Fibrillation",
+        "status": "COMPLETED",
+        "startDate": "2008-11",
+        "completionDate": "2013-05",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "A Phase 3, Randomized, Double-Blind, Double-Dummy, Parallel Group, Multi-Center, Multi-National Study for Evaluation of Efficacy and Safety of Edoxaban (DU-176b) Versus Warfarin In Subjects With Atrial Fibrillation - Effective Anticoagulation With Factor Xa Next Generation in Atrial Fibrillation (ENGAGE - AF TIMI - 48)",
+        "acronym": "EngageAFTIMI48",
+        "briefSummary": "This study is to demonstrate the safety and efficacy profile, in two different dose regimens of Edoxaban (DU-176b), (an investigational new drug being tested for the prevention of stroke/systemic embolic events (SEE)), in individuals with atrial fibrillation. Patients will be randomized to one of three treatment groups: High Dose Regimen, Low Dose Regimen, \\& Warfarin. The expected duration of the study is 24 months.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Daiichi Sankyo",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 21105,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Stroke",
+          "Atrial Fibrillation",
+          "Embolism"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "21 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * 21 years of age or older; male or female. * Able to provide written informed consent. * History of documented AF within the prior 12 months * A moderate to high risk of stroke, as defined by CHADS2 index score of at least 2 Exclusion Criteria: * Transient atrial fibrillation secondary to other reversible disorders * Subjects with moderate or severe mitral stenosis, unresected atrial myxoma, or a mechanical heart valve * Subjects with any contraindication for anticoagulant agents; * Subjects with conditions associated with high risk of bleeding or have known or suspected hereditary or acquired bleeding disorders * Females of childbearing potential including the following: * Females with a history of tubal-ligation * Females less than 2 years post-menopausal"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Compare Edoxaban to Warfarin for Composite of Stroke and Systemic Embolic Events (SEE).",
+            "description": "The composite of stroke and Systemic Embolic Events (SEE) during the on treatment period in the mITT analysis population with a non-inferiority analysis.",
+            "timeFrame": "on-treatment period 2.5 years of median study drug exposure and 2.8 year of median follow-up"
+          },
+          {
+            "measure": "Compare Edoxaban to Warfarin for Composite of Stroke and Systemic Embolic Events (SEE).",
+            "description": "The composite of stroke and Systemic Embolic Events (SEE) during the overall study period in the mITT analysis population.",
+            "timeFrame": "overall study period 2.5 years of median study drug exposure and 2.8 year of median follow-up"
+          },
+          {
+            "measure": "Compare Edoxaban to Warfarin for Composite of Stroke and Systemic Embolic Events (SEE).",
+            "description": "The composite of stroke and Systemic Embolic Events (SEE) during the on treatment period in the PP (per protocol) analysis set population.",
+            "timeFrame": "on-treatment period 2.5 years of median study drug exposure and 2.8 year of median follow-up"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Compare Edoxaban to Warfarin for Composite of Stroke, Systemic Embolic Event (SEE), and Cardiovascular (CV) Mortality",
+            "description": "Compare edoxaban to warfarin for the composite of stroke, Systemic Embolic Events, and Cardiovascular mortality during the overall study period in the ITT analysis set.",
+            "timeFrame": "overall study period 2.5 years of median study drug exposure and 2.8 year of median follow-up"
+          },
+          {
+            "measure": "Compare Edoxaban to Warfarin for Major Adverse Cardiac Event (MACE): a Composite of Non-fatal MI, Non-fatal Stroke, Non-fatal SEE, and Death Due to CV Cause or Bleeding",
+            "description": "Compare edoxaban to warfarin for Major Adverse Cardiac Event (MACE): a composite of non-fatal Myocardial Infarction, non-fatal stroke, non-fatal Systemic Embolic Events, and death due to Cardiovascular cause or bleeding during the overall study period in the ITT analysis set.",
+            "timeFrame": "overall study period 2.5 years of median study drug exposure and 2.8 year of median follow-up"
+          },
+          {
+            "measure": "Compare Edoxaban to Warfarin for Composite of Stroke, SEE, and All-cause Mortality",
+            "description": "Compare Edoxaban to warfarin for Composite of stroke, Systemic Embolic Events, and all-cause mortality during the overall study period in the ITT analysis set.",
+            "timeFrame": "overall study period 2.5 years of median study drug exposure and 2.8 year of median follow-up"
+          }
+        ],
+        "documents": [],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Warfarin/Placebo Edoxaban",
+              "description": "Warfarin tablets plus placebo Edoxaban tablets warfarin tablets: Warfarin tablets plus Edoxaban placebo tablets each taken once daily for 24 months placebo edoxaban: placebo edoxaban"
+            },
+            {
+              "id": "BG001",
+              "title": "High Dose Edoxaban/Placebo Warfarin",
+              "description": "Edoxaban tablets plus warfarin placebo tablets 60mg Edoxaban tablets (high dose regimen): Edoxaban tablets plus warfarin placebo tablets each taken once daily for 24 months placebo warfarin: placebo warfarin"
+            },
+            {
+              "id": "BG002",
+              "title": "Low Dose Edoxaban/Placebo Warfarin",
+              "description": "Edoxaban tablets plus warfarin placebo tablets 30mg Edoxaban tablets (low dose regimen): Edoxaban tablets plus warfarin placebo tablets each taken once daily for 24 months placebo warfarin: placebo warfarin"
+            },
+            {
+              "id": "BG003",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Warfarin/Placebo Edoxaban",
+              "value": 7012,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "High Dose Edoxaban/Placebo Warfarin",
+              "value": 7012,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Low Dose Edoxaban/Placebo Warfarin",
+              "value": 7002,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG003",
+              "groupTitle": "Total",
+              "value": 21026,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Warfarin/Placebo Edoxaban",
+              "value": "70.5",
+              "spread": "9.44",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "High Dose Edoxaban/Placebo Warfarin",
+              "value": "70.6",
+              "spread": "9.51",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Low Dose Edoxaban/Placebo Warfarin",
+              "value": "70.6",
+              "spread": "9.31",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG003",
+              "groupTitle": "Total",
+              "value": "70.6",
+              "spread": "9.42",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Warfarin/Placebo Edoxaban",
+              "female": 2629,
+              "male": 4383
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "High Dose Edoxaban/Placebo Warfarin",
+              "female": 2659,
+              "male": 4353
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Low Dose Edoxaban/Placebo Warfarin",
+              "female": 2718,
+              "male": 4284
+            },
+            {
+              "groupId": "BG003",
+              "groupTitle": "Total",
+              "female": 8006,
+              "male": 13020
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Categorical",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "<=18 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Warfarin/Placebo Edoxaban",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "High Dose Edoxaban/Placebo Warfarin",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Low Dose Edoxaban/Placebo Warfarin",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Between 18 and 65 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Warfarin/Placebo Edoxaban",
+                      "value": "1869",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "High Dose Edoxaban/Placebo Warfarin",
+                      "value": "1830",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Low Dose Edoxaban/Placebo Warfarin",
+                      "value": "1784",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "5483",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": ">=65 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Warfarin/Placebo Edoxaban",
+                      "value": "5143",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "High Dose Edoxaban/Placebo Warfarin",
+                      "value": "5182",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Low Dose Edoxaban/Placebo Warfarin",
+                      "value": "5218",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "15543",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Warfarin/Placebo Edoxaban",
+                      "value": "70.5",
+                      "spread": "9.44"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "High Dose Edoxaban/Placebo Warfarin",
+                      "value": "70.6",
+                      "spread": "9.51"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Low Dose Edoxaban/Placebo Warfarin",
+                      "value": "70.6",
+                      "spread": "9.31"
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "70.6",
+                      "spread": "9.42"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Warfarin/Placebo Edoxaban",
+                      "value": "2629",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "High Dose Edoxaban/Placebo Warfarin",
+                      "value": "2659",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Low Dose Edoxaban/Placebo Warfarin",
+                      "value": "2718",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "8006",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Warfarin/Placebo Edoxaban",
+                      "value": "4383",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "High Dose Edoxaban/Placebo Warfarin",
+                      "value": "4353",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Low Dose Edoxaban/Placebo Warfarin",
+                      "value": "4284",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "13020",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Race (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "American Indian or Alaska Native",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Warfarin/Placebo Edoxaban",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "High Dose Edoxaban/Placebo Warfarin",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Low Dose Edoxaban/Placebo Warfarin",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Asian",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Warfarin/Placebo Edoxaban",
+                      "value": "963",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "High Dose Edoxaban/Placebo Warfarin",
+                      "value": "956",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Low Dose Edoxaban/Placebo Warfarin",
+                      "value": "975",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "2894",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Native Hawaiian or Other Pacific Islander",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Warfarin/Placebo Edoxaban",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "High Dose Edoxaban/Placebo Warfarin",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Low Dose Edoxaban/Placebo Warfarin",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Black or African American",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Warfarin/Placebo Edoxaban",
+                      "value": "88",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "High Dose Edoxaban/Placebo Warfarin",
+                      "value": "96",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Low Dose Edoxaban/Placebo Warfarin",
+                      "value": "94",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "278",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Warfarin tablets plus placebo Edoxaban tablets"
+          },
+          {
+            "id": "2",
+            "title": "Edoxaban tablets (60mg) plus warfarin placebo tablets"
+          },
+          {
+            "id": "3",
+            "title": "Edoxaban tablets (30mg) plus warfarin placebo tablets"
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "Compare Edoxaban to Warfarin for Composite of Stroke and Systemic Embolic Events (SEE).",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Low Dose Edoxaban/Placebo Warfarin",
+              "n": 7002,
+              "events": 253
+            },
+            {
+              "id": "OG001",
+              "title": "High Dose Edoxaban/Placebo Warfarin",
+              "n": 7012,
+              "events": 182
+            },
+            {
+              "id": "OG002",
+              "title": "Warfarin/Placebo Edoxaban",
+              "n": 7012,
+              "events": 232
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      },
+      {
+        "nctId": "NCT00262600",
+        "title": "Randomized Evaluation of Long Term Anticoagulant Therapy (RE-LY) With Dabigatran Etexilate",
+        "status": "COMPLETED",
+        "startDate": "2005-12",
+        "completionDate": null,
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Randomized Evaluation of Long Term Anticoagulant Therapy (RE-LY) Comparing the Efficacy and Safety of Two Blinded Doses of Dabigatran Etexilate With Open Label Warfarin for the Prevention of Stroke and Systemic Embolism in Patients With Non-valvular Atrial Fibrillation: Prospective, Multi-centre, Parallel-group, Non-inferiority Trial (RE-LY Study)",
+        "acronym": "",
+        "briefSummary": "The primary objective of this trial is to demonstrate the efficacy and safety of dabigatran etexilate in patients with non-valvular atrial fibrillation for the prevention of stroke and systemic embolism.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Boehringer Ingelheim",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 18113,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Atrial Fibrillation",
+          "Stroke"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion criteria Patients with non-valvular atrial fibrillation (AF), at moderate to high risk of stroke, or systemic embolism with at least one additional risk factor (i.e. previous ischemic stroke, TIA, or systemic embolism, left ventricular dysfunction, age \\>=75 years, age \\>=65 with either diabetes mellitus, history of coronary artery disease or hypertension) Exclusion criteria 1. Prosthetic heart valves requiring anticoagulation per se, or hemodynamically relevant valve disease that is expected to require surgical intervention during the course of the study 2. Severe, disabling stroke within the previous 6 months, or any stroke within the previous 14 days 3. Conditions associated with an increased risk of bleeding 4. Contraindication to warfarin treatment 5. Reversible causes of atrial fibrillation (e.g., cardiac surgery, pulmonary embolism, untreated hyperthyroidism). 6. Plan to perform a pulmonary vein ablation or surgery for cure of the AF 7. Severe renal impairment (estimated creatinine clearance \\<=30 mL/min) 8. Active infective endocarditis 9. Active liver disease 10. Women who are pregnant, lactating, or of childbearing potential who refuse to use a medically acceptable form of contraception throughout the study 11. Anaemia (haemoglobin \\<100g/L) or thrombocytopenia (platelet count \\<100 x 109/L) 12. Patients who have developed transaminase elevations upon exposure to ximelagatran 13. Patients who have received an investigational drug in the past 30 days or..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Yearly Event Rate for Composite Endpoint of Stroke/SEE",
+            "description": "Time to first occurrence of stroke or systemic embolic event. Yearly event rate (%) = number of subjects with event / subject-years \\* 100. Subject years = sum(date of study termination - date of randomization + 1) of all randomized subjects / 365.25",
+            "timeFrame": "36 months"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Yearly Event Rate for Composite Endpoint of Stroke/SEE/All Cause Death",
+            "description": "Time to first occurrence of stroke, SEE or all cause death. Yearly event rate (%) = number of subjects with event / subject-years \\* 100. Subject years = sum(date of study termination - date of randomization + 1) of all randomized subjects / 365.25",
+            "timeFrame": "36 months"
+          },
+          {
+            "measure": "Yearly Event Rate: Composite of Stroke/SEE/PE/MI/Vascular Death",
+            "description": "Time to first occurrence of stroke, systemic embolic event, pulmonary embolism, myocardial infarction including silent myocardial infarction or vascular death. Yearly event rate (%) = number of subjects with event / subject-years \\* 100. Subject years = sum(date of study termination - date of randomization + 1) of all randomized subjects / 365.25",
+            "timeFrame": "36 months"
+          },
+          {
+            "measure": "Bleeding Events (Major and Minor)",
+            "description": "Yearly event rate of bleeds. Yearly event rate (%) = number of subjects with event / subject-years \\* 100. Subject years = sum(date of study termination - date of randomization + 1) of all randomized subjects / 365.25 Major bleeds are adjudicated, whereas minor bleeds are investigator reported.",
+            "timeFrame": "36 months"
+          }
+        ],
+        "documents": [],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Dabigatran 110 mg",
+              "description": "110 mg twice daily, total daily dose 220 mg"
+            },
+            {
+              "id": "BG001",
+              "title": "Dabigatran 150 mg",
+              "description": "150 mg twice daily, total daily dose 300 mg"
+            },
+            {
+              "id": "BG002",
+              "title": "Warfarin",
+              "description": "Target International Normalized Ratio (INR) of 2.0 to 3.0"
+            },
+            {
+              "id": "BG003",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Dabigatran 110 mg",
+              "value": 6015,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Dabigatran 150 mg",
+              "value": 6076,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Warfarin",
+              "value": 6022,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG003",
+              "groupTitle": "Total",
+              "value": 18113,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Dabigatran 110 mg",
+              "value": "71.4",
+              "spread": "8.6",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Dabigatran 150 mg",
+              "value": "71.5",
+              "spread": "8.8",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Warfarin",
+              "value": "71.6",
+              "spread": "8.6",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG003",
+              "groupTitle": "Total",
+              "value": "71.5",
+              "spread": "8.7",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Dabigatran 110 mg",
+                      "value": "71.4",
+                      "spread": "8.6"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Dabigatran 150 mg",
+                      "value": "71.5",
+                      "spread": "8.8"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Warfarin",
+                      "value": "71.6",
+                      "spread": "8.6"
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "71.5",
+                      "spread": "8.7"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Age, Customized",
+              "paramType": "NUMBER",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Dabigatran 110 mg",
+                      "value": "998",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Dabigatran 150 mg",
+                      "value": "1030",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Warfarin",
+                      "value": "953",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "2981",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Dabigatran 110 mg",
+                      "value": "2668",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Dabigatran 150 mg",
+                      "value": "2580",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Warfarin",
+                      "value": "2646",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "7894",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Dabigatran 110 mg",
+                      "value": "2349",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Dabigatran 150 mg",
+                      "value": "2466",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Warfarin",
+                      "value": "2423",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "7238",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex/Gender, Customized",
+              "paramType": "NUMBER",
+              "unit": "participants",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Dabigatran 110 mg",
+                      "value": "3865",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Dabigatran 150 mg",
+                      "value": "3840",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Warfarin",
+                      "value": "3809",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "11514",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Dabigatran 110 mg",
+                      "value": "2149",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Dabigatran 150 mg",
+                      "value": "2236",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Warfarin",
+                      "value": "2213",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "6598",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Dabigatran 110 mg",
+                      "value": "1",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Dabigatran 150 mg",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Warfarin",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "1",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Ethnicity (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Not Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Dabigatran 110 mg",
+                      "value": "5593",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Dabigatran 150 mg",
+                      "value": "5660",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Warfarin",
+                      "value": "5615",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "16868",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Dabigatran 110 mg",
+                      "value": "421",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Dabigatran 150 mg",
+                      "value": "416",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Warfarin",
+                      "value": "407",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "1244",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Unknown or Not Reported",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Dabigatran 110 mg",
+                      "value": "1",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Dabigatran 150 mg",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Warfarin",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "1",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "twice a day"
+          },
+          {
+            "id": "2",
+            "title": "once a day"
+          },
+          {
+            "id": "3",
+            "title": "twice a day"
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "Yearly Event Rate for Composite Endpoint of Stroke/SEE",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Dabigatran 110 mg",
+              "n": 6015,
+              "events": 1.54
+            },
+            {
+              "id": "OG001",
+              "title": "Dabigatran 150 mg",
+              "n": 6076,
+              "events": 1.11
+            },
+            {
+              "id": "OG002",
+              "title": "Warfarin",
+              "n": 6022,
+              "events": 1.71
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      },
+      {
+        "nctId": "NCT00403767",
+        "title": "An Efficacy and Safety Study of Rivaroxaban With Warfarin for the Prevention of Stroke and Non-Central Nervous System Systemic Embolism in Patients With Non-Valvular Atrial Fibrillation",
+        "status": "COMPLETED",
+        "startDate": "2006-12",
+        "completionDate": "2010-09",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "A Prospective, Randomized, Double-Blind, Parallel-Group, Multicenter, Non-inferiority Study Comparing the Efficacy and Safety of Rivaroxaban (BAY 59-7939) With Warfarin for the Prevention of Stroke and Non-Central Nervous System Systemic Embolism in Subjects With Non-Valvular Atrial Fibrillation",
+        "acronym": "",
+        "briefSummary": "The purpose of this study is to compare the efficacy and safety of rivaroxaban with warfarin for the prevention of blood clots in the brain (referred to as stroke) and blood clots in other parts of the body referred to as non-central nervous system systemic embolism) in patients with non-valvular atrial fibrillation (a heart rhythm disorder).",
+        "detailedDescription": "Patients with non-valvular atrial fibrillation who are at risk for stroke and non-central nervous system (non-CNS) systemic embolism, will be randomized (assigned by chance) to receive treatment with rivaroxaban or warfarin, two different anticoagulants (substances that prevent blood clots). Treatment will be double-blinded (neither the patient nor study staff will know which study drug is assigned to patients during the study). Patients assigned to rivaroxaban will receive rivaroxaban 20 mg orally (p.o.) once daily (OD) plus warfarin placebo p.o. OD titrated to a target sham international normalized ratio (INR) of 2.5. Patients with moderate renal impairment at screening will receive rivaroxaban 15 mg p.o. OD. Patients assigned to warfarin will receive warfarin p.o. OD titrated to a target INR of 2.5 plus rivaroxaban placebo p.o. OD. The maximum expected length of treatment is up to 32 months but may be extended up to 4 years.",
+        "sponsor": {
+          "name": "Johnson & Johnson Pharmaceutical Research & Development, L.L.C.",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 14269,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Atrial Fibrillation",
+          "Stroke",
+          "Embolism"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Patients must have documented atrial fibrillation on 2 separate occasions within 6 months before screening * History of a prior stroke, transient ischemic attack or non-neurologic systemic embolism believed to be cardiac in origin, or at least two of the following risk factors: heart failure, hypertension, age 75 years or greater, diabetes mellitus Exclusion Criteria: * Significant mitral stenosis * Transient atrial fibrillation caused by a reversible disorder * Active internal bleeding * Severe disabling stroke * History of intracranial bleeding * Hemorrhagic disorders"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "The Composite Event of Stroke/Non-CNS Systemic Embolism: Primary Efficacy (Non-Inferiority)",
+            "description": "The number of patients with the first occurrence of a stroke or non-CNS systemic embolism while on treatment (defined as the time interval from the first dose to the last dose of study drug plus 2 days). The statistical analysis is based on time from randomization to the first occurrence of the event while on treatment.",
+            "timeFrame": "Up to 4 years"
+          },
+          {
+            "measure": "The Composite of Event of Stroke/Non-CNS Systemic Embolism: Primary Efficacy (Superiority)",
+            "description": "The number of patients with the first occurrence of a stroke or non-CNS systemic embolism while on treatment (defined as the time interval from the first dose to the last dose of study drug plus 2 days). The statistical analysis is based on time from randomization to the first occurrence of the event while on treatment.",
+            "timeFrame": "Up to 4 years"
+          },
+          {
+            "measure": "The Composite Event of Major/Non-major Clinically Relevant Bleeding Events: Primary Safety",
+            "description": "The number of patients with the first occurrence of a major or non-major clinically relevant bleeding event while on treatment. The statistical analysis is based on time from the first dose of study drug to the first occurrence of the event while on treatment.",
+            "timeFrame": "Up to 4 years"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "The Composite Event of Stroke/Non-CNS Systemic Embolism/Vascular Death",
+            "description": "The number of patients with the first occurrence of a stroke, non-CNS systemic embolism, or vascular death while on treatment. The statistical analysis is based on time from randomization to the first occurrence of the event while on treatment.",
+            "timeFrame": "Up to 4 years"
+          },
+          {
+            "measure": "The Composite Event of Stroke/Non-CNS Systemic Embolism/Myocardial Infarction/Vascular Death",
+            "description": "The number of patients with the first occurrence of a stroke, non-CNS systemic embolism, myocardial infarction, or vascular death while on treatment. The statistical analysis is based on time from randomization to the first occurrence of the event while on treatment.",
+            "timeFrame": "Up to 4 years"
+          },
+          {
+            "measure": "The Individual Components of the Composite Primary and Major Secondary Efficacy Outcome Measures: Stroke",
+            "description": "The number of patients with the first occurrence of a stroke while on treatment. The statistical analysis is based on time from randomization to the first occurrence of the event while on treatment.",
+            "timeFrame": "Up to 4 years"
+          }
+        ],
+        "documents": [],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Rivaroxaban",
+              "description": "Rivaroxaban 15 mg p.o. once daily or Rivaroxaban 20 mg p.o. once daily"
+            },
+            {
+              "id": "BG001",
+              "title": "Warfarin",
+              "description": "Warfarin (1 mg, 2.5 mg, or 5 mg p.o. once daily)"
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Rivaroxaban",
+              "value": 7111,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Warfarin",
+              "value": 7125,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 14236,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Rivaroxaban",
+              "value": "71.2",
+              "spread": "9.45",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Warfarin",
+              "value": "71.2",
+              "spread": "9.39",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "71.2",
+              "spread": "9.42",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Rivaroxaban",
+              "female": 2819,
+              "male": 4292
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Warfarin",
+              "female": 2826,
+              "male": 4299
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 5645,
+              "male": 8591
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Categorical",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "<=18 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Between 18 and 65 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban",
+                      "value": "1646",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "1642",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "3288",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": ">=65 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban",
+                      "value": "5465",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "5483",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "10948",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban",
+                      "value": "71.2",
+                      "spread": "9.45"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "71.2",
+                      "spread": "9.39"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "71.2",
+                      "spread": "9.42"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban",
+                      "value": "2819",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "2826",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "5645",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban",
+                      "value": "4292",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "4299",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "8591",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Region of Enrollment",
+              "paramType": "NUMBER",
+              "unit": "participants",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban",
+                      "value": "284",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "285",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "569",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban",
+                      "value": "120",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "122",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "242",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban",
+                      "value": "16",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "16",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "32",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban",
+                      "value": "49",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "47",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "96",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Arm 1"
+          },
+          {
+            "id": "2",
+            "title": "Arm 2"
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "The Composite Event of Stroke/Non-CNS Systemic Embolism: Primary Efficacy (Non-Inferiority)",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Rivaroxaban",
+              "n": 6958,
+              "events": 188
+            },
+            {
+              "id": "OG001",
+              "title": "Warfarin",
+              "n": 7004,
+              "events": 241
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      },
+      {
+        "nctId": "NCT02042534",
+        "title": "Rivaroxaban Versus Warfarin in Acute Ischemic Stroke With Atrial Fibrillation",
+        "status": "COMPLETED",
+        "startDate": "2014-01",
+        "completionDate": "2015-12",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Rivaroxaban Versus Warfarin in Acute Ischemic Stroke With Atrial Fibrillation: Acute Stroke With Xarelto to Reduce Intracranial Bleeding, Recurrent Embolic Stroke, and Hospital Stay, Phase 2, Conceptual Multicenter Trial",
+        "acronym": "TripleAXEL",
+        "briefSummary": "Rationale Acute ischemic stroke due to atrial fibrillation (AF) carries a high risk for early recurrence. In acute stage, guidelines recommend aspirin, but do not recommend anticoagulation due to the increased risk of intracranial bleeding. Since, aspirin has a limited efficacy of preventing recurrent stroke in AF, expert consensus suggests early anticoagulation in non-severe stroke with AF. The current practice for acute ischemic stroke patients with AF is delayed warfarin administration with aspirin use for non-minor stroke or immediate warfarin administration (sometimes with heparin bridging) for minor stroke. However, conventional anticoagulation with warfarin in acute ischemic stroke with AF has the following limitations: 1) risk of intracranial bleeding particularly in acute stage, 2) delayed action and transient paradoxical thrombogenic tendency due to the inhibition of protein C, resulting in the risk of early recurrent embolic stroke, and 3) prolongation of hospitalization waiting for full anticoagulation. In contrast, as compared to warfarin, rivaroxaban is advantageous for reduced risk of intracranial bleeding and immediate anticoagulation efficacy. Goal The current trial will examine whether early initiation (within 5 days from stroke onset) of rivaroxaban as compared to conventional warfarin would reduce intracranial bleeding, recurrent embolic stroke, and hospital stay in patients with acute ischemic stroke due to AF.",
+        "detailedDescription": "Primary endpoint: Composite of MRI-defined intracranial bleeding and recurrent ischemic lesion within 1 month after randomization (rivaroxaban vs conventional warfarin)",
+        "sponsor": {
+          "name": "Asan Medical Center",
+          "class": "OTHER"
+        },
+        "phases": [
+          "PHASE2"
+        ],
+        "enrollment": {
+          "count": 195,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Ischemic Stroke",
+          "Transient Ischemic Attack"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "19 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: All of below * Acute ischemic stroke or TIA presumed to be cardioembolic origin (within 5 days from stroke onset) with mild severity: infarct size on DWI less than 1/3 of MCA territory, 1/2 of ACA territory, 1/2 of PCA territory, and 1/2 of one cerebellar hemisphere * Atrial fibrillation including paroxysmal atrial fibrillation: atrial fibrillation must be documented by ECG evidence (e.g., 12-lead ECG, rhythm strip, Holter, pacemaker interrogation) within 30 days before randomization. This could be obtained from a notation in the subject's record (e.g., medical chart, hospital discharge summary). * Age ≥19 years * Informed consent Exclusion Criteria: Any of below * Chronic renal failure (GFR less than 30ml/min) or severe hepatic impairment * Significant hemorrhagic transformation (parenchymal hematoma type I or II by the ECASS definition) * Stroke mechanism of presumed small vessel occlusion: single small subcortical infarct in the perforating artery territory * Large hemispheric or cerebellar infarction; larger than 1/3 of MCA territory, 1/2 of ACA territory, 1/2 of PCA territory, and 1/2 of one cerebellar hemisphere * Mechanical valve requiring warfarin therapy * Active internal bleeding * Prior history of symptomatic intracranial bleeding : patients with asymptomatic bleedings or microbleedings on MRI are eligible for inclusion * Major surgery or major trauma within 30 days that might be associated with increased bleeding risk * Clinically significan..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Number of Participants With Intracranial Bleeding and/or Recurrent Ischemic Lesion as Confirmed by MRI Imaging",
+            "description": "Intracranial bleeding: symptomatic hemorrhage confirmed by CT or MRI or asymptomatic hemorrhage on follow-up GRE or SWI imaging at 1 month Recurrent ischemic lesion: symptomatic ischemic stroke confirmed by relevant neuroimagings or asymptomatic recurrent ischemic lesion on follow-up or FLAIR imaging at 1 month",
+            "timeFrame": "1 month after randomization"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "The Number of Patients With Intracranial Bleeding",
+            "description": "Intracranial bleeding confirmed by relevant neuroimagings",
+            "timeFrame": "at 1 month"
+          },
+          {
+            "measure": "The Number of Patients With Recurrent Ischemic Lesion",
+            "description": "Recurrent ischemic lesion confirmed by relevant neuroimagings",
+            "timeFrame": "at 1 month"
+          },
+          {
+            "measure": "Length of Hospitalization",
+            "description": "Time to event will be calculated",
+            "timeFrame": "at 1month"
+          }
+        ],
+        "documents": [],
+        "demographics": {
+          "populationDescription": "Modified Intention-to-treat analysis : The subject who is measured for the primary end point with IP is administered more than at least once after randomization",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Rivaroxaban",
+              "description": "Rivaroxaban group for 1 month : initial 5 days after randomization rivaroxaban 10mg QD will be administered. Rivaroxaban 20mg QD, but 15mg in case of Cr CL will be administered for remaining 25 days. Rivaroxaban: Rivaroxaban group receive oral rivaroxaban 10 mg once daily for..."
+            },
+            {
+              "id": "BG001",
+              "title": "Warfarin",
+              "description": "Patients allocated to warfarin receive warfarin plus aspirin 100mg until INR value exceed 1.7 followed by warfarin monotherapy with target INR value of 2.5 \\[2.0 - 3.0\\]. Warfarin: To harmonize the warfarin regimen across the sites, fixed algorithm was used in dose calculation..."
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Rivaroxaban",
+              "value": 95,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Warfarin",
+              "value": 88,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 183,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Rivaroxaban",
+              "value": "70.2",
+              "spread": "10.1",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Warfarin",
+              "value": "70.6",
+              "spread": "10.9",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "70.4",
+              "spread": "10.4",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Rivaroxaban",
+              "female": 40,
+              "male": 55
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Warfarin",
+              "female": 36,
+              "male": 52
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 76,
+              "male": 107
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban",
+                      "value": "70.2",
+                      "spread": "10.1"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "70.6",
+                      "spread": "10.9"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "70.4",
+                      "spread": "10.4"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Gender",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban",
+                      "value": "40",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "36",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "76",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban",
+                      "value": "55",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "52",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "107",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Body Mass Index",
+              "paramType": "MEAN",
+              "unit": "kg/㎡",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban",
+                      "value": "24.4",
+                      "spread": "3.3"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "23.6",
+                      "spread": "3.1"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "24.0",
+                      "spread": "3.2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Rivaroxaban group for 1 month : initial 5 days after randomization rivaroxaban 10mg QD will be administered. Rivaroxaban 20mg QD, but 15mg in case of Cr CL will be administered for remaining 25 days."
+          },
+          {
+            "id": "2",
+            "title": "Patients allocated to warfarin receive warfarin plus aspirin 100mg until INR value exceed 1.7 followed by warfarin monotherapy with target INR value of 2.5 \\[2.0 - 3.0\\]."
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "Number of Participants With Intracranial Bleeding and/or Recurrent Ischemic Lesion as Confirmed by MRI Imaging",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Rivaroxaban",
+              "n": 95,
+              "events": 47
+            },
+            {
+              "id": "OG001",
+              "title": "Warfarin",
+              "n": 88,
+              "events": 48
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      },
+      {
+        "nctId": "NCT00412984",
+        "title": "Apixaban for the Prevention of Stroke in Subjects With Atrial Fibrillation",
+        "status": "COMPLETED",
+        "startDate": "2006-12-31",
+        "completionDate": "2011-05-25",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "A Phase 3, Active (Warfarin) Controlled, Randomized, Double-Blind, Parallel Arm Study to Evaluate Efficacy and Safety of Apixaban in Preventing Stroke and Systemic Embolism in Subjects With Nonvalvular Atrial Fibrillation",
+        "acronym": "ARISTOTLE",
+        "briefSummary": "The trial seeks to determine if apixaban, an investigational anticoagulant (blood-thinner) is as effective as standard therapy (warfarin) in preventing stroke and systemic embolism in subjects with atrial fibrillation and risk factors for stroke.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Bristol-Myers Squibb",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 20976,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Atrial Fibrillation",
+          "Atrial Flutter"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Males and females ≥ 18 yrs with atrial fibrillation (AF) and one or more of the following risk factors for stroke: * Age ≥ 75, previous stroke * transient ischemic attack (TIA) or Systemic Embolism (SE) * Symptomatic congestive heart failure or left ventricular dysfunction with left ventricular ejection fraction (LVEF) ≤ 40% * Diabetes mellitus or hypertension requiring pharmacological treatment"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Number of Participants With First Event of Ischemic/Unspecified Stroke, Hemorrhagic Stroke, or Systemic Embolism (SE) During the Intended Treatment Period",
+            "description": "All suspected efficacy events were adjudicated by the Central Events Committee (CEC). Diagnosis of stroke=the nontraumatic focal neurological deficit lasting at least 24 hours, and includes ischemic stroke, hemorrhagic stroke, ischemic stroke with hemorrhagic conversion, stroke of uncertain type, and retinal ischemic event (embolism, infarction). Diagnosis of SE=clinical history consistent with an acute loss of blood flow to a peripheral artery (or arteries), supported by evidence of embolism from surgical specimens, autopsy, angiography, vascular imaging, or other objective testing.",
+            "timeFrame": "Time to first event in \"Intended Treatment Period\": started on day of randomization, ended at efficacy cut-off date (date target number of primary efficacy events [448] was expected to have occurred; set to 30-Jan-2011, prior to unblinding)."
+          },
+          {
+            "measure": "Rate of Adjudicated Stroke or Systemic Embolism (SE) During the Intended Treatment Period",
+            "description": "Rate=Number of adjudicated stroke or SE events per 100 patient years. Diagnosis of stroke=the nontraumatic focal neurological deficit lasting at least 24 hours, and includes ischemic stroke, hemorrhagic stroke, ischemic stroke with hemorrhagic conversion, stroke of uncertain type, and retinal ischemic event (embolism, infarction). Diagnosis of SE=clinical history consistent with an acute loss of blood flow to a peripheral artery (or arteries), supported by evidence of embolism from surgical specimens, autopsy, angiography, vascular imaging, or other objective testing.",
+            "timeFrame": "\"Intended Treatment Period\" started on the day of randomization and ended at the efficacy cut-off date (date on which it was expected that the target number of primary efficacy events [448] would have occurred; set to 30-Jan-2011, prior to unblinding)."
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Number of Participants With Event of Major (International Society on Thrombosis and Hemostasis [ISTH]) Bleeding During Treatment Period",
+            "description": "ISTH Bleeding Criteria: Major bleeding=a bleeding event that was: clinically overt bleeding accompanied by a decrease in hemoglobin (Hgb) of 2 g/dL or more, and/or a transfusion of 2 or more units of packed red blood cells; bleeding that occurred in at least 1 of the following critical sites: intracranial, intraspinal, intraocular (within the corpus of the eye; a conjunctival bleed is not an intraocular bleed), pericardial, intra-articular, intramuscular with compartment syndrome, and retroperitoneal; bleeding that was fatal.",
+            "timeFrame": "\"Treatment Period\" started with first dose of blinded study drug and ended 2 days after the last dose of blinded study drug. Mean duration of exposure to double-blind study drug was 1.7 years in each treatment group."
+          },
+          {
+            "measure": "Rate of Adjudicated Major (ISTH) Bleed Events During Treatment Period",
+            "description": "Rate=number of adjudicated major (ISTH) bleed events per 100 patient years. ISTH Bleeding Criteria: Major bleeding=a bleeding event that was: clinically overt bleeding accompanied by a decrease in hemoglobin (Hgb) of 2 g/dL or more and/or a transfusion of 2 or more units of packed red blood cells; bleeding that occurred in at least 1 of the following sites: intracranial, intraspinal, intraocular (within the corpus of the eye; a conjunctival bleed is not an intraocular bleed), pericardial, intra-articular, intramuscular with compartment syndrome, and retroperitoneal; bleeding that was fatal.",
+            "timeFrame": "\"Treatment Period\" started with first dose of blinded study drug and ended 2 days after the last dose of blinded study drug. Mean duration of exposure to double-blind study drug was 1.7 years in each treatment group."
+          },
+          {
+            "measure": "Number of Participants With Events of All-Cause Death During the Intended Treatment Period",
+            "description": "Death was defined as all-cause mortality. All unobserved deaths were assumed to be cardiovascular in nature unless a non-cardiovascular cause could be clearly provided. Cardiovascular=deaths due to ischemic and hemorrhagic stroke, SE, myocardial infarction (MI), sudden death, heart failure, other cardiovascular, and unobserved deaths. Non-cardiovascular=all deaths due to a clearly documented non-cardiovascular cause (further classified into the categories: bleeding, study drug toxicity other than bleeding, malignancy, infection, trauma, and pulmonary causes of death).",
+            "timeFrame": "\"Intended Treatment Period\" started on the day of randomization and ended at the efficacy cut-off date (date on which it was expected that the target number of primary efficacy events [448] would have occurred; set to 30-Jan-2011, prior to unblinding)."
+          }
+        ],
+        "documents": [],
+        "demographics": {
+          "populationDescription": "Randomized participants",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Apixaban",
+              "description": "Participants received apixaban and warfarin-placebo following randomization during a titration phase using a dosing algorithm for warfarin- placebo; apixaban was dosed at 5 mg twice daily (BID) \\[or 2.5 mg BID in select subjects\\]. Subsequent warfarin placebo doses were recomm..."
+            },
+            {
+              "id": "BG001",
+              "title": "Warfarin",
+              "description": "Participants received apixaban-placebo and warfarin following randomization during a titration phase using a dosing algorithm for warfarin; apixaban-placebo was dosed at 5 mg twice daily (BID) \\[or 2.5 mg BID in select subjects\\]. Subsequent warfarin doses were recommended bas..."
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Apixaban",
+              "value": 9120,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Warfarin",
+              "value": 9081,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 18201,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Apixaban",
+              "value": "69.1",
+              "spread": "9.61",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Warfarin",
+              "value": "69.0",
+              "spread": "9.74",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "69.1",
+              "spread": "9.68",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Apixaban",
+              "female": 3234,
+              "male": 5886
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Warfarin",
+              "female": 3182,
+              "male": 5899
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 6416,
+              "male": 11785
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Apixaban",
+                      "value": "69.1",
+                      "spread": "9.61"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "69.0",
+                      "spread": "9.74"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "69.1",
+                      "spread": "9.68"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Age, Customized",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "<65 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Apixaban",
+                      "value": "2731",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "2740",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "5471",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Between 65 and 75 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Apixaban",
+                      "value": "3539",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "3513",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "7052",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": ">=75 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Apixaban",
+                      "value": "2850",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "2828",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "5678",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Apixaban",
+                      "value": "3234",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "3182",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "6416",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Apixaban",
+                      "value": "5886",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "5899",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "11785",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Race/Ethnicity, Customized",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "White (European)",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Apixaban",
+                      "value": "5440",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "5366",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "10806",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "White (Middle Eastern or North African)",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Apixaban",
+                      "value": "59",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "66",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "125",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "White (Other White)",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Apixaban",
+                      "value": "2037",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "2060",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "4097",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "White (Not Reported)",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Apixaban",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Warfarin",
+                      "value": "1",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Arm 1"
+          },
+          {
+            "id": "2",
+            "title": "Arm 2"
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "Number of Participants With First Event of Ischemic/Unspecified Stroke, Hemorrhagic Stroke, or Systemic Embolism (SE) During the Intended Treatment Period",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Apixaban",
+              "n": 9120,
+              "events": 159
+            },
+            {
+              "id": "OG001",
+              "title": "Warfarin",
+              "n": 9081,
+              "events": 173
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      }
+    ],
+    "excludedStudies": [
+      {
+        "nctId": "NCT05773222",
+        "title": "Efficacy and Safety of Apixaban in Korean Frail Atrial Fibrillation Patient",
+        "status": "ACTIVE_NOT_RECRUITING",
+        "startDate": "2019-08-12",
+        "completionDate": "2026-12-31",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "The efficAcy and Safety of aPixaban In REal-world Practice in Korean Frail Patients With Atrial Fibrillation: a Prospective Multicenter Non-interventional, Observational Study: ASPIRE Study",
+        "acronym": "",
+        "briefSummary": "Atrial fibrillation (AF) is the most common arrhythmia, and its prevalence is increasing with the aging population \\[1\\]. As the prevalence of AF is significantly rising among the population over 70-80 years old and considering the population is at high risk of AF complications such as stroke, oral anticoagulation (OAC) therapy is necessary among these subjects \\[1-3\\]. OAC decreases the risk of stroke and systemic thromboembolism with improved mortality among AF patients. The introduction of non-vitamin K antagonist oral anticoagulants (NOAC) has led to more effective and safe anticoagulation therapy among Asian patients \\[4,5\\]. Among different types of NOAC, the prescription of apixaban has been increasing based on robust safety data. The ARISTOTLE (Apixaban for Reduction in Stroke and Other Thromboembolic Events in Atrial Fibrillation), phase three clinical trial on apixaban., showed efficacy and safety of apixaban compared to warfarin among 18,000 patients worldwide \\[6\\]. However, this study only included 5.5% (986) Asian patients. Of patients requiring OAC, those of old age, low body weight, or decreased renal function are at 'high risk' of stroke, systemic thromboembolism, and major bleeding events \\[4, 7-9\\]. In Korea, among patients prescribed with NOAC due to AF, 35-40% were older than the age of 75 years old, 35% had bodyweight ≤ 60kg and 25-30% had decreased renal function (Creatinine clearance ≤ 60ml/min) \\[10\\]. Although apixaban has proved safe in old age,...",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Seoul National University Hospital",
+          "class": "OTHER"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 2500,
+          "type": "ESTIMATED"
+        },
+        "conditions": [
+          "Atrial Fibrillation"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "19 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: 1. Patient must be ≥19 years. 2. Patient has non-valvular atrial fibrillation necessitating the use of apixaban for stroke prevention. 3. Subjects satisfies single dose reduction criterion for apixaban; (1) age 80 years or older (2) body weight 60kg or lower (3) serum creatinine 1.5mg/dL or higher. Exclusion Criteria: 1. Patient is vulnerable (according to Korean Good Clinical Practice definition) or disagree with the study. 2. Patient had a history of clinical events, defined as primary and secondary outcomes of the study, prior to study registration after taking apixaban. 3. Patient satisfies two or more dose reduction criteria for apixaban."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Stroke",
+            "description": "",
+            "timeFrame": "up to 12 months"
+          },
+          {
+            "measure": "Systemic embolism",
+            "description": "",
+            "timeFrame": "up to 12 months"
+          },
+          {
+            "measure": "Major bleeding",
+            "description": "ISTH criteria",
+            "timeFrame": "up to 12 months"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Death from any cause",
+            "description": "",
+            "timeFrame": "up to 12 months"
+          },
+          {
+            "measure": "Myocardial infarction",
+            "description": "",
+            "timeFrame": "up to 12 months"
+          },
+          {
+            "measure": "Composite of major bleeding and clinically relevant nonmajor bleeding",
+            "description": "ISTH criteria",
+            "timeFrame": "up to 12 months"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "not_randomized_interventional",
+          "fewer_than_two_arms",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT04593056",
+        "title": "Replication of the ROCKET-AF Anticoagulant Trial in Healthcare Claims Data",
+        "status": "COMPLETED",
+        "startDate": "2020-09-01",
+        "completionDate": "2021-02-18",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "Replication of the ROCKET-AF Anticoagulant Trial in Healthcare Claims Data",
+        "acronym": "",
+        "briefSummary": "Investigators are building an empirical evidence base for real world data through large-scale replication of randomized controlled trials. The investigators' goal is to understand for what types of clinical questions real world data analyses can be conducted with confidence and how to implement such studies.",
+        "detailedDescription": "This is a non-randomized, non-interventional study that is part of the RCT DUPLICATE initiative (www.rctduplicate.org) of the Brigham and Women's Hospital, Harvard Medical School. It is intended to replicate, as closely as is possible in healthcare insurance claims data, the trial listed below/above. Although many features of the trial cannot be directly replicated in healthcare claims, key design features, including outcomes, exposures, and inclusion/exclusion criteria, were selected to proxy those features from the trial. Randomization is also not replicable in healthcare claims data but was proxied through a statistical balancing of measured covariates according to standard practice. Investigators assume that the RCT provides the reference standard treatment effect estimate and that failure to replicate RCT findings is indicative of the inadequacy of the healthcare claims data for replication for a range of possible reasons and does not provide information on the validity of the original RCT finding.",
+        "sponsor": {
+          "name": "Brigham and Women's Hospital",
+          "class": "OTHER"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 102636,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Atrial Fibrillation"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": null,
+          "criteria": "Please see: https://drive.google.com/drive/folders/1WD618wrywYjEaXzfLTcuK-VCcnb6b-gV for full code and algorithm definitions. Eligible cohort entry dates: Market availability of rivaroxaban in the U.S. started on November 4, 2011. For Marketscan: November 4, 2011 -Dec 31, 2018 (end of data availability). For Optum: November 4, 2011 -Dec 31, 2019 (end of data availability). For Medicare: November 4, 2011 -Dec 31, 2017 (end of data availability) Inclusion Criteria: * 1\\. Patients 18 years of age or older * 2\\. Non-valvular atrial fibrillation * 3\\. Non-valvular atrial fibrillation 14 days or after the previous diagnosis of AF in inclusion 2 * 4\\. History of prior ischemic stroke, TIA, systemic embolism or two or more of the following risk factors: * 4a. Heart failure and/or left ventricular ejection fraction ≤35% * 4b. Hypertension (defined as use of antihypertensive medications within 6 months before the screening visit or persistent systolic blood pressure above 140 mmHg or diastolic blood pressure above 90 mmHg) * 4c. Patients 75 years of age or older * 4d. Diabetes mellitus (defined as a history of type 1 or type 2 diabetes mellitus or use of antidiabetic medications within 6 months before screening visit) Exclusion Criteria: * 1\\. Cardiac-related conditions * 1a. Hemodynamically significant mitral valve stenosis * 1b. Prosthetic heart valve (annuloplasty with or without prosthetic ring, commissurotomy and/or valvuloplasty are permitted) * 1e. Known presence of atrial my..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Relative hazard of composite outcome of Stroke and Systemic Embolism",
+            "description": "Relative hazard of composite outcome of Stroke and Systemic Embolism - Please refer to uploaded protocol for full definition due to size limitations.",
+            "timeFrame": "[Time Frame: Through study completion (a median of 98-119 days)]"
+          }
+        ],
+        "secondaryOutcomes": [],
+        "documents": [
+          {
+            "label": "Study Protocol and Statistical Analysis Plan",
+            "filename": "Prot_SAP_001.pdf",
+            "date": "2021-09-14",
+            "hasSap": true,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          }
+        ],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Reference group"
+          },
+          {
+            "id": "2",
+            "title": "Exposure group"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "not_randomized_interventional",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT02185027",
+        "title": "Observatory of Invasive Procedures and Bleeding in Patients Treated With New Oral Anticoagulants",
+        "status": "COMPLETED",
+        "startDate": "2013-06",
+        "completionDate": "2016-12",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "Observatory of Invasive Procedures and Bleeding in Patients Treated With New Oral Anticoagulants",
+        "acronym": "GIHP-NACO",
+        "briefSummary": "The arrival on the market of direct oral factor Xa and factor IIa inhibitors (dabigatran (Pradaxa®), rivaroxaban (Xarelto®), apixaban (Eliquis®) and others soon to come) raises novel questions among clinicians confronted with the emergency management of patients treated with these new drugs. It is likely that these new oral anticoagulants (NOACs) will eventually win a significant market share in the indications secondary prevention of venous thromboembolism and prevention of cardioembolic events in patients with nonvalvular atrial fibrillation, due to their net clinical benefit and their practicality of use compared with vitamin K antagonists (VKAs). However, despite the fact that NOACs reduce the incidence of intracranial bleeding by about half compared with VKAs, the risk remains significant; furthermore, in clinical trials, these drugs had little or no effect on reducing the incidence of major extracranial bleeding. In everyday practice, where the indication could be expanded to unselected populations and due to a potential for misuse, it is likely that the incidence of bleeding complications will be higher than that reported in clinical trials. Indeed, the numerous alerts emanating from regulatory agencies in various countries (US, Australia, etc.) bear witness to this, and should serve as a reminder that these anticoagulants have a real potential for bleeding complications and, in the absence of an antidote, there is no validated management strategy. Furthermore, as t...",
+        "detailedDescription": "The management of critical situations is difficult for several reasons: * First, there is significant intra- and inter-individual variability in the pharmacokinetics of NOACs, which is further heightened in the critical setting by drug interactions with other agents that interfere with P-GLYCOPROTEIN (P-GP) and cytochrome ( cytochrome P4503A4) in patients who are often elderly and multi medicated, and by rapid variations in renal function, which is essential for elimination of NOACs. * Second, biological guidance is weak: there is no clearcut therapeutic range nor any validated hemostatic safety cutoff, as is the case with the International Normalized Ratio (INR) for VKAs. Conventional coagulation tests (PT/aPTT) are poorly standardized and difficult to interpret. Assays to measure the serum concentrations of these drugs are not widespread outside of a few teaching hospitals. * Third, there is a lack of clinical experience. Analyses of critical situations that occurred during clinical trials were done after the fact and the data collected are heterogeneous and incomplete. Clinical cases reported in the literature are rarely well documented. The objective of the observatory is to rapidly acquire documented and thorough feedback on clinical experience with these new drugs that will be able to confer a higher level of evidence to the management recommendations for treated patients.",
+        "sponsor": {
+          "name": "University Hospital, Grenoble",
+          "class": "OTHER"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 1166,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Venous Thromboembolism",
+          "Atrial Fibrillation"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Age ≥ 18 years * Managed in view of surgery or an invasive procedure, emergency or not * Managed and hospitalized for active bleeding * Long-term therapy (in the indication atrial fibrillation or treatment of pulmonary embolism or deep vein thrombosis) by at least one antithrombotic agent from the following list: DABIGATRAN ETEXILATE MESYLATE or RIVAROXABAN or APIXABAN Exclusion Criteria: * Pregnant women * Refusal to participate in the study: listed in the non-inclusion registry * Antithrombotics indicated for the prevention of venous thromboembolism"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "complications and compliance with GIHP recommendations",
+            "description": "Association between the incidence rate at 1 month post-intervention of an event among the following complications and compliance with GIHP recommendations (appended) evaluated by a composite endpoint Major cardiovascular event ( acute coronary syndrome, cardiogenic shock, stroke or Transient Ischemic Attack (TIA), Central Nervous System (extra-CNS) thromboembolic event). Major bleeding event in the group of patients who had an emergency invasive procedure. Continued bleeding after management (treatment, reversal) in the group of patients managed for bleeding. Compliance with GIHP recommendations (appended) evaluated by a composite endpoint based on: * Observance of reversal strategies * O...",
+            "timeFrame": "At 1 month"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "NOAC management",
+            "description": "All NOAC treatments will be recorded",
+            "timeFrame": "during the perioperative period"
+          },
+          {
+            "measure": "reversal strategies description",
+            "description": "use or not of reversal strategies will be described",
+            "timeFrame": "during the perioperative period"
+          },
+          {
+            "measure": "Coagulation test results",
+            "description": "Coagulation test results will be recorded",
+            "timeFrame": "during the perioperative period"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Description at 1 month post-intervention of an potential event"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "not_randomized_interventional",
+          "fewer_than_two_arms",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT06045858",
+        "title": "Safety and Efficacy of Apixaban Versus Warfarin in Peritoneal Dialysis Patients With Non Valvular Atrial Fibrillation: a Prospective, Randomised, Open-label, Blinded End-point Trial (APIDP2)",
+        "status": "NOT_YET_RECRUITING",
+        "startDate": "2024-10-30",
+        "completionDate": "2027-10-30",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Safety and Efficacy of Apixaban Versus Warfarin in Peritoneal Dialysis Patients With Non Valvular Atrial Fibrillation: a Prospective, Randomised, Open-label, Blinded End-point Trial (APIDP2)",
+        "acronym": "APIDP2",
+        "briefSummary": "Introduction: Several randomised controlled trials have demonstrated that novel oral anticoagulants (NOACs) are safer compared to vitamin K antagonists for the management of non valvular atrial fibrillation (NVAF) to prevent thromboembolic events, in the general population. There is a growing interest in the use of apixaban in patients with End-Stage Renal-Disease (ESRD) undergoing peritoneal dialysis but there is a lack of randomised data in this population. Design: APIDP2 is a prospective parallel randomised, open-label, blinded endpoint trial. Participants: Patients with ESRD undergoing chronic Peritoneal Dialysis who have NVAF. Setting: A total of 178 participants will be recruited from 20 French peritoneal dialysis centers. Intervention: Eligible patients will be randomly assigned to receive either apixaban at a reduced dose 2.5mg twice daily (dose determined with the previous pharmacokinetic study APIDP1 of apixaban in PD patients) or dose-adjusted to INR target \\[2-3\\] coumadin therapy. Anticoagulation to prevent thromboembolic events will be initiated or changed according to the randomisation for a duration of one year. The primary outcome is a major or clinically relevant non-major bleeding from randomisation up to Month 12, assessed according to ISTH score. Secondary outcomes encompass an efficacy composite criterion combining stroke or TIA, cardiovascular death, and thrombosis including myocardial infarction cumulated at 12 months. Bleeding events will be also c...",
+        "detailedDescription": "The prevalence of AF in the general population is estimated to range around 1% depending on age, reaching 8% in patients over 80 years old. This prevalence is of 20% and 14% in patients on hemodialysis and peritoneal dialysis. In addition, AF is associated with higher morbidity and mortality rates in patients with advanced chronic kidney disease, in contrast with patients with preserved kidney function, with a higher risk of both bleeding and clotting. In the general population, the novel oral anticoagulants (NOACs) demonstrated a greater safety over warfarin and among 269 patients with CrCl (Creatinine Clearance) 25 to 30 mL/min included in ARISTOTLE trial: apixaban caused less bleeding than warfarin. Furthermore, warfarin has been recognized as a risk factor for calcific uremic arteriolopathy (calciphylaxis), a rare yet serious complication. Additionally, patients in ESRD appear to have low adherence to warfarin therapy, with time of INR in target range of only 44 to 51% in three randomised controlled trials. Considering the complex pathophysiology underlying the excess risk of stroke in patients with advanced CKD and the known complications of warfarin therapy, the use of NOACs in these populations may present an appealing alternative. Four significant reviews conducted in 2022 and 2023, based on randomised controlled trials and cohort studies, assessed both thrombotic and bleeding outcomes associated with anticoagulant use in advanced chronic kidney disease. These reviews highlights the necessity for more randomised controlled trials (RCTs). The two most significant cohorts to date that compared warfarin versus NOACs yielded important findings are: * Siontis et al.: they conducted a study involving a larger cohort (2,351 versus 7,053) and found a reduction in major bleeding events with apixaban compared to warfarin, with similar efficacy in dialysis patients. * Wetmore et al.: they included 3,130 patients versus 9,086, and also found a reduction in major blee...",
+        "sponsor": {
+          "name": "University Hospital, Caen",
+          "class": "OTHER"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 178,
+          "type": "ESTIMATED"
+        },
+        "conditions": [
+          "Atrial Fibrillation",
+          "Peritoneal Dialysis Complication"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion criteria * Males and females, age at least 18 years, in ESRD treated with peritoneal dialysis for ≥ 3 months * Patients with a history of non valvular AF treated by oral anticoagulation or patients initiating oral anticoagulation for a diagnosis of non valvular AF * CHA2DS2-VASc score of ≥ 2. * For women of childbearing age who are sexually active, use of an effective method of contraception for up to 10 days after the end of treatment and a negative blood pregnancy test at enrollment. * Signature of informed consent Exclusion criteria * Not considered by the treating physician(s) to be candidates for oral anticoagulation (for example, hemoglobin \\<8.5g/dL, history of intracranial hemorrhage, active bleeding, recent gastrointestinal bleed or retroperitoneal bleed, severe hepatic impairment, or anaphylactic reaction to apixaban) * Moderate or severe mitral stenosis * Patients with a history of transient ischemic attack or stroke in the 3 months prior to inclusion * Patient treated with haemodyalisis * Conditions other than non valvular AF that require anticoagulation such as mechanical prosthetic valve, deep venous thrombosis, or pulmonary embolism * Life expectancy \\< 3 months * Anticipated kidney transplant within the next 3 months * Individuals covered by Articles L1121-5 to L1121-8 of the French Public Health Code (corresponding to all protected persons: pregnant women, postpartum women, breastfeeding mothers, individuals deprived of their liberty by judicial..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Safety primary criterion",
+            "description": "at least one event for each participant ISTH major or clinically relevant non-major bleeding cumulated at 12 months",
+            "timeFrame": "0-12 months"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Composite efficacy criterion",
+            "description": "Composite criterion with at least one event :stroke or TIA, cardiovascular death, and thrombosis including myocardial infarction cumulated at 12 months",
+            "timeFrame": "0-12 months"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Warfarin (Coumadine): INR target \\[2.0-3.0\\]"
+          },
+          {
+            "id": "2",
+            "title": "Apixaban (Eliquis) at 2.5mg, per os, twice a day"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT02987062",
+        "title": "MultiCenter expeRience in AFib Patients Treated With OAC (CRAFT)",
+        "status": "UNKNOWN",
+        "startDate": "2016-11",
+        "completionDate": "2017-09",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "CRAFT - Multicenter Experience in Atrial Fibrillation Patients Treated With OAC (CRAFT)",
+        "acronym": "CRAFT",
+        "briefSummary": "According to current guidelines for non-valvular atrial fibrillation treatment, the first line drugs are non-vitamin K oral anticoagulants (NOACs), which are preferred over vitamin K antagonists (VKAs). However, it is not clearly confirmed, how the success of NOACs approval trials (ROCKET-AF (rivaroxaban), RE-LY (dabigatran) and ARISTOTLE (apixaban) reflects on real-life clinical practice. The aim of this study is to assess treatment of AF patients with oral anticoagulants (OACs) in an academic and district hospital, with regard to inclusion/exclusion criteria used in the clinical trials.",
+        "detailedDescription": "Atrial fibrillation (AF) is a common arrhythmia associated with increased cardiovascular morbidity and mortality. An integral element of management of patients with AF is anticoagulation to prevent thromboembolic events. Non-vitamin K oral anticoagulants and vitamin K antagonists are two main drugs groups used in treatment. Primary objective of the study is to assess the treatment of AF patients with OACs (the frequency of prescription of VKAs vs NOACs), compare the clinical characteristics of the real-life AF patients with populations included in the randomized clinical trials (ROCKET-AF, RE-LY and ARISTOTLE) and population gathered from the university department and the district hospital. Secondary objective of the study is to assess the long-term outcomes of patients with AF treated with OACs. The CRAFT (MultiCenter expeRience in AFib patients Treated with OAC) is a multicenter retrospective analysis of hospital records of patients with AF managed in the First Department of Cardiology of Medical University of Warsaw and in John Paul II Western Hospital in Grodzisk Mazowiecki. Gathered data will include demographics, type of AF (valvular and non-valvular, as well as paroxysmal, persistent and permanent), medical history, baseline characteristics (i.e. blood pressure), laboratory investigations (blood tests, including renal and hepatic function), echocardiographic parameters and concomitant medications. Data will be collected from the moment of patient's discharge. Each patient will be evaluated regarding to common and new scales assessing risk of thromboembolic (CHA2DS2-VASc ) and bleeding (HAS-BLED, HEMORR2HAGES, modifiable and non-modifiable risk factors for bleeding in anticoagulated patients basing on the current guidelines for AF treatment) events, as well as SAMeTT2R2 score to predict the quality of treatment on OACs.",
+        "sponsor": {
+          "name": "Medical University of Warsaw",
+          "class": "OTHER"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 2000,
+          "type": "ESTIMATED"
+        },
+        "conditions": [
+          "Atrial Fibrillation"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion criteria: * paroxysmal, persistent, long-standing persistent or permanent AF * valvular or non-valvular AF * treatment with OACs (apixaban, dabigatran, rivaroxaban, acenocoumarol, warfarin) Exclusion criteria: * lack of OAC at hospital discharge"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Comparison of clinical characteristics of the real-life AF patients with populations included in the randomized clinical trials (ROCKET-AF, RE-LY and ARISTOTLE)",
+            "description": "Compared data will include: demographics, type of AF (valvular and non-valvular, as well as paroxysmal, persistent and permanent), medical history, baseline characteristics, laboratory investigations, echocardiographic parameters and concomitant medications. Each patient will be evaluated regarding to the modifiable and non-modifiable risk factors for bleeding basing on the current guidelines for AF treatment, CHA2DS2-VASc, HAS-BLED, HEMORR2HAGES scales and SAMeTT2R2 score.",
+            "timeFrame": "Through the study completion, an average of 3 months."
+          },
+          {
+            "measure": "Comparison of clinical characteristics of the AF patients treated in university department with population gathered from the district hospital",
+            "description": "Compared data will include: demographics, type of AF (valvular and non-valvular, as well as paroxysmal, persistent and permanent), medical history, baseline characteristics, laboratory investigations, echocardiographic parameters and concomitant medications. Each patient will be evaluated regarding to the modifiable and non-modifiable risk factors for bleeding basing on the current guidelines for AF treatment, CHA2DS2-VASc, HAS-BLED, HEMORR2HAGES scales and SAMeTT2R2 score.",
+            "timeFrame": "Through the study completion, an average of 3 months."
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Assessment of the frequency of VKAs vs NOACs prescription in AF patients treatment of with OACs",
+            "description": "",
+            "timeFrame": "Through the study completion, an average of 3 months."
+          },
+          {
+            "measure": "Assessment of long-term outcomes (death, hospitalizations, minor/major/life-threatening bleeding, thromboembolic events)",
+            "description": "",
+            "timeFrame": "Through the study completion, an average of 3 months."
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Patients with AF treated with acenocoumarol."
+          },
+          {
+            "id": "2",
+            "title": "Patients with AF treated with warfarin."
+          },
+          {
+            "id": "3",
+            "title": "Patients with AF treated with apixaban."
+          },
+          {
+            "id": "4",
+            "title": "Patients with AF treated with dabigatran."
+          },
+          {
+            "id": "5",
+            "title": "Patients with AF treated with rivaroxaban."
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "not_randomized_interventional",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT03490994",
+        "title": "Rivaroxaban Once Daily Versus Dose-adjusted Vitamin K Antagonist on the Biomarkers in Acute Decompensated Heart Failure and Atrial Fibrillation (ROAD HF-AF)",
+        "status": "UNKNOWN",
+        "startDate": "2018-04-10",
+        "completionDate": "2020-01",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Rivaroxaban Once Daily Versus Dose-adjusted Vitamin K Antagonist on the Biomarkers in Acute Decompensated Heart Failure and Atrial Fibrillation (ROAD HF-AF)",
+        "acronym": "",
+        "briefSummary": "Vitamin K antagonists (VKAs) are used to reduce the risk of stroke (cerebral vascular dysfunction) in AF patients. However, VKAs interact with drugs/food and the drug level is influenced by worsening of renal function, liver congestion or hemodynamic alterations in acute decompensated heart failure (ADHF). New oral anticoagulants (rivaroxaban, apixaban, dabigatran) are alternatives to VKA, such as warfarin. In post hoc analysis of ROCKET AF trial, 63.7% patients had HF and treatment-related outcomes were similar in patients with and without HF (Circulation HF. 2013; 6:740-7). So rivaroxaban 20 mg daily (or 15 mg daily in patients with creatinine clearance 30-49 mL/min) was safe in nonvalvular AF patients with HF. However, the clinical effect and safety of rivaroxaban were largely unknown in acute decompensated heart failure (ADHF) patients with atrial fibrillation (AF). ROAD HF-AF is the exploratory study to assess the change of surrogate markers (hsTn, d-dimer) when treated with rivaroxaban vs. warfarin and to strengthen the basis for future biomarker-based therapy in ADHF patients",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Yonsei University",
+          "class": "OTHER"
+        },
+        "phases": [
+          "PHASE4"
+        ],
+        "enrollment": {
+          "count": 150,
+          "type": "ESTIMATED"
+        },
+        "conditions": [
+          "Acute Heart Failure"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "19 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria:Hospitalized patients with a primary diagnosis of ADHF with AF One of the following criteria and LVEF ≤ 40% (at least 1 year before admission or admission) 1. dyspnea at rest 2. tachypnea; a respiratory rate \\> 20/min 3. rales 4. pulmonary edema on chest X-ray Exclusion Criteria: 1. History of increased bleeding risk (like ROCKET AF exclusion criteria) 2. Contraindication to anti-coagulation therapy 3. ACS diagnosis 4. Hospitalization plan for PCI, coronary artery bypass graft surgery, other cardiac invasive interventions (e.g. catheter ablation, pacemaker, CRT, ICD implantation) 5. Currently on dual anti-platelet therapy (aspirin + ADP receptor antagonist) or single antiplatelet therapy with a novel AP (e.g. Ticagrelor, Prasugrel) 6. Cardiogenic shock (systolic blood pressure, SBP, \\< 80 mmHg) 7. Patients with CrCl \\< 30 ml/min using creatinine-based CKD-EPI equations 8. Elevated liver enzymes (3 times over upper reference limit) or liver cirrhosis 9. Uncontrolled hypertension (SBP \\> 180 mmHg) 10. Allergy, adverse drug reaction, hypersensitivity to rivaroxaban or warfarin 11. Life expectancy \\< 6 months (e.g. metastatic malignancy) 12. Pregnancy, or women of childbearing age"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "the change of high sensitive troponin",
+            "description": "The maximum hsTn value change from baseline to during hospitalization",
+            "timeFrame": "Baseline to 72 hours"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "1) the change of hish sensitive troponin",
+            "description": "1\\) The change from baseline in hsTn on Day2, day4, day7 (or discharge), and follow-up visits at 1 month, 6 months",
+            "timeFrame": "1) On admission, hospital day #2, hospital day #4, hospital day #7 or discharge, 1 month/6month after discharge"
+          },
+          {
+            "measure": "2) the change of D-dimer",
+            "description": "2\\) D-dimer change from baseline during hospitalization (day2, day4, day7 or discharge) \\& follow-up visits at 1, 6 months",
+            "timeFrame": "2) On admission, hospital day #2, hospital day #4, hospital day #7 or discharge, 1 month/6month after discharge"
+          },
+          {
+            "measure": "3) the change of NT-proBNP",
+            "description": "3\\) TAT complex, PAI-1, hsCRP, NT-proBNP, sST2, galectin-3, cystatin C, NGAL, NAG change from baseline to day7 or discharge \\& 1,6 months after discharge",
+            "timeFrame": "3) On admission, hospital day #7 or discharge, 1 month/6month after discharge"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Rivaroxaban"
+          },
+          {
+            "id": "2",
+            "title": "warfarin + enoxaparin"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT03399305",
+        "title": "Safety and Efficacy of Apixaban in Severe Renal Impairment",
+        "status": "WITHDRAWN",
+        "startDate": "2017-05-10",
+        "completionDate": "2022-08-24",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "Safety and Efficacy of Apixaban in Severe Renal Impairment",
+        "acronym": "",
+        "briefSummary": "Despite emergence of new anticoagulants over the last few years, patients with advanced chronic kidney disease still have limited options and are usually managed with warfarin after venous thromboembolism or diagnosis of atrial fibrillation. The use of all direct oral anticoagulants is not recommended in patients with creatinine clearance below 15 mL/min. Apixaban has the lowest fraction of renal excretion (27%) and is sometimes used in patients with CKD V (GFR \\< 15 mL/min/BSA) and end stage renal disease (ESRD). Until recently, data on apixaban use in this population were limited to pharmacodynamics as patients with severe renal impairment were excluded from clinical trials. In a 2016 study, it was found that ESRD resulted in 36% increase in apixaban AUC but no increase in Cmax, and that hemodialysis had a limited impact on apixaban clearance.1 There are now data available on inpatient use of apixaban vs.coumadin in patients with creatinine clearance below 25 ml/min.2 There was no significant difference in bleeding events between the two groups but the study period was limited to a hospital admission and may not reflect bleeding risk of long-term anticoagulation. Use of warfarin in patients on hemodialysis entails several disadvantages in this population. The need for INR monitoring adds clinic visits for patients that already spend a great portion of their time in healthcare facilities. Numerous drug interactions, involving warfarin, complicate management of ESRD patien...",
+        "detailedDescription": "This is a retrospective cohort study. The investigators will use Clinical Looking Glass (CLG) to identify all adult patients with creatinine clearance \\< 15 ml/min who were treated with apixaban or warfarin, for at least 1 month, between 3/1/2013 and 3/1/2017. The investigators will then review electronic charts in Carecast and Epic to gather data about bleeding and thrombotic events.Primary outcome: clinically significant bleeding, per Control of Anticoagulation Subcommittee criteria: 1) fatal bleed; 2) symptomatic bleed at anatomically critical sites such as intracranial, intraspinal, intraocular, or pericardial hemorrhage; 3)symptomatic noncritical bleeds resulting in transfusion of 2 units or more of red blood cells or drop in hemoglobin of at least 2.0 g/dl.4 Secondary outcomes: venous thromboembolism, cerebrovascular accident, intracranial hemorrhage, bleeding related to HD access",
+        "sponsor": {
+          "name": "Albert Einstein College of Medicine",
+          "class": "OTHER"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 0,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Renal Disease, End Stage",
+          "Anticoagulant-induced Bleeding"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Patients with creatinine clearance \\<15 mL/min who are on anticoagulation with apixaban or warfarin. Exclusion Criteria: * Patients without end stage renal disease who are not on anticoagulation with apixaban or warfarin."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Clinically significant bleeding",
+            "description": "1\\) fatal bleed; 2) symptomatic bleed at anatomically critical sites such as intracranial, intraspinal, intraocular, or pericardial hemorrhage; 3) symptomatic noncritical bleeds resulting in transfusion of 2 units or more of red blood cells or drop in hemoglobin of at least 2.0 g/dl",
+            "timeFrame": "4 years"
+          }
+        ],
+        "secondaryOutcomes": [],
+        "documents": [],
+        "demographics": null,
+        "arms": [],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "not_randomized_interventional",
+          "fewer_than_two_arms",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT04593030",
+        "title": "Replication of the ARISTOTLE Anticoagulant Trial in Healthcare Claims Data",
+        "status": "COMPLETED",
+        "startDate": "2020-09-01",
+        "completionDate": "2021-02-18",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "Replication of the ARISTOTLE Anticoagulant Trial in Healthcare Claims Data",
+        "acronym": "",
+        "briefSummary": "Investigators are building an empirical evidence base for real world data through large-scale replication of randomized controlled trials. The investigators' goal is to understand for what types of clinical questions real world data analyses can be conducted with confidence and how to implement such studies.",
+        "detailedDescription": "This is a non-randomized, non-interventional study that is part of the RCT DUPLICATE initiative (www.rctduplicate.org) of the Brigham and Women's Hospital, Harvard Medical School. It is intended to replicate, as closely as is possible in healthcare insurance claims data, the trial listed below/above. Although many features of the trial cannot be directly replicated in healthcare claims, key design features, including outcomes, exposures, and inclusion/exclusion criteria, were selected to proxy those features from the trial. Randomization is also not replicable in healthcare claims data but was proxied through a statistical balancing of measured covariates according to standard practice. Investigators assume that the RCT provides the reference standard treatment effect estimate and that failure to replicate RCT findings is indicative of the inadequacy of the healthcare claims data for replication for a range of possible reasons and does not provide information on the validity of the original RCT finding.",
+        "sponsor": {
+          "name": "Brigham and Women's Hospital",
+          "class": "OTHER"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 220518,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Atrial Fibrillation"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": true,
+          "criteria": "Please see: https://drive.google.com/drive/folders/1WD618wrywYjEaXzfLTcuK-VCcnb6b-gV for full code and algorithm definitions. Eligible cohort entry dates: Market availability of apixaban in the U.S. started on December 28, 1012. For Marketscan: Jan 1, 2013 -Dec 31, 2018 (end of data availability). For Optum: Jan 1, 2013-Dec 31, 2019 (end of data availability). For Medicare: Jan 1, 2013 -Dec 31, 2017. Inclusion Criteria: * 1\\. Age ≥ 18 years * 2\\. Atrial fibrillation - either of the following: * 2a. In atrial fibrillation or atrial flutter not due to a reversible cause and documented by ECG at the time of enrollment * 2b. If not in atrial fibrillation/flutter at the time of enrollment, must have atrial fibrillation/flutter documented on two separate occasions, not due to a reversible cause at least 2 weeks apart in the 12 months prior to enrollment. Atrial fibrillation/flutter may be documented by ECG, or as an episode lasting at least one minute on a rhythm strip, Holter recording, or intracardiac electrogram (from an implanted pacemaker or defibrillator) * 3\\. One or more of the following risk factor(s) for stroke: * 3a. Age 75 years or older * 3b. Prior stroke, TIA, or systemic embolus * 3c. Either symptomatic congestive heart failure within 3 months or left ventricular dysfunction with an LV ejection fraction (LVEF) ≤ 40% by echocardiography, radionuclide study or contrast angiography * 3d. Diabetes mellitus * 3e. Hypertension requiring pharmacological treatment Exclusi..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Relative hazard of composite outcome of Stroke and Systemic Embolism",
+            "description": "Relative hazard of composite outcome of Stroke and Systemic Embolism - Please refer to uploaded protocol for full definition due to size limitations.",
+            "timeFrame": "[Time Frame: Through study completion (a median of 98 days)]"
+          }
+        ],
+        "secondaryOutcomes": [],
+        "documents": [
+          {
+            "label": "Study Protocol and Statistical Analysis Plan",
+            "filename": "Prot_SAP_001.pdf",
+            "date": "2021-05-26",
+            "hasSap": true,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          }
+        ],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Reference group"
+          },
+          {
+            "id": "2",
+            "title": "Exposure group"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "not_randomized_interventional",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT03456648",
+        "title": "Apixaban in End-stage Kidney Disease : A Pharmacokinetics Study",
+        "status": "COMPLETED",
+        "startDate": "2016-09-25",
+        "completionDate": "2018-08-24",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "NON_RANDOMIZED",
+        "officialTitle": "Apixaban in End-stage Kidney Disease : A Pharmacokinetics Study",
+        "acronym": "",
+        "briefSummary": "Apixaban is a novel oral direct factor Xa inhibitor; In patients with atrial fibrillation, apixaban was superior to warfarin in preventing stroke or systemic embolism, caused less bleeding, and resulted in lower mortality (the ARISTOTLE trial). Given its favorable outcome profile compared to oral vitamin K antagonists in patients with normal kidney function and in patients with mild to moderate kidney disease and given the potential serious side-effects of oral vitamin K antagonists in end-stage kidney disease, apixaban may be an attractive alternative for systemic anticoagulation in dialysis patients. The pharmacokinetics of apixaban in end-stage renal disease is not well characterized. The aim of the current study is to perform single dose pharmacokinetics / pharmacodynamics studies in patients treated with end-stage renal disease. The primary aim is to determine inter-dialytic pharmacokinetics of Apixaban, secondary aims are intra-dialytic pharmacokinetics and dose finding. Two doses of drugs will be studies (2.5 mg and 5 mg). Study drug will be administered at the end of a dialysis session (part A) and at the beginning of a dialysis session (Part B). Six (n=6) patients are scheduled to be included for each part and each dose. Anti-Xa activity values (IIU/mL) will be converted to apixaban concentration data (ng/mL). Apixaban concentration-time profiles will be generated and observed values for the descriptive PK parameters Cmax (peak plasma concentration) and time to Cm...",
+        "detailedDescription": "RATIONALE Chronic Kidney Disease (CKD) is one of the epidemics of modern times. In the recent National Health and Nutrition Examination Survey (NHANES), the overall prevalence of CKD (stages 1 to 4) increased from 10.0% in 1988-1994 to 13.1% in 1999-2004 (1). Mounting data point to the lethal synergy between chronic kidney disease (CKD) and cardiovascular disease (CVD) (2,3,4) Atrial fibrillation (AF) is an important co-morbid condition in patients with CKD. While prevalence differs from region to region, it is estimated that between 5 and 10% of dialysis patients have AF (5). Analyses of the US renal data system (USRDS) demonstrate that the prevalence of AF in patients with hemodialysis continues to rise (6). Prevalent AF is positively associated with all-cause mortality and stroke, similar to that of the general population (5). The choice of the optimal anticoagulation regimen for hemodialysis patients with AF is hampered by lack of randomized controlled trials. Observational data support the use of the CHADS2-score for risk stratification of AF in HD (5). Cost-utility analyses suggest that warfarin appears to be the optimal therapy to prevent thromboembolic stroke in hemodialysis patients with AF (7). These analyses however extrapolate the decrease in risk of stroke observed in randomized trials of oral vitamin K antagonist therapy in the general population (7). Both retrospective and prospective observational data however observe an increased risk for stroke in HD patients receiving oral vitamin K antagonist therapy for AF (8,5). Recent findings shed a worrisome light on the pleiotropic effects of oral vitamin K antagonist therapy in patients with advanced chronic kidney disease. Besides promoting undercarboxylation of the pro- and anticoagulant factors (II, VII, IX, X, protein S, protein C) several other glutamine-domain containing proteins remain undercarboxylated. Matrix-Gla protein is a powerful calcification inhibitor. Nonphosphorylated matrix-Gla protei...",
+        "sponsor": {
+          "name": "Universitaire Ziekenhuizen KU Leuven",
+          "class": "OTHER"
+        },
+        "phases": [
+          "PHASE2"
+        ],
+        "enrollment": {
+          "count": 24,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "ESRD",
+          "Anticoagulant Toxicity"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "85 Years",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Patients aged 18 to 85 years * Treated with maintenance (dialysis vintage \\>3 months) thrice weekly hemodialysis * Written and signed informed consent Exclusion Criteria: * Treated with oral vitamin K antagonists * Recent (\\< 4 weeks prior to informed consent) major surgery * Recent (\\< 4 weeks prior to informed consent) severe bleeding episode requiring blood transfusion and/ or hospitalization * Concurrent moderate to severe liver dysfunction * Participation in an interventional study with investigational medication For women of childbearing potential the following criteria apply: * A women of childbearing potential (WOCBP) is defined as any female who has experienced menarche and who has not undergone surgical sterilization (hysterectomy or bilateral oophorectomy) and is not postmenopausal. Menopause is defined as 12 months of amenorrhea in a woman over age 45 years in the absence of other biological or physiological causes. In addition, females under the age of 55 years must have a serum follicle stimulating hormone, (FSH) level \\> 40mIU/mL to confirm menopause. * Females treated with hormone replacement therapy, (HRT) are likely to have artificially suppressed FSH levels and may require a washout period in order to obtain a physiologic FSH level. The duration of the washout period is a function of the type of HRT used. The duration of the washout period below are suggested guidelines and the investigators should use their judgement in checking se..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "AUC0-T apixaban",
+            "description": "Anti-Xa activity values (IIU/mL) will be converted to apixaban concentration data (ng/mL) based on the previously demonstrated linear relationship (e.g. Frost et al., 2014 - PMID: 24697979). The area under the curve (AUC) between administration (time 0) and the last measurable data point (AUC0-T) will be calculated with the 'Lin up/Log down' trapezoidal method. The AUCT-∞ will be obtained from the last measureable concentration divided by λ, and will be summed with AUC0-T to obtain AUC0-∞ (total exposure). the slope (λ) of the terminal phase of the concentration-time profile will be determined by log-linear regression on the appropriate number (typically at least 3) of data points. The te...",
+            "timeFrame": "48 hours"
+          },
+          {
+            "measure": "Cmax",
+            "description": "Apixaban concentration-time profiles will be generated and observed values for the descriptive PK parameter Cmax (peak plasma concentration) will be determined directly from the time-concentration curve",
+            "timeFrame": "48 hours"
+          },
+          {
+            "measure": "Tmax",
+            "description": "Apixaban concentration-time profiles will be generated and observed values for the descriptive PK parameter time to Cmax (Tmax)) will be determined directly from the time-concentration curve",
+            "timeFrame": "48 hours"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Occurrence of SAE",
+            "description": "Occurrence of serious adverse events (SAE) will be analyzed as an important safety variable",
+            "timeFrame": "48 hours"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Interdialytic kinetics of low dose (2.5 mg apixaban) post-dialysis"
+          },
+          {
+            "id": "2",
+            "title": "Interdialytic kinetics of high dose (5 mg apixaban) post-dialysis"
+          },
+          {
+            "id": "3",
+            "title": "Intra- and interrdialytic kinetics of low (2.5 mg) apixaban pre-dialysis"
+          },
+          {
+            "id": "4",
+            "title": "Intra- and interrdialytic kinetics of high (5 mg) apixaban pre-dialysis"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT02642419",
+        "title": "Atrial Fibrillation and Ischemic Events With Rivaroxaban in Patients With Stable Coronary Artery Disease Study",
+        "status": "UNKNOWN",
+        "startDate": "2015-01",
+        "completionDate": "2017-12",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Atrial Fibrillation and Ischemic Events With Rivaroxaban in Patients With Stable Coronary Artery Disease Study (AFIRE Study)",
+        "acronym": "AFIRE",
+        "briefSummary": "In patients with atrial fibrillation (AF) complicated with coronary artery disease (CAD), antiplatelet drugs are commonly used for the prevention of recurrence of stent thrombosis and cardiovascular events in combination with anticoagulant drugs. Based on the observations that the incidence of hemorrhagic complications increased when an antiplatelet drug was administered in combination with vitamin K antagonist (VKA), the guidelines for antithrombotic therapy after PCI in the US and EU recommend that DAPT (dual anti-platelets therapy) should be used in AF-complicated CAD patients for as short a time as possible following single anti-platelet and VKA, and that monotherapy with VKA should be started from one year after PCI. In 2013 the European Heart Rhythm Association (EHRA) published the guidelines for the use of NOACs in NVAF patients, which state that NOACs may have advantage to VKAs in terms of anti-thrombotic effects in NVAF patients undergoing PCI. However, no clinical evidence has ever been generated to reveal the efficacy and safety of mono-drug therapy with a NOACs in stable CAD patients one year or more after PCI. AFIRE study is planned to evaluate the efficacy and safety of mono-drug therapy with a rivaroxaban in stable CAD patients. Among NOACs, rivaroxaban was chosen because of the evidence in Japanese patients and the results of a sub-analysis of ROCKET AF suggesting that rivaroxaban is more effective than VKA in reducing the incidence of myocardial infarction...",
+        "detailedDescription": "Study Design:prospective, randomized, open-label trial Allocation:ratio to rivaroxaban monotherapy and rivaroxaban in co-administration with a single anti-platelet therapy is 1: 1 using WEB system",
+        "sponsor": {
+          "name": "Japan Cardiovascular Research Foundation",
+          "class": "OTHER"
+        },
+        "phases": [
+          "PHASE4"
+        ],
+        "enrollment": {
+          "count": 2200,
+          "type": "ESTIMATED"
+        },
+        "conditions": [
+          "Atrial Fibrillation"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "20 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: Patients with non-valvular atrial fibrillation complicated with stable coronary artery disease who are 20 years or older, with CHADS2 score are ≧1 , and that fulfill one of the following criteria and can provide written consent for participation in the present study will be eligible. 1. Patients who underwent percutaneous coronary intervention(PCI), including plain old balloon angioplasty(POBA), at least one year ago 2. Patients who have coronary stenosis requiring no percutaneous coronary intervention (50% or more stenosis) as indicated by coronary CT or coronary angiography(CAG) 3. Patients who underwent coronary artery bypass graft (CABG) at least one year ago Exclusion Criteria: * Patients for whom rivaroxaban is contraindicated * Patients for whom aspirin, thienopyridine derivatives (clopidogrel or prasugrel) are contraindicated * Patients who underwent PCI, including POBA, in the past one year * Patients who are going to undergo revascularization * Patients who have a past history of stent thrombosis * Those who are going to undergo invasive surgery (excluding digestive endoscopy and biopsy) * Patients who have active tumors * Patients who have poorly-controlled hypertension (systolic blood pressure at hospital admission: 160 mmHg or more) * Patients who cannot discontinue treatment with antiplatelet drugs (the physician in charge will make a decision on the basis of the lesion shape, lesion site and type of stents.) * Patients judged as inappropr..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Composite endpoint of cardiovascular events",
+            "description": "stroke, non-CNS embolism, myocardial infarction, unstable angina pectoris requiring revascularizations or all-cause mortality",
+            "timeFrame": "mean duration: 2 years, maximum duration: 3 years"
+          },
+          {
+            "measure": "Major bleeding defined by the International Society on Thrombosis and Haemostasis (ISTH) criteria",
+            "description": "",
+            "timeFrame": "mean duration: 2 years, maximum duration: 3 years"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Net adverse clinical and cerebral events (NACCE)",
+            "description": "composite of all-cause death, myocardial infarction, stroke and major bleeding.",
+            "timeFrame": "mean duration: 2 years, maximum duration: 3 years"
+          },
+          {
+            "measure": "Ischemic cardiovascular events and death",
+            "description": "* All-cause mortality * Cardiovascular death * non-cardiovascular death * Myocardial infarction * Unstable angina pectoris requiring revascularization * Ischemic stroke * Transient ischemic attack * non-CNS embolism (systemic embolism pulmonary embolism, deep vein thrombosis) * PCI/CABG * Stent thrombosis * Ischemic stroke and systemic embolism",
+            "timeFrame": "mean duration: 2 years, maximum duration: 3 years"
+          },
+          {
+            "measure": "All bleeding events",
+            "description": "",
+            "timeFrame": "mean duration: 2 years, maximum duration: 3 years"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Arm 1"
+          },
+          {
+            "id": "2",
+            "title": "Arm 2"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT03749057",
+        "title": "Early Rivaroxaban for Acute Ischemic Stroke or TIA Patients With Atrial Fibrillation",
+        "status": "COMPLETED",
+        "startDate": "2018-11-20",
+        "completionDate": "2025-03-30",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "NA",
+        "officialTitle": "Early Rivaroxaban for Acute Ischemic Stroke or TIA Patients With Atrial Fibrillation: a Prospective, Multicenter, Cohort Study",
+        "acronym": "ERSAF",
+        "briefSummary": "Anticoagulant treatment for non-valvular atrial fibrillation (AF) associated with cerebral infarction/ TIA is one of the recognized treatment of stroke prevention. The ACC/AHA and national guidelines for the management of anticoagulation recommend that most of AF patients with cerebral infarction or TIA should be administrated anticoagulant therapy within 14 days of symptom onset, while European guidelines recommend that the timing of the initiation of non-vitamin K antagonist oral anticoagulants (NOACs) for AF patients with cerebral infarction or TIA is association with stroke severity in light of the \"1-3-6-12\" principle. However, there are still many problems about the use of NOACs in ischemic stroke with AF. for example, it is unclear what time to begin NOACs as to difference in stroke severity, ages, comorbidity with hypertension, diabetes, heart failure, liver and kidney dysfunction and bleeding risks. Thus, the timing of the initiation of NOACs is yet to be further studied. Current urgent need is to develop a guideline-based specific regimen in which the benefit-risk factors are further balanced with a combination of NHISS, CHA2DS2-VASC and HAS-BLED score. Rivaroxaban, a direct coagulation factor Ⅹa inhibitor, blocks the formation of the clot. ROCKET-AF study has shown that the efficacy of rivaroxaban is not inferior to that of warfarin in AF patients on stroke prevention, and rivaroxaban has a significantly decreased bleeding risk compared with warfarin. Recent stu...",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "General Hospital of Shenyang Military Region",
+          "class": "OTHER"
+        },
+        "phases": [
+          "PHASE4"
+        ],
+        "enrollment": {
+          "count": 400,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Cerebral Infarction",
+          "TIA"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion criteria: 1. Over 18 years 2. Acute cerebral infarction caused by non-valvular atrial fibrillation 3. NIHSS score ≤ 15 4. Within 12 days of onset 5. first stroke onset or past stroke without obvious neurological deficit (mRS score≤1) 6. Signed informed consent Exclusion Criteria: 1. Hemorrhagic stroke or mixed stroke 2. Patients with valvular atrial fibrillation or non-cardiogenic cerebral infarction 3. Patients with severe infection or serious diseases 4. Gastrointestinal bleeding or major operation within 3 months 5. Planed cerebrovascular reconstruction or cardiac surgery within 3 months 6. Planed major surgery within 3 months 7. Participating in other clinical trials within 3 months 8. Unsuitable for this trial assessed by research"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "incidence of intracranial hemorrhage",
+            "description": "",
+            "timeFrame": "7 days"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "incidence of early neurological deterioration",
+            "description": "2 or more increase in NIHSS",
+            "timeFrame": "7 days"
+          },
+          {
+            "measure": "recurrence of stroke or other vascular events",
+            "description": "",
+            "timeFrame": "90 days"
+          },
+          {
+            "measure": "bleeding event",
+            "description": "Any bleeding event except intracranial hemorrhage",
+            "timeFrame": "90 days"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "15-20 mg rivaroxaban daily"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "not_randomized_interventional",
+          "fewer_than_two_arms",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      }
+    ],
+    "exclusionReasons": {
+      "not_completed": 6,
+      "no_results_posted": 11,
+      "not_randomized_interventional": 7,
+      "fewer_than_two_arms": 4,
+      "no_extractable_numeric_outcome": 11
+    },
+    "portfolioEligible": true,
+    "priorityTier": "build-now"
+  }
+}

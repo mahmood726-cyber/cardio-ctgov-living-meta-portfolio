@@ -1,0 +1,1717 @@
+{
+  "generatedAt": "2026-03-28T18:45:05.888Z",
+  "sourceStartedAt": "2026-03-28T18:44:01.927Z",
+  "minIncludedTrials": 2,
+  "pageSize": 100,
+  "maxPages": 8,
+  "topic": {
+    "slug": "tavi-antithrombotic",
+    "label": "Antithrombotic Strategies After TAVI/TAVR",
+    "domain": "Valvular Disease",
+    "baseQuery": "(\"aortic stenosis\" OR TAVI OR TAVR OR \"transcatheter aortic valve\") AND (anticoagulation OR antiplatelet OR apixaban OR edoxaban OR rivaroxaban)",
+    "keywords": [
+      "ATLANTIS",
+      "ENVISAGE-TAVI AF",
+      "POPular TAVI",
+      "GALILEO",
+      "ADAPT-TAVR"
+    ],
+    "query": "(\"aortic stenosis\" OR TAVI OR TAVR OR \"transcatheter aortic valve\") AND (anticoagulation OR antiplatelet OR apixaban OR edoxaban OR rivaroxaban) AND (\"ATLANTIS\" OR \"ENVISAGE-TAVI AF\" OR \"POPular TAVI\" OR \"GALILEO\" OR \"ADAPT-TAVR\")",
+    "scannedRecords": 8,
+    "pagesFetched": 1,
+    "truncated": false,
+    "includedCount": 2,
+    "excludedCount": 6,
+    "includedStudies": [
+      {
+        "nctId": "NCT02943785",
+        "title": "Edoxaban Compared to Standard Care After Heart Valve Replacement Using a Catheter in Patients With Atrial Fibrillation (ENVISAGE-TAVI AF)",
+        "status": "COMPLETED",
+        "startDate": "2017-03-21",
+        "completionDate": "2021-02-28",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Edoxaban Versus Standard of Care and Their Effects on Clinical Outcomes in Patients Having Undergone Transcatheter Aortic Valve Implantation (TAVI) - in Atrial Fibrillation",
+        "acronym": "",
+        "briefSummary": "When the upper chambers of a person's heart receive or generate irregular electrical signals, it causes abnormal rhythm in the heartbeat. This is called atrial fibrillation. Atrial fibrillation goes along with blood clots that may cause mainly strokes and less often other diseases, such as a heart attack. Some patients with atrial fibrillation have other heart disease, such as heart valves that may need to be replaced using catheters. Often doctors give patients drugs that reduce those blood clots. These are either vitamin K antagonist (VKA) or direct anticoagulants, such as edoxaban. In these patients, it is unclear which of the drugs is better for reducing stroke without increasing severe bleedings.",
+        "detailedDescription": "Use of Edoxaban in patients with atrial fibrillation (AF) and indication to chronic oral anticoagulation (OAC) after transcatheter aortic valve implantation (TAVI) Objective: * To assess the effect of Edoxaban versus vitamin K antagonist (VKA) on net adverse clinical events (NACE), i.e., the composite of all-cause death, myocardial infarction (MI), ischemic stroke, systemic thromboembolism (SEE), valve thrombosis, and major bleeding (International Society on Thrombosis and Haemostasis \\[ISTH\\] definition). * To assess the effect of Edoxaban versus VKA on major bleeding (ISTH definition).",
+        "sponsor": {
+          "name": "Daiichi Sankyo",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 1426,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Atrial Fibrillation"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Meets protocol-specified criteria for qualification and contraception * Is willing and able to comply with any restrictions related food, drink and medications * Voluntarily consents to participate and provides written informed consent prior to any protocol-specific procedures Exclusion Criteria: * Has history or current use of over-the-counter medications, dietary supplements, or drugs (including nicotine and alcohol) outside protocol-specified parameters * Has signs, symptoms or history of any condition that, per protocol or in the opinion of the investigator, might compromise: 1. the safety or well-being of the participant or study staff 2. the safety or well-being of the participant's offspring (such as through pregnancy or breast-feeding) 3. the analysis of results"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA",
+            "description": "The composite endpoint net adverse clinical events (NACE) included all-cause death, myocardial infarction (MI), ischemic stroke, systemic embolic events (SEE), valve thrombosis, and major bleeding per definition of the International Society on Thrombosis and Haemostasis (ISTH\\].",
+            "timeFrame": "Baseline through study completion, up to 36 months post-dose"
+          },
+          {
+            "measure": "Number of Participants Who Experienced Major Bleeding (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA",
+            "description": "ISTH Bleeding Criteria for Major Bleeding are defined as clinically overt bleeding that is associated with: a fall in hemoglobin of 2 g/dL (1.24 mmol/L) or more, or a transfusion of 2 or more units of whole blood or packed red blood cells, or symptomatic bleeding into a critical site or organ such as intracranial, intraspinal, intraocular, retroperitoneal, pericardial, intra-articular, or intramuscular with compartment syndrome, or a fatal outcome.",
+            "timeFrame": "Baseline through study completion, up to 36 months post-dose"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on TIMI Criteria in Participants Taking Edoxaban vs VKA",
+            "description": "The composite endpoint of net adverse event clinical events (NACE) included all-cause death, myocardial infarction (MI), ischemic stroke, systemic embolic events (SEE), valve thrombosis, and major bleeding based on Thrombolysis in Myocardial Infarction (TIMI) criteria. Bleeding by TIMI criteria was defined as the following: (1) Major, any intracranial hemorrhage or any clinically overt bleeding, (including bleeding evident in imaging studies) associated with a fall of hemoglobin (Hb) of ≥ 5g/dL or fatal bleeding and (2) Minor, any clinically overt bleeding associated with a fall in Hb ≥ 3g/dL but \\< 5 g/dL.",
+            "timeFrame": "Baseline through study completion, up to 36 months post-dose"
+          },
+          {
+            "measure": "Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on BARC Type 3 or 5 Criteria in Participants Taking Edoxaban vs VKA",
+            "description": "The composite endpoint of net adverse event clinical events (NACE) included all-cause death, MI, ischemic stroke, SEE, valve thrombosis, and major bleeding based on Bleeding Academic Research Consortium (BARC) Type 3 or 5 criteria. Major bleeding by BARC criteria was defined as Type 3: clinical, laboratory, and/or imaging evidence of bleeding with provider responses; Type 3a: any transfusion with overt bleeding; overt bleeding plus Hb drop of 3 to \\< 5 g/dL; Type 3b: overt bleeding plus Hb drop ≥ 5 g/dL; cardiac tamponade; bleeding requiring surgical intervention; bleeding requiring intravenous vasoactive drugs; Type 3c: intracranial hemorrhage; subcategories confirmed by autopsy, imaging...",
+            "timeFrame": "Baseline through study completion, up to 36 months post-dose"
+          },
+          {
+            "measure": "Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on GUSTO Criteria in Participants Taking Edoxaban vs VKA",
+            "description": "The composite endpoint of net adverse event clinical events (NACE) included all-cause death, MI, ischemic stroke, SEE, valve thrombosis, and major bleeding based on Global Utilization of Streptokinase and Tissue Plasminogen Activator for Occluded Coronary Arteries (GUSTO). GUSTO criteria was defined as the following: severe or life threatening: intracerebral hemorrhage or resulting in substantial hemodynamic compromise requiring treatment and moderate: requiring blood transfusion but not resulting in hemodynamic compromise.",
+            "timeFrame": "Baseline through study completion, up to 36 months post-dose"
+          }
+        ],
+        "documents": [
+          {
+            "label": "Study Protocol and Statistical Analysis Plan",
+            "filename": "Prot_SAP_000.pdf",
+            "date": "2019-07-29",
+            "hasSap": true,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          }
+        ],
+        "demographics": {
+          "populationDescription": "Patient demographics were assessed in the Intent-to-Treat Analysis Set.",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Edoxaban",
+              "description": "Participants randomized to receive the Edoxaban-based regimen which included 60 mg and 30 mg film coated tablets for once-daily oral use, and 15 mg film coated tablet in case of transitioning at the end of treatment. Dosing followed the locally approved label."
+            },
+            {
+              "id": "BG001",
+              "title": "Vitamin K Antagonist (VKA)",
+              "description": "Participants randomized to receive the VKA-based regimen which included oral VKA tablets as selected and provided by the site and used in accordance with the local label. The Investigator monitored the patient and adjusted the VKA dose to maintain the dose within target."
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Edoxaban",
+              "value": 713,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Vitamin K Antagonist (VKA)",
+              "value": 713,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 1426,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Edoxaban",
+              "value": "82.1",
+              "spread": "5.4",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Vitamin K Antagonist (VKA)",
+              "value": "82.1",
+              "spread": "5.5",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "82.1",
+              "spread": "5.5",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Edoxaban",
+              "female": 347,
+              "male": 366
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Vitamin K Antagonist (VKA)",
+              "female": 331,
+              "male": 382
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 678,
+              "male": 748
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban",
+                      "value": "82.1",
+                      "spread": "5.4"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist (VKA)",
+                      "value": "82.1",
+                      "spread": "5.5"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "82.1",
+                      "spread": "5.5"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Age, Customized",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban",
+                      "value": "5",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist (VKA)",
+                      "value": "5",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "10",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban",
+                      "value": "53",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist (VKA)",
+                      "value": "55",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "108",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban",
+                      "value": "131",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist (VKA)",
+                      "value": "122",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "253",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban",
+                      "value": "289",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist (VKA)",
+                      "value": "298",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "587",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban",
+                      "value": "347",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist (VKA)",
+                      "value": "331",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "678",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban",
+                      "value": "366",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist (VKA)",
+                      "value": "382",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "748",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Race (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "American Indian or Alaska Native",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist (VKA)",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Asian",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban",
+                      "value": "92",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist (VKA)",
+                      "value": "89",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "181",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Native Hawaiian or Other Pacific Islander",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist (VKA)",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Black or African American",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban",
+                      "value": "1",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist (VKA)",
+                      "value": "4",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "5",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Edoxaban-based regimen 60 mg and 30 mg film coated tablet for once-daily oral use, and 15 mg film coated tablet in case of transitioning at the end of treatment. Dosing must follow the locally approved label."
+          },
+          {
+            "id": "2",
+            "title": "VKA-based regimen oral VKA tablets as selected and provided by the site and used in accordance with the local label. The Investigator will monitor the patient and adjust the VKA dose to maintain the dose within target."
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Edoxaban",
+              "n": 713,
+              "events": 170
+            },
+            {
+              "id": "OG001",
+              "title": "Vitamin K Antagonist (VKA)",
+              "n": 713,
+              "events": 157
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      },
+      {
+        "nctId": "NCT02833948",
+        "title": "Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT)",
+        "status": "COMPLETED",
+        "startDate": "2016-05",
+        "completionDate": "2019-03-06",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Randomized Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT) - Substudy of the GALILEO-trial",
+        "acronym": "GALILEO-4D",
+        "briefSummary": "The aortic valve is located between the left ventricle and the aorta. Patients with symptomatic, severe aortic valve stenosis conventionally have it surgically replaced requiring direct access to the heart through the chest. Transcatheter aortic valve replacement (TAVR) is now a well-established alternative for treating severe aortic valve stenosis. Both types of intervention improve prognosis and alleviate symptoms. The optimal choice of blood thinning therapy after TAVR is unknown. It has been reported that leaflet thrombosis with reduced leaflet motion can occur and this phenomenon has been suggested to be potentially related with neurological events. In addition, the occurence of this phenomenon can be reduced with anticoagulation blood thinning therapy. The purpose of this study is to evaluate if anticoagulation compared to the usual double platelet inhibitor therapy after TAVR can reduce the risk of leaflet thrombosis.",
+        "detailedDescription": "BACKGROUND: Transcatheter aortic valve replacement (TAVR) has become an established therapeutic option for patients with symptomatic, severe aortic valve stenosis, who are ineligible or at high risk for conventional surgical aortic valve replacement (SAVR). It was recently reported that leaflet thickening and reduced leaflet motion, verified by four-dimensional computed tomography (4DCT), was not uncommon after both TAVR and SAVR. It has been emphasized that this phenomenon should be further investigated for its effect on clinical outcomes (e.g. stroke) and valve durability. As this valve leaflet thickening and reduced motion could be reversed by oral anticoagulant (OAC) treatment and was not observed in patients on chronic OAC therapy, it has been hypothesized that this phenomenon could be related to possible leaflet thrombosis or a \"thrombotic film\" on the leaflets. AIM: To evaluate whether a rivaroxaban-based strategy, following successful TAVR, compared to an antiplatelet-based strategy, is superior in reducing subclinical valve leaflet thickening and motion abnormalities - as detected by 4DCT-scan. POPULATION: All patients undergoing successful TAVR by ileofemoral or subclavian access with an approved TAVR device will be screened for eligibility. Included subjects must provide written informed consent. Inclusion and exclusion criteria are listed below. DESIGN: The GALILEO-4D trial will be conducted as a substudy of the multicenter, open-label, randomized, event-driven, active-controlled GALILEO trial. Patients will be 1:1 randomized to an antiplatelet-based strategy vs. rivaroxaban-based strategy - the randomization will adopt the same 1:1 randomization of the main GALILEO trial. In case the GALILEO-4D trial should still be continued after completion of the main GALILEO trial, this 1:1 randomization will be continued until inclusion of 150 patients in both treatment groups. In total, 300 patients will be randomized in the GALILEO-4D trial. INTERVENTION: Subj...",
+        "sponsor": {
+          "name": "ECRI bv",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 231,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Aortic Valve Stenosis",
+          "Cardiovascular Diseases",
+          "Heart Valve Diseases",
+          "Ventricular Outflow Obstruction",
+          "Thrombosis"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Successful TAVR of a native aortic valve stenosis * By iliofemoral or subclavian access * With any approved/marketed TAVR device * Written informed consent Exclusion Criteria: * Atrial fibrillation (AF), current or previous, with an ongoing indication for oral anticoagulant treatment * Any other indication for continued treatment with any oral anticoagulant * Known bleeding diathesis (such as but not limited to platelet count ≤ 50,000/mm3 at screening, hemoglobin level \\< 8.5 g/dL or \\< 5.3 mmol/l, history of intracranial hemorrhage, or subdural hematoma) * Any indication for dual antiplatelet therapy (DAPT) for more than three months after randomization (such as coronary, carotid, or peripheral stent implantation) * Clinically overt stroke within the last three months * Planned coronary or vascular intervention or major surgery * Severe renal insufficiency (eGFR \\< 30 mL/min/1.73 m2) or on dialysis, or post-TAVR unresolved acute kidney injury with renal dysfunction ≥ stage 2 * Moderate and severe hepatic impairment (Child-Pugh Class B or C) or any hepatic disease associated with coagulopathy * Iodine contrast allergy or other condition that prohibits CT imaging"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Rate of Patients With at Least One Prosthetic Leaflet With >50% Motion Reduction as Assessed by Cardiac 4DCT-scan",
+            "description": "Reduced systolic leaflet excursion is classified as: (I) normal, (II) mildly reduced (\\<50%), (III) moderate to severely reduced (\\>50%), and (IV) immobile. Reduced systolic leaflet excursion is considered significant when it is \\> 50% or immobile. Quantitative assessment of leaflet motion is performed with a blood pool inversion volume rendered cine reconstruction throughout the cardiac cycle evaluating the bioprosthetic leaflets.",
+            "timeFrame": "3 months"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "The Rate of Prosthetic Leaflets With > 50% Motion Reduction as Assessed by Cardiac 4DCT-scan",
+            "description": "The rate of prosthetic leaflets with RLM\\> grade 3 as assessed by cardiac 4DCT",
+            "timeFrame": "3 months"
+          },
+          {
+            "measure": "The Rate of Patients With at Least One Prosthetic Leaflet With Thickening as Assessed by Cardiac 4DCT-scan",
+            "description": "The rate of patients with at least one prosthetic leaflet with hypoattenuated leaflet thickening (HALT) as assessed by cardiac 4DCT.",
+            "timeFrame": "3 months"
+          },
+          {
+            "measure": "The Rate of Prosthetic Leaflets With Thickening as Assessed by Cardiac 4DCT-scan",
+            "description": "The rate of prosthetic leaflet with HALT as assessed by cardiac 4DCT-scan",
+            "timeFrame": "3 months"
+          }
+        ],
+        "documents": [
+          {
+            "label": "Study Protocol and Statistical Analysis Plan",
+            "filename": "Prot_SAP_000.pdf",
+            "date": "2017-05-29",
+            "hasSap": true,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          }
+        ],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "ASA + Clopidogrel",
+              "description": "ASA (Acetylsalicylic acid) 75-100mg + Clopidogrel 75mg for 90 days, followed by ASA 75-100mg monotherapy Acetylsalicylic acid: Drug: Acetylsalicylic acid: 75 - 100 mg OD (for first 90 days only in arm 1) Clopidogrel: Drug: Clopidogrel 75 mg OD for first 90 days If new-onset at..."
+            },
+            {
+              "id": "BG001",
+              "title": "Rivaroxaban + ASA",
+              "description": "Rivaroxaban 10mg + ASA 75-100mg for 90 days, followed by rivaroxaban 10mg monotherapy Acetylsalicylic acid: Drug: Acetylsalicylic acid: 75 - 100 mg OD (for first 90 days only in arm 1) Rivaroxaban: Drug: Rivaroxaban (Xarelto): 10 mg OD (once-daily) If new-onset atrial fibrilla..."
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "ASA + Clopidogrel",
+              "value": 116,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Rivaroxaban + ASA",
+              "value": 115,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 231,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "ASA + Clopidogrel",
+              "value": "80.5",
+              "spread": "6.2",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Rivaroxaban + ASA",
+              "value": "79.7",
+              "spread": "7.3",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "80.1",
+              "spread": "6.7",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "ASA + Clopidogrel",
+              "female": 42,
+              "male": 74
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Rivaroxaban + ASA",
+              "female": 41,
+              "male": 74
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 83,
+              "male": 148
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "ASA + Clopidogrel",
+                      "value": "80.5",
+                      "spread": "6.2"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Rivaroxaban + ASA",
+                      "value": "79.7",
+                      "spread": "7.3"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "80.1",
+                      "spread": "6.7"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "ASA + Clopidogrel",
+                      "value": "42",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Rivaroxaban + ASA",
+                      "value": "41",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "83",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "ASA + Clopidogrel",
+                      "value": "74",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Rivaroxaban + ASA",
+                      "value": "74",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "148",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Race and Ethnicity Not Collected",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Body-mass index",
+              "paramType": "MEAN",
+              "unit": "kg/m^2",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "ASA + Clopidogrel",
+                      "value": "27.8",
+                      "spread": "5.1"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Rivaroxaban + ASA",
+                      "value": "27.7",
+                      "spread": "6.5"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "27.8",
+                      "spread": "5.8"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "ASA (Acetylsalicylic acid) 75-100mg + Clopidogrel 75mg for 90 days, followed by ASA 75-100mg monotherapy"
+          },
+          {
+            "id": "2",
+            "title": "Rivaroxaban 10mg + ASA 75-100mg for 90 days, followed by rivaroxaban 10mg monotherapy"
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "Rate of Patients With at Least One Prosthetic Leaflet With >50% Motion Reduction as Assessed by Cardiac 4DCT-scan",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "ASA + Clopidogrel",
+              "n": 101,
+              "events": 11
+            },
+            {
+              "id": "OG001",
+              "title": "Rivaroxaban + ASA",
+              "n": 97,
+              "events": 2
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      }
+    ],
+    "excludedStudies": [
+      {
+        "nctId": "NCT02556203",
+        "title": "Global Study Comparing a rivAroxaban-based Antithrombotic Strategy to an antipLatelet-based Strategy After Transcatheter aortIc vaLve rEplacement to Optimize Clinical Outcomes",
+        "status": "TERMINATED",
+        "startDate": "2015-12-16",
+        "completionDate": "2018-11-27",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Global Multicenter, Open-label, Randomized, Event-driven, Active-controlled Study Comparing a rivAroxaban-based Antithrombotic Strategy to an antipLatelet-based Strategy After Transcatheter aortIc vaLve rEplacement (TAVR) to Optimize Clinical Outcomes",
+        "acronym": "GALILEO",
+        "briefSummary": "To assess whether a rivaroxaban-based anticoagulation strategy, following successful TAVR, compared to an antiplatelet-based strategy, is superior in reducing death or first thromboembolic events (DTE). To assess the primary bleeding events (PBE) of the rivaroxaban-based strategy compared to an antiplatelet-based strategy, following TAVR.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Bayer",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 1653,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Transcatheter Aortic Valve Replacement"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Successful TAVR (Transcatheter Aortic Valve Replacement) of an aortic valve stenosis (either native or valve-in-valve) * By iliofemoral or subclavian access * With any approved/marketed device Exclusion Criteria: * Atrial fibrillation (AF), current or previous, with an ongoing indication for oral anticoagulant treatment * Any other indication for continued treatment with any oral anticoagulant (OAC) * Known bleeding diathesis (such as but not limited to active internal bleeding, clinically significant bleeding, platelet count ≤ 50,000/mm3 at screening, hemoglobin level \\< 8.5 g/dL, active peptic ulcer or known gastrointestinal (GI) bleeding, history of intracranial hemorrhage or subdural hematoma) * Any ongoing absolute indication for dual antiplatelet therapy (DAPT) at time of screening that is unrelated to the TAVR procedure * Clinically overt stroke within the last 3 months * Planned coronary or vascular intervention or major surgery * Severe renal impairment (eGFR \\< 30 mL/min/1.73 m2) or on dialysis, or post-TAVR unresolved acute kidney injury with renal dysfunction stage 2 or higher * Moderate and severe hepatic impairment (Child-Pugh Class B or C) or any hepatic disease associated with coagulopathy"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Number of Participants With Death or First Thromboembolic Event (DTE)",
+            "description": "Death or first adjudicated thromboembolic event (DTE), defined as composite of all-cause death, any stroke, myocardial infarction (MI), symptomatic valve thrombosis, pulmonary embolism (PE), deep vein thrombosis (DVT), and non-central nervous system (CNS) systemic embolism.",
+            "timeFrame": "Through study completion, on average 14 months"
+          },
+          {
+            "measure": "Number of Participants With Death or First Thromboembolic Event (DTE)",
+            "description": "Death or first adjudicated thromboembolic event (DTE), defined as composite of all-cause death, any stroke, myocardial infarction (MI), symptomatic valve thrombosis, pulmonary embolism (PE), deep vein thrombosis (DVT), and non-central nervous system (CNS) systemic embolism.",
+            "timeFrame": "Through study completion, on average 16 months"
+          },
+          {
+            "measure": "Number of Participants With Primary Bleeding Event (PBE)",
+            "description": "PBE is defined according to VARC (Valve Academic Research Consortium) definitions as the adjudicated composite of: Life-threatening, disabling or major bleeding.",
+            "timeFrame": "Through study completion, on average 16 months"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Number of Participants With Net-clinical Benefit",
+            "description": "The net-clinical-benefit defined as the adjudicated composite of all-cause death, any stroke, myocardial infarction, symptomatic valve thrombosis, pulmonary embolism, deep vein thrombosis, non-CNS systemic embolism (efficacy); VARC life-threatening, disabling and VARC major bleeds (safety).",
+            "timeFrame": "Through study completion, on average 16 months"
+          },
+          {
+            "measure": "Number of Participants With Cardiovascular Death or Thromboembolic Event",
+            "description": "Composite of CV-death, any stroke, myocardial infarction (MI), symptomatic valve thrombosis, pulmonary embolism (PE), deep vein thrombosis (DVT), and non-central nervous system (CNS) systemic embolism (per adjudication).",
+            "timeFrame": "Through study completion, on average 16 months"
+          },
+          {
+            "measure": "Number of Participants With TIMI (Thrombolysis In Myocardial Infarction) Major / Minor Bleeds",
+            "description": "Composite of TIMI major and minor bleedings",
+            "timeFrame": "Through study completion, on average 16 months"
+          }
+        ],
+        "documents": [
+          {
+            "label": "Study Protocol",
+            "filename": "Prot_000.pdf",
+            "date": "2016-08-17",
+            "hasSap": false,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          },
+          {
+            "label": "Statistical Analysis Plan",
+            "filename": "SAP_001.pdf",
+            "date": "2016-12-15",
+            "hasSap": true,
+            "hasIcf": false,
+            "hasProtocol": false,
+            "url": ""
+          }
+        ],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Rivaroxaban (Xarelto, BAY59-7939)",
+              "description": "Subjects were treated with Rivaroxaban (10mg once-daily) and ASA (Acetylsalicylic Acid) (75-100mg once-daily) within first 90 days after randomization. After 90 days, ASA was discontinued and rivaroxaban (10mg once-daily) was to be continued alone. In the event of NOAF (New On..."
+            },
+            {
+              "id": "BG001",
+              "title": "Antiplatelet",
+              "description": "Subjects were treated with clopidogrel (75mg once-daily) and ASA (75-100mg once-daily) within first 90 days after randomization. After 90 days, clopidogrel was discontinued and ASA (75-100mg once-daily) was to be continued alone. In the event of NOAF, subjects should start tre..."
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Rivaroxaban (Xarelto, BAY59-7939)",
+              "value": 826,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Antiplatelet",
+              "value": 818,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 1644,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Rivaroxaban (Xarelto, BAY59-7939)",
+              "value": "80.38",
+              "spread": "7.12",
+              "unit": "Years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Antiplatelet",
+              "value": "80.77",
+              "spread": "5.99",
+              "unit": "Years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "80.57",
+              "spread": "6.58",
+              "unit": "Years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Rivaroxaban (Xarelto, BAY59-7939)",
+              "female": 400,
+              "male": 426
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Antiplatelet",
+              "female": 413,
+              "male": 405
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 813,
+              "male": 831
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "Years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban (Xarelto, BAY59-7939)",
+                      "value": "80.38",
+                      "spread": "7.12"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Antiplatelet",
+                      "value": "80.77",
+                      "spread": "5.99"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "80.57",
+                      "spread": "6.58"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban (Xarelto, BAY59-7939)",
+                      "value": "400",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Antiplatelet",
+                      "value": "413",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "813",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban (Xarelto, BAY59-7939)",
+                      "value": "426",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Antiplatelet",
+                      "value": "405",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "831",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Ethnicity (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban (Xarelto, BAY59-7939)",
+                      "value": "26",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Antiplatelet",
+                      "value": "17",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "43",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Not Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban (Xarelto, BAY59-7939)",
+                      "value": "677",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Antiplatelet",
+                      "value": "694",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1371",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Unknown or Not Reported",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban (Xarelto, BAY59-7939)",
+                      "value": "123",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Antiplatelet",
+                      "value": "107",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "230",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Race (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "American Indian or Alaska Native",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban (Xarelto, BAY59-7939)",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Antiplatelet",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Asian",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban (Xarelto, BAY59-7939)",
+                      "value": "2",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Antiplatelet",
+                      "value": "1",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "3",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Native Hawaiian or Other Pacific Islander",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban (Xarelto, BAY59-7939)",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Antiplatelet",
+                      "value": "2",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "2",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Black or African American",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Rivaroxaban (Xarelto, BAY59-7939)",
+                      "value": "9",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Antiplatelet",
+                      "value": "7",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "16",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Subjects were treated with Rivaroxaban (10mg once-daily) and ASA (75-100mg once-daily) within first 90 days after randomization. After 90 days, ASA was discontinued and rivaroxaban (10mg once-daily) was to be continued alone. In the event of NOAF (New Onset of Atrial Fibrillation), subjects should be switched to rivaroxaban (20/15mg once-daily) and ASA (75-100mg once-daily) within first 90 days. After 90 days, ASA was discontinued and rivaroxaban (20/15mg once-daily) was to be continued alone."
+          },
+          {
+            "id": "2",
+            "title": "Subjects were treated with clopidogrel (75mg once-daily) and ASA (75-100mg once-daily) within first 90 days after randomization. After 90 days, clopidogrel was discontinued and ASA (75-100mg once-daily) was to be continued alone. In the event of NOAF, subjects should start treatment of open-label VKA to target INR 2 to 3 (according to guidelines) and ASA (75-100mg once-daily) within first 90 days. After 90 days, ASA was discontinued and VKA was to be continued alone."
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "Number of Participants With Death or First Thromboembolic Event (DTE)",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Rivaroxaban (Xarelto, BAY59-7939)",
+              "n": 801,
+              "events": 68
+            },
+            {
+              "id": "OG001",
+              "title": "Antiplatelet",
+              "n": 807,
+              "events": 63
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": false,
+        "reasons": [
+          "not_completed"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT06000943",
+        "title": "Ischemic And Bleeding Risk Assessment After TAVR",
+        "status": "UNKNOWN",
+        "startDate": "2023-08-01",
+        "completionDate": "2024-12-15",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "Ischemic And Bleeding Risk Assessment After TAVR (FOCUS ONE Registry)",
+        "acronym": "FOCUS ONE",
+        "briefSummary": "Transcatheter aortic valve replacement (TAVR) represents an effective treatment to improve symptoms and prognosis in patients with symptomatic severe aortic stenosis (AS) (1-2). Giving an established uniform approach towards anticoagulation and antithrombotic therapy after TAVR in the post POPULAR-TAVI era, recent data coming from the analysis of different trials, highlight the relevance of the patient's background on the occurrence of ischemic and bleeding events. Despite this a targeted antithrombotic strategy remains unexplored and all patients undergoing TAVR without other indication to DAPT or OAC, were currently treated according with the concept of \"less is more\" (only SAPT or only OAC) regardless the risk level (5-6). The keys points of the project will be 1) the assessment of ischemic and bleeding risk after TAVR stratified according with antithrombotic therapy and surgical risk; 2) the evaluation of the impact of prostheses type and the complete blood count variables (hemoglobine and platelets) on the daily average ischemic and bleeding risk and 3) the evaluation of the dynamic therapeutic changes after TAVR during the follow up.",
+        "detailedDescription": "Nowadays in the post POPULAR-TAVI era, after transcatheter aortic valve replacement (TAVR), an establish uniform approach towards anticoagulation and antithrombotic therapy were established. All patients undergoing TAVR without other indication to dual antiplatelet therapy (DAPT) or oral anticoagulation (OAC), were currently treated according with the general concept of \"less is more\" (only single antiplatelet therapy - SAPT or only oral anticoagulation - OAC) \\[1-3\\]. By comparing the frequency of ischemic and bleeding events, data from trial revealed that the bleeding events were more frequent than the ischemic one despite the level of surgical risk, however a gradient of reduction in terms of difference was seen from the highest to the lowest risk profile \\[4\\]. Furthermore, recent literature showed how the timeframe analysis approach, giving the possibility for a complete time variability evaluation, is able to visualize the fluctuation of the risk over the time. Unfortunately, no stratified data according with the surgical risk level, are available using this approach \\[5\\]. Moreover, despite these results that highlight the relevance of the patient's background on the occurrence of ischemic and bleeding events, a tailored antithrombotic strategy remains unexplored and all patients undergoing TAVR without other indication to DAPT or OAC, were currently treated with a uniform approach in terms of intensity during the time (1-3). 1.1. Assessment of ischemic and bleeding risk after TAVR according with antithrombotic therapy and surgical risk The rate of adverse thrombotic and hemorrhagic events occurred in the first days after the procedure, were mainly driven by the TAVR's access bleeding and the periprocedural stroke. Recent study, using the average daily risk analysis, showed the prevalence of the ischemic risk in the first 30 days after the procedure followed by a rising of the bleeding one which become predominant during the follow up, affecting the long-t...",
+        "sponsor": {
+          "name": "Niguarda Hospital",
+          "class": "OTHER"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 2500,
+          "type": "ESTIMATED"
+        },
+        "conditions": [
+          "Aortic Valve Stenosis",
+          "Transcatheter Aortic Valve Replacement"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion criteria * All patients with severe aortic stenosis undergoing TAVR. * Availability of changes in antithrombotic therapy at 1 month, 90 days, and 1 year after TAVR. Exclusion Criteria * Patients who died during the index procedure * Patients in triple antithrombotic therapy at discharge * Patients with a known prognosis less than 1 year at the time of TAVR"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Trend of average daily ischemic risk (ADIR) and average daily bleeding risk (ADBR)",
+            "description": "ADIR was calculated as the total number of ischemic events (CV deaths, MI, ischemic stroke and other thrombotic events-including repeat events) divided by the number of patients-day at risk. ADBR was calculated as the total number of bleeding events (including repeat events) divided by the number of the number of patients-day at risk.",
+            "timeFrame": "At 30-days, 90-days and 1 year"
+          },
+          {
+            "measure": "Average daily risks (ADRs) in different type of valve prosthesis",
+            "description": "Trend and prevalence of ADIR and ADBR in different type and number of prosthesis (long frame vs short frame, balloon versus self-expandable, porcine vs bovine, Single Valve vs Valve in Valve) and calculated as the total number of events divided by the number of patients-day at risk",
+            "timeFrame": "At 30-days, 90-days and 1 year"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Average daily risks (ADRs) in different type of valve prosthesis",
+            "description": "Trend and prevalence of ADIR and ADBR in different type and number of prosthesis (long frame vs short frame, balloon versus self-expandable, porcine vs bovine, Single Valve vs Valve in Valve) and calculated as the total number of events divided by the number of patients-day at risk",
+            "timeFrame": "At 30-days, 90-days and 1 year"
+          },
+          {
+            "measure": "Average daily risks (ADRs) in anaemic and thrombocytopenic patients",
+            "description": "Trend and prevalence of ADIR and ADBR in patients who developed anaemia and thrombocytopenia after the procedure and during the hospitalization. Anaemia and thrombocytopenia were defined according to the WHO and EHA guidelines. ADRs were calculated as the total number of events divided by the number of patients-day at risk",
+            "timeFrame": "In hospital up to 1 year"
+          },
+          {
+            "measure": "Rate of antithrombotic regimen changes after TAVR",
+            "description": "Percentage of antithrombotic strategy changes",
+            "timeFrame": "At 30-days, 90-days and 1 year"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Surgical risk stratification. All the following groups will be define according with STS and Euroscore II score and stratified based on antithrombotic strategy in all possible combinations (SAPT, DAPT, OAC, OAC+SAPT)"
+          },
+          {
+            "id": "2",
+            "title": "Surgical risk stratification. All the following groups will be define according with STS and Euroscore II score and stratified based on antithrombotic strategy in all possible combinations (SAPT, DAPT, OAC, OAC+SAPT)"
+          },
+          {
+            "id": "3",
+            "title": "Surgical risk stratification. All the following groups will be define according with STS and Euroscore II score and stratified based on antithrombotic strategy in all possible combinations (SAPT, DAPT, OAC, OAC+SAPT)"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "not_randomized_interventional",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT03284827",
+        "title": "Anticoagulant Versus Dual Antiplatelet Therapy for Preventing Leaflet Thrombosis and Cerebral Embolization After Transcatheter Aortic Valve Replacement",
+        "status": "COMPLETED",
+        "startDate": "2018-03-15",
+        "completionDate": "2021-11-05",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "a Multicenter, Randomized, Open-label, Active-treatment, Controlled Trial to Compare the Efficacy of NOAC With Edoxaban vs. Dual Antiplatelet Therapy (DAPT) for Prevention of Leaflet Thrombosis (Documented by Cardiac CT Imaging) and Cerebral Embolization (Documented With Brain DW-MRI Imaging) in Patients Without an Absolute Indication for Chronic OAC After Successful TAVR",
+        "acronym": "ADAPT-TAVR",
+        "briefSummary": "This trial is to compare the efficacy of NOAC(Novel Oral Anticoagulants) with edoxaban vs. dual antiplatelet therapy (DAPT) for prevention of leaflet thrombosis (documented by cardiac CT imaging) and cerebral embolization (documented with brainDiffusion-weighted (DW) magnetic resonance (MR) imaging) in patients without an absolute indication for chronic oral anticoagulation (OAC) after successful transcatheter aortic valve replacement(TAVR).",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Duk-Woo Park, MD",
+          "class": "OTHER"
+        },
+        "phases": [
+          "PHASE4"
+        ],
+        "enrollment": {
+          "count": 235,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Aortic Valve Stenosis"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "19 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: 1. Patients 19 years of age or older with successful TAVR procedure * either native valve or valve-in-valve with any approved/marketed device * A successful TAVR is defined as device success according to the VARC-2 criteria: 1. correct positioning of a single prosthetic heart valve into the proper anatomical location AND 2. Intended performance of the prosthetic heart valve (no prosthesis- patient mismatch\\* and mean aortic valve gradient \\<20 mmHg or peak velocity \\<3 m/s, no moderate or severe prosthetic valve regurgitation AND 3. absence of periprocedural complications (any type of stroke, life-threatening bleeding, acute coronary artery obstruction requiring intervention, major vascular complication requiring intervention, unresolved acute valve thrombosis, or any requirement of a repeat procedure. 2. Patients who voluntarily participated in the written agreement Exclusion Criteria: 1. Any atrial fibrillation with an indication for chronic OAC. 2. An ongoing indication for OAC or any other indication for continued treatment with any OAC 3. Any ongoing indication for DAPT (recent acute coronary syndrome or PCI within 12 months) 4. Planned coronary or vascular intervention or major surgery 5. Clinically significant bleeding patients 6. The risk of bleeding increased due to the following reasons at the time of TAVR procedure, i. history of gastrointestinal ulcers within 1 month ii. Malignant tumor with high risk of bleeding iii. Brain or spinal cord in..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "an incidence of leaflet thrombosis",
+            "description": "an incidence of leaflet thrombosis on four-dimensional, volume-rendered cardiac CT imaging",
+            "timeFrame": "6-month"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Death",
+            "description": "all-cause, cardiovascular, or non-cardiovascular mortality",
+            "timeFrame": "6-month"
+          },
+          {
+            "measure": "Myocardial infarction",
+            "description": "",
+            "timeFrame": "6-month"
+          },
+          {
+            "measure": "Stroke or transient ischemic attack",
+            "description": "disabling or non-disabling",
+            "timeFrame": "6-month"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "60 mg once daily"
+          },
+          {
+            "id": "2",
+            "title": "clopidogrel (75 mg OD) plus acetylsalicylic acid (ASA, 75-100 mg OD)"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT06168370",
+        "title": "Personalized, CT-guided Antithrombotic Therapy Versus Lifelong Single Antiplatelet Therapy to Reduce Thromboembolic and Bleeding Events in Non-atrial Fibrillation Patients After Transcatheter Aortic Valve Implantation",
+        "status": "RECRUITING",
+        "startDate": "2023-12-01",
+        "completionDate": "2028-06-01",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Personalized, CT-guided Antithrombotic Therapy Versus Lifelong Single Antiplatelet Therapy to Reduce Thromboembolic and Bleeding Events in Non-atrial Fibrillation Patients After Transcatheter Aortic Valve Implantation: a Pragmatic, International, Multicentre, Randomized Clinical Trial",
+        "acronym": "POP ATLANTIS",
+        "briefSummary": "The POPular ATLANTIS trial aims to investigate CT-guided antithrombotic therapy compared to lifelong single antiplatelet therapy after a transcatheter aortic valve implantation (TAVI) procedure. Only patients without an indication for anticoagulants will be included in this trial. Currently, lifelong single antiplatelet therapy (mostly aspirin) is considered the standard of care for these patients. However, this approach poses a bleeding risk with only a minimal reduction in thromboembolic events. After 3 months, a CT scan will be conducted to assess the presence of thrombosis on the newly implanted TAVI valve. Based on the results of a 4D CT scan, the decision will be made whether the patient should receive no anticoagulant or antithrombotic therapy with apixaban. CT-guided antithrombotic therapy holds the potential for a greater reduction in thromboembolic events without increasing the bleeding risk.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "St. Antonius Hospital",
+          "class": "OTHER"
+        },
+        "phases": [
+          "NA"
+        ],
+        "enrollment": {
+          "count": 2500,
+          "type": "ESTIMATED"
+        },
+        "conditions": [
+          "Severe Aortic Valve Stenosis"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "110 Years",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Successful TAVI (according to the VARC-3 criteria)10 with any approved device * Ability to understand and to comply with the study protocol * Written informed consent Exclusion Criteria: * Existing indication for oral anticoagulation (e.g. atrial fibrillation, obstructive valve thrombosis detected by echocardiography prior to inclusion) * Existing indication for dual antiplatelet therapy at three months after TAVI (rare at this time point) * Creatinine clearance \\<15 mL/min (based on the CKD-EPI formula) or on renal replacement therapy"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Thromboembolic events",
+            "description": "Composite of cardiovascular death, ischaemic stroke, transient ischaemic attack, myocardial infarction, systemic embolism and clinically significant valve thrombosis according to the VARC-3 criteria",
+            "timeFrame": "Through study completion, a median of 2.5 years"
+          },
+          {
+            "measure": "All bleeding",
+            "description": "Defined as the composite of type 1-4 bleeding, according to the VARC-3 criteria",
+            "timeFrame": "Through study completion, a median of 2.5 years"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Net clinical benefit, defined as the composite of cardiovascular mortality, stroke, transient ischaemic attack, systemic embolism, clinically significant valve thrombosis and type 1-4 bleeding according to the VARC-3 criteria",
+            "description": "",
+            "timeFrame": "Through study completion, a median of 2.5 years"
+          },
+          {
+            "measure": "Major bleeding (VARC-3 type 2-4)",
+            "description": "",
+            "timeFrame": "Through study completion, a median of 2.5 years"
+          },
+          {
+            "measure": "Cerebrovascular events (All stroke and TIA according to VARC-3)",
+            "description": "",
+            "timeFrame": "Through study completion, a median of 2.5 years"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "The intervention group will undergo CT scan after 3 months. If subclinical valve thrombosis is detected, anticoagulation will be started. If no subclinical valve thrombosis is detected, the SAPT is stopped, unless another indication is present."
+          },
+          {
+            "id": "2",
+            "title": "Standard of care with lifelong SAPT after TAVI"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT02664649",
+        "title": "Anti-Thrombotic Strategy After Trans-Aortic Valve Implantation for Aortic Stenosis",
+        "status": "COMPLETED",
+        "startDate": "2016-08-26",
+        "completionDate": "2020-10-15",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Anti-Thrombotic Strategy to Lower All Cardiovascular and Neurologic Ischemic and Hemorrhagic Events After Trans-Aortic Valve Implantation for Aortic Stenosis",
+        "acronym": "ATLANTIS",
+        "briefSummary": "ATLANTIS is a multicenter, phase IIIb, prospective, open-label, randomized trial. The objective of this study is to demonstrate superiority of a strategy of anticoagulation with apixaban (Anti-Xa Group) as compared to the current standard of care in patients who have undergone a successful TAVI procedure. The randomization is stratified according to the presence or not of a mandatory indication for anticoagulation for a reason other than the TAVI procedure (e.g. atrial fibrillation or DVT/PE).",
+        "detailedDescription": "Guidelines on antithrombotic therapy after TAVI are scarce and no randomized evaluation has been performed to demonstrate what the optimal antithrombotic strategy is. The rates of major stroke and of major bleeding on DAPT, the standard of care in TAVI (Class IIb LOE C), are respectively as high as 3% and 10% within the first 30 days excluding the perioperative period. In addition, the rate of MACCE is estimated to be of 15% on DAPT. However, more than half of senior patients display high on-clopidogrel platelet reactivity, less than 1/3 undergo coronary stent implantation prior to valve replacement and more than 1/3 display transient atrial fibrillation (AF) during hospital stay. Anticoagulation appears therefore to be underused in this high stroke risk population and has never been evaluated in post-TAVI procedures. Non-vitamin K Oral Anticoagulants (NOAC) have shown superiority or non-inferiority versus VKA to prevent cardio-embolic events with a consistent reduction in intracranial bleeds in patients with non-valvular AF. Apixaban, a direct anti-Xa inhibitor, is the only NOAC which has demonstrated a mortality benefit associated with significant reductions in embolism and major bleeding versus VKA. In addition, apixaban is the only NOAC which has demonstrated superiority over aspirin to prevent cardio-embolic events with a similar safety profile in non-valvular AF patients with a contraindication to VKA. The investigators therefore formulate the hypothesis that apixaban is superior to SOC to prevent cardiovascular events in post-TAVI procedures. The main purpose is to demonstrate superiority of a strategy of anticoagulation with apixaban 5mg bid (Anti-Xa Group) with dose adjustment as compared to the current standard of care (SOC Group = VKA or Antiplatelet therapy) as measured by the time from randomization to the first occurrence of any event of the composite endpoint of death, myocardial infarction, stroke/TIA/systemic embolism, intracardiac or bioprosthes...",
+        "sponsor": {
+          "name": "Assistance Publique - Hôpitaux de Paris",
+          "class": "OTHER"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 1510,
+          "type": "ESTIMATED"
+        },
+        "conditions": [
+          "Symptomatic Aortic Stenosis",
+          "Eligible for Transcatheter Aortic Valve Replacement"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * All patients after clinically successful TAVI procedures irrespective of prior antithrombotic treatment are eligible for randomization. * Ability to understand and to comply with the study protocol. * Written informed consent. * Men and women ≥18 years of age. Non-inclusion Criteria: * Creatinine Clearance \\< 15mL/min (Cockcroft formula) or patient undergoing dialysis. * Mechanical valves. * Known severe mitral valve stenosis requiring an intervention. * Unsuccessful TAVI requiring re-intervention. * Ongoing major bleeding or vascular complication (patients may become candidate to the study once stabilized). * Prior history of intracranial haemorrhage. * Recent cerebro-vascular event (CVE) or transient ischemic attack on anticoagulant therapy (\\<6 weeks). * Cardiogenic shock manifested by low cardiac output, vasopressor or respiratory dependence, or mechanical hemodynamic support. * Planned major surgery during follow-up defined as high-bleeding risk according to ESC/EHRA and requiring interruption of the study drug with bridging * Concomitant medical illness (terminal malignancy) that is associated with expected survival less than one year. * Concomitant use of prasugrel or ticagrelor. * Following concomitant treatments that are potent inhibitors of CYP3A4: azole antifungals (itracozanole and ketoconazole), macrolide antibiotics (clarithromycine and telithromycin), and protease inhibitors (ritonavir, indinavir, nelfinavir and aquinavir) and nefazadon..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Composite of death, myocardial infarction, stroke, systemic embolism, intracardiac or bioprosthesis thrombus, any episode of deep vein thrombosis or pulmonary embolism, life-threatening or disabling or major bleeding at one year follow-up.",
+            "description": "life-threatening or disabling or major bleeding defined according to VARC-2 definitions over one year follow-up.",
+            "timeFrame": "up to 13 months"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Presence or not of an indication (other than TAVI) for anticoagulation described in the medical record.",
+            "description": "Information present in the medical record of the patient",
+            "timeFrame": "from screening to randomization"
+          },
+          {
+            "measure": "First occurrence of any event of the following composite criteria: a) Death, MI, any stroke through one year of randomization, b) Death, any stroke/TIA or systemic embolism c) Each individual parameter of the primary endpoint",
+            "description": "life-threatening (including fatal) or disabling or major bleeding (BARC 4, 3a, b and c) (primary safety endpoint) as defined according to VARC-2.",
+            "timeFrame": "up to 13 months"
+          },
+          {
+            "measure": "Minor bleedings (BARC 2 or 3a)",
+            "description": "occurrence of any Minor bleedings (BARC 2 or 3a)",
+            "timeFrame": "up to 13 months"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Investigational Product is open label apixaban 5 mg tablets taken orally two times a day for 12 months. Subjects with 2 or more of the following characteristics will take apixaban 2.5 mg tablets orally twice daily: age ≥80 years, body weight \\<60 kg, serum creatinine ≥1.5 mg/dL \\[133 μMol/L\\].\n\n\\- Also, subjects with severe renal insufficiency \\[calculated Creatinine Clearance (Cr.Cl.) (Cockroft-Gault) between 15-29 ml/min\\] will take apixaban 2.5 mg tablets orally twice daily"
+          },
+          {
+            "id": "2",
+            "title": "VKA or Antiplatelet therapy"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT02247128",
+        "title": "Antiplatelet Therapy for Patients Undergoing Transcatheter Aortic Valve Implantation",
+        "status": "COMPLETED",
+        "startDate": "2014-01",
+        "completionDate": "2020-04",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Antiplatelet Therapy for Patients Undergoing Transcatheter Aortic Valve Implantation",
+        "acronym": "POPular-TAVI",
+        "briefSummary": "At present, a variety of antithrombotic regimens are prescribed in the early postprocedure period after transcatheter aortic valve implantation (TAVI). Dual antiplatelet therapy (DAPT) using aspirin and a thienopyridine in the initial period after TAVI is the recommended strategy; however, mono antiplatelet therapy using aspirin is suggested not to be inferior. In patients with atrial fibrillation (AF) or another indication for oral anticoagulation (OAC), no recommendations on best treatment regimen currently exist although triple therapy (OAC + DAPT) is best avoided due to increased bleeding risk. We hypothesise that the omission of clopidogrel in the first 3 months after TAVI is safer and not less beneficial than the addition of clopidogrel to aspirin (cohort A) or OAC (cohort B).",
+        "detailedDescription": "The trial consists of two cohorts: * Cohort A, patients without an indication for OAC prior to TAVI. * Cohort B, patients with an indication for OAC prior to TAVI (eg. atrial fibrillation, mechanic mitral valve prosthesis).",
+        "sponsor": {
+          "name": "St. Antonius Hospital",
+          "class": "OTHER"
+        },
+        "phases": [
+          "PHASE4"
+        ],
+        "enrollment": {
+          "count": 1016,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Aortic Valve Disease",
+          "Myocardial Infarction",
+          "Stroke",
+          "Bleeding"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Cohort A 1\\. Patient has provided written informed consent. * Cohort B 1. Need for long-term oral anticoagulation; 2. Patient has provided written informed consent. Exclusion Criteria: * Cohort A 1. Need for long-term oral anticoagulation; 2. Drug-eluting stent implantation within 3 months prior to TAVI procedure; 3. Bare-metal stent implantation within 1 month prior to TAVI procedure; 4. Allergy or intolerance to aspirin or clopidogrel. * Cohort B 1. Drug-eluting stent implantation within 3 months prior to TAVI procedure; 2. Bare-metal stent implantation within 1 month prior to TAVI procedure; 3. Allergy or intolerance to (N)OAC or clopidogrel."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Safety endpoint",
+            "description": "The primary outcome is a safety endpoint, defined as freedom of all bleeding complications at 1 year after TAVI. The co-primary outcome is the safety endpoint defined as freedom of non-procedure related bleeding complications at 1 year after TAVI. For the classification of bleeding complications the Bleeding Academic Research Consortium Definition for Bleeding (BARC) bleeding classification is primarily used according to the Valve Academic Research Consortium (VARC).",
+            "timeFrame": "1 year"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Net-clinical benefit endpoint",
+            "description": "The secondary outcome is a net-clinical benefit endpoint, defined as freedom of the non-hierarchical composite of cardiovascular mortality, non-procedure related bleeding, stroke, or myocardial infarction at 1 year after TAVI.",
+            "timeFrame": "1 year"
+          },
+          {
+            "measure": "Efficacy endpoint",
+            "description": "The co-secondary outcome is an efficacy endpoint, defined as freedom of the non-hierarchical composite of cardiovascular mortality, ischemic stroke, or myocardial infarction at 1 year after TAVI.",
+            "timeFrame": "1 year"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Cohort A: patients will receive clopidogrel (75mg quaque die (qD), 3 months) on top of low-dose aspirin (≤100mg qD, at least 1 year but recommended lifelong). When a patient in Cohort A doesn't already takes aspirin, a loading dose of 300mg will be given within 24 hours prior to TAVI. The loading dose for clopidogrel is 300mg, and will be given within 24 hours prior to TAVI."
+          },
+          {
+            "id": "2",
+            "title": "Cohort A: patients will receive low-dose aspirin (≤100mg qD, at least 1 year but recommended lifelong). When a patients doesn't already takes aspirin, a loading dose of 300mg will be given within 24 hours prior to TAVI. It is recommended to omit other antiplatelet therapy (e.g. clopidogrel) at least 5 days prior to the TAVI procedure."
+          },
+          {
+            "id": "3",
+            "title": "Cohort B: patients will receive clopidogrel (75mg qD, 3 months) on top of OAC (according to its indication). The loading dose for clopidogrel is 300mg, and will be given within 24 hours prior to TAVI. It is recommended to omit other antiplatelet therapy (e.g. aspirin) at least 5 days prior to the TAVI procedure."
+          },
+          {
+            "id": "4",
+            "title": "Cohort B: patients will receive OAC according to its indication. It is recommended to continue the OAC therapy peri-procedural (International Normalized Ratio aimed at 2.0). It is recommended to omit antiplatelet therapy (e.g. clopidogrel) at least 5 days prior to the TAVI procedure."
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      }
+    ],
+    "exclusionReasons": {
+      "not_completed": 3,
+      "no_results_posted": 5,
+      "not_randomized_interventional": 1,
+      "no_extractable_numeric_outcome": 5
+    },
+    "portfolioEligible": true,
+    "priorityTier": "early"
+  }
+}

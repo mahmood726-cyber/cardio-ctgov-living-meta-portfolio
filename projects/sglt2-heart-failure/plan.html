@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SGLT2 Inhibitors in Heart Failure | Validation Plan</title>
+    <link rel="icon" href="data:," />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f6fb;
+        --ink: #16213e;
+        --muted: #5b657a;
+        --card: #ffffff;
+        --line: #d8e0f0;
+        --accent: #0f5c7a;
+        --accent-soft: #e0f1f8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 44%, #ffffff 100%);
+        color: var(--ink);
+        font: 16px/1.55 "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      }
+      main {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 20px 56px;
+      }
+      .hero {
+        display: grid;
+        gap: 16px;
+        padding: 28px;
+        background: radial-gradient(circle at top left, #dceefe 0%, #ffffff 55%);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 16px 48px rgba(15, 52, 96, 0.08);
+      }
+      .kicker {
+        margin: 0;
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+      h1, h2 { margin: 0; }
+      p { margin: 0; color: var(--muted); }
+      .grid {
+        display: grid;
+        gap: 16px;
+        margin-top: 22px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+      }
+      .card strong {
+        display: block;
+        font-size: 1.75rem;
+        color: var(--ink);
+      }
+      .section {
+        margin-top: 24px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px;
+      }
+      pre {
+        margin: 12px 0 0;
+        white-space: pre-wrap;
+        overflow-x: auto;
+        background: #0d1b2a;
+        color: #eff6ff;
+        padding: 14px;
+        border-radius: 14px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+        padding: 10px 8px;
+      }
+      th {
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .pillbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .pill {
+        background: var(--accent-soft);
+        border: 1px solid #b9d9e7;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        color: var(--ink);
+      }
+      iframe {
+        width: 100%;
+        min-height: 420px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #111827;
+      }
+      a { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <p class="kicker">CT.gov Validation Pack</p>
+        <h1>SGLT2 Inhibitors in Heart Failure</h1>
+        <p>Separate cardiovascular living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-03-28. Only randomized comparative records with posted results and extractable numeric outcomes are eligible.</p>
+        <div class="pillbar">
+          <span class="pill">Priority tier: Promising</span>
+          <span class="pill">Included RCTs: 4</span>
+          <span class="pill">Scanned records: 37</span>
+          <span class="pill">Pages fetched: 1</span>
+          <span class="pill">Domain: Heart Failure</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card"><span>Base query</span><strong>(&quot;heart failure&quot;) AND (dapagliflozin OR empagliflozin OR sotagliflozin OR canagliflozin OR ertugliflozin)</strong></article>
+        <article class="card"><span>Keyword pack</span><strong>DAPA-HF, DELIVER, EMPEROR, SOLOIST, EMPEROR-Preserved</strong></article>
+        <article class="card"><span>Validation files</span><strong><a href="validation.json">validation.json</a></strong></article>
+        <article class="card"><span>App entry</span><strong><a href="index.html">index.html</a></strong></article>
+      </section>
+
+      <section class="section">
+        <h2>Protocol Framing And Review Question</h2>
+        <p>This plan treats the registry-native topic as a living protocol artifact rather than a link collection. The PICO framing and workflow below define what enters the snapshot, how records are screened, and how benchmark reconciliation should be performed before review sign-off.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Population</td><td>Heart Failure; Chronic Heart Failure With Reduced Ejection Fraction (HFrEF); Heart Failure With Preserved Ejection Fraction</td></tr>
+            <tr><td>Interventions</td><td>Placebo; 10 mg Empagliflozin; Dapa 10 mg</td></tr>
+            <tr><td>Comparators</td><td>10 mg Empagliflozin vs Placebo; Dapa 10 mg vs Placebo</td></tr>
+            <tr><td>Outcomes</td><td>Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF); Time to the First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF); Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.</td></tr>
+            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exact CT.gov Search Query</h2>
+        <pre>(&quot;heart failure&quot;) AND (dapagliflozin OR empagliflozin OR sotagliflozin OR canagliflozin OR ertugliflozin) AND (&quot;DAPA-HF&quot; OR &quot;DELIVER&quot; OR &quot;EMPEROR&quot; OR &quot;SOLOIST&quot; OR &quot;EMPEROR-Preserved&quot;)</pre>
+      </section>
+
+      <section class="section">
+        <h2>Information Sources And Search History</h2>
+        <p>The project was generated directly from the ClinicalTrials.gov v2 API using the exact query below, then checked against publication-oriented benchmark searches so reviewers can compare the registry-native set against the broader literature.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://clinicaltrials.gov/search?term=(%22heart%20failure%22)%20AND%20(dapagliflozin%20OR%20empagliflozin%20OR%20sotagliflozin%20OR%20canagliflozin%20OR%20ertugliflozin)%20AND%20(%22DAPA-HF%22%20OR%20%22DELIVER%22%20OR%20%22EMPEROR%22%20OR%20%22SOLOIST%22%20OR%20%22EMPEROR-Preserved%22)" target="_blank" rel="noopener">CT.gov query</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22SGLT2%20Inhibitors%20in%20Heart%20Failure%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">PubMed meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22SGLT2%20Inhibitors%20in%20Heart%20Failure%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">PubMed randomized-trial search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Source</th>
+              <th>Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>CT.gov candidate scan started</td>
+          <td>ClinicalTrials.gov v2 API</td>
+          <td>2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Base query locked</td>
+          <td>Project generator</td>
+          <td>(&quot;heart failure&quot;) AND (dapagliflozin OR empagliflozin OR sotagliflozin OR canagliflozin OR ertugliflozin)</td>
+        </tr>
+
+        <tr>
+          <td>Keyword expansion applied</td>
+          <td>Project generator</td>
+          <td>5 terms: DAPA-HF, DELIVER, EMPEROR, SOLOIST, EMPEROR-Preserved</td>
+        </tr>
+
+        <tr>
+          <td>Exact query executed</td>
+          <td>ClinicalTrials.gov</td>
+          <td>(&quot;heart failure&quot;) AND (dapagliflozin OR empagliflozin OR sotagliflozin OR canagliflozin OR ertugliflozin) AND (&quot;DAPA-HF&quot; OR &quot;DELIVER&quot; OR &quot;EMPEROR&quot; OR &quot;SOLOIST&quot; OR &quot;EMPEROR-Preserved&quot;)</td>
+        </tr>
+
+        <tr>
+          <td>Registry records screened</td>
+          <td>ClinicalTrials.gov</td>
+          <td>37 records across 1 page(s)</td>
+        </tr>
+
+        <tr>
+          <td>Hard-gate exclusions applied</td>
+          <td>Generator eligibility rules</td>
+          <td>33 records excluded before synthesis</td>
+        </tr>
+
+        <tr>
+          <td>Quantitative snapshot frozen</td>
+          <td>validation.json</td>
+          <td>4 randomized trials entered the reviewer pack</td>
+        </tr>
+
+        <tr>
+          <td>Project package generated</td>
+          <td>Portfolio build</td>
+          <td>2026-03-28</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Selection And Synthesis Workflow</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Rule</th>
+              <th>Evidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Question framing</td>
+          <td>Topic slug, base query, and keyword pack frozen before generation</td>
+          <td>sglt2-heart-failure | 2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Registry screening</td>
+          <td>ClinicalTrials.gov v2 API queried with the exact string shown below</td>
+          <td>37 candidate records screened</td>
+        </tr>
+
+        <tr>
+          <td>Eligibility gate</td>
+          <td>Randomized interventional, completed, posted results, &gt;=2 arms, numeric outcome</td>
+          <td>4 included / 33 excluded</td>
+        </tr>
+
+        <tr>
+          <td>Extraction</td>
+          <td>Outcome groups, sponsor, eligibility, documents, and demographics preserved where available</td>
+          <td>4/4 studies with demographics</td>
+        </tr>
+
+        <tr>
+          <td>Reviewer validation</td>
+          <td>Benchmark ledger and topic-aware WebR runner bundled with each topic project</td>
+          <td>validation.json + plan.html + embedded runner</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>PRISMA Flow Summary</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Count</th>
+              <th>Reviewer Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Records identified from the exact CT.gov query</td>
+          <td>37</td>
+          <td>1 page(s) fetched</td>
+        </tr>
+
+        <tr>
+          <td>Records excluded by registry hard gates</td>
+          <td>33</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+        </tr>
+
+        <tr>
+          <td>Trials entering the quantitative snapshot</td>
+          <td>4</td>
+          <td>Included in validation.json and the live topic app</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Eligibility Rules</h2>
+        <div class="pillbar">
+          <span class="pill">Interventional</span>
+          <span class="pill">Randomized</span>
+          <span class="pill">Completed</span>
+          <span class="pill">Posted CT.gov results</span>
+          <span class="pill">At least 2 arms</span>
+          <span class="pill">Numeric outcome extractable</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <span>Protocol metadata coverage</span>
+          <strong>4/4</strong>
+          <p>Trials with a retained CT.gov brief summary excerpt.</p>
+        </article>
+        <article class="card">
+          <span>Demographics coverage</span>
+          <strong>4/4</strong>
+          <p>Trials with a retained baseline characteristics snapshot.</p>
+        </article>
+        <article class="card">
+          <span>Document coverage</span>
+          <strong>4/4</strong>
+          <p>Trials with protocol or source documents listed on CT.gov.</p>
+        </article>
+        <article class="card">
+          <span>Total reported enrollment</span>
+          <strong>20725</strong>
+          <p>Summed from the CT.gov enrollment field across included studies.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Included Trial Ledger</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Sponsor</th>
+              <th>Phase</th>
+              <th>Enrollment</th>
+              <th>Status</th>
+              <th>Start</th>
+              <th>Completion</th>
+              <th>Arms</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03057951" target="_blank" rel="noopener">NCT03057951</a></td>
+          <td>EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Preserved Ejection Fraction (EMPEROR-Preserved)</td>
+          <td>Boehringer Ingelheim (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>5988 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2017-03-02</td>
+          <td>2021-04-26</td>
+          <td>Arm 1 | Arm 2</td>
+          <td>Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03057977" target="_blank" rel="noopener">NCT03057977</a></td>
+          <td>EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Reduced Ejection Fraction (EMPEROR-Reduced)</td>
+          <td>Boehringer Ingelheim (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>3730 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2017-03-06</td>
+          <td>2020-05-28</td>
+          <td>Arm 1 | Arm 2</td>
+          <td>Time to the First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03036124" target="_blank" rel="noopener">NCT03036124</a></td>
+          <td>Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic Heart Failure</td>
+          <td>AstraZeneca (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>4744 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2017-02-08</td>
+          <td>2019-07-17</td>
+          <td>Patients will be randomized 1:1 to either dapagliflozin or placebo. | Placebo matching dapagliflozin.</td>
+          <td>Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03619213" target="_blank" rel="noopener">NCT03619213</a></td>
+          <td>Dapagliflozin Evaluation to Improve the LIVEs of Patients With PReserved Ejection Fraction Heart Failure.</td>
+          <td>AstraZeneca (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>6263 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2018-08-27</td>
+          <td>2022-03-27</td>
+          <td>Patients will be randomized 1:1 to either dapagliflozin or placebo. | Placebo matching dapagliflozin.</td>
+          <td>Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Study Eligibility And Demographics</h2>
+        <p>This table keeps the trial-level age, sex, participant-count, and registry eligibility fields next to the inclusion decision so readers can challenge the clinical comparability of the pooled set.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Eligibility</th>
+              <th>Participant Counts</th>
+              <th>Age Snapshot</th>
+              <th>Sex Snapshot</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03057951" target="_blank" rel="noopener">NCT03057951</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Placebo: 2991 Participants | 10 mg Empagliflozin: 2997 Participants | Total: 5988 Participants</td>
+          <td>Placebo: 71.9 +/- 9.6 Years | 10 mg Empagliflozin: 71.8 +/- 9.3 Years | Total: 71.9 +/- 9.4 Years</td>
+          <td>Placebo: F 1338 / M 1653 | 10 mg Empagliflozin: F 1338 / M 1659 | Total: F 2676 / M 3312</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03057977" target="_blank" rel="noopener">NCT03057977</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Placebo: 1867 Participants | 10 mg Empagliflozin: 1863 Participants | Total: 3730 Participants</td>
+          <td>Placebo: 66.5 +/- 11.2 Years | 10 mg Empagliflozin: 67.2 +/- 10.8 Years | Total: 66.8 +/- 11.0 Years</td>
+          <td>Placebo: F 456 / M 1411 | 10 mg Empagliflozin: F 437 / M 1426 | Total: F 893 / M 2837</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03036124" target="_blank" rel="noopener">NCT03036124</a></td>
+          <td>Sex: ALL | Age: 18 Years to 130 Years | Healthy volunteers: No</td>
+          <td>Dapa 10mg: 2373 Participants | Placebo: 2371 Participants | Total: 4744 Participants</td>
+          <td>Dapa 10mg: 66.2 +/- 11.0 Years | Placebo: 66.5 +/- 10.8 Years | Total: 66.3 +/- 10.9 Years</td>
+          <td>Dapa 10mg: F 564 / M 1809 | Placebo: F 545 / M 1826 | Total: F 1109 / M 3635</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03619213" target="_blank" rel="noopener">NCT03619213</a></td>
+          <td>Sex: ALL | Age: 40 Years to 130 Years | Healthy volunteers: No</td>
+          <td>Dapa 10 mg: 3131 Participants | Placebo: 3132 Participants | Total: 6263 Participants</td>
+          <td>Dapa 10 mg: 71.8 +/- 9.6 Years | Placebo: 71.5 +/- 9.5 Years | Total: 71.7 +/- 9.6 Years</td>
+          <td>Dapa 10 mg: F 1364 / M 1767 | Placebo: F 1383 / M 1749 | Total: F 2747 / M 3516</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Record Excerpts</h2>
+        <p>Brief summaries, eligibility text, primary outcome descriptions, and source documents are surfaced here so reviewers can verify that the extracted numerical contrast is clinically aligned with the underlying registry record.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Brief Summary</th>
+              <th>Eligibility Excerpt</th>
+              <th>Primary Outcome Excerpt</th>
+              <th>Source Documents</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03057951" target="_blank" rel="noopener">NCT03057951</a></td>
+          <td>This is a study in adults with chronic heart failure. People with chronic heart failure may need to be hospitalised for their condition. Some people with chronic heart failure may eventually die from their condition. The purpose of the study is to find out whether a medicine called empagliflozin lowers the chances o...</td>
+          <td>Inclusion criteria: * Male or female patient, age \&gt;= 18 years at screening. For Japan only: Age \&gt;=20 years at screening * Patients with chronic HF (Chronic Heart Failure) NYHA (New York Heart Association classification) class II-IV and preserved EF (Eject...</td>
+          <td>Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF) | Time frame: From randomization until completion of the planned treatment phase, up to 1403 days. | Failure with preserved Ejection Fraction (HFpEF). The incidence rate per 100 patient years (pt-yrs)...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2016-11-09)</span>
+<span class="pill">Statistical Analysis Plan (2017-02-21)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03057977" target="_blank" rel="noopener">NCT03057977</a></td>
+          <td>The aim of the study is to investigate the safety and efficacy of empagliflozin versus placebo on top of guideline-directed medical therapy in patients with heart failure with reduced ejection fraction.</td>
+          <td>Inclusion criteria: * Male or female patient age \&gt;= 18 years at screening. For Japan only: Age \&gt;= 20 years at screening * Patients with chronic HF (Chronic Heart Failure) NYHA (New York Heart Association Classification) class II-IV and reduced EF (Ejectio...</td>
+          <td>Time to the First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF) | Time frame: From randomisation until completion of the planned treatment period, up to 1040 days. | Time to the first event of adjudicated cardiovascular (CV) death or adjudicated hospitalisation...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2019-11-20)</span>
+<span class="pill">Statistical Analysis Plan (2020-06-19)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03036124" target="_blank" rel="noopener">NCT03036124</a></td>
+          <td>The purpose of this study is to evaluate the effect of dapagliflozin on the incidence of worsening heart failure or cardiovascular death in patients with chronic heart failure with reduced ejection fraction</td>
+          <td>Inclusion Criteria: * Provision of signed informed consent prior to any study specific procedures * Male or female, aged ≥18 years * Established documented diagnosis of symptomatic HFrEF (NYHA functional class II-IV), which has been present for at least 2 m...</td>
+          <td>Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure. | Time frame: Up to 27.8 months. | Primary efficacy</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2017-10-26)</span>
+<span class="pill">Statistical Analysis Plan (2019-07-23)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03619213" target="_blank" rel="noopener">NCT03619213</a></td>
+          <td>This is an international, multicentre, parallel-group, event-driven, randomised, double-blind, placebo-controlled study in HFpEF patients, evaluating the effect of dapagliflozin 10 mg versus placebo, given once daily in addition to background regional standard of care therapy, including treatments to control co-morb...</td>
+          <td>Inclusion Criteria: 1. Provision of signed informed consent prior to any study specific procedures. 2. Male or female patients age ≥40 years. 3. Documented diagnosis of symptomatic heart failure (NYHA class II-IV) at enrolment, and a medical history of typi...</td>
+          <td>Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure. | Time frame: Up to 42.1 months | Dual primary efficacy Primary endpoint analysed in all patients randomised (Full analysis set). The analysis was assessed on Full Analysis Set, includi...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2020-11-12)</span>
+<span class="pill">Statistical Analysis Plan (2021-12-08)</span></div>
+          </td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exclusion Reason Counts</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Reason</th>
+              <th>Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>No Extractable Numeric Outcome</td>
+          <td>29</td>
+        </tr>
+
+        <tr>
+          <td>No Results Posted</td>
+          <td>27</td>
+        </tr>
+
+        <tr>
+          <td>Not Completed</td>
+          <td>22</td>
+        </tr>
+
+        <tr>
+          <td>Not Randomized Interventional</td>
+          <td>9</td>
+        </tr>
+
+        <tr>
+          <td>Fewer Than Two Arms</td>
+          <td>5</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Excluded Sample Records</h2>
+        <p>The first 20 excluded records are listed here with excerpts so reviewers can quickly verify why the registry pull did not enter them into the meta-analysis snapshot.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Reasons</th>
+              <th>Record Excerpt</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05058859" target="_blank" rel="noopener">NCT05058859</a></td>
+          <td>Long Term Clinical Efficacy of Sodium-glucose Cotransporter-2 (SGLT-2) Inhibitor in Cystinurics</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>Cystinuria is an inherited autosomal recessive disorder of the kidney that is the result of an inability to reabsorb dibasic amino acids, including cystine, from the urine. Supersaturation of cystine in the urine produces crystals that precipitate and form...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04400760" target="_blank" rel="noopener">NCT04400760</a></td>
+          <td>The Effect of Dapagliflozin on Platelet Function testinG Profiles in Diabetic PatiEnts.</td>
+          <td>Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>Sodium GLucose Transport 2 inhibitors (SGLT2I), including dapagliflozin, reduce the likelihood of hospitalization for heart failure and death in persons with type 2 diabetes, of which the mechanism has not been fully elucidated. The mechanistic effects of d...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05590143" target="_blank" rel="noopener">NCT05590143</a></td>
+          <td>proMoting Effective Renoprotection in Cardiac sURgery Patients by Inhibition of SGLT-2</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Multi-centre, triple-blinded (patients, physicians, investigators), parallel-group, balanced (1:1), stratified (sex, type 2 diabetes mellitus), randomized, controlled (placebo), phase IV clinical trial to investigate the potential of preoperative initiation...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06731231" target="_blank" rel="noopener">NCT06731231</a></td>
+          <td>SGLT2i in Diabetic Patients with Renal Transplantation</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Post-transplant diabetes mellitus (PTDM), previously known as New Onset Diabetes After Transplantation defined as the diagnosis of diabetes mellitus (DM) in a previously non-diagnosed diabetic person after transplantation. PTDM is a common and serious post-...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04739215" target="_blank" rel="noopener">NCT04739215</a></td>
+          <td>Effects of SGLT2 Inhibition on the Mechanisms of Cardiac Damage in the Diabetic Patient With HFpEF</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The main aim of this study is to identify the underlying mechanisms of Sodium-glucose co-transporter-2 (SGLT2) inhibitors which are associated to better outcomes in patients with Diabetes mellitus type 2 and Heart Failure with preserved Ejection Fraction.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05129722" target="_blank" rel="noopener">NCT05129722</a></td>
+          <td>Polydiuretic Therapy for HFpEF, a Randomised Controlled Trial</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Heart Failure (HF) in Australia affects 1-2% of the population. Heart failure with preserved ejection fraction (HFpEF) refers to a syndrome of clinical heart failure without impairment of systolic cardiac function. HFpEF has few therapeutic agents that are...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04197635" target="_blank" rel="noopener">NCT04197635</a></td>
+          <td>Short-term Effects of Dapagliflozin on Peak VO2 in HFrEF</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>This study will be a double-blind multicenter randomized study (1:1) to evaluate the effect of dapagliflozin 10 mg per day or placebo on short-term functional capacity evaluated through changes in peak oxygen consumption.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03554200" target="_blank" rel="noopener">NCT03554200</a></td>
+          <td>EMPA Acute Heart Failure</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>In this study the investigators are aiming to treat patients with acute heart failure with or without diabetes with Empagliflozin or placebo. Given the beneficial effects of Empagliflozin on heart failure hospitalization in the EMPA-REG OUTCOME trial, the i...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06510270" target="_blank" rel="noopener">NCT06510270</a></td>
+          <td>Dapagliflozin in Reducing Epicardial Adipose Tissue in Heart Failure with Preserved Ejection Fraction</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Heart failure with preserved ejection fraction (HFpEF) is becoming the most common cause of heart failure worldwide, in part, driven by a rising prevalence of obesity. Although generalized and visceral adiposity is important in the pathogenesis of obesity-r...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03817463" target="_blank" rel="noopener">NCT03817463</a></td>
+          <td>A Study to Observe the Effectiveness of Empagliflozin, Other SGLT-2 Inhibitors, or DPP-4 Inhibitors in Patients With Type 2 Diabetes</td>
+          <td>Not Randomized Interventional</td>
+          <td>Non-interventional, multi-country cohort study using existing data and including adults (≥18 years) with a diagnosis of Type 2 diabetes mellitus.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03521934" target="_blank" rel="noopener">NCT03521934</a></td>
+          <td>Effect of Sotagliflozin on Cardiovascular Events in Participants With Type 2 Diabetes Post Worsening Heart Failure (SOLOIST-WHF Trial)</td>
+          <td>Not Completed</td>
+          <td>Primary Objective: To compare the effect of sotagliflozin to placebo on the total occurrences of cardiovascular (CV) death, hospitalization for heart failure (HHF), and urgent visit for heart failure (HF) in hemodynamically stable participants after admissi...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03152552" target="_blank" rel="noopener">NCT03152552</a></td>
+          <td>A Dose Finding Study to Assess the Effect of LIK066 Compared to Placebo or Empagliflozin in Patients With Type 2 Diabetes Mellitus and Heart Failure</td>
+          <td>Not Completed</td>
+          <td>This was a dose-finding study to evaluate the efficacy, safety and tolerability of 3 different doses of LIK066 compared to placebo or empagliflozin in T2DM patients with heart failure</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05562063" target="_blank" rel="noopener">NCT05562063</a></td>
+          <td>Sotagliflozin in Heart Failure With Preserved Ejection Fraction (HFpEF) Patients</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The clinical benefits of the dual Sodium-Glucose cotransporter (SGLT) 1 and 2-inhibition have recently been reported in two clinical trials. The SOLOIST reported the benefits of sotagliflozin in Type-2 Diabetes Mellitus (T2DM) patients hospitalized for wors...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06507657" target="_blank" rel="noopener">NCT06507657</a></td>
+          <td>Effect of Empagliflozin on Left Atrial Function in Adults at Risk for Heart Failure</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Sodium-glucose cotransporter 2 inhibitors (SGLT2i) reduce CVD events, including incident HF. SGLT2 is a glucose transport protein in the kidneys. Inhibition of this protein results in glucosuria and lower serum blood sugar. The SGLT2i medications were initi...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04818034" target="_blank" rel="noopener">NCT04818034</a></td>
+          <td>The Effect of Sodium-glucose Cotransporter (SGLT) 2 Inhibitors on Cystine Stone Formation: A Preliminary Study</td>
+          <td>Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>Cystinuria is an inherited autosomal recessive disorder of the kidney that is the result of an inability to reabsorb cystine from the urine. Supersaturation of cystine in the urine produces crystals that precipitate and form stones in the kidney, which can...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06065280" target="_blank" rel="noopener">NCT06065280</a></td>
+          <td>Sodium-glucose Transport 2 Inhibitors (SGLT2i) in HFrEF Patients</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The aim of this study is to assess the efficacy, safety and cardiovascular outcomes of Sodium-glucose transport protein 2 inhibitors (SGLT2i) therapy in patients with heart failure reduced ejection fraction ( HFrEF) with and without diabetes mellitus and is...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05719714" target="_blank" rel="noopener">NCT05719714</a></td>
+          <td>Effect of Dapagliflozin on Metabolomics and Cardiac Mechanics in Chronic Kidney Disease</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The goal of this study is to better understand the effects of a sodium-glucose transport protein 2 inhibitor, dapagliflozin, added on to standard of care on heart and lung function and circulating metabolites (substances created when our bodies break down f...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04243850" target="_blank" rel="noopener">NCT04243850</a></td>
+          <td>REGROUP: Renohemodynamic Effects empaGliflozin in vaRiOUs Populations</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Worldwide, diabetic kidney disease (DKD) is the most common cause of chronic and end stage kidney disease. Large-sized prospective randomized clinical trials indicate that intensified glucose and blood pressure control, the latter especially by using agents...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04575675" target="_blank" rel="noopener">NCT04575675</a></td>
+          <td>Dapagliflozin on Hypotensive Heart Failure Patients After Sacubitril/Valsartan Therapy</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The DAPA-HF trial demonstrated that dapagliflozin was able to reduce the risk of worsening heart failure events and cardiovascular death comparing to placebo in patients with reduced ejection fraction further to standard of care. However, hypotensive patien...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT07331220" target="_blank" rel="noopener">NCT07331220</a></td>
+          <td>Pulmonary Artery Denervation for Heart Failure With Preserved Left Ventricular Ejection Fraction</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>To assess the impact of PADN combined with guideline-directed medical therapy (GDMT) versus a sham procedure with GDMT on clinical outcomes in heart failure (HF) patients with preserved left ventricular ejection fraction (LVEF\&gt;40%). Outcomes include cardio...</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Benchmark Reconciliation Ledger</h2>
+        <p>This ledger turns the benchmark step into a structured reviewer task. Use the NCT IDs, contrasts, and outcome definitions below to check study overlap, arm collapsing, and endpoint alignment against published syntheses.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22SGLT2%20Inhibitors%20in%20Heart%20Failure%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22SGLT2%20Inhibitors%20in%20Heart%20Failure%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT</th>
+              <th>Registry Contrast</th>
+              <th>Outcome</th>
+              <th>Enrollment</th>
+              <th>Benchmark Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03057951" target="_blank" rel="noopener">NCT03057951</a></td>
+        <td>10 mg Empagliflozin vs Placebo</td>
+        <td>Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)</td>
+        <td>5988 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03057977" target="_blank" rel="noopener">NCT03057977</a></td>
+        <td>10 mg Empagliflozin vs Placebo</td>
+        <td>Time to the First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)</td>
+        <td>3730 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03036124" target="_blank" rel="noopener">NCT03036124</a></td>
+        <td>Dapa 10 mg vs Placebo</td>
+        <td>Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.</td>
+        <td>4744 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03619213" target="_blank" rel="noopener">NCT03619213</a></td>
+        <td>Dapa 10 mg vs Placebo</td>
+        <td>Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.</td>
+        <td>6263 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Reviewer Validation And Benchmarking</h2>
+        <p>The embedded panel below now runs the shared R benchmark suites plus topic-specific checks for the current CT.gov snapshot. Reviewers should compare the registry-native ledger above against published syntheses, inspect <code>validation.json</code>, and then confirm that the topic-aware runner resolves with the same study universe.</p>
+        <div class="pillbar">
+          <a class="pill" href="validation.json">Open validation.json</a>
+          <a class="pill" href="index.html">Open interactive topic app</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22SGLT2%20Inhibitors%20in%20Heart%20Failure%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22SGLT2%20Inhibitors%20in%20Heart%20Failure%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+          <a class="pill" href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fsglt2-heart-failure%2Fvalidation.json&amp;topic=sglt2-heart-failure&amp;label=SGLT2+Inhibitors+in+Heart+Failure" target="_blank" rel="noopener">Open topic-aware WebR runner</a>
+        </div>
+        <iframe id="reviewerValidationFrame" src="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fsglt2-heart-failure%2Fvalidation.json&amp;topic=sglt2-heart-failure&amp;label=SGLT2+Inhibitors+in+Heart+Failure" title="WebR reviewer validation" loading="lazy"></iframe>
+        <script>
+(() => {
+  const iframe = document.getElementById("reviewerValidationFrame");
+  const context = {"source":"ctgov-portfolio-generator","topicId":"sglt2-heart-failure","label":"SGLT2 Inhibitors in Heart Failure","query":"(\"heart failure\") AND (dapagliflozin OR empagliflozin OR sotagliflozin OR canagliflozin OR ertugliflozin) AND (\"DAPA-HF\" OR \"DELIVER\" OR \"EMPEROR\" OR \"SOLOIST\" OR \"EMPEROR-Preserved\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":4,"excludedCount":33,"totalEnrollment":20725,"demographicsCoverage":4,"documentCoverage":4,"comparisons":[{"studyId":"NCT03057951","title":"EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Preserved Ejection Fraction (EMPEROR-Preserved)","t1":"10 mg Empagliflozin","t2":"Placebo","measure":"logRR","effect":-0.23616535774137173,"se":0.5103379715032488,"n1":2997,"n0":2991,"totalN":5988,"sampleSize":5988},{"studyId":"NCT03057977","title":"EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Reduced Ejection Fraction (EMPEROR-Reduced)","t1":"10 mg Empagliflozin","t2":"Placebo","measure":"logRR","effect":-0.2842682638083418,"se":0.33159945902738164,"n1":1863,"n0":1867,"totalN":3730,"sampleSize":3730},{"studyId":"NCT03036124","title":"Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic Heart Failure","t1":"Dapa 10 mg","t2":"Placebo","measure":"logRR","effect":-0.26360592059725635,"se":0.06115173732098436,"n1":2373,"n0":2371,"totalN":4744,"sampleSize":4744},{"studyId":"NCT03619213","title":"Dapagliflozin Evaluation to Improve the LIVEs of Patients With PReserved Ejection Fraction Heart Failure.","t1":"Dapa 10 mg","t2":"Placebo","measure":"logRR","effect":-0.17481499634356099,"se":0.054348851716151676,"n1":3131,"n0":3132,"totalN":6263,"sampleSize":6263}],"includedStudies":[{"nctId":"NCT03057951","title":"EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Preserved Ejection Fraction (EMPEROR-Preserved)","status":"COMPLETED","enrollment":5988,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)","groups":[{"title":"Placebo","n":2991,"events":8.67,"mean":null,"sd":null},{"title":"10 mg Empagliflozin","n":2997,"events":6.86,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)","timeFrame":"From randomization until completion of the planned treatment phase, up to 1403 days."}]},{"nctId":"NCT03057977","title":"EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Reduced Ejection Fraction (EMPEROR-Reduced)","status":"COMPLETED","enrollment":3730,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Time to the First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)","groups":[{"title":"Placebo","n":1867,"events":21,"mean":null,"sd":null},{"title":"10 mg Empagliflozin","n":1863,"events":15.77,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time to the First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)","timeFrame":"From randomisation until completion of the planned treatment period, up to 1040 days."}]},{"nctId":"NCT03036124","title":"Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic Heart Failure","status":"COMPLETED","enrollment":4744,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.","groups":[{"title":"Dapa 10 mg","n":2373,"events":386,"mean":null,"sd":null},{"title":"Placebo","n":2371,"events":502,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.","timeFrame":"Up to 27.8 months."}]},{"nctId":"NCT03619213","title":"Dapagliflozin Evaluation to Improve the LIVEs of Patients With PReserved Ejection Fraction Heart Failure.","status":"COMPLETED","enrollment":6263,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.","groups":[{"title":"Dapa 10 mg","n":3131,"events":512,"mean":null,"sd":null},{"title":"Placebo","n":3132,"events":610,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.","timeFrame":"Up to 42.1 months"},{"measure":"Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure for LVEF <60% Subpopulation","timeFrame":"Up to 42.1 months"}]}]};
+  if (!iframe || !context) return;
+  const sendContext = () => {
+    if (!iframe.contentWindow) return;
+    iframe.contentWindow.postMessage({ type: "esc-topic-validation-context", payload: context }, "*");
+  };
+  iframe.addEventListener("load", sendContext);
+  window.addEventListener("message", event => {
+    if (event.source === iframe.contentWindow && event.data?.type === "esc-topic-validation-request") {
+      sendContext();
+    }
+  });
+  window.setTimeout(sendContext, 250);
+})();
+</script>
+      </section>
+    </main>
+  </body>
+</html>

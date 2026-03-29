@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vericiguat in Heart Failure | Validation Plan</title>
+    <link rel="icon" href="data:," />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f6fb;
+        --ink: #16213e;
+        --muted: #5b657a;
+        --card: #ffffff;
+        --line: #d8e0f0;
+        --accent: #0f5c7a;
+        --accent-soft: #e0f1f8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 44%, #ffffff 100%);
+        color: var(--ink);
+        font: 16px/1.55 "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      }
+      main {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 20px 56px;
+      }
+      .hero {
+        display: grid;
+        gap: 16px;
+        padding: 28px;
+        background: radial-gradient(circle at top left, #dceefe 0%, #ffffff 55%);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 16px 48px rgba(15, 52, 96, 0.08);
+      }
+      .kicker {
+        margin: 0;
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+      h1, h2 { margin: 0; }
+      p { margin: 0; color: var(--muted); }
+      .grid {
+        display: grid;
+        gap: 16px;
+        margin-top: 22px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+      }
+      .card strong {
+        display: block;
+        font-size: 1.75rem;
+        color: var(--ink);
+      }
+      .section {
+        margin-top: 24px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px;
+      }
+      pre {
+        margin: 12px 0 0;
+        white-space: pre-wrap;
+        overflow-x: auto;
+        background: #0d1b2a;
+        color: #eff6ff;
+        padding: 14px;
+        border-radius: 14px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+        padding: 10px 8px;
+      }
+      th {
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .pillbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .pill {
+        background: var(--accent-soft);
+        border: 1px solid #b9d9e7;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        color: var(--ink);
+      }
+      iframe {
+        width: 100%;
+        min-height: 420px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #111827;
+      }
+      a { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <p class="kicker">CT.gov Validation Pack</p>
+        <h1>Vericiguat in Heart Failure</h1>
+        <p>Separate cardiovascular living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-03-28. Only randomized comparative records with posted results and extractable numeric outcomes are eligible.</p>
+        <div class="pillbar">
+          <span class="pill">Priority tier: Build Now</span>
+          <span class="pill">Included RCTs: 5</span>
+          <span class="pill">Scanned records: 9</span>
+          <span class="pill">Pages fetched: 1</span>
+          <span class="pill">Domain: Heart Failure</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card"><span>Base query</span><strong>(&quot;heart failure&quot;) AND vericiguat</strong></article>
+        <article class="card"><span>Keyword pack</span><strong>VICTORIA, SOCRATES</strong></article>
+        <article class="card"><span>Validation files</span><strong><a href="validation.json">validation.json</a></strong></article>
+        <article class="card"><span>App entry</span><strong><a href="index.html">index.html</a></strong></article>
+      </section>
+
+      <section class="section">
+        <h2>Protocol Framing And Review Question</h2>
+        <p>This plan treats the registry-native topic as a living protocol artifact rather than a link collection. The PICO framing and workflow below define what enters the snapshot, how records are screened, and how benchmark reconciliation should be performed before review sign-off.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Population</td><td>Chronic Heart Failure With Preserved Ejection Fraction; Heart Failure; Chronic Heart Failure With Reduced Ejection Fraction</td></tr>
+            <tr><td>Interventions</td><td>Vericiguat up to 10 mg; Vericiguat up to 15 mg; Placebo; BAY1021189 1.25 mg; BAY1021189 2.5 mg; BAY1021189 2.5 mg to 5 mg; BAY1021189 2.5 mg to 10 mg; BAY1021189 1.25 Milligram (mg)</td></tr>
+            <tr><td>Comparators</td><td>Vericiguat up to 10 mg vs Placebo | Vericiguat up to 15 mg vs Placebo; BAY1021189 1.25 mg vs Placebo | BAY1021189 2.5 mg vs Placebo; BAY1021189 1.25 Milligram (mg) vs Placebo | BAY1021189 2.5 mg vs Placebo; Vericiguat vs Placebo</td></tr>
+            <tr><td>Outcomes</td><td>Change in KCCQ Physical Limitation Score From Baseline to Week 24; Change From Baseline to Week 12 in Log-transformed N-terminal Pro-brain Natriuretic Peptide (NT-proBNP); Change From Baseline in Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) to Week 12; Time to the First Occurrence of CV Death; Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization: Participants With an Event Per 100 Patient-Years</td></tr>
+            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exact CT.gov Search Query</h2>
+        <pre>(&quot;heart failure&quot;) AND vericiguat AND (&quot;VICTORIA&quot; OR &quot;SOCRATES&quot;)</pre>
+      </section>
+
+      <section class="section">
+        <h2>Information Sources And Search History</h2>
+        <p>The project was generated directly from the ClinicalTrials.gov v2 API using the exact query below, then checked against publication-oriented benchmark searches so reviewers can compare the registry-native set against the broader literature.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://clinicaltrials.gov/search?term=(%22heart%20failure%22)%20AND%20vericiguat%20AND%20(%22VICTORIA%22%20OR%20%22SOCRATES%22)" target="_blank" rel="noopener">CT.gov query</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Vericiguat%20in%20Heart%20Failure%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">PubMed meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Vericiguat%20in%20Heart%20Failure%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">PubMed randomized-trial search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Source</th>
+              <th>Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>CT.gov candidate scan started</td>
+          <td>ClinicalTrials.gov v2 API</td>
+          <td>2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Base query locked</td>
+          <td>Project generator</td>
+          <td>(&quot;heart failure&quot;) AND vericiguat</td>
+        </tr>
+
+        <tr>
+          <td>Keyword expansion applied</td>
+          <td>Project generator</td>
+          <td>2 terms: VICTORIA, SOCRATES</td>
+        </tr>
+
+        <tr>
+          <td>Exact query executed</td>
+          <td>ClinicalTrials.gov</td>
+          <td>(&quot;heart failure&quot;) AND vericiguat AND (&quot;VICTORIA&quot; OR &quot;SOCRATES&quot;)</td>
+        </tr>
+
+        <tr>
+          <td>Registry records screened</td>
+          <td>ClinicalTrials.gov</td>
+          <td>9 records across 1 page(s)</td>
+        </tr>
+
+        <tr>
+          <td>Hard-gate exclusions applied</td>
+          <td>Generator eligibility rules</td>
+          <td>4 records excluded before synthesis</td>
+        </tr>
+
+        <tr>
+          <td>Quantitative snapshot frozen</td>
+          <td>validation.json</td>
+          <td>5 randomized trials entered the reviewer pack</td>
+        </tr>
+
+        <tr>
+          <td>Project package generated</td>
+          <td>Portfolio build</td>
+          <td>2026-03-28</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Selection And Synthesis Workflow</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Rule</th>
+              <th>Evidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Question framing</td>
+          <td>Topic slug, base query, and keyword pack frozen before generation</td>
+          <td>vericiguat-heart-failure | 2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Registry screening</td>
+          <td>ClinicalTrials.gov v2 API queried with the exact string shown below</td>
+          <td>9 candidate records screened</td>
+        </tr>
+
+        <tr>
+          <td>Eligibility gate</td>
+          <td>Randomized interventional, completed, posted results, &gt;=2 arms, numeric outcome</td>
+          <td>5 included / 4 excluded</td>
+        </tr>
+
+        <tr>
+          <td>Extraction</td>
+          <td>Outcome groups, sponsor, eligibility, documents, and demographics preserved where available</td>
+          <td>5/5 studies with demographics</td>
+        </tr>
+
+        <tr>
+          <td>Reviewer validation</td>
+          <td>Benchmark ledger and topic-aware WebR runner bundled with each topic project</td>
+          <td>validation.json + plan.html + embedded runner</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>PRISMA Flow Summary</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Count</th>
+              <th>Reviewer Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Records identified from the exact CT.gov query</td>
+          <td>9</td>
+          <td>1 page(s) fetched</td>
+        </tr>
+
+        <tr>
+          <td>Records excluded by registry hard gates</td>
+          <td>4</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+        </tr>
+
+        <tr>
+          <td>Trials entering the quantitative snapshot</td>
+          <td>5</td>
+          <td>Included in validation.json and the live topic app</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Eligibility Rules</h2>
+        <div class="pillbar">
+          <span class="pill">Interventional</span>
+          <span class="pill">Randomized</span>
+          <span class="pill">Completed</span>
+          <span class="pill">Posted CT.gov results</span>
+          <span class="pill">At least 2 arms</span>
+          <span class="pill">Numeric outcome extractable</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <span>Protocol metadata coverage</span>
+          <strong>5/5</strong>
+          <p>Trials with a retained CT.gov brief summary excerpt.</p>
+        </article>
+        <article class="card">
+          <span>Demographics coverage</span>
+          <strong>5/5</strong>
+          <p>Trials with a retained baseline characteristics snapshot.</p>
+        </article>
+        <article class="card">
+          <span>Document coverage</span>
+          <strong>3/5</strong>
+          <p>Trials with protocol or source documents listed on CT.gov.</p>
+        </article>
+        <article class="card">
+          <span>Total reported enrollment</span>
+          <strong>12878</strong>
+          <p>Summed from the CT.gov enrollment field across included studies.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Included Trial Ledger</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Sponsor</th>
+              <th>Phase</th>
+              <th>Enrollment</th>
+              <th>Status</th>
+              <th>Start</th>
+              <th>Completion</th>
+              <th>Arms</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03547583" target="_blank" rel="noopener">NCT03547583</a></td>
+          <td>Patient-reported Outcomes in Vericiguat-treated Patients With HFpEF</td>
+          <td>Bayer (INDUSTRY)</td>
+          <td>Phase 2</td>
+          <td>789 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2018-06-15</td>
+          <td>2019-11-04</td>
+          <td>Subjects will receive vericiguat (BAY1021189) for 24 weeks, starting at 2.5 mg once daily at randomization and up-titrated to 5 mg at week 2, to 10 mg at week 4, with sham titration at week 6. | Subjects will receive vericiguat (BAY1021189) for 24 weeks, starting at 2.5 mg once daily at randomization and up-titrated to 5 mg at week 2, to 10 mg at week 4, and to 15 mg at week 6. | Subject will receive placebo for 24 weeks, once daily, starting sham up-titration at weeks 2, 4, and 6.</td>
+          <td>Change in KCCQ Physical Limitation Score From Baseline to Week 24</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01951638" target="_blank" rel="noopener">NCT01951638</a></td>
+          <td>Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)</td>
+          <td>Bayer (INDUSTRY)</td>
+          <td>Phase 2</td>
+          <td>477 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2013-11-06</td>
+          <td>2015-09-16</td>
+          <td>2.5 mg orally once daily for 2 weeks, up-titration to 5 mg orally once daily for 2 weeks, up-titration to 10 mg orally once daily for 8 weeks | 2.5 mg orally once daily for 2 weeks, then 5 mg orally once daily for 10 weeks (with sham titration) | 2.5 mg orally once daily for 12 weeks (with sham titrations) | 1.25 mg orally once daily for 12 weeks (with sham titrations) | Orally once daily for 12 weeks (with sham titrations)</td>
+          <td>Change From Baseline to Week 12 in Log-transformed N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01951625" target="_blank" rel="noopener">NCT01951625</a></td>
+          <td>Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)</td>
+          <td>Bayer (INDUSTRY)</td>
+          <td>Phase 2</td>
+          <td>456 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2013-11-29</td>
+          <td>2015-06-09</td>
+          <td>2.5 mg orally once daily for 2 weeks, up-titration to 5 mg orally once daily for 2 weeks, up-titration to 10 mg orally once daily for 8 weeks | 2.5 mg orally once daily for 2 weeks, then 5 mg orally once daily for 10 weeks (with sham titration) | 2.5 mg orally once daily for 12 weeks (with sham titrations) | 1.25 mg orally once daily for 12 weeks (with sham titrations) | Orally once daily for 12 weeks (with sham titrations)</td>
+          <td>Change From Baseline in Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) to Week 12</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02861534" target="_blank" rel="noopener">NCT02861534</a></td>
+          <td>A Study of Vericiguat in Participants With Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-001)</td>
+          <td>Merck Sharp &amp; Dohme LLC (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>5050 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2016-09-20</td>
+          <td>2019-09-02</td>
+          <td>Participants receive a starting dose of 2.5 mg of vericiguat taken orally once daily with food, on a background of HF standard of care. The vericiguat dose will be uptitrated to 5 mg and to 10 mg. | Participants receive a starting matching placebo dose of 2.5 mg taken orally once daily with food, on a background of HF standard of care. The matching placebo dose will be uptitrated to 5 mg and to 10 mg.</td>
+          <td>Time to the First Occurrence of CV Death</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05093933" target="_blank" rel="noopener">NCT05093933</a></td>
+          <td>A Study of Vericiguat (MK-1242) in Participants With Chronic Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-035)</td>
+          <td>Merck Sharp &amp; Dohme LLC (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>6106 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2021-11-02</td>
+          <td>2025-02-05</td>
+          <td>Participants receive a starting dose of 2.5 mg of vericiguat taken orally once daily. The vericiguat dose will be titrated to 5 mg and to 10 mg. | Participants receive a starting matching placebo to vericiguat dose of 2.5 mg taken orally once daily. The matching placebo dose will be sham titrated to 5 mg and to 10 mg.</td>
+          <td>Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization: Participants With an Event Per 100 Patient-Years</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Study Eligibility And Demographics</h2>
+        <p>This table keeps the trial-level age, sex, participant-count, and registry eligibility fields next to the inclusion decision so readers can challenge the clinical comparability of the pooled set.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Eligibility</th>
+              <th>Participant Counts</th>
+              <th>Age Snapshot</th>
+              <th>Sex Snapshot</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03547583" target="_blank" rel="noopener">NCT03547583</a></td>
+          <td>Sex: ALL | Age: 45 Years to NR | Healthy volunteers: No</td>
+          <td>Vericiguat up to 10 mg: 263 Participants | Vericiguat up to 15 mg: 264 Participants | Placebo: 262 Participants | Total: 789 Participants</td>
+          <td>Vericiguat up to 10 mg: 72.2 +/- 9.7 years | Vericiguat up to 15 mg: 73.1 +/- 9.1 years | Placebo: 72.8 +/- 9.4 years | Total: 72.7 +/- 9.4 years</td>
+          <td>Vericiguat up to 10 mg: F 124 / M 139 | Vericiguat up to 15 mg: F 140 / M 124 | Placebo: F 121 / M 141 | Total: F 385 / M 404</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01951638" target="_blank" rel="noopener">NCT01951638</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>BAY1021189 1.25 mg: 96 Participants | Placebo: 93 Participants | BAY1021189 2.5 mg: 96 Participants | BAY1021189 2.5 mg to 5 mg: 96 Participants | BAY1021189 2.5 mg to 10 mg: 96 Participants | Total: 477 Participants</td>
+          <td>BAY1021189 1.25 mg: 73.8 +/- 10 years | Placebo: 73.7 +/- 9.1 years | BAY1021189 2.5 mg: 72 +/- 10.7 years | BAY1021189 2.5 mg to 5 mg: 73.9 +/- 7.9 years | BAY1021189 2.5 mg to 10 mg: 72.5 +/- 10.2 years | Total: 73.2 +/- 9.6 years</td>
+          <td>BAY1021189 1.25 mg: F 51 / M 45 | Placebo: F 46 / M 47 | BAY1021189 2.5 mg: F 43 / M 53 | BAY1021189 2.5 mg to 5 mg: F 43 / M 53 | BAY1021189 2.5 mg to 10 mg: F 44 / M 52 | Total: F 227 / M 250</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01951625" target="_blank" rel="noopener">NCT01951625</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Placebo: 92 Participants | BAY1021189 1.25 Milligram (mg): 91 Participants | BAY1021189 2.5 mg: 91 Participants | BAY1021189 From 2.5 to 5 mg: 91 Participants | BAY1021189 From 2.5 to 10 mg: 91 Participants | Total: 456 Participants</td>
+          <td>Placebo: 67 +/- 13.1 years | BAY1021189 1.25 Milligram (mg): 67.6 +/- 12.9 years | BAY1021189 2.5 mg: 67.6 +/- 11.5 years | BAY1021189 From 2.5 to 5 mg: 66.7 +/- 11.6 years | BAY1021189 From 2.5 to 10 mg: 68.9 +/- 12.4 years | Total: 67.6 +/- 12.3 years</td>
+          <td>Placebo: F 19 / M 73 | BAY1021189 1.25 Milligram (mg): F 21 / M 70 | BAY1021189 2.5 mg: F 19 / M 72 | BAY1021189 From 2.5 to 5 mg: F 17 / M 74 | BAY1021189 From 2.5 to 10 mg: F 14 / M 77 | Total: F 90 / M 366</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02861534" target="_blank" rel="noopener">NCT02861534</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Vericiguat: 2526 Participants | Placebo: 2524 Participants | Total: 5050 Participants</td>
+          <td>Vericiguat: 67.5 +/- 12.2 Years | Placebo: 67.2 +/- 12.2 Years | Total: 67.3 +/- 12.2 Years</td>
+          <td>Vericiguat: F 605 / M 1921 | Placebo: F 603 / M 1921 | Total: F 1208 / M 3842</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05093933" target="_blank" rel="noopener">NCT05093933</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Vericiguat: 3053 Participants | Placebo: 3052 Participants | Total: 6105 Participants</td>
+          <td>Vericiguat: 67.1 +/- 11.0 Years | Placebo: 67.0 +/- 11.0 Years | Total: 67.0 +/- 11.0 Years</td>
+          <td>Vericiguat: F 727 / M 2326 | Placebo: F 713 / M 2339 | Total: F 1440 / M 4665</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Record Excerpts</h2>
+        <p>Brief summaries, eligibility text, primary outcome descriptions, and source documents are surfaced here so reviewers can verify that the extracted numerical contrast is clinically aligned with the underlying registry record.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Brief Summary</th>
+              <th>Eligibility Excerpt</th>
+              <th>Primary Outcome Excerpt</th>
+              <th>Source Documents</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03547583" target="_blank" rel="noopener">NCT03547583</a></td>
+          <td>The primary hypothesis in this trial is that the treatment with vericiguat 10 mg or 15 mg in patients with HFpEF improves the KCCQ PLS (Kansas City Cardiomyopathy Questionnaire Physical limitation score) compared to placebo after 24 weeks of treatment.</td>
+          <td>Inclusion Criteria: * Previous diagnosis of chronic heart failure (HF) * HF decompensation within 6 months prior to randomization, defined as hospitalization for HF or intravenous (IV) diuretic treatment for HF without hospitalization. * N-terminal pro brai...</td>
+          <td>Change in KCCQ Physical Limitation Score From Baseline to Week 24 | Time frame: From baseline to Week 24 | The City Cardiomyopathy Questionnaire (KCCQ) measures the impact of patients&#39; heart failure, or its treatment, on 6 domains; Physical Limitation, Symptom (with subscores for frequency and burden), Quality of Li...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2018-02-22)</span>
+<span class="pill">Statistical Analysis Plan (2019-11-21)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01951638" target="_blank" rel="noopener">NCT01951638</a></td>
+          <td>Objective of the study is to find the optimal dose of the once daily oral soluble guanylate cyclase stimulator (sGC) BAY1021189 for Phase III that can be given in addition to standard diuretic and comorbidity treatment for heart failure with preserved ejection fraction (HFpEF)</td>
+          <td>Inclusion Criteria: * Worsening chronic heart failure (WCHF) requiring hospitalization (or intravenous diuretic treatment for HF without hospitalization) with initiation of study treatment after clinical stabilization * Left ventricular ejection fraction (L...</td>
+          <td>Change From Baseline to Week 12 in Log-transformed N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) | Time frame: Baseline, Week 12 (end of treatment [EOT]) | NTproBNP is a circulating plasma biomarker of cardiovascular function and prognosis in heart failure (HF). || Change From Baseline to Week 12 in Left Atri...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01951625" target="_blank" rel="noopener">NCT01951625</a></td>
+          <td>Objective of the study is to find the optimal dose of the once daily oral soluble guanylate cyclase stimulator (sGC) BAY1021189 for Phase III that can be given in addition to standard therapy for heart failure with reduced ejection fraction (HFrEF).</td>
+          <td>Inclusion Criteria: * Worsening chronic heart failure (WCHF) requiring hospitalization (or intravenous diuretic treatment for HF without hospitalization) with initiation of study treatment after clinical stabilization * Left ventricular ejection fraction (L...</td>
+          <td>Change From Baseline in Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) to Week 12 | Time frame: Baseline, Week 12 | Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) is a circulating plasma biomarker of cardiovascular function and prognosis in heart failure.</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02861534" target="_blank" rel="noopener">NCT02861534</a></td>
+          <td>This is a randomized, placebo-controlled, parallel-group, multi-center, double-blind, event driven study of vericiguat (MK-1242) in participants with heart failure with reduced ejection fraction (HFrEF). The primary hypothesis is vericiguat (MK-1242) is superior to placebo in increasing the time to first occurrence...</td>
+          <td>Inclusion Criteria: * History of chronic HF (New York Heart Association \[NYHA\] Class II-IV) on standard therapy before qualifying HF decompensation * Previous HF hospitalization within 6 months prior to randomization or intravenous (IV) diuretic treatment...</td>
+          <td>Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization | Time frame: Up to approximately 33 months (through primary analysis database cutoff date of 18-June-2019) | Time to First Occurrence of Composite Endpoint of CV Death or HF Hospitalization was analyzed...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2017-12-20)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05093933" target="_blank" rel="noopener">NCT05093933</a></td>
+          <td>The purpose of this study is to evaluate the efficacy and safety of vericiguat in participants with chronic heart failure with reduced ejection fraction (HFrEF), specifically those with symptomatic chronic HFrEF who have not had a recent hospitalization for heart failure or need for outpatient intravenous (IV) diure...</td>
+          <td>Inclusion Criteria: * History of chronic HF \[New York Heart Association (NYHA) Class II to IV\] on guideline-directed medical therapy for heart failure (GDMT) with no HF hospitalization within 6 months or outpatient IV diuretic use within 3 months before r...</td>
+          <td>Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization: Participants With an Event Per 100 Patient-Years | Time frame: Up to approximately 36 months (from randomization to the primary completion data cutoff) | The time to first occurrence of the composite en...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2024-01-25)</span></div>
+          </td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exclusion Reason Counts</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Reason</th>
+              <th>Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>No Extractable Numeric Outcome</td>
+          <td>4</td>
+        </tr>
+
+        <tr>
+          <td>No Results Posted</td>
+          <td>4</td>
+        </tr>
+
+        <tr>
+          <td>Not Randomized Interventional</td>
+          <td>3</td>
+        </tr>
+
+        <tr>
+          <td>Fewer Than Two Arms</td>
+          <td>2</td>
+        </tr>
+
+        <tr>
+          <td>Not Completed</td>
+          <td>1</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Excluded Sample Records</h2>
+        <p>The first 20 excluded records are listed here with excerpts so reviewers can quickly verify why the registry pull did not enter them into the meta-analysis snapshot.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Reasons</th>
+              <th>Record Excerpt</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05974189" target="_blank" rel="noopener">NCT05974189</a></td>
+          <td>The VERIFY Study: An Observational Study Called VERIFY to Learn More About the Use of Vericiguat in People With Chronic Heart Failure With Reduced Ejection Fraction</td>
+          <td>No Results Posted, Not Randomized Interventional, No Extractable Numeric Outcome</td>
+          <td>This is an observational study in which the health data of people with chronic heart failure with reduced ejection fraction (HFrEF) are collected using administrative claims data. In observational studies, only observations are made and participants do not...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT07472595" target="_blank" rel="noopener">NCT07472595</a></td>
+          <td>Effect of Vericiguat on cardiAc Remodeling in Patients With Heart faiLure and Reduced Ejection fractioN (HFrEF): A Prospective sTudy usIng NOvel Echocardiographic Imaging Techniques (VALENTINO)</td>
+          <td>No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>The biological process that underlies the pathogenesis of heart failure (HF) is termed cardiac remodeling. Pathological cardiac remodeling includes structural and functional change of the heart. Structural cardiac remodeling in HF include dilatation and/or...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06486844" target="_blank" rel="noopener">NCT06486844</a></td>
+          <td>An Observational Study Called ROVER to Learn More About How Well Vericiguat Works in People Who Were Newly Treated With Vericiguat in Routine Medical Care in Germany</td>
+          <td>No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>This is an observational study in which data already collected from people treated with vericiguat are studied. In observational studies, only observations are made without participants receiving any advice or any changes to healthcare. Chronic heart failur...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06812546" target="_blank" rel="noopener">NCT06812546</a></td>
+          <td>Efficacy and Safety of Early Initiation of Vericiguat in Heart Failure After Acute Myocardial Infarction</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Heart failure (HF) is a severe cardiovascular disease with extremely high morbidity and mortality rates worldwide, and ischemic cardiomyopathy is an important cause of heart failure. Vericiguat is a soluble guanylate cyclase stimulator which has been verifi...</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Benchmark Reconciliation Ledger</h2>
+        <p>This ledger turns the benchmark step into a structured reviewer task. Use the NCT IDs, contrasts, and outcome definitions below to check study overlap, arm collapsing, and endpoint alignment against published syntheses.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Vericiguat%20in%20Heart%20Failure%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Vericiguat%20in%20Heart%20Failure%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT</th>
+              <th>Registry Contrast</th>
+              <th>Outcome</th>
+              <th>Enrollment</th>
+              <th>Benchmark Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03547583" target="_blank" rel="noopener">NCT03547583</a></td>
+        <td>Vericiguat up to 10 mg vs Placebo | Vericiguat up to 15 mg vs Placebo</td>
+        <td>Change in KCCQ Physical Limitation Score From Baseline to Week 24</td>
+        <td>789 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01951638" target="_blank" rel="noopener">NCT01951638</a></td>
+        <td>BAY1021189 1.25 mg vs Placebo | BAY1021189 2.5 mg vs Placebo</td>
+        <td>Change From Baseline to Week 12 in Log-transformed N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)</td>
+        <td>477 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01951625" target="_blank" rel="noopener">NCT01951625</a></td>
+        <td>BAY1021189 1.25 Milligram (mg) vs Placebo | BAY1021189 2.5 mg vs Placebo</td>
+        <td>Change From Baseline in Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) to Week 12</td>
+        <td>456 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02861534" target="_blank" rel="noopener">NCT02861534</a></td>
+        <td>Vericiguat vs Placebo</td>
+        <td>Time to the First Occurrence of CV Death</td>
+        <td>5050 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT05093933" target="_blank" rel="noopener">NCT05093933</a></td>
+        <td>Vericiguat vs Placebo</td>
+        <td>Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization: Participants With an Event Per 100 Patient-Years</td>
+        <td>6106 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Reviewer Validation And Benchmarking</h2>
+        <p>The embedded panel below now runs the shared R benchmark suites plus topic-specific checks for the current CT.gov snapshot. Reviewers should compare the registry-native ledger above against published syntheses, inspect <code>validation.json</code>, and then confirm that the topic-aware runner resolves with the same study universe.</p>
+        <div class="pillbar">
+          <a class="pill" href="validation.json">Open validation.json</a>
+          <a class="pill" href="index.html">Open interactive topic app</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Vericiguat%20in%20Heart%20Failure%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Vericiguat%20in%20Heart%20Failure%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+          <a class="pill" href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fvericiguat-heart-failure%2Fvalidation.json&amp;topic=vericiguat-heart-failure&amp;label=Vericiguat+in+Heart+Failure" target="_blank" rel="noopener">Open topic-aware WebR runner</a>
+        </div>
+        <iframe id="reviewerValidationFrame" src="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fvericiguat-heart-failure%2Fvalidation.json&amp;topic=vericiguat-heart-failure&amp;label=Vericiguat+in+Heart+Failure" title="WebR reviewer validation" loading="lazy"></iframe>
+        <script>
+(() => {
+  const iframe = document.getElementById("reviewerValidationFrame");
+  const context = {"source":"ctgov-portfolio-generator","topicId":"vericiguat-heart-failure","label":"Vericiguat in Heart Failure","query":"(\"heart failure\") AND vericiguat AND (\"VICTORIA\" OR \"SOCRATES\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":5,"excludedCount":4,"totalEnrollment":12878,"demographicsCoverage":5,"documentCoverage":3,"comparisons":[{"studyId":"NCT03547583","title":"Patient-reported Outcomes in Vericiguat-treated Patients With HFpEF","t1":"Vericiguat up to 10 mg","t2":"Placebo","measure":"MD","effect":-0.5199999999999996,"se":2.2114902215474523,"n1":254,"n0":252,"totalN":506,"sampleSize":506},{"studyId":"NCT03547583","title":"Patient-reported Outcomes in Vericiguat-treated Patients With HFpEF","t1":"Vericiguat up to 15 mg","t2":"Placebo","measure":"MD","effect":-1.46,"se":2.1729401740498977,"n1":255,"n0":252,"totalN":507,"sampleSize":507},{"studyId":"NCT01951638","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)","t1":"BAY1021189 1.25 mg","t2":"Placebo","measure":"MD","effect":0.051000000000000004,"se":0.12788967681577512,"n1":77,"n0":73,"totalN":150,"sampleSize":150},{"studyId":"NCT01951638","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)","t1":"BAY1021189 2.5 mg","t2":"Placebo","measure":"MD","effect":0.16899999999999998,"se":0.1298848507884905,"n1":78,"n0":73,"totalN":151,"sampleSize":151},{"studyId":"NCT01951638","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)","t1":"BAY1021189 2.5 mg to 5 mg","t2":"Placebo","measure":"MD","effect":0.155,"se":0.14163085287443863,"n1":57,"n0":73,"totalN":130,"sampleSize":130},{"studyId":"NCT01951638","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)","t1":"BAY1021189 2.5 mg to 10 mg","t2":"Placebo","measure":"MD","effect":0.07500000000000001,"se":0.12874514221451472,"n1":60,"n0":73,"totalN":133,"sampleSize":133},{"studyId":"NCT01951625","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)","t1":"BAY1021189 1.25 Milligram (mg)","t2":"Placebo","measure":"MD","effect":0.015000000000000013,"se":0.13504469093868385,"n1":69,"n0":69,"totalN":138,"sampleSize":138},{"studyId":"NCT01951625","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)","t1":"BAY1021189 2.5 mg","t2":"Placebo","measure":"MD","effect":-0.03999999999999998,"se":0.13442435840213074,"n1":73,"n0":69,"totalN":142,"sampleSize":142},{"studyId":"NCT01951625","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)","t1":"BAY1021189 From 2.5 to 5 mg","t2":"Placebo","measure":"MD","effect":-0.07299999999999995,"se":0.14240496454894105,"n1":67,"n0":69,"totalN":136,"sampleSize":136},{"studyId":"NCT01951625","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)","t1":"BAY1021189 From 2.5 to 10 mg","t2":"Placebo","measure":"MD","effect":-0.249,"se":0.14844470090816617,"n1":73,"n0":69,"totalN":142,"sampleSize":142},{"studyId":"NCT01951625","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)","t1":"Pooled 2.5 mg up to 10 mg","t2":"Placebo","measure":"MD","effect":-0.122,"se":0.11494573429678523,"n1":213,"n0":69,"totalN":282,"sampleSize":282},{"studyId":"NCT02861534","title":"A Study of Vericiguat in Participants With Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-001)","t1":"Vericiguat","t2":"Placebo","measure":"logRR","effect":-0.07545360801835227,"se":0.38557716031421047,"n1":2526,"n0":2524,"totalN":5050,"sampleSize":5050},{"studyId":"NCT05093933","title":"A Study of Vericiguat (MK-1242) in Participants With Chronic Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-035)","t1":"Vericiguat","t2":"Placebo","measure":"logRR","effect":-0.0769608263514462,"se":0.4120771622684434,"n1":3053,"n0":3052,"totalN":6105,"sampleSize":6105}],"includedStudies":[{"nctId":"NCT03547583","title":"Patient-reported Outcomes in Vericiguat-treated Patients With HFpEF","status":"COMPLETED","enrollment":789,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in KCCQ Physical Limitation Score From Baseline to Week 24","groups":[{"title":"Vericiguat up to 10 mg","n":254,"events":null,"mean":6.41,"sd":25.372304901210693},{"title":"Vericiguat up to 15 mg","n":255,"events":null,"mean":5.47,"sd":24.559890472068478},{"title":"Placebo","n":252,"events":null,"mean":6.93,"sd":24.367369574904878}]},"primaryOutcomes":[{"measure":"Change in KCCQ Physical Limitation Score From Baseline to Week 24","timeFrame":"From baseline to Week 24"}]},{"nctId":"NCT01951638","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)","status":"COMPLETED","enrollment":477,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change From Baseline to Week 12 in Log-transformed N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)","groups":[{"title":"Placebo","n":73,"events":null,"mean":-0.098,"sd":0.778},{"title":"BAY1021189 1.25 mg","n":77,"events":null,"mean":-0.047,"sd":0.788},{"title":"BAY1021189 2.5 mg","n":78,"events":null,"mean":0.071,"sd":0.818},{"title":"BAY1021189 2.5 mg to 5 mg","n":57,"events":null,"mean":0.057,"sd":0.819},{"title":"BAY1021189 2.5 mg to 10 mg","n":60,"events":null,"mean":-0.023,"sd":0.705}]},"primaryOutcomes":[{"measure":"Change From Baseline to Week 12 in Log-transformed N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)","timeFrame":"Baseline, Week 12 (end of treatment [EOT])"},{"measure":"Change From Baseline to Week 12 in Left Atrial Volume (LAV)","timeFrame":"Baseline, Week 12 (EOT)"}]},{"nctId":"NCT01951625","title":"Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)","status":"COMPLETED","enrollment":456,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change From Baseline in Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) to Week 12","groups":[{"title":"Placebo","n":69,"events":null,"mean":-0.28,"sd":0.8197},{"title":"BAY1021189 1.25 Milligram (mg)","n":69,"events":null,"mean":-0.265,"sd":0.7658},{"title":"BAY1021189 2.5 mg","n":73,"events":null,"mean":-0.32,"sd":0.7799},{"title":"BAY1021189 From 2.5 to 5 mg","n":67,"events":null,"mean":-0.353,"sd":0.8404},{"title":"BAY1021189 From 2.5 to 10 mg","n":73,"events":null,"mean":-0.529,"sd":0.9475},{"title":"Pooled 2.5 mg up to 10 mg","n":213,"events":null,"mean":-0.402,"sd":0.8603}]},"primaryOutcomes":[{"measure":"Change From Baseline in Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) to Week 12","timeFrame":"Baseline, Week 12"}]},{"nctId":"NCT02861534","title":"A Study of Vericiguat in Participants With Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-001)","status":"COMPLETED","enrollment":5050,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Time to the First Occurrence of CV Death","groups":[{"title":"Vericiguat","n":2526,"events":12.9,"mean":null,"sd":null},{"title":"Placebo","n":2524,"events":13.9,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization","timeFrame":"Up to approximately 33 months (through primary analysis database cutoff date of 18-June-2019)"}]},{"nctId":"NCT05093933","title":"A Study of Vericiguat (MK-1242) in Participants With Chronic Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-035)","status":"COMPLETED","enrollment":6106,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization: Participants With an Event Per 100 Patient-Years","groups":[{"title":"Vericiguat","n":3053,"events":11.3,"mean":null,"sd":null},{"title":"Placebo","n":3052,"events":12.2,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization: Participants With an Event Per 100 Patient-Years","timeFrame":"Up to approximately 36 months (from randomization to the primary completion data cutoff)"}]}]};
+  if (!iframe || !context) return;
+  const sendContext = () => {
+    if (!iframe.contentWindow) return;
+    iframe.contentWindow.postMessage({ type: "esc-topic-validation-context", payload: context }, "*");
+  };
+  iframe.addEventListener("load", sendContext);
+  window.addEventListener("message", event => {
+    if (event.source === iframe.contentWindow && event.data?.type === "esc-topic-validation-request") {
+      sendContext();
+    }
+  });
+  window.setTimeout(sendContext, 250);
+})();
+</script>
+      </section>
+    </main>
+  </body>
+</html>

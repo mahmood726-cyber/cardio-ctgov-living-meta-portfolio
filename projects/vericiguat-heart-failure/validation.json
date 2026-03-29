@@ -1,0 +1,2550 @@
+{
+  "generatedAt": "2026-03-28T18:45:05.888Z",
+  "sourceStartedAt": "2026-03-28T18:44:01.927Z",
+  "minIncludedTrials": 2,
+  "pageSize": 100,
+  "maxPages": 8,
+  "topic": {
+    "slug": "vericiguat-heart-failure",
+    "label": "Vericiguat in Heart Failure",
+    "domain": "Heart Failure",
+    "baseQuery": "(\"heart failure\") AND vericiguat",
+    "keywords": [
+      "VICTORIA",
+      "SOCRATES"
+    ],
+    "query": "(\"heart failure\") AND vericiguat AND (\"VICTORIA\" OR \"SOCRATES\")",
+    "scannedRecords": 9,
+    "pagesFetched": 1,
+    "truncated": false,
+    "includedCount": 5,
+    "excludedCount": 4,
+    "includedStudies": [
+      {
+        "nctId": "NCT03547583",
+        "title": "Patient-reported Outcomes in Vericiguat-treated Patients With HFpEF",
+        "status": "COMPLETED",
+        "startDate": "2018-06-15",
+        "completionDate": "2019-11-04",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "A Randomized Parallel-group, Placebo-controlled, Double-blind, Multi-center Trial to Evaluate the Efficacy and Safety of the Oral sGC stImulator Vericiguat to Improve Physical Functioning in Activities of Daily Living in Patients With Heart Failure and Preserved Ejection Fraction (VITALITY-HFpEF)",
+        "acronym": "VITALITY-HFpEF",
+        "briefSummary": "The primary hypothesis in this trial is that the treatment with vericiguat 10 mg or 15 mg in patients with HFpEF improves the KCCQ PLS (Kansas City Cardiomyopathy Questionnaire Physical limitation score) compared to placebo after 24 weeks of treatment.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Bayer",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE2"
+        ],
+        "enrollment": {
+          "count": 789,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Chronic Heart Failure With Preserved Ejection Fraction"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "45 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Previous diagnosis of chronic heart failure (HF) * HF decompensation within 6 months prior to randomization, defined as hospitalization for HF or intravenous (IV) diuretic treatment for HF without hospitalization. * N-terminal pro brain natriuretic peptide (NT-proBNP) ≥300 or brain natriuretic peptide (BNP) ≥100 pg/mL in sinus rhythm, or NT-proBNP ≥600 or BNP ≥200 pg/mL in atrial fibrillation within 30 days prior to randomization * Diagnostic criteria of HFpEF by echocardiography assessed within 12 months prior to randomization (most recent measurement must be used to determine eligibility with no interim event signaling potential deterioration in ejection fraction) * Left ventricular ejection fraction (LVEF) ≥45% and * Structural changes indicated by at least one of the following parameters: * Left ventricle (LV) hypertrophy (any of the following: intraventricular septal or posterior wall thickness ≥1.1 cm, and/or LV mass index ≥115 g/m\\*2 in male and ≥95 g/m\\*2 in female), or * Left atrium (LA) enlargement (any of the following: left atrial volume (LAV) index ≥29 ml/m\\*2, or LAV \\>58 mL in male and \\>52 mL in female patients, or LA area \\>20 cm\\*2, or LA diameter \\>40 mm in male and \\>38 mm in female patients) * NYHA class II or III at randomization Exclusion Criteria: * Clinical instability at randomization, defined by * Any IV treatment within 24h prior to randomization, and/or * SBP ≥160 mmHg * SBP \\<110 mmHg and/or DBP \\<40 mmHg and/or symptomat..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Change in KCCQ Physical Limitation Score From Baseline to Week 24",
+            "description": "The City Cardiomyopathy Questionnaire (KCCQ) measures the impact of patients' heart failure, or its treatment, on 6 domains; Physical Limitation, Symptom (with subscores for frequency and burden), Quality of Life, Social Limitations, Symptom Stability and Self-Efficacy. Scores are calculated by summing domain responses and then transforming scores to a 0-100 unit scale with higher scores indicating better health status.",
+            "timeFrame": "From baseline to Week 24"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Change in the Six-minute Walk Test (6MWT) From Baseline to Week 24",
+            "description": "6MWT was conducted to test the physical limitations of the patient by assessing the patient's exercise capacity. The distance walked by the patient in 6 minutes was measured.",
+            "timeFrame": "From baseline to Week 24"
+          }
+        ],
+        "documents": [
+          {
+            "label": "Study Protocol",
+            "filename": "Prot_000.pdf",
+            "date": "2018-02-22",
+            "hasSap": false,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          },
+          {
+            "label": "Statistical Analysis Plan",
+            "filename": "SAP_001.pdf",
+            "date": "2019-11-21",
+            "hasSap": true,
+            "hasIcf": false,
+            "hasProtocol": false,
+            "url": ""
+          }
+        ],
+        "demographics": {
+          "populationDescription": "All participants randomized were valid for the FAS.",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Vericiguat up to 10 mg",
+              "description": "Participants received vericiguat (BAY1021189) for 24 weeks, starting at 2.5 mg once daily at randomization and up-titrated to 5 mg at week 2, to 10 mg at week 4, with sham titration at week 6."
+            },
+            {
+              "id": "BG001",
+              "title": "Vericiguat up to 15 mg",
+              "description": "Participants received vericiguat (BAY1021189) for 24 weeks, starting at 2.5 mg once daily at randomization and up-titrated to 5 mg at week 2, to 10 mg at week 4, and to 15 mg at week 6 week."
+            },
+            {
+              "id": "BG002",
+              "title": "Placebo",
+              "description": "Participants received placebo once daily and sham up-titration at weeks 2, 4, and 6."
+            },
+            {
+              "id": "BG003",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Vericiguat up to 10 mg",
+              "value": 263,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Vericiguat up to 15 mg",
+              "value": 264,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Placebo",
+              "value": 262,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG003",
+              "groupTitle": "Total",
+              "value": 789,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Vericiguat up to 10 mg",
+              "value": "72.2",
+              "spread": "9.7",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Vericiguat up to 15 mg",
+              "value": "73.1",
+              "spread": "9.1",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Placebo",
+              "value": "72.8",
+              "spread": "9.4",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG003",
+              "groupTitle": "Total",
+              "value": "72.7",
+              "spread": "9.4",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Vericiguat up to 10 mg",
+              "female": 124,
+              "male": 139
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Vericiguat up to 15 mg",
+              "female": 140,
+              "male": 124
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Placebo",
+              "female": 121,
+              "male": 141
+            },
+            {
+              "groupId": "BG003",
+              "groupTitle": "Total",
+              "female": 385,
+              "male": 404
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat up to 10 mg",
+                      "value": "72.2",
+                      "spread": "9.7"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vericiguat up to 15 mg",
+                      "value": "73.1",
+                      "spread": "9.1"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Placebo",
+                      "value": "72.8",
+                      "spread": "9.4"
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "72.7",
+                      "spread": "9.4"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat up to 10 mg",
+                      "value": "124",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vericiguat up to 15 mg",
+                      "value": "140",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Placebo",
+                      "value": "121",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "385",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat up to 10 mg",
+                      "value": "139",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vericiguat up to 15 mg",
+                      "value": "124",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Placebo",
+                      "value": "141",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "404",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Ethnicity (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat up to 10 mg",
+                      "value": "28",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vericiguat up to 15 mg",
+                      "value": "21",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Placebo",
+                      "value": "23",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "72",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Not Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat up to 10 mg",
+                      "value": "235",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vericiguat up to 15 mg",
+                      "value": "242",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Placebo",
+                      "value": "238",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "715",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Unknown or Not Reported",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat up to 10 mg",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vericiguat up to 15 mg",
+                      "value": "1",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Placebo",
+                      "value": "1",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "2",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Race (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "American Indian or Alaska Native",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat up to 10 mg",
+                      "value": "3",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vericiguat up to 15 mg",
+                      "value": "4",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Placebo",
+                      "value": "4",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "11",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Asian",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat up to 10 mg",
+                      "value": "24",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vericiguat up to 15 mg",
+                      "value": "26",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Placebo",
+                      "value": "25",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "75",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Native Hawaiian or Other Pacific Islander",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat up to 10 mg",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vericiguat up to 15 mg",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Placebo",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Black or African American",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat up to 10 mg",
+                      "value": "5",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vericiguat up to 15 mg",
+                      "value": "7",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Placebo",
+                      "value": "9",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "Total",
+                      "value": "21",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Subjects will receive vericiguat (BAY1021189) for 24 weeks, starting at 2.5 mg once daily at randomization and up-titrated to 5 mg at week 2, to 10 mg at week 4, with sham titration at week 6."
+          },
+          {
+            "id": "2",
+            "title": "Subjects will receive vericiguat (BAY1021189) for 24 weeks, starting at 2.5 mg once daily at randomization and up-titrated to 5 mg at week 2, to 10 mg at week 4, and to 15 mg at week 6."
+          },
+          {
+            "id": "3",
+            "title": "Subject will receive placebo for 24 weeks, once daily, starting sham up-titration at weeks 2, 4, and 6."
+          }
+        ],
+        "outcome": {
+          "type": "continuous",
+          "title": "Change in KCCQ Physical Limitation Score From Baseline to Week 24",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Vericiguat up to 10 mg",
+              "n": 254,
+              "mean": 6.41,
+              "sd": 25.372304901210693
+            },
+            {
+              "id": "OG001",
+              "title": "Vericiguat up to 15 mg",
+              "n": 255,
+              "mean": 5.47,
+              "sd": 24.559890472068478
+            },
+            {
+              "id": "OG002",
+              "title": "Placebo",
+              "n": 252,
+              "mean": 6.93,
+              "sd": 24.367369574904878
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      },
+      {
+        "nctId": "NCT01951638",
+        "title": "Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure and Preserved Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-PRESERVED)",
+        "status": "COMPLETED",
+        "startDate": "2013-11-06",
+        "completionDate": "2015-09-16",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "A Randomized Parallel-group, Placebo-controlled, Double-blind, Multi-center Dose Finding Phase II Trial Exploring the Pharmacodynamic Effects, Safety and Tolerability, and Pharmacokinetics of Four Dose Regimens of the Oral sGC Stimulator BAY1021189 Over 12 Weeks in Patients With Worsening Heart Failure and Preserved Ejection Fraction (HFpEF)",
+        "acronym": "",
+        "briefSummary": "Objective of the study is to find the optimal dose of the once daily oral soluble guanylate cyclase stimulator (sGC) BAY1021189 for Phase III that can be given in addition to standard diuretic and comorbidity treatment for heart failure with preserved ejection fraction (HFpEF)",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Bayer",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE2"
+        ],
+        "enrollment": {
+          "count": 477,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Heart Failure"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Worsening chronic heart failure (WCHF) requiring hospitalization (or intravenous diuretic treatment for HF without hospitalization) with initiation of study treatment after clinical stabilization * Left ventricular ejection fraction (LVEF) \\>/= 45% by echocardiography at randomization Exclusion Criteria: * Intravenous inotropes at any time after hospitalization"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Change From Baseline to Week 12 in Log-transformed N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)",
+            "description": "NTproBNP is a circulating plasma biomarker of cardiovascular function and prognosis in heart failure (HF).",
+            "timeFrame": "Baseline, Week 12 (end of treatment [EOT])"
+          },
+          {
+            "measure": "Change From Baseline to Week 12 in Left Atrial Volume (LAV)",
+            "description": "Left atrial volume was measured by echocardiography.",
+            "timeFrame": "Baseline, Week 12 (EOT)"
+          }
+        ],
+        "secondaryOutcomes": [],
+        "documents": [],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "BAY1021189 1.25 mg",
+              "description": "Subjects received vericiguat (Verquvo, BAY1021189) 1.25 milligram (mg) orally once daily for 12 weeks. Sham titrations included on Days 14 and 28."
+            },
+            {
+              "id": "BG001",
+              "title": "Placebo",
+              "description": "Subjects received placebo matched to vericiguat (BAY1021189) orally once daily for 12 weeks. Sham titrations included on Days 14 and 28."
+            },
+            {
+              "id": "BG002",
+              "title": "BAY1021189 2.5 mg",
+              "description": "Subjects received vericiguat (Verquvo, BAY1021189) 2.5 mg orally once daily for 12 weeks. Sham titrations included on Days 14 and 28."
+            },
+            {
+              "id": "BG003",
+              "title": "BAY1021189 2.5 mg to 5 mg",
+              "description": "Subjects received vericiguat (Verquvo, BAY1021189) for 12 weeks, starting on 2.5 mg once daily with potential up-titration to 5 mg after 14 or 28 days. Sham titration included on Day 28."
+            },
+            {
+              "id": "BG004",
+              "title": "BAY1021189 2.5 mg to 10 mg",
+              "description": "Subjects received vericiguat (Verquvo, BAY1021189) for 12 weeks, starting on 2.5 mg once daily with potential up-titration to 5 mg once daily after 14 days, and up-titration to 10 mg once daily after 28 days."
+            },
+            {
+              "id": "BG005",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "BAY1021189 1.25 mg",
+              "value": 96,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": 93,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "BAY1021189 2.5 mg",
+              "value": 96,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG003",
+              "groupTitle": "BAY1021189 2.5 mg to 5 mg",
+              "value": 96,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG004",
+              "groupTitle": "BAY1021189 2.5 mg to 10 mg",
+              "value": 96,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG005",
+              "groupTitle": "Total",
+              "value": 477,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "BAY1021189 1.25 mg",
+              "value": "73.8",
+              "spread": "10",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": "73.7",
+              "spread": "9.1",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "BAY1021189 2.5 mg",
+              "value": "72",
+              "spread": "10.7",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG003",
+              "groupTitle": "BAY1021189 2.5 mg to 5 mg",
+              "value": "73.9",
+              "spread": "7.9",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG004",
+              "groupTitle": "BAY1021189 2.5 mg to 10 mg",
+              "value": "72.5",
+              "spread": "10.2",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG005",
+              "groupTitle": "Total",
+              "value": "73.2",
+              "spread": "9.6",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "BAY1021189 1.25 mg",
+              "female": 51,
+              "male": 45
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "female": 46,
+              "male": 47
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "BAY1021189 2.5 mg",
+              "female": 43,
+              "male": 53
+            },
+            {
+              "groupId": "BG003",
+              "groupTitle": "BAY1021189 2.5 mg to 5 mg",
+              "female": 43,
+              "male": 53
+            },
+            {
+              "groupId": "BG004",
+              "groupTitle": "BAY1021189 2.5 mg to 10 mg",
+              "female": 44,
+              "male": 52
+            },
+            {
+              "groupId": "BG005",
+              "groupTitle": "Total",
+              "female": 227,
+              "male": 250
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "BAY1021189 1.25 mg",
+                      "value": "73.8",
+                      "spread": "10"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "73.7",
+                      "spread": "9.1"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "BAY1021189 2.5 mg",
+                      "value": "72",
+                      "spread": "10.7"
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "BAY1021189 2.5 mg to 5 mg",
+                      "value": "73.9",
+                      "spread": "7.9"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "BAY1021189 1.25 mg",
+                      "value": "51",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "46",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "BAY1021189 2.5 mg",
+                      "value": "43",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "BAY1021189 2.5 mg to 5 mg",
+                      "value": "43",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "BAY1021189 1.25 mg",
+                      "value": "45",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "47",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "BAY1021189 2.5 mg",
+                      "value": "53",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "BAY1021189 2.5 mg to 5 mg",
+                      "value": "53",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "2.5 mg orally once daily for 2 weeks, up-titration to 5 mg orally once daily for 2 weeks, up-titration to 10 mg orally once daily for 8 weeks"
+          },
+          {
+            "id": "2",
+            "title": "2.5 mg orally once daily for 2 weeks, then 5 mg orally once daily for 10 weeks (with sham titration)"
+          },
+          {
+            "id": "3",
+            "title": "2.5 mg orally once daily for 12 weeks (with sham titrations)"
+          },
+          {
+            "id": "4",
+            "title": "1.25 mg orally once daily for 12 weeks (with sham titrations)"
+          },
+          {
+            "id": "5",
+            "title": "Orally once daily for 12 weeks (with sham titrations)"
+          }
+        ],
+        "outcome": {
+          "type": "continuous",
+          "title": "Change From Baseline to Week 12 in Log-transformed N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Placebo",
+              "n": 73,
+              "mean": -0.098,
+              "sd": 0.778
+            },
+            {
+              "id": "OG001",
+              "title": "BAY1021189 1.25 mg",
+              "n": 77,
+              "mean": -0.047,
+              "sd": 0.788
+            },
+            {
+              "id": "OG002",
+              "title": "BAY1021189 2.5 mg",
+              "n": 78,
+              "mean": 0.071,
+              "sd": 0.818
+            },
+            {
+              "id": "OG003",
+              "title": "BAY1021189 2.5 mg to 5 mg",
+              "n": 57,
+              "mean": 0.057,
+              "sd": 0.819
+            },
+            {
+              "id": "OG004",
+              "title": "BAY1021189 2.5 mg to 10 mg",
+              "n": 60,
+              "mean": -0.023,
+              "sd": 0.705
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      },
+      {
+        "nctId": "NCT01951625",
+        "title": "Phase IIb Safety and Efficacy Study of Four Dose Regimens of BAY1021189 in Patients With Heart Failure With Reduced Ejection Fraction Suffering From Worsening Chronic Heart Failure (SOCRATES-REDUCED)",
+        "status": "COMPLETED",
+        "startDate": "2013-11-29",
+        "completionDate": "2015-06-09",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "A Randomized Parallel-group, Placebo-controlled, Double-blind, Multi-center Dose Finding Phase II Trial Exploring the Pharmacodynamic Effects, Safety and Tolerability, and Pharmacokinetics of Four Dose Regimens of the Oral sGC Stimulator BAY1021189 Over 12 Weeks in Patients With Worsening Heart Failure With Reduced Ejection Fraction (HFrEF)",
+        "acronym": "",
+        "briefSummary": "Objective of the study is to find the optimal dose of the once daily oral soluble guanylate cyclase stimulator (sGC) BAY1021189 for Phase III that can be given in addition to standard therapy for heart failure with reduced ejection fraction (HFrEF).",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Bayer",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE2"
+        ],
+        "enrollment": {
+          "count": 456,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Heart Failure"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Worsening chronic heart failure (WCHF) requiring hospitalization (or intravenous diuretic treatment for HF without hospitalization) with initiation of study treatment after clinical stabilization * Left ventricular ejection fraction (LVEF) \\<45% by echocardiography at randomization Exclusion Criteria: * Intravenous inotropes at any time after hospitalization"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Change From Baseline in Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) to Week 12",
+            "description": "Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) is a circulating plasma biomarker of cardiovascular function and prognosis in heart failure.",
+            "timeFrame": "Baseline, Week 12"
+          }
+        ],
+        "secondaryOutcomes": [],
+        "documents": [],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Placebo",
+              "description": "Subjects received placebo matched to vericiguat (Verquvo, BAY1021189) orally once daily for 12 weeks. Sham titrations included on Days 14 and 28."
+            },
+            {
+              "id": "BG001",
+              "title": "BAY1021189 1.25 Milligram (mg)",
+              "description": "Subjects received vericiguat (Verquvo, BAY1021189) 1.25 mg orally once daily for 12 weeks. Sham titrations included on Days 14 and 28."
+            },
+            {
+              "id": "BG002",
+              "title": "BAY1021189 2.5 mg",
+              "description": "Subjects received vericiguat (Verquvo, BAY1021189) 2.5 mg orally once daily for 12 weeks. Sham titrations included on Days 14 and 28."
+            },
+            {
+              "id": "BG003",
+              "title": "BAY1021189 From 2.5 to 5 mg",
+              "description": "Subjects received vericiguat (Verquvo, BAY1021189) for 12 weeks, starting on 2.5 mg once daily with potential up-titration to 5 mg once daily after 14 or 28 days. Sham titration included on Day 28."
+            },
+            {
+              "id": "BG004",
+              "title": "BAY1021189 From 2.5 to 10 mg",
+              "description": "Subjects received vericiguat (Verquvo, BAY1021189) for 12 weeks, starting on 2.5 mg once daily with potential up-titration to 5 mg once daily after 14 days, and up-titration to 10 mg once daily after 28 days."
+            },
+            {
+              "id": "BG005",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Placebo",
+              "value": 92,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "BAY1021189 1.25 Milligram (mg)",
+              "value": 91,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "BAY1021189 2.5 mg",
+              "value": 91,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG003",
+              "groupTitle": "BAY1021189 From 2.5 to 5 mg",
+              "value": 91,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG004",
+              "groupTitle": "BAY1021189 From 2.5 to 10 mg",
+              "value": 91,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG005",
+              "groupTitle": "Total",
+              "value": 456,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Placebo",
+              "value": "67",
+              "spread": "13.1",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "BAY1021189 1.25 Milligram (mg)",
+              "value": "67.6",
+              "spread": "12.9",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "BAY1021189 2.5 mg",
+              "value": "67.6",
+              "spread": "11.5",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG003",
+              "groupTitle": "BAY1021189 From 2.5 to 5 mg",
+              "value": "66.7",
+              "spread": "11.6",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG004",
+              "groupTitle": "BAY1021189 From 2.5 to 10 mg",
+              "value": "68.9",
+              "spread": "12.4",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG005",
+              "groupTitle": "Total",
+              "value": "67.6",
+              "spread": "12.3",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Placebo",
+              "female": 19,
+              "male": 73
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "BAY1021189 1.25 Milligram (mg)",
+              "female": 21,
+              "male": 70
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "BAY1021189 2.5 mg",
+              "female": 19,
+              "male": 72
+            },
+            {
+              "groupId": "BG003",
+              "groupTitle": "BAY1021189 From 2.5 to 5 mg",
+              "female": 17,
+              "male": 74
+            },
+            {
+              "groupId": "BG004",
+              "groupTitle": "BAY1021189 From 2.5 to 10 mg",
+              "female": 14,
+              "male": 77
+            },
+            {
+              "groupId": "BG005",
+              "groupTitle": "Total",
+              "female": 90,
+              "male": 366
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Placebo",
+                      "value": "67",
+                      "spread": "13.1"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "BAY1021189 1.25 Milligram (mg)",
+                      "value": "67.6",
+                      "spread": "12.9"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "BAY1021189 2.5 mg",
+                      "value": "67.6",
+                      "spread": "11.5"
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "BAY1021189 From 2.5 to 5 mg",
+                      "value": "66.7",
+                      "spread": "11.6"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Age, Customized",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "<65",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Placebo",
+                      "value": "38",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "BAY1021189 1.25 Milligram (mg)",
+                      "value": "38",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "BAY1021189 2.5 mg",
+                      "value": "30",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "BAY1021189 From 2.5 to 5 mg",
+                      "value": "38",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "65-75",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Placebo",
+                      "value": "26",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "BAY1021189 1.25 Milligram (mg)",
+                      "value": "19",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "BAY1021189 2.5 mg",
+                      "value": "37",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "BAY1021189 From 2.5 to 5 mg",
+                      "value": "32",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "> 75",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Placebo",
+                      "value": "28",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "BAY1021189 1.25 Milligram (mg)",
+                      "value": "34",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "BAY1021189 2.5 mg",
+                      "value": "24",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "BAY1021189 From 2.5 to 5 mg",
+                      "value": "21",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Placebo",
+                      "value": "19",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "BAY1021189 1.25 Milligram (mg)",
+                      "value": "21",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "BAY1021189 2.5 mg",
+                      "value": "19",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "BAY1021189 From 2.5 to 5 mg",
+                      "value": "17",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Placebo",
+                      "value": "73",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "BAY1021189 1.25 Milligram (mg)",
+                      "value": "70",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "BAY1021189 2.5 mg",
+                      "value": "72",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG003",
+                      "groupTitle": "BAY1021189 From 2.5 to 5 mg",
+                      "value": "74",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "2.5 mg orally once daily for 2 weeks, up-titration to 5 mg orally once daily for 2 weeks, up-titration to 10 mg orally once daily for 8 weeks"
+          },
+          {
+            "id": "2",
+            "title": "2.5 mg orally once daily for 2 weeks, then 5 mg orally once daily for 10 weeks (with sham titration)"
+          },
+          {
+            "id": "3",
+            "title": "2.5 mg orally once daily for 12 weeks (with sham titrations)"
+          },
+          {
+            "id": "4",
+            "title": "1.25 mg orally once daily for 12 weeks (with sham titrations)"
+          },
+          {
+            "id": "5",
+            "title": "Orally once daily for 12 weeks (with sham titrations)"
+          }
+        ],
+        "outcome": {
+          "type": "continuous",
+          "title": "Change From Baseline in Log-Transformed N-Terminal Pro-Brain Natriuretic Peptide (NTproBNP) to Week 12",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Placebo",
+              "n": 69,
+              "mean": -0.28,
+              "sd": 0.8197
+            },
+            {
+              "id": "OG001",
+              "title": "BAY1021189 1.25 Milligram (mg)",
+              "n": 69,
+              "mean": -0.265,
+              "sd": 0.7658
+            },
+            {
+              "id": "OG002",
+              "title": "BAY1021189 2.5 mg",
+              "n": 73,
+              "mean": -0.32,
+              "sd": 0.7799
+            },
+            {
+              "id": "OG003",
+              "title": "BAY1021189 From 2.5 to 5 mg",
+              "n": 67,
+              "mean": -0.353,
+              "sd": 0.8404
+            },
+            {
+              "id": "OG004",
+              "title": "BAY1021189 From 2.5 to 10 mg",
+              "n": 73,
+              "mean": -0.529,
+              "sd": 0.9475
+            },
+            {
+              "id": "OG005",
+              "title": "Pooled 2.5 mg up to 10 mg",
+              "n": 213,
+              "mean": -0.402,
+              "sd": 0.8603
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      },
+      {
+        "nctId": "NCT02861534",
+        "title": "A Study of Vericiguat in Participants With Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-001)",
+        "status": "COMPLETED",
+        "startDate": "2016-09-20",
+        "completionDate": "2019-09-02",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "A Randomized Parallel-Group, Placebo-Controlled, Double-Blind, Event-Driven, Multi-Center Pivotal Phase III Clinical Outcome Trial of Efficacy and Safety of the Oral sGC Stimulator Vericiguat in Subjects With Heart Failure With Reduced Ejection Fraction (HFrEF) - VerICiguaT GlObal Study in Subjects With Heart Failure With Reduced EjectIon FrAction (VICTORIA)",
+        "acronym": "VICTORIA",
+        "briefSummary": "This is a randomized, placebo-controlled, parallel-group, multi-center, double-blind, event driven study of vericiguat (MK-1242) in participants with heart failure with reduced ejection fraction (HFrEF). The primary hypothesis is vericiguat (MK-1242) is superior to placebo in increasing the time to first occurrence of the composite of cardiovascular (CV) death or heart failure (HF) hospitalization in participants with HFrEF.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Merck Sharp & Dohme LLC",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 5050,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Heart Failure",
+          "Chronic Heart Failure With Reduced Ejection Fraction"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * History of chronic HF (New York Heart Association \\[NYHA\\] Class II-IV) on standard therapy before qualifying HF decompensation * Previous HF hospitalization within 6 months prior to randomization or intravenous (IV) diuretic treatment for HF (without hospitalization) within 3 months. * Brain natriuretic peptide (BNP) levels: sinus rhythm-≥ 300 pg/mL; atrial fibrillation-≥ 500 pg/mL and N-terminal pro-Brain Natriuretic Peptide (NT-proBNP) levels: sinus rhythm- ≥ 1000 pg/mL; atrial fibrillation - ≥ 1600 pg/mL within 30 days prior to randomization * Left ventricular ejection fraction (LVEF) of \\<45% assessed within 12 months prior to randomization by any method * If female, is not of reproductive potential or agrees to avoid becoming pregnant while receiving study drug and for 14 days after the last dose of study drug by complying with one of the following: practice abstinence from heterosexual activity or use (or have her partner use) acceptable contraception during heterosexual activity. Exclusion Criteria: * Clinically unstable at the time of randomization as defined by either the administration of any IV treatment within 24 hours prior to randomization, and/or systolic blood pressure (SBP) \\<100 mmHg or symptomatic hypotension * Current or anticipated use of long-acting nitrates or nitric oxide (NO) donors including isosorbide dinitrate, isosorbide 5-mononitrate, pentaerythritol tetranitrate, nicorandil or transdermal nitroglycerin (NTG) patch, and..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization",
+            "description": "Time to First Occurrence of Composite Endpoint of CV Death or HF Hospitalization was analyzed using a one-sided stratified log-rank test. Randomized participants without any HF hospitalization or CV death event at the time of analysis were censored at their last available information, the date of their non-CV death, or the primary analysis database cutoff date of 18-June-2019, whichever occurred first. A clinical events committee (CEC) reviewed and adjudicated the endpoint events. A time-to-event methodology was used to evaluate the results; the incidence rate of participants with an event (number of participants with an event per 100 participant-years at risk) is provided.",
+            "timeFrame": "Up to approximately 33 months (through primary analysis database cutoff date of 18-June-2019)"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Time to the First Occurrence of CV Death",
+            "description": "Time to First Occurrence of CV Death was analyzed using a one-sided stratified log-rank test. Randomized participants without a CV death at the time of analysis were censored at their last available information, the date of their non-CV death, or the primary analysis database cutoff date of 18-June-2019, whichever occurred first. A CEC reviewed and adjudicated the endpoint events. A time-to-event methodology was used to evaluate the results; the incidence rate of participants with an event (number of participants with an event per 100 participant-years at risk) is provided.",
+            "timeFrame": "Up to approximately 33 months (through primary analysis database cutoff date of 18-June-2019)"
+          },
+          {
+            "measure": "Time to the First Occurrence of HF Hospitalization",
+            "description": "Time to the First Occurrence of HF Hospitalization was analyzed using a one-sided stratified log-rank test. Randomized participants without any HF hospitalization at the time of analysis were censored at their last available information, the date of their death, or the primary analysis database cutoff date of 18-June-2019, whichever occurred first. A CEC reviewed and adjudicated the endpoint events. A time-to-event methodology was used to evaluate the results; the incidence rate of participants with an event (number of participants with an event per 100 participant-years at risk) is provided.",
+            "timeFrame": "Up to approximately 33 months (through primary analysis database cutoff date of 18-June-2019)"
+          },
+          {
+            "measure": "Time to Total HF Hospitalizations (Including First and Recurrent Events)",
+            "description": "Time to Total HF Hospitalizations (including first and recurring) was analyzed using an Andersen-Gill model. Randomized participants without any HF hospitalization at the time of analysis were censored at their last available information, the date of their death, or the primary analysis database cutoff date of 18-June-2019, whichever occurred first. A CEC reviewed and adjudicated the endpoint events. A time-to-event methodology was used to evaluate the results; the incidence rate of participants with an event (number of participants with an event per 100 participant-years of follow-up) is provided.",
+            "timeFrame": "Up to approximately 33 months (through primary analysis database cutoff date of 18-June-2019)"
+          }
+        ],
+        "documents": [
+          {
+            "label": "Study Protocol and Statistical Analysis Plan",
+            "filename": "Prot_SAP_000.pdf",
+            "date": "2017-12-20",
+            "hasSap": true,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          }
+        ],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Vericiguat",
+              "description": "Participants received a starting dose of 2.5 mg of vericiguat taken orally once daily with food, on a background of heart failure (HF) standard of care. The vericiguat dose was uptitrated to 5 mg and to 10 mg."
+            },
+            {
+              "id": "BG001",
+              "title": "Placebo",
+              "description": "Participants received a starting matching placebo dose of 2.5 mg taken orally once daily with food, on a background of HF standard of care. The matching placebo dose was uptitrated to 5 mg and to 10 mg."
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Vericiguat",
+              "value": 2526,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": 2524,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 5050,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Vericiguat",
+              "value": "67.5",
+              "spread": "12.2",
+              "unit": "Years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": "67.2",
+              "spread": "12.2",
+              "unit": "Years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "67.3",
+              "spread": "12.2",
+              "unit": "Years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Vericiguat",
+              "female": 605,
+              "male": 1921
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "female": 603,
+              "male": 1921
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 1208,
+              "male": 3842
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "Years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "67.5",
+                      "spread": "12.2"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "67.2",
+                      "spread": "12.2"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "67.3",
+                      "spread": "12.2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "605",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "603",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1208",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "1921",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "1921",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "3842",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Race (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "American Indian or Alaska Native",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "24",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "28",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "52",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Asian",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "571",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "561",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1132",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Native Hawaiian or Other Pacific Islander",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "3",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "11",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "14",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Black or African American",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "123",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "126",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "249",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Participants receive a starting dose of 2.5 mg of vericiguat taken orally once daily with food, on a background of HF standard of care. The vericiguat dose will be uptitrated to 5 mg and to 10 mg."
+          },
+          {
+            "id": "2",
+            "title": "Participants receive a starting matching placebo dose of 2.5 mg taken orally once daily with food, on a background of HF standard of care. The matching placebo dose will be uptitrated to 5 mg and to 10 mg."
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "Time to the First Occurrence of CV Death",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Vericiguat",
+              "n": 2526,
+              "events": 12.9
+            },
+            {
+              "id": "OG001",
+              "title": "Placebo",
+              "n": 2524,
+              "events": 13.9
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      },
+      {
+        "nctId": "NCT05093933",
+        "title": "A Study of Vericiguat (MK-1242) in Participants With Chronic Heart Failure With Reduced Ejection Fraction (HFrEF) (MK-1242-035)",
+        "status": "COMPLETED",
+        "startDate": "2021-11-02",
+        "completionDate": "2025-02-05",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "A Pivotal Phase 3 Randomized, Placebo-controlled Clinical Study to Evaluate the Efficacy and Safety of the sGC Stimulator Vericiguat/MK-1242 in Adults With Chronic Heart Failure With Reduced Ejection Fraction",
+        "acronym": "VICTOR",
+        "briefSummary": "The purpose of this study is to evaluate the efficacy and safety of vericiguat in participants with chronic heart failure with reduced ejection fraction (HFrEF), specifically those with symptomatic chronic HFrEF who have not had a recent hospitalization for heart failure or need for outpatient intravenous (IV) diuretics. The primary hypothesis is that vericiguat is superior to placebo in reducing the risk of cardiovascular death or heart failure hospitalization.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Merck Sharp & Dohme LLC",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 6106,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Chronic Heart Failure With Reduced Ejection Fraction"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * History of chronic HF \\[New York Heart Association (NYHA) Class II to IV\\] on guideline-directed medical therapy for heart failure (GDMT) with no HF hospitalization within 6 months or outpatient IV diuretic use within 3 months before randomization. * Left ventricular ejection fraction (LVEF) of ≤40%, assessed within 12 months before randomization by any imaging method. * Elevated N-terminal pro-brain natriuretic peptide (NT-proBNP) levels. * A female participant is eligible to participate if she is not pregnant or breastfeeding, is not a woman of childbearing potential (WOCBP), or is a WOCBP and agrees to follow contraceptive guidance during the study intervention period and for at least 1 month after the last dose of study intervention. Exclusion Criteria: * Has SBP \\<100 mm Hg or symptomatic hypotension. * Awaiting heart transplantation, is receiving continuous IV infusion of an inotrope, or has or anticipates receiving an implanted ventricular assist device. * Amyloidosis or sarcoidosis. * Primary valvular heart disease requiring surgical procedure or intervention or has undergone a valvular surgical procedure or intervention within 3 months before randomization. * Hypertrophic cardiomyopathy. * Acute myocarditis or Takotsubo cardiomyopathy. * History of heart transplant. * Tachycardia-induced cardiomyopathy and/or uncontrolled tachyarrhythmia. * Acute coronary syndrome, or undergone coronary artery bypass grafting (CABG) or percutaneous coronary i..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization: Participants With an Event Per 100 Patient-Years",
+            "description": "The time to first occurrence of the composite endpoint of CV death or HF hospitalization was defined as the time from randomization to the first event of CV death or HF hospitalization. Randomized participants without a HF hospitalization or CV death event at the time of analysis were censored at the last available information, when the protocol pre-specified number of total CV death events was achieved (primary completion analysis data cutoff), or the date of their non-CV death, whichever occurred first. Events were confirmed by a clinical events committee (CEC). Protocol-specified final analyses are reported here with a primary completion data cutoff. Time-to-event methodology was used...",
+            "timeFrame": "Up to approximately 36 months (from randomization to the primary completion data cutoff)"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Time to CV Death: Participants With an Event Per 100 Patient-Years",
+            "description": "Time to CV death was defined as the time from randomization to CV death. Randomized participants without a CV death at the time of analysis were censored at their last available information, when the protocol pre-specified number of total CV death events was achieved (primary analysis database cutoff), or the date of their non-CV death, whichever occurred first. CV deaths were confirmed by a CEC. Protocol-specified final analyses are reported here with a primary completion data cutoff. Time-to-event methodology was used to evaluate the results and the number of participants with a CV death event per 100 patient-years at risk is presented.",
+            "timeFrame": "Up to approximately 36 months (from randomization to the primary completion data cutoff)"
+          },
+          {
+            "measure": "Time to First Occurrence of HF Hospitalization: Participants With an Event Per 100 Patient-Years",
+            "description": "Time to first occurrence of HF hospitalization was defined as the time from randomization to the first event of HF hospitalization. Randomized participants without an HF hospitalization at the time of analysis were censored at their last available information, when the protocol pre-specified number of total CV death events was achieved (primary analysis database cutoff), or the date of their death, whichever occurred first. HF hospitalizations were confirmed by a CEC. Protocol-specified final analyses are reported here with a primary completion data cutoff. Time-to-event methodology was used to evaluate the results and the number of participants with an HF hospitalization event per 100 pa...",
+            "timeFrame": "Up to approximately 36 months (from randomization to the primary completion data cutoff)"
+          },
+          {
+            "measure": "Time to Total HF Hospitalizations (Including First and Recurrent Events): Total Events Per 100 Patient-Years",
+            "description": "Time to total HF hospitalizations was defined as the time from randomization to all HF hospitalization events, including time to first event and time increments between events. Randomized participants without an HF hospitalization at the time of analysis were censored at their last available information, when the protocol pre-specified number of total CV death events was achieved (primary analysis database cutoff), or the date of their death, whichever occurred first. HF hospitalizations were confirmed by a CEC. Protocol-specified final analyses are reported here with a primary completion data cutoff. Time-to-event methodology was used to evaluate the results and the number of total HF ho...",
+            "timeFrame": "Up to approximately 36 months (from randomization to the primary completion data cutoff)"
+          }
+        ],
+        "documents": [
+          {
+            "label": "Study Protocol and Statistical Analysis Plan",
+            "filename": "Prot_SAP_000.pdf",
+            "date": "2024-01-25",
+            "hasSap": true,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          }
+        ],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Vericiguat",
+              "description": "Participants received a starting dose of 2.5 mg of vericiguat taken orally once daily for 2 weeks. The vericiguat dose was titrated to 5 mg for 2 weeks and then to the target dose of 10 mg for the remainder of treatment (total treatment of up to approximately 37 months)."
+            },
+            {
+              "id": "BG001",
+              "title": "Placebo",
+              "description": "Participants received a placebo matched to the vericiguat dose of 2.5 mg taken orally once daily for 2 weeks. The placebo dose was sham titrated to 5 mg for 2 weeks and then to 10 mg for the remainder of treatment (total treatment of up to approximately 37 months)."
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Vericiguat",
+              "value": 3053,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": 3052,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 6105,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Vericiguat",
+              "value": "67.1",
+              "spread": "11.0",
+              "unit": "Years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": "67.0",
+              "spread": "11.0",
+              "unit": "Years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "67.0",
+              "spread": "11.0",
+              "unit": "Years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Vericiguat",
+              "female": 727,
+              "male": 2326
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "female": 713,
+              "male": 2339
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 1440,
+              "male": 4665
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "Years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "67.1",
+                      "spread": "11.0"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "67.0",
+                      "spread": "11.0"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "67.0",
+                      "spread": "11.0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "727",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "713",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1440",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "2326",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "2339",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "4665",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Ethnicity (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "968",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "953",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1921",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Not Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "2044",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "2068",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "4112",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Unknown or Not Reported",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "41",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "31",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "72",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Race (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "American Indian or Alaska Native",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "159",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "142",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "301",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Asian",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "383",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "363",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "746",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Native Hawaiian or Other Pacific Islander",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "4",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "7",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "11",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Black or African American",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Vericiguat",
+                      "value": "251",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "218",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "469",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Participants receive a starting dose of 2.5 mg of vericiguat taken orally once daily. The vericiguat dose will be titrated to 5 mg and to 10 mg."
+          },
+          {
+            "id": "2",
+            "title": "Participants receive a starting matching placebo to vericiguat dose of 2.5 mg taken orally once daily. The matching placebo dose will be sham titrated to 5 mg and to 10 mg."
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "Time to First Occurrence of Composite Endpoint of Cardiovascular (CV) Death or Heart Failure (HF) Hospitalization: Participants With an Event Per 100 Patient-Years",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Vericiguat",
+              "n": 3053,
+              "events": 11.3
+            },
+            {
+              "id": "OG001",
+              "title": "Placebo",
+              "n": 3052,
+              "events": 12.2
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      }
+    ],
+    "excludedStudies": [
+      {
+        "nctId": "NCT05974189",
+        "title": "The VERIFY Study: An Observational Study Called VERIFY to Learn More About the Use of Vericiguat in People With Chronic Heart Failure With Reduced Ejection Fraction",
+        "status": "COMPLETED",
+        "startDate": "2023-07-11",
+        "completionDate": "2024-10-08",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "Assessing Vericiguat for the Management of Heart Failure With Reduced Ejection Fraction Using HealthVerity Data",
+        "acronym": "",
+        "briefSummary": "This is an observational study in which the health data of people with chronic heart failure with reduced ejection fraction (HFrEF) are collected using administrative claims data. In observational studies, only observations are made and participants do not receive any advice or changes to healthcare. Chronic HFrEF is a longterm condition that occurs when the heart is weak and cannot pump enough blood to the rest of the body with each heartbeat. This leads to a reduced supply of oxygen which the body requires to function properly. The common symptoms include breathlessness, weakness, fatigue, and swelling in the ankles and legs. If left untreated, heart failure can lead to other serious health problems, including damage to other organs, which may result in hospital stays and even death. Vericiguat works by increasing the activity of an enzyme called soluble guanylate cyclase (sGC), which relaxes the blood vessels and allows more blood to flow through. As a result, the heart is able to pump better. Vericiguat was approved for the treatment of HFrEF based on the results of a study called VICTORIA. The VICTORIA study showed that vericiguat helps in lowering the chances of death or hospitalization due to heart failure. There is limited information available about the use of vericiguat for the treatment of HFrEF under realworld conditions. The main purpose of this study is to collect information about the characteristics of people with HFrEF, who are on vericiguat in addition to...",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Bayer",
+          "class": "INDUSTRY"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 1391,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Chronic Heart Failure With Reduced Ejection Fraction"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * ≥18-years old and have at least one year of continous enrollment in the HV database. * Have proven or presumed HFrEF * Have received ≥1 GDMTs for HFrEF * All patients will be required to have continuous enrollment in the HealthVerity data set during the pre-index date (baseline period) of at least 90-days."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Descriptive summary of baseline characteristics of new users administered vericiguat in addition to at least one GDMT in patients with HFrEF",
+            "description": "",
+            "timeFrame": "Retrospective cohort analysis from 01-Jan-2018 to 30-Jun-2023"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "First hospitalization for HF or all cause of death or first emergency room visit (ER)",
+            "description": "",
+            "timeFrame": "Retrospective cohort analysis from 01-Jan-2018 to 30-Jun-2023"
+          },
+          {
+            "measure": "First ER visit or hospitalization for HF",
+            "description": "",
+            "timeFrame": "Retrospective cohort analysis from 01-Jan-2018 to 30-Jun-2023"
+          },
+          {
+            "measure": "All-cause death",
+            "description": "",
+            "timeFrame": "Retrospective cohort analysis from 01-Jan-2018 to 30-Jun-2023"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "This study will use anonymized real-world data from HealthVerity closed Medical and Pharmacy Claims.\n\nAdult patients with a diagnosis of HFrEF and received vericiguat added to at least one guideline directed medical therapy (GDMT), from January 1, 2021 through June 30, 2023 will be included in this retrospective cohort analysis."
+          },
+          {
+            "id": "2",
+            "title": "This study will use anonymized real-world data from HealthVerity closed Medical and Pharmacy Claims.\n\nAdult patients with a diagnosis of HFrEF and received at least one GDMT (without vericiguat), from January 1, 2021 through June 30, 2023 will be included in this retrospective cohort analysis."
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "not_randomized_interventional",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT07472595",
+        "title": "Effect of Vericiguat on cardiAc Remodeling in Patients With Heart faiLure and Reduced Ejection fractioN (HFrEF): A Prospective sTudy usIng NOvel Echocardiographic Imaging Techniques (VALENTINO)",
+        "status": "COMPLETED",
+        "startDate": "2023-10-09",
+        "completionDate": "2025-12-31",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "Effect of Vericiguat on cardiAc Remodeling in Patients With Heart faiLure and Reduced Ejection fractioN (HFrEF): A Prospective sTudy usIng NOvel Echocardiographic Imaging Techniques (VALENTINO)",
+        "acronym": "",
+        "briefSummary": "The biological process that underlies the pathogenesis of heart failure (HF) is termed cardiac remodeling. Pathological cardiac remodeling includes structural and functional change of the heart. Structural cardiac remodeling in HF include dilatation and/or hypertrophy of cardiac chambers, in particular the left ventricle (LV), but can also involve the right ventricle (RV) and both atria; moreover, cardiac valves, in particular the mitral valve, have been shown to undergo adaptive enlargement in HF to counteract leaflet tethering that leads to functional regurgitation 1. Functional changes of the heart in HF includes reduction of LV systolic and diastolic function, ischemia, abnormalities in myocardial deformation, and alteration in intracardiac vortex flow formation and energetics. At the tissue level, cardiac remodeling is marked by interstitial reparative and replacement fibrosis and inflammation. Cyclic guanosine monophosphate (cGMP) is an intracellular second messenger molecule that is important in the pathogenesis of HF. The main kinase effector of cGMP, protein kinase G, counteracts many biological derangements contributing to HF in experimental models. The production of cGMP in the heart, kidney, lung, liver, and brain is triggered by stimulation of either soluble guanylyl cyclase (sGC) or particulate guanylyl cyclase (pGC), and regulated by endogenous receptor ligands such as nitric oxide (NO) and natriuretic peptides (NPs). In the cardiovascular system, cGMP pathw...",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Chinese University of Hong Kong",
+          "class": "OTHER"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 40,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "HFrEF - Heart Failure With Reduced Ejection Fraction"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Age ≥ 18y * Chronic HF; New York Heart Association (NYHA) class II-III, LVEF ≤40% (recent 12 months), and on guideline-directed heart failure therapy * Recent (6 months) heart failure hospitalization or intravenous diuretic use (without hospitalization) within 3 months * Elevated NT-proBNP 1000-6000 pg/ml (1600-6000 pg/ml if atrial fibrillation) within 30 days * Clinically stable (systolic blood pressure ≥100 mm Hg and no intravenous diuretics for 48 hours) * Meet one of the following criteria: * a. Male * b. Female who is not of reproductive potential, defined as a female who either: (1) postmenopausal (defined as at least 12 months with no menses in women ≥45 years of age); (2) has had a hysterectomy and/or bilateral oophorectomy, bilateral salpingectomy, or bilateral tubal ligation/occlusion at least 6 weeks prior to screening; OR (3) has a congenital or acquired condition that prevents childbearing * c. Female who is of reproductive potential and agrees to avoid becoming pregnant while receiving study drug and for 14 days after the last dose of study drug by complying with one of the following: (1) practice abstinence from heterosexual activity, OR (2) use (or have her partner use) acceptable contraception during heterosexual activity. Acceptable methods of contraception are: * i. Single method (one of the following is acceptable): * • Intrauterine device, vasectomy of a female subject's male partner, or contraceptive rod implanted into the skin *..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "LV ejection fraction (EF)",
+            "description": "Measured using 3D Echocardiography, this assesses the percentage of blood pumped out of the left ventricle with each heartbeat.",
+            "timeFrame": "From baseline to 8 months follow-up"
+          },
+          {
+            "measure": "LV end-systolic volume index (LVESVI)",
+            "description": "Measured using 3D Echocardiography, this reflects the volume of blood in the left ventricle at the end of contraction, indexed to body surface area.",
+            "timeFrame": "From baseline to 8 months follow-up"
+          },
+          {
+            "measure": "LV end-diastolic volume index (LVEDVI)",
+            "description": "Measured using 3D Echocardiography, this represents the volume of blood in the left ventricle at the end of diastole.",
+            "timeFrame": "From baseline to 8 months follow-up"
+          }
+        ],
+        "secondaryOutcomes": [],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Subjects will be treated for 8 months. A starting dose of Vericiguat 2.5 mg will be initiated. Subjects will be up-titrated to 5 mg and then to the target dose of 10 mg using titration criteria based on mean systolic blood pressure evaluation and clinical symptoms at 2 week intervals. Following the 4-week titration phase, subjects will be evaluated at 4 months (optional) and 8 months."
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "not_randomized_interventional",
+          "fewer_than_two_arms",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT06486844",
+        "title": "An Observational Study Called ROVER to Learn More About How Well Vericiguat Works in People Who Were Newly Treated With Vericiguat in Routine Medical Care in Germany",
+        "status": "COMPLETED",
+        "startDate": "2024-07-05",
+        "completionDate": "2025-08-31",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "Real World Outcomes of Patients Treated With Vericiguat in German Routine Care",
+        "acronym": "ROVER",
+        "briefSummary": "This is an observational study in which data already collected from people treated with vericiguat are studied. In observational studies, only observations are made without participants receiving any advice or any changes to healthcare. Chronic heart failure with reduced ejection fraction (HFrEF) is a long-term condition that occurs when the heart is weak and cannot pump enough blood to the rest of the body with each heartbeat. This leads to a reduced supply of oxygen which the body requires to function properly. The common symptoms include breathlessness, weakness, fatigue, and swelling in the ankles and legs. If left untreated, heart failure can lead to other serious health problems, including damage to other organs, which may result in hospital stays and even death. Vericiguat works by increasing the activity of an enzyme called soluble guanylate cyclase (sGC), which relaxes the blood vessels and allows more blood to flow through. As a result, the heart is able to pump better. Vericiguat is available in Germany for the treatment of HFrEF based on the results of a study called VICTORIA. The VICTORIA study showed that vericiguat helps in lowering the chances of death or hospitalization due to heart failure. However, there is limited information available about the use of vericiguat for the treatment of HFrEF under real-world conditions in routine medical care. The main purpose of this study is to collect information about how well vericiguat works in people with HFrEF who...",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Bayer",
+          "class": "INDUSTRY"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 500,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Chronic Heart Failure With Reduced Ejection Fraction"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Patients with an initial prescription of Vericiguat (index date) according to ATC Code C01DX22. * At least 18 years or older on the initial prescription of Vericiguat. Exclusion Criteria: * No exclusion criteria for any population will be applied."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "All-cause mortality rates after initiation of vericiguat",
+            "description": "Number of patients who died between the \"Vericiguat index date\" and \"cohort exit\" according to their death date.",
+            "timeFrame": "Between September 2021 and September 2023"
+          },
+          {
+            "measure": "All-cause related hospitalization rates after initiation of vericiguat",
+            "description": "Sum of all fully hospitalized cases of all patients between the \"Vericiguat index date\" and \"cohort exit\".",
+            "timeFrame": "Between September 2021 and September 2023"
+          },
+          {
+            "measure": "Heart failure related hospitalization rates after initiation of vericiguat",
+            "description": "Sum of all fully hospitalized cases with a main or secondary inpatient diagnosis according to ICD-10 GM Code I50.x or I11.0 between the \"Vericiguat index date\" and \"cohort exit\".",
+            "timeFrame": "Between September 2021 and September 2023"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Adherence of vericiguat drug use",
+            "description": "Adherence will be assessed using the Medical Possession Ratio (MPR=days of supply/treatment duration).",
+            "timeFrame": "Between September 2021 and September 2023"
+          },
+          {
+            "measure": "Titration pattern of vericiguat drug use",
+            "description": "Titration patterns will be assessed by investigating indicators such as the starting dose, the maximum dose reached as well as the time until up-titration.",
+            "timeFrame": "Between September 2021 and September 2023"
+          },
+          {
+            "measure": "Patient persistence of vericiguat drug use",
+            "description": "Persistence will be calculated via the time until discontinuation of vericiguat.",
+            "timeFrame": "Between September 2021 and September 2023"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Patients who were new users of vericiguat between September 2021 and September 2023 from the InGef database and the WIG2 database."
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "not_randomized_interventional",
+          "fewer_than_two_arms",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT06812546",
+        "title": "Efficacy and Safety of Early Initiation of Vericiguat in Heart Failure After Acute Myocardial Infarction",
+        "status": "NOT_YET_RECRUITING",
+        "startDate": "2025-04-01",
+        "completionDate": "2026-12-30",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Efficacy and Safety of Early Initiation of Vericiguat in Heart Failure After Acute Myocardial Infarction",
+        "acronym": "VIC-MI",
+        "briefSummary": "Heart failure (HF) is a severe cardiovascular disease with extremely high morbidity and mortality rates worldwide, and ischemic cardiomyopathy is an important cause of heart failure. Vericiguat is a soluble guanylate cyclase stimulator which has been verified to improve the cardiovascular outcomes in heart failure patients. The VICTORIA trial excluded patients with acute coronary syndrome in 3 months prior to the study start, so it is still unclear about the efficacy and safety of vericiguat in heart failure after acute myocardial infarction. So we conducted this multi-center, prospective, cohort study to estimate the efficacy and safety of vericiguat in HF patients after acute myocardial infarction.",
+        "detailedDescription": "Heart failure (HF) is a severe cardiovascular disease with extremely high morbidity and mortality rates worldwide, and ischemic cardiomyopathy is an important cause of heart failure. According to different studies, acute heart failure occurs in-hospital in about 14-36% of patients after acute myocardial infarction (AMI)1 and the presence of HF on admission or the occurrence of HF during hospitalization in patients with AMI are strong risk factors for poor prognosis. The incidence of HF in AMI varies according to population differences. For example, in patients with STEMI, the incidence of acute heart failure is relatively high because of the greater extent of the infarction and the longer duration of coronary occlusion, whereas patients with NSTEMI, although at lower risk of developing heart failure in the acute phase, have an increased risk of developing chronic heart failure in the long term. Advanced age, previous history of heart failure, chronic kidney disease, multibranch vasculopathy, and delayed opening of the infarct-related artery are major risk factors. In addition, comorbidities such as diabetes and hypertension increase the risk of developing heart failure. The goals of treatment for HF after AMI are to improve cardiac function, reduce symptoms, and prevent further myocardial injury. Basic therapy consists of prompt opening of the infarct-related artery (e.g., percutaneous coronary intervention) and the administration of optimized pharmacological treatments such as antiplatelets, beta-blockers, ACEI/ARBs and aldosterone antagonists. In the acute phase, diuretics and positive inotropic agents may be used to relieve severe symptoms. Besides, other HF medication such as SGLT2i are effective in patients with heart failure whether or not it is caused by ischemia. Vericiguat is a soluble guanylate cyclase stimulator which has been verified to improve the cardiovascular outcomes in heart failure patients. The VICTORIA trial excluded patients with acute coro...",
+        "sponsor": {
+          "name": "Dongying Zhang",
+          "class": "OTHER"
+        },
+        "phases": [
+          "PHASE4"
+        ],
+        "enrollment": {
+          "count": 200,
+          "type": "ESTIMATED"
+        },
+        "conditions": [
+          "Heart Failure",
+          "Acute Myocardial Infarction (AMI)",
+          "Acute Heart Failure (AHF)"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Age ≥ 18 years old * Undertaking revascularization for criminal coronary artery during hospitalization * Acute heart failure occurs within 14 days in hospital after STEMI or NSTEMI, meeting all of the following criteria: typical symptoms or signs of heart failure; Treatment with oral or intravenous diuretics is required; LVEF measured by echocardiography is ≤ 45%; Elevated levels of NT proBNP in patients with sinus rhythm ≥ 1000pg/ml and atrial fibrillation/flutter ≥ 1600pg/ml * eGFR ≥ 15 ml/min/1.73m2 * Informed consent has to be given in written form Exclusion Criteria: * Plan to undergo staged revascularization or if the criminal coronary artery has not been successfully opened * Severe and uncontrolled lung diseases, such as newly developed pulmonary embolism, primary pulmonary hypertension, acute exacerbation of COPD, etc * Severe liver and kidney dysfunction, Child Pugh grade C or eGFR \\< 15ml/min/1.73m2 * Allergies to ACEI, ARB, ARNI, beta blockers, SGLT2i, MRA, Vericiguat, and other medications * Symptomatic hypotension or systolic blood pressure less than 90mmHg after discontinuing intravenous medication * Women in the perinatal period or those planning to conceive * Patients planning to undergo elective surgical treatment or tumor chemotherapy * Diagnosed as Takotsubo cardiomyopathy or nonobstructive acute myocardial infarction (MINOCA) * Previous diagnosis of cardiomyopathy, including but not limited to dilated cardiomyopathy, hypertrophic..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Serum NT-proBNP Level",
+            "description": "The primary endpoint of the study is NT-proBNP at the baseline \\& at the completion of the 24 week intervention",
+            "timeFrame": "Up to 24 weeks"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "6-minute walk distance",
+            "description": "6-minute walk distance at the baseline \\& at the completion of the 24 week intervention",
+            "timeFrame": "Up to 24 weeks"
+          },
+          {
+            "measure": "NYHA functional class",
+            "description": "NYHA functional class at the baseline \\& at the completion of the 24 week intervention",
+            "timeFrame": "Up to 24 weeks"
+          },
+          {
+            "measure": "Worsening heart failure event",
+            "description": "Time to first worsening heart failure event in 24 weeks after randomization",
+            "timeFrame": "Up to 24 weeks"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Patients enrolled in the experimental group will receive 26 weeks of oral vericiguat on top of the standard treatment, with vericiguat at a dose of 2.5 mg once a day, doubled every fortnight to a maximum dose of 10 mg once a day at the end of week 6 of the visit, which will be maintained for the duration of the treatment."
+          },
+          {
+            "id": "2",
+            "title": "Patients enrolled in the controlled group will receive 26 weeks of standard heart failure and coronary heart disease treatment"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      }
+    ],
+    "exclusionReasons": {
+      "no_results_posted": 4,
+      "not_randomized_interventional": 3,
+      "no_extractable_numeric_outcome": 4,
+      "fewer_than_two_arms": 2,
+      "not_completed": 1
+    },
+    "portfolioEligible": true,
+    "priorityTier": "build-now"
+  }
+}

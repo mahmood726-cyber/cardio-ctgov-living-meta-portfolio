@@ -1,0 +1,1724 @@
+{
+  "generatedAt": "2026-03-28T18:45:05.888Z",
+  "sourceStartedAt": "2026-03-28T18:44:01.927Z",
+  "minIncludedTrials": 2,
+  "pageSize": 100,
+  "maxPages": 8,
+  "topic": {
+    "slug": "ablation-vs-drugs-af",
+    "label": "Catheter Ablation vs Drug Therapy for Atrial Fibrillation",
+    "domain": "Arrhythmia",
+    "baseQuery": "(\"atrial fibrillation\") AND (\"catheter ablation\") AND (\"antiarrhythmic drug\" OR \"drug therapy\" OR medical)",
+    "keywords": [
+      "CABANA",
+      "EAST-AFNET",
+      "STOP AF First",
+      "EARLY-AF"
+    ],
+    "query": "(\"atrial fibrillation\") AND (\"catheter ablation\") AND (\"antiarrhythmic drug\" OR \"drug therapy\" OR medical) AND (\"CABANA\" OR \"EAST-AFNET\" OR \"STOP AF First\" OR \"EARLY-AF\")",
+    "scannedRecords": 9,
+    "pagesFetched": 1,
+    "truncated": false,
+    "includedCount": 3,
+    "excludedCount": 6,
+    "includedStudies": [
+      {
+        "nctId": "NCT00578617",
+        "title": "Ablation vs Drug Therapy for Atrial Fibrillation - Pilot Trial",
+        "status": "COMPLETED",
+        "startDate": "2006-09",
+        "completionDate": "2010-06",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Catheter Ablation Versus Antiarrhythmic Drug Therapy for Atrial Fibrillation - Pilot Trial",
+        "acronym": "CABANA",
+        "briefSummary": "The CABANA pilot study is designed to test the hypothesis that the treatment strategy of percutaneous left atrial catheter ablation for the purpose of the elimination of atrial fibrillation (AF) is superior to current state-of-the-art therapy with either rate control or anti-arrhythmic drugs for reducing AF recurrences at 1 year follow-up.",
+        "detailedDescription": "The need for this trial arises out of 1) the rapidly increasing number of pts \\> 60 years of age with AF accompanied by symptoms and morbidity, 2) the failure of anti-arrhythmic drug therapy to maintain sinus rhythm and reduce mortality, 3) the rapidly increasing application of radio-frequency catheter ablation without appropriate evidence-based validation, and 4) the expanding impact of AF on health care costs.",
+        "sponsor": {
+          "name": "Mayo Clinic",
+          "class": "OTHER"
+        },
+        "phases": [
+          "NA"
+        ],
+        "enrollment": {
+          "count": 60,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Atrial Fibrillation",
+          "Arrhythmia"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "90 Years",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Have documented AF, which warrants active drug or ablative treatment * Be eligible for both catheter ablation and at least 2 sequential anti-arrhythmic drugs and/or 3 sequential rate control drugs * Be \\>65 yrs of age, or \\<65 yrs with one or more of the following risk factors for stroke: Hypertension, Diabetes, Congestive heart failure (including systolic or diastolic heart failure), Prior stroke or transient ischemic attack, Left atrium \\>4.5 cm, ejection fraction \\<35% by echocardiogram, radionuclide evaluation or contrast ventriculography Exclusion Criteria: * Previously failed 2 or more membrane active anti-arrhythmic drugs * Efficacy failure of a full dose Amiodarone trial of \\>12 weeks duration * Any amiodarone therapy in the past three months * Reversible causes of AF including thyroid disorders, acute alcohol intoxication, recent major surgical procedures, or trauma * Lone atrial fibrillation in the absence of risk factors for stroke in patients \\<65 years of age * Recent cardiac events including myocardial infarction, percutaneous intervention, or valve or coronary bypass surgery in the preceding 3 months * Hypertrophic obstructive cardiomyopathy * Class IV angina or congestive heart failure * Planned heart transplantation * Other mandated anti-arrhythmic drug therapy * Heritable arrhythmias or increased risk for \"torsade de pointes\" (a specific, rare variety of ventricular tachycardia) with class I or III drugs * Prior left atrial catheter..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Number of Participants Experiencing Recurrence of Atrial Fibrillation by One Year Follow-up",
+            "description": "Documentation of atrial fibrillation using a cardiac event recorder",
+            "timeFrame": "12 months after intervention"
+          }
+        ],
+        "secondaryOutcomes": [],
+        "documents": [],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Drug Therapy",
+              "description": "Pharmacologic Therapy Rate and/or Rhythm Control: MD to choose from this list as medically indicated, doses are min recommended daily dose: metoprolol 50-100 mg, atenolol 50-100 mg, propanolol 40-80 mg, acebutolol 200 mg, carvedilol 6.25 mg, diltiazem 180-240 mg, verapamil 180..."
+            },
+            {
+              "id": "BG001",
+              "title": "Ablation Therapy",
+              "description": "Left Atrial Catheter Ablation: The specific choice of ablation catheters will be left to the investigator from the following list: Lifewire TC XLS, Therapy Dual/Thermocouple, NAVI-STAR/NAVI-STAR DS, Celsius Braided Tip, NAVI-STAR Thermo-Cool, Freezor/FreezorMax, Stinger, Blaze..."
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Drug Therapy",
+              "value": 31,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Ablation Therapy",
+              "value": 29,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 60,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Drug Therapy",
+              "value": "62.1",
+              "spread": "9.57",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Ablation Therapy",
+              "value": "60.3",
+              "spread": "11.46",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "61.2",
+              "spread": "10.47",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Drug Therapy",
+              "female": 5,
+              "male": 26
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Ablation Therapy",
+              "female": 9,
+              "male": 20
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 14,
+              "male": 46
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Categorical",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "<=18 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Drug Therapy",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Ablation Therapy",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Between 18 and 65 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Drug Therapy",
+                      "value": "20",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Ablation Therapy",
+                      "value": "18",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "38",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": ">=65 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Drug Therapy",
+                      "value": "11",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Ablation Therapy",
+                      "value": "11",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "22",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Age Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Drug Therapy",
+                      "value": "62.1",
+                      "spread": "9.57"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Ablation Therapy",
+                      "value": "60.3",
+                      "spread": "11.46"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "61.2",
+                      "spread": "10.47"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Drug Therapy",
+                      "value": "5",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Ablation Therapy",
+                      "value": "9",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "14",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Drug Therapy",
+                      "value": "26",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Ablation Therapy",
+                      "value": "20",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "46",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Region of Enrollment",
+              "paramType": "NUMBER",
+              "unit": "participants",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Drug Therapy",
+                      "value": "31",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Ablation Therapy",
+                      "value": "29",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "60",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Pharmacologic Therapy Rate and/or Sinus Rhythm Control: Patients without other heart disease will receive beta or calcium channel blockers as first line rate control therapy. Patients with underlying coronary artery disease will receive beta-blockers, patients with limited ventricular hypertrophy not warranting exclusion would receive either beta- or calcium channel blockers, while patients with heart failure would be expected to receive carvedilol or metoprolol. Patients randomized to drug therapy may be started on a membrane active drug, in an approach consistent with the recommended Guidelines for Management of Subjects with AF. Each patient will be placed on an anti-arrhythmic drug for an appropriate period and the patient cardioverted to sinus rhythm if necessary. Patients will then be followed for a period of up to 3 months, during which dosage adjustment can be made or the drug replaced with a different anti-arrhythmic drug."
+          },
+          {
+            "id": "2",
+            "title": "Left Atrial Catheter Ablation: The specific choice of ablation catheters will be left to the investigator from the following list: Lifewire TC XLS, Therapy Dual/Thermocouple, NAVI-STAR/NAVI-STAR DS, Celsius Braided Tip, NAVI-STAR Thermo-Cool, Freezor/FreezorMax, Stinger, Blazer II RF/RPM/SteeroCath /XP, Chilli Cooled."
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "Number of Participants Experiencing Recurrence of Atrial Fibrillation by One Year Follow-up",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Drug Therapy",
+              "n": 31,
+              "events": 20
+            },
+            {
+              "id": "OG001",
+              "title": "Ablation Therapy",
+              "n": 29,
+              "events": 14
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      },
+      {
+        "nctId": "NCT03118518",
+        "title": "STOP AF First: Cryoballoon Catheter Ablation in an Antiarrhythmic Drug Naive Paroxysmal Atrial Fibrillation",
+        "status": "COMPLETED",
+        "startDate": "2017-06-23",
+        "completionDate": "2020-06-25",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "STOP AF First: Cryoballoon Catheter Ablation in an Antiarrhythmic Drug Naive Paroxysmal Atrial Fibrillation",
+        "acronym": "STOP AF First",
+        "briefSummary": "To provide data demonstrating the safety and effectiveness of the Arctic Front Advance™ Cardiac CryoAblation Catheter for the treatment of recurrent symptomatic paroxysmal atrial fibrillation, without the requirement that the subjects be drug refractory.",
+        "detailedDescription": "Subjects with paroxysmal atrial fibrillation with no history of treatment with anti-arrhythmic drugs are randomized 1:1 to either an anti-arrhythmic drug or pulmonary vein isolation using the cryoballoon catheter.",
+        "sponsor": {
+          "name": "Medtronic Cardiac Ablation Solutions",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "NA"
+        ],
+        "enrollment": {
+          "count": 225,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Atrial Fibrillation",
+          "Atrial Fibrillation New Onset"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "80 Years",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * A diagnosis of symptomatic paroxysmal AF with the following documentation: (1) physician's note indicating recurrent self- terminating AF or paroxysmal AF; and (2) any ECG documented AF within 6 months prior to enrollment. * Age 18-80 Exclusion Criteria: * History of AF treatment with class I or III antiarrhythmic drug, including sotalol, with the intention to prevent an AF recurrence. However, patients pretreated with above AAD for less than 7 days with the intention to convert an AF episode are allowed. * Prior persistent AF (cardioversion after 48 hours or continuous AF that is sustained \\>7 days) * Left atrial diameter greater than 5.0 cm * Prior left atrial ablation or left atrial surgical procedure * Presence or likely implant of a permanent pacemaker, biventricular pacemaker, loop recorder, or any type of implantable cardiac defibrillator (with or without biventricular pacing function) * Body mass index (BMI) \\>35 kg/m2 * Presence of any pulmonary vein stents * Known presence of any pre-existing pulmonary vein stenosis * Pre-existing hemidiaphragmatic paralysis * Presence of any cardiac valve prosthesis * Moderate or severe mitral valve regurgitation or stenosis * Any cardiac surgery, myocardial infarction, percutaneous coronary intervention/ percutaneous transluminal coronary angioplasty or coronary artery stenting which occurred during the 90 day interval preceding the date the subject signed the Informed Consent Form * Unstable angina * New..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Percentage of Participants With Treatment Success at 12 Months After Antiarrhythmic Drug (AAD) Initiation or Ablation Utilizing the Arctic Front Advance™ Cardiac CryoAblation Catheter.",
+            "description": "Treatment success after AAD initiation (control arm) or pulmonary vein isolation ablation procedure utilizing the Arctic Front Advance™ Cardiac CryoAblation Catheter (treatment arm). Treatment success is the opposite of treatment failure. Treatment failure was defined as any of the following: * Acute procedural failure (treatment arm only). * Documented AF/AT/AFL on ambulatory monitoring/12-lead ECG after the 90-day post-ablation blanking period (treatment)/AAD optimization period (control arm). Minimum of 30 seconds on ambulatory monitoring or 10 seconds on 12-lead ECG. * Any subsequent AF surgery or ablation in the left atrium. * Any subsequent cardioversion after the 90-day post-ablati...",
+            "timeFrame": "Randomization to 12 months"
+          },
+          {
+            "measure": "Primary Safety Endpoint - Rate of Composite List of Serious Adverse Events.",
+            "description": "Measured by rate of composite list of serious adverse events in cryoablation-treated as randomized arm. Includes: * TIA within 7 days * Cerebrovascular accident within 7 days * Major bleed that requires transfusion or results in a 20% or greater fall in hematocrit (HCT) within 7 days * Development of a significant pericardial effusion within 30 days. (One that results in hemodynamic compromise, requires elective or urgent pericardiocentesis, or results in a 1-cm or more pericardial effusion as documented by echocardiography). * Symptomatic PV stenosis within 12 months; accompanied by one of the following: 50%-75% reduction in diameter of the pulmonary vein, with symptoms not explained by...",
+            "timeFrame": "Randomization to 12 months"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Quality of Life Scores at Baseline Compared to 12 Months",
+            "description": "There are two hypotheses tested in the objective, with separate hypothesis tests for (1) the difference in composite scores from the AFEQT questionnaire taken at baseline and 12 month visits, and (2) for the difference in composite scores for the EQ-5D questionnaire taken at baseline and 12-month visits. Composite AFEQT score is on a scale of zero to one hundred. Higher scores are better. Composite EQ-5D score is on a scale of zero to one. Higher scores are better.",
+            "timeFrame": "Baseline and 12 Months"
+          },
+          {
+            "measure": "Healthcare Utilization",
+            "description": "Compare health care utilization between the treatment and control arms. There are two hypotheses tested in the objective, with separate hypothesis tests for: (1) the rate of total health care utilization events (cardiovascular-related hospitalizations, emergency room visits, or unscheduled office visits) over 12 months shown as freedom from cardiovascular health care utilization by treatment arm, and (2) freedom from cardioversions (electrical or pharmacological) over 12 months by treatment arm.",
+            "timeFrame": "Initial treatment through 12 months."
+          }
+        ],
+        "documents": [
+          {
+            "label": "Study Protocol: Version 4",
+            "filename": "Prot_004.pdf",
+            "date": "2017-04-10",
+            "hasSap": false,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          },
+          {
+            "label": "Study Protocol: Version 5",
+            "filename": "Prot_005.pdf",
+            "date": "2017-12-05",
+            "hasSap": false,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          },
+          {
+            "label": "Study Protocol: Version 6",
+            "filename": "Prot_006.pdf",
+            "date": "2018-01-16",
+            "hasSap": false,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          },
+          {
+            "label": "Statistical Analysis Plan",
+            "filename": "SAP_007.pdf",
+            "date": "2018-05-09",
+            "hasSap": true,
+            "hasIcf": false,
+            "hasProtocol": false,
+            "url": ""
+          }
+        ],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Subjects Treated With Cryoballoon Catheter Ablation as Randomized",
+              "description": "Subjects Treated with Cryoballoon Catheter Ablation as Randomized."
+            },
+            {
+              "id": "BG001",
+              "title": "Subjects Treated With Antiarrhythmic Drug Initiation",
+              "description": "Subjects Treated with Antiarrhythmic Drug Initiation."
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Subjects Treated With Cryoballoon Catheter Ablation as Randomized",
+              "value": 104,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Subjects Treated With Antiarrhythmic Drug Initiation",
+              "value": 99,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 203,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Subjects Treated With Cryoballoon Catheter Ablation as Randomized",
+              "value": "60.4",
+              "spread": "11.2",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Subjects Treated With Antiarrhythmic Drug Initiation",
+              "value": "61.6",
+              "spread": "11.2",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "61.0",
+              "spread": "11.2",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Subjects Treated With Cryoballoon Catheter Ablation as Randomized",
+              "female": 41,
+              "male": 63
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Subjects Treated With Antiarrhythmic Drug Initiation",
+              "female": 42,
+              "male": 57
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 83,
+              "male": 120
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Categorical",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "<=18 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Subjects Treated With Cryoballoon Catheter Ablation as Randomized",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Subjects Treated With Antiarrhythmic Drug Initiation",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Between 18 and 65 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Subjects Treated With Cryoballoon Catheter Ablation as Randomized",
+                      "value": "59",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Subjects Treated With Antiarrhythmic Drug Initiation",
+                      "value": "49",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "108",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": ">=65 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Subjects Treated With Cryoballoon Catheter Ablation as Randomized",
+                      "value": "45",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Subjects Treated With Antiarrhythmic Drug Initiation",
+                      "value": "50",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "95",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Subjects Treated With Cryoballoon Catheter Ablation as Randomized",
+                      "value": "60.4",
+                      "spread": "11.2"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Subjects Treated With Antiarrhythmic Drug Initiation",
+                      "value": "61.6",
+                      "spread": "11.2"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "61.0",
+                      "spread": "11.2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Subjects Treated With Cryoballoon Catheter Ablation as Randomized",
+                      "value": "41",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Subjects Treated With Antiarrhythmic Drug Initiation",
+                      "value": "42",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "83",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Subjects Treated With Cryoballoon Catheter Ablation as Randomized",
+                      "value": "63",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Subjects Treated With Antiarrhythmic Drug Initiation",
+                      "value": "57",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "120",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Ethnicity (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Subjects Treated With Cryoballoon Catheter Ablation as Randomized",
+                      "value": "2",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Subjects Treated With Antiarrhythmic Drug Initiation",
+                      "value": "3",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "5",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Not Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Subjects Treated With Cryoballoon Catheter Ablation as Randomized",
+                      "value": "97",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Subjects Treated With Antiarrhythmic Drug Initiation",
+                      "value": "91",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "188",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Unknown or Not Reported",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Subjects Treated With Cryoballoon Catheter Ablation as Randomized",
+                      "value": "5",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Subjects Treated With Antiarrhythmic Drug Initiation",
+                      "value": "5",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "10",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Arm 1"
+          },
+          {
+            "id": "2",
+            "title": "Arm 2"
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "Percentage of Participants With Treatment Success at 12 Months After Antiarrhythmic Drug (AAD) Initiation or Ablation Utilizing the Arctic Front Advance™ Cardiac CryoAblation Catheter.",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Subjects Treated With Cryoballoon Catheter Ablation as Randomized",
+              "n": 104,
+              "events": 73.7
+            },
+            {
+              "id": "OG001",
+              "title": "Subjects Treated With Antiarrhythmic Drug Initiation",
+              "n": 99,
+              "events": 45
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      },
+      {
+        "nctId": "NCT00911508",
+        "title": "Catheter Ablation vs Anti-arrhythmic Drug Therapy for Atrial Fibrillation Trial",
+        "status": "COMPLETED",
+        "startDate": "2009-11-13",
+        "completionDate": "2017-12-31",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Catheter Ablation vs Anti-arrhythmic Drug Therapy for Atrial Fibrillation Trial",
+        "acronym": "CABANA",
+        "briefSummary": "The (Catheter Ablation Versus Anti-arrhythmic Drug Therapy for Atrial Fibrillation Trial) CABANA Trial has the overall goal of establishing the appropriate roles for medical and ablative intervention for atrial fibrillation (AF). The CABANA Trial is designed to test the hypothesis that the treatment strategy of left atrial catheter ablation for the purpose of eliminating atrial fibrillation (AF) will be superior to current state-of-the-art therapy with either rate control or rhythm control drugs for decreasing the incidence of the composite endpoint of total mortality, disabling stroke, serious bleeding, or cardiac arrest in patients with untreated or incompletely treated AF.",
+        "detailedDescription": "The need for this trial arises out of 1) the rapidly increasing number of pts \\> 60 years of age with AF accompanied by symptoms and morbidity, 2) the failure of anti-arrhythmic drug therapy to maintain sinus rhythm and reduce mortality, 3) the rapidly increasing application of radio-frequency catheter ablation without appropriate evidence-based validation, and 4) the expanding impact of AF on health care costs. This study will randomize up to 2200 patients to a strategy of catheter ablation versus pharmacologic therapy with rate or rhythm control drugs. Each pt will have 1) characteristics similar to AFFIRM pts (≥65 yo or \\<65 with \\>1 risk factor for stroke, 2) Documented AF warranting treatment, and 3) Eligibility for both catheter ablation and ≥2 anti-arrhythmic or ≥2 rate control drugs. Pts will be followed every 6 months for an average of approximately 5 years and will undergo repeat trans-telephonic monitor, Holter monitor, and CT/MR studies to assess the impact of treatment. The CABANA trial will disclose the role of medical and non-pharmacologic therapies for AF, establish the cost and impact of therapy on quality of life and will help determine if AF is a modifiable risk factor for increased mortality.",
+        "sponsor": {
+          "name": "Mayo Clinic",
+          "class": "OTHER"
+        },
+        "phases": [
+          "NA"
+        ],
+        "enrollment": {
+          "count": 2204,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Atrial Fibrillation",
+          "Arrhythmia"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "90 Years",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Over the preceding 6 months have: 1. ≥2 paroxysmal (electrocardiographic documentation of at least 1) atrial fibrillation (AF) episodes lasting ≥1 hour in duration: (that terminate spontaneously within 7 days or cardioversion is performed within 48h of AF onset): or 2. electrocardiographic documentation of 1 persistent AF episode: (sustained for ≥7 days or cardioversion is performed more than 48h after AF onset): or 3. electrocardiographic documentation of 1 longstanding persistent AF episode: (continuous AF of duration \\>1 year). * Warrant active therapy (within the past 3 months) beyond simple ongoing observation * Be eligible for catheter ablation and ≥2 sequential rhythm control and/or ≥2 rate control drugs. * Be ≥65 yrs of age, or \\<65 yrs with one or more of the following risk factors for stroke: Hypertension (treated and/or defined as a blood pressure \\>140/90 mmHg) \\[90\\], Diabetes (treated and/or defined as a fasting glucose ≥126 mg/dl) \\[91\\], Congestive heart failure (including systolic or diastolic heart failure), Prior stroke, transient ischemic attack or systemic emboli, Atherosclerotic vascular disease (previous myocardial infarction (MI), peripheral arterial disease or aortic plaque), left atrial (LA) size \\>5.0 cm (or volume index ≥40 cc/m2), or ejection fraction (EF) ≤35. * Have the capacity to understand and sign an informed consent form. * Be ≥18 years of age. * NOTE- Subjects \\<65 yrs of age whose only risk factor is hypertension..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Number of Participants With Composite of Total Mortality, Disabling Stroke, Serious Bleeding, or Cardiac Arrest in Patients Warranting Therapy for AF.",
+            "description": "All events for each component of the primary endpoint were reviewed and adjudicated in a blinded fashion by an independent clinical events committee using prospectively determined event definitions. Death was defined as all-cause mortality, disabling stroke (including intracranial bleeding) as an irreversible physical limitation defined by a Rankin Stroke Scale ≥2, and serious bleeding as bleeding accompanied by hemodynamic compromise that required surgical intervention or a transfusion of ≥3 units of blood.",
+            "timeFrame": "From date of enrollment until time-to-first event over a median follow-up of 48.5 months."
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Number of Participants With All-cause Mortality",
+            "description": "All deaths were reviewed and adjudicated by the Clinical Events Committee",
+            "timeFrame": "From date of enrollment until date of death over a median follow-up of 48.5 months."
+          },
+          {
+            "measure": "Number of Participants With Mortality or Cardiovascular (CV) Hospitalization",
+            "description": "Hospitalization was characterized by the site principal investigator (PI) and reported as part of the hospitalization case report form.",
+            "timeFrame": "From date of enrollment until time-to-first event of death or CV hospitalization over a median follow-up of 48.5 months."
+          },
+          {
+            "measure": "Number of Participants With Mortality, Disabling Stroke, or CV Hospitalization (for Heart Failure or Acute Ischemic Events)",
+            "description": "Disabling stroke (including intracranial bleeding) was defined as an irreversible physical limitation defined by a Rankin Stroke Scale ≥2 and the reason for hospitalization was characterized by the site PI and reported as part of the hospitalization case report form.",
+            "timeFrame": "From date of enrollment until time-to-first event of death, stroke, or CV hospitalization (for heart failure or acute ischemic event) over a median follow-up of 48.5 months."
+          }
+        ],
+        "documents": [
+          {
+            "label": "Study Protocol",
+            "filename": "Prot_000.pdf",
+            "date": "2013-11-22",
+            "hasSap": false,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          },
+          {
+            "label": "Statistical Analysis Plan",
+            "filename": "SAP_001.pdf",
+            "date": "2018-02-26",
+            "hasSap": true,
+            "hasIcf": false,
+            "hasProtocol": false,
+            "url": ""
+          }
+        ],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Left Atrial Ablation",
+              "description": "All patients randomized to the ablation group were required to undergo left atrial pulmonary vein isolation. The addition of ancillary ablation techniques including linear, ganglion plexus, and electrogram-based approaches were left to the discretion of the investigators."
+            },
+            {
+              "id": "BG001",
+              "title": "Rate or Rhythm Control Therapy",
+              "description": "All patients randomized to drug therapy, were treated with standard rhythm and/or rate control drugs selected in accordance with contemporary guidelines, according to investigator discretion."
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Left Atrial Ablation",
+              "value": 1108,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Rate or Rhythm Control Therapy",
+              "value": 1096,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 2204,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Left Atrial Ablation",
+              "female": 413,
+              "male": 695
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Rate or Rhythm Control Therapy",
+              "female": 406,
+              "male": 690
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 819,
+              "male": 1385
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Customized",
+              "paramType": "MEDIAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Left Atrial Ablation",
+                      "value": "68",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Rate or Rhythm Control Therapy",
+                      "value": "67",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "68",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Age, Customized",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "< 65 years old",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Left Atrial Ablation",
+                      "value": "375",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Rate or Rhythm Control Therapy",
+                      "value": "391",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "766",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "65 to <75 years old",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Left Atrial Ablation",
+                      "value": "577",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Rate or Rhythm Control Therapy",
+                      "value": "553",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1130",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "≥ 75 years old",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Left Atrial Ablation",
+                      "value": "156",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Rate or Rhythm Control Therapy",
+                      "value": "152",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "308",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Left Atrial Ablation",
+                      "value": "413",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Rate or Rhythm Control Therapy",
+                      "value": "406",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "819",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Left Atrial Ablation",
+                      "value": "695",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Rate or Rhythm Control Therapy",
+                      "value": "690",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1385",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Race (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "American Indian or Alaska Native",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Left Atrial Ablation",
+                      "value": "3",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Rate or Rhythm Control Therapy",
+                      "value": "1",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "4",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Asian",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Left Atrial Ablation",
+                      "value": "42",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Rate or Rhythm Control Therapy",
+                      "value": "42",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "84",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Native Hawaiian or Other Pacific Islander",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Left Atrial Ablation",
+                      "value": "1",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Rate or Rhythm Control Therapy",
+                      "value": "1",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "2",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Black or African American",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Left Atrial Ablation",
+                      "value": "39",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Rate or Rhythm Control Therapy",
+                      "value": "38",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "77",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Pulmonary vein isolation using a circumferential ablative approach in the left atrium. Ablation may be performed using circular mapping catheter-guided ablation, antral isolation using a circular guided approach, or wide area circumferential ablation."
+          },
+          {
+            "id": "2",
+            "title": "Current state-of-the-art drug therapy for atrial fibrillation (rate control or rhythm control). Treating physicians will be encouraged to follow the American College of Cardiology / American Heart Association / European Society of Cardiology Atrial Fibrillation Guidelines with regard to drug therapy for atrial fibrillation. The specific choice of rate control versus rhythm control drug therapy and the specific drugs to be used will ultimately be left to the discretion of the treating physician."
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "Number of Participants With Composite of Total Mortality, Disabling Stroke, Serious Bleeding, or Cardiac Arrest in Patients Warranting Therapy for AF.",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Left Atrial Ablation",
+              "n": 1108,
+              "events": 89
+            },
+            {
+              "id": "OG001",
+              "title": "Rate or Rhythm Control Therapy",
+              "n": 1096,
+              "events": 101
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      }
+    ],
+    "excludedStudies": [
+      {
+        "nctId": "NCT07272902",
+        "title": "Treating Atrial Fibrillation in Heart Failure With Preserved Ejection Fraction: Ablation or Medication",
+        "status": "RECRUITING",
+        "startDate": "2026-01-01",
+        "completionDate": "2027-10",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "A Randomized Ablation-based Atrial Fibrillation Rhythm Control Versus Rate Control Trial in Patients With Heart Failure and Preserved Ejection Fraction (CABANA-RAFT HF): A Pilot Study",
+        "acronym": "",
+        "briefSummary": "This study is testing two different ways of treating atrial fibrillation (AF) in people who also have heart failure with mildly reduced or preserved heart function. Patients will randomly be assigned to either rhythm control using catheter ablation or rate control using medicines. The pilot phase will determine if a larger study can be successfully carried out to see which approach better improves survival, reduces hospitalizations, and enhances quality of life.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Nova Scotia Health Authority",
+          "class": "OTHER"
+        },
+        "phases": [
+          "NA"
+        ],
+        "enrollment": {
+          "count": 84,
+          "type": "ESTIMATED"
+        },
+        "conditions": [
+          "Atrial Fibrillation (AF)",
+          "Heart Failure With Mildly Reduced Ejection Fraction",
+          "Heart Failure With Preserved Ejection Fraction (HFPEF)",
+          "Rate Control",
+          "Rhythm Control"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Age ≥18 years * Diagnosis of atrial fibrillation (documented on Holter, rhythm strip, or ECG) * New York Heart Association (NYHA) class II-III heart failure * Left ventricular ejection fraction (LVEF) \\>40% * Meet specific NT-proBNP criteria: * If HF hospitalization within 6 months prior to screening: NT-proBNP \\>200 pg/ml (if not in AF at screening) or \\>600 pg/ml (if in AF at screening) * Otherwise: NT-proBNP \\>300 pg/ml (if not in AF at screening) or \\>900 pg/ml (if in AF at screening) * On stable guideline-directed medical therapy for ≥1 month * On stable diuretic dose for ≥2 weeks * Suitable for either ablation-based rhythm control or rate control strategy Exclusion Criteria: * Permanent atrial fibrillation diagnosis * Prior catheter ablation for atrial fibrillation * NYHA class IV heart failure * Rheumatic heart disease * Moderate or severe mitral stenosis * Mechanical mitral valve * Severe aortic stenosis or severe aortic/mitral regurgitation * Renal failure requiring dialysis * Contraindication to oral anticoagulation * Infiltrative cardiomyopathies * Complex congenital heart disease * Untreated thyroid disease * Acute coronary syndrome or coronary artery bypass surgery within 12 weeks * Participation in another clinical trial * Inability to provide informed consent * Other serious non-cardiovascular condition with life expectancy ≤1 year * Age \\<18 years"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Feasibility of Trial Conduct",
+            "description": "Recruitment rate (patients recruited per center per month) and crossover rate (percentage of participants switching study arms). Feasibility will be defined as ≥0.7 patients enrolled per center per month and ≤10% crossover.",
+            "timeFrame": "12 months after randomization"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Composite of Cardiovascular Mortality and Heart Failure Hospitalization",
+            "description": "Time to first event of cardiovascular death (due to MI, sudden cardiac death, HF, stroke, CV procedures, CV bleeding, or other CV cause) or hospitalization for heart failure (admission \\>24h, ED visit, or unscheduled IV diuretic administration).",
+            "timeFrame": "Up to 12 months post-randomization"
+          },
+          {
+            "measure": "All-Cause Mortality",
+            "description": "Death from any cause",
+            "timeFrame": "Up to 12 months"
+          },
+          {
+            "measure": "Cardiovascular Hospitalizations and ED Visits (Non-HF)",
+            "description": "Number of hospitalizations or emergency department visits for other cardiovascular causes, including atrial fibrillation.",
+            "timeFrame": "Up to 12 months"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Participants in this group will undergo catheter ablation procedure, scheduled within 4 weeks of joining the study."
+          },
+          {
+            "id": "2",
+            "title": "Participants in this group will take medications, with the dosages adjusted over the first few weeks to find the correct dosage."
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT05559073",
+        "title": "Outcomes of Early Referral to Radiofrequency Ablation in Symptomatic Atrial Fibrillation Patients.",
+        "status": "UNKNOWN",
+        "startDate": "2022-10-06",
+        "completionDate": "2023-10-30",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "Outcomes of Early Referral to Radiofrequency Ablation in Symptomatic Atrial Fibrillation",
+        "acronym": "",
+        "briefSummary": "Atrial fibrillation (AF) is the most common arrhythmia among adults with increasing risk of stroke, heart failure and mortality. The EAST-AFNET 4 trial showed that rhythm control treatment (Antiarrhythmic drugs AAD or catheter ablation) was associated with a lower risk of adverse cardiovascular outcomes than usual care among patients who had recently (within one year) been diagnosed with atrial fibrillation. In phase II/III GLORIA AF registry, Early AF ablation within 3 months from initial diagnosis in a contemporary cohort of patients who were predominantly treated with non-vitamin K antagonist oral anticoagulants was associated with a survival advantage compared to medical therapy alone. Moreover, early AF ablation appeared to provide the greatest benefit compared to other treatments. The ATTEST trial was a multicenter, randomized, prospective study in patients with paroxysmal atrial fibrillation (AF) designed to assess whether radiofrequency (RF) ablation is more effective in delaying the progression to persistent AF than AADs. Patients \\>\\_65 years were significantly more likely to progress to persistent AF/AT than patients were \\<65 years, suggesting that early RF ablation may be an effective treatment strategy for delaying AF progression. So, we hypothesize that early AF ablation within one year after first AF diagnosis may associate with improved procedures outcomes in symptomatic AF patients.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Assiut University",
+          "class": "OTHER"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 127,
+          "type": "ESTIMATED"
+        },
+        "conditions": [
+          "Atrial Fibrillation",
+          "Radiofrequency Ablation"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "80 Years",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Paroxysmal and persistent atrial fibrillation (AF) documented on a 12 lead ECG, trans-telephonic monitoring (TTM) or Holter monitor (episodes of AF must be \\>30 seconds in duration to qualify as an inclusion criterion) * Age of 18 years or older on the date of consent. * Candidate for ablation based on AF that is symptomatic * Informed Consent Exclusion Criteria: Permenant AF * Previous left atrial (LA) ablation or LA surgery * AF due to reversible cause (e.g. hyperthyroidism, cardiothoracic surgery) * Active intracardiac thrombus * Pre-existing pulmonary vein stenosis or pulmonary vein stent * Contraindication to anticoagulation or radiocontrast materials * Left atrial anteroposterior diameter greater than 5.5 cm by transthoracic echocardiography * Cardiac valve prosthesis * Severe mitral valve regurgitation or stenosis * Myocardial infarction, percutaneous intervention, or coronary artery stenting during the 3-month period preceding the consent date * Cardiac surgery during the three-month interval preceding the consent date * Significant unrepaird congenital heart defect (including patent foramen ovale) * NYHA class IV congestive heart failure * Significant chronic kidney disease (eGFR \\<30 mL/min/1.73m2) * Cerebral ischemic event (stroke or transient ischemic attack) during the six-month interval preceding the consent date * Pregnancy and Life expectancy less than one year"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Freedom from any atrial arrhythmia after single ablation procedure.",
+            "description": "freedom from any documented atrial arrhythmia lasted for more than 30 seconds.",
+            "timeFrame": "12 months"
+          }
+        ],
+        "secondaryOutcomes": [],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Arm 1"
+          },
+          {
+            "id": "2",
+            "title": "Arm 2"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "not_randomized_interventional",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT01288352",
+        "title": "Early Treatment of Atrial Fibrillation for Stroke Prevention Trial",
+        "status": "COMPLETED",
+        "startDate": "2011-07-01",
+        "completionDate": "2020-05-31",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Early Therapy of Atrial Fibrillation for Stroke Prevention Trial (EAST).",
+        "acronym": "EAST",
+        "briefSummary": "EAST prospectively tests the hypothesis that an early, structured rhythm control therapy based on antiarrhythmic drugs and catheter ablation can prevent atrial fibrillation (AF) related complications in patients with AF when compared to usual care. Patients will be randomized to early therapy or usual care. In the early therapy group, patients will receive either catheter ablation (usually by pulmonary vein isolation), or adequate antiarrhythmic drug therapy at an early time point. The initial therapy will be selected by the local investigator. Upon AF recurrence, both modalities will be combined. Usual care will be conducted following the 2010European Society of Cardiology ( ESC )guidelines for AF treatment. Early rhythm control therapy will be guided by Electrocardiogram (ECG) monitoring.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Atrial Fibrillation Network",
+          "class": "OTHER"
+        },
+        "phases": [
+          "PHASE4"
+        ],
+        "enrollment": {
+          "count": 2789,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Atrial Fibrillation",
+          "Stroke"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: 1. Recent-onset AF (≤ 1 year prior to enrolment) 2. At least one ECG within recent 12 months that documents AF whereas the AF episode must last longer than 30 sec. 3. One of the following: * age \\> 75 years or * prior stroke or transient ischemic attack OR two of the following: * age \\> 65 years, * female sex, * arterial hypertension (chronic treatment for hypertension, estimated need for continuous antihypertensive therapy or resting blood pressure \\> 145/90 mmHg), * diabetes mellitus (treated by drugs or insulin) or impaired glucose tolerance * severe coronary artery disease (previous myocardial infarction, CABG or PCI) * stable heart failure (NYHA II or LVEF \\<50%), * left ventricular hypertrophy on echocardiography (more than 15 mm wall thickness), * chronic kidney disease (MDRD stage III or IV), * peripheral artery disease. 4. Provision of signed informed consent. 5. Age ≥ 18 years. Exclusion Criteria: 1. Any disease that limits life expectancy to less than 1 year. 2. Participation in another clinical trial, either within the past two months or ongoing 3. Previous participation in the EAST trial. 4. Pregnant women or women of childbearing potential not on adequate birth control: only women with a highly effective method of contraception \\[oral contraception or intra-uterine device (IUD)\\] or sterile women can be randomized. 5. Breastfeeding women. 6. Drug abuse. 7. Prior AF ablation or surgical therapy of AF. 8. Previous therapy failure on amiodaro..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "A composite of cardiovascular death, stroke and hospitalization due to worsening of heart failure or due to acute coronary syndrome.",
+            "description": "The 1st co-primary outcome parameter is defined as the time to the first occurrence of a composite of cardiovascular death, stroke / transient ischemic attack (TIA), and hospitalization due to worsening of heart failure or due to acute coronary syndrome. The second co-primary outcome is nights spent in hospital per year. The 2nd co-primary outcome is nights spent in hospital per year.",
+            "timeFrame": "8 years"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Key 2d outcomes: Each of the components of the 1st outcome, time to recurrent AF, cv hospitalizations, all-cause hospitalizations, left ventricular function, QL, cognitive function, cost of therapy.",
+            "description": "The 2d outcome parameters are defined as -all-cause death, AF-related death, time to the 1. occurrence of each of the components of the 1st co-primary outcome, time to recurrent AF (paroxysmal, persistent, long-lasting persistent, permanent) ,AF burden,time to 1. therapy change, time to 1. cv hosp., nr of cv hosp., left ventricular function at 24 months, QoL changes at 24 months and at study termination comp. to baseline, health-related cost calculation and cost of outpatient treatment, change of cognitive function at 24 months compared to BL, cardiac rhythm (sinus rhythm vs. AF), time to: -first symptomatic AF recurrence, -first progression of AF (from paroxysmal to persistent or long-la...",
+            "timeFrame": "8 years"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Usual care closely follows the suggestions laid out in the current European Society of Cardiology (ESC) guidelines for AF treatment. In addition to antithrombotic therapy and therapy of underlying heart disease, usual care usually consists of an initial attempt to control symptoms by rate control therapy. Rhythm control interventions are recommended when symptoms can not be controlled by optimal rate control therapy in the usual care group."
+          },
+          {
+            "id": "2",
+            "title": "Patients in the early therapy group will be treated following the same therapeutic recommendations of the ESC guidelines as the usual care group. In addition, rhythm control therapy will be initiated early with the aim of preventing recurrence and delaying or preventing progression of AF.\n\nEarly-onset rhythm control therapy can consist of:\n\n1. Optimal antiarrhythmic drug therapy (Dronedarone, Amiodarone, Flecainide, Propafenone),\n2. Catheter ablation with the aim of pulmonary vein isolation (PVI),\n3. Antiarrhythmic drug therapy and catheter ablation may be supplemented by early cardioversion in patients with persistent AF.\n\nAll individual treatment decisions will be taken by the treating study physician considering the labelling of the procedures and drugs and patient preferences."
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT05514860",
+        "title": "The Impact of \"First-Line\" Rhythm Therapy on AF Progression",
+        "status": "UNKNOWN",
+        "startDate": "2017-01",
+        "completionDate": "2022-11",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "The Impact of \"First-Line\" Rhythm Therapy on AF Progression",
+        "acronym": "PROGRESSIVE-AF",
+        "briefSummary": "The PROGRESSIVE-AF Trial is a national, multi-center randomized controlled trial comparing early (\"first-line\") catheter-based pulmonary vein isolation (PVI) using cryothermal energy to first-line anti-arrhythmic drug therapy. The aim of the trial is to evaluate if the initial treatment choice (ablation vs. pharmacotherapy) influences AF disease progression, as measured by continuous cardiac monitoring. The outcomes of interest are disease progression, quality of life, and healthcare utilisation. The targeted population consists of healthy patients with symptomatic paroxysmal AF without clinically significant heart diseases aged between 18 and 75 years. This study represents a new research project leveraging the existing EARLY-AF randomised clinical trial infrastructure to examine the novel endpoints of: 1) disease progression (\"time to first episode of persistent AF\"), 2) progressive AF burden (\"% time in AF\"), 3) Quality of Life, and 4) healthcare utilisation at 36 months of follow-up.",
+        "detailedDescription": "Project Aim: Atrial fibrillation is a major burden to healthcare systems. Contemporary costs of managing AF have been estimated to be up to 2.7% of total annual healthcare expenditures. A significant proportion of these expenses result from the direct costs associated with hospitalization and acute care. The CANet funded EARLY-AF Study aimed to determine whether EARLY invasive intervention resulted in a significant (i.e. \\>20%) reduction in arrhythmia recurrence and health care utilisation at one year of follow-up. The PROGRESSIVE AF study aims to evaluate the long-term effect of EARLY invasive intervention on disease progression and health care utilisation. Project Background: Atrial fibrillation (AF) is a chronic progressive disease characterized by exacerbations and remissions. Early on, AF is triggered by one or more ectopic foci in the atria and is perpetuated via micro re-entrant circuits in the atrial body or at the pulmonary venous-left atrial junction. With recurrent episodes the atria undergoes electrical, contractile, and structural remodelling resulting in a greater predisposition toward sustained arrhythmia. This results in the progression of incidental and paroxysmal (self-terminating) AF to persistent (AF requiring intervention for termination) and eventually permanent AF (recurrent AF of \\>1 year in duration for which cardioversion was unsuccessful). While anti-arrhythmic drugs (AADs) remain the \"first-line\" therapy, these medications have only modest efficacy at maintaining sinus rhythm over the long term. Moreover, these agents are associated with significant non-cardiac side-effects (e.g. heart failure or organ toxicity), as well as the potential for pro-arrhythmia (i.e. increased propensity towards malignant arrhythmias). Conversely, multiple randomized controlled trials have demonstrated that catheter ablation is superior to drug therapy in maintaining sinus rhythm when AADs have been ineffective, are contra-indicated or cannot be tolerated....",
+        "sponsor": {
+          "name": "University of British Columbia",
+          "class": "OTHER"
+        },
+        "phases": [
+          "NA"
+        ],
+        "enrollment": {
+          "count": 303,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Atrial Fibrillation"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "90 Years",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Non-permanent AF documented on a 12 lead ECG, Trans Telephonic Monitoring (TTM) or Holter monitor within the last 24 months * Age of 18 years or older on the date of consent * Candidate for ablation based on AF that is symptomatic * Informed Consent Exclusion Criteria: * Regular (daily) use of a class 1 or 3 antiarrhythmic drug (pill-in-the-pocket AAD use is permitted) at sufficient therapeutic doses according to guidelines (flecainide \\>50 mg BID, sotalol \\>80 mg BID, propafenone \\>150 mg BID Previous left atrial (LA) ablation or LA surgery * AF due to reversible cause (e.g. hyperthyroidism, cardiothoracic surgery) * Active Intracardiac Thrombus * Pre-existing pulmonary vein stenosis or PV stent * Pre-existing hemidiaphragmatic paralysis * Contraindication to anticoagulation or radiocontrast materials * Left atrial anteroposterior diameter greater than 5.5 cm by transthoracic echocardiography * Cardiac valve prosthesis * Clinically significant (moderately-severe, or severe) mitral valve regurgitation or stenosis * Myocardial infarction, PCI / PTCA, or coronary artery stenting during the 3-month period preceding the consent date * Cardiac surgery during the three-month interval preceding the consent date * Significant congenital heart defect (including atrial septal defects or PV abnormalities but not including PFO) * NYHA class III or IV congestive heart failure * Left ventricular ejection fraction (LVEF) less than 35% * Hypertrophic cardiomyopathy (..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Time to First Occurrence of Persistent Atrial Tachyarrhythmia",
+            "description": "time to first occurrence of symptomatic or asymptomatic persistent atrial tachyarrhythmia (atrial fibrillation \\[AF\\], atrial flutter \\[AFL\\], or atrial tachycardia \\[AT\\]), as defined as the first occurrence of a continuous atrial tachyarrhythmia episode lasting ≥ 7 days in duration, or lasting 48 hours to 7 days in duration but requiring cardioversion for termination, as documented by implantable loop recorder.",
+            "timeFrame": "Between 91 days following treatment initiation to final follow-up (~36 months)"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Atrial Fibrillation Burden",
+            "description": "Percentage time in atrial fibrillation",
+            "timeFrame": "Treatment initiation to final follow-up (~36 months)"
+          },
+          {
+            "measure": "Health Related Quality of Life",
+            "description": "Change in disease-specific AFEQT score, and Generic EQ-5D score from baseline",
+            "timeFrame": "Baseline, 12, 24, and 36 months following treatment initiation"
+          },
+          {
+            "measure": "Symptom Status",
+            "description": "Number of participants free from symptoms attributable to atrial fibrillation",
+            "timeFrame": "Baseline, 12, 24, and 36 months following treatment initiation"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Sinus rhythm control via a pulmonary vein isolation (PVI) (\"first-line\") procedure utilizing the the Arctic Front Cryoballoon Procedure."
+          },
+          {
+            "id": "2",
+            "title": "Sinus rhythm control via the use of anti-arrhythmic drug (AAD) therapy (\"first-line\") based on local clinical practice, and according to guideline-suggested drug management for symptomatic patients with paroxysmal AF."
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT02825979",
+        "title": "Early Aggressive Invasive Intervention for Atrial Fibrillation",
+        "status": "UNKNOWN",
+        "startDate": "2017-01",
+        "completionDate": "2022-11",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Early Aggressive Invasive Intervention for Atrial Fibrillation",
+        "acronym": "EARLY-AF",
+        "briefSummary": "The EARLY-AF study is centered on an evaluation of the impact of the early invasive management of Atrial Fibrillation. The primary goal of the study is to evaluate the clinical effectiveness of an early invasive approach. Specifically, the investigators are aiming to evaluate if PVI performed with the Arctic Front cryoballoon is superior to AAD as first-line therapy in preventing atrial arrhythmia recurrences (arrhythmia related symptoms, hospitalisations, and health care utilization) and health care utilisation at one year of follow-up. The aim of the extended follow-up phase of the trial (PROGRESSIVE-AF) is to evaluate if the initial treatment choice (ablation vs. pharmacotherapy) influences AF disease progression, as measured by continuous cardiac monitoring. The outcomes of interest are disease progression, quality of life, and healthcare utilisation.",
+        "detailedDescription": "Atrial fibrillation (AF) is the most common sustained arrhythmia seen in clinical practice, affecting approximately 1-2% of the overall population. Contemporary guidelines recommend AADs as the \"first-line\" therapy for the maintenance of sinus rhythm. However, these medications have only modest efficacy at maintaining sinus rhythm. Moreover, these agents are associated with significant non-cardiac side-effects, as well as the potential for pro-arrhythmia, heart failure, or organ toxicity. Conversely, the success rate of catheter ablation in maintaining sinus rhythm is universally superior to that of drug therapy when AADs have been ineffective, are contra-indicated, or cannot be tolerated. While catheter ablation has not been definitively proven to improve survival, it has been shown to be superior to AADs for the improvement of symptoms, exercise capacity, and quality of life. Why consider early invasive intervention? Given the superiority of ablation over AAD therapy, it is postulated that early invasive intervention with catheter ablation offers an opportunity to halt the progressive pathophysiological and anatomical changes associated with AF. While catheter ablation has not been definitively proven to impact mortality in unselected patients, there are certain patient groups (e.g. younger patients, those with newly diagnosed AF, and those with heart failure) who may derive significant benefit from ablation. In addition, early invasive intervention may result in a significant reduction in overall health care utilitization. The evidence supporting \"first-line\" catheter ablation (i.e. as an initial therapy prior to AAD) with radiofrequency (RF) energy is promising, but far from definitive. To date three key studies have been performed. The MANTRA-PAF Study and the RAAFT studies randomized patients to either first-line ablation or first-line AADs. Despite disparate ablation techniques, these studies collectively demonstrated an improved freedom from recurrent arr...",
+        "sponsor": {
+          "name": "Jason Andrade",
+          "class": "OTHER"
+        },
+        "phases": [
+          "NA"
+        ],
+        "enrollment": {
+          "count": 303,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Atrial Fibrillation"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: • Non-permanent AF documented on a 12 lead ECG, Trans Telephonic Monitoring (TTM) or Holter monitor within the last 24 months, defined as: i) Low Burden Paroxysmal - ≥2 episodes of AF over the past 12 months; Episodes terminate spontaneously within 7 days or via cardioversion within 48 hours of onset. ii) High Burden Paroxysmal - ≥4 episodes of AF over the past 6 months, with ≥2 episodes \\>6 hours in duration; Episodes terminate spontaneously within 7 days or via cardioversion within 48 hours of onset. iii) Early Persistent - ≥2 episodes of AF over the past 12 months; Episodes are successfully terminated via cardioversion within 7 days of onset. * Age of 18 years or older on the date of consent * Candidate for ablation based on AF that is symptomatic * Informed Consent Exclusion Criteria: * Regular (daily) use of a class 1 or 3 antiarrhythmic drug (pill-in-the-pocket AAD use is permitted) at sufficient therapeutic doses according to guidelines (flecainide \\>50 mg BID, sotalol \\>80 mg BID, propafenone \\>150 mg BID * Previous left atrial (LA) ablation or LA surgery * AF due to reversible cause (e.g. hyperthyroidism, cardiothoracic surgery) * Active Intracardiac Thrombus * Pre-existing pulmonary vein stenosis or PV stent * Pre-existing hemidiaphragmatic paralysis * Contraindication to anticoagulation or radiocontrast materials * Left atrial anteroposterior diameter greater than 5.5 cm by transthoracic echocardiography * Cardiac valve prosthesis * Clinicall..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Time to recurrence of symptomatic or asymptomatic Atrial Fibrillation, Atrial Flutter or Atrial Tachycardia",
+            "description": "The single procedure success (in the absence of AAD) is defined as the time to first recurrence of symptomatic\\*\\* or asymptomatic AF, atrial flutter, or atrial tachycardia (AF/AFL/AT) documented by 12-lead ECG, surface ECG rhythm strips, ambulatory ECG monitor, or on implantable loop recorder and lasting 120 seconds or longer as adjudicated by a blinded group of investigators between days 91 and 365 post randomization.",
+            "timeFrame": "Time to first recurrence between days 91 and 365 following treatment initiation"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Time to recurrence of symptomatic AF/AFL/AT",
+            "description": "Time to first recurrence of symptomatic documented AF/AFL/AT between days 91 and 365 after ablation or a repeat ablation procedure between days 0 and 365 post ablation.",
+            "timeFrame": "Time to first recurrence between day 0 and 365 post Ablation"
+          },
+          {
+            "measure": "Total arrhythmia burden",
+            "description": "Total arrhythmia burden (daily AF burden - hours/day; overall AF burden - % time in AF)",
+            "timeFrame": "From 91 to 365 days following treatment initiation"
+          },
+          {
+            "measure": "Total arrhythmia burden",
+            "description": "Total arrhythmia burden (daily AF burden - hours/day; overall AF burden - % time in AF)",
+            "timeFrame": "From 91 days following treatment initiation to final follow-up (~36 months)"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Sinus rhythm control via a pulmonary vein isolation (PVI) (\"first-line\") procedure utilizing the the Arctic Front Cryoballoon Procedure."
+          },
+          {
+            "id": "2",
+            "title": "Sinus rhythm control via the use of anti-arrhythmic drug (AAD) therapy (\"first-line\") based on local clinical practice, and according to guideline-suggested drug management for symptomatic patients with paroxysmal AF."
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT05328882",
+        "title": "Early Recurrences of Atrial Arrhythmias and Their Impact on Late Recurrence After Pulmonary Vein Isolation With Pulsed Field Ablation of Paroxysmal Atrial Fibrillation",
+        "status": "UNKNOWN",
+        "startDate": "2021-11-17",
+        "completionDate": "2024-05-17",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "Early Recurrences of Atrial Arrhythmias and Their Impact on Late Recurrence After Pulmonary Vein Isolation With Pulsed Field Ablation of Paroxysmal Atrial Fibrillation",
+        "acronym": "",
+        "briefSummary": "This is a prospective, single-arm study conducted in University Hospital of Split, Department of Cardiology. Patients treated with PFA for symptomatic paroxysmal atrial fibrillation will be asked to participate in the study. An implantable loop recorder (ILR) will be placed immediately after the PFA procedure for rhythm monitoring. Early recurrences will be subsequently divided into very early recurrences (up to 1 month post-procedure) and early recurrences (1-3 months post-procedure). Late recurrences will be defined as those 3 to 12 months post-procedure. Patients will be monitored routinely through follow up visits during which ILR will be interrogated and eventual symptoms will be assessed. Follow-up visits will be scheduled 1, 3, 6, 12 months post-procedure. Median follow-up will be 12 months. Data for the study will be obtained from a loop monitor to assess the arrhythmia burden during follow-up visits in the University Hospital of Split Arrhythmia Clinic.",
+        "detailedDescription": "This is a prospective, single-arm study conducted in the University Hospital of Split, Department of Cardiology. Patients treated with PFA for symptomatic paroxysmal atrial fibrillation will be asked to participate in the study. An implantable loop recorder (ILR) will be placed immediately after the PFA procedure for rhythm monitoring. Early recurrences will be subsequently divided into very early recurrences (up to 1-month post-procedure) and early recurrences (1-3 months post-procedure). Late recurrences will be defined as those 3 to 12 months post-procedure. Patients will be monitored routinely through follow-up visits during which ILR will be interrogated and eventual symptoms will be assessed. Follow-up visits will be scheduled 1, 3, 6, and 12 months post-procedure. The median follow-up will be 12 months. Data for the study will be obtained from a loop monitor to assess the arrhythmia burden during follow-up visits in the University Hospital of Split Arrhythmia Clinic. For PVI, the \"single-shot\" multielectrode PFA catheter will be used. This catheter consists of 5 splines, with 4 electrodes per spline and 1 electrode available for intracardiac electrogram recording or 3-dimensional electroanatomic visualization. When used in conjunction with the PFA generator, an electric field is created that ablates tissue using irreversible electroporation. The catheter shape is changed through the manipulation of a slider mechanism on the handle of the catheter. The diameter of the catheter is measured in the fully deployed \"flower\" configuration and is available in 2 sizes (31 or 35 mm). Energy is delivered through all of the electrodes in a proprietary sequence. All patients will be asked to provide written informed consent for their respective protocol before undergoing the study. All procedures will be performed with conscious sedation and propofol bolus synchronized to sets of PFA applications. The procedures will be performed with uninterrupted oral anticoagulation...",
+        "sponsor": {
+          "name": "University of Split, School of Medicine",
+          "class": "OTHER"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 40,
+          "type": "ESTIMATED"
+        },
+        "conditions": [
+          "Atrial Fibrillation Paroxysmal",
+          "Recurrence"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "75 Years",
+          "healthyVolunteers": null,
+          "criteria": "Inclusion Criteria: * Age \\>18 * Index PFA procedure after one failed or intolerant group I or III of the antiarrhythmic drug in patients with symptomatic paroxysmal AF (AF with self-terminating episodes lasting no longer than 7 continuous days) * Willing and able to provide informed consent. Exclusion Criteria: * Any known contraindication to AF ablation or anticoagulation. * History of previous left atrial ablation or surgical treatment. * Secondary AF due to reversible or non-cardiac cause such as thyroid disease and electrolyte imbalance. * Asymptomatic AF patients, persistent AF, permanent AF patients. * History of clotting or bleeding disease or cryoglobulinemia. * Pregnant or lactating. * Other conditions that may make the patient a poor candidate for procedure such as mental illness, terminal illness, vulnerable patient population."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Number of participants with AF recurrence 3-12 months post-procedure",
+            "description": "Number of participants with AF recurrence 3-12 months post-procedure (AF burden defined by loop recorder findings)",
+            "timeFrame": "12 months"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Adverse event rate",
+            "description": "Adverse event rate defined as any untoward medical occurrence, unintended disease or injury related to all aspects of the ablation procedure (death, air embolism, myocardial infarction, stroke, esophageal injury, PV stenosis, puncture site hematoma, vascular lesions).",
+            "timeFrame": "12 months"
+          },
+          {
+            "measure": "Number of patients with very early AF recurrence (within 1 month post procedure)",
+            "description": "Number of patients with very early AF recurrence (within 1 month post procedure)",
+            "timeFrame": "12 months"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Patients with an early recurrence after pulsed field ablation of paroxysmal atrial fibrillation."
+          },
+          {
+            "id": "2",
+            "title": "Patients without an early recurrence after pulsed field ablation of paroxysmal atrial fibrillation."
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "not_randomized_interventional",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      }
+    ],
+    "exclusionReasons": {
+      "not_completed": 5,
+      "no_results_posted": 6,
+      "no_extractable_numeric_outcome": 6,
+      "not_randomized_interventional": 2
+    },
+    "portfolioEligible": true,
+    "priorityTier": "promising"
+  }
+}

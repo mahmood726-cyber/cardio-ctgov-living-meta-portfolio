@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thrombus Aspiration in STEMI | Validation Plan</title>
+    <link rel="icon" href="data:," />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f6fb;
+        --ink: #16213e;
+        --muted: #5b657a;
+        --card: #ffffff;
+        --line: #d8e0f0;
+        --accent: #0f5c7a;
+        --accent-soft: #e0f1f8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 44%, #ffffff 100%);
+        color: var(--ink);
+        font: 16px/1.55 "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      }
+      main {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 20px 56px;
+      }
+      .hero {
+        display: grid;
+        gap: 16px;
+        padding: 28px;
+        background: radial-gradient(circle at top left, #dceefe 0%, #ffffff 55%);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 16px 48px rgba(15, 52, 96, 0.08);
+      }
+      .kicker {
+        margin: 0;
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+      h1, h2 { margin: 0; }
+      p { margin: 0; color: var(--muted); }
+      .grid {
+        display: grid;
+        gap: 16px;
+        margin-top: 22px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+      }
+      .card strong {
+        display: block;
+        font-size: 1.75rem;
+        color: var(--ink);
+      }
+      .section {
+        margin-top: 24px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px;
+      }
+      pre {
+        margin: 12px 0 0;
+        white-space: pre-wrap;
+        overflow-x: auto;
+        background: #0d1b2a;
+        color: #eff6ff;
+        padding: 14px;
+        border-radius: 14px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+        padding: 10px 8px;
+      }
+      th {
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .pillbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .pill {
+        background: var(--accent-soft);
+        border: 1px solid #b9d9e7;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        color: var(--ink);
+      }
+      iframe {
+        width: 100%;
+        min-height: 420px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #111827;
+      }
+      a { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <p class="kicker">CT.gov Validation Pack</p>
+        <h1>Thrombus Aspiration in STEMI</h1>
+        <p>Separate cardiovascular living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-03-28. Only randomized comparative records with posted results and extractable numeric outcomes are eligible.</p>
+        <div class="pillbar">
+          <span class="pill">Priority tier: Early</span>
+          <span class="pill">Included RCTs: 2</span>
+          <span class="pill">Scanned records: 46</span>
+          <span class="pill">Pages fetched: 1</span>
+          <span class="pill">Domain: Coronary Artery Disease</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card"><span>Base query</span><strong>(STEMI OR myocardial infarction) AND (&quot;thrombus aspiration&quot; OR thrombectomy)</strong></article>
+        <article class="card"><span>Keyword pack</span><strong>TASTE, TOTAL, TAPAS</strong></article>
+        <article class="card"><span>Validation files</span><strong><a href="validation.json">validation.json</a></strong></article>
+        <article class="card"><span>App entry</span><strong><a href="index.html">index.html</a></strong></article>
+      </section>
+
+      <section class="section">
+        <h2>Protocol Framing And Review Question</h2>
+        <p>This plan treats the registry-native topic as a living protocol artifact rather than a link collection. The PICO framing and workflow below define what enters the snapshot, how records are screened, and how benchmark reconciliation should be performed before review sign-off.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Population</td><td>Coronary Occlusion; Thrombosis (Stent Thrombosis); Vascular Disease; Myocardial Ischemia; Coronary Artery Stenosis; Coronary Disease</td></tr>
+            <tr><td>Interventions</td><td>XIENCE V EECSS; CYPHER SELECT PLUS SECSS; Coronary PCI Guided by OCT; Coronary PCI Guided by IVUS; Coronary PCI Guided by Angiography</td></tr>
+            <tr><td>Comparators</td><td>CYPHER SELECT PLUS SECSS vs XIENCE V EECSS; Coronary PCI Guided by IVUS vs Coronary PCI Guided by OCT | Coronary PCI Guided by Angiography vs Coronary PCI Guided by OCT</td></tr>
+            <tr><td>Outcomes</td><td>In-stent Late Loss (LL); Primary Safety Endpoint (Non-powered): Number of Participants With Procedural MACE (Major Adverse Cardiac Event)</td></tr>
+            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exact CT.gov Search Query</h2>
+        <pre>(STEMI OR myocardial infarction) AND (&quot;thrombus aspiration&quot; OR thrombectomy) AND (&quot;TASTE&quot; OR &quot;TOTAL&quot; OR &quot;TAPAS&quot;)</pre>
+      </section>
+
+      <section class="section">
+        <h2>Information Sources And Search History</h2>
+        <p>The project was generated directly from the ClinicalTrials.gov v2 API using the exact query below, then checked against publication-oriented benchmark searches so reviewers can compare the registry-native set against the broader literature.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://clinicaltrials.gov/search?term=(STEMI%20OR%20myocardial%20infarction)%20AND%20(%22thrombus%20aspiration%22%20OR%20thrombectomy)%20AND%20(%22TASTE%22%20OR%20%22TOTAL%22%20OR%20%22TAPAS%22)" target="_blank" rel="noopener">CT.gov query</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Thrombus%20Aspiration%20in%20STEMI%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">PubMed meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Thrombus%20Aspiration%20in%20STEMI%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">PubMed randomized-trial search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Source</th>
+              <th>Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>CT.gov candidate scan started</td>
+          <td>ClinicalTrials.gov v2 API</td>
+          <td>2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Base query locked</td>
+          <td>Project generator</td>
+          <td>(STEMI OR myocardial infarction) AND (&quot;thrombus aspiration&quot; OR thrombectomy)</td>
+        </tr>
+
+        <tr>
+          <td>Keyword expansion applied</td>
+          <td>Project generator</td>
+          <td>3 terms: TASTE, TOTAL, TAPAS</td>
+        </tr>
+
+        <tr>
+          <td>Exact query executed</td>
+          <td>ClinicalTrials.gov</td>
+          <td>(STEMI OR myocardial infarction) AND (&quot;thrombus aspiration&quot; OR thrombectomy) AND (&quot;TASTE&quot; OR &quot;TOTAL&quot; OR &quot;TAPAS&quot;)</td>
+        </tr>
+
+        <tr>
+          <td>Registry records screened</td>
+          <td>ClinicalTrials.gov</td>
+          <td>46 records across 1 page(s)</td>
+        </tr>
+
+        <tr>
+          <td>Hard-gate exclusions applied</td>
+          <td>Generator eligibility rules</td>
+          <td>44 records excluded before synthesis</td>
+        </tr>
+
+        <tr>
+          <td>Quantitative snapshot frozen</td>
+          <td>validation.json</td>
+          <td>2 randomized trials entered the reviewer pack</td>
+        </tr>
+
+        <tr>
+          <td>Project package generated</td>
+          <td>Portfolio build</td>
+          <td>2026-03-28</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Selection And Synthesis Workflow</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Rule</th>
+              <th>Evidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Question framing</td>
+          <td>Topic slug, base query, and keyword pack frozen before generation</td>
+          <td>thrombus-aspiration-stemi | 2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Registry screening</td>
+          <td>ClinicalTrials.gov v2 API queried with the exact string shown below</td>
+          <td>46 candidate records screened</td>
+        </tr>
+
+        <tr>
+          <td>Eligibility gate</td>
+          <td>Randomized interventional, completed, posted results, &gt;=2 arms, numeric outcome</td>
+          <td>2 included / 44 excluded</td>
+        </tr>
+
+        <tr>
+          <td>Extraction</td>
+          <td>Outcome groups, sponsor, eligibility, documents, and demographics preserved where available</td>
+          <td>2/2 studies with demographics</td>
+        </tr>
+
+        <tr>
+          <td>Reviewer validation</td>
+          <td>Benchmark ledger and topic-aware WebR runner bundled with each topic project</td>
+          <td>validation.json + plan.html + embedded runner</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>PRISMA Flow Summary</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Count</th>
+              <th>Reviewer Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Records identified from the exact CT.gov query</td>
+          <td>46</td>
+          <td>1 page(s) fetched</td>
+        </tr>
+
+        <tr>
+          <td>Records excluded by registry hard gates</td>
+          <td>44</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+        </tr>
+
+        <tr>
+          <td>Trials entering the quantitative snapshot</td>
+          <td>2</td>
+          <td>Included in validation.json and the live topic app</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Eligibility Rules</h2>
+        <div class="pillbar">
+          <span class="pill">Interventional</span>
+          <span class="pill">Randomized</span>
+          <span class="pill">Completed</span>
+          <span class="pill">Posted CT.gov results</span>
+          <span class="pill">At least 2 arms</span>
+          <span class="pill">Numeric outcome extractable</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <span>Protocol metadata coverage</span>
+          <strong>2/2</strong>
+          <p>Trials with a retained CT.gov brief summary excerpt.</p>
+        </article>
+        <article class="card">
+          <span>Demographics coverage</span>
+          <strong>2/2</strong>
+          <p>Trials with a retained baseline characteristics snapshot.</p>
+        </article>
+        <article class="card">
+          <span>Document coverage</span>
+          <strong>0/2</strong>
+          <p>Trials with protocol or source documents listed on CT.gov.</p>
+        </article>
+        <article class="card">
+          <span>Total reported enrollment</span>
+          <strong>996</strong>
+          <p>Summed from the CT.gov enrollment field across included studies.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Included Trial Ledger</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Sponsor</th>
+              <th>Phase</th>
+              <th>Enrollment</th>
+              <th>Status</th>
+              <th>Start</th>
+              <th>Completion</th>
+              <th>Arms</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01178268" target="_blank" rel="noopener">NCT01178268</a></td>
+          <td>XIENCE V Everolimus Eluting Coronary Stent System (EECSS) China: Post-Approval Randomized Control Trial (RCT)</td>
+          <td>Abbott Medical Devices (INDUSTRY)</td>
+          <td>Phase 4</td>
+          <td>546 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2010-08-01</td>
+          <td>2014-09-01</td>
+          <td>Patients who will receive this stent. | Patients who will receive this stent.</td>
+          <td>In-stent Late Loss (LL)</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02471586" target="_blank" rel="noopener">NCT02471586</a></td>
+          <td>OPTIMIZE PCI: Multicenter Randomized Trial of OCT Compared to IVUS and Angiography to Guide Coronary Stent Implantation</td>
+          <td>Abbott Medical Devices (INDUSTRY)</td>
+          <td>NA</td>
+          <td>450 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2015-05-01</td>
+          <td>2017-04-25</td>
+          <td>Intervention = Coronary stenting with planned drug eluting stent (DES).
+
+Stenting will be performed with IVUS guidance according to local standard practice. IVUS imaging is required pre and post stent implantation.
+
+At the end of the procedure, a final IVUS imaging run must be performed.
+
+After the final IVUS run, a blinded OCT imaging run shall be performed to document final stent dimensions and results. | Intervention = Coronary stenting with planned drug eluting stent (DES).
+
+Stenting will be performed with OCT guidance according to the algorithm described in the protocol. OCT imaging is required pre and post stent implantation.
+
+At the end of the procedure, a final OCT imaging run must be performed. | Intervention = Coronary stenting with planned drug eluting stent (DES).
+
+Stenting will be performed with angiography guidance according to local standard practice.
+
+At the end of the procedure, a blinded OCT shall be performed to document final stent dimensions and results.</td>
+          <td>Primary Safety Endpoint (Non-powered): Number of Participants With Procedural MACE (Major Adverse Cardiac Event)</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Study Eligibility And Demographics</h2>
+        <p>This table keeps the trial-level age, sex, participant-count, and registry eligibility fields next to the inclusion decision so readers can challenge the clinical comparability of the pooled set.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Eligibility</th>
+              <th>Participant Counts</th>
+              <th>Age Snapshot</th>
+              <th>Sex Snapshot</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01178268" target="_blank" rel="noopener">NCT01178268</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>XIENCE V EECSS: 367 Participants | CYPHER SELECT PLUS SECSS: 121 Participants | Total: 488 Participants</td>
+          <td>XIENCE V EECSS: 58.60 +/- 10.65 years | CYPHER SELECT PLUS SECSS: 58.74 +/- 9.12 years | Total: 58.64 +/- 10.28 years</td>
+          <td>XIENCE V EECSS: F 95 / M 272 | CYPHER SELECT PLUS SECSS: F 40 / M 81 | Total: F 135 / M 353</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02471586" target="_blank" rel="noopener">NCT02471586</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Coronary PCI Guided by OCT: 158 Participants | Coronary PCI Guided by IVUS: 146 Participants | Coronary PCI Guided by Angiography: 146 Participants | Total: 450 Participants</td>
+          <td>Coronary PCI Guided by OCT: 65.5 +/- 9.3 years | Coronary PCI Guided by IVUS: 65.8 +/- 9.5 years | Coronary PCI Guided by Angiography: 65.4 +/- 11.2 years | Total: 65.6 +/- 10.0 years</td>
+          <td>Coronary PCI Guided by OCT: F 49 / M 109 | Coronary PCI Guided by IVUS: F 39 / M 107 | Coronary PCI Guided by Angiography: F 39 / M 107 | Total: F 127 / M 323</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Record Excerpts</h2>
+        <p>Brief summaries, eligibility text, primary outcome descriptions, and source documents are surfaced here so reviewers can verify that the extracted numerical contrast is clinically aligned with the underlying registry record.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Brief Summary</th>
+              <th>Eligibility Excerpt</th>
+              <th>Primary Outcome Excerpt</th>
+              <th>Source Documents</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01178268" target="_blank" rel="noopener">NCT01178268</a></td>
+          <td>This is a prospective, randomized, active-controlled, open label, parallel two-arm, multi-center, post-approval study descriptively comparing the XIENCE V EECSS to the CYPHER SELECT PLUS Sirolimus-Eluting Coronary Stent System (SECSS) (&quot;CYPHER SELECT PLUS&quot;) during commercial use in China.</td>
+          <td>Inclusion Criteria: * General Inclusion Criteria 1. Patient must be at least 18 years of age 2. The patient or patient&#39;s legally-authorized representative agrees to participate in this study by signing the Ethics Committee (EC)-approved ICF prior to procedu...</td>
+          <td>In-stent Late Loss (LL) | Time frame: &gt;=13 months | This is the primary angiographic endpoint. In-stent LL: The difference between the minimum lumen diameter (MLD) immediately after stent deployment and the MLD at follow-up (within stent) || Ischemia-driven Target Vessel Failure (ID-TVF) | Time frame: 12 months | Th...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02471586" target="_blank" rel="noopener">NCT02471586</a></td>
+          <td>The objective of this clinical investigation is to demonstrate the safety and efficacy of an OCT guided strategy for stent implantation</td>
+          <td>General Inclusion Criteria: 1. Age ≥ 18 years. 2. Patient with an indication for PCI including: * Angina (stable or unstable), * Silent ischemia (a visually estimated target lesion diameter stenosis of ≥70%, a positive non-invasive stress test, or FFR ≤0.80...</td>
+          <td>Primary Efficacy Endpoint (Powered): Post-PCI Median Minimum Stent Area (MSA) | Time frame: Post-procedure within 1 hour | Post-PCI MSA will be assessed by OCT in each randomized arm, measured at the independent OCT core laboratory blinded to imaging modality assignment. Hierarchal manner testing will be as follows:...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exclusion Reason Counts</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Reason</th>
+              <th>Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>No Extractable Numeric Outcome</td>
+          <td>43</td>
+        </tr>
+
+        <tr>
+          <td>No Results Posted</td>
+          <td>40</td>
+        </tr>
+
+        <tr>
+          <td>Not Completed</td>
+          <td>27</td>
+        </tr>
+
+        <tr>
+          <td>Not Randomized Interventional</td>
+          <td>16</td>
+        </tr>
+
+        <tr>
+          <td>Fewer Than Two Arms</td>
+          <td>8</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Excluded Sample Records</h2>
+        <p>The first 20 excluded records are listed here with excerpts so reviewers can quickly verify why the registry pull did not enter them into the meta-analysis snapshot.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Reasons</th>
+              <th>Record Excerpt</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04236609" target="_blank" rel="noopener">NCT04236609</a></td>
+          <td>Randomized Comparison of Abluminus DES+ Sirolimus-Eluting Stents Versus Everolimus-Eluting Stents in Coronary Artery Disease Patients With Diabetes Mellitus Global</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>To compare in diabetic patients eligible for percutaneous coronary intervention (PCI) with minimal exclusion criteria, the efficacy and safety of Abluminus DES+ sirolimus- eluting stents (SES) versus XIENCE Everolimus-Eluting Stents (EES). At least 40% of p...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03479554" target="_blank" rel="noopener">NCT03479554</a></td>
+          <td>China Antihypertensive Trial in Acute Ischemic Stroke II</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The investigators propose to conduct a multicenter randomized trial to test the primary hypothesis of whether early antihypertensive treatment starting between the first 24-48 hours after the onset of an acute ischemic stroke will reduce the risk of composi...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05367362" target="_blank" rel="noopener">NCT05367362</a></td>
+          <td>Minocycline Efficacy in Improving Neurological Outcome of Patients Who Undergo Endovascular Revascularization for Acute Ischemic Stroke</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The study will be a prospective, randomized, double- blinded placebo, single center pilot clinical trial. Patients with acute ischemic stroke due to large vessel occlusion undergoing endovascular thrombectomy will be included. The treatment group will recei...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT07136883" target="_blank" rel="noopener">NCT07136883</a></td>
+          <td>DCB Outcomes After Plain or Scoring Balloon for Vessel Preparation in Patients With Femoropopliteal Arterial Disease</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The goal of this clinical trial is to learn if using a scoring balloon to prepare the femoropopliteal (FP) segment before drug-coated balloon treatment works better than using a regular balloon (called plain old balloon angioplasty, or POBA). This study inc...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02435797" target="_blank" rel="noopener">NCT02435797</a></td>
+          <td>Effect of Nicorandil for the Patients of Acute ST Segment Elevation Myocardial Infarction</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>To evaluate whether nicorandil as an adjunctive therapy for acute myocardial infarction (AMI) reduces reperfusion injury.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06951724" target="_blank" rel="noopener">NCT06951724</a></td>
+          <td>Coronary Aspiration Catheter Clinical Trial</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>To evaluation of the efficacy and safety of an aspiration catheter in patients undergoing PCI for acute ST-segment elevation myocardial infarction (STEMI).</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01013038" target="_blank" rel="noopener">NCT01013038</a></td>
+          <td>Thrombus Aspiration During Percutaneous Coronary Intervention in Acute Non-ST-elevation Myocardial Infarction Study</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>In this trial, the investigators will evaluate the effect of thrombus aspiration followed by stent implantation in improving myocardial blush grade in patients with acute non-ST-elevation myocardial infarction compared to conventional percutaneous coronary...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05457881" target="_blank" rel="noopener">NCT05457881</a></td>
+          <td>Short-Term Endogenous Hydrogen Sulfide Upregulation For Vein Graft Disease</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>A randomized, controlled trial to evaluate patient compliance and biologic mechanisms of a short-term pre-operative Protein-Calorie Restriction (PCR) diet in comparison to a normal ad libitum diet for 4 days before elective vascular surgery involving a majo...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05084066" target="_blank" rel="noopener">NCT05084066</a></td>
+          <td>A Study on the Phenomenon of Remote Ischaemic Preconditioning in Patients With Peripheral Artery Disease</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>This study aims to evaluate whether remote ischemic preconditioning (RIPC) daily for 28 days reduces the symptoms of intermittent claudication in patients with peripheral artery disease (PAD). The study evaluates the effect of RIPC on patients&#39; total walkin...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05975567" target="_blank" rel="noopener">NCT05975567</a></td>
+          <td>Deploying Novel Imaging Modalities Towards a Three-dimensional (3D) CARDIOvascular PATHology</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, No Extractable Numeric Outcome</td>
+          <td>The goal of the 3D-CARDIOPATH study is to investigate the potential added value of emerging 3D imaging modalities by imaging ex vivo cardiac specimens (diseased coronary arteries, calcific aortic valves, and thrombotic materials) in 3D. Specifically, 20 cad...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02577965" target="_blank" rel="noopener">NCT02577965</a></td>
+          <td>Optical Coherence Tomography Assessment of Gender diVersity In Primary Angioplasty: The OCTAVIA Trial</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Recent studies suggest important gender differences in the pathophysiology and prognosis of ST-segment elevation myocardial infarction (STEMI). This is the first prospective controlled study to assess gender differences in the mechanism of plaque rupture/er...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05455515" target="_blank" rel="noopener">NCT05455515</a></td>
+          <td>The GISE (Società Italiana di Cardiologia Interventistica) - ShockCalcium Registry</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>The GISE-SHOCKCALCIUM Registry is an Investigator Driven Italian All Comers prospective, observational, multicenter Italian IVL registry of Calcified lesions Treated with Intravascular Lithotripsy. The main purpose is to evaluate the efficacy and safety of...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04516993" target="_blank" rel="noopener">NCT04516993</a></td>
+          <td>CHinese Acute Tissue-Based Imaging Selection for Lysis In Stroke -Tenecteplase II</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>To explore the efficacy and safety of tenecteplase for acute ischemic stroke patients (onset time 4.5-24h) of large vessel occlusion using early combined CT/MR imaging outcomes</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02066597" target="_blank" rel="noopener">NCT02066597</a></td>
+          <td>Single Session Percutaneous Mechanical Thrombectomy for the Treatment of Ilio-femoral Deep Vein Thrombosis: A Preliminary Evaluation</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>Venous thromboembolism (VTE) is a common condition that occurs when a clot develops in one of your veins. It affects 5% of the population and is the third most common circulatory condition after heart attack and stroke. People who experience a clot in their...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01383785" target="_blank" rel="noopener">NCT01383785</a></td>
+          <td>Thrombus Aspiration for OcLuded Coronary Artery Enhanced With Distal Injection Of Abciximab</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Aims: (to prove that) The distal injection of IIb IIIa platelet receptor blocker to the thrombus occlusion is better than normal injection during primary percutaneous intervention (PCI) for the treatment of acute myocardial infarction. Using this modificati...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03731884" target="_blank" rel="noopener">NCT03731884</a></td>
+          <td>Proteomic Profiling of Coronary Thrombus in Acute Myocardial Infarction</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, No Extractable Numeric Outcome</td>
+          <td>ST-elevation myocardial infarction (STEMI) is mostly caused by the rupture or the erosion of a vulnerable atherosclerotic plaque, initiating with intraluminal thrombosis and resulting in total occlusion of the coronary artery. Thrombus formation is a comple...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT07026877" target="_blank" rel="noopener">NCT07026877</a></td>
+          <td>Endovascular Repair With Fenestrated TREO Stent-Graft System in AAA</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>The goal of this clinical trial is to learn if the Fenestrated TREO Stent-Graft System works to treat abdominal aneurysms in adults. An abdominal aneurysm is a bulge in the main blood vessel (the aorta) which carries blood from the heart, through the chest...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT07405788" target="_blank" rel="noopener">NCT07405788</a></td>
+          <td>Percutaneous Coronary Intervention for Myocardial Infarction at Fujian Provincial Hospital</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>Research Objectives: This clinical trial aims to evaluate the efficacy and safety of percutaneous coronary intervention (PCI) in patients with myocardial infarction (MI). The primary objective is to determine whether this approach can reduce the incidence o...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01721096" target="_blank" rel="noopener">NCT01721096</a></td>
+          <td>XIENCE PRIME Japan Post-Marketing Surveillance (PMS)</td>
+          <td>Not Randomized Interventional</td>
+          <td>The objectives of the PMS are to observe the frequency, type, and degree of device deficiency to assure the safety of the new medical device (XIENCE PRIME) as well as to collect information on evaluation of the efficacy and safety for reevaluation.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03234348" target="_blank" rel="noopener">NCT03234348</a></td>
+          <td>MAGnesium-based Bioresorbable Scaffold in ST Segment Elevation Myocardial Infarction</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>This is a prospective, randomized, active control, single-blind, non-inferiority, multicenter clinical trial. 148 subjects will be registered at up to 10 Spanish sites. Subjects will be followed for 5 years. All eligible patients (STEMI \&lt; 12 hours from ons...</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Benchmark Reconciliation Ledger</h2>
+        <p>This ledger turns the benchmark step into a structured reviewer task. Use the NCT IDs, contrasts, and outcome definitions below to check study overlap, arm collapsing, and endpoint alignment against published syntheses.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Thrombus%20Aspiration%20in%20STEMI%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Thrombus%20Aspiration%20in%20STEMI%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT</th>
+              <th>Registry Contrast</th>
+              <th>Outcome</th>
+              <th>Enrollment</th>
+              <th>Benchmark Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01178268" target="_blank" rel="noopener">NCT01178268</a></td>
+        <td>CYPHER SELECT PLUS SECSS vs XIENCE V EECSS</td>
+        <td>In-stent Late Loss (LL)</td>
+        <td>546 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02471586" target="_blank" rel="noopener">NCT02471586</a></td>
+        <td>Coronary PCI Guided by IVUS vs Coronary PCI Guided by OCT | Coronary PCI Guided by Angiography vs Coronary PCI Guided by OCT</td>
+        <td>Primary Safety Endpoint (Non-powered): Number of Participants With Procedural MACE (Major Adverse Cardiac Event)</td>
+        <td>450 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Reviewer Validation And Benchmarking</h2>
+        <p>The embedded panel below now runs the shared R benchmark suites plus topic-specific checks for the current CT.gov snapshot. Reviewers should compare the registry-native ledger above against published syntheses, inspect <code>validation.json</code>, and then confirm that the topic-aware runner resolves with the same study universe.</p>
+        <div class="pillbar">
+          <a class="pill" href="validation.json">Open validation.json</a>
+          <a class="pill" href="index.html">Open interactive topic app</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Thrombus%20Aspiration%20in%20STEMI%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Thrombus%20Aspiration%20in%20STEMI%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+          <a class="pill" href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fthrombus-aspiration-stemi%2Fvalidation.json&amp;topic=thrombus-aspiration-stemi&amp;label=Thrombus+Aspiration+in+STEMI" target="_blank" rel="noopener">Open topic-aware WebR runner</a>
+        </div>
+        <iframe id="reviewerValidationFrame" src="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fthrombus-aspiration-stemi%2Fvalidation.json&amp;topic=thrombus-aspiration-stemi&amp;label=Thrombus+Aspiration+in+STEMI" title="WebR reviewer validation" loading="lazy"></iframe>
+        <script>
+(() => {
+  const iframe = document.getElementById("reviewerValidationFrame");
+  const context = {"source":"ctgov-portfolio-generator","topicId":"thrombus-aspiration-stemi","label":"Thrombus Aspiration in STEMI","query":"(STEMI OR myocardial infarction) AND (\"thrombus aspiration\" OR thrombectomy) AND (\"TASTE\" OR \"TOTAL\" OR \"TAPAS\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":2,"excludedCount":44,"totalEnrollment":996,"demographicsCoverage":2,"documentCoverage":0,"comparisons":[{"studyId":"NCT01178268","title":"XIENCE V Everolimus Eluting Coronary Stent System (EECSS) China: Post-Approval Randomized Control Trial (RCT)","t1":"CYPHER SELECT PLUS SECSS","t2":"XIENCE V EECSS","measure":"MD","effect":0.01999999999999999,"se":0.03287861895258666,"n1":98,"n0":279,"totalN":377,"sampleSize":377},{"studyId":"NCT02471586","title":"OPTIMIZE PCI: Multicenter Randomized Trial of OCT Compared to IVUS and Angiography to Guide Coronary Stent Implantation","t1":"Coronary PCI Guided by IVUS","t2":"Coronary PCI Guided by OCT","measure":"logRR","effect":-1.3073059498012602,"se":1.1121248001044919,"n1":146,"n0":158,"totalN":304,"sampleSize":304},{"studyId":"NCT02471586","title":"OPTIMIZE PCI: Multicenter Randomized Trial of OCT Compared to IVUS and Angiography to Guide Coronary Stent Implantation","t1":"Coronary PCI Guided by Angiography","t2":"Coronary PCI Guided by OCT","measure":"logRR","effect":-1.3073059498012602,"se":1.1121248001044919,"n1":146,"n0":158,"totalN":304,"sampleSize":304}],"includedStudies":[{"nctId":"NCT01178268","title":"XIENCE V Everolimus Eluting Coronary Stent System (EECSS) China: Post-Approval Randomized Control Trial (RCT)","status":"COMPLETED","enrollment":546,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"In-stent Late Loss (LL)","groups":[{"title":"XIENCE V EECSS","n":279,"events":null,"mean":0.19,"sd":0.28},{"title":"CYPHER SELECT PLUS SECSS","n":98,"events":null,"mean":0.21,"sd":0.28}]},"primaryOutcomes":[{"measure":"In-stent Late Loss (LL)","timeFrame":">=13 months"},{"measure":"Ischemia-driven Target Vessel Failure (ID-TVF)","timeFrame":"12 months"}]},{"nctId":"NCT02471586","title":"OPTIMIZE PCI: Multicenter Randomized Trial of OCT Compared to IVUS and Angiography to Guide Coronary Stent Implantation","status":"COMPLETED","enrollment":450,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Primary Safety Endpoint (Non-powered): Number of Participants With Procedural MACE (Major Adverse Cardiac Event)","groups":[{"title":"Coronary PCI Guided by OCT","n":158,"events":4,"mean":null,"sd":null},{"title":"Coronary PCI Guided by IVUS","n":146,"events":1,"mean":null,"sd":null},{"title":"Coronary PCI Guided by Angiography","n":146,"events":1,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Primary Efficacy Endpoint (Powered): Post-PCI Median Minimum Stent Area (MSA)","timeFrame":"Post-procedure within 1 hour"},{"measure":"Primary Safety Endpoint (Non-powered): Number of Participants With Procedural MACE (Major Adverse Cardiac Event)","timeFrame":"During procedure, an average of 1 hour"}]}]};
+  if (!iframe || !context) return;
+  const sendContext = () => {
+    if (!iframe.contentWindow) return;
+    iframe.contentWindow.postMessage({ type: "esc-topic-validation-context", payload: context }, "*");
+  };
+  iframe.addEventListener("load", sendContext);
+  window.addEventListener("message", event => {
+    if (event.source === iframe.contentWindow && event.data?.type === "esc-topic-validation-request") {
+      sendContext();
+    }
+  });
+  window.setTimeout(sendContext, 250);
+})();
+</script>
+      </section>
+    </main>
+  </body>
+</html>

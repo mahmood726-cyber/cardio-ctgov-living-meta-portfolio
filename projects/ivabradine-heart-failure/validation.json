@@ -1,0 +1,1006 @@
+{
+  "generatedAt": "2026-03-28T18:45:05.888Z",
+  "sourceStartedAt": "2026-03-28T18:44:01.927Z",
+  "minIncludedTrials": 2,
+  "pageSize": 100,
+  "maxPages": 8,
+  "topic": {
+    "slug": "ivabradine-heart-failure",
+    "label": "Ivabradine in Heart Failure or LV Dysfunction",
+    "domain": "Heart Failure",
+    "baseQuery": "(\"heart failure\" OR \"left ventricular dysfunction\") AND ivabradine",
+    "keywords": [
+      "SHIFT",
+      "BEAUTIFUL",
+      "EDIFY"
+    ],
+    "query": "(\"heart failure\" OR \"left ventricular dysfunction\") AND ivabradine AND (\"SHIFT\" OR \"BEAUTIFUL\" OR \"EDIFY\")",
+    "scannedRecords": 4,
+    "pagesFetched": 1,
+    "truncated": false,
+    "includedCount": 2,
+    "excludedCount": 2,
+    "includedStudies": [
+      {
+        "nctId": "NCT00143507",
+        "title": "The BEAUTIFUL Study: Effects of Ivabradine in Patients With Stable Coronary Artery Disease and Left Ventricular Systolic Dysfunction",
+        "status": "COMPLETED",
+        "startDate": "2004-12",
+        "completionDate": "2008-02",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Effects of Ivabradine on Cardiovascular Events in Patients With Stable Coronary Artery Disease and Left Ventricular Systolic Dysfunction. A Three-year Randomised Double-blind Placebo-controlled International Multicentre Study.",
+        "acronym": "",
+        "briefSummary": "The aim of this study is to test whether ivabradine is able to reduce cardiovascular events when given to patients with coronary artery disease and impaired heart function.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Institut de Recherches Internationales Servier",
+          "class": "OTHER"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 10917,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Coronary Disease",
+          "Ventricular Dysfunction, Left"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Coronary artery disease * Left ventricular systolic dysfunction * Sinus rhythm: heart rate (HR) \\>= 60 beats per minute (bpm) Exclusion Criteria: * Unstable cardiovascular condition * Severe congestive heart failure"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Primary Composite Endpoint",
+            "description": "First event among cardiovascular death, hospitalisation for acute myocardial infarction (fatal or not), or hospitalisation for new onset or worsening heart failure (fatal or not).",
+            "timeFrame": "From the date of randomisation to the date of the first occurrence of the first event, up to 3 years."
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Cardiovascular Death",
+            "description": "Cardiovascular death including sudden death of unknown cause",
+            "timeFrame": "From the date of randomisation to death, up to 3 years."
+          },
+          {
+            "measure": "Hospitalisation for Acute Myocardial Infarction",
+            "description": "",
+            "timeFrame": "From the date of randomisation to the date of first occurrence of the event, up to 3 years."
+          },
+          {
+            "measure": "Hospitalisation for New Onset or Worsening Heart Failure",
+            "description": "",
+            "timeFrame": "From the date of randomisation to the date of first occurrence of the event, up to 3 years."
+          }
+        ],
+        "documents": [],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Ivabradine",
+              "description": "Patients received ivabradine at starting dose of 5 mg twice daily, with a target dose, if HR tolerance criteria were met after two weeks (at the D15 visit), of 7.5 mg twice daily."
+            },
+            {
+              "id": "BG001",
+              "title": "Placebo",
+              "description": "Patients received placebo twice daily."
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Ivabradine",
+              "value": 5479,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": 5438,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 10917,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Ivabradine",
+              "value": "65.3",
+              "spread": "8.5",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": "65",
+              "spread": "8.4",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "65.2",
+              "spread": "8.5",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Ivabradine",
+              "female": 939,
+              "male": 4540
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "female": 931,
+              "male": 4507
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 1870,
+              "male": 9047
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "65.3",
+                      "spread": "8.5"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "65",
+                      "spread": "8.4"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "65.2",
+                      "spread": "8.5"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "939",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "931",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1870",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "4540",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "4507",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "9047",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Beta-blocker intake",
+              "paramType": "NUMBER",
+              "unit": "participants",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "4749",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "4738",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "9487",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "730",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "700",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1430",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Arm 1"
+          },
+          {
+            "id": "2",
+            "title": "Arm 2"
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "Primary Composite Endpoint",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Ivabradine",
+              "n": 5479,
+              "events": 844
+            },
+            {
+              "id": "OG001",
+              "title": "Placebo",
+              "n": 5438,
+              "events": 832
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      },
+      {
+        "nctId": "NCT02441218",
+        "title": "Effects of Ivabradine on Cardiovascular Events in Patients With Moderate to Severe Chronic Heart Failure and Left Ventricular Systolic Dysfunction. A Three-year International Multicentre Study",
+        "status": "COMPLETED",
+        "startDate": "2006-09",
+        "completionDate": "2010-04",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "",
+        "acronym": "SHIFT",
+        "briefSummary": "The primary objective of this study is to demonstrate the superiority of ivabradine over placebo in the reduction of cardiovascular mortality or hospitalisation for worsening heart failure in patients with moderate to severe symptoms of chronic heart failure, a reduced left ventricular ejection fraction and currently receiving recommended therapy for this disease.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Institut de Recherches Internationales Servier",
+          "class": "OTHER"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 6505,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Chronic Heart Failure"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Symptomatic Chronic heart failure (NYHA II, III or IV) * Left ventricular systolic dysfunction (LVEF ≤ 35%) * Sinus rhythm and resting heart rate ≥ 70 bpm * Optimal and unchanged CHF medications or dosages Exclusion Criteria: * Unstable condition within previous 4 weeks * Myocardial infarction or coronary revascularisation within previous 2 months * Stroke or transient cerebral ischaemia within previous 4 weeks * Congenital heart disease * Severe valvular disease * Active myocarditis * Permanent atrial fibrillation or flutter"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Primary Composite Endpoint: First Event Among Cardiovascular Death (Including Death of Unknown Cause) or Hospitalization for Worsening Heart Failure.",
+            "description": "Number of patients having experienced the Primary Composite Endpoint.",
+            "timeFrame": "All over the study (up to 42 months)."
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Cardiovascular Death",
+            "description": "Component of the primary composite endpoint",
+            "timeFrame": "From the date of randomization until the date of death, up to 42 months"
+          },
+          {
+            "measure": "Hospitalisation for Worsening Heart Failure",
+            "description": "",
+            "timeFrame": "From the date of randomization to the date of first documented hospitalisation, up to 42 months"
+          },
+          {
+            "measure": "All-cause Mortality",
+            "description": "",
+            "timeFrame": "From the date of randomisation to death, up to 42 months."
+          }
+        ],
+        "documents": [],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Ivabradine",
+              "description": "Ivabradine: 2.5mg, 5mg or 7.5mg tablets to be taken orally twice daily, at 12-hours intervals, in the morning and in the evening during meals up to 42 months."
+            },
+            {
+              "id": "BG001",
+              "title": "Placebo",
+              "description": "Placebo: Matching placebo tablets to be taken orally twice daily, at 12-hours intervals, in the morning and in the evening during meals up to 42 months."
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Ivabradine",
+              "value": 3241,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": 3264,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 6505,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Ivabradine",
+              "value": "60.7",
+              "spread": "11.2",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": "60.1",
+              "spread": "11.5",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "60.4",
+              "spread": "11.4",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Ivabradine",
+              "female": 779,
+              "male": 2462
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "female": 756,
+              "male": 2508
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 1535,
+              "male": 4970
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "60.7",
+                      "spread": "11.2"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "60.1",
+                      "spread": "11.5"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "60.4",
+                      "spread": "11.4"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "779",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "756",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1535",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "2462",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "2508",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "4970",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Beta-blocker intake at randomization",
+              "paramType": "NUMBER",
+              "unit": "participants",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "2897",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "2923",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "5820",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "344",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "341",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "685",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Arm 1"
+          },
+          {
+            "id": "2",
+            "title": "Arm 2"
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "Primary Composite Endpoint: First Event Among Cardiovascular Death (Including Death of Unknown Cause) or Hospitalization for Worsening Heart Failure.",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Ivabradine",
+              "n": 3241,
+              "events": 793
+            },
+            {
+              "id": "OG001",
+              "title": "Placebo",
+              "n": 3264,
+              "events": 937
+            }
+          ]
+        },
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      }
+    ],
+    "excludedStudies": [
+      {
+        "nctId": "NCT03456856",
+        "title": "A Study of Ivabradine in African-American/ Black Subjects With Heart Failure and Left Ventricular Systolic Dysfunction.",
+        "status": "COMPLETED",
+        "startDate": "2017-09-28",
+        "completionDate": "2019-05-20",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "NA",
+        "officialTitle": "Open-label, Single-arm, Study Assessing the Efficacy and Safety of Ivabradine (Corlanor) in African-American/Black Subjects With Heart Failure and Left Ventricular Systolic Dysfunction",
+        "acronym": "",
+        "briefSummary": "This study is a prospective, open-label, single-arm intervention study in African-American/Black subjects with heart failure and reduced ejection fraction (HFrEF). There will be a 7-day screening period, a 57-day open-label treatment period, and a safety follow-up at day 87 or 30 days after the last administration of the investigational product.",
+        "detailedDescription": "The goal of this study is to determine the impact of adding ivabradine therapy to the standard of care (SOC) in African-American/Black subjects with Heart Failure (HF) and reduced ejection fraction (HFrEF) on changes in heart rate (HR) from baseline (SOC alone). Changes in HR from baseline will be correlated with the changes from baseline in activity level of the subjects, as measured by both a standard 6-minute walk distance and an accelerometer device. The primary hypothesis is that ivabradine effectively reduces HR between baseline and day 57 in African-American/Black subjects. Because mean reductions of approximately 5 beat per minute (bpm) have been observed in the overall placebo-treated subjects in the SHIFT study as well as in the placebo-treated subjects of the subgroup analysis of non-African-American/Black subjects enrolled in the SHIFT study, we will test whether the mean reduction with ivabradine exceeds 5 bpm, and estimate the degree to which the mean reduction with ivabradine exceeds 5 bpm.",
+        "sponsor": {
+          "name": "Amgen",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE4"
+        ],
+        "enrollment": {
+          "count": 30,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Heart Failure (HF)"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "100 Years",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Subject has provided informed consent/assent prior to initiation of any study specific activities/ procedures * Male or female subject ≥ 18 years of age, describing self as African American/Black * Must have a diagnosis of heart failure (HF) confirmed by medical records, be in stable condition, and treated with stable optimal pharmacological therapy as per their personal physician's care. * Left ventricular ejection fraction (LVEF) ≤ 35% confirmed by investigator * New York Heart Association (NYHA) class II to IV assessed at the time of screening * Electrocardiogram (ECG) documentation at the time of screening of sinus rhythm with resting heart rate (HR) ≥ 70 bpm by local ECG reading * Must be able to complete a 6-minute walk test (6MWT) and wear an accelerometer Exclusion Criteria: * Recent myocardial infarction (≤ 2 months) or stroke (≤ 1 month) prior to enrollment * If the subject received within 3 months before or is scheduled to receive within 42 days after enrollment any of the following: revascularization, ventricular assist device, continuous or intermittent inotropic therapy, hospice care, major organ transplant, or is receiving renal replacement therapy by dialysis * If the subject received implantation of a cardioverter defibrillator or cardiac resynchronization therapy within 42 days before or is scheduled to receive implantation of a cardioverter defibrillator or cardiac resynchronization therapy within 42 days after enrollment * Severe p..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Change From Baseline in Heart Rate (HR) at Day 57",
+            "description": "Summary is based on observed data, and no imputation is used for missing values. Least-square mean is from the repeated measures model which includes scheduled visits and baseline HR measurement as covariates. The mean change from baseline in heart rate is compared to -5 beats/min which is observed in the placebo group in the Systolic Heart Failure Treatment with the IF Inhibitor Ivabradine Trial (SHIFT) study ( NCT02441218, PMID 20801500).",
+            "timeFrame": "Day1 (baseline), Day 57"
+          }
+        ],
+        "secondaryOutcomes": [],
+        "documents": [
+          {
+            "label": "Study Protocol",
+            "filename": "Prot_000.pdf",
+            "date": "2019-02-14",
+            "hasSap": false,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          },
+          {
+            "label": "Statistical Analysis Plan",
+            "filename": "SAP_001.pdf",
+            "date": "2019-04-19",
+            "hasSap": true,
+            "hasIcf": false,
+            "hasProtocol": false,
+            "url": ""
+          }
+        ],
+        "demographics": {
+          "populationDescription": "Full analysis set which included all enrolled participants.",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Ivabradine",
+              "description": "The starting dose of ivabradine was 5 mg twice daily (BID), although investigators had the discretion to start participants at 2.5 mg BID if participant had a history of conduction defects, or bradycardia that could lead to hemodynamic compromise. Dose was adjusted at Day 15 (..."
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Ivabradine",
+              "value": 30,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Ivabradine",
+              "value": "55.7",
+              "spread": "12.6",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Ivabradine",
+              "female": 9,
+              "male": 21
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "55.7",
+                      "spread": "12.6"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Age, Customized",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "18-64 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "24",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "65-74 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "5",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "75-84 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": ">=85 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "1",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "9",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "21",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Ethnicity (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Not Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "30",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Unknown or Not Reported",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Ivabradine",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "The starting dose of ivabradine was 5 mg twice daily (BID), although investigators had the discretion to start participants at 2.5 mg BID if participant had a history of conduction defects, or bradycardia that could lead to hemodynamic compromise. Dose was adjusted at Day 15 (and at any other clinical visit) between 2.5 - 7.5 mg BID based on heart rate and signs/symptoms of bradycardia."
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": true,
+        "randomized": false,
+        "completed": true,
+        "reasons": [
+          "not_randomized_interventional",
+          "fewer_than_two_arms",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT05973591",
+        "title": "The Impact of Ivabradine on Left Ventricular Reverse Remodeling in Nonischemic Dilated Cardiomyopathy (NIDCM) on Current Medical Therapy Era",
+        "status": "UNKNOWN",
+        "startDate": "2023-07-15",
+        "completionDate": "2024-12-31",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "The Impact of Ivabradine on Left Ventricular Reverse Remodeling in Nonischemic Dilated Cardiomyopathy (NIDCM) on Current Medical Therapy Era",
+        "acronym": "",
+        "briefSummary": "In non-ischemic dilated cardiomyopathy (NIDCM), left ventricular reverse remodeling (LVRR) can be achieved through guideline-directed medical therapy (GDMT). LVRR is defined as an increase in left ventricular ejection fraction (LVEF) of more than 10% in heart failure patients with a baseline LVEF of 40% or less, or an increase in LVEF of more than 40% at follow-up, which is classified as heart failure with improved EF (HFimpEF) according to current guidelines. Several studies have examined the prevalence and predictors of LVRR in NIDCM. However, there is a lack of research on LVRR in the context of contemporary pharmacotherapy. Studies have demonstrated the beneficial effects of ivabradine in heart failure with reduced ejection fraction (HFrEF), improving patients' prognosis. A sub-study of the SHIFT trial indicated that ivabradine may also contribute to cardiac remodeling reversal in patients with HFrEF. However, there is limited evidence exploring the relationship between ivabradine and LVRR, particularly in the context of NIDCM. Consequently, this study is a retrospective, multi-center cohort study aiming to evaluate the impact of ivabradine on LVRR in patients with NIDCM in the current era of medical therapy. Furthermore, by conducting this study, we aim to gain insights into the potential role of ivabradine in promoting LVRR in NIDCM patients receiving contemporary drug therapy.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Yonsei University",
+          "class": "OTHER"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 500,
+          "type": "ESTIMATED"
+        },
+        "conditions": [
+          "Dilated Cardiomyopathy",
+          "Ventricular Remodeling",
+          "Heart Failure, Reduced Ejection Fraction"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "19 Years",
+          "maximumAge": "90 Years",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: 1. Diagnosed with non-ischemic dilated cardiomyopathy (NIDCM) by performing coronary artery imaging (coronary angiography, CT angiography, or SPECT scan) at the time of diagnosis of HFrEF 2. Sinus rhythm 3. Baseline LVEF of 40% or less (LVEF≤40%) 4. Patients containing baseline heart rate (HR) * In the Ivabradine group, baseline HR must be \\>75 bpm at the time of ivabradine dosing. Exclusion Criteria: 1. Patients with confirmed ischemic cardiomyopathy (when stenosis of 75% or more of major coronary arteries is confirmed on coronary artery imaging or ischemic cardiomyopathy findings such as transmural LGE on cardiac MRI) 2. Heart failure with other etiologies (e.g., valvular heart disease, endocrine disease). 3. Previous recovery history of left ventricular systolic function (LVEF) 4. Cardiac resynchronization therapy (CRT) implantation 5. Persistent/permanent atrial fibrillation 7\\) Contraindication to the administration of ivabradine according to the Summary of Product Characteristics (SmPC) * Hypersensitivity reactions * Symptomatic bradycardia or resting heart rate \\< 75 bpm prior to treatment * Cardiogenic shock, acute myocardial infarction, severe hypotension (\\< 90/50 mmHg), severe hepatic failure, sinus syndrome, atrial block, unstable or acute heart failure, pacemaker dependence (with pacing dominance), unstable angina, third degree atrioventricular block * Cytochrome P450 3A4 inhibitors: Azole class antifungals (ketoconazole,itraconazole), Macr..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Prevalence of of LVRR in patients with NIDCM",
+            "description": "LVRR is characterized by an increase in left ventricular ejection fraction (LVEF) of more than 10% in heart failure patients with a baseline LVEF of 40% or less, or an increase in LVEF of more than 40% during follow-up, which is classified as heart failure with improved EF (HFimpEF). Furthermore, the initiation of guideline-directed medical therapy (GDMT) is defined as the timeframe for commencing treatment with an angiotensin-converting enzyme inhibitor (ACEi), angiotensin II receptor antagonist (ARB), or beta-blocker after the diagnosis of heart failure with reduced ejection fraction (HFrEF).",
+            "timeFrame": "at 12 months after the initiation of GDMT"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Prevalence of LVRR in NIDCM at 8 months after initiation of GDMT",
+            "description": "",
+            "timeFrame": "at 8 months after GDMT initiation"
+          },
+          {
+            "measure": "Extent of LVRR (measured by LVEDD/LVESD, LAVI, E/e' in echocardiography) in NIDCM at 8 and 12 months after GDMT initiation",
+            "description": "",
+            "timeFrame": "at 8 and 12 months after GDMT initiation"
+          },
+          {
+            "measure": "Clinical course of LVRR in NIDCM",
+            "description": "",
+            "timeFrame": "at 8 and 12 months after GDMT initiation"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "\\*\\*Achieved HR : heart rate (HR) at 12 month follow up after the initiation of GDMT\\*\\*"
+          },
+          {
+            "id": "2",
+            "title": "\\*\\*Achieved HR : heart rate (HR) at 12 month follow up after the initiation of GDMT\\*\\*"
+          },
+          {
+            "id": "3",
+            "title": "\\*\\*Achieved HR : heart rate (HR) at 12 month follow up after the initiation of GDMT\\*\\*"
+          },
+          {
+            "id": "4",
+            "title": "\\*\\*Achieved HR : heart rate (HR) at 12 month follow up after the initiation of GDMT\\*\\*"
+          }
+        ],
+        "outcome": null,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "not_randomized_interventional",
+          "no_extractable_numeric_outcome"
+        ],
+        "eligible": false
+      }
+    ],
+    "exclusionReasons": {
+      "not_randomized_interventional": 2,
+      "fewer_than_two_arms": 1,
+      "no_extractable_numeric_outcome": 2,
+      "not_completed": 1,
+      "no_results_posted": 1
+    },
+    "portfolioEligible": true,
+    "priorityTier": "early"
+  }
+}

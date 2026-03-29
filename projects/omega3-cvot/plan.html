@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Omega-3 Cardiovascular Outcome Trials | Validation Plan</title>
+    <link rel="icon" href="data:," />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f6fb;
+        --ink: #16213e;
+        --muted: #5b657a;
+        --card: #ffffff;
+        --line: #d8e0f0;
+        --accent: #0f5c7a;
+        --accent-soft: #e0f1f8;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 44%, #ffffff 100%);
+        color: var(--ink);
+        font: 16px/1.55 "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      }
+      main {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 32px 20px 56px;
+      }
+      .hero {
+        display: grid;
+        gap: 16px;
+        padding: 28px;
+        background: radial-gradient(circle at top left, #dceefe 0%, #ffffff 55%);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 16px 48px rgba(15, 52, 96, 0.08);
+      }
+      .kicker {
+        margin: 0;
+        color: var(--accent);
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+      }
+      h1, h2 { margin: 0; }
+      p { margin: 0; color: var(--muted); }
+      .grid {
+        display: grid;
+        gap: 16px;
+        margin-top: 22px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 18px;
+      }
+      .card strong {
+        display: block;
+        font-size: 1.75rem;
+        color: var(--ink);
+      }
+      .section {
+        margin-top: 24px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 22px;
+      }
+      pre {
+        margin: 12px 0 0;
+        white-space: pre-wrap;
+        overflow-x: auto;
+        background: #0d1b2a;
+        color: #eff6ff;
+        padding: 14px;
+        border-radius: 14px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+      }
+      th, td {
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+        padding: 10px 8px;
+      }
+      th {
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+      .pillbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+      .pill {
+        background: var(--accent-soft);
+        border: 1px solid #b9d9e7;
+        border-radius: 999px;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        color: var(--ink);
+      }
+      iframe {
+        width: 100%;
+        min-height: 420px;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: #111827;
+      }
+      a { color: var(--accent); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <p class="kicker">CT.gov Validation Pack</p>
+        <h1>Omega-3 Cardiovascular Outcome Trials</h1>
+        <p>Separate cardiovascular living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-03-28. Only randomized comparative records with posted results and extractable numeric outcomes are eligible.</p>
+        <div class="pillbar">
+          <span class="pill">Priority tier: Promising</span>
+          <span class="pill">Included RCTs: 3</span>
+          <span class="pill">Scanned records: 19</span>
+          <span class="pill">Pages fetched: 1</span>
+          <span class="pill">Domain: Lipid Disorders</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card"><span>Base query</span><strong>(&quot;cardiovascular disease&quot; OR diabetes OR hypertriglyceridemia) AND (icosapent OR eicosapentaenoic OR omega-3 OR EPA)</strong></article>
+        <article class="card"><span>Keyword pack</span><strong>REDUCE-IT, STRENGTH, OMEMI</strong></article>
+        <article class="card"><span>Validation files</span><strong><a href="validation.json">validation.json</a></strong></article>
+        <article class="card"><span>App entry</span><strong><a href="index.html">index.html</a></strong></article>
+      </section>
+
+      <section class="section">
+        <h2>Protocol Framing And Review Question</h2>
+        <p>This plan treats the registry-native topic as a living protocol artifact rather than a link collection. The PICO framing and workflow below define what enters the snapshot, how records are screened, and how benchmark reconciliation should be performed before review sign-off.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Definition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Population</td><td>Cardiovascular Diseases; Heart Failure; Eligible Men or Women Considered High Risk for Atherosclerotic Cardiovascular Disease (CVD)</td></tr>
+            <tr><td>Interventions</td><td>AMR101; Placebo; Glutamine/Fishoil; Epanova</td></tr>
+            <tr><td>Comparators</td><td>AMR101 vs Placebo; Glutamine/Fishoil vs Placebo; Epanova vs Placebo</td></tr>
+            <tr><td>Outcomes</td><td>Composite of CV Death, Nonfatal MI (Including Silent MI), Nonfatal Stroke, Coronary Revascularization, or Unstable Angina Determined to be Caused by Myocardial Ischemia by Invasive / Non-invasive Testing and Requiring Emergent Hospitalization.; Baseline Skeletal Muscle Function Capacity- Isometric Contractions (PKTQ/BW); The Composite of Major Adverse Cardiovascular Events (MACE)</td></tr>
+            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exact CT.gov Search Query</h2>
+        <pre>(&quot;cardiovascular disease&quot; OR diabetes OR hypertriglyceridemia) AND (icosapent OR eicosapentaenoic OR omega-3 OR EPA) AND (&quot;REDUCE-IT&quot; OR &quot;STRENGTH&quot; OR &quot;OMEMI&quot;)</pre>
+      </section>
+
+      <section class="section">
+        <h2>Information Sources And Search History</h2>
+        <p>The project was generated directly from the ClinicalTrials.gov v2 API using the exact query below, then checked against publication-oriented benchmark searches so reviewers can compare the registry-native set against the broader literature.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://clinicaltrials.gov/search?term=(%22cardiovascular%20disease%22%20OR%20diabetes%20OR%20hypertriglyceridemia)%20AND%20(icosapent%20OR%20eicosapentaenoic%20OR%20omega-3%20OR%20EPA)%20AND%20(%22REDUCE-IT%22%20OR%20%22STRENGTH%22%20OR%20%22OMEMI%22)" target="_blank" rel="noopener">CT.gov query</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Omega-3%20Cardiovascular%20Outcome%20Trials%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">PubMed meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Omega-3%20Cardiovascular%20Outcome%20Trials%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">PubMed randomized-trial search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Source</th>
+              <th>Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>CT.gov candidate scan started</td>
+          <td>ClinicalTrials.gov v2 API</td>
+          <td>2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Base query locked</td>
+          <td>Project generator</td>
+          <td>(&quot;cardiovascular disease&quot; OR diabetes OR hypertriglyceridemia) AND (icosapent OR eicosapentaenoic OR omega-3 OR EPA)</td>
+        </tr>
+
+        <tr>
+          <td>Keyword expansion applied</td>
+          <td>Project generator</td>
+          <td>3 terms: REDUCE-IT, STRENGTH, OMEMI</td>
+        </tr>
+
+        <tr>
+          <td>Exact query executed</td>
+          <td>ClinicalTrials.gov</td>
+          <td>(&quot;cardiovascular disease&quot; OR diabetes OR hypertriglyceridemia) AND (icosapent OR eicosapentaenoic OR omega-3 OR EPA) AND (&quot;REDUCE-IT&quot; OR &quot;STRENGTH&quot; OR &quot;OMEMI&quot;)</td>
+        </tr>
+
+        <tr>
+          <td>Registry records screened</td>
+          <td>ClinicalTrials.gov</td>
+          <td>19 records across 1 page(s)</td>
+        </tr>
+
+        <tr>
+          <td>Hard-gate exclusions applied</td>
+          <td>Generator eligibility rules</td>
+          <td>16 records excluded before synthesis</td>
+        </tr>
+
+        <tr>
+          <td>Quantitative snapshot frozen</td>
+          <td>validation.json</td>
+          <td>3 randomized trials entered the reviewer pack</td>
+        </tr>
+
+        <tr>
+          <td>Project package generated</td>
+          <td>Portfolio build</td>
+          <td>2026-03-28</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Selection And Synthesis Workflow</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Step</th>
+              <th>Rule</th>
+              <th>Evidence</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Question framing</td>
+          <td>Topic slug, base query, and keyword pack frozen before generation</td>
+          <td>omega3-cvot | 2026-03-28</td>
+        </tr>
+
+        <tr>
+          <td>Registry screening</td>
+          <td>ClinicalTrials.gov v2 API queried with the exact string shown below</td>
+          <td>19 candidate records screened</td>
+        </tr>
+
+        <tr>
+          <td>Eligibility gate</td>
+          <td>Randomized interventional, completed, posted results, &gt;=2 arms, numeric outcome</td>
+          <td>3 included / 16 excluded</td>
+        </tr>
+
+        <tr>
+          <td>Extraction</td>
+          <td>Outcome groups, sponsor, eligibility, documents, and demographics preserved where available</td>
+          <td>3/3 studies with demographics</td>
+        </tr>
+
+        <tr>
+          <td>Reviewer validation</td>
+          <td>Benchmark ledger and topic-aware WebR runner bundled with each topic project</td>
+          <td>validation.json + plan.html + embedded runner</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>PRISMA Flow Summary</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th>Count</th>
+              <th>Reviewer Note</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Records identified from the exact CT.gov query</td>
+          <td>19</td>
+          <td>1 page(s) fetched</td>
+        </tr>
+
+        <tr>
+          <td>Records excluded by registry hard gates</td>
+          <td>16</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+        </tr>
+
+        <tr>
+          <td>Trials entering the quantitative snapshot</td>
+          <td>3</td>
+          <td>Included in validation.json and the live topic app</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Eligibility Rules</h2>
+        <div class="pillbar">
+          <span class="pill">Interventional</span>
+          <span class="pill">Randomized</span>
+          <span class="pill">Completed</span>
+          <span class="pill">Posted CT.gov results</span>
+          <span class="pill">At least 2 arms</span>
+          <span class="pill">Numeric outcome extractable</span>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <span>Protocol metadata coverage</span>
+          <strong>3/3</strong>
+          <p>Trials with a retained CT.gov brief summary excerpt.</p>
+        </article>
+        <article class="card">
+          <span>Demographics coverage</span>
+          <strong>3/3</strong>
+          <p>Trials with a retained baseline characteristics snapshot.</p>
+        </article>
+        <article class="card">
+          <span>Document coverage</span>
+          <strong>2/3</strong>
+          <p>Trials with protocol or source documents listed on CT.gov.</p>
+        </article>
+        <article class="card">
+          <span>Total reported enrollment</span>
+          <strong>21288</strong>
+          <p>Summed from the CT.gov enrollment field across included studies.</p>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Included Trial Ledger</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Sponsor</th>
+              <th>Phase</th>
+              <th>Enrollment</th>
+              <th>Status</th>
+              <th>Start</th>
+              <th>Completion</th>
+              <th>Arms</th>
+              <th>Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01492361" target="_blank" rel="noopener">NCT01492361</a></td>
+          <td>A Study of AMR101 to Evaluate Its Ability to Reduce Cardiovascular Events in High-Risk Patients With Hypertriglyceridemia and on Statin</td>
+          <td>Amarin Pharma Inc. (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>8179 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2011-11-01</td>
+          <td>2018-05-01</td>
+          <td>AMR101 (icosapent ethyl) + statin therapy, daily | Placebo + statin therapy, daily</td>
+          <td>Composite of CV Death, Nonfatal MI (Including Silent MI), Nonfatal Stroke, Coronary Revascularization, or Unstable Angina Determined to be Caused by Myocardial Ischemia by Invasive / Non-invasive Testing and Requiring Emergent Hospitalization.</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01534663" target="_blank" rel="noopener">NCT01534663</a></td>
+          <td>Supplementation of Glutamine and Fish Oil Versus Placebo in Patients With Heart Failure</td>
+          <td>Columbia University (OTHER)</td>
+          <td>Phase 2, Phase 3</td>
+          <td>31 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2011-11-01</td>
+          <td>2014-07-01</td>
+          <td>The placebo for fish oil will be safflower oil. For glutamine, soy powder will serve as the placebo. | 3.285 g of EPA and 3.285 g of Docosahexaenoic acid (DHA) and L-alanyl-glutamine (8g/d).</td>
+          <td>Baseline Skeletal Muscle Function Capacity- Isometric Contractions (PKTQ/BW)</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02104817" target="_blank" rel="noopener">NCT02104817</a></td>
+          <td>Outcomes Study to Assess STatin Residual Risk Reduction With EpaNova in HiGh CV Risk PatienTs With Hypertriglyceridemia</td>
+          <td>AstraZeneca (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>13078 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2014-10-30</td>
+          <td>2020-05-27</td>
+          <td>Epanova + statin, once daily | Corn oil + Statin</td>
+          <td>The Composite of Major Adverse Cardiovascular Events (MACE)</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Study Eligibility And Demographics</h2>
+        <p>This table keeps the trial-level age, sex, participant-count, and registry eligibility fields next to the inclusion decision so readers can challenge the clinical comparability of the pooled set.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Eligibility</th>
+              <th>Participant Counts</th>
+              <th>Age Snapshot</th>
+              <th>Sex Snapshot</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01492361" target="_blank" rel="noopener">NCT01492361</a></td>
+          <td>Sex: ALL | Age: 45 Years to NR | Healthy volunteers: No</td>
+          <td>AMR101: 4089 Participants | Placebo: 4090 Participants | Total: 8179 Participants</td>
+          <td>Not reported</td>
+          <td>AMR101: F 1162 / M 2927 | Placebo: F 1195 / M 2895 | Total: F 2357 / M 5822</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01534663" target="_blank" rel="noopener">NCT01534663</a></td>
+          <td>Sex: ALL | Age: 35 Years to 80 Years | Healthy volunteers: No</td>
+          <td>Placebo: 12 Participants | Glutamine/Fishoil: 14 Participants | Total: 26 Participants</td>
+          <td>Placebo: 56 +/- 2 years | Glutamine/Fishoil: 59 +/- 3 years | Total: 59 +/- 2 years</td>
+          <td>Placebo: F 3 / M 9 | Glutamine/Fishoil: F 2 / M 12 | Total: F 5 / M 21</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02104817" target="_blank" rel="noopener">NCT02104817</a></td>
+          <td>Sex: ALL | Age: 18 Years to 99 Years | Healthy volunteers: No</td>
+          <td>Epanova: 6539 Participants | Placebo: 6539 Participants | Total: 13078 Participants</td>
+          <td>Epanova: 62.5 +/- 8.98 years | Placebo: 62.5 +/- 8.98 years | Total: 62.5 +/- 8.98 years</td>
+          <td>Epanova: F 2289 / M 4250 | Placebo: F 2279 / M 4260 | Total: F 4568 / M 8510</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Record Excerpts</h2>
+        <p>Brief summaries, eligibility text, primary outcome descriptions, and source documents are surfaced here so reviewers can verify that the extracted numerical contrast is clinically aligned with the underlying registry record.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Brief Summary</th>
+              <th>Eligibility Excerpt</th>
+              <th>Primary Outcome Excerpt</th>
+              <th>Source Documents</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01492361" target="_blank" rel="noopener">NCT01492361</a></td>
+          <td>AMR101 (icosapent ethyl \[ethyl-EPA\]) is a highly purified ethyl ester of eicosapentaenoic acid (EPA) developed by Amarin Pharma Inc. for the treatment of cardiovascular disease in statin-treated patients with hypertriglyceridemia. The purpose of this study was to evaluate whether this drug, combined with a statin...</td>
+          <td>Inclusion Criteria: * Men and non-pregnant or sterile women ages 45 and older * Hypertriglyceridemia * On statin therapy for at least four weeks * Either having established cardiovascular disease or at high risk for cardiovascular disease Exclusion Criteria...</td>
+          <td>Composite of CV Death, Nonfatal MI (Including Silent MI), Nonfatal Stroke, Coronary Revascularization, or Unstable Angina Determined to be Caused by Myocardial Ischemia by Invasive / Non-invasive Testing and Requiring Emergent Hospitalization. | Time frame: Total follow-up time of up to approximately 6 years. | The...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2016-07-08)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01534663" target="_blank" rel="noopener">NCT01534663</a></td>
+          <td>The aim of this study is to determine whether supplementation of glutamine and fish oil can improve peripheral skeletal muscle function and metabolism in patients with heart failure. The investigators propose a randomized, double-blind, placebo controlled study comparing the combined supplementation of fish oil and...</td>
+          <td>Inclusion Criteria: * age greater than 18 years, * left ventricular ejection fraction less than or equal to 35%, * stable on standard HF medications, and * optimal medical therapy. Exclusion Criteria: * major cardiovascular events, * procedures in the last...</td>
+          <td>Baseline Skeletal Muscle Function Capacity- Isometric Contractions (PKTQ/BW) | Time frame: Baseline | For isometric contractions, participants contracted against a constant 60-degree angle at the knee (dominant leg) and a constant 30 degree angle at the elbow (dominant arm) for 6 seconds. Participants alternated bet...</td>
+          <td>
+            <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02104817" target="_blank" rel="noopener">NCT02104817</a></td>
+          <td>The study is a randomized, double-blind, placebo-controlled (corn oil), parallel group design that will enroll approximately 13,000 patients with hypertriglyceridemia and low HDL and high risk for CVD to be randomized 1:1 to either corn oil + statin or Epanova + statin, once daily, for approximately 3-5 years as det...</td>
+          <td>Inclusion Criteria: 1. Men or women, ≥18 years of age. 2. Patient must be on a stable diet and statin\* therapy at least 4 weeks prior to randomization (Visit 2) and meet the following criteria: 1. LDL-C \&lt;100 mg/dL 2. TG level ≥180 and \&lt;500 mg/dL and HDL-...</td>
+          <td>The Composite of Major Adverse Cardiovascular Events (MACE) | Time frame: From the date of randomization and up to completion of the end-of-treatment visit (Month 60) or at study closure | MACE components include: cardiovascular (CV) death, nonfatal myocardial infarction (MI), nonfatal stroke, emergent/elective coro...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2015-05-01)</span>
+<span class="pill">Statistical Analysis Plan (2020-04-22)</span></div>
+          </td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Exclusion Reason Counts</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Reason</th>
+              <th>Count</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>No Extractable Numeric Outcome</td>
+          <td>16</td>
+        </tr>
+
+        <tr>
+          <td>No Results Posted</td>
+          <td>15</td>
+        </tr>
+
+        <tr>
+          <td>Not Completed</td>
+          <td>5</td>
+        </tr>
+
+        <tr>
+          <td>Fewer Than Two Arms</td>
+          <td>4</td>
+        </tr>
+
+        <tr>
+          <td>Not Randomized Interventional</td>
+          <td>4</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Excluded Sample Records</h2>
+        <p>The first 20 excluded records are listed here with excerpts so reviewers can quickly verify why the registry pull did not enter them into the meta-analysis snapshot.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT ID</th>
+              <th>Title</th>
+              <th>Reasons</th>
+              <th>Record Excerpt</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06720662" target="_blank" rel="noopener">NCT06720662</a></td>
+          <td>Effect of Icosapent-ethyl Ester (IPE) to Reduce the Residual Risk Cardiovascular Disease.</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Cardiovascular diseases (CVDs) are the leading cause of global mortality, despite significant advances in prevention and treatment. Atherosclerosis, a chronic inflammatory condition, underlies ischemic events such as infarction and stroke, triggered by the...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT00534300" target="_blank" rel="noopener">NCT00534300</a></td>
+          <td>Intravenous n-3 Fatty Acids and Ventricular Tachycardia in Patients With Implantable Cardioverter Defibrillator (ICD)-Pacemaker</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The long-chain n-3 polyunsaturated fatty acids (PUFA), eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA), appear to offer protection against sudden cardiac death and ventricular arrhythmias. EPA and DHA are essential fatty acids which are incorpora...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01841944" target="_blank" rel="noopener">NCT01841944</a></td>
+          <td>Omega-3 Fatty Acids in Elderly Patients With Acute Myocardial Infarction</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The aim of the present study is to investigate the possible effects of supplementation with 1.8 g/day of n-3 polyunsaturated fatty acids on cardiovascular morbidity and mortality during a follow-up period of 2 years in an elderly population after having exp...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06845046" target="_blank" rel="noopener">NCT06845046</a></td>
+          <td>A Study to Improve Skeletal Muscle in Veterans With HIV</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The Department of Veterans Affairs is the largest single provider of medical care to people with HIV in the United States. The condition of excess lipid within and around muscle, termed myosteatosis, predisposes Veterans to physical function decline, frailt...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02178501" target="_blank" rel="noopener">NCT02178501</a></td>
+          <td>Omega-3 Fatty Acids Supplementation and Atherothrombotic Biomarkers in Type 2 Diabetes and Cardiovascular Disease.</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The major source of mortality and morbidity of diabetic patients is cardiovascular disease (CVD). Moreover, in CVD patients the presence of diabetes is associated with the increased risk of major adverse cardiac events as compared to patients without diabet...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05271591" target="_blank" rel="noopener">NCT05271591</a></td>
+          <td>Generalizability of REDUCE-IT Results to People of South Asian Descent With Atherosclerotic Cardiovascular Disease in Canada (REDUCE-IT Canada SA)</td>
+          <td>No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>The REDUCE-IT Canada SA Study is a cross-sectional study aiming to determine the proportion of study participants who meet the Health Canada-approved indication for icosapent ethyl (IPE;Vascepa®).</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05558488" target="_blank" rel="noopener">NCT05558488</a></td>
+          <td>The Effect of a Meatless,Keto Restrictive Diet on Body Composition,Strength Capacity,Oxidative Stress,Immune Response</td>
+          <td>No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>The subject of doctoral dissertation: Assessment of the effects of a meatless, ketogenic restrictive diet on body composition, strength capacity, oxidative stress and immune response During planning of research and topic of the doctoral dissertation, it was...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04088240" target="_blank" rel="noopener">NCT04088240</a></td>
+          <td>Effects of Omega-3 Docosapentaenoic Acid on Lipids and Other Risk Factors for Cardiovascular Disease</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Elevated plasma triglycerides (TG) are due to an excess of TG-rich lipoproteins of several different types, most commonly of very-low-density lipoproteins (VLDL), but also intermediate-density lipoproteins (IDL, or VLDL remnants), chylomicrons, and/or chylo...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04496154" target="_blank" rel="noopener">NCT04496154</a></td>
+          <td>Omega-3 to Reduce Diabetes Risk in Subjects With High Number of Particles That Carry &quot;Bad Cholesterol&quot; in the Blood</td>
+          <td>No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>In this project, investigators explored the role of the particles that carry &quot;bad cholesterol&quot; in the blood (termed LDL) that are known to promote heart disease, in the promotion of type 2 diabetes (T2D) in humans. In specific, they investigated how these p...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05145452" target="_blank" rel="noopener">NCT05145452</a></td>
+          <td>n-3 Polyunsaturated Fatty Acids to Prevent and Treat Diabetic Neuropathy</td>
+          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Sensorimotor neuropathy (SMN) and cardiovascular autonomic neuropathy (CAN) are the most common complications of type 2 diabetes (T2D). SMN affects \~30% of people with T2D and CAN \~20%. SMN causes pain, impairs and limits physical activity, and increases...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04562467" target="_blank" rel="noopener">NCT04562467</a></td>
+          <td>The Use of Icosapent Ethyl on Vascular Progenitor Cells in Individuals With Elevated Cardiovascular Risk</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>IPE-PREVENTION is a prospective, randomized, 3-month long, open-label study. A total of 70 individuals with elevated cardio-metabolic risk and heightened triglyceride levels, and who are on stable statin therapy will be randomized (1:1) to receive either ic...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02568228" target="_blank" rel="noopener">NCT02568228</a></td>
+          <td>Health Beneficial Effects of Krill Oil and Lean and Fatty Fish</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Intake of omega-3 (n-3) polyunsaturated fatty acids (PUFAs) from fish oil and fish are associated with significant health benefits in risk of cardiovascular disease. However, both lean and fatty fish have been shown to have beneficial effects suggesting tha...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06595225" target="_blank" rel="noopener">NCT06595225</a></td>
+          <td>Nutrition Education Intervention for PLHIV</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The study tested two hypotheses, which are mentioned below: Hypotheses: The project will test 5 hypotheses related to the various aspects of the study. H1: implementing a nutrition education intervention will significantly improve the patient&#39;s nutritional...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02150798" target="_blank" rel="noopener">NCT02150798</a></td>
+          <td>The Effects of a High Fat and Low Carbohydrate Diet on Clinical Status in Patients With Heart Failure</td>
+          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>The aim of the present study was to evaluate the effects of a high fat, low carbohydrate (CHO) diet on clinical status during 60 days of follow-up in patients with stable heart failure (HF). In a randomized controlled clinical trial 44 ambulatory patients w...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04485871" target="_blank" rel="noopener">NCT04485871</a></td>
+          <td>Targeting Risk Factors for Diabetes in Subjects With Normal Blood Cholesterol Using Omega-3 Fatty Acids</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>Every 3 minutes a new case of diabetes is diagnosed in Canada, mostly type 2 diabetes (T2D) increasing the risk for heart disease. T2D and heart disease share many common risk factors such as aging, obesity and unhealthy lifestyle. Paradoxically however, wh...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01048502" target="_blank" rel="noopener">NCT01048502</a></td>
+          <td>Fenofibrate and Omega-3 Fatty Acid Modulation of Endotoxemia</td>
+          <td>No Extractable Numeric Outcome</td>
+          <td>The purpose of this study is to better understand the anti-inflammatory benefits of two prescription medicines that are currently used to help people with cholesterol problems. Fish oil, from eating certain kinds of fish and from supplement pills, has been...</td>
+        </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Benchmark Reconciliation Ledger</h2>
+        <p>This ledger turns the benchmark step into a structured reviewer task. Use the NCT IDs, contrasts, and outcome definitions below to check study overlap, arm collapsing, and endpoint alignment against published syntheses.</p>
+        <div class="pillbar">
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Omega-3%20Cardiovascular%20Outcome%20Trials%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Omega-3%20Cardiovascular%20Outcome%20Trials%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>NCT</th>
+              <th>Registry Contrast</th>
+              <th>Outcome</th>
+              <th>Enrollment</th>
+              <th>Benchmark Use</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01492361" target="_blank" rel="noopener">NCT01492361</a></td>
+        <td>AMR101 vs Placebo</td>
+        <td>Composite of CV Death, Nonfatal MI (Including Silent MI), Nonfatal Stroke, Coronary Revascularization, or Unstable Angina Determined to be Caused by Myocardial Ischemia by Invasive / Non-invasive Testing and Requiring Emergent Hospitalization.</td>
+        <td>8179 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01534663" target="_blank" rel="noopener">NCT01534663</a></td>
+        <td>Glutamine/Fishoil vs Placebo</td>
+        <td>Baseline Skeletal Muscle Function Capacity- Isometric Contractions (PKTQ/BW)</td>
+        <td>31 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02104817" target="_blank" rel="noopener">NCT02104817</a></td>
+        <td>Epanova vs Placebo</td>
+        <td>The Composite of Major Adverse Cardiovascular Events (MACE)</td>
+        <td>13078 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section">
+        <h2>Reviewer Validation And Benchmarking</h2>
+        <p>The embedded panel below now runs the shared R benchmark suites plus topic-specific checks for the current CT.gov snapshot. Reviewers should compare the registry-native ledger above against published syntheses, inspect <code>validation.json</code>, and then confirm that the topic-aware runner resolves with the same study universe.</p>
+        <div class="pillbar">
+          <a class="pill" href="validation.json">Open validation.json</a>
+          <a class="pill" href="index.html">Open interactive topic app</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Omega-3%20Cardiovascular%20Outcome%20Trials%22)%20AND%20(meta-analysis%20OR%20systematic%20review)" target="_blank" rel="noopener">Published meta-analysis search</a>
+          <a class="pill" href="https://pubmed.ncbi.nlm.nih.gov/?term=(%22Omega-3%20Cardiovascular%20Outcome%20Trials%22)%20AND%20(randomized%20OR%20trial)" target="_blank" rel="noopener">Randomized trial benchmark search</a>
+          <a class="pill" href="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fomega3-cvot%2Fvalidation.json&amp;topic=omega3-cvot&amp;label=Omega-3+Cardiovascular+Outcome+Trials" target="_blank" rel="noopener">Open topic-aware WebR runner</a>
+        </div>
+        <iframe id="reviewerValidationFrame" src="../../../esc-acs-living-meta/r-validation-runner.html?validation=..%2Fcardio-ctgov-living-meta-portfolio%2Fprojects%2Fomega3-cvot%2Fvalidation.json&amp;topic=omega3-cvot&amp;label=Omega-3+Cardiovascular+Outcome+Trials" title="WebR reviewer validation" loading="lazy"></iframe>
+        <script>
+(() => {
+  const iframe = document.getElementById("reviewerValidationFrame");
+  const context = {"source":"ctgov-portfolio-generator","topicId":"omega3-cvot","label":"Omega-3 Cardiovascular Outcome Trials","query":"(\"cardiovascular disease\" OR diabetes OR hypertriglyceridemia) AND (icosapent OR eicosapentaenoic OR omega-3 OR EPA) AND (\"REDUCE-IT\" OR \"STRENGTH\" OR \"OMEMI\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":3,"excludedCount":16,"totalEnrollment":21288,"demographicsCoverage":3,"documentCoverage":2,"comparisons":[{"studyId":"NCT01492361","title":"A Study of AMR101 to Evaluate Its Ability to Reduce Cardiovascular Events in High-Risk Patients With Hypertriglyceridemia and on Statin","t1":"AMR101","t2":"Placebo","measure":"logRR","effect":-0.245062926123864,"se":0.04515816958710269,"n1":4089,"n0":4090,"totalN":8179,"sampleSize":8179},{"studyId":"NCT01534663","title":"Supplementation of Glutamine and Fish Oil Versus Placebo in Patients With Heart Failure","t1":"Glutamine/Fishoil","t2":"Placebo","measure":"MD","effect":19,"se":5.843188953205018,"n1":14,"n0":12,"totalN":26,"sampleSize":26},{"studyId":"NCT02104817","title":"Outcomes Study to Assess STatin Residual Risk Reduction With EpaNova in HiGh CV Risk PatienTs With Hypertriglyceridemia","t1":"Epanova","t2":"Placebo","measure":"logRR","effect":-0.012658396871923577,"se":0.047179336799434916,"n1":6539,"n0":6539,"totalN":13078,"sampleSize":13078}],"includedStudies":[{"nctId":"NCT01492361","title":"A Study of AMR101 to Evaluate Its Ability to Reduce Cardiovascular Events in High-Risk Patients With Hypertriglyceridemia and on Statin","status":"COMPLETED","enrollment":8179,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Composite of CV Death, Nonfatal MI (Including Silent MI), Nonfatal Stroke, Coronary Revascularization, or Unstable Angina Determined to be Caused by Myocardial Ischemia by Invasive / Non-invasive Testing and Requiring Emergent Hospitalization.","groups":[{"title":"AMR101","n":4089,"events":705,"mean":null,"sd":null},{"title":"Placebo","n":4090,"events":901,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Composite of CV Death, Nonfatal MI (Including Silent MI), Nonfatal Stroke, Coronary Revascularization, or Unstable Angina Determined to be Caused by Myocardial Ischemia by Invasive / Non-invasive Testing and Requiring Emergent Hospitalization.","timeFrame":"Total follow-up time of up to approximately 6 years."}]},{"nctId":"NCT01534663","title":"Supplementation of Glutamine and Fish Oil Versus Placebo in Patients With Heart Failure","status":"COMPLETED","enrollment":31,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Baseline Skeletal Muscle Function Capacity- Isometric Contractions (PKTQ/BW)","groups":[{"title":"Placebo","n":12,"events":null,"mean":177,"sd":18},{"title":"Glutamine/Fishoil","n":14,"events":null,"mean":196,"sd":10}]},"primaryOutcomes":[{"measure":"Baseline Skeletal Muscle Function Capacity- Isometric Contractions (PKTQ/BW)","timeFrame":"Baseline"},{"measure":"90 Day Skeletal Muscle Function Capacity- Isometric Contractions (PKTQ/BW)","timeFrame":"90 Days"}]},{"nctId":"NCT02104817","title":"Outcomes Study to Assess STatin Residual Risk Reduction With EpaNova in HiGh CV Risk PatienTs With Hypertriglyceridemia","status":"COMPLETED","enrollment":13078,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"The Composite of Major Adverse Cardiovascular Events (MACE)","groups":[{"title":"Epanova","n":6539,"events":785,"mean":null,"sd":null},{"title":"Placebo","n":6539,"events":795,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"The Composite of Major Adverse Cardiovascular Events (MACE)","timeFrame":"From the date of randomization and up to completion of the end-of-treatment visit (Month 60) or at study closure"}]}]};
+  if (!iframe || !context) return;
+  const sendContext = () => {
+    if (!iframe.contentWindow) return;
+    iframe.contentWindow.postMessage({ type: "esc-topic-validation-context", payload: context }, "*");
+  };
+  iframe.addEventListener("load", sendContext);
+  window.addEventListener("message", event => {
+    if (event.source === iframe.contentWindow && event.data?.type === "esc-topic-validation-request") {
+      sendContext();
+    }
+  });
+  window.setTimeout(sendContext, 250);
+})();
+</script>
+      </section>
+    </main>
+  </body>
+</html>
