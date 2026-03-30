@@ -45,6 +45,7 @@ jobs:
         with:
           repository: mahmood726-cyber/esc-acs-living-meta
           path: esc-acs-living-meta
+          token: ${{ secrets.GH_REPO_READ_TOKEN }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
