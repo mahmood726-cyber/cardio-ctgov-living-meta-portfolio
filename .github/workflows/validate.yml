@@ -1,0 +1,67 @@
+name: Validate Portfolio
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  structural-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run generated-output validator
+        run: npm run validate:generated
+
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: structural-validation
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Playwright package
+        run: npm install --no-save playwright
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Start local server
+        run: |
+          python3 -m http.server 8767 --directory .. >/tmp/portfolio-http.log 2>&1 &
+          echo $! >/tmp/portfolio-http.pid
+
+      - name: Run browser validation
+        run: node scripts/browser-validate.mjs
+
+      - name: Stop local server
+        if: always()
+        run: |
+          if [ -f /tmp/portfolio-http.pid ]; then
+            kill "$(cat /tmp/portfolio-http.pid)" || true
+          fi
+
+      - name: Upload browser validation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-validation
+          path: generated/browser-validation.json
+          if-no-files-found: warn
