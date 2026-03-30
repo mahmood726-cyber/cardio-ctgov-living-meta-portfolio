@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          path: cardio-ctgov-living-meta-portfolio
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
@@ -24,6 +26,7 @@ jobs:
           node-version: "24"
 
       - name: Run generated-output validator
+        working-directory: cardio-ctgov-living-meta-portfolio
         run: npm run validate:generated
 
   browser-smoke:
@@ -34,6 +37,14 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v6
+        with:
+          path: cardio-ctgov-living-meta-portfolio
+
+      - name: Check out shared app repository
+        uses: actions/checkout@v6
+        with:
+          repository: mahmood726-cyber/esc-acs-living-meta
+          path: esc-acs-living-meta
 
       - name: Set up Node.js
         uses: actions/setup-node@v6
@@ -41,17 +52,21 @@ jobs:
           node-version: "24"
 
       - name: Install Playwright package
+        working-directory: cardio-ctgov-living-meta-portfolio
         run: npm install --no-save playwright
 
       - name: Install Chromium
+        working-directory: cardio-ctgov-living-meta-portfolio
         run: npx playwright install --with-deps chromium
 
       - name: Start local server
+        working-directory: ${{ github.workspace }}
         run: |
-          python3 -m http.server 8767 --directory .. >/tmp/portfolio-http.log 2>&1 &
+          python3 -m http.server 8767 --directory . >/tmp/portfolio-http.log 2>&1 &
           echo $! >/tmp/portfolio-http.pid
 
       - name: Run browser validation
+        working-directory: cardio-ctgov-living-meta-portfolio
         run: node scripts/browser-validate.mjs
 
       - name: Stop local server
@@ -66,5 +81,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: browser-validation
-          path: generated/browser-validation.json
+          path: cardio-ctgov-living-meta-portfolio/generated/browser-validation.json
           if-no-files-found: warn
