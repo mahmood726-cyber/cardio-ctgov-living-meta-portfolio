@@ -3,6 +3,8 @@
 # Usage: bash push.sh "commit message"
 
 MSG="${1:-Update E156 submission}"
+GIT_NAME="${E156_GIT_NAME:-Mahmood Ahmad}"
+GIT_EMAIL="${E156_GIT_EMAIL:-mahmood726-cyber@users.noreply.github.com}"
 
 if ! git diff --cached --quiet --exit-code; then
   echo "There are already staged changes in this repo. Review and push manually."
@@ -25,7 +27,7 @@ for path in "${paths[@]}"; do
 done
 
 if ! git diff --cached --quiet --exit-code; then
-  git commit --no-verify --no-gpg-sign -m "$MSG"
+  git -c user.name="$GIT_NAME" -c user.email="$GIT_EMAIL" commit --no-verify --no-gpg-sign -m "$MSG"
 else
   echo "No publication-managed changes to commit."
 fi
