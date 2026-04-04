@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it as below."
+type: software
+title: "Cardio CT.gov Living Meta Portfolio"
+license: MIT
+abstract: >-
+  Portfolio generator and emitted project set for cardiovascular CT.gov living
+  meta-analysis topics backed by the shared ESC living meta app.
+keywords:
+  - living meta-analysis
+  - ClinicalTrials.gov
+  - cardiology
+  - evidence synthesis
+authors:
+  - family-names: Ahmad
+    given-names: Mahmood
+preferred-citation:
+  type: software
+  title: "Cardio CT.gov Living Meta Portfolio"
+  authors:
+    - family-names: Ahmad
+      given-names: Mahmood
+  year: 2026
