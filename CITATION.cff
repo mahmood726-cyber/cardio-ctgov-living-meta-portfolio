@@ -4,12 +4,15 @@ type: software
 title: "Cardio CT.gov Living Meta Portfolio"
 license: MIT
 abstract: >-
-  Portfolio generator and emitted project set for cardiovascular CT.gov living
-  meta-analysis topics backed by the shared ESC living meta app.
+  Portfolio generator and emitted project set for CT.gov living meta-analysis
+  topics backed by the shared ESC living meta app, including cardiometabolic,
+  hematology, and intensive-care programs curated for full CT.gov results
+  coverage.
 keywords:
   - living meta-analysis
   - ClinicalTrials.gov
-  - cardiology
+  - hematology
+  - intensive care
   - evidence synthesis
 authors:
   - family-names: Ahmad
