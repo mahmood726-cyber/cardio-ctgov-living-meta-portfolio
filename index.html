@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CT.gov Cardiovascular Living Meta Portfolio</title>
+    <title>CT.gov Living Meta Portfolio</title>
     <link rel="icon" href="data:," />
     <style>
       :root {
@@ -145,22 +145,22 @@
     <main>
       <section class="hero">
         <p class="kicker">ClinicalTrials.gov Native Portfolio</p>
-        <h1>Cardiovascular Living Meta-Analysis Projects</h1>
-        <p>Separate single-topic projects generated from the live ClinicalTrials.gov v2 API on 2026-03-28. Every included study in this portfolio met the same registry-native gate: randomized interventional design, completed status, posted results, at least two arms, and at least one extractable numeric outcome. Each topic project now includes a reviewer pack with protocol metadata, search history, record excerpts, demographics, benchmark links, and an embedded WebR validation panel.</p>
+        <h1>CT.gov Living Meta-Analysis Projects</h1>
+        <p>Separate single-topic projects generated from the live ClinicalTrials.gov v2 API on 2026-04-05. Standard portfolio entry requires randomized interventional design, completed status, posted results, at least two arms, at least one recorded numeric CT.gov outcome, and at least 2 qualifying randomized trials. In addition, only curated modern topics where the full randomized evidence base is expected to be available on CT.gov with posted results are allowed into the portfolio. Quantitative contrasts are only emitted when the posted CT.gov metric can be safely reduced to counts or means and the arm structure supports a defensible comparator. Each topic project includes a reviewer pack with protocol metadata, search history, record excerpts, demographics, benchmark links, and an embedded WebR validation panel.</p>
         <div class="pillbar">
-          <span class="pill">Eligible topics: 27</span>
-          <span class="pill">Build-now: 9</span>
-          <span class="pill">Promising: 8</span>
-          <span class="pill">Early: 10</span>
+          <span class="pill">Eligible topics: 17</span>
+          <span class="pill">Build-now: 5</span>
+          <span class="pill">Promising: 4</span>
+          <span class="pill">Early: 8</span>
+          <span class="pill">Coverage-screened topics only</span>
         </div>
-        <div class="pillbar"><span class="pill">Coronary Artery Disease: 8</span>
-<span class="pill">Heart Failure: 6</span>
-<span class="pill">Arrhythmia: 4</span>
-<span class="pill">Lipid Disorders: 4</span>
-<span class="pill">Valvular Disease: 2</span>
+        <div class="pillbar"><span class="pill">Hematology: 6</span>
+<span class="pill">Heart Failure: 4</span>
+<span class="pill">Lipid Disorders: 3</span>
+<span class="pill">Arrhythmia: 1</span>
 <span class="pill">Cardiorenal Disease: 1</span>
-<span class="pill">Hypertension: 1</span>
-<span class="pill">Vascular Disease: 1</span></div>
+<span class="pill">Intensive Care: 1</span>
+<span class="pill">Valvular Disease: 1</span></div>
       </section>
 
       <section class="summary">
@@ -171,7 +171,7 @@
         </article>
         <article class="summary-card">
           <span>Most prolific domain</span>
-          <strong>Coronary Artery Disease</strong>
+          <strong>Hematology</strong>
           <p>Domain counts derived from the validated portfolio manifest.</p>
         </article>
         <article class="summary-card">
@@ -197,12 +197,11 @@
             <option value="all">All</option>
             <option value="Arrhythmia">Arrhythmia</option>
 <option value="Cardiorenal Disease">Cardiorenal Disease</option>
-<option value="Coronary Artery Disease">Coronary Artery Disease</option>
 <option value="Heart Failure">Heart Failure</option>
-<option value="Hypertension">Hypertension</option>
+<option value="Hematology">Hematology</option>
+<option value="Intensive Care">Intensive Care</option>
 <option value="Lipid Disorders">Lipid Disorders</option>
 <option value="Valvular Disease">Valvular Disease</option>
-<option value="Vascular Disease">Vascular Disease</option>
           </select>
         </label>
       </div>
@@ -220,6 +219,7 @@
             <span>Included RCTs: 21</span>
             <span>Scanned: 42</span>
             <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
             <a href="projects/glp1-cvot/index.html">Open project</a>
@@ -236,9 +236,10 @@
           <h2>SGLT2 Cardiovascular Outcome Trials</h2>
           <p class="topic-query">(&quot;type 2 diabetes&quot;) AND (empagliflozin OR canagliflozin OR dapagliflozin OR ertugliflozin OR sotagliflozin) AND (&quot;EMPA-REG&quot; OR &quot;CANVAS&quot; OR &quot;DECLARE&quot; OR &quot;VERTIS&quot; OR &quot;SCORED&quot;)</p>
           <div class="topic-stats">
-            <span>Included RCTs: 17</span>
+            <span>Included RCTs: 16</span>
             <span>Scanned: 104</span>
             <span>Pages: 2</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
             <a href="projects/sglt2-cvot/index.html">Open project</a>
@@ -258,30 +259,12 @@
             <span>Included RCTs: 13</span>
             <span>Scanned: 98</span>
             <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
             <a href="projects/arni-heart-failure/index.html">Open project</a>
             <a href="projects/arni-heart-failure/plan.html">Validation plan</a>
             <a href="projects/arni-heart-failure/validation.json">JSON</a>
-          </div>
-        </article>
-
-        <article class="topic-card" data-tier="build-now" data-domain="Coronary Artery Disease">
-          <div class="topic-card__top">
-            <p class="topic-tier">Build Now</p>
-            <p class="topic-domain">Coronary Artery Disease</p>
-          </div>
-          <h2>IVUS or OCT Guided PCI</h2>
-          <p class="topic-query">(PCI OR coronary stent) AND (IVUS OR OCT OR &quot;intravascular ultrasound&quot; OR &quot;optical coherence tomography&quot;) AND (&quot;ULTIMATE&quot; OR &quot;ILUMIEN&quot; OR &quot;OCTOBER&quot; OR &quot;RENOVATE-COMPLEX-PCI&quot;)</p>
-          <div class="topic-stats">
-            <span>Included RCTs: 12</span>
-            <span>Scanned: 478</span>
-            <span>Pages: 5</span>
-          </div>
-          <div class="topic-links">
-            <a href="projects/ivus-oct-guided-pci/index.html">Open project</a>
-            <a href="projects/ivus-oct-guided-pci/plan.html">Validation plan</a>
-            <a href="projects/ivus-oct-guided-pci/validation.json">JSON</a>
           </div>
         </article>
 
@@ -296,68 +279,12 @@
             <span>Included RCTs: 11</span>
             <span>Scanned: 19</span>
             <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
             <a href="projects/pcsk9-ascvd/index.html">Open project</a>
             <a href="projects/pcsk9-ascvd/plan.html">Validation plan</a>
             <a href="projects/pcsk9-ascvd/validation.json">JSON</a>
-          </div>
-        </article>
-
-        <article class="topic-card" data-tier="build-now" data-domain="Coronary Artery Disease">
-          <div class="topic-card__top">
-            <p class="topic-tier">Build Now</p>
-            <p class="topic-domain">Coronary Artery Disease</p>
-          </div>
-          <h2>GP IIb/IIIa Inhibitors in ACS or PCI</h2>
-          <p class="topic-query">(ACS OR PCI OR coronary) AND (&quot;glycoprotein IIb/IIIa&quot; OR tirofiban OR abciximab OR eptifibatide) AND (&quot;EARLY ACS&quot; OR &quot;TARGET&quot; OR &quot;ADVANCE&quot; OR &quot;ON-TIME&quot;)</p>
-          <div class="topic-stats">
-            <span>Included RCTs: 8</span>
-            <span>Scanned: 63</span>
-            <span>Pages: 1</span>
-          </div>
-          <div class="topic-links">
-            <a href="projects/gpiibiiia-pci/index.html">Open project</a>
-            <a href="projects/gpiibiiia-pci/plan.html">Validation plan</a>
-            <a href="projects/gpiibiiia-pci/validation.json">JSON</a>
-          </div>
-        </article>
-
-        <article class="topic-card" data-tier="build-now" data-domain="Hypertension">
-          <div class="topic-card__top">
-            <p class="topic-tier">Build Now</p>
-            <p class="topic-domain">Hypertension</p>
-          </div>
-          <h2>Renal Denervation in Hypertension</h2>
-          <p class="topic-query">(hypertension OR &quot;blood pressure&quot;) AND (&quot;renal denervation&quot; OR &quot;catheter-based renal denervation&quot;) AND (&quot;SYMPLICITY&quot; OR &quot;SPYRAL&quot; OR &quot;RADIANCE&quot; OR &quot;TARGET BP&quot;)</p>
-          <div class="topic-stats">
-            <span>Included RCTs: 6</span>
-            <span>Scanned: 69</span>
-            <span>Pages: 1</span>
-          </div>
-          <div class="topic-links">
-            <a href="projects/renal-denervation-hypertension/index.html">Open project</a>
-            <a href="projects/renal-denervation-hypertension/plan.html">Validation plan</a>
-            <a href="projects/renal-denervation-hypertension/validation.json">JSON</a>
-          </div>
-        </article>
-
-        <article class="topic-card" data-tier="build-now" data-domain="Arrhythmia">
-          <div class="topic-card__top">
-            <p class="topic-tier">Build Now</p>
-            <p class="topic-domain">Arrhythmia</p>
-          </div>
-          <h2>Direct Oral Anticoagulants vs Warfarin in Atrial Fibrillation</h2>
-          <p class="topic-query">(&quot;atrial fibrillation&quot;) AND (apixaban OR rivaroxaban OR dabigatran OR edoxaban) AND (warfarin OR &quot;vitamin K antagonist&quot;) AND (&quot;ARISTOTLE&quot; OR &quot;ROCKET AF&quot; OR &quot;RE-LY&quot; OR &quot;ENGAGE AF&quot;)</p>
-          <div class="topic-stats">
-            <span>Included RCTs: 5</span>
-            <span>Scanned: 16</span>
-            <span>Pages: 1</span>
-          </div>
-          <div class="topic-links">
-            <a href="projects/doac-vs-warfarin-af/index.html">Open project</a>
-            <a href="projects/doac-vs-warfarin-af/plan.html">Validation plan</a>
-            <a href="projects/doac-vs-warfarin-af/validation.json">JSON</a>
           </div>
         </article>
 
@@ -372,49 +299,12 @@
             <span>Included RCTs: 5</span>
             <span>Scanned: 9</span>
             <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
             <a href="projects/vericiguat-heart-failure/index.html">Open project</a>
             <a href="projects/vericiguat-heart-failure/plan.html">Validation plan</a>
             <a href="projects/vericiguat-heart-failure/validation.json">JSON</a>
-          </div>
-        </article>
-
-        <article class="topic-card" data-tier="promising" data-domain="Coronary Artery Disease">
-          <div class="topic-card__top">
-            <p class="topic-tier">Promising</p>
-            <p class="topic-domain">Coronary Artery Disease</p>
-          </div>
-          <h2>Bivalirudin vs Heparin in ACS or PCI</h2>
-          <p class="topic-query">(ACS OR PCI OR coronary) AND (bivalirudin AND heparin) AND (&quot;HORIZONS&quot; OR &quot;EUROMAX&quot; OR &quot;HEAT-PPCI&quot; OR &quot;BRIGHT&quot;)</p>
-          <div class="topic-stats">
-            <span>Included RCTs: 4</span>
-            <span>Scanned: 7</span>
-            <span>Pages: 1</span>
-          </div>
-          <div class="topic-links">
-            <a href="projects/bivalirudin-vs-heparin/index.html">Open project</a>
-            <a href="projects/bivalirudin-vs-heparin/plan.html">Validation plan</a>
-            <a href="projects/bivalirudin-vs-heparin/validation.json">JSON</a>
-          </div>
-        </article>
-
-        <article class="topic-card" data-tier="promising" data-domain="Arrhythmia">
-          <div class="topic-card__top">
-            <p class="topic-tier">Promising</p>
-            <p class="topic-domain">Arrhythmia</p>
-          </div>
-          <h2>Left Atrial Appendage Occlusion vs Anticoagulation</h2>
-          <p class="topic-query">(&quot;atrial fibrillation&quot;) AND (&quot;left atrial appendage&quot; OR WATCHMAN OR Amulet) AND (&quot;PROTECT-AF&quot; OR &quot;PREVAIL&quot; OR &quot;Amulet IDE&quot; OR &quot;CHAMPION-AF&quot; OR &quot;OPTION&quot;)</p>
-          <div class="topic-stats">
-            <span>Included RCTs: 4</span>
-            <span>Scanned: 25</span>
-            <span>Pages: 1</span>
-          </div>
-          <div class="topic-links">
-            <a href="projects/laao-af/index.html">Open project</a>
-            <a href="projects/laao-af/plan.html">Validation plan</a>
-            <a href="projects/laao-af/validation.json">JSON</a>
           </div>
         </article>
 
@@ -429,6 +319,7 @@
             <span>Included RCTs: 4</span>
             <span>Scanned: 37</span>
             <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
             <a href="projects/sglt2-heart-failure/index.html">Open project</a>
@@ -437,41 +328,43 @@
           </div>
         </article>
 
-        <article class="topic-card" data-tier="promising" data-domain="Arrhythmia">
+        <article class="topic-card" data-tier="promising" data-domain="Hematology">
           <div class="topic-card__top">
             <p class="topic-tier">Promising</p>
-            <p class="topic-domain">Arrhythmia</p>
+            <p class="topic-domain">Hematology</p>
           </div>
-          <h2>Catheter Ablation vs Drug Therapy for Atrial Fibrillation</h2>
-          <p class="topic-query">(&quot;atrial fibrillation&quot;) AND (&quot;catheter ablation&quot;) AND (&quot;antiarrhythmic drug&quot; OR &quot;drug therapy&quot; OR medical) AND (&quot;CABANA&quot; OR &quot;EAST-AFNET&quot; OR &quot;STOP AF First&quot; OR &quot;EARLY-AF&quot;)</p>
+          <h2>Fostamatinib in Immune Thrombocytopenia</h2>
+          <p class="topic-query">(&quot;primary immune thrombocytopenia&quot; OR &quot;immune thrombocytopenic purpura&quot; OR &quot;idiopathic thrombocytopenic purpura&quot;) AND (fostamatinib OR R935788 OR R788) AND (&quot;thrombocytopenic purpura&quot; OR &quot;R935788&quot; OR &quot;adult refractory&quot;)</p>
           <div class="topic-stats">
             <span>Included RCTs: 3</span>
-            <span>Scanned: 9</span>
+            <span>Scanned: 13</span>
             <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
-            <a href="projects/ablation-vs-drugs-af/index.html">Open project</a>
-            <a href="projects/ablation-vs-drugs-af/plan.html">Validation plan</a>
-            <a href="projects/ablation-vs-drugs-af/validation.json">JSON</a>
+            <a href="projects/fostamatinib-itp/index.html">Open project</a>
+            <a href="projects/fostamatinib-itp/plan.html">Validation plan</a>
+            <a href="projects/fostamatinib-itp/validation.json">JSON</a>
           </div>
         </article>
 
-        <article class="topic-card" data-tier="promising" data-domain="Coronary Artery Disease">
+        <article class="topic-card" data-tier="promising" data-domain="Hematology">
           <div class="topic-card__top">
             <p class="topic-tier">Promising</p>
-            <p class="topic-domain">Coronary Artery Disease</p>
+            <p class="topic-domain">Hematology</p>
           </div>
-          <h2>FFR or iFR Guided PCI</h2>
-          <p class="topic-query">(PCI OR coronary disease) AND (FFR OR iFR OR &quot;fractional flow reserve&quot; OR &quot;instantaneous wave-free&quot;) AND (&quot;FAME&quot; OR &quot;DEFINE-FLAIR&quot; OR &quot;iFR-SWEDEHEART&quot; OR &quot;FUTURE&quot;)</p>
+          <h2>Momelotinib in Myelofibrosis</h2>
+          <p class="topic-query">(myelofibrosis OR &quot;post-polycythemia vera myelofibrosis&quot; OR &quot;post-essential thrombocythemia myelofibrosis&quot;) AND momelotinib AND (&quot;SIMPLIFY&quot; OR &quot;MOMENTUM&quot; OR &quot;danazol&quot;)</p>
           <div class="topic-stats">
             <span>Included RCTs: 3</span>
-            <span>Scanned: 39</span>
+            <span>Scanned: 3</span>
             <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
-            <a href="projects/ffr-ifr-guided-pci/index.html">Open project</a>
-            <a href="projects/ffr-ifr-guided-pci/plan.html">Validation plan</a>
-            <a href="projects/ffr-ifr-guided-pci/validation.json">JSON</a>
+            <a href="projects/momelotinib-myelofibrosis/index.html">Open project</a>
+            <a href="projects/momelotinib-myelofibrosis/plan.html">Validation plan</a>
+            <a href="projects/momelotinib-myelofibrosis/validation.json">JSON</a>
           </div>
         </article>
 
@@ -486,6 +379,7 @@
             <span>Included RCTs: 3</span>
             <span>Scanned: 5</span>
             <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
             <a href="projects/omecamtiv-heart-failure/index.html">Open project</a>
@@ -494,41 +388,23 @@
           </div>
         </article>
 
-        <article class="topic-card" data-tier="promising" data-domain="Lipid Disorders">
+        <article class="topic-card" data-tier="early" data-domain="Intensive Care">
           <div class="topic-card__top">
-            <p class="topic-tier">Promising</p>
-            <p class="topic-domain">Lipid Disorders</p>
+            <p class="topic-tier">Early</p>
+            <p class="topic-domain">Intensive Care</p>
           </div>
-          <h2>Omega-3 Cardiovascular Outcome Trials</h2>
-          <p class="topic-query">(&quot;cardiovascular disease&quot; OR diabetes OR hypertriglyceridemia) AND (icosapent OR eicosapentaenoic OR omega-3 OR EPA) AND (&quot;REDUCE-IT&quot; OR &quot;STRENGTH&quot; OR &quot;OMEMI&quot;)</p>
+          <h2>Angiotensin II in Vasodilatory Shock</h2>
+          <p class="topic-query">(&quot;catecholamine-resistant hypotension&quot; OR &quot;high output shock&quot; OR &quot;vasodilatory shock&quot;) AND (&quot;angiotensin II&quot; OR LJPC-501 OR Giapreza) AND (&quot;ATHOS-3&quot; OR &quot;LJPC-501&quot; OR &quot;high output shock&quot;)</p>
           <div class="topic-stats">
-            <span>Included RCTs: 3</span>
-            <span>Scanned: 19</span>
+            <span>Included RCTs: 2</span>
+            <span>Scanned: 11</span>
             <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
-            <a href="projects/omega3-cvot/index.html">Open project</a>
-            <a href="projects/omega3-cvot/plan.html">Validation plan</a>
-            <a href="projects/omega3-cvot/validation.json">JSON</a>
-          </div>
-        </article>
-
-        <article class="topic-card" data-tier="promising" data-domain="Valvular Disease">
-          <div class="topic-card__top">
-            <p class="topic-tier">Promising</p>
-            <p class="topic-domain">Valvular Disease</p>
-          </div>
-          <h2>TAVI/TAVR vs Surgical AVR</h2>
-          <p class="topic-query">(&quot;aortic stenosis&quot;) AND (TAVR OR TAVI OR &quot;transcatheter aortic valve&quot;) AND (surgery OR SAVR OR surgical) AND (&quot;PARTNER&quot; OR &quot;CoreValve&quot; OR &quot;SURTAVI&quot; OR &quot;Evolut&quot; OR &quot;NOTION&quot;)</p>
-          <div class="topic-stats">
-            <span>Included RCTs: 3</span>
-            <span>Scanned: 66</span>
-            <span>Pages: 1</span>
-          </div>
-          <div class="topic-links">
-            <a href="projects/tavi-vs-savr/index.html">Open project</a>
-            <a href="projects/tavi-vs-savr/plan.html">Validation plan</a>
-            <a href="projects/tavi-vs-savr/validation.json">JSON</a>
+            <a href="projects/angiotensin-ii-vasodilatory-shock/index.html">Open project</a>
+            <a href="projects/angiotensin-ii-vasodilatory-shock/plan.html">Validation plan</a>
+            <a href="projects/angiotensin-ii-vasodilatory-shock/validation.json">JSON</a>
           </div>
         </article>
 
@@ -543,6 +419,7 @@
             <span>Included RCTs: 2</span>
             <span>Scanned: 8</span>
             <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
             <a href="projects/tavi-antithrombotic/index.html">Open project</a>
@@ -551,22 +428,23 @@
           </div>
         </article>
 
-        <article class="topic-card" data-tier="early" data-domain="Coronary Artery Disease">
+        <article class="topic-card" data-tier="early" data-domain="Hematology">
           <div class="topic-card__top">
             <p class="topic-tier">Early</p>
-            <p class="topic-domain">Coronary Artery Disease</p>
+            <p class="topic-domain">Hematology</p>
           </div>
-          <h2>Cangrelor in PCI</h2>
-          <p class="topic-query">(PCI OR coronary intervention) AND cangrelor AND (&quot;CHAMPION&quot; OR &quot;BRIDGE&quot;)</p>
+          <h2>Caplacizumab in Acquired TTP</h2>
+          <p class="topic-query">(&quot;acquired thrombotic thrombocytopenic purpura&quot; OR aTTP OR TTP) AND (caplacizumab OR ALX-0681) AND (&quot;HERCULES&quot; OR &quot;TITAN&quot; OR &quot;anti-von Willebrand factor&quot;)</p>
           <div class="topic-stats">
             <span>Included RCTs: 2</span>
-            <span>Scanned: 4</span>
+            <span>Scanned: 5</span>
             <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
-            <a href="projects/cangrelor-pci/index.html">Open project</a>
-            <a href="projects/cangrelor-pci/plan.html">Validation plan</a>
-            <a href="projects/cangrelor-pci/validation.json">JSON</a>
+            <a href="projects/caplacizumab-attp/index.html">Open project</a>
+            <a href="projects/caplacizumab-attp/plan.html">Validation plan</a>
+            <a href="projects/caplacizumab-attp/validation.json">JSON</a>
           </div>
         </article>
 
@@ -581,11 +459,32 @@
             <span>Included RCTs: 2</span>
             <span>Scanned: 7</span>
             <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
             <a href="projects/doac-antiplatelet-af-pci/index.html">Open project</a>
             <a href="projects/doac-antiplatelet-af-pci/plan.html">Validation plan</a>
             <a href="projects/doac-antiplatelet-af-pci/validation.json">JSON</a>
+          </div>
+        </article>
+
+        <article class="topic-card" data-tier="early" data-domain="Hematology">
+          <div class="topic-card__top">
+            <p class="topic-tier">Early</p>
+            <p class="topic-domain">Hematology</p>
+          </div>
+          <h2>Efgartigimod in Immune Thrombocytopenia</h2>
+          <p class="topic-query">(&quot;primary immune thrombocytopenia&quot; OR &quot;immune thrombocytopenia&quot; OR &quot;immune thrombocytopenic purpura&quot;) AND (efgartigimod OR ARGX-113) AND (&quot;ADVANCE&quot; OR &quot;subcutaneous&quot; OR &quot;primary ITP&quot;)</p>
+          <div class="topic-stats">
+            <span>Included RCTs: 2</span>
+            <span>Scanned: 6</span>
+            <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
+          </div>
+          <div class="topic-links">
+            <a href="projects/efgartigimod-itp/index.html">Open project</a>
+            <a href="projects/efgartigimod-itp/plan.html">Validation plan</a>
+            <a href="projects/efgartigimod-itp/validation.json">JSON</a>
           </div>
         </article>
 
@@ -600,6 +499,7 @@
             <span>Included RCTs: 2</span>
             <span>Scanned: 6</span>
             <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
             <a href="projects/finerenone-cardiorenal/index.html">Open project</a>
@@ -608,117 +508,43 @@
           </div>
         </article>
 
-        <article class="topic-card" data-tier="early" data-domain="Heart Failure">
+        <article class="topic-card" data-tier="early" data-domain="Hematology">
           <div class="topic-card__top">
             <p class="topic-tier">Early</p>
-            <p class="topic-domain">Heart Failure</p>
+            <p class="topic-domain">Hematology</p>
           </div>
-          <h2>Intravenous Iron in Heart Failure</h2>
-          <p class="topic-query">(&quot;heart failure&quot;) AND (&quot;ferric carboxymaltose&quot; OR &quot;intravenous iron&quot; OR iron) AND (&quot;AFFIRM-AHF&quot; OR &quot;FAIR-HF&quot; OR &quot;CONFIRM-HF&quot; OR &quot;IRONMAN&quot; OR &quot;HEART-FID&quot;)</p>
+          <h2>Luspatercept in Beta-Thalassemia</h2>
+          <p class="topic-query">(&quot;beta thalassemia&quot; OR &quot;transfusion-dependent beta thalassemia&quot; OR &quot;non transfusion dependent beta thalassemia&quot;) AND luspatercept AND (&quot;BELIEVE&quot; OR &quot;BEYOND&quot; OR &quot;ACE-536&quot;)</p>
           <div class="topic-stats">
             <span>Included RCTs: 2</span>
-            <span>Scanned: 7</span>
+            <span>Scanned: 17</span>
             <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
-            <a href="projects/iron-heart-failure/index.html">Open project</a>
-            <a href="projects/iron-heart-failure/plan.html">Validation plan</a>
-            <a href="projects/iron-heart-failure/validation.json">JSON</a>
+            <a href="projects/luspatercept-beta-thalassemia/index.html">Open project</a>
+            <a href="projects/luspatercept-beta-thalassemia/plan.html">Validation plan</a>
+            <a href="projects/luspatercept-beta-thalassemia/validation.json">JSON</a>
           </div>
         </article>
 
-        <article class="topic-card" data-tier="early" data-domain="Heart Failure">
+        <article class="topic-card" data-tier="early" data-domain="Hematology">
           <div class="topic-card__top">
             <p class="topic-tier">Early</p>
-            <p class="topic-domain">Heart Failure</p>
+            <p class="topic-domain">Hematology</p>
           </div>
-          <h2>Ivabradine in Heart Failure or LV Dysfunction</h2>
-          <p class="topic-query">(&quot;heart failure&quot; OR &quot;left ventricular dysfunction&quot;) AND ivabradine AND (&quot;SHIFT&quot; OR &quot;BEAUTIFUL&quot; OR &quot;EDIFY&quot;)</p>
-          <div class="topic-stats">
-            <span>Included RCTs: 2</span>
-            <span>Scanned: 4</span>
-            <span>Pages: 1</span>
-          </div>
-          <div class="topic-links">
-            <a href="projects/ivabradine-heart-failure/index.html">Open project</a>
-            <a href="projects/ivabradine-heart-failure/plan.html">Validation plan</a>
-            <a href="projects/ivabradine-heart-failure/validation.json">JSON</a>
-          </div>
-        </article>
-
-        <article class="topic-card" data-tier="early" data-domain="Vascular Disease">
-          <div class="topic-card__top">
-            <p class="topic-tier">Early</p>
-            <p class="topic-domain">Vascular Disease</p>
-          </div>
-          <h2>Patent Foramen Ovale Closure vs Medical Therapy</h2>
-          <p class="topic-query">(&quot;patent foramen ovale&quot;) AND (closure OR device) AND (&quot;RESPECT&quot; OR &quot;REDUCE&quot; OR &quot;CLOSE&quot; OR &quot;DEFENSE-PFO&quot;)</p>
-          <div class="topic-stats">
-            <span>Included RCTs: 2</span>
-            <span>Scanned: 31</span>
-            <span>Pages: 1</span>
-          </div>
-          <div class="topic-links">
-            <a href="projects/pfo-closure/index.html">Open project</a>
-            <a href="projects/pfo-closure/plan.html">Validation plan</a>
-            <a href="projects/pfo-closure/validation.json">JSON</a>
-          </div>
-        </article>
-
-        <article class="topic-card" data-tier="early" data-domain="Coronary Artery Disease">
-          <div class="topic-card__top">
-            <p class="topic-tier">Early</p>
-            <p class="topic-domain">Coronary Artery Disease</p>
-          </div>
-          <h2>Thrombus Aspiration in STEMI</h2>
-          <p class="topic-query">(STEMI OR myocardial infarction) AND (&quot;thrombus aspiration&quot; OR thrombectomy) AND (&quot;TASTE&quot; OR &quot;TOTAL&quot; OR &quot;TAPAS&quot;)</p>
-          <div class="topic-stats">
-            <span>Included RCTs: 2</span>
-            <span>Scanned: 46</span>
-            <span>Pages: 1</span>
-          </div>
-          <div class="topic-links">
-            <a href="projects/thrombus-aspiration-stemi/index.html">Open project</a>
-            <a href="projects/thrombus-aspiration-stemi/plan.html">Validation plan</a>
-            <a href="projects/thrombus-aspiration-stemi/validation.json">JSON</a>
-          </div>
-        </article>
-
-        <article class="topic-card" data-tier="early" data-domain="Coronary Artery Disease">
-          <div class="topic-card__top">
-            <p class="topic-tier">Early</p>
-            <p class="topic-domain">Coronary Artery Disease</p>
-          </div>
-          <h2>Ticagrelor vs Clopidogrel in ACS</h2>
-          <p class="topic-query">(&quot;acute coronary syndrome&quot; OR myocardial infarction OR NSTEMI OR STEMI) AND (ticagrelor AND clopidogrel) AND (&quot;PLATO&quot; OR &quot;PHILO&quot; OR &quot;POPular AGE&quot;)</p>
-          <div class="topic-stats">
-            <span>Included RCTs: 2</span>
-            <span>Scanned: 42</span>
-            <span>Pages: 1</span>
-          </div>
-          <div class="topic-links">
-            <a href="projects/ticagrelor-vs-clopidogrel/index.html">Open project</a>
-            <a href="projects/ticagrelor-vs-clopidogrel/plan.html">Validation plan</a>
-            <a href="projects/ticagrelor-vs-clopidogrel/validation.json">JSON</a>
-          </div>
-        </article>
-
-        <article class="topic-card" data-tier="early" data-domain="Coronary Artery Disease">
-          <div class="topic-card__top">
-            <p class="topic-tier">Early</p>
-            <p class="topic-domain">Coronary Artery Disease</p>
-          </div>
-          <h2>Ticagrelor vs Prasugrel in ACS</h2>
-          <p class="topic-query">(&quot;acute coronary syndrome&quot; OR myocardial infarction OR NSTEMI OR STEMI) AND (ticagrelor AND prasugrel) AND (&quot;ISAR-REACT&quot; OR &quot;PRAGUE&quot; OR &quot;DUBIUS&quot;)</p>
+          <h2>Pegcetacoplan in Paroxysmal Nocturnal Hemoglobinuria</h2>
+          <p class="topic-query">(&quot;paroxysmal nocturnal hemoglobinuria&quot; OR PNH) AND (pegcetacoplan OR APL-2) AND (&quot;PEGASUS&quot; OR &quot;PRINCE&quot; OR &quot;APL-2&quot;)</p>
           <div class="topic-stats">
             <span>Included RCTs: 2</span>
             <span>Scanned: 9</span>
             <span>Pages: 1</span>
+            <span>Eligibility: Full CT.gov results coverage (&gt;=2 RCTs)</span>
           </div>
           <div class="topic-links">
-            <a href="projects/ticagrelor-vs-prasugrel-acs/index.html">Open project</a>
-            <a href="projects/ticagrelor-vs-prasugrel-acs/plan.html">Validation plan</a>
-            <a href="projects/ticagrelor-vs-prasugrel-acs/validation.json">JSON</a>
+            <a href="projects/pegcetacoplan-pnh/index.html">Open project</a>
+            <a href="projects/pegcetacoplan-pnh/plan.html">Validation plan</a>
+            <a href="projects/pegcetacoplan-pnh/validation.json">JSON</a>
           </div>
         </article>
       </section>
