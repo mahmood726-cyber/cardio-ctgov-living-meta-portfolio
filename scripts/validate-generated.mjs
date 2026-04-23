@@ -64,7 +64,11 @@ async function run() {
       assert(indexHtml.includes("Reviewer Validation"), `${topic.slug}: wrapper missing reviewer validation section`);
       assert(indexHtml.includes("Review Question And PICO"), `${topic.slug}: wrapper missing PICO section`);
       assert(indexHtml.includes("Benchmark Reconciliation Ledger"), `${topic.slug}: wrapper missing benchmark ledger`);
-      assert(indexHtml.includes(`${topic.includedCount} eligible RCTs in snapshot`), `${topic.slug}: missing snapshot count`);
+      const snapshotCountVariants = [
+        `${topic.includedCount} eligible RCTs in snapshot`,
+        `${topic.includedCount} eligible RCT in snapshot`
+      ];
+      assert(snapshotCountVariants.some(value => indexHtml.includes(value)), `${topic.slug}: missing snapshot count`);
       assert(indexHtml.includes(escapeHtml(topic.query)), `${topic.slug}: missing exact query`);
       assert(indexHtml.includes("../../../esc-acs-living-meta/styles.css"), `${topic.slug}: missing shared stylesheet ref`);
       assert(indexHtml.includes("../../../esc-acs-living-meta/app.js"), `${topic.slug}: missing shared app ref`);
@@ -78,12 +82,38 @@ async function run() {
       assert(planHtml.includes("Study Eligibility And Demographics"), `${topic.slug}: plan missing demographics section`);
       assert(planHtml.includes("Record Excerpts"), `${topic.slug}: plan missing record excerpts section`);
       assert(planHtml.includes("Reviewer Validation And Benchmarking"), `${topic.slug}: plan missing reviewer validation section`);
+      assert(indexHtml.includes("Full CT.gov results coverage"), `${topic.slug}: wrapper missing CT.gov coverage label`);
+      assert(planHtml.includes("Full CT.gov results coverage"), `${topic.slug}: plan missing CT.gov coverage label`);
       assert(Array.isArray(validation.topic?.includedStudies), `${topic.slug}: validation missing included studies`);
       assert(validation.topic.includedStudies.length === topic.includedCount, `${topic.slug}: included count mismatch`);
+      assert(validation.topic.analysisEligibleCount === (topic.analysisEligibleCount ?? validation.topic.analysisEligibleCount), `${topic.slug}: analysis-ready count mismatch`);
+      assert(validation.topic.comparisonReadyStudyCount === (topic.comparisonReadyStudyCount ?? validation.topic.comparisonReadyStudyCount), `${topic.slug}: comparison-ready study count mismatch`);
+      assert(validation.topic.comparisonCount === (topic.comparisonCount ?? validation.topic.comparisonCount), `${topic.slug}: comparison count mismatch`);
+      assert(validation.topic.ctgovFullCoverage === true, `${topic.slug}: validation missing full CT.gov coverage flag`);
+      assert(typeof validation.topic.ctgovCoverageNote === "string" && validation.topic.ctgovCoverageNote.length > 0, `${topic.slug}: validation missing CT.gov coverage note`);
       assert(
         validation.topic.includedStudies.every(study => "briefSummary" in study && "eligibility" in study && "sponsor" in study),
         `${topic.slug}: validation missing enriched transparency fields`
       );
+      assert(
+        validation.topic.includedStudies.every(study => !/\bNON_RANDOMIZED\b/.test(String(study.allocation || "").toUpperCase())),
+        `${topic.slug}: included NON_RANDOMIZED study detected`
+      );
+
+      for (const study of validation.topic.includedStudies) {
+        if (!study.outcome) continue;
+        assert(typeof study.outcome.analysisEligible === "boolean", `${topic.slug}: ${study.nctId}: outcome missing analysisEligible flag`);
+        assert(typeof study.outcome.analysisReason === "string" && study.outcome.analysisReason.length > 0, `${topic.slug}: ${study.nctId}: outcome missing analysisReason`);
+        for (const group of study.outcome.groups || []) {
+          if (group.events == null) continue;
+          assert(Number.isFinite(group.events), `${topic.slug}: ${study.nctId}: non-finite event count`);
+          assert(Number.isInteger(group.events), `${topic.slug}: ${study.nctId}: non-integer study event count`);
+          if (group.n != null) {
+            assert(group.events >= 0, `${topic.slug}: ${study.nctId}: negative event count`);
+            assert(group.events <= group.n, `${topic.slug}: ${study.nctId}: event count exceeds denominator`);
+          }
+        }
+      }
     } catch (error) {
       failures.push(error.message);
     }

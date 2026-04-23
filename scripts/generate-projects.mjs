@@ -12,6 +12,29 @@ const PORTFOLIO_INDEX_PATH = path.join(PORTFOLIO_ROOT, "index.html");
 const PORTFOLIO_NAME = path.basename(PORTFOLIO_ROOT);
 
 const SHARED_RELATIVE = "../../../esc-acs-living-meta";
+const FULL_CTGOV_RESULTS_TOPIC_SLUGS = new Set([
+  "angiotensin-ii-vasodilatory-shock",
+  "arni-heart-failure",
+  "caplacizumab-attp",
+  "doac-antiplatelet-af-pci",
+  "efgartigimod-itp",
+  "factor-xi-acs",
+  "finerenone-cardiorenal",
+  "fostamatinib-itp",
+  "glp1-cvot",
+  "luspatercept-beta-thalassemia",
+  "mitral-teer",
+  "momelotinib-myelofibrosis",
+  "omecamtiv-heart-failure",
+  "pcsk9-ascvd",
+  "pegcetacoplan-pnh",
+  "pfa-af",
+  "sglt2-cvot",
+  "sglt2-heart-failure",
+  "tavi-antithrombotic",
+  "tricuspid-teer",
+  "vericiguat-heart-failure"
+]);
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -34,6 +57,57 @@ function formatTitleCase(value) {
     .filter(Boolean)
     .map(token => token.charAt(0).toUpperCase() + token.slice(1))
     .join(" ");
+}
+
+function normalizePortfolioTopic(topic, minIncludedTrials = 2) {
+  const includedCount = Number(topic?.includedCount) || 0;
+  const ctgovFullCoverage =
+    topic?.ctgovFullCoverage != null ? Boolean(topic.ctgovFullCoverage) : FULL_CTGOV_RESULTS_TOPIC_SLUGS.has(topic?.slug);
+  const ctgovCoverageNote =
+    topic?.ctgovCoverageNote ||
+    (ctgovFullCoverage
+      ? "Curated as a modern topic where the randomized evidence base is expected to be fully representable from CT.gov records with posted results."
+      : "Excluded from the portfolio because full randomized evidence coverage cannot be guaranteed from CT.gov results for this legacy or mixed-era topic.");
+  const portfolioEligible =
+    topic?.portfolioEligible != null ? Boolean(topic.portfolioEligible) : ctgovFullCoverage && includedCount >= minIncludedTrials;
+  const portfolioEligibilityMode = topic?.portfolioEligibilityMode || (portfolioEligible ? "full-ctgov-threshold" : "excluded");
+  const portfolioEligibilityReason =
+    topic?.portfolioEligibilityReason ||
+    (portfolioEligible
+      ? `Included because ${includedCount} randomized trial(s) met the standard >=${minIncludedTrials} CT.gov-results threshold and the topic is curated as full-coverage.`
+      : `Excluded because the topic did not satisfy the >=${minIncludedTrials} result-reporting trial gate and/or the full CT.gov coverage gate.`);
+  const priorityTier =
+    topic?.priorityTier && !["coverage-excluded", "insufficient"].includes(topic.priorityTier)
+      ? topic.priorityTier
+      : !ctgovFullCoverage
+        ? "coverage-excluded"
+        : includedCount >= 5
+        ? "build-now"
+        : includedCount >= 3
+          ? "promising"
+          : includedCount >= 2
+            ? "early"
+            : "insufficient";
+  return {
+    ...topic,
+    ctgovFullCoverage,
+    ctgovCoverageNote,
+    portfolioEligible,
+    portfolioEligibilityMode,
+    portfolioEligibilityReason,
+    priorityTier
+  };
+}
+
+function getEligibilityModeLabel(topic, validationMeta) {
+  if (topic.portfolioEligibilityMode === "full-ctgov-threshold") {
+    return `Full CT.gov results coverage (>=${validationMeta.minIncludedTrials || 2} RCTs)`;
+  }
+  return formatTitleCase(topic.portfolioEligibilityMode || "excluded");
+}
+
+function getCoverageNote(topic) {
+  return `<p class="muted">${escapeHtml(topic.ctgovCoverageNote || "")}</p>`;
 }
 
 function ctgovStudyUrl(nctId) {
@@ -182,12 +256,56 @@ function toPositiveNumber(value) {
   return numeric != null && numeric > 0 ? numeric : null;
 }
 
+function hasComparatorAnchor(title) {
+  const anchors = ["control", "placebo", "standard", "usual", "conventional", "sham", "warfarin", "vka"];
+  const normalized = String(title || "").toLowerCase();
+  return anchors.some(anchor => normalized.includes(anchor));
+}
+
+function hasAggregateArmMarker(title) {
+  const normalized = String(title || "").toLowerCase();
+  return /\ball\b|\btotal\b|\bpooled\b|\bcombined\b/.test(normalized);
+}
+
 function pickComparatorIndex(groups = []) {
-  const anchors = ["control", "placebo", "standard", "usual", "conventional"];
-  const idx = groups.findIndex(group =>
-    anchors.some(anchor => String(group?.title || "").toLowerCase().includes(anchor))
-  );
-  return idx >= 0 ? idx : 0;
+  const idx = groups.findIndex(group => hasComparatorAnchor(group?.title));
+  if (idx >= 0) return idx;
+  return groups.length === 2 ? groups.length - 1 : null;
+}
+
+function splitComparatorGroup(group, divisor, measure) {
+  if (!group || !divisor || divisor <= 1) return group;
+  const n = toPositiveNumber(group.n);
+  if (measure === "logRR") {
+    const events = toFiniteNumber(group.events);
+    if (n == null || events == null) return null;
+    return {
+      ...group,
+      n: n / divisor,
+      events: events / divisor
+    };
+  }
+  if (measure === "MD") {
+    return {
+      ...group,
+      n: n == null ? null : n / divisor
+    };
+  }
+  return group;
+}
+
+function selectTreatmentGroups(groups, comparatorIndex) {
+  if (comparatorIndex == null) return null;
+  const treatments = groups.filter((_, idx) => idx !== comparatorIndex);
+  if (!treatments.length) return null;
+  if (treatments.length === 1) {
+    return { treatments, strategy: "direct" };
+  }
+  const aggregateArm = treatments.find(group => hasAggregateArmMarker(group?.title));
+  if (aggregateArm) {
+    return { treatments: [aggregateArm], strategy: "aggregate-active-arm" };
+  }
+  return { treatments, strategy: "split-shared-comparator" };
 }
 
 function inferGroupLabel(group, study, idx) {
@@ -223,16 +341,31 @@ function computeMeanDiffForGenerator(m1, sd1, n1, m0, sd0, n0) {
 function buildTopicComparisons(topic) {
   const comparisons = [];
   for (const study of topic.includedStudies || []) {
+    if (!study.outcome?.analysisEligible) continue;
     const groups = study.outcome?.groups || [];
     if (groups.length < 2) continue;
     const comparatorIndex = pickComparatorIndex(groups);
+    if (comparatorIndex == null) continue;
     const comparator = groups[comparatorIndex];
-    groups.forEach((group, idx) => {
-      if (idx === comparatorIndex) return;
+    const treatmentSelection = selectTreatmentGroups(groups, comparatorIndex);
+    if (!treatmentSelection) continue;
+
+    treatmentSelection.treatments.forEach(group => {
       let result = null;
       let measure = null;
       if (group?.events != null && group?.n != null && comparator?.events != null && comparator?.n != null) {
-        result = computeLogRRForGenerator(group.events, group.n, comparator.events, comparator.n);
+        const comparatorForComparison = splitComparatorGroup(
+          comparator,
+          treatmentSelection.strategy === "split-shared-comparator" ? treatmentSelection.treatments.length : 1,
+          "logRR"
+        );
+        if (!comparatorForComparison) return;
+        result = computeLogRRForGenerator(
+          group.events,
+          group.n,
+          comparatorForComparison.events,
+          comparatorForComparison.n
+        );
         measure = "logRR";
       } else if (
         group?.mean != null &&
@@ -242,25 +375,46 @@ function buildTopicComparisons(topic) {
         comparator?.sd != null &&
         comparator?.n != null
       ) {
-        result = computeMeanDiffForGenerator(group.mean, group.sd, group.n, comparator.mean, comparator.sd, comparator.n);
+        const comparatorForComparison = splitComparatorGroup(
+          comparator,
+          treatmentSelection.strategy === "split-shared-comparator" ? treatmentSelection.treatments.length : 1,
+          "MD"
+        );
+        if (!comparatorForComparison) return;
+        result = computeMeanDiffForGenerator(
+          group.mean,
+          group.sd,
+          group.n,
+          comparatorForComparison.mean,
+          comparatorForComparison.sd,
+          comparatorForComparison.n
+        );
         measure = "MD";
       }
       if (!result) return;
-      const totalN = toPositiveNumber(group.n) && toPositiveNumber(comparator.n)
-        ? Number(group.n) + Number(comparator.n)
+      const comparatorForSummary = splitComparatorGroup(
+        comparator,
+        treatmentSelection.strategy === "split-shared-comparator" ? treatmentSelection.treatments.length : 1,
+        measure
+      );
+      const totalN = toPositiveNumber(group.n) && toPositiveNumber(comparatorForSummary?.n)
+        ? Number(group.n) + Number(comparatorForSummary.n)
         : toPositiveNumber(study.enrollment?.count);
       comparisons.push({
         studyId: study.nctId,
         title: study.title,
-        t1: inferGroupLabel(group, study, idx),
+        t1: inferGroupLabel(group, study, groups.indexOf(group)),
         t2: inferGroupLabel(comparator, study, comparatorIndex),
         measure,
         effect: result.effect,
         se: result.se,
         n1: toPositiveNumber(group.n),
-        n0: toPositiveNumber(comparator.n),
+        n0: toPositiveNumber(comparatorForSummary?.n),
         totalN: totalN || null,
-        sampleSize: totalN || null
+        sampleSize: totalN || null,
+        comparisonStrategy: treatmentSelection.strategy,
+        sharedComparatorSplit: treatmentSelection.strategy === "split-shared-comparator",
+        outcomeMetricKind: study.outcome?.metricKind || null
       });
     });
   }
@@ -271,16 +425,36 @@ function getStudyComparatorSummary(study) {
   const groups = study.outcome?.groups || [];
   if (groups.length >= 2) {
     const comparatorIndex = pickComparatorIndex(groups);
+    if (comparatorIndex == null) {
+      return "Multi-arm CT.gov record without a resolved shared comparator";
+    }
     const comparator = groups[comparatorIndex];
-    return groups
-      .filter((_, idx) => idx !== comparatorIndex)
+    const treatmentSelection = selectTreatmentGroups(groups, comparatorIndex);
+    const treatments = (treatmentSelection?.treatments || [])
       .slice(0, 2)
-      .map(group => `${inferGroupLabel(group, study, 0)} vs ${inferGroupLabel(comparator, study, comparatorIndex)}`)
+      .map(group => `${inferGroupLabel(group, study, groups.indexOf(group))} vs ${inferGroupLabel(comparator, study, comparatorIndex)}`)
       .join(" | ");
+    if (treatmentSelection?.strategy === "split-shared-comparator") {
+      return `${treatments} | Shared comparator split across CT.gov treatment arms`;
+    }
+    if (treatmentSelection?.strategy === "aggregate-active-arm") {
+      return `${treatments} | Aggregate active arm preferred over dose-level duplicates`;
+    }
+    return treatments;
   }
   const arms = (study.arms || []).map(arm => arm.title).filter(Boolean);
   if (arms.length >= 2) return `${arms[0]} vs ${arms[1]}`;
   return arms[0] || "Comparator not reported";
+}
+
+function buildComparisonSummary(topic) {
+  const comparisons = buildTopicComparisons(topic);
+  return {
+    comparisons,
+    analysisEligibleCount: countStudiesWith(topic.includedStudies || [], study => Boolean(study.outcome?.analysisEligible)),
+    comparisonReadyStudyCount: new Set(comparisons.map(comparison => comparison.studyId)).size,
+    comparisonCount: comparisons.length
+  };
 }
 
 function getStudyOutcomeLabel(study) {
@@ -294,15 +468,16 @@ function buildPicoSummary(topic) {
     interventions: uniqueValues(studies.flatMap(study => (study.outcome?.groups || []).map(group => group.title).filter(Boolean)), 8).join("; ") || topic.label,
     comparators: uniqueValues(studies.map(getStudyComparatorSummary), 6).join("; ") || "Comparator arms as posted on CT.gov",
     outcomes: uniqueValues(studies.map(getStudyOutcomeLabel), 6).join("; ") || "Primary CT.gov outcome results",
-    design: "Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes."
+    design: "Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and at least one recorded numeric CT.gov outcome."
   };
 }
 
 function buildPrismaFlowRows(topic) {
   return [
     { stage: "Records identified from the exact CT.gov query", count: topic.scannedRecords, detail: `${topic.pagesFetched} page(s) fetched` },
-    { stage: "Records excluded by registry hard gates", count: topic.excludedCount, detail: "Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome" },
-    { stage: "Trials entering the quantitative snapshot", count: topic.includedCount, detail: "Included in validation.json and the live topic app" }
+    { stage: "Records excluded by registry hard gates", count: topic.excludedCount, detail: "Not randomized, incomplete, missing results, insufficient arms, or no recorded numeric outcome" },
+    { stage: "Trials entering the CT.gov record snapshot", count: topic.includedCount, detail: "Included in validation.json and the live topic app" },
+    { stage: "Trials with contrast-ready outcomes", count: topic.analysisEligibleCount || 0, detail: "Recorded metrics safely reducible to counts or means" }
   ];
 }
 
@@ -310,8 +485,13 @@ function buildSelectionWorkflowRows(topic, validationMeta) {
   return [
     { step: "Question framing", rule: "Topic slug, base query, and keyword pack frozen before generation", evidence: `${topic.slug} | ${formatDate(validationMeta.generatedAt)}` },
     { step: "Registry screening", rule: "ClinicalTrials.gov v2 API queried with the exact string shown below", evidence: `${topic.scannedRecords} candidate records screened` },
-    { step: "Eligibility gate", rule: "Randomized interventional, completed, posted results, >=2 arms, numeric outcome", evidence: `${topic.includedCount} included / ${topic.excludedCount} excluded` },
-    { step: "Extraction", rule: "Outcome groups, sponsor, eligibility, documents, and demographics preserved where available", evidence: `${countStudiesWith(topic.includedStudies || [], study => Boolean(study.demographics))}/${topic.includedCount} studies with demographics` },
+    {
+      step: "Coverage curation",
+      rule: "Only modern topics where the full randomized evidence base is expected to be available on CT.gov with posted results are allowed into the portfolio",
+      evidence: topic.ctgovCoverageNote
+    },
+    { step: "Eligibility gate", rule: "Randomized interventional, completed, posted results, >=2 arms, recorded numeric CT.gov outcome, and >=2 qualifying CT.gov-result RCTs", evidence: `${topic.includedCount} included / ${topic.excludedCount} excluded` },
+    { step: "Extraction", rule: "Outcome groups, raw CT.gov metrics, sponsor, eligibility, documents, and demographics preserved where available", evidence: `${countStudiesWith(topic.includedStudies || [], study => Boolean(study.demographics))}/${topic.includedCount} studies with demographics` },
     { step: "Reviewer validation", rule: "Benchmark ledger and topic-aware WebR runner bundled with each topic project", evidence: "validation.json + plan.html + embedded runner" }
   ];
 }
@@ -331,6 +511,7 @@ function buildRunnerHref(topic) {
 
 function buildRunnerContext(topic, validationMeta) {
   const studies = topic.includedStudies || [];
+  const comparisonSummary = buildComparisonSummary(topic);
   return {
     source: "ctgov-portfolio-generator",
     topicId: topic.slug,
@@ -342,7 +523,10 @@ function buildRunnerContext(topic, validationMeta) {
     totalEnrollment: sumEnrollment(studies),
     demographicsCoverage: countStudiesWith(studies, study => Boolean(study.demographics)),
     documentCoverage: countStudiesWith(studies, study => (study.documents || []).length > 0),
-    comparisons: buildTopicComparisons(topic),
+    analysisEligibleCount: comparisonSummary.analysisEligibleCount,
+    comparisonReadyStudyCount: comparisonSummary.comparisonReadyStudyCount,
+    comparisonCount: comparisonSummary.comparisonCount,
+    comparisons: comparisonSummary.comparisons,
     includedStudies: studies.map(study => ({
       nctId: study.nctId,
       title: study.title,
@@ -350,15 +534,26 @@ function buildRunnerContext(topic, validationMeta) {
       enrollment: toPositiveNumber(study.enrollment?.count),
       documentsCount: (study.documents || []).length,
       hasDemographics: Boolean(study.demographics),
+      analysisEligible: Boolean(study.outcome?.analysisEligible),
+      analysisReason: study.outcome?.analysisReason || null,
       outcome: study.outcome ? {
         type: study.outcome.type || null,
         title: study.outcome.title || null,
+        unitOfMeasure: study.outcome.unitOfMeasure || null,
+        paramType: study.outcome.paramType || null,
+        metricKind: study.outcome.metricKind || null,
+        analysisEligible: Boolean(study.outcome.analysisEligible),
+        analysisReason: study.outcome.analysisReason || null,
         groups: (study.outcome.groups || []).map(group => ({
           title: group.title || null,
           n: toPositiveNumber(group.n),
           events: toFiniteNumber(group.events),
           mean: toFiniteNumber(group.mean),
-          sd: toFiniteNumber(group.sd)
+          sd: toFiniteNumber(group.sd),
+          rawValue: toFiniteNumber(group.rawValue),
+          rawUnit: group.rawUnit || null,
+          displayPercent: toFiniteNumber(group.displayPercent),
+          derivation: group.derivation || null
         }))
       } : null,
       primaryOutcomes: (study.primaryOutcomes || []).slice(0, 2).map(item => ({
@@ -458,7 +653,7 @@ function buildWrapperReviewerSections(topic, validationMeta) {
   const studies = topic.includedStudies || [];
   const pico = buildPicoSummary(topic);
   const runnerHref = buildRunnerHref(topic);
-  const runnerContextJson = JSON.stringify(buildRunnerContext(topic, validationMeta)).replace(/</g, "\u003c");
+  const runnerContextJson = JSON.stringify(buildRunnerContext(topic, validationMeta)).replace(/</g, "\\u003c");
   const prismaRows = buildPrismaFlowRows(topic)
     .map(row => `
         <tr>
@@ -670,14 +865,14 @@ function buildOverride(topic, validationMeta) {
         keywords: topic.keywords
       }
     ],
-    appConfig: {
-      pageTitle: `${topic.label} | CT.gov Living Meta-Analysis`,
-      kicker: "Registry-Native Cardiovascular Evidence",
-      title: `${topic.label} Living Meta-Analysis`,
-      subtitle:
-        "Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.",
-      topicPanelTitle: `CT.gov-validated topic (${topic.includedCount} eligible RCTs in snapshot)`,
-      welcomeTitle: `${topic.label} CT.gov review`,
+      appConfig: {
+        pageTitle: `${topic.label} | CT.gov Living Meta-Analysis`,
+        kicker: "Registry-Native Cardiovascular Evidence",
+        title: `${topic.label} Living Meta-Analysis`,
+        subtitle:
+          "Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio.",
+        topicPanelTitle: `CT.gov completeness-screened topic (${topic.includedCount} eligible RCTs in snapshot)`,
+        welcomeTitle: `${topic.label} CT.gov review`,
       eligibilityTrialMinimum: 1,
       analysisStudioName: `${topic.label} CT.gov Living Meta-Analysis Studio`,
       defaultStatuses: ["COMPLETED"],
@@ -695,6 +890,7 @@ function buildOverride(topic, validationMeta) {
 
 function buildSnapshotSection(topic, validationMeta) {
   const runnerHref = buildRunnerHref(topic);
+  const comparisonSummary = buildComparisonSummary(topic);
   const includedLinks = topic.includedStudies
     .map(
       study => `
@@ -725,15 +921,21 @@ function buildSnapshotSection(topic, validationMeta) {
           <div class="summary-grid">
             <div class="summary-card">
               <h3>Registry Gate</h3>
-              <div class="pill">Included RCTs: ${topic.includedCount}</div>
+              <div class="pill">Included RCT records: ${topic.includedCount}</div>
+              <div class="pill">Contrast-ready studies: ${comparisonSummary.analysisEligibleCount}</div>
+              <div class="pill">Direct comparisons: ${comparisonSummary.comparisonCount}</div>
               <div class="pill">Scanned records: ${topic.scannedRecords}</div>
               <div class="pill">Pages fetched: ${topic.pagesFetched}</div>
               <div class="pill">Priority tier: ${escapeHtml(formatTitleCase(topic.priorityTier))}</div>
+              <div class="pill">Eligibility mode: ${escapeHtml(getEligibilityModeLabel(topic, validationMeta))}</div>
+              <div class="pill">Coverage gate: Full CT.gov results coverage</div>
             </div>
             <div class="summary-card">
               <h3>Eligibility Rules</h3>
-              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, and at least one extractable numeric outcome.</p>
+              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, at least one recorded numeric CT.gov outcome, and topic-level curation that the full randomized evidence base should be captured on CT.gov.</p>
+              <p>Direct pooled contrasts are only emitted when the posted CT.gov metric can be safely reduced to counts or means and the arm structure supports a defensible comparator.</p>
               <p>${topic.truncated ? "The validation scan hit the configured CT.gov page cap." : "The validation scan completed within the configured CT.gov page cap."}</p>
+              ${getCoverageNote(topic)}
             </div>
             <div class="summary-card">
               <h3>Audit Trail</h3>
@@ -808,7 +1010,7 @@ function buildPlanHtml(topic, validationMeta) {
   const studies = topic.includedStudies || [];
   const pico = buildPicoSummary(topic);
   const runnerHref = buildRunnerHref(topic);
-  const runnerContextJson = JSON.stringify(buildRunnerContext(topic, validationMeta)).replace(/</g, "\u003c");
+  const runnerContextJson = JSON.stringify(buildRunnerContext(topic, validationMeta)).replace(/</g, "\\u003c");
   const searchHistoryRows = buildSearchHistoryRows(topic, validationMeta)
     .map(
       row => `
@@ -1038,11 +1240,13 @@ function buildPlanHtml(topic, validationMeta) {
       <section class="hero">
         <p class="kicker">CT.gov Validation Pack</p>
         <h1>${escapeHtml(topic.label)}</h1>
-        <p>Separate cardiovascular living-meta project generated from the live ClinicalTrials.gov v2 API on ${escapeHtml(
+        <p>Separate CT.gov living-meta project generated from the live ClinicalTrials.gov v2 API on ${escapeHtml(
           formatDate(validationMeta.generatedAt)
-        )}. Only randomized comparative records with posted results and extractable numeric outcomes are eligible.</p>
+        )}. Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio, and each generated project still has to meet the minimum ${validationMeta.minIncludedTrials || 2}-trial results threshold.</p>
         <div class="pillbar">
           <span class="pill">Priority tier: ${escapeHtml(formatTitleCase(topic.priorityTier))}</span>
+          <span class="pill">Eligibility mode: ${escapeHtml(getEligibilityModeLabel(topic, validationMeta))}</span>
+          <span class="pill">Coverage gate: Full CT.gov results coverage</span>
           <span class="pill">Included RCTs: ${topic.includedCount}</span>
           <span class="pill">Scanned records: ${topic.scannedRecords}</span>
           <span class="pill">Pages fetched: ${topic.pagesFetched}</span>
@@ -1144,7 +1348,7 @@ function buildPlanHtml(topic, validationMeta) {
           <span class="pill">Completed</span>
           <span class="pill">Posted CT.gov results</span>
           <span class="pill">At least 2 arms</span>
-          <span class="pill">Numeric outcome extractable</span>
+          <span class="pill">Numeric CT.gov outcome recorded</span>
         </div>
       </section>
 
@@ -1321,6 +1525,7 @@ function buildPortfolioIndex(eligible, validationMeta) {
             <span>Included RCTs: ${topic.includedCount}</span>
             <span>Scanned: ${topic.scannedRecords}</span>
             <span>Pages: ${topic.pagesFetched}</span>
+            <span>Eligibility: ${escapeHtml(getEligibilityModeLabel(topic, validationMeta))}</span>
           </div>
           <div class="topic-links">
             <a href="projects/${escapeHtml(topic.slug)}/index.html">Open project</a>
@@ -1351,7 +1556,7 @@ function buildPortfolioIndex(eligible, validationMeta) {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CT.gov Cardiovascular Living Meta Portfolio</title>
+    <title>CT.gov Living Meta Portfolio</title>
     <link rel="icon" href="data:," />
     <style>
       :root {
@@ -1493,15 +1698,16 @@ function buildPortfolioIndex(eligible, validationMeta) {
     <main>
       <section class="hero">
         <p class="kicker">ClinicalTrials.gov Native Portfolio</p>
-        <h1>Cardiovascular Living Meta-Analysis Projects</h1>
+        <h1>CT.gov Living Meta-Analysis Projects</h1>
         <p>Separate single-topic projects generated from the live ClinicalTrials.gov v2 API on ${escapeHtml(
           formatDate(validationMeta.generatedAt)
-        )}. Every included study in this portfolio met the same registry-native gate: randomized interventional design, completed status, posted results, at least two arms, and at least one extractable numeric outcome. Each topic project now includes a reviewer pack with protocol metadata, search history, record excerpts, demographics, benchmark links, and an embedded WebR validation panel.</p>
+        )}. Standard portfolio entry requires randomized interventional design, completed status, posted results, at least two arms, at least one recorded numeric CT.gov outcome, and at least ${validationMeta.minIncludedTrials || 2} qualifying randomized trials. In addition, only curated modern topics where the full randomized evidence base is expected to be available on CT.gov with posted results are allowed into the portfolio. Quantitative contrasts are only emitted when the posted CT.gov metric can be safely reduced to counts or means and the arm structure supports a defensible comparator. Each topic project includes a reviewer pack with protocol metadata, search history, record excerpts, demographics, benchmark links, and an embedded WebR validation panel.</p>
         <div class="pillbar">
           <span class="pill">Eligible topics: ${eligible.length}</span>
           <span class="pill">Build-now: ${tierCounts["build-now"] || 0}</span>
           <span class="pill">Promising: ${tierCounts.promising || 0}</span>
           <span class="pill">Early: ${tierCounts.early || 0}</span>
+          <span class="pill">Coverage-screened topics only</span>
         </div>
         <div class="pillbar">${domainPills}</div>
       </section>
@@ -1575,7 +1781,8 @@ function buildPortfolioIndex(eligible, validationMeta) {
 async function run() {
   const validation = JSON.parse(await fs.readFile(VALIDATION_PATH, "utf8"));
   const sharedTemplate = await fs.readFile(path.join(SHARED_APP_ROOT, "index.html"), "utf8");
-  const eligible = validation.topics
+  const normalizedTopics = validation.topics.map(topic => normalizePortfolioTopic(topic, validation.minIncludedTrials || 2));
+  const eligible = normalizedTopics
     .filter(topic => topic.portfolioEligible)
     .sort((a, b) => b.includedCount - a.includedCount || a.label.localeCompare(b.label));
 
@@ -1592,6 +1799,13 @@ async function run() {
   for (const topic of eligible) {
     const projectDir = path.join(PROJECTS_DIR, topic.slug);
     await fs.mkdir(projectDir, { recursive: true });
+    const comparisonSummary = buildComparisonSummary(topic);
+    const topicWithComparisonMeta = {
+      ...topic,
+      analysisEligibleCount: comparisonSummary.analysisEligibleCount,
+      comparisonReadyStudyCount: comparisonSummary.comparisonReadyStudyCount,
+      comparisonCount: comparisonSummary.comparisonCount
+    };
 
     const topicValidation = {
       generatedAt: validation.generatedAt,
@@ -1599,26 +1813,33 @@ async function run() {
       minIncludedTrials: validation.minIncludedTrials,
       pageSize: validation.pageSize,
       maxPages: validation.maxPages,
-      topic
+      topic: topicWithComparisonMeta
     };
 
     await fs.writeFile(path.join(projectDir, "validation.json"), JSON.stringify(topicValidation, null, 2));
-    await fs.writeFile(path.join(projectDir, "plan.html"), buildPlanHtml(topic, validation));
-    await fs.writeFile(path.join(projectDir, "index.html"), buildWrapperHtml(sharedTemplate, topic, validation));
+    await fs.writeFile(path.join(projectDir, "plan.html"), buildPlanHtml(topicWithComparisonMeta, validation));
+    await fs.writeFile(path.join(projectDir, "index.html"), buildWrapperHtml(sharedTemplate, topicWithComparisonMeta, validation));
 
     manifest.topics.push({
-      slug: topic.slug,
-      label: topic.label,
-      domain: topic.domain,
-      includedCount: topic.includedCount,
-      scannedRecords: topic.scannedRecords,
-      pagesFetched: topic.pagesFetched,
-      priorityTier: topic.priorityTier,
-      query: topic.query,
+      slug: topicWithComparisonMeta.slug,
+      label: topicWithComparisonMeta.label,
+      domain: topicWithComparisonMeta.domain,
+      includedCount: topicWithComparisonMeta.includedCount,
+      analysisEligibleCount: topicWithComparisonMeta.analysisEligibleCount,
+      comparisonReadyStudyCount: topicWithComparisonMeta.comparisonReadyStudyCount,
+      comparisonCount: topicWithComparisonMeta.comparisonCount,
+      scannedRecords: topicWithComparisonMeta.scannedRecords,
+      pagesFetched: topicWithComparisonMeta.pagesFetched,
+      priorityTier: topicWithComparisonMeta.priorityTier,
+      ctgovFullCoverage: topicWithComparisonMeta.ctgovFullCoverage,
+      ctgovCoverageNote: topicWithComparisonMeta.ctgovCoverageNote,
+      portfolioEligibilityMode: topicWithComparisonMeta.portfolioEligibilityMode,
+      portfolioEligibilityReason: topicWithComparisonMeta.portfolioEligibilityReason,
+      query: topicWithComparisonMeta.query,
       links: {
-        app: `projects/${topic.slug}/index.html`,
-        plan: `projects/${topic.slug}/plan.html`,
-        validation: `projects/${topic.slug}/validation.json`
+        app: `projects/${topicWithComparisonMeta.slug}/index.html`,
+        plan: `projects/${topicWithComparisonMeta.slug}/plan.html`,
+        validation: `projects/${topicWithComparisonMeta.slug}/validation.json`
       }
     });
   }
@@ -1626,7 +1847,7 @@ async function run() {
   await fs.writeFile(MANIFEST_PATH, JSON.stringify(manifest, null, 2));
   await fs.writeFile(PORTFOLIO_INDEX_PATH, buildPortfolioIndex(eligible, validation));
 
-  process.stdout.write(`Generated ${eligible.length} CT.gov cardiovascular project folders in ${PROJECTS_DIR}\n`);
+  process.stdout.write(`Generated ${eligible.length} CT.gov project folders in ${PROJECTS_DIR}\n`);
 }
 
 run().catch(error => {

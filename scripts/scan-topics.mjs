@@ -8,6 +8,29 @@ const OUTPUT_PATH = path.join(OUTPUT_DIR, "topic-validation.json");
 const PAGE_SIZE = 100;
 const MAX_PAGES = 8;
 const MIN_INCLUDED_TRIALS = 2;
+const FULL_CTGOV_RESULTS_TOPIC_SLUGS = new Set([
+  "angiotensin-ii-vasodilatory-shock",
+  "arni-heart-failure",
+  "caplacizumab-attp",
+  "doac-antiplatelet-af-pci",
+  "efgartigimod-itp",
+  "factor-xi-acs",
+  "finerenone-cardiorenal",
+  "fostamatinib-itp",
+  "glp1-cvot",
+  "luspatercept-beta-thalassemia",
+  "mitral-teer",
+  "momelotinib-myelofibrosis",
+  "omecamtiv-heart-failure",
+  "pcsk9-ascvd",
+  "pegcetacoplan-pnh",
+  "pfa-af",
+  "sglt2-cvot",
+  "sglt2-heart-failure",
+  "tavi-antithrombotic",
+  "tricuspid-teer",
+  "vericiguat-heart-failure"
+]);
 
 const CANDIDATES = [
   {
@@ -359,6 +382,55 @@ const CANDIDATES = [
     domain: "Hypertension",
     baseQuery: '(hypertension OR "blood pressure") AND ("renal denervation" OR "catheter-based renal denervation")',
     keywords: ["SYMPLICITY", "SPYRAL", "RADIANCE", "TARGET BP"]
+  },
+  {
+    slug: "fostamatinib-itp",
+    label: "Fostamatinib in Immune Thrombocytopenia",
+    domain: "Hematology",
+    baseQuery: '("primary immune thrombocytopenia" OR "immune thrombocytopenic purpura" OR "idiopathic thrombocytopenic purpura") AND (fostamatinib OR R935788 OR R788)',
+    keywords: ["thrombocytopenic purpura", "R935788", "adult refractory"]
+  },
+  {
+    slug: "efgartigimod-itp",
+    label: "Efgartigimod in Immune Thrombocytopenia",
+    domain: "Hematology",
+    baseQuery: '("primary immune thrombocytopenia" OR "immune thrombocytopenia" OR "immune thrombocytopenic purpura") AND (efgartigimod OR ARGX-113)',
+    keywords: ["ADVANCE", "subcutaneous", "primary ITP"]
+  },
+  {
+    slug: "momelotinib-myelofibrosis",
+    label: "Momelotinib in Myelofibrosis",
+    domain: "Hematology",
+    baseQuery: '(myelofibrosis OR "post-polycythemia vera myelofibrosis" OR "post-essential thrombocythemia myelofibrosis") AND momelotinib',
+    keywords: ["SIMPLIFY", "MOMENTUM", "danazol"]
+  },
+  {
+    slug: "pegcetacoplan-pnh",
+    label: "Pegcetacoplan in Paroxysmal Nocturnal Hemoglobinuria",
+    domain: "Hematology",
+    baseQuery: '("paroxysmal nocturnal hemoglobinuria" OR PNH) AND (pegcetacoplan OR APL-2)',
+    keywords: ["PEGASUS", "PRINCE", "APL-2"]
+  },
+  {
+    slug: "caplacizumab-attp",
+    label: "Caplacizumab in Acquired TTP",
+    domain: "Hematology",
+    baseQuery: '("acquired thrombotic thrombocytopenic purpura" OR aTTP OR TTP) AND (caplacizumab OR ALX-0681)',
+    keywords: ["HERCULES", "TITAN", "anti-von Willebrand factor"]
+  },
+  {
+    slug: "luspatercept-beta-thalassemia",
+    label: "Luspatercept in Beta-Thalassemia",
+    domain: "Hematology",
+    baseQuery: '("beta thalassemia" OR "transfusion-dependent beta thalassemia" OR "non transfusion dependent beta thalassemia") AND luspatercept',
+    keywords: ["BELIEVE", "BEYOND", "ACE-536"]
+  },
+  {
+    slug: "angiotensin-ii-vasodilatory-shock",
+    label: "Angiotensin II in Vasodilatory Shock",
+    domain: "Intensive Care",
+    baseQuery: '("catecholamine-resistant hypotension" OR "high output shock" OR "vasodilatory shock") AND ("angiotensin II" OR LJPC-501 OR Giapreza)',
+    keywords: ["ATHOS-3", "LJPC-501", "high output shock"]
   }
 ];
 
@@ -384,7 +456,7 @@ function isRandomized(design) {
   if (!studyType.includes("INTERVENTIONAL")) return false;
   const allocation = String(design.allocation || design.designInfo?.allocation || "").toUpperCase();
   const randomization = String(design.designInfo?.randomization || "").toUpperCase();
-  return allocation.includes("RANDOM") || randomization.includes("RANDOM");
+  return /\bRANDOMIZED\b/.test(allocation) || /\bRANDOMIZED\b/.test(randomization);
 }
 
 function extractArms(protocol) {
@@ -422,6 +494,131 @@ function parseNumber(value) {
     if (match) return Number.parseFloat(match[0]);
   }
   return null;
+}
+
+function parseDisplayedDecimals(value) {
+  const normalized = String(value ?? "").replace(/,/g, "");
+  const match = normalized.match(/-?\d+(?:\.(\d+))?/);
+  return match?.[1]?.length || 0;
+}
+
+function buildDenominatorMap(...sources) {
+  const countsByGroup = new Map();
+  sources.forEach(source => {
+    asArray(source).forEach(denom => {
+      asArray(denom?.counts).forEach((count, index) => {
+        const groupId = count.groupId || count.group || count.id || `${index + 1}`;
+        const value = parseNumber(count.value || count.count || count.numParticipants || count.n);
+        if (groupId && value != null) {
+          countsByGroup.set(groupId, value);
+        }
+      });
+    });
+  });
+  return countsByGroup;
+}
+
+function classifyOutcomeMetric({ title = "", paramType = "", unitOfMeasure = "", classTitle = "" }) {
+  const normalizedTitle = `${title} ${classTitle}`.toLowerCase();
+  const normalizedParamType = String(paramType || "").toUpperCase();
+  const normalizedUnit = String(unitOfMeasure || "").toLowerCase();
+
+  if (
+    normalizedParamType.includes("MEAN") ||
+    normalizedParamType.includes("GEOMETRIC_MEAN") ||
+    normalizedParamType.includes("LEAST_SQUARES_MEAN")
+  ) {
+    return "continuous";
+  }
+
+  const percentUnit = /percent|percentage/.test(normalizedUnit);
+  const rateUnit =
+    /per\s*100|patient-yrs|patient years|part-yrs|participant-yrs|participant years|person-yrs|person years|person-years/.test(
+      normalizedUnit
+    ) || /event\/100/.test(normalizedUnit);
+  const timeToEventSignal =
+    /\btime to\b|\bfirst occurrence\b|\bkaplan\b|\bkm estimate\b|\bhazard\b|\bwins? of clinical benefit\b|\bpairwise comparisons\b/.test(
+      normalizedTitle
+    );
+
+  if (percentUnit) {
+    if (rateUnit || timeToEventSignal) return "rate";
+    return "proportion";
+  }
+
+  if (rateUnit || timeToEventSignal) return "rate";
+
+  const countParamType =
+    normalizedParamType.includes("COUNT") ||
+    normalizedParamType.includes("PARTICIPANT") ||
+    normalizedParamType.includes("EVENT");
+  const participantSignal =
+    /\bparticipants?\b|\bsubjects?\b|\bcases?\b/.test(normalizedUnit) ||
+    /\bparticipants?\s+with\b|\bsubjects?\s+with\b|\bcases?\s+with\b/.test(normalizedTitle) ||
+    /\bnumber of participants\b|\bnumber of subjects\b|\bnumber of cases\b/.test(normalizedTitle);
+  const repeatedEventSignal =
+    /\badverse events?\b|\bteaes?\b|\bsaes?\b|\bevents?\b|\bhospitalizations?\b|\bvisits?\b|\bepisodes?\b/.test(normalizedUnit) ||
+    /\bnumber of adverse events\b|\bcumulative number of\b|\btotal events?\b/.test(normalizedTitle);
+
+  if (countParamType || participantSignal || repeatedEventSignal) {
+    if (participantSignal) return "count";
+    if (repeatedEventSignal) return "raw-number";
+    return "count";
+  }
+  if (normalizedParamType.includes("NUMBER")) return "raw-number";
+  return "raw-number";
+}
+
+function deriveEventsFromPercent(rawValue, rawText, n) {
+  if (rawValue == null || n == null || n <= 0) return null;
+  const estimatedEvents = (rawValue / 100) * n;
+  const roundedEvents = Math.round(estimatedEvents);
+  if (!Number.isFinite(roundedEvents) || roundedEvents < 0 || roundedEvents > n) return null;
+
+  const displayedTolerance = 0.5 * 10 ** -parseDisplayedDecimals(rawText);
+  const roundedPercent = (roundedEvents / n) * 100;
+  if (Math.abs(roundedPercent - rawValue) > displayedTolerance + 1e-9) return null;
+
+  return {
+    events: roundedEvents,
+    derivation:
+      Math.abs(estimatedEvents - roundedEvents) < 1e-9
+        ? "exact_from_ctgov_percent"
+        : "reconstructed_from_ctgov_percent",
+    displayPercent: rawValue
+  };
+}
+
+function outcomeAnalysisReason(metricKind) {
+  if (metricKind === "rate") {
+    return "ctgov_metric_recorded_as_rate_or_time_to_event_estimate";
+  }
+  if (metricKind === "proportion") {
+    return "ctgov_percent_recorded_without_reliable_count_reconstruction";
+  }
+  return "ctgov_numeric_metric_recorded_but_not_reducible_to_counts_or_means";
+}
+
+function outcomeTitle(measure) {
+  return measure.outcomeMeasureTitle || measure.title || "";
+}
+
+function outcomeUnit(measure) {
+  return measure.unitOfMeasure || measure.units || "";
+}
+
+function finalizeOutcome(measure, groups, metricKind) {
+  const type = inferOutcomeType(groups);
+  return {
+    type: type || "recorded",
+    title: outcomeTitle(measure),
+    unitOfMeasure: cleanText(outcomeUnit(measure), 120),
+    paramType: cleanText(measure.paramType || "", 80),
+    metricKind,
+    analysisEligible: Boolean(type),
+    analysisReason: type ? "ctgov_numeric_contrast_ready" : outcomeAnalysisReason(metricKind),
+    groups
+  };
 }
 
 function cleanText(value, maxLength = null) {
@@ -619,8 +816,13 @@ function inferOutcomeType(groups) {
   return null;
 }
 
-function mergeOutcomeGroups(groups, entries) {
-  if (!entries.length) return [];
+function mergeOutcomeGroups(groups, entries, measure) {
+  if (!entries.length) return null;
+  const metricKind = classifyOutcomeMetric({
+    title: outcomeTitle(measure),
+    paramType: measure.paramType,
+    unitOfMeasure: outcomeUnit(measure)
+  });
   const groupMap = new Map(groups.map(group => [group.id, { ...group }]));
   const merged = [];
   entries.forEach((entry, index) => {
@@ -635,32 +837,51 @@ function mergeOutcomeGroups(groups, entries) {
         id: groupId,
         title: entry.groupTitle || `Group ${index + 1}`
       };
-    merged.push({
+    const n = parseNumber(entry.numParticipants || entry.participants || entry.sampleSize);
+    const rawText =
+      entry.count ||
+      entry.events ||
+      entry.eventCount ||
+      entry.mean ||
+      entry.value ||
+      entry.measure;
+    const rawValue = parseNumber(rawText);
+    const row = {
       ...base,
-      n: parseNumber(entry.numParticipants || entry.participants || entry.sampleSize),
-      events: parseNumber(entry.count || entry.events || entry.eventCount),
-      mean: parseNumber(entry.mean || entry.value || entry.measure),
-      sd: parseNumber(entry.sd || entry.standardDeviation || entry.dispersion)
-    });
+      rawValue,
+      rawUnit: cleanText(outcomeUnit(measure), 120),
+      n
+    };
+
+    if (metricKind === "continuous") {
+      row.mean = rawValue;
+      row.sd = parseNumber(entry.sd || entry.standardDeviation || entry.dispersion);
+    } else if (metricKind === "count") {
+      row.events = rawValue;
+      row.derivation = rawValue != null ? "posted_count" : null;
+    } else if (metricKind === "proportion") {
+      const derived = deriveEventsFromPercent(rawValue, rawText, n);
+      if (derived) {
+        row.events = derived.events;
+        row.displayPercent = derived.displayPercent;
+        row.derivation = derived.derivation;
+      }
+    }
+
+    if (row.derivation == null) {
+      delete row.derivation;
+    }
+
+    merged.push(row);
   });
-  return merged;
+  return { groups: merged, metricKind };
 }
 
 function extractOutcomeFromClasses(measure) {
   if (!measure || (!measure.groups && !measure.denoms && !measure.classes)) return null;
   const paramType = String(measure.paramType || "").toUpperCase();
   const dispersionType = String(measure.dispersionType || "").toUpperCase();
-  const asMean =
-    paramType.includes("MEAN") ||
-    paramType.includes("GEOMETRIC_MEAN") ||
-    paramType.includes("LEAST_SQUARES_MEAN");
-  const asCount =
-    !asMean &&
-    (paramType.includes("COUNT") ||
-      paramType.includes("NUMBER") ||
-      paramType.includes("EVENT"));
   const groups = asArray(measure.groups);
-  const denoms = asArray(measure.denoms);
   const classes = asArray(measure.classes);
   if (!classes.length) return null;
 
@@ -669,40 +890,56 @@ function extractOutcomeFromClasses(measure) {
     const id = group.id || group.groupId || group.group || group.title || `${index + 1}`;
     const title =
       group.title || group.groupTitle || group.name || group.description || `Group ${index + 1}`;
-    groupMap.set(id, { id, title });
-  });
-
-  const nByGroup = new Map();
-  denoms.forEach(denom => {
-    asArray(denom.counts).forEach((count, index) => {
-      const groupId = count.groupId || count.group || count.id || `${index + 1}`;
-      const n = parseNumber(count.value || count.count || count.numParticipants || count.n);
-      if (groupId && n != null) nByGroup.set(groupId, n);
-    });
+      groupMap.set(id, { id, title });
   });
 
   const targetClass = classes.find(cls => asArray(cls.categories).length) || classes[0];
   if (!targetClass) return null;
-  const eventsByGroup = new Map();
+  const metricKind = classifyOutcomeMetric({
+    title: outcomeTitle(measure),
+    paramType,
+    unitOfMeasure: outcomeUnit(measure),
+    classTitle: targetClass.title || ""
+  });
+  const nByGroup = buildDenominatorMap(measure.denoms, targetClass.denoms);
+  const rawByGroup = new Map();
   const categories = asArray(targetClass.categories);
   const chosenCategory = pickCategory(categories);
   const categoryList = chosenCategory ? [chosenCategory] : categories;
   categoryList.forEach(category => {
     asArray(category.measurements).forEach(measurement => {
       const groupId = measurement.groupId || measurement.group || measurement.id;
-      const value = parseNumber(
-        measurement.value || measurement.count || measurement.numParticipants
-      );
-      if (!groupId || value == null) return;
-      if (asMean) {
-        eventsByGroup.set(groupId, value);
-      } else if (asCount || !paramType) {
-        eventsByGroup.set(groupId, (eventsByGroup.get(groupId) || 0) + value);
+      const rawText = measurement.value || measurement.count || measurement.numParticipants;
+      const rawValue = parseNumber(rawText);
+      if (!groupId || rawValue == null) return;
+
+      if (metricKind === "count" && rawByGroup.has(groupId)) {
+        const previous = rawByGroup.get(groupId);
+        rawByGroup.set(groupId, {
+          ...previous,
+          rawValue: (previous?.rawValue || 0) + rawValue,
+          rawText: null
+        });
+        return;
       }
+
+      rawByGroup.set(groupId, {
+        rawValue,
+        rawText,
+        rawUnit: cleanText(outcomeUnit(measure), 120),
+        lowerLimit:
+          parseNumber(measurement.lowerLimit) ??
+          parseNumber(measurement.ciLower) ??
+          parseNumber(measurement.lowerBound),
+        upperLimit:
+          parseNumber(measurement.upperLimit) ??
+          parseNumber(measurement.ciUpper) ??
+          parseNumber(measurement.upperBound)
+      });
     });
   });
 
-  const groupIds = new Set([...groupMap.keys(), ...nByGroup.keys(), ...eventsByGroup.keys()]);
+  const groupIds = new Set([...groupMap.keys(), ...nByGroup.keys(), ...rawByGroup.keys()]);
   const merged = [];
   let index = 0;
   groupIds.forEach(id => {
@@ -710,18 +947,32 @@ function extractOutcomeFromClasses(measure) {
     const base = groupMap.get(id) || { id, title: `Group ${index}` };
     const row = { ...base };
     if (nByGroup.has(id)) row.n = nByGroup.get(id);
-    if (eventsByGroup.has(id)) {
-      if (asMean) {
-        row.mean = eventsByGroup.get(id);
+    if (rawByGroup.has(id)) {
+      const measurement = rawByGroup.get(id);
+      row.rawValue = measurement.rawValue;
+      row.rawUnit = measurement.rawUnit;
+      if (measurement.lowerLimit != null) row.lowerLimit = measurement.lowerLimit;
+      if (measurement.upperLimit != null) row.upperLimit = measurement.upperLimit;
+
+      if (metricKind === "continuous") {
+        row.mean = measurement.rawValue;
         const dispersion = extractDispersionForGroup(categoryList, id, dispersionType, row.n);
         if (dispersion != null) row.sd = dispersion;
-      } else {
-        row.events = eventsByGroup.get(id);
+      } else if (metricKind === "count") {
+        row.events = measurement.rawValue;
+        row.derivation = "posted_count";
+      } else if (metricKind === "proportion") {
+        const derived = deriveEventsFromPercent(measurement.rawValue, measurement.rawText, row.n);
+        if (derived) {
+          row.events = derived.events;
+          row.displayPercent = derived.displayPercent;
+          row.derivation = derived.derivation;
+        }
       }
     }
     merged.push(row);
   });
-  return merged;
+  return { groups: merged, metricKind };
 }
 
 function pickCategory(categories) {
@@ -809,17 +1060,14 @@ function extractOutcome(study) {
     [];
   const measures = Array.isArray(rawMeasures) ? rawMeasures : [rawMeasures];
 
+  let recordedFallback = null;
+
   for (const measure of measures) {
     const grouped = extractOutcomeFromClasses(measure);
-    if (grouped && grouped.length) {
-      const type = inferOutcomeType(grouped);
-      if (type) {
-        return {
-          type,
-          title: measure.outcomeMeasureTitle || measure.title || "",
-          groups: grouped
-        };
-      }
+    if (grouped?.groups?.length) {
+      const outcome = finalizeOutcome(measure, grouped.groups, grouped.metricKind);
+      if (outcome.analysisEligible) return outcome;
+      if (!recordedFallback) recordedFallback = outcome;
     }
 
     const rawGroups =
@@ -844,17 +1092,14 @@ function extractOutcome(study) {
       measure.outcomeMeasureData ||
       measure.outcomeMeasureDataPoints ||
       [];
-    const merged = mergeOutcomeGroups(groups, asArray(rawEntries));
-    const type = inferOutcomeType(merged);
-    if (type) {
-      return {
-        type,
-        title: measure.outcomeMeasureTitle || measure.title || "",
-        groups: merged
-      };
+    const merged = mergeOutcomeGroups(groups, asArray(rawEntries), measure);
+    if (merged?.groups?.length) {
+      const outcome = finalizeOutcome(measure, merged.groups, merged.metricKind);
+      if (outcome.analysisEligible) return outcome;
+      if (!recordedFallback) recordedFallback = outcome;
     }
   }
-  return null;
+  return recordedFallback;
 }
 
 function normalizeStudy(study) {
@@ -871,6 +1116,7 @@ function normalizeStudy(study) {
   const title = identification.briefTitle || identification.officialTitle || "";
   const arms = extractArms(protocol);
   const outcome = extractOutcome(study);
+  const analysisEligible = Boolean(outcome?.analysisEligible);
   const hasPostedResults = Boolean(study.hasResults || study.resultsSection);
   const completed = status.overallStatus === "COMPLETED";
   const randomized = isRandomized(design);
@@ -880,7 +1126,7 @@ function normalizeStudy(study) {
   if (!hasPostedResults) reasons.push("no_results_posted");
   if (!randomized) reasons.push("not_randomized_interventional");
   if (arms.length < 2) reasons.push("fewer_than_two_arms");
-  if (!outcome) reasons.push("no_extractable_numeric_outcome");
+  if (!outcome) reasons.push("no_recorded_numeric_outcome");
 
   return {
     nctId,
@@ -918,6 +1164,7 @@ function normalizeStudy(study) {
     demographics: extractDemographics(study),
     arms,
     outcome,
+    analysisEligible,
     hasPostedResults,
     randomized,
     completed,
@@ -961,27 +1208,59 @@ function countReasons(items) {
   return counts;
 }
 
+function assignPriorityTier(result) {
+  if (!result.ctgovFullCoverage) return "coverage-excluded";
+  if (result.includedCount >= 5) return "build-now";
+  if (result.includedCount >= 3) return "promising";
+  if (result.includedCount >= 2) return "early";
+  return "insufficient";
+}
+
 async function scanCandidate(candidate) {
   const query = buildQuery(candidate.baseQuery, candidate.keywords || []);
   const fetched = await fetchStudies(query);
   const normalized = fetched.studies.map(normalizeStudy);
   const included = normalized.filter(study => study.eligible);
   const excluded = normalized.filter(study => !study.eligible);
-  return {
+  const ctgovFullCoverage = FULL_CTGOV_RESULTS_TOPIC_SLUGS.has(candidate.slug);
+  const ctgovCoverageNote = ctgovFullCoverage
+    ? "Curated as a modern topic where the randomized evidence base is expected to be fully representable from CT.gov records with posted results."
+    : "Excluded from the portfolio because full randomized evidence coverage cannot be guaranteed from CT.gov results for this legacy or mixed-era topic.";
+  const portfolioExclusionReasons = [];
+  if (included.length < MIN_INCLUDED_TRIALS) {
+    portfolioExclusionReasons.push("insufficient_result_reporting_rcts");
+  }
+  if (!ctgovFullCoverage) {
+    portfolioExclusionReasons.push("full_ctgov_results_coverage_not_confirmed");
+  }
+  const portfolioEligible = portfolioExclusionReasons.length === 0;
+  const portfolioEligibilityMode = portfolioEligible ? "full-ctgov-threshold" : "excluded";
+  const portfolioEligibilityReason = portfolioEligible
+    ? `Included because ${included.length} randomized trial(s) met the standard >=${MIN_INCLUDED_TRIALS} CT.gov-results threshold and the topic is curated as full-coverage.`
+    : `Excluded because ${portfolioExclusionReasons
+        .map(reason => reason.replace(/_/g, " "))
+        .join(" + ")}.`;
+  const result = {
     ...candidate,
     query,
     scannedRecords: normalized.length,
     pagesFetched: fetched.pagesFetched,
     truncated: fetched.truncated,
     includedCount: included.length,
+    analysisEligibleCount: included.filter(study => study.analysisEligible).length,
     excludedCount: excluded.length,
     includedStudies: included,
     excludedStudies: excluded.slice(0, 50),
     exclusionReasons: countReasons(excluded),
-    portfolioEligible: included.length >= MIN_INCLUDED_TRIALS,
-    priorityTier:
-      included.length >= 5 ? "build-now" : included.length >= 3 ? "promising" : included.length >= 2 ? "early" : "insufficient"
+    ctgovFullCoverage,
+    ctgovCoverageNote,
+    portfolioEligible,
+    portfolioEligibilityMode,
+    portfolioEligibilityReason,
+    portfolioExclusionReasons
   };
+  result.priorityTier = assignPriorityTier(result);
+  return result;
 }
 
 async function run() {
@@ -1007,7 +1286,14 @@ async function run() {
         includedStudies: [],
         excludedStudies: [],
         exclusionReasons: {},
+        ctgovFullCoverage: FULL_CTGOV_RESULTS_TOPIC_SLUGS.has(candidate.slug),
+        ctgovCoverageNote: FULL_CTGOV_RESULTS_TOPIC_SLUGS.has(candidate.slug)
+          ? "Curated as a modern topic where the randomized evidence base is expected to be fully representable from CT.gov records with posted results."
+          : "Excluded from the portfolio because full randomized evidence coverage cannot be guaranteed from CT.gov results for this legacy or mixed-era topic.",
         portfolioEligible: false,
+        portfolioEligibilityMode: "error",
+        portfolioEligibilityReason: error.message,
+        portfolioExclusionReasons: ["scan_error"],
         priorityTier: "error"
       });
       process.stdout.write(`  error=${error.message}\n`);
@@ -1022,11 +1308,14 @@ async function run() {
     generatedAt: new Date().toISOString(),
     startedAt,
     minIncludedTrials: MIN_INCLUDED_TRIALS,
+    fullCtgovResultsTopicSlugs: Array.from(FULL_CTGOV_RESULTS_TOPIC_SLUGS),
     pageSize: PAGE_SIZE,
     maxPages: MAX_PAGES,
     totalCandidates: results.length,
     eligibleCount: eligible.length,
     eligibleSlugs: eligible.map(result => result.slug),
+    fullCtgovEligibleCount: results.filter(result => result.portfolioEligible && result.ctgovFullCoverage).length,
+    coverageExcludedCount: results.filter(result => !result.ctgovFullCoverage).length,
     topics: results
   };
 

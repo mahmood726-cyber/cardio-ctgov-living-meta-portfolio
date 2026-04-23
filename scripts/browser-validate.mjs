@@ -8,7 +8,36 @@ const PORTFOLIO_ROOT = path.resolve(SCRIPT_DIR, "..");
 const MANIFEST_PATH = path.join(PORTFOLIO_ROOT, "generated", "portfolio-manifest.json");
 const OUTPUT_PATH = path.join(PORTFOLIO_ROOT, "generated", "browser-validation.json");
 const BASE_URL =
-  process.env.PORTFOLIO_BASE_URL || "http://127.0.0.1:8767/cardio-ctgov-living-meta-portfolio";
+  process.env.PORTFOLIO_BASE_URL || "http://127.0.0.1:8786/cardio-ctgov-living-meta-portfolio";
+
+async function dismissQuickStart(page) {
+  const modal = page.locator("#quickStartModal");
+  if (!(await modal.count())) {
+    return { quickStartSeen: false, quickStartDismissed: false };
+  }
+
+  await modal.waitFor({ state: "visible", timeout: 4000 }).catch(() => {});
+  if (!(await modal.isVisible().catch(() => false))) {
+    return { quickStartSeen: false, quickStartDismissed: false };
+  }
+
+  const nextButton = page.locator("#wizardNextBtn");
+  const finishButton = page.locator("#wizardFinishBtn");
+
+  for (let step = 0; step < 3; step++) {
+    await nextButton.waitFor({ state: "visible", timeout: 4000 });
+    await nextButton.click();
+  }
+
+  await finishButton.waitFor({ state: "visible", timeout: 4000 });
+  await finishButton.click();
+  await page.waitForFunction(
+    () => document.getElementById("quickStartModal")?.classList.contains("hidden"),
+    { timeout: 4000 }
+  );
+
+  return { quickStartSeen: true, quickStartDismissed: true };
+}
 
 async function validateIndex(page) {
   const errors = [];
@@ -27,7 +56,7 @@ async function validateIndex(page) {
     ...result,
     consoleErrors: errors,
     pass:
-      result.title.includes("CT.gov Cardiovascular Living Meta Portfolio") &&
+      result.title.includes("CT.gov Living Meta Portfolio") &&
       result.cardCount > 0 &&
       result.summaryExists &&
       result.heroExists &&
@@ -37,8 +66,6 @@ async function validateIndex(page) {
 
 async function validateTopic(page, topic) {
   const errors = [];
-  page.removeAllListeners("console");
-  page.removeAllListeners("pageerror");
   page.on("console", msg => {
     if (msg.type() === "error") errors.push(msg.text());
   });
@@ -74,6 +101,16 @@ async function validateTopic(page, topic) {
     );
   } catch {}
 
+  const quickStart = await dismissQuickStart(page);
+
+  await page.click('button[data-tab="pairwise"]');
+  const pairwiseInteractive = await page.waitForFunction(
+    () =>
+      document.querySelector('button[data-tab="pairwise"]')?.classList.contains("active") &&
+      document.getElementById("tab-pairwise")?.classList.contains("active"),
+    { timeout: 6000 }
+  ).then(() => true, () => false);
+
   const details = await page.evaluate(() => ({
     title: document.title,
     appTitle: document.getElementById("appTitle")?.textContent?.trim() || "",
@@ -102,10 +139,14 @@ async function validateTopic(page, topic) {
     expectedIncludedCount: topic.includedCount,
     updateResolved,
     trialsResolved,
+    ...quickStart,
+    pairwiseInteractive,
     elapsedMs,
     consoleErrors: errors,
     ...details,
     pass:
+      quickStart.quickStartDismissed &&
+      pairwiseInteractive &&
       details.hasSnapshot &&
       details.hasReviewerPack &&
       details.hasReviewerIframe &&
@@ -127,14 +168,17 @@ async function validateTopic(page, topic) {
 async function run() {
   const manifest = JSON.parse(await fs.readFile(MANIFEST_PATH, "utf8"));
   const browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext();
-  const page = await context.newPage();
-
-  const index = await validateIndex(page);
+  const indexContext = await browser.newContext();
+  const indexPage = await indexContext.newPage();
+  const index = await validateIndex(indexPage);
+  await indexContext.close();
   const topics = [];
   for (const topic of manifest.topics) {
-    const result = await validateTopic(page, topic);
+    const topicContext = await browser.newContext();
+    const topicPage = await topicContext.newPage();
+    const result = await validateTopic(topicPage, topic);
     topics.push(result);
+    await topicContext.close();
   }
 
   await browser.close();
@@ -145,6 +189,7 @@ async function run() {
     totalTopics: topics.length,
     passedTopics: topics.filter(topic => topic.pass).length,
     failedTopics: topics.filter(topic => !topic.pass).length,
+    quickStartPassedTopics: topics.filter(topic => topic.quickStartDismissed).length,
     indexPass: index.pass
   };
 

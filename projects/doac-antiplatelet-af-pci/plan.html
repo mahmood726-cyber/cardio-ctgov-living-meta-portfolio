@@ -126,9 +126,11 @@
       <section class="hero">
         <p class="kicker">CT.gov Validation Pack</p>
         <h1>DOAC Plus Antiplatelet Therapy in AF With PCI or ACS</h1>
-        <p>Separate cardiovascular living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-03-28. Only randomized comparative records with posted results and extractable numeric outcomes are eligible.</p>
+        <p>Separate CT.gov living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-04-05. Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio, and each generated project still has to meet the minimum 2-trial results threshold.</p>
         <div class="pillbar">
           <span class="pill">Priority tier: Early</span>
+          <span class="pill">Eligibility mode: Full CT.gov results coverage (&gt;=2 RCTs)</span>
+          <span class="pill">Coverage gate: Full CT.gov results coverage</span>
           <span class="pill">Included RCTs: 2</span>
           <span class="pill">Scanned records: 7</span>
           <span class="pill">Pages fetched: 1</span>
@@ -155,10 +157,10 @@
           </thead>
           <tbody>
             <tr><td>Population</td><td>Atrial Fibrillation; Percutaneous Coronary Intervention</td></tr>
-            <tr><td>Interventions</td><td>Edoxaban Regimen; Vitamin K Antagonist Regimen; Rivaroxaban 15 mg; Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD); Vitamin K Antagonist (VKA)</td></tr>
-            <tr><td>Comparators</td><td>Vitamin K Antagonist Regimen vs Edoxaban Regimen; Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD) vs Rivaroxaban 15 mg | Vitamin K Antagonist (VKA) vs Rivaroxaban 15 mg</td></tr>
-            <tr><td>Outcomes</td><td>Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen; Percentage of Participants With Clinically Significant Bleeding</td></tr>
-            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</td></tr>
+            <tr><td>Interventions</td><td>Rivaroxaban 15 mg; Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD); Vitamin K Antagonist (VKA); Edoxaban Regimen; Vitamin K Antagonist Regimen</td></tr>
+            <tr><td>Comparators</td><td>Rivaroxaban 15 mg vs Vitamin K Antagonist (VKA) | Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD) vs Vitamin K Antagonist (VKA) | Shared comparator split across CT.gov treatment arms; Edoxaban Regimen vs Vitamin K Antagonist Regimen</td></tr>
+            <tr><td>Outcomes</td><td>Percentage of Participants With Clinically Significant Bleeding; Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen</td></tr>
+            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and at least one recorded numeric CT.gov outcome.</td></tr>
           </tbody>
         </table>
       </section>
@@ -189,7 +191,7 @@
         <tr>
           <td>CT.gov candidate scan started</td>
           <td>ClinicalTrials.gov v2 API</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr>
 
         <tr>
@@ -231,7 +233,7 @@
         <tr>
           <td>Project package generated</td>
           <td>Portfolio build</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr>
           </tbody>
         </table>
@@ -252,7 +254,7 @@
         <tr>
           <td>Question framing</td>
           <td>Topic slug, base query, and keyword pack frozen before generation</td>
-          <td>doac-antiplatelet-af-pci | 2026-03-28</td>
+          <td>doac-antiplatelet-af-pci | 2026-04-05</td>
         </tr>
 
         <tr>
@@ -262,14 +264,20 @@
         </tr>
 
         <tr>
+          <td>Coverage curation</td>
+          <td>Only modern topics where the full randomized evidence base is expected to be available on CT.gov with posted results are allowed into the portfolio</td>
+          <td>Curated as a modern topic where the randomized evidence base is expected to be fully representable from CT.gov records with posted results.</td>
+        </tr>
+
+        <tr>
           <td>Eligibility gate</td>
-          <td>Randomized interventional, completed, posted results, &gt;=2 arms, numeric outcome</td>
+          <td>Randomized interventional, completed, posted results, &gt;=2 arms, recorded numeric CT.gov outcome, and &gt;=2 qualifying CT.gov-result RCTs</td>
           <td>2 included / 5 excluded</td>
         </tr>
 
         <tr>
           <td>Extraction</td>
-          <td>Outcome groups, sponsor, eligibility, documents, and demographics preserved where available</td>
+          <td>Outcome groups, raw CT.gov metrics, sponsor, eligibility, documents, and demographics preserved where available</td>
           <td>2/2 studies with demographics</td>
         </tr>
 
@@ -303,13 +311,19 @@
         <tr>
           <td>Records excluded by registry hard gates</td>
           <td>5</td>
-          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no recorded numeric outcome</td>
         </tr>
 
         <tr>
-          <td>Trials entering the quantitative snapshot</td>
+          <td>Trials entering the CT.gov record snapshot</td>
           <td>2</td>
           <td>Included in validation.json and the live topic app</td>
+        </tr>
+
+        <tr>
+          <td>Trials with contrast-ready outcomes</td>
+          <td>2</td>
+          <td>Recorded metrics safely reducible to counts or means</td>
         </tr>
           </tbody>
         </table>
@@ -323,7 +337,7 @@
           <span class="pill">Completed</span>
           <span class="pill">Posted CT.gov results</span>
           <span class="pill">At least 2 arms</span>
-          <span class="pill">Numeric outcome extractable</span>
+          <span class="pill">Numeric CT.gov outcome recorded</span>
         </div>
       </section>
 
@@ -370,19 +384,6 @@
           <tbody>
             
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">NCT02866175</a></td>
-          <td>Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention</td>
-          <td>Daiichi Sankyo Europe, GmbH, a Daiichi Sankyo Company (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>1506 (ACTUAL)</td>
-          <td>COMPLETED</td>
-          <td>2017-02-24</td>
-          <td>2019-06-06</td>
-          <td>Participants will be randomized to receive edoxaban 60 mg once-daily or 30 mg once-daily and clopidogrel 75 mg once-daily (or in the presence of a documented clinical need prasugrel \[5 mg or 10 mg once-daily\] or ticagrelor \[90 mg twice-daily\] may be used) used. | Participants will be randomized to receive VKA in combination with clopidogrel 75 mg once-daily (or in the presence of a documented clinical need prasugrel \[5mg or 10 mg once-daily\] or ticagrelor \[90 mg twice-daily\] may be used) and aspirin (100 mg once-daily, for a minimum of 1 month and up to 12 months duration.</td>
-          <td>Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen</td>
-        </tr>
-
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT01830543" target="_blank" rel="noopener">NCT01830543</a></td>
           <td>A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention</td>
           <td>Janssen Scientific Affairs, LLC (INDUSTRY)</td>
@@ -393,6 +394,19 @@
           <td>2016-07-28</td>
           <td>rivaroxaban 2.5 mg tablet twice daily plus low-dose aspirin (ASA) 75 to 100 mg once daily and clopidogrel 75 mg tablet once daily (or prasugrel 10 mg tablet once daily or ticagrelor 90 mg tablet twice daily) followed by rivaroxaban 15 mg tablet (or 10 mg for subjects with moderate renal impairment) once daily plus low-dose ASA for 12 months | dose-adjusted vitamin K antagonist (VKA) once daily (target International Normalized Ratio (INR) 2.0 to 3.0) plus low-dose ASA, 75 to 100 mg per day, and clopidogrel 75 mg once daily (or prasugrel 10 mg tablet once daily or ticagrelor 90 mg tablet twice daily) followed by dose-adjusted VKA once daily (target INR 2.0 to 3.0 or 2.0 to 2.5 at the investigator discretion) plus low-dose ASA for 12 months | rivaroxaban 15 mg (or 10 mg for subjects with moderate renal impairment) once daily plus clopidogrel 75 mg tablet once daily (or prasugrel 10 mg tablet once daily or ticagrelor 90 mg tablet twice daily) for 12 months</td>
           <td>Percentage of Participants With Clinically Significant Bleeding</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">NCT02866175</a></td>
+          <td>Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention</td>
+          <td>Daiichi Sankyo Europe, GmbH, a Daiichi Sankyo Company (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>1506 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2017-02-24</td>
+          <td>2019-06-06</td>
+          <td>Participants will be randomized to receive edoxaban 60 mg once-daily or 30 mg once-daily and clopidogrel 75 mg once-daily (or in the presence of a documented clinical need prasugrel \[5 mg or 10 mg once-daily\] or ticagrelor \[90 mg twice-daily\] may be used) used. | Participants will be randomized to receive VKA in combination with clopidogrel 75 mg once-daily (or in the presence of a documented clinical need prasugrel \[5mg or 10 mg once-daily\] or ticagrelor \[90 mg twice-daily\] may be used) and aspirin (100 mg once-daily, for a minimum of 1 month and up to 12 months duration.</td>
+          <td>Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen</td>
         </tr>
           </tbody>
         </table>
@@ -414,19 +428,19 @@
           <tbody>
             
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">NCT02866175</a></td>
-          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
-          <td>Edoxaban Regimen: 751 Participants | Vitamin K Antagonist Regimen: 755 Participants | Total: 1506 Participants</td>
-          <td>Edoxaban Regimen: 69.4 +/- 9.74 years | Vitamin K Antagonist Regimen: 70.1 +/- 9.51 years | Total: 69.7 +/- 9.63 years</td>
-          <td>Edoxaban Regimen: F 194 / M 557 | Vitamin K Antagonist Regimen: F 192 / M 563 | Total: F 386 / M 1120</td>
-        </tr>
-
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT01830543" target="_blank" rel="noopener">NCT01830543</a></td>
           <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
           <td>Rivaroxaban 15 mg: 709 Participants | Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD): 709 Participants | Vitamin K Antagonist (VKA): 706 Participants | Total: 2124 Participants</td>
           <td>Rivaroxaban 15 mg: 70.4 +/- 9.12 years | Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD): 70 +/- 9.11 years | Vitamin K Antagonist (VKA): 69.9 +/- 8.67 years | Total: 70.1 +/- 8.97 years</td>
           <td>Rivaroxaban 15 mg: F 181 / M 528 | Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD): F 174 / M 535 | Vitamin K Antagonist (VKA): F 188 / M 518 | Total: F 543 / M 1581</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">NCT02866175</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Edoxaban Regimen: 751 Participants | Vitamin K Antagonist Regimen: 755 Participants | Total: 1506 Participants</td>
+          <td>Edoxaban Regimen: 69.4 +/- 9.74 years | Vitamin K Antagonist Regimen: 70.1 +/- 9.51 years | Total: 69.7 +/- 9.63 years</td>
+          <td>Edoxaban Regimen: F 194 / M 557 | Vitamin K Antagonist Regimen: F 192 / M 563 | Total: F 386 / M 1120</td>
         </tr>
           </tbody>
         </table>
@@ -448,22 +462,22 @@
           <tbody>
             
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">NCT02866175</a></td>
-          <td>There are insufficient data on the safety and efficacy of edoxaban plus antiplatelet therapy in subjects with atrial fibrillation (AF) following percutaneous intervention (PCI) with stenting. This study is designed to evaluate the safety and to explore the efficacy of an edoxaban-based antithrombotic regimen versus...</td>
-          <td>Inclusion Criteria: * Oral anticoagulant (OAC) indication for atrial fibrillation for a period of at least 12 months following successful PCI with stenting. Eligibility is assessed 4 hours after sheath removal and within 5 days after successful PCI with ste...</td>
-          <td>Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen | Time frame: Day 1 to 12 months postdose | Participants&#39; first...</td>
-          <td>
-            <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2017-02-28)</span></div>
-          </td>
-        </tr>
-
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT01830543" target="_blank" rel="noopener">NCT01830543</a></td>
           <td>The primary purpose of this study is to evaluate the safety for 2 different rivaroxaban treatment strategies and one Vitamin K Antagonist (VKA) treatment strategy utilizing various combinations of dual antiplatelet therapy (DAPT) or low-dose aspirin (ASA) or clopidogrel (or prasugrel or ticagrelor).</td>
           <td>Inclusion Criteria: * Have a documented medical history of paroxysmal, persistent, or permanent non-valvular atrial fibrillation (AF) * Have undergone percutaneous coronary intervention (PCI) procedure (with stent placement) for primary atherosclerotic dise...</td>
           <td>Percentage of Participants With Clinically Significant Bleeding | Time frame: Up to Month 12 | Clinically significant bleeding is a composite of Thrombolysis in Myocardial Infarction (TIMI) major bleeding, minor bleeding, and bleeding requiring medical attention (BRMA). TIMI major bleeding is defined as any symptoma...</td>
           <td>
             <div class="pillbar"><span class="muted">No CT.gov documents listed.</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">NCT02866175</a></td>
+          <td>There are insufficient data on the safety and efficacy of edoxaban plus antiplatelet therapy in subjects with atrial fibrillation (AF) following percutaneous intervention (PCI) with stenting. This study is designed to evaluate the safety and to explore the efficacy of an edoxaban-based antithrombotic regimen versus...</td>
+          <td>Inclusion Criteria: * Oral anticoagulant (OAC) indication for atrial fibrillation for a period of at least 12 months following successful PCI with stenting. Eligibility is assessed 4 hours after sheath removal and within 5 days after successful PCI with ste...</td>
+          <td>Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen | Time frame: Day 1 to 12 months postdose | Participants&#39; first...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2017-02-28)</span></div>
           </td>
         </tr>
           </tbody>
@@ -482,7 +496,7 @@
           <tbody>
             
         <tr>
-          <td>No Extractable Numeric Outcome</td>
+          <td>No Recorded Numeric Outcome</td>
           <td>5</td>
         </tr>
 
@@ -526,36 +540,36 @@
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT04688723" target="_blank" rel="noopener">NCT04688723</a></td>
           <td>Dual Therapy With Dabigatran/Ticagrelor Versus Dual Therapy With Dabigatran/Clopidogrel in ACS Patients With Indication for NOAC Undergoing PCI</td>
-          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Not Completed, No Results Posted, No Recorded Numeric Outcome</td>
           <td>A real world registry to compare dual therapy with Dabigatran/Ticagrelor to dual therapie with Dabigatran/Clopidogrel in patients with an indication for NOAC undergoing PCI in the setting of ACS. Hypothesis: Dual therapy with Dabigatran/Ticagrelor will be n...</td>
         </tr>
 
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT03558295" target="_blank" rel="noopener">NCT03558295</a></td>
           <td>CHAOS Registry Study</td>
-          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Recorded Numeric Outcome</td>
           <td>INTRODUCTION: About 6-8% of patients undergoing PCI have an indication for long-term oral anticoagulants (OACs) due to various conditions such as atrial fibrillation (AF), mechanical heart valves, or venous thromboembolism. The addition of single or double...</td>
-        </tr>
-
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT04436978" target="_blank" rel="noopener">NCT04436978</a></td>
-          <td>What is the Optimal Antithrombotic Strategy in Patients With Atrial Fibrillation Undergoing PCI?</td>
-          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
-          <td>The optimal antithrombotic management in patients with coronary artery disease (CAD) and concomitant atrial fibrillation (AF) is unknown. AF patients are treated with oral anticoagulation (OAC) to prevent ischemic stroke and systemic embolism and patients u...</td>
-        </tr>
-
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT05068414" target="_blank" rel="noopener">NCT05068414</a></td>
-          <td>Assessment of the Incidence of Hemorrhagic and Ischemic Events in Post-angioplasty in Anticoagulated Coronary Patients with Atrial Fibrillation</td>
-          <td>No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
-          <td>Atrial fibrillation (AF) is a supraventricular arrhythmia characterized by uncoordinated and fast atrial activity, and coronary artery disease (chronic and acute coronary syndrome) is characterized by a generally atheromatous narrowing of the coronary arter...</td>
         </tr>
 
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT05353140" target="_blank" rel="noopener">NCT05353140</a></td>
           <td>LAAO Versus NOAC in Patients with AF and PCI</td>
-          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Not Completed, No Results Posted, No Recorded Numeric Outcome</td>
           <td>Atrial fibrillation (AF) coincides with coronary artery disease (CAD) shared common risk factors and pathophysiologic pathways. CAD affects approximately 25% of AF patient according to the trial Atrial Fibrillation Follow-up Investigation of Rhythm Manageme...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05068414" target="_blank" rel="noopener">NCT05068414</a></td>
+          <td>Assessment of the Incidence of Hemorrhagic and Ischemic Events in Post-angioplasty in Anticoagulated Coronary Patients with Atrial Fibrillation</td>
+          <td>No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Recorded Numeric Outcome</td>
+          <td>Atrial fibrillation (AF) is a supraventricular arrhythmia characterized by uncoordinated and fast atrial activity, and coronary artery disease (chronic and acute coronary syndrome) is characterized by a generally atheromatous narrowing of the coronary arter...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04436978" target="_blank" rel="noopener">NCT04436978</a></td>
+          <td>What is the Optimal Antithrombotic Strategy in Patients With Atrial Fibrillation Undergoing PCI?</td>
+          <td>Not Completed, No Results Posted, No Recorded Numeric Outcome</td>
+          <td>The optimal antithrombotic management in patients with coronary artery disease (CAD) and concomitant atrial fibrillation (AF) is unknown. AF patients are treated with oral anticoagulation (OAC) to prevent ischemic stroke and systemic embolism and patients u...</td>
         </tr>
           </tbody>
         </table>
@@ -581,19 +595,19 @@
           <tbody>
             
       <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">NCT02866175</a></td>
-        <td>Vitamin K Antagonist Regimen vs Edoxaban Regimen</td>
-        <td>Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen</td>
-        <td>1506 (ACTUAL)</td>
-        <td>Documents listed on CT.gov</td>
-      </tr>
-
-      <tr>
         <td><a href="https://clinicaltrials.gov/study/NCT01830543" target="_blank" rel="noopener">NCT01830543</a></td>
-        <td>Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD) vs Rivaroxaban 15 mg | Vitamin K Antagonist (VKA) vs Rivaroxaban 15 mg</td>
+        <td>Rivaroxaban 15 mg vs Vitamin K Antagonist (VKA) | Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD) vs Vitamin K Antagonist (VKA) | Shared comparator split across CT.gov treatment arms</td>
         <td>Percentage of Participants With Clinically Significant Bleeding</td>
         <td>2124 (ACTUAL)</td>
         <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">NCT02866175</a></td>
+        <td>Edoxaban Regimen vs Vitamin K Antagonist Regimen</td>
+        <td>Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen</td>
+        <td>1506 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
       </tr>
           </tbody>
         </table>
@@ -613,7 +627,7 @@
         <script>
 (() => {
   const iframe = document.getElementById("reviewerValidationFrame");
-  const context = {"source":"ctgov-portfolio-generator","topicId":"doac-antiplatelet-af-pci","label":"DOAC Plus Antiplatelet Therapy in AF With PCI or ACS","query":"(\"atrial fibrillation\" AND (PCI OR \"acute coronary syndrome\")) AND (rivaroxaban OR apixaban OR dabigatran OR edoxaban) AND (\"PIONEER AF-PCI\" OR \"RE-DUAL PCI\" OR \"AUGUSTUS\" OR \"ENTRUST-AF PCI\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":2,"excludedCount":5,"totalEnrollment":3630,"demographicsCoverage":2,"documentCoverage":1,"comparisons":[{"studyId":"NCT02866175","title":"Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention","t1":"Vitamin K Antagonist Regimen","t2":"Edoxaban Regimen","measure":"logRR","effect":0.16653815944176914,"se":0.1083299872352671,"n1":755,"n0":751,"totalN":1506,"sampleSize":1506},{"studyId":"NCT01830543","title":"A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention","t1":"Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD)","t2":"Rivaroxaban 15 mg","measure":"logRR","effect":0.041476405849412847,"se":0.34796841691057107,"n1":706,"n0":696,"totalN":1402,"sampleSize":1402},{"studyId":"NCT01830543","title":"A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention","t1":"Vitamin K Antagonist (VKA)","t2":"Rivaroxaban 15 mg","measure":"logRR","effect":0.42295736756757896,"se":0.32013970754006693,"n1":697,"n0":696,"totalN":1393,"sampleSize":1393}],"includedStudies":[{"nctId":"NCT02866175","title":"Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention","status":"COMPLETED","enrollment":1506,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen","groups":[{"title":"Edoxaban Regimen","n":751,"events":128,"mean":null,"sd":null},{"title":"Vitamin K Antagonist Regimen","n":755,"events":152,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen","timeFrame":"Day 1 to 12 months postdose"}]},{"nctId":"NCT01830543","title":"A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention","status":"COMPLETED","enrollment":2124,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Percentage of Participants With Clinically Significant Bleeding","groups":[{"title":"Rivaroxaban 15 mg","n":696,"events":15.7,"mean":null,"sd":null},{"title":"Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD)","n":706,"events":16.6,"mean":null,"sd":null},{"title":"Vitamin K Antagonist (VKA)","n":697,"events":24,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Percentage of Participants With Clinically Significant Bleeding","timeFrame":"Up to Month 12"}]}]};
+  const context = {"source":"ctgov-portfolio-generator","topicId":"doac-antiplatelet-af-pci","label":"DOAC Plus Antiplatelet Therapy in AF With PCI or ACS","query":"(\"atrial fibrillation\" AND (PCI OR \"acute coronary syndrome\")) AND (rivaroxaban OR apixaban OR dabigatran OR edoxaban) AND (\"PIONEER AF-PCI\" OR \"RE-DUAL PCI\" OR \"AUGUSTUS\" OR \"ENTRUST-AF PCI\")","generatedAt":"2026-04-05T13:16:46.754Z","includedCount":2,"excludedCount":5,"totalEnrollment":3630,"demographicsCoverage":2,"documentCoverage":1,"analysisEligibleCount":2,"comparisonReadyStudyCount":2,"comparisonCount":3,"comparisons":[{"studyId":"NCT01830543","title":"A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention","t1":"Rivaroxaban 15 mg","t2":"Vitamin K Antagonist (VKA)","measure":"logRR","effect":-0.42521017976150727,"se":0.12978496739796658,"n1":696,"n0":348.5,"totalN":1044.5,"sampleSize":1044.5,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"proportion"},{"studyId":"NCT01830543","title":"A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention","t1":"Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD)","t2":"Vitamin K Antagonist (VKA)","measure":"logRR","effect":-0.3686497043517172,"se":0.1274252149191393,"n1":706,"n0":348.5,"totalN":1054.5,"sampleSize":1054.5,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"proportion"},{"studyId":"NCT02866175","title":"Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention","t1":"Edoxaban Regimen","t2":"Vitamin K Antagonist Regimen","measure":"logRR","effect":-0.16653815944176922,"se":0.1083299872352671,"n1":751,"n0":755,"totalN":1506,"sampleSize":1506,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"count"}],"includedStudies":[{"nctId":"NCT01830543","title":"A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention","status":"COMPLETED","enrollment":2124,"documentsCount":0,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"binary","title":"Percentage of Participants With Clinically Significant Bleeding","unitOfMeasure":"percentage of participants","paramType":"NUMBER","metricKind":"proportion","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Rivaroxaban 15 mg","n":696,"events":109,"mean":null,"sd":null,"rawValue":15.7,"rawUnit":"percentage of participants","displayPercent":15.7,"derivation":"reconstructed_from_ctgov_percent"},{"title":"Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD)","n":706,"events":117,"mean":null,"sd":null,"rawValue":16.6,"rawUnit":"percentage of participants","displayPercent":16.6,"derivation":"reconstructed_from_ctgov_percent"},{"title":"Vitamin K Antagonist (VKA)","n":697,"events":167,"mean":null,"sd":null,"rawValue":24,"rawUnit":"percentage of participants","displayPercent":24,"derivation":"reconstructed_from_ctgov_percent"}]},"primaryOutcomes":[{"measure":"Percentage of Participants With Clinically Significant Bleeding","timeFrame":"Up to Month 12"}]},{"nctId":"NCT02866175","title":"Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention","status":"COMPLETED","enrollment":1506,"documentsCount":1,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"binary","title":"Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen","unitOfMeasure":"Participants","paramType":"COUNT_OF_PARTICIPANTS","metricKind":"count","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Edoxaban Regimen","n":751,"events":128,"mean":null,"sd":null,"rawValue":128,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"Vitamin K Antagonist Regimen","n":755,"events":152,"mean":null,"sd":null,"rawValue":152,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"}]},"primaryOutcomes":[{"measure":"Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen","timeFrame":"Day 1 to 12 months postdose"}]}]};
   if (!iframe || !context) return;
   const sendContext = () => {
     if (!iframe.contentWindow) return;

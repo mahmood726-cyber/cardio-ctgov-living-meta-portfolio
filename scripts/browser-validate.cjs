@@ -27,7 +27,7 @@ async function validateIndex(page) {
     ...result,
     consoleErrors: errors,
     pass:
-      result.title.includes("CT.gov Cardiovascular Living Meta Portfolio") &&
+      result.title.includes("CT.gov Living Meta Portfolio") &&
       result.cardCount > 0 &&
       result.summaryExists &&
       result.heroExists &&

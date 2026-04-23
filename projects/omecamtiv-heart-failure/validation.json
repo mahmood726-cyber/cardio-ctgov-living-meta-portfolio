@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-28T18:45:05.888Z",
-  "sourceStartedAt": "2026-03-28T18:44:01.927Z",
+  "generatedAt": "2026-04-05T13:16:46.754Z",
+  "sourceStartedAt": "2026-04-05T13:16:31.341Z",
   "minIncludedTrials": 2,
   "pageSize": 100,
   "maxPages": 8,
@@ -20,8 +20,429 @@
     "pagesFetched": 1,
     "truncated": false,
     "includedCount": 3,
+    "analysisEligibleCount": 3,
     "excludedCount": 2,
     "includedStudies": [
+      {
+        "nctId": "NCT03759392",
+        "title": "Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure",
+        "status": "COMPLETED",
+        "startDate": "2019-04-09",
+        "completionDate": "2022-01-06",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "A Double-blind, Randomized, Placebo-controlled, Multicenter Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure With Reduced Ejection Fraction and Decreased Exercise Tolerance",
+        "acronym": "METEORIC-HF",
+        "briefSummary": "The purpose of this study is to evaluate the effect of treatment with omecamtiv mecarbil compared with placebo on exercise capacity as determined by cardiopulmonary exercise testing following 20 weeks of treatment with omecamtiv mecarbil or placebo",
+        "detailedDescription": "Oversight Authorities: United States: Food and Drug Administration Canada: Health Canada France: National Agency for the Safety of Medicine and Health Products Germany: Federal Institute for Drugs and Medical Devices Hungary: National Institute of Pharmacy and Nutrition Italy: Italian Medicines Agency Netherlands: Medicines Evaluation Board Poland: Chief Pharmaceutical Inspectorate Sweden: Medical Products Agency",
+        "sponsor": {
+          "name": "Cytokinetics",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 276,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Heart Failure With Reduced Ejection Fraction"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "85 Years",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria * Male or female, greater than or equal to 18 to lesser than or equal to 85 years of age * History of chronic HF, defined as requiring continuous treatment with medications for HF for a minimum of 3 months before screening * New York Heart Association (NYHA) class II or III at screening * Left ventricular ejection fraction less than or equal to 35% * On maximally tolerated HF standard of care (SoC) therapies consistent with regional clinical practice guidelines, if not contraindicated and according to investigator judgment of the subject's clinical status. Beta blocker dose must be stable for 30 days prior to randomization. * N-terminal (NT)-proBNP level greater than or equal to 200 pg/mL * Peak VO2 less than or equal to 75% of the predicted normal value with respiratory exchange ratio (RER) greater than or equal to 1.05 on a screening CPET, confirmed by a CPET core laboratory Exclusion Criteria * Severe uncorrected valvular heart disease * Paroxysmal atrial fibrillation or flutter documented within the previous 6 months, direct-current (DC) cardioversion or ablation procedure for atrial fibrillation within 6 months, or plan to attempt to restore sinus rhythm within 6 months of randomization. Subjects with persistent atrial fibrillation and no sinus rhythm documented in the prior 6 months are permitted. * Symptomatic bradycardia, second-degree Mobitz type II, or third-degree heart block without a pacemaker. * History of gastrointestinal bleeding requirin..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20",
+            "description": "The effect of treatment on exercise capacity, as assessed by peak oxygen uptake, was assessed during cardiopulmonary exercise testing (CPET) with gas-exchange analysis. Cycle ergometry was the preferred modality for exercise testing; treadmill exercise testing was an acceptable alternative. Participants were to use the same testing modality for all exercise tests during the study. Whenever possible, CPET was administered by the same study personnel using the same equipment throughout the study.",
+            "timeFrame": "Baseline and Week 20"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Change in Total Workload During Cardiopulmonary Exercise Testing From Baseline to Week 20",
+            "description": "Total workload was measured during CPET (cycle ergometry \\[preferred\\] or treadmill exercise testing) and represents the maximum load to which a participant was subjected during CPET in order to produce work.",
+            "timeFrame": "Baseline and Week 20"
+          },
+          {
+            "measure": "Change in Ventilatory Efficiency During Cardiopulmonary Exercise Testing From Baseline to Week 20",
+            "description": "Ventilatory efficiency (ventilation \\[VE\\]/volume of exhaled carbon dioxide \\[VCO2\\]) was measured through CPET with gas exchange analysis.",
+            "timeFrame": "Baseline and Week 20"
+          },
+          {
+            "measure": "Change in the Average Daily Activity Units Measured Over a 2-week Period From Baseline (Week -2 to Day 1) to Weeks 18-20",
+            "description": "The effect of treatment on daily activity, as assessed by average daily activity units, was evaluated by actigraphy. Actigraphy was collected during 4 sessions throughout the study for 2 week intervals.",
+            "timeFrame": "Baseline (Week -2 to Day 1) to Weeks 18-20"
+          }
+        ],
+        "documents": [
+          {
+            "label": "Study Protocol",
+            "filename": "Prot_000.pdf",
+            "date": "2021-06-30",
+            "hasSap": false,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          },
+          {
+            "label": "Statistical Analysis Plan",
+            "filename": "SAP_001.pdf",
+            "date": "2022-01-05",
+            "hasSap": true,
+            "hasIcf": false,
+            "hasProtocol": false,
+            "url": ""
+          }
+        ],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Omecamtiv Mecarbil",
+              "description": "Omecamtiv mecarbil was administered as an oral modified-release tablet twice daily for up to 20 weeks. Participants randomized to this arm started at an omecamtiv mecarbil dose of 25 mg twice daily. The dose could be increased based on plasma concentrations at Weeks 2 and 6."
+            },
+            {
+              "id": "BG001",
+              "title": "Placebo",
+              "description": "Participants randomized this arm received placebo tablets (matching the appearance of the omecamtiv mecarbil tablets) twice daily for up to 20 weeks."
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Omecamtiv Mecarbil",
+              "value": 185,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": 91,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 276,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Omecamtiv Mecarbil",
+              "value": "63.3",
+              "spread": "9.64",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "value": "64.4",
+              "spread": "11.41",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "63.6",
+              "spread": "10.25",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Omecamtiv Mecarbil",
+              "female": 27,
+              "male": 158
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Placebo",
+              "female": 15,
+              "male": 76
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 42,
+              "male": 234
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Omecamtiv Mecarbil",
+                      "value": "63.3",
+                      "spread": "9.64"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "64.4",
+                      "spread": "11.41"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "63.6",
+                      "spread": "10.25"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Omecamtiv Mecarbil",
+                      "value": "27",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "15",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "42",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Omecamtiv Mecarbil",
+                      "value": "158",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "76",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "234",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Race (NIH/OMB)",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "American Indian or Alaska Native",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Omecamtiv Mecarbil",
+                      "value": "1",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Asian",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Omecamtiv Mecarbil",
+                      "value": "3",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "2",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "5",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Native Hawaiian or Other Pacific Islander",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Omecamtiv Mecarbil",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Black or African American",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Omecamtiv Mecarbil",
+                      "value": "16",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "6",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "22",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Time since HFrEF diagnosis",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Omecamtiv Mecarbil",
+                      "value": "7.6",
+                      "spread": "6.14"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Placebo",
+                      "value": "7.8",
+                      "spread": "6.88"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "7.7",
+                      "spread": "6.38"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Omecamtiv mecarbil was administered as an oral modified-release tablet twice daily for up to 20 weeks. Participants randomized to this arm started at an omecamtiv mecarbil dose of 25 mg twice daily. The dose could be increased based on plasma concentrations at Weeks 2 and 6."
+          },
+          {
+            "id": "2",
+            "title": "Participants randomized this arm received placebo tablets (matching the appearance of the omecamtiv mecarbil tablets) twice daily for up to 20 weeks."
+          }
+        ],
+        "outcome": {
+          "type": "continuous",
+          "title": "Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20",
+          "unitOfMeasure": "mL/min/kg",
+          "paramType": "LEAST_SQUARES_MEAN",
+          "metricKind": "continuous",
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Omecamtiv Mecarbil",
+              "n": 162,
+              "rawValue": -0.239,
+              "rawUnit": "mL/min/kg",
+              "mean": -0.239,
+              "sd": 2.1866570101412797
+            },
+            {
+              "id": "OG001",
+              "title": "Placebo",
+              "n": 81,
+              "rawValue": 0.207,
+              "rawUnit": "mL/min/kg",
+              "mean": 0.207,
+              "sd": 2.1708
+            }
+          ]
+        },
+        "analysisEligible": true,
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      },
       {
         "nctId": "NCT01786512",
         "title": "COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure",
@@ -632,11 +1053,18 @@
         "outcome": {
           "type": "continuous",
           "title": "Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)",
+          "unitOfMeasure": "ng/mL",
+          "paramType": "MEAN",
+          "metricKind": "continuous",
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "groups": [
             {
               "id": "OG000",
               "title": "Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1",
               "n": 10,
+              "rawValue": 193,
+              "rawUnit": "ng/mL",
               "mean": 193,
               "sd": 58.8
             },
@@ -644,6 +1072,8 @@
               "id": "OG001",
               "title": "Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2",
               "n": 14,
+              "rawValue": 201,
+              "rawUnit": "ng/mL",
               "mean": 201,
               "sd": 94.4
             },
@@ -651,6 +1081,8 @@
               "id": "OG002",
               "title": "Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2",
               "n": 13,
+              "rawValue": 171,
+              "rawUnit": "ng/mL",
               "mean": 171,
               "sd": 53.8
             },
@@ -658,6 +1090,8 @@
               "id": "OG003",
               "title": "Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F1",
               "n": 10,
+              "rawValue": 492,
+              "rawUnit": "ng/mL",
               "mean": 492,
               "sd": 115
             },
@@ -665,6 +1099,8 @@
               "id": "OG004",
               "title": "Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F2",
               "n": 11,
+              "rawValue": 502,
+              "rawUnit": "ng/mL",
               "mean": 502,
               "sd": 138
             },
@@ -672,11 +1108,14 @@
               "id": "OG005",
               "title": "Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg SCT-F2",
               "n": 14,
+              "rawValue": 601,
+              "rawUnit": "ng/mL",
               "mean": 601,
               "sd": 204
             }
           ]
         },
+        "analysisEligible": true,
         "hasPostedResults": true,
         "randomized": true,
         "completed": true,
@@ -1091,433 +1530,53 @@
           }
         ],
         "outcome": {
-          "type": "binary",
-          "title": "Time to Cardiovascular Death or First Heart Failure Event",
-          "groups": [
-            {
-              "id": "OG000",
-              "title": "Placebo",
-              "n": 4112,
-              "events": 39.1
-            },
-            {
-              "id": "OG001",
-              "title": "Omecamtiv Mecarbil",
-              "n": 4120,
-              "events": 37
-            }
-          ]
-        },
-        "hasPostedResults": true,
-        "randomized": true,
-        "completed": true,
-        "reasons": [],
-        "eligible": true
-      },
-      {
-        "nctId": "NCT03759392",
-        "title": "Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure",
-        "status": "COMPLETED",
-        "startDate": "2019-04-09",
-        "completionDate": "2022-01-06",
-        "studyType": "INTERVENTIONAL",
-        "allocation": "RANDOMIZED",
-        "officialTitle": "A Double-blind, Randomized, Placebo-controlled, Multicenter Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure With Reduced Ejection Fraction and Decreased Exercise Tolerance",
-        "acronym": "METEORIC-HF",
-        "briefSummary": "The purpose of this study is to evaluate the effect of treatment with omecamtiv mecarbil compared with placebo on exercise capacity as determined by cardiopulmonary exercise testing following 20 weeks of treatment with omecamtiv mecarbil or placebo",
-        "detailedDescription": "Oversight Authorities: United States: Food and Drug Administration Canada: Health Canada France: National Agency for the Safety of Medicine and Health Products Germany: Federal Institute for Drugs and Medical Devices Hungary: National Institute of Pharmacy and Nutrition Italy: Italian Medicines Agency Netherlands: Medicines Evaluation Board Poland: Chief Pharmaceutical Inspectorate Sweden: Medical Products Agency",
-        "sponsor": {
-          "name": "Cytokinetics",
-          "class": "INDUSTRY"
-        },
-        "phases": [
-          "PHASE3"
-        ],
-        "enrollment": {
-          "count": 276,
-          "type": "ACTUAL"
-        },
-        "conditions": [
-          "Heart Failure With Reduced Ejection Fraction"
-        ],
-        "eligibility": {
-          "sex": "ALL",
-          "minimumAge": "18 Years",
-          "maximumAge": "85 Years",
-          "healthyVolunteers": false,
-          "criteria": "Inclusion Criteria * Male or female, greater than or equal to 18 to lesser than or equal to 85 years of age * History of chronic HF, defined as requiring continuous treatment with medications for HF for a minimum of 3 months before screening * New York Heart Association (NYHA) class II or III at screening * Left ventricular ejection fraction less than or equal to 35% * On maximally tolerated HF standard of care (SoC) therapies consistent with regional clinical practice guidelines, if not contraindicated and according to investigator judgment of the subject's clinical status. Beta blocker dose must be stable for 30 days prior to randomization. * N-terminal (NT)-proBNP level greater than or equal to 200 pg/mL * Peak VO2 less than or equal to 75% of the predicted normal value with respiratory exchange ratio (RER) greater than or equal to 1.05 on a screening CPET, confirmed by a CPET core laboratory Exclusion Criteria * Severe uncorrected valvular heart disease * Paroxysmal atrial fibrillation or flutter documented within the previous 6 months, direct-current (DC) cardioversion or ablation procedure for atrial fibrillation within 6 months, or plan to attempt to restore sinus rhythm within 6 months of randomization. Subjects with persistent atrial fibrillation and no sinus rhythm documented in the prior 6 months are permitted. * Symptomatic bradycardia, second-degree Mobitz type II, or third-degree heart block without a pacemaker. * History of gastrointestinal bleeding requirin..."
-        },
-        "primaryOutcomes": [
-          {
-            "measure": "Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20",
-            "description": "The effect of treatment on exercise capacity, as assessed by peak oxygen uptake, was assessed during cardiopulmonary exercise testing (CPET) with gas-exchange analysis. Cycle ergometry was the preferred modality for exercise testing; treadmill exercise testing was an acceptable alternative. Participants were to use the same testing modality for all exercise tests during the study. Whenever possible, CPET was administered by the same study personnel using the same equipment throughout the study.",
-            "timeFrame": "Baseline and Week 20"
-          }
-        ],
-        "secondaryOutcomes": [
-          {
-            "measure": "Change in Total Workload During Cardiopulmonary Exercise Testing From Baseline to Week 20",
-            "description": "Total workload was measured during CPET (cycle ergometry \\[preferred\\] or treadmill exercise testing) and represents the maximum load to which a participant was subjected during CPET in order to produce work.",
-            "timeFrame": "Baseline and Week 20"
-          },
-          {
-            "measure": "Change in Ventilatory Efficiency During Cardiopulmonary Exercise Testing From Baseline to Week 20",
-            "description": "Ventilatory efficiency (ventilation \\[VE\\]/volume of exhaled carbon dioxide \\[VCO2\\]) was measured through CPET with gas exchange analysis.",
-            "timeFrame": "Baseline and Week 20"
-          },
-          {
-            "measure": "Change in the Average Daily Activity Units Measured Over a 2-week Period From Baseline (Week -2 to Day 1) to Weeks 18-20",
-            "description": "The effect of treatment on daily activity, as assessed by average daily activity units, was evaluated by actigraphy. Actigraphy was collected during 4 sessions throughout the study for 2 week intervals.",
-            "timeFrame": "Baseline (Week -2 to Day 1) to Weeks 18-20"
-          }
-        ],
-        "documents": [
-          {
-            "label": "Study Protocol",
-            "filename": "Prot_000.pdf",
-            "date": "2021-06-30",
-            "hasSap": false,
-            "hasIcf": false,
-            "hasProtocol": true,
-            "url": ""
-          },
-          {
-            "label": "Statistical Analysis Plan",
-            "filename": "SAP_001.pdf",
-            "date": "2022-01-05",
-            "hasSap": true,
-            "hasIcf": false,
-            "hasProtocol": false,
-            "url": ""
-          }
-        ],
-        "demographics": {
-          "populationDescription": "",
-          "groups": [
-            {
-              "id": "BG000",
-              "title": "Omecamtiv Mecarbil",
-              "description": "Omecamtiv mecarbil was administered as an oral modified-release tablet twice daily for up to 20 weeks. Participants randomized to this arm started at an omecamtiv mecarbil dose of 25 mg twice daily. The dose could be increased based on plasma concentrations at Weeks 2 and 6."
-            },
-            {
-              "id": "BG001",
-              "title": "Placebo",
-              "description": "Participants randomized this arm received placebo tablets (matching the appearance of the omecamtiv mecarbil tablets) twice daily for up to 20 weeks."
-            },
-            {
-              "id": "BG002",
-              "title": "Total",
-              "description": "Total of all reporting groups"
-            }
-          ],
-          "participantCounts": [
-            {
-              "groupId": "BG000",
-              "groupTitle": "Omecamtiv Mecarbil",
-              "value": 185,
-              "unit": "Participants"
-            },
-            {
-              "groupId": "BG001",
-              "groupTitle": "Placebo",
-              "value": 91,
-              "unit": "Participants"
-            },
-            {
-              "groupId": "BG002",
-              "groupTitle": "Total",
-              "value": 276,
-              "unit": "Participants"
-            }
-          ],
-          "ageMean": [
-            {
-              "groupId": "BG000",
-              "groupTitle": "Omecamtiv Mecarbil",
-              "value": "63.3",
-              "spread": "9.64",
-              "unit": "years"
-            },
-            {
-              "groupId": "BG001",
-              "groupTitle": "Placebo",
-              "value": "64.4",
-              "spread": "11.41",
-              "unit": "years"
-            },
-            {
-              "groupId": "BG002",
-              "groupTitle": "Total",
-              "value": "63.6",
-              "spread": "10.25",
-              "unit": "years"
-            }
-          ],
-          "sexBreakdown": [
-            {
-              "groupId": "BG000",
-              "groupTitle": "Omecamtiv Mecarbil",
-              "female": 27,
-              "male": 158
-            },
-            {
-              "groupId": "BG001",
-              "groupTitle": "Placebo",
-              "female": 15,
-              "male": 76
-            },
-            {
-              "groupId": "BG002",
-              "groupTitle": "Total",
-              "female": 42,
-              "male": 234
-            }
-          ],
-          "keyMeasures": [
-            {
-              "title": "Age, Continuous",
-              "paramType": "MEAN",
-              "unit": "years",
-              "categories": [
-                {
-                  "title": "Value",
-                  "measurements": [
-                    {
-                      "groupId": "BG000",
-                      "groupTitle": "Omecamtiv Mecarbil",
-                      "value": "63.3",
-                      "spread": "9.64"
-                    },
-                    {
-                      "groupId": "BG001",
-                      "groupTitle": "Placebo",
-                      "value": "64.4",
-                      "spread": "11.41"
-                    },
-                    {
-                      "groupId": "BG002",
-                      "groupTitle": "Total",
-                      "value": "63.6",
-                      "spread": "10.25"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "title": "Sex: Female, Male",
-              "paramType": "COUNT_OF_PARTICIPANTS",
-              "unit": "Participants",
-              "categories": [
-                {
-                  "title": "Female",
-                  "measurements": [
-                    {
-                      "groupId": "BG000",
-                      "groupTitle": "Omecamtiv Mecarbil",
-                      "value": "27",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG001",
-                      "groupTitle": "Placebo",
-                      "value": "15",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG002",
-                      "groupTitle": "Total",
-                      "value": "42",
-                      "spread": ""
-                    }
-                  ]
-                },
-                {
-                  "title": "Male",
-                  "measurements": [
-                    {
-                      "groupId": "BG000",
-                      "groupTitle": "Omecamtiv Mecarbil",
-                      "value": "158",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG001",
-                      "groupTitle": "Placebo",
-                      "value": "76",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG002",
-                      "groupTitle": "Total",
-                      "value": "234",
-                      "spread": ""
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "title": "Race (NIH/OMB)",
-              "paramType": "COUNT_OF_PARTICIPANTS",
-              "unit": "Participants",
-              "categories": [
-                {
-                  "title": "American Indian or Alaska Native",
-                  "measurements": [
-                    {
-                      "groupId": "BG000",
-                      "groupTitle": "Omecamtiv Mecarbil",
-                      "value": "1",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG001",
-                      "groupTitle": "Placebo",
-                      "value": "0",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG002",
-                      "groupTitle": "Total",
-                      "value": "1",
-                      "spread": ""
-                    }
-                  ]
-                },
-                {
-                  "title": "Asian",
-                  "measurements": [
-                    {
-                      "groupId": "BG000",
-                      "groupTitle": "Omecamtiv Mecarbil",
-                      "value": "3",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG001",
-                      "groupTitle": "Placebo",
-                      "value": "2",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG002",
-                      "groupTitle": "Total",
-                      "value": "5",
-                      "spread": ""
-                    }
-                  ]
-                },
-                {
-                  "title": "Native Hawaiian or Other Pacific Islander",
-                  "measurements": [
-                    {
-                      "groupId": "BG000",
-                      "groupTitle": "Omecamtiv Mecarbil",
-                      "value": "0",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG001",
-                      "groupTitle": "Placebo",
-                      "value": "0",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG002",
-                      "groupTitle": "Total",
-                      "value": "0",
-                      "spread": ""
-                    }
-                  ]
-                },
-                {
-                  "title": "Black or African American",
-                  "measurements": [
-                    {
-                      "groupId": "BG000",
-                      "groupTitle": "Omecamtiv Mecarbil",
-                      "value": "16",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG001",
-                      "groupTitle": "Placebo",
-                      "value": "6",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG002",
-                      "groupTitle": "Total",
-                      "value": "22",
-                      "spread": ""
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "title": "Time since HFrEF diagnosis",
-              "paramType": "MEAN",
-              "unit": "years",
-              "categories": [
-                {
-                  "title": "Value",
-                  "measurements": [
-                    {
-                      "groupId": "BG000",
-                      "groupTitle": "Omecamtiv Mecarbil",
-                      "value": "7.6",
-                      "spread": "6.14"
-                    },
-                    {
-                      "groupId": "BG001",
-                      "groupTitle": "Placebo",
-                      "value": "7.8",
-                      "spread": "6.88"
-                    },
-                    {
-                      "groupId": "BG002",
-                      "groupTitle": "Total",
-                      "value": "7.7",
-                      "spread": "6.38"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        "arms": [
-          {
-            "id": "1",
-            "title": "Omecamtiv mecarbil was administered as an oral modified-release tablet twice daily for up to 20 weeks. Participants randomized to this arm started at an omecamtiv mecarbil dose of 25 mg twice daily. The dose could be increased based on plasma concentrations at Weeks 2 and 6."
-          },
-          {
-            "id": "2",
-            "title": "Participants randomized this arm received placebo tablets (matching the appearance of the omecamtiv mecarbil tablets) twice daily for up to 20 weeks."
-          }
-        ],
-        "outcome": {
           "type": "continuous",
-          "title": "Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20",
+          "title": "Change From Baseline in Kansas City Cardiomyopathy Questionnaire Total Symptom Score (KCCQ TSS) at Week 24",
+          "unitOfMeasure": "scores on a scale",
+          "paramType": "LEAST_SQUARES_MEAN",
+          "metricKind": "continuous",
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "groups": [
             {
               "id": "OG000",
-              "title": "Omecamtiv Mecarbil",
-              "n": 162,
-              "mean": -0.239,
-              "sd": 2.1866570101412797
+              "title": "Placebo: Oupatients",
+              "n": 2704,
+              "rawValue": 6.29,
+              "rawUnit": "scores on a scale",
+              "mean": 6.29,
+              "sd": 17.68
             },
             {
               "id": "OG001",
-              "title": "Placebo",
-              "n": 81,
-              "mean": 0.207,
-              "sd": 2.1708
+              "title": "Omecamtiv Mecarbil: Outpatients",
+              "n": 2715,
+              "rawValue": 5.83,
+              "rawUnit": "scores on a scale",
+              "mean": 5.83,
+              "sd": 17.71592503935372
+            },
+            {
+              "id": "OG002",
+              "title": "Placebo: Inpatients",
+              "n": 835,
+              "rawValue": 21.15,
+              "rawUnit": "scores on a scale",
+              "mean": 21.15,
+              "sd": 20.51642025305584
+            },
+            {
+              "id": "OG003",
+              "title": "Omecamtiv Mecarbil: Inpatients",
+              "n": 868,
+              "rawValue": 23.65,
+              "rawUnit": "scores on a scale",
+              "mean": 23.65,
+              "sd": 20.62328780771873
             }
           ]
         },
+        "analysisEligible": true,
         "hasPostedResults": true,
         "randomized": true,
         "completed": true,
@@ -1576,6 +1635,7 @@
           }
         ],
         "outcome": null,
+        "analysisEligible": false,
         "hasPostedResults": false,
         "randomized": false,
         "completed": false,
@@ -1584,7 +1644,7 @@
           "no_results_posted",
           "not_randomized_interventional",
           "fewer_than_two_arms",
-          "no_extractable_numeric_outcome"
+          "no_recorded_numeric_outcome"
         ],
         "eligible": false
       },
@@ -1658,12 +1718,13 @@
           }
         ],
         "outcome": null,
+        "analysisEligible": false,
         "hasPostedResults": false,
         "randomized": true,
         "completed": true,
         "reasons": [
           "no_results_posted",
-          "no_extractable_numeric_outcome"
+          "no_recorded_numeric_outcome"
         ],
         "eligible": false
       }
@@ -1673,9 +1734,16 @@
       "no_results_posted": 2,
       "not_randomized_interventional": 1,
       "fewer_than_two_arms": 1,
-      "no_extractable_numeric_outcome": 2
+      "no_recorded_numeric_outcome": 2
     },
+    "ctgovFullCoverage": true,
+    "ctgovCoverageNote": "Curated as a modern topic where the randomized evidence base is expected to be fully representable from CT.gov records with posted results.",
     "portfolioEligible": true,
-    "priorityTier": "promising"
+    "portfolioEligibilityMode": "full-ctgov-threshold",
+    "portfolioEligibilityReason": "Included because 3 randomized trial(s) met the standard >=2 CT.gov-results threshold and the topic is curated as full-coverage.",
+    "portfolioExclusionReasons": [],
+    "priorityTier": "promising",
+    "comparisonReadyStudyCount": 2,
+    "comparisonCount": 4
   }
 }

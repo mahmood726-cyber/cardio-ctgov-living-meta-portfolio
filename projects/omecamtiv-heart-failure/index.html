@@ -17,17 +17,17 @@
         <div class="hero__title">
           <p class="kicker" id="appKicker">Registry-Native Cardiovascular Evidence</p>
           <h1 id="appTitle">Omecamtiv Mecarbil in Heart Failure Living Meta-Analysis</h1>
-          <p class="subtitle" id="appSubtitle">Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.</p>
+          <p class="subtitle" id="appSubtitle">Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio.</p>
         </div>
         <div class="hero__controls">
           <div class="control-card">
             <label>
               New RCT window start
-              <input id="startDate" type="date" />
+              <input aria-label="New RCT window start" id="startDate" type="date" />
             </label>
             <label>
               Status filter
-              <select id="statusFilter" multiple>
+              <select aria-label="Status filter" id="statusFilter" multiple>
                 <option value="COMPLETED" selected>Completed</option>
                 <option value="ACTIVE_NOT_RECRUITING" selected>Active, not recruiting</option>
                 <option value="RECRUITING">Recruiting</option>
@@ -37,14 +37,14 @@
             </label>
             <label>
               Single outcome rule
-              <select id="outcomeRule">
+              <select aria-label="Single outcome rule" id="outcomeRule">
                 <option value="primary">Primary outcome with numeric results</option>
                 <option value="results">Any outcome with numeric results</option>
               </select>
             </label>
             <label>
               Reference treatment (NMA)
-              <input id="referenceTx" type="text" placeholder="e.g., Standard care" />
+              <input aria-label="Reference treatment (NMA)" id="referenceTx" type="text" aria-label="e.g., Standard care" placeholder="e.g., Standard care" />
             </label>
             <button id="updateBtn" class="btn btn--primary">Update from ClinicalTrials.gov</button>
             <button id="fixtureBtn" class="btn">Load Offline Fixture</button>
@@ -55,7 +55,7 @@
           <div class="control-card">
             <label>
               Prior meta-analysis trial IDs (one per line)
-              <textarea id="priorTrials" rows="6" placeholder="NCT01234567"></textarea>
+              <textarea aria-label="Prior meta-analysis trial IDs (one per line)" id="priorTrials" rows="6" aria-label="NCT01234567" placeholder="NCT01234567"></textarea>
             </label>
             <button id="compareBtn" class="btn">Compare Coverage</button>
             <div id="coverageSummary" class="coverage"></div>
@@ -67,21 +67,27 @@
       <section class="panel validation-snapshot">
         <div class="panel__header">
           <h2>CT.gov Validation Snapshot</h2>
-          <div class="panel__meta">Generated 2026-03-28</div>
+          <div class="panel__meta">Generated 2026-04-05</div>
         </div>
         <div class="panel__body">
           <div class="summary-grid">
             <div class="summary-card">
               <h3>Registry Gate</h3>
-              <div class="pill">Included RCTs: 3</div>
+              <div class="pill">Included RCT records: 3</div>
+              <div class="pill">Contrast-ready studies: 3</div>
+              <div class="pill">Direct comparisons: 4</div>
               <div class="pill">Scanned records: 5</div>
               <div class="pill">Pages fetched: 1</div>
               <div class="pill">Priority tier: Promising</div>
+              <div class="pill">Eligibility mode: Full CT.gov results coverage (&gt;=2 RCTs)</div>
+              <div class="pill">Coverage gate: Full CT.gov results coverage</div>
             </div>
             <div class="summary-card">
               <h3>Eligibility Rules</h3>
-              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, and at least one extractable numeric outcome.</p>
+              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, at least one recorded numeric CT.gov outcome, and topic-level curation that the full randomized evidence base should be captured on CT.gov.</p>
+              <p>Direct pooled contrasts are only emitted when the posted CT.gov metric can be safely reduced to counts or means and the arm structure supports a defensible comparator.</p>
               <p>The validation scan completed within the configured CT.gov page cap.</p>
+              <p class="muted">Curated as a modern topic where the randomized evidence base is expected to be fully representable from CT.gov records with posted results.</p>
             </div>
             <div class="summary-card">
               <h3>Audit Trail</h3>
@@ -99,16 +105,16 @@
             <h3>Included Trial Records</h3>
             <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
               
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">
+          NCT03759392
+        </a>
+
         <a class="pill" href="https://clinicaltrials.gov/study/NCT01786512" target="_blank" rel="noopener">
           NCT01786512
         </a>
 
         <a class="pill" href="https://clinicaltrials.gov/study/NCT02929329" target="_blank" rel="noopener">
           NCT02929329
-        </a>
-
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">
-          NCT03759392
         </a>
             </div>
           </div>
@@ -117,7 +123,7 @@
             <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
               
         <div class="pill">
-          No Extractable Numeric Outcome: 2
+          No Recorded Numeric Outcome: 2
         </div>
 
         <div class="pill">
@@ -168,11 +174,11 @@
             </div>
             <div class="summary-card">
               <h3>Review Question And PICO</h3>
-              <p><strong>Population:</strong> Modified Release Oral Formulation; Left Ventricular Systolic Dysfunction; Chronic Heart Failure; History of Chronic Heart Failure; Left Ventricular Ejection Fraction; Pharmacokinetics</p>
-              <p><strong>Interventions:</strong> Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1; Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2; Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2; Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F1; Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F2; Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg SCT-F2; Placebo; Omecamtiv Mecarbil</p>
-              <p><strong>Comparators:</strong> Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2 vs Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1 | Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2 vs Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1; Omecamtiv Mecarbil vs Placebo</p>
-              <p><strong>Outcomes:</strong> Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7); Time to Cardiovascular Death or First Heart Failure Event; Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20</p>
-              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</p>
+              <p><strong>Population:</strong> Heart Failure With Reduced Ejection Fraction; Modified Release Oral Formulation; Left Ventricular Systolic Dysfunction; Chronic Heart Failure; History of Chronic Heart Failure; Left Ventricular Ejection Fraction</p>
+              <p><strong>Interventions:</strong> Omecamtiv Mecarbil; Placebo; Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1; Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2; Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2; Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F1; Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F2; Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg SCT-F2</p>
+              <p><strong>Comparators:</strong> Omecamtiv Mecarbil vs Placebo; Multi-arm CT.gov record without a resolved shared comparator; Omecamtiv Mecarbil: Outpatients vs Placebo: Oupatients | Placebo: Inpatients vs Placebo: Oupatients | Shared comparator split across CT.gov treatment arms</p>
+              <p><strong>Outcomes:</strong> Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20; Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7); Change From Baseline in Kansas City Cardiomyopathy Questionnaire Total Symptom Score (KCCQ TSS) at Week 24</p>
+              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and at least one recorded numeric CT.gov outcome.</p>
             </div>
           </div>
 
@@ -190,7 +196,7 @@
         <tr>
           <td>CT.gov candidate scan started</td>
           <td>ClinicalTrials.gov v2 API</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr>
         <tr>
           <td>Base query locked</td>
@@ -225,7 +231,7 @@
         <tr>
           <td>Project package generated</td>
           <td>Portfolio build</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr></tbody>
             </table>
           </div>
@@ -249,12 +255,17 @@
         <tr>
           <td>Records excluded by registry hard gates</td>
           <td>2</td>
-          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no recorded numeric outcome</td>
         </tr>
         <tr>
-          <td>Trials entering the quantitative snapshot</td>
+          <td>Trials entering the CT.gov record snapshot</td>
           <td>3</td>
           <td>Included in validation.json and the live topic app</td>
+        </tr>
+        <tr>
+          <td>Trials with contrast-ready outcomes</td>
+          <td>3</td>
+          <td>Recorded metrics safely reducible to counts or means</td>
         </tr></tbody>
             </table>
           </div>
@@ -268,7 +279,7 @@
                   <th>Count</th>
                 </tr>
               </thead>
-              <tbody><tr><td>No Extractable Numeric Outcome</td><td>2</td></tr><tr><td>No Results Posted</td><td>2</td></tr><tr><td>Fewer Than Two Arms</td><td>1</td></tr><tr><td>Not Completed</td><td>1</td></tr><tr><td>Not Randomized Interventional</td><td>1</td></tr></tbody>
+              <tbody><tr><td>No Recorded Numeric Outcome</td><td>2</td></tr><tr><td>No Results Posted</td><td>2</td></tr><tr><td>Fewer Than Two Arms</td><td>1</td></tr><tr><td>Not Completed</td><td>1</td></tr><tr><td>Not Randomized Interventional</td><td>1</td></tr></tbody>
             </table>
           </div>
 
@@ -288,6 +299,15 @@
               </thead>
               <tbody>
         <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">NCT03759392</a></td>
+          <td>Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure</td>
+          <td>Cytokinetics (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>276 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to 85 Years | Healthy volunteers: No</td>
+          <td>Participants Omecamtiv Mecarbil: 185 Participants | Placebo: 91 Participants | Total: 276 Participants | Age Omecamtiv Mecarbil: 63.3 +/- 9.64 years | Placebo: 64.4 +/- 11.41 years | Total: 63.6 +/- 10.25 years | Sex Omecamtiv Mecarbil: F 27 / M 158 | Placebo: F 15 / M 76 | Total: F 42 / M 234</td>
+        </tr>
+        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT01786512" target="_blank" rel="noopener">NCT01786512</a></td>
           <td>COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure</td>
           <td>Cytokinetics (INDUSTRY)</td>
@@ -304,15 +324,6 @@
           <td>8256 (ACTUAL)</td>
           <td>Sex: ALL | Age: 18 Years to 85 Years | Healthy volunteers: No</td>
           <td>Participants Placebo: 4112 Participants | Omecamtiv Mecarbil: 4120 Participants | Total: 8232 Participants | Age Placebo: 64.5 +/- 11.4 years | Omecamtiv Mecarbil: 64.5 +/- 11.3 years | Total: 64.5 +/- 11.4 years | Sex Placebo: F 874 / M 3238 | Omecamtiv Mecarbil: F 875 / M 3245 | Total: F 1749 / M 6483</td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">NCT03759392</a></td>
-          <td>Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure</td>
-          <td>Cytokinetics (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>276 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 18 Years to 85 Years | Healthy volunteers: No</td>
-          <td>Participants Omecamtiv Mecarbil: 185 Participants | Placebo: 91 Participants | Total: 276 Participants | Age Omecamtiv Mecarbil: 63.3 +/- 9.64 years | Placebo: 64.4 +/- 11.41 years | Total: 63.6 +/- 10.25 years | Sex Omecamtiv Mecarbil: F 27 / M 158 | Placebo: F 15 / M 76 | Total: F 42 / M 234</td>
         </tr></tbody>
             </table>
           </div>
@@ -331,6 +342,14 @@
               </thead>
               <tbody>
         <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">NCT03759392</a></td>
+          <td>The purpose of this study is to evaluate the effect of treatment with omecamtiv mecarbil compared with placebo on exercise capacity as determined by cardiopulmonary exercise testing following 20 weeks of treatment with omecamtiv mecarbil...</td>
+          <td>Inclusion Criteria * Male or female, greater than or equal to 18 to lesser than or equal to 85 years of age * History of chronic HF, defined as requiring continuous treatment with medications for HF for a minimum of 3...</td>
+          <td>Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20 | Time frame: Baseline and Week 20 | The effect of treatment on exercise capacity, as assessed by peak oxygen uptake, was assessed during cardiopulmonary exercise test...</td>
+          <td><span class="pill">Study Protocol (2021-06-30)</span>
+<span class="pill">Statistical Analysis Plan (2022-01-05)</span></td>
+        </tr>
+        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT01786512" target="_blank" rel="noopener">NCT01786512</a></td>
           <td>The primary objectives of this study are (i) to select an oral modified release (MR) formulation and dose of omecamtiv mecarbil for chronic twice daily (BID) dosing in adults with heart failure and left ventricular systolic dysfunction a...</td>
           <td>Inclusion Criteria: * History of chronic heart failure (HF), defined as requiring treatment for HF for a minimum of 4 weeks prior to screening * Treated with stable, optimal pharmacological therapy for ≥ 4 weeks * His...</td>
@@ -344,14 +363,6 @@
           <td>Time to Cardiovascular Death or First Heart Failure Event | Time frame: From randomization to up to earliest of last confirmed survival status date or analysis cut-off date (07 August 2020); the overall median duration of follow-up was 21.8 months up to a m...</td>
           <td><span class="pill">Study Protocol (2018-11-13)</span>
 <span class="pill">Statistical Analysis Plan (2020-06-16)</span></td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">NCT03759392</a></td>
-          <td>The purpose of this study is to evaluate the effect of treatment with omecamtiv mecarbil compared with placebo on exercise capacity as determined by cardiopulmonary exercise testing following 20 weeks of treatment with omecamtiv mecarbil...</td>
-          <td>Inclusion Criteria * Male or female, greater than or equal to 18 to lesser than or equal to 85 years of age * History of chronic HF, defined as requiring continuous treatment with medications for HF for a minimum of 3...</td>
-          <td>Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20 | Time frame: Baseline and Week 20 | The effect of treatment on exercise capacity, as assessed by peak oxygen uptake, was assessed during cardiopulmonary exercise test...</td>
-          <td><span class="pill">Study Protocol (2021-06-30)</span>
-<span class="pill">Statistical Analysis Plan (2022-01-05)</span></td>
         </tr></tbody>
             </table>
           </div>
@@ -371,8 +382,16 @@
               </thead>
               <tbody>
       <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">NCT03759392</a></td>
+        <td>Omecamtiv Mecarbil vs Placebo</td>
+        <td>Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20</td>
+        <td>276 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
         <td><a href="https://clinicaltrials.gov/study/NCT01786512" target="_blank" rel="noopener">NCT01786512</a></td>
-        <td>Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2 vs Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1 | Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2 vs Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1</td>
+        <td>Multi-arm CT.gov record without a resolved shared comparator</td>
         <td>Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)</td>
         <td>544 (ACTUAL)</td>
         <td>Registry record only</td>
@@ -380,17 +399,9 @@
 
       <tr>
         <td><a href="https://clinicaltrials.gov/study/NCT02929329" target="_blank" rel="noopener">NCT02929329</a></td>
-        <td>Omecamtiv Mecarbil vs Placebo</td>
-        <td>Time to Cardiovascular Death or First Heart Failure Event</td>
+        <td>Omecamtiv Mecarbil: Outpatients vs Placebo: Oupatients | Placebo: Inpatients vs Placebo: Oupatients | Shared comparator split across CT.gov treatment arms</td>
+        <td>Change From Baseline in Kansas City Cardiomyopathy Questionnaire Total Symptom Score (KCCQ TSS) at Week 24</td>
         <td>8256 (ACTUAL)</td>
-        <td>Documents listed on CT.gov</td>
-      </tr>
-
-      <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">NCT03759392</a></td>
-        <td>Omecamtiv Mecarbil vs Placebo</td>
-        <td>Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20</td>
-        <td>276 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
       </tr></tbody>
             </table>
@@ -413,7 +424,7 @@
             <script>
 (() => {
   const iframe = document.getElementById("reviewerValidationFrame");
-  const context = {"source":"ctgov-portfolio-generator","topicId":"omecamtiv-heart-failure","label":"Omecamtiv Mecarbil in Heart Failure","query":"(\"heart failure\") AND (\"omecamtiv mecarbil\" OR omecamtiv) AND (\"GALACTIC-HF\" OR \"ATOMIC-AHF\" OR \"COSMIC-HF\" OR \"METEORIC-HF\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":3,"excludedCount":2,"totalEnrollment":9076,"demographicsCoverage":3,"documentCoverage":2,"comparisons":[{"studyId":"NCT01786512","title":"COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure","t1":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2","t2":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1","measure":"MD","effect":8,"se":31.341182400887725,"n1":14,"n0":10,"totalN":24,"sampleSize":24},{"studyId":"NCT01786512","title":"COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure","t1":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2","t2":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1","measure":"MD","effect":-22,"se":23.840998946546488,"n1":13,"n0":10,"totalN":23,"sampleSize":23},{"studyId":"NCT01786512","title":"COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure","t1":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F1","t2":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1","measure":"MD","effect":299,"se":40.8441427869407,"n1":10,"n0":10,"totalN":20,"sampleSize":20},{"studyId":"NCT01786512","title":"COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure","t1":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F2","t2":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1","measure":"MD","effect":309,"se":45.57429897730438,"n1":11,"n0":10,"totalN":21,"sampleSize":21},{"studyId":"NCT01786512","title":"COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure","t1":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg SCT-F2","t2":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1","measure":"MD","effect":408,"se":57.60482122679862,"n1":14,"n0":10,"totalN":24,"sampleSize":24},{"studyId":"NCT02929329","title":"Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction","t1":"Omecamtiv Mecarbil","t2":"Placebo","measure":"logRR","effect":-0.05714818955566682,"se":0.22829052868938512,"n1":4120,"n0":4112,"totalN":8232,"sampleSize":8232},{"studyId":"NCT03759392","title":"Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure","t1":"Omecamtiv Mecarbil","t2":"Placebo","measure":"MD","effect":-0.44599999999999995,"se":0.29612949869947097,"n1":162,"n0":81,"totalN":243,"sampleSize":243}],"includedStudies":[{"nctId":"NCT01786512","title":"COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure","status":"COMPLETED","enrollment":544,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)","groups":[{"title":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1","n":10,"events":null,"mean":193,"sd":58.8},{"title":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2","n":14,"events":null,"mean":201,"sd":94.4},{"title":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2","n":13,"events":null,"mean":171,"sd":53.8},{"title":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F1","n":10,"events":null,"mean":492,"sd":115},{"title":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F2","n":11,"events":null,"mean":502,"sd":138},{"title":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg SCT-F2","n":14,"events":null,"mean":601,"sd":204}]},"primaryOutcomes":[{"measure":"Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)","timeFrame":"Day 7 at predose and at 0.5, 1, 2, 3, 4, 6, 8, 12, 24, 48, and 72 hours, and 7 days post-dose."},{"measure":"Dose Escalation Phase: Time to Maximum Observed Plasma Concentration (Tmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)","timeFrame":"Day 7 at predose and at 0.5, 1, 2, 3, 4, 6, 8, 12, 24, 48, and 72 hours, and 7 days post-dose."}]},{"nctId":"NCT02929329","title":"Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction","status":"COMPLETED","enrollment":8256,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Time to Cardiovascular Death or First Heart Failure Event","groups":[{"title":"Placebo","n":4112,"events":39.1,"mean":null,"sd":null},{"title":"Omecamtiv Mecarbil","n":4120,"events":37,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time to Cardiovascular Death or First Heart Failure Event","timeFrame":"From randomization to up to earliest of last confirmed survival status date or analysis cut-off date (07 August 2020); the overall median duration of follow-up was 21.8 months up to a maximum of 42 months."}]},{"nctId":"NCT03759392","title":"Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure","status":"COMPLETED","enrollment":276,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20","groups":[{"title":"Omecamtiv Mecarbil","n":162,"events":null,"mean":-0.239,"sd":2.1866570101412797},{"title":"Placebo","n":81,"events":null,"mean":0.207,"sd":2.1708}]},"primaryOutcomes":[{"measure":"Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20","timeFrame":"Baseline and Week 20"}]}]};
+  const context = {"source":"ctgov-portfolio-generator","topicId":"omecamtiv-heart-failure","label":"Omecamtiv Mecarbil in Heart Failure","query":"(\"heart failure\") AND (\"omecamtiv mecarbil\" OR omecamtiv) AND (\"GALACTIC-HF\" OR \"ATOMIC-AHF\" OR \"COSMIC-HF\" OR \"METEORIC-HF\")","generatedAt":"2026-04-05T13:16:46.754Z","includedCount":3,"excludedCount":2,"totalEnrollment":9076,"demographicsCoverage":3,"documentCoverage":2,"analysisEligibleCount":3,"comparisonReadyStudyCount":2,"comparisonCount":4,"comparisons":[{"studyId":"NCT03759392","title":"Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure","t1":"Omecamtiv Mecarbil","t2":"Placebo","measure":"MD","effect":-0.44599999999999995,"se":0.29612949869947097,"n1":162,"n0":81,"totalN":243,"sampleSize":243,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT02929329","title":"Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction","t1":"Omecamtiv Mecarbil: Outpatients","t2":"Placebo: Oupatients","measure":"MD","effect":-0.45999999999999996,"se":0.68,"n1":2715,"n0":901.3333333333334,"totalN":3616.3333333333335,"sampleSize":3616.3333333333335,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"continuous"},{"studyId":"NCT02929329","title":"Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction","t1":"Placebo: Inpatients","t2":"Placebo: Oupatients","measure":"MD","effect":14.86,"se":0.9224424101265075,"n1":835,"n0":901.3333333333334,"totalN":1736.3333333333335,"sampleSize":1736.3333333333335,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"continuous"},{"studyId":"NCT02929329","title":"Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction","t1":"Omecamtiv Mecarbil: Inpatients","t2":"Placebo: Oupatients","measure":"MD","effect":17.36,"se":0.9147677300823417,"n1":868,"n0":901.3333333333334,"totalN":1769.3333333333335,"sampleSize":1769.3333333333335,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"continuous"}],"includedStudies":[{"nctId":"NCT03759392","title":"Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure","status":"COMPLETED","enrollment":276,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20","unitOfMeasure":"mL/min/kg","paramType":"LEAST_SQUARES_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Omecamtiv Mecarbil","n":162,"events":null,"mean":-0.239,"sd":2.1866570101412797,"rawValue":-0.239,"rawUnit":"mL/min/kg","displayPercent":null,"derivation":null},{"title":"Placebo","n":81,"events":null,"mean":0.207,"sd":2.1708,"rawValue":0.207,"rawUnit":"mL/min/kg","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20","timeFrame":"Baseline and Week 20"}]},{"nctId":"NCT01786512","title":"COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure","status":"COMPLETED","enrollment":544,"documentsCount":0,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)","unitOfMeasure":"ng/mL","paramType":"MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1","n":10,"events":null,"mean":193,"sd":58.8,"rawValue":193,"rawUnit":"ng/mL","displayPercent":null,"derivation":null},{"title":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2","n":14,"events":null,"mean":201,"sd":94.4,"rawValue":201,"rawUnit":"ng/mL","displayPercent":null,"derivation":null},{"title":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2","n":13,"events":null,"mean":171,"sd":53.8,"rawValue":171,"rawUnit":"ng/mL","displayPercent":null,"derivation":null},{"title":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F1","n":10,"events":null,"mean":492,"sd":115,"rawValue":492,"rawUnit":"ng/mL","displayPercent":null,"derivation":null},{"title":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F2","n":11,"events":null,"mean":502,"sd":138,"rawValue":502,"rawUnit":"ng/mL","displayPercent":null,"derivation":null},{"title":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg SCT-F2","n":14,"events":null,"mean":601,"sd":204,"rawValue":601,"rawUnit":"ng/mL","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)","timeFrame":"Day 7 at predose and at 0.5, 1, 2, 3, 4, 6, 8, 12, 24, 48, and 72 hours, and 7 days post-dose."},{"measure":"Dose Escalation Phase: Time to Maximum Observed Plasma Concentration (Tmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)","timeFrame":"Day 7 at predose and at 0.5, 1, 2, 3, 4, 6, 8, 12, 24, 48, and 72 hours, and 7 days post-dose."}]},{"nctId":"NCT02929329","title":"Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction","status":"COMPLETED","enrollment":8256,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Change From Baseline in Kansas City Cardiomyopathy Questionnaire Total Symptom Score (KCCQ TSS) at Week 24","unitOfMeasure":"scores on a scale","paramType":"LEAST_SQUARES_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Placebo: Oupatients","n":2704,"events":null,"mean":6.29,"sd":17.68,"rawValue":6.29,"rawUnit":"scores on a scale","displayPercent":null,"derivation":null},{"title":"Omecamtiv Mecarbil: Outpatients","n":2715,"events":null,"mean":5.83,"sd":17.71592503935372,"rawValue":5.83,"rawUnit":"scores on a scale","displayPercent":null,"derivation":null},{"title":"Placebo: Inpatients","n":835,"events":null,"mean":21.15,"sd":20.51642025305584,"rawValue":21.15,"rawUnit":"scores on a scale","displayPercent":null,"derivation":null},{"title":"Omecamtiv Mecarbil: Inpatients","n":868,"events":null,"mean":23.65,"sd":20.62328780771873,"rawValue":23.65,"rawUnit":"scores on a scale","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Time to Cardiovascular Death or First Heart Failure Event","timeFrame":"From randomization to up to earliest of last confirmed survival status date or analysis cut-off date (07 August 2020); the overall median duration of follow-up was 21.8 months up to a maximum of 42 months."}]}]};
   if (!iframe || !context) return;
   const sendContext = () => {
     if (!iframe.contentWindow) return;
@@ -435,7 +446,7 @@
       <main class="layout">
         <section class="panel topics">
           <div class="panel__header">
-            <h2 id="topicPanelTitle">CT.gov-validated topic (3 eligible RCTs in snapshot)</h2>
+            <h2 id="topicPanelTitle">CT.gov completeness-screened topic (3 eligible RCTs in snapshot)</h2>
             <div class="topic-stats">
               <span id="topicCount">0</span> topics -
               <span id="trialCount">0</span> trials
@@ -574,7 +585,7 @@
           <div class="dataset-filters">
             <label>
               Source:
-              <select id="datasetSourceFilter">
+              <select aria-label="Source" id="datasetSourceFilter">
                 <option value="all">All Sources</option>
                 <option value="metafor">metafor</option>
                 <option value="meta">meta</option>
@@ -585,7 +596,7 @@
             </label>
             <label>
               Type:
-              <select id="datasetTypeFilter">
+              <select aria-label="Type" id="datasetTypeFilter">
                 <option value="all">All Types</option>
                 <option value="pairwise">Pairwise</option>
                 <option value="network">Network</option>
@@ -593,16 +604,16 @@
                 <option value="continuous">Continuous</option>
               </select>
             </label>
-            <label>
+            <label for="datasetSearch">
               Relevance:
-              <select id="datasetRelevanceFilter">
+              <select aria-label="Relevance" id="datasetRelevanceFilter">
                 <option value="all">All</option>
                 <option value="acs">ACS-specific</option>
                 <option value="cardiovascular">Cardiovascular</option>
                 <option value="classic">Classic examples</option>
               </select>
             </label>
-            <input type="text" id="datasetSearch" placeholder="Search datasets..." />
+            <input type="text" id="datasetSearch" aria-label="Search datasets..." placeholder="Search datasets..." />
           </div>
           <div id="datasetList" class="dataset-list"></div>
           <div id="datasetPreview" class="dataset-preview hidden">
@@ -615,11 +626,11 @@
         </div>
         <div class="modal-footer">
           <div class="import-options">
-            <label>
-              <input type="checkbox" id="createTopicCheck" checked />
+            <label for="customTopicName">
+              <input type="checkbox" id="createTopicCheck" checked / aria-label="Create as new topic">
               Create as new topic
             </label>
-            <input type="text" id="customTopicName" placeholder="Custom topic name (optional)" />
+            <input type="text" id="customTopicName" aria-label="Custom topic name (optional)" placeholder="Custom topic name (optional)" />
           </div>
           <button id="importDatasetConfirmBtn" class="btn btn--primary" disabled>Import Selected Dataset</button>
         </div>
@@ -639,11 +650,11 @@
             <div class="form-row">
               <label>
                 Study Name/ID *
-                <input type="text" id="entryStudyName" placeholder="e.g., COMPLETE 2019" required />
+                <input type="text" aria-label="Study Name/ID *" id="entryStudyName" aria-label="e.g., COMPLETE 2019" placeholder="e.g., COMPLETE 2019" required />
               </label>
               <label>
                 Year
-                <input type="number" id="entryStudyYear" placeholder="2019" min="1900" max="2100" />
+                <input type="number" aria-label="Year" id="entryStudyYear" aria-label="2019" placeholder="2019" min="1900" max="2100" />
               </label>
             </div>
           </div>
@@ -652,13 +663,13 @@
             <h4>Outcome Type</h4>
             <div class="form-row">
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="binary" checked /> Binary (events/n)
+                <input type="radio" name="outcomeType" value="binary" checked / aria-label="Binary (events/n)"> Binary (events/n)
               </label>
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="continuous" /> Continuous (mean/SD/n)
+                <input type="radio" name="outcomeType" value="continuous" / aria-label="Continuous (mean/SD/n)"> Continuous (mean/SD/n)
               </label>
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="precomputed" /> Pre-computed (HR/OR/RR with CI)
+                <input type="radio" name="outcomeType" value="precomputed" / aria-label="Pre-computed (HR/OR/RR with CI)"> Pre-computed (HR/OR/RR with CI)
               </label>
             </div>
           </div>
@@ -668,29 +679,29 @@
             <div class="form-row">
               <label>
                 Treatment Arm Label
-                <input type="text" id="entryTreat1Label" placeholder="e.g., Complete revasc" />
+                <input type="text" aria-label="Treatment Arm Label" id="entryTreat1Label" aria-label="e.g., Complete revasc" placeholder="e.g., Complete revasc" />
               </label>
               <label>
                 Events
-                <input type="number" id="entryTreat1Events" min="0" />
+                <input type="number" aria-label="Events" id="entryTreat1Events" min="0" />
               </label>
               <label>
                 Total N
-                <input type="number" id="entryTreat1N" min="1" />
+                <input type="number" aria-label="Total N" id="entryTreat1N" min="1" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Control Arm Label
-                <input type="text" id="entryTreat2Label" placeholder="e.g., Culprit-only" />
+                <input type="text" aria-label="Control Arm Label" id="entryTreat2Label" aria-label="e.g., Culprit-only" placeholder="e.g., Culprit-only" />
               </label>
               <label>
                 Events
-                <input type="number" id="entryTreat2Events" min="0" />
+                <input type="number" aria-label="Events" id="entryTreat2Events" min="0" />
               </label>
               <label>
                 Total N
-                <input type="number" id="entryTreat2N" min="1" />
+                <input type="number" aria-label="Total N" id="entryTreat2N" min="1" />
               </label>
             </div>
           </div>
@@ -700,37 +711,37 @@
             <div class="form-row">
               <label>
                 Treatment Arm Label
-                <input type="text" id="entryContTreat1Label" placeholder="e.g., Intervention" />
+                <input type="text" aria-label="Treatment Arm Label" id="entryContTreat1Label" aria-label="e.g., Intervention" placeholder="e.g., Intervention" />
               </label>
               <label>
                 Mean
-                <input type="number" id="entryContTreat1Mean" step="any" />
+                <input type="number" aria-label="Mean" id="entryContTreat1Mean" step="any" />
               </label>
               <label>
                 SD
-                <input type="number" id="entryContTreat1SD" step="any" min="0" />
+                <input type="number" aria-label="SD" id="entryContTreat1SD" step="any" min="0" />
               </label>
               <label>
                 N
-                <input type="number" id="entryContTreat1N" min="1" />
+                <input type="number" aria-label="N" id="entryContTreat1N" min="1" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Control Arm Label
-                <input type="text" id="entryContTreat2Label" placeholder="e.g., Control" />
+                <input type="text" aria-label="Control Arm Label" id="entryContTreat2Label" aria-label="e.g., Control" placeholder="e.g., Control" />
               </label>
               <label>
                 Mean
-                <input type="number" id="entryContTreat2Mean" step="any" />
+                <input type="number" aria-label="Mean" id="entryContTreat2Mean" step="any" />
               </label>
               <label>
                 SD
-                <input type="number" id="entryContTreat2SD" step="any" min="0" />
+                <input type="number" aria-label="SD" id="entryContTreat2SD" step="any" min="0" />
               </label>
               <label>
                 N
-                <input type="number" id="entryContTreat2N" min="1" />
+                <input type="number" aria-label="N" id="entryContTreat2N" min="1" />
               </label>
             </div>
           </div>
@@ -740,7 +751,7 @@
             <div class="form-row">
               <label>
                 Effect Measure
-                <select id="entryEffectMeasure">
+                <select aria-label="Effect Measure" id="entryEffectMeasure">
                   <option value="HR">Hazard Ratio (HR)</option>
                   <option value="OR">Odds Ratio (OR)</option>
                   <option value="RR">Risk Ratio (RR)</option>
@@ -750,27 +761,27 @@
               </label>
               <label>
                 Point Estimate
-                <input type="number" id="entryEffectValue" step="any" placeholder="e.g., 0.74" />
+                <input type="number" aria-label="Point Estimate" id="entryEffectValue" step="any" aria-label="e.g., 0.74" placeholder="e.g., 0.74" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 95% CI Lower
-                <input type="number" id="entryCILower" step="any" />
+                <input type="number" aria-label="95% CI Lower" id="entryCILower" step="any" />
               </label>
               <label>
                 95% CI Upper
-                <input type="number" id="entryCIUpper" step="any" />
+                <input type="number" aria-label="95% CI Upper" id="entryCIUpper" step="any" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Treatment Label
-                <input type="text" id="entryPreTreat1" placeholder="e.g., Treatment" />
+                <input type="text" aria-label="Treatment Label" id="entryPreTreat1" aria-label="e.g., Treatment" placeholder="e.g., Treatment" />
               </label>
               <label>
                 Control Label
-                <input type="text" id="entryPreTreat2" placeholder="e.g., Control" />
+                <input type="text" aria-label="Control Label" id="entryPreTreat2" aria-label="e.g., Control" placeholder="e.g., Control" />
               </label>
             </div>
           </div>
@@ -800,7 +811,7 @@
           </div>
           <div class="rob-domains">
             <div class="rob-domain-row">
-              <label>
+              <label for="robD1Notes">
                 <span class="domain-label">D1: Randomization process</span>
                 <select id="robD1" class="rob-select">
                   <option value="">Not assessed</option>
@@ -809,10 +820,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD1Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD1Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD2Notes">
                 <span class="domain-label">D2: Deviations from intended interventions</span>
                 <select id="robD2" class="rob-select">
                   <option value="">Not assessed</option>
@@ -821,10 +832,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD2Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD2Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD3Notes">
                 <span class="domain-label">D3: Missing outcome data</span>
                 <select id="robD3" class="rob-select">
                   <option value="">Not assessed</option>
@@ -833,10 +844,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD3Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD3Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD4Notes">
                 <span class="domain-label">D4: Measurement of the outcome</span>
                 <select id="robD4" class="rob-select">
                   <option value="">Not assessed</option>
@@ -845,10 +856,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD4Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD4Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD5Notes">
                 <span class="domain-label">D5: Selection of reported result</span>
                 <select id="robD5" class="rob-select">
                   <option value="">Not assessed</option>
@@ -857,7 +868,7 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD5Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD5Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
           </div>
           <div class="rob-overall">
@@ -890,7 +901,7 @@
           <div class="import-panel active" id="zenodo-panel">
             <label>
               Zenodo DOI or Record ID:
-              <input type="text" id="zenodoDoi" placeholder="10.5281/zenodo.1234567 or 1234567" />
+              <input type="text" aria-label="Zenodo DOI or Record ID" id="zenodoDoi" aria-label="10.5281/zenodo.1234567 or 1234567" placeholder="10.5281/zenodo.1234567 or 1234567" />
             </label>
             <button id="fetchZenodoBtn" class="btn">Fetch Record</button>
             <div id="zenodoResult" class="import-result"></div>
@@ -898,7 +909,7 @@
           <div class="import-panel" id="github-panel">
             <label>
               GitHub Raw URL:
-              <input type="text" id="githubUrl" placeholder="https://raw.githubusercontent.com/..." />
+              <input type="text" aria-label="GitHub Raw URL" id="githubUrl" aria-label="https://raw.githubusercontent.com/..." placeholder="https://raw.githubusercontent.com/..." />
             </label>
             <button id="fetchGithubBtn" class="btn">Fetch File</button>
             <div id="githubResult" class="import-result"></div>
@@ -906,7 +917,7 @@
           <div class="import-panel" id="csv-panel">
             <label>
               Upload CSV/JSON file:
-              <input type="file" id="csvUpload" accept=".csv,.json" />
+              <input type="file" aria-label="Upload CSV/JSON file" id="csvUpload" accept=".csv,.json" />
             </label>
             <div id="csvResult" class="import-result"></div>
           </div>
@@ -978,7 +989,7 @@
             <button id="wizardFinishBtn" class="btn btn--accent hidden">Get Started</button>
           </div>
           <label class="wizard-dismiss">
-            <input type="checkbox" id="dontShowAgain"> Don't show this again
+            <input type="checkbox" id="dontShowAgain" aria-label="Don't show this again"> Don't show this again
           </label>
         </div>
       </div>
@@ -1090,8 +1101,8 @@
     "pageTitle": "Omecamtiv Mecarbil in Heart Failure | CT.gov Living Meta-Analysis",
     "kicker": "Registry-Native Cardiovascular Evidence",
     "title": "Omecamtiv Mecarbil in Heart Failure Living Meta-Analysis",
-    "subtitle": "Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.",
-    "topicPanelTitle": "CT.gov-validated topic (3 eligible RCTs in snapshot)",
+    "subtitle": "Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio.",
+    "topicPanelTitle": "CT.gov completeness-screened topic (3 eligible RCTs in snapshot)",
     "welcomeTitle": "Omecamtiv Mecarbil in Heart Failure CT.gov review",
     "eligibilityTrialMinimum": 1,
     "analysisStudioName": "Omecamtiv Mecarbil in Heart Failure CT.gov Living Meta-Analysis Studio",
@@ -1110,91 +1121,16 @@
       "topicId": "omecamtiv-heart-failure",
       "label": "Omecamtiv Mecarbil in Heart Failure",
       "query": "(\"heart failure\") AND (\"omecamtiv mecarbil\" OR omecamtiv) AND (\"GALACTIC-HF\" OR \"ATOMIC-AHF\" OR \"COSMIC-HF\" OR \"METEORIC-HF\")",
-      "generatedAt": "2026-03-28T18:45:05.888Z",
+      "generatedAt": "2026-04-05T13:16:46.754Z",
       "includedCount": 3,
       "excludedCount": 2,
       "totalEnrollment": 9076,
       "demographicsCoverage": 3,
       "documentCoverage": 2,
+      "analysisEligibleCount": 3,
+      "comparisonReadyStudyCount": 2,
+      "comparisonCount": 4,
       "comparisons": [
-        {
-          "studyId": "NCT01786512",
-          "title": "COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure",
-          "t1": "Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2",
-          "t2": "Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1",
-          "measure": "MD",
-          "effect": 8,
-          "se": 31.341182400887725,
-          "n1": 14,
-          "n0": 10,
-          "totalN": 24,
-          "sampleSize": 24
-        },
-        {
-          "studyId": "NCT01786512",
-          "title": "COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure",
-          "t1": "Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2",
-          "t2": "Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1",
-          "measure": "MD",
-          "effect": -22,
-          "se": 23.840998946546488,
-          "n1": 13,
-          "n0": 10,
-          "totalN": 23,
-          "sampleSize": 23
-        },
-        {
-          "studyId": "NCT01786512",
-          "title": "COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure",
-          "t1": "Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F1",
-          "t2": "Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1",
-          "measure": "MD",
-          "effect": 299,
-          "se": 40.8441427869407,
-          "n1": 10,
-          "n0": 10,
-          "totalN": 20,
-          "sampleSize": 20
-        },
-        {
-          "studyId": "NCT01786512",
-          "title": "COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure",
-          "t1": "Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F2",
-          "t2": "Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1",
-          "measure": "MD",
-          "effect": 309,
-          "se": 45.57429897730438,
-          "n1": 11,
-          "n0": 10,
-          "totalN": 21,
-          "sampleSize": 21
-        },
-        {
-          "studyId": "NCT01786512",
-          "title": "COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure",
-          "t1": "Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg SCT-F2",
-          "t2": "Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1",
-          "measure": "MD",
-          "effect": 408,
-          "se": 57.60482122679862,
-          "n1": 14,
-          "n0": 10,
-          "totalN": 24,
-          "sampleSize": 24
-        },
-        {
-          "studyId": "NCT02929329",
-          "title": "Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction",
-          "t1": "Omecamtiv Mecarbil",
-          "t2": "Placebo",
-          "measure": "logRR",
-          "effect": -0.05714818955566682,
-          "se": 0.22829052868938512,
-          "n1": 4120,
-          "n0": 4112,
-          "totalN": 8232,
-          "sampleSize": 8232
-        },
         {
           "studyId": "NCT03759392",
           "title": "Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure",
@@ -1206,10 +1142,110 @@
           "n1": 162,
           "n0": 81,
           "totalN": 243,
-          "sampleSize": 243
+          "sampleSize": 243,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT02929329",
+          "title": "Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction",
+          "t1": "Omecamtiv Mecarbil: Outpatients",
+          "t2": "Placebo: Oupatients",
+          "measure": "MD",
+          "effect": -0.45999999999999996,
+          "se": 0.68,
+          "n1": 2715,
+          "n0": 901.3333333333334,
+          "totalN": 3616.3333333333335,
+          "sampleSize": 3616.3333333333335,
+          "comparisonStrategy": "split-shared-comparator",
+          "sharedComparatorSplit": true,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT02929329",
+          "title": "Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction",
+          "t1": "Placebo: Inpatients",
+          "t2": "Placebo: Oupatients",
+          "measure": "MD",
+          "effect": 14.86,
+          "se": 0.9224424101265075,
+          "n1": 835,
+          "n0": 901.3333333333334,
+          "totalN": 1736.3333333333335,
+          "sampleSize": 1736.3333333333335,
+          "comparisonStrategy": "split-shared-comparator",
+          "sharedComparatorSplit": true,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT02929329",
+          "title": "Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction",
+          "t1": "Omecamtiv Mecarbil: Inpatients",
+          "t2": "Placebo: Oupatients",
+          "measure": "MD",
+          "effect": 17.36,
+          "se": 0.9147677300823417,
+          "n1": 868,
+          "n0": 901.3333333333334,
+          "totalN": 1769.3333333333335,
+          "sampleSize": 1769.3333333333335,
+          "comparisonStrategy": "split-shared-comparator",
+          "sharedComparatorSplit": true,
+          "outcomeMetricKind": "continuous"
         }
       ],
       "includedStudies": [
+        {
+          "nctId": "NCT03759392",
+          "title": "Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure",
+          "status": "COMPLETED",
+          "enrollment": 276,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "continuous",
+            "title": "Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20",
+            "unitOfMeasure": "mL/min/kg",
+            "paramType": "LEAST_SQUARES_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "Omecamtiv Mecarbil",
+                "n": 162,
+                "events": null,
+                "mean": -0.239,
+                "sd": 2.1866570101412797,
+                "rawValue": -0.239,
+                "rawUnit": "mL/min/kg",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "Placebo",
+                "n": 81,
+                "events": null,
+                "mean": 0.207,
+                "sd": 2.1708,
+                "rawValue": 0.207,
+                "rawUnit": "mL/min/kg",
+                "displayPercent": null,
+                "derivation": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20",
+              "timeFrame": "Baseline and Week 20"
+            }
+          ]
+        },
         {
           "nctId": "NCT01786512",
           "title": "COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure",
@@ -1217,51 +1253,82 @@
           "enrollment": 544,
           "documentsCount": 0,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
             "type": "continuous",
             "title": "Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)",
+            "unitOfMeasure": "ng/mL",
+            "paramType": "MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
                 "title": "Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1",
                 "n": 10,
                 "events": null,
                 "mean": 193,
-                "sd": 58.8
+                "sd": 58.8,
+                "rawValue": 193,
+                "rawUnit": "ng/mL",
+                "displayPercent": null,
+                "derivation": null
               },
               {
                 "title": "Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2",
                 "n": 14,
                 "events": null,
                 "mean": 201,
-                "sd": 94.4
+                "sd": 94.4,
+                "rawValue": 201,
+                "rawUnit": "ng/mL",
+                "displayPercent": null,
+                "derivation": null
               },
               {
                 "title": "Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2",
                 "n": 13,
                 "events": null,
                 "mean": 171,
-                "sd": 53.8
+                "sd": 53.8,
+                "rawValue": 171,
+                "rawUnit": "ng/mL",
+                "displayPercent": null,
+                "derivation": null
               },
               {
                 "title": "Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F1",
                 "n": 10,
                 "events": null,
                 "mean": 492,
-                "sd": 115
+                "sd": 115,
+                "rawValue": 492,
+                "rawUnit": "ng/mL",
+                "displayPercent": null,
+                "derivation": null
               },
               {
                 "title": "Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F2",
                 "n": 11,
                 "events": null,
                 "mean": 502,
-                "sd": 138
+                "sd": 138,
+                "rawValue": 502,
+                "rawUnit": "ng/mL",
+                "displayPercent": null,
+                "derivation": null
               },
               {
                 "title": "Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg SCT-F2",
                 "n": 14,
                 "events": null,
                 "mean": 601,
-                "sd": 204
+                "sd": 204,
+                "rawValue": 601,
+                "rawUnit": "ng/mL",
+                "displayPercent": null,
+                "derivation": null
               }
             ]
           },
@@ -1283,23 +1350,60 @@
           "enrollment": 8256,
           "documentsCount": 2,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
-            "type": "binary",
-            "title": "Time to Cardiovascular Death or First Heart Failure Event",
+            "type": "continuous",
+            "title": "Change From Baseline in Kansas City Cardiomyopathy Questionnaire Total Symptom Score (KCCQ TSS) at Week 24",
+            "unitOfMeasure": "scores on a scale",
+            "paramType": "LEAST_SQUARES_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
-                "title": "Placebo",
-                "n": 4112,
-                "events": 39.1,
-                "mean": null,
-                "sd": null
+                "title": "Placebo: Oupatients",
+                "n": 2704,
+                "events": null,
+                "mean": 6.29,
+                "sd": 17.68,
+                "rawValue": 6.29,
+                "rawUnit": "scores on a scale",
+                "displayPercent": null,
+                "derivation": null
               },
               {
-                "title": "Omecamtiv Mecarbil",
-                "n": 4120,
-                "events": 37,
-                "mean": null,
-                "sd": null
+                "title": "Omecamtiv Mecarbil: Outpatients",
+                "n": 2715,
+                "events": null,
+                "mean": 5.83,
+                "sd": 17.71592503935372,
+                "rawValue": 5.83,
+                "rawUnit": "scores on a scale",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "Placebo: Inpatients",
+                "n": 835,
+                "events": null,
+                "mean": 21.15,
+                "sd": 20.51642025305584,
+                "rawValue": 21.15,
+                "rawUnit": "scores on a scale",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "Omecamtiv Mecarbil: Inpatients",
+                "n": 868,
+                "events": null,
+                "mean": 23.65,
+                "sd": 20.62328780771873,
+                "rawValue": 23.65,
+                "rawUnit": "scores on a scale",
+                "displayPercent": null,
+                "derivation": null
               }
             ]
           },
@@ -1307,40 +1411,6 @@
             {
               "measure": "Time to Cardiovascular Death or First Heart Failure Event",
               "timeFrame": "From randomization to up to earliest of last confirmed survival status date or analysis cut-off date (07 August 2020); the overall median duration of follow-up was 21.8 months up to a maximum of 42 months."
-            }
-          ]
-        },
-        {
-          "nctId": "NCT03759392",
-          "title": "Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure",
-          "status": "COMPLETED",
-          "enrollment": 276,
-          "documentsCount": 2,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "continuous",
-            "title": "Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20",
-            "groups": [
-              {
-                "title": "Omecamtiv Mecarbil",
-                "n": 162,
-                "events": null,
-                "mean": -0.239,
-                "sd": 2.1866570101412797
-              },
-              {
-                "title": "Placebo",
-                "n": 81,
-                "events": null,
-                "mean": 0.207,
-                "sd": 2.1708
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20",
-              "timeFrame": "Baseline and Week 20"
             }
           ]
         }

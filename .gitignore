@@ -1,2 +1,7 @@
 *.log
 *.tmp
+.local_server.pid
+release/
+node_modules/
+dist/
+coverage/

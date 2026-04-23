@@ -17,17 +17,17 @@
         <div class="hero__title">
           <p class="kicker" id="appKicker">Registry-Native Cardiovascular Evidence</p>
           <h1 id="appTitle">DOAC Plus Antiplatelet Therapy in AF With PCI or ACS Living Meta-Analysis</h1>
-          <p class="subtitle" id="appSubtitle">Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.</p>
+          <p class="subtitle" id="appSubtitle">Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio.</p>
         </div>
         <div class="hero__controls">
           <div class="control-card">
             <label>
               New RCT window start
-              <input id="startDate" type="date" />
+              <input aria-label="New RCT window start" id="startDate" type="date" />
             </label>
             <label>
               Status filter
-              <select id="statusFilter" multiple>
+              <select aria-label="Status filter" id="statusFilter" multiple>
                 <option value="COMPLETED" selected>Completed</option>
                 <option value="ACTIVE_NOT_RECRUITING" selected>Active, not recruiting</option>
                 <option value="RECRUITING">Recruiting</option>
@@ -37,14 +37,14 @@
             </label>
             <label>
               Single outcome rule
-              <select id="outcomeRule">
+              <select aria-label="Single outcome rule" id="outcomeRule">
                 <option value="primary">Primary outcome with numeric results</option>
                 <option value="results">Any outcome with numeric results</option>
               </select>
             </label>
             <label>
               Reference treatment (NMA)
-              <input id="referenceTx" type="text" placeholder="e.g., Standard care" />
+              <input aria-label="Reference treatment (NMA)" id="referenceTx" type="text" aria-label="e.g., Standard care" placeholder="e.g., Standard care" />
             </label>
             <button id="updateBtn" class="btn btn--primary">Update from ClinicalTrials.gov</button>
             <button id="fixtureBtn" class="btn">Load Offline Fixture</button>
@@ -55,7 +55,7 @@
           <div class="control-card">
             <label>
               Prior meta-analysis trial IDs (one per line)
-              <textarea id="priorTrials" rows="6" placeholder="NCT01234567"></textarea>
+              <textarea aria-label="Prior meta-analysis trial IDs (one per line)" id="priorTrials" rows="6" aria-label="NCT01234567" placeholder="NCT01234567"></textarea>
             </label>
             <button id="compareBtn" class="btn">Compare Coverage</button>
             <div id="coverageSummary" class="coverage"></div>
@@ -67,21 +67,27 @@
       <section class="panel validation-snapshot">
         <div class="panel__header">
           <h2>CT.gov Validation Snapshot</h2>
-          <div class="panel__meta">Generated 2026-03-28</div>
+          <div class="panel__meta">Generated 2026-04-05</div>
         </div>
         <div class="panel__body">
           <div class="summary-grid">
             <div class="summary-card">
               <h3>Registry Gate</h3>
-              <div class="pill">Included RCTs: 2</div>
+              <div class="pill">Included RCT records: 2</div>
+              <div class="pill">Contrast-ready studies: 2</div>
+              <div class="pill">Direct comparisons: 3</div>
               <div class="pill">Scanned records: 7</div>
               <div class="pill">Pages fetched: 1</div>
               <div class="pill">Priority tier: Early</div>
+              <div class="pill">Eligibility mode: Full CT.gov results coverage (&gt;=2 RCTs)</div>
+              <div class="pill">Coverage gate: Full CT.gov results coverage</div>
             </div>
             <div class="summary-card">
               <h3>Eligibility Rules</h3>
-              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, and at least one extractable numeric outcome.</p>
+              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, at least one recorded numeric CT.gov outcome, and topic-level curation that the full randomized evidence base should be captured on CT.gov.</p>
+              <p>Direct pooled contrasts are only emitted when the posted CT.gov metric can be safely reduced to counts or means and the arm structure supports a defensible comparator.</p>
               <p>The validation scan completed within the configured CT.gov page cap.</p>
+              <p class="muted">Curated as a modern topic where the randomized evidence base is expected to be fully representable from CT.gov records with posted results.</p>
             </div>
             <div class="summary-card">
               <h3>Audit Trail</h3>
@@ -99,12 +105,12 @@
             <h3>Included Trial Records</h3>
             <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
               
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">
-          NCT02866175
-        </a>
-
         <a class="pill" href="https://clinicaltrials.gov/study/NCT01830543" target="_blank" rel="noopener">
           NCT01830543
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">
+          NCT02866175
         </a>
             </div>
           </div>
@@ -113,7 +119,7 @@
             <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
               
         <div class="pill">
-          No Extractable Numeric Outcome: 5
+          No Recorded Numeric Outcome: 5
         </div>
 
         <div class="pill">
@@ -165,10 +171,10 @@
             <div class="summary-card">
               <h3>Review Question And PICO</h3>
               <p><strong>Population:</strong> Atrial Fibrillation; Percutaneous Coronary Intervention</p>
-              <p><strong>Interventions:</strong> Edoxaban Regimen; Vitamin K Antagonist Regimen; Rivaroxaban 15 mg; Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD); Vitamin K Antagonist (VKA)</p>
-              <p><strong>Comparators:</strong> Vitamin K Antagonist Regimen vs Edoxaban Regimen; Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD) vs Rivaroxaban 15 mg | Vitamin K Antagonist (VKA) vs Rivaroxaban 15 mg</p>
-              <p><strong>Outcomes:</strong> Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen; Percentage of Participants With Clinically Significant Bleeding</p>
-              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</p>
+              <p><strong>Interventions:</strong> Rivaroxaban 15 mg; Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD); Vitamin K Antagonist (VKA); Edoxaban Regimen; Vitamin K Antagonist Regimen</p>
+              <p><strong>Comparators:</strong> Rivaroxaban 15 mg vs Vitamin K Antagonist (VKA) | Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD) vs Vitamin K Antagonist (VKA) | Shared comparator split across CT.gov treatment arms; Edoxaban Regimen vs Vitamin K Antagonist Regimen</p>
+              <p><strong>Outcomes:</strong> Percentage of Participants With Clinically Significant Bleeding; Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen</p>
+              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and at least one recorded numeric CT.gov outcome.</p>
             </div>
           </div>
 
@@ -186,7 +192,7 @@
         <tr>
           <td>CT.gov candidate scan started</td>
           <td>ClinicalTrials.gov v2 API</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr>
         <tr>
           <td>Base query locked</td>
@@ -221,7 +227,7 @@
         <tr>
           <td>Project package generated</td>
           <td>Portfolio build</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr></tbody>
             </table>
           </div>
@@ -245,12 +251,17 @@
         <tr>
           <td>Records excluded by registry hard gates</td>
           <td>5</td>
-          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no recorded numeric outcome</td>
         </tr>
         <tr>
-          <td>Trials entering the quantitative snapshot</td>
+          <td>Trials entering the CT.gov record snapshot</td>
           <td>2</td>
           <td>Included in validation.json and the live topic app</td>
+        </tr>
+        <tr>
+          <td>Trials with contrast-ready outcomes</td>
+          <td>2</td>
+          <td>Recorded metrics safely reducible to counts or means</td>
         </tr></tbody>
             </table>
           </div>
@@ -264,7 +275,7 @@
                   <th>Count</th>
                 </tr>
               </thead>
-              <tbody><tr><td>No Extractable Numeric Outcome</td><td>5</td></tr><tr><td>No Results Posted</td><td>5</td></tr><tr><td>Not Completed</td><td>4</td></tr><tr><td>Fewer Than Two Arms</td><td>2</td></tr><tr><td>Not Randomized Interventional</td><td>2</td></tr></tbody>
+              <tbody><tr><td>No Recorded Numeric Outcome</td><td>5</td></tr><tr><td>No Results Posted</td><td>5</td></tr><tr><td>Not Completed</td><td>4</td></tr><tr><td>Fewer Than Two Arms</td><td>2</td></tr><tr><td>Not Randomized Interventional</td><td>2</td></tr></tbody>
             </table>
           </div>
 
@@ -284,15 +295,6 @@
               </thead>
               <tbody>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">NCT02866175</a></td>
-          <td>Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention</td>
-          <td>Daiichi Sankyo Europe, GmbH, a Daiichi Sankyo Company (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>1506 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
-          <td>Participants Edoxaban Regimen: 751 Participants | Vitamin K Antagonist Regimen: 755 Participants | Total: 1506 Participants | Age Edoxaban Regimen: 69.4 +/- 9.74 years | Vitamin K Antagonist Regimen: 70.1 +/- 9.51 years | Total: 69.7 +/- 9.63 years | Sex Edoxaban Regimen: F 194 / M 557 | Vitamin K Antagonist Regimen: F 192 / M 563 | Total: F 386 / M 1120</td>
-        </tr>
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT01830543" target="_blank" rel="noopener">NCT01830543</a></td>
           <td>A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention</td>
           <td>Janssen Scientific Affairs, LLC (INDUSTRY)</td>
@@ -300,6 +302,15 @@
           <td>2124 (ACTUAL)</td>
           <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
           <td>Participants Rivaroxaban 15 mg: 709 Participants | Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD): 709 Participants | Vitamin K Antagonist (VKA): 706 Participants | Total: 2124 Participants | Age Rivaroxaban 15 mg: 70.4 +/- 9.12 years | Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD): 70 +/- 9.11 years | Vitamin K Antagonist (VKA): 69.9 +/- 8.67 years | Total: 70.1 +/- 8.97 years | Sex Rivaroxaban 15 mg: F 181 / M 528 | Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD): F 174 / M 535 | Vitamin K Antagonist (VKA): F 188 / M 518 | Total: F 543 / M 1581</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">NCT02866175</a></td>
+          <td>Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention</td>
+          <td>Daiichi Sankyo Europe, GmbH, a Daiichi Sankyo Company (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>1506 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Edoxaban Regimen: 751 Participants | Vitamin K Antagonist Regimen: 755 Participants | Total: 1506 Participants | Age Edoxaban Regimen: 69.4 +/- 9.74 years | Vitamin K Antagonist Regimen: 70.1 +/- 9.51 years | Total: 69.7 +/- 9.63 years | Sex Edoxaban Regimen: F 194 / M 557 | Vitamin K Antagonist Regimen: F 192 / M 563 | Total: F 386 / M 1120</td>
         </tr></tbody>
             </table>
           </div>
@@ -318,18 +329,18 @@
               </thead>
               <tbody>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">NCT02866175</a></td>
-          <td>There are insufficient data on the safety and efficacy of edoxaban plus antiplatelet therapy in subjects with atrial fibrillation (AF) following percutaneous intervention (PCI) with stenting. This study is designed to evaluate the safety...</td>
-          <td>Inclusion Criteria: * Oral anticoagulant (OAC) indication for atrial fibrillation for a period of at least 12 months following successful PCI with stenting. Eligibility is assessed 4 hours after sheath removal and wit...</td>
-          <td>Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen | T...</td>
-          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2017-02-28)</span></td>
-        </tr>
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT01830543" target="_blank" rel="noopener">NCT01830543</a></td>
           <td>The primary purpose of this study is to evaluate the safety for 2 different rivaroxaban treatment strategies and one Vitamin K Antagonist (VKA) treatment strategy utilizing various combinations of dual antiplatelet therapy (DAPT) or low-...</td>
           <td>Inclusion Criteria: * Have a documented medical history of paroxysmal, persistent, or permanent non-valvular atrial fibrillation (AF) * Have undergone percutaneous coronary intervention (PCI) procedure (with stent pla...</td>
           <td>Percentage of Participants With Clinically Significant Bleeding | Time frame: Up to Month 12 | Clinically significant bleeding is a composite of Thrombolysis in Myocardial Infarction (TIMI) major bleeding, minor bleeding, and bleeding requiring medical atte...</td>
           <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">NCT02866175</a></td>
+          <td>There are insufficient data on the safety and efficacy of edoxaban plus antiplatelet therapy in subjects with atrial fibrillation (AF) following percutaneous intervention (PCI) with stenting. This study is designed to evaluate the safety...</td>
+          <td>Inclusion Criteria: * Oral anticoagulant (OAC) indication for atrial fibrillation for a period of at least 12 months following successful PCI with stenting. Eligibility is assessed 4 hours after sheath removal and wit...</td>
+          <td>Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen | T...</td>
+          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2017-02-28)</span></td>
         </tr></tbody>
             </table>
           </div>
@@ -349,19 +360,19 @@
               </thead>
               <tbody>
       <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">NCT02866175</a></td>
-        <td>Vitamin K Antagonist Regimen vs Edoxaban Regimen</td>
-        <td>Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen</td>
-        <td>1506 (ACTUAL)</td>
-        <td>Documents listed on CT.gov</td>
-      </tr>
-
-      <tr>
         <td><a href="https://clinicaltrials.gov/study/NCT01830543" target="_blank" rel="noopener">NCT01830543</a></td>
-        <td>Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD) vs Rivaroxaban 15 mg | Vitamin K Antagonist (VKA) vs Rivaroxaban 15 mg</td>
+        <td>Rivaroxaban 15 mg vs Vitamin K Antagonist (VKA) | Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD) vs Vitamin K Antagonist (VKA) | Shared comparator split across CT.gov treatment arms</td>
         <td>Percentage of Participants With Clinically Significant Bleeding</td>
         <td>2124 (ACTUAL)</td>
         <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02866175" target="_blank" rel="noopener">NCT02866175</a></td>
+        <td>Edoxaban Regimen vs Vitamin K Antagonist Regimen</td>
+        <td>Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen</td>
+        <td>1506 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
       </tr></tbody>
             </table>
           </div>
@@ -383,7 +394,7 @@
             <script>
 (() => {
   const iframe = document.getElementById("reviewerValidationFrame");
-  const context = {"source":"ctgov-portfolio-generator","topicId":"doac-antiplatelet-af-pci","label":"DOAC Plus Antiplatelet Therapy in AF With PCI or ACS","query":"(\"atrial fibrillation\" AND (PCI OR \"acute coronary syndrome\")) AND (rivaroxaban OR apixaban OR dabigatran OR edoxaban) AND (\"PIONEER AF-PCI\" OR \"RE-DUAL PCI\" OR \"AUGUSTUS\" OR \"ENTRUST-AF PCI\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":2,"excludedCount":5,"totalEnrollment":3630,"demographicsCoverage":2,"documentCoverage":1,"comparisons":[{"studyId":"NCT02866175","title":"Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention","t1":"Vitamin K Antagonist Regimen","t2":"Edoxaban Regimen","measure":"logRR","effect":0.16653815944176914,"se":0.1083299872352671,"n1":755,"n0":751,"totalN":1506,"sampleSize":1506},{"studyId":"NCT01830543","title":"A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention","t1":"Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD)","t2":"Rivaroxaban 15 mg","measure":"logRR","effect":0.041476405849412847,"se":0.34796841691057107,"n1":706,"n0":696,"totalN":1402,"sampleSize":1402},{"studyId":"NCT01830543","title":"A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention","t1":"Vitamin K Antagonist (VKA)","t2":"Rivaroxaban 15 mg","measure":"logRR","effect":0.42295736756757896,"se":0.32013970754006693,"n1":697,"n0":696,"totalN":1393,"sampleSize":1393}],"includedStudies":[{"nctId":"NCT02866175","title":"Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention","status":"COMPLETED","enrollment":1506,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen","groups":[{"title":"Edoxaban Regimen","n":751,"events":128,"mean":null,"sd":null},{"title":"Vitamin K Antagonist Regimen","n":755,"events":152,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen","timeFrame":"Day 1 to 12 months postdose"}]},{"nctId":"NCT01830543","title":"A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention","status":"COMPLETED","enrollment":2124,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Percentage of Participants With Clinically Significant Bleeding","groups":[{"title":"Rivaroxaban 15 mg","n":696,"events":15.7,"mean":null,"sd":null},{"title":"Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD)","n":706,"events":16.6,"mean":null,"sd":null},{"title":"Vitamin K Antagonist (VKA)","n":697,"events":24,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Percentage of Participants With Clinically Significant Bleeding","timeFrame":"Up to Month 12"}]}]};
+  const context = {"source":"ctgov-portfolio-generator","topicId":"doac-antiplatelet-af-pci","label":"DOAC Plus Antiplatelet Therapy in AF With PCI or ACS","query":"(\"atrial fibrillation\" AND (PCI OR \"acute coronary syndrome\")) AND (rivaroxaban OR apixaban OR dabigatran OR edoxaban) AND (\"PIONEER AF-PCI\" OR \"RE-DUAL PCI\" OR \"AUGUSTUS\" OR \"ENTRUST-AF PCI\")","generatedAt":"2026-04-05T13:16:46.754Z","includedCount":2,"excludedCount":5,"totalEnrollment":3630,"demographicsCoverage":2,"documentCoverage":1,"analysisEligibleCount":2,"comparisonReadyStudyCount":2,"comparisonCount":3,"comparisons":[{"studyId":"NCT01830543","title":"A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention","t1":"Rivaroxaban 15 mg","t2":"Vitamin K Antagonist (VKA)","measure":"logRR","effect":-0.42521017976150727,"se":0.12978496739796658,"n1":696,"n0":348.5,"totalN":1044.5,"sampleSize":1044.5,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"proportion"},{"studyId":"NCT01830543","title":"A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention","t1":"Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD)","t2":"Vitamin K Antagonist (VKA)","measure":"logRR","effect":-0.3686497043517172,"se":0.1274252149191393,"n1":706,"n0":348.5,"totalN":1054.5,"sampleSize":1054.5,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"proportion"},{"studyId":"NCT02866175","title":"Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention","t1":"Edoxaban Regimen","t2":"Vitamin K Antagonist Regimen","measure":"logRR","effect":-0.16653815944176922,"se":0.1083299872352671,"n1":751,"n0":755,"totalN":1506,"sampleSize":1506,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"count"}],"includedStudies":[{"nctId":"NCT01830543","title":"A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention","status":"COMPLETED","enrollment":2124,"documentsCount":0,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"binary","title":"Percentage of Participants With Clinically Significant Bleeding","unitOfMeasure":"percentage of participants","paramType":"NUMBER","metricKind":"proportion","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Rivaroxaban 15 mg","n":696,"events":109,"mean":null,"sd":null,"rawValue":15.7,"rawUnit":"percentage of participants","displayPercent":15.7,"derivation":"reconstructed_from_ctgov_percent"},{"title":"Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD)","n":706,"events":117,"mean":null,"sd":null,"rawValue":16.6,"rawUnit":"percentage of participants","displayPercent":16.6,"derivation":"reconstructed_from_ctgov_percent"},{"title":"Vitamin K Antagonist (VKA)","n":697,"events":167,"mean":null,"sd":null,"rawValue":24,"rawUnit":"percentage of participants","displayPercent":24,"derivation":"reconstructed_from_ctgov_percent"}]},"primaryOutcomes":[{"measure":"Percentage of Participants With Clinically Significant Bleeding","timeFrame":"Up to Month 12"}]},{"nctId":"NCT02866175","title":"Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention","status":"COMPLETED","enrollment":1506,"documentsCount":1,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"binary","title":"Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen","unitOfMeasure":"Participants","paramType":"COUNT_OF_PARTICIPANTS","metricKind":"count","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Edoxaban Regimen","n":751,"events":128,"mean":null,"sd":null,"rawValue":128,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"Vitamin K Antagonist Regimen","n":755,"events":152,"mean":null,"sd":null,"rawValue":152,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"}]},"primaryOutcomes":[{"measure":"Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen","timeFrame":"Day 1 to 12 months postdose"}]}]};
   if (!iframe || !context) return;
   const sendContext = () => {
     if (!iframe.contentWindow) return;
@@ -405,7 +416,7 @@
       <main class="layout">
         <section class="panel topics">
           <div class="panel__header">
-            <h2 id="topicPanelTitle">CT.gov-validated topic (2 eligible RCTs in snapshot)</h2>
+            <h2 id="topicPanelTitle">CT.gov completeness-screened topic (2 eligible RCTs in snapshot)</h2>
             <div class="topic-stats">
               <span id="topicCount">0</span> topics -
               <span id="trialCount">0</span> trials
@@ -544,7 +555,7 @@
           <div class="dataset-filters">
             <label>
               Source:
-              <select id="datasetSourceFilter">
+              <select aria-label="Source" id="datasetSourceFilter">
                 <option value="all">All Sources</option>
                 <option value="metafor">metafor</option>
                 <option value="meta">meta</option>
@@ -555,7 +566,7 @@
             </label>
             <label>
               Type:
-              <select id="datasetTypeFilter">
+              <select aria-label="Type" id="datasetTypeFilter">
                 <option value="all">All Types</option>
                 <option value="pairwise">Pairwise</option>
                 <option value="network">Network</option>
@@ -563,16 +574,16 @@
                 <option value="continuous">Continuous</option>
               </select>
             </label>
-            <label>
+            <label for="datasetSearch">
               Relevance:
-              <select id="datasetRelevanceFilter">
+              <select aria-label="Relevance" id="datasetRelevanceFilter">
                 <option value="all">All</option>
                 <option value="acs">ACS-specific</option>
                 <option value="cardiovascular">Cardiovascular</option>
                 <option value="classic">Classic examples</option>
               </select>
             </label>
-            <input type="text" id="datasetSearch" placeholder="Search datasets..." />
+            <input type="text" id="datasetSearch" aria-label="Search datasets..." placeholder="Search datasets..." />
           </div>
           <div id="datasetList" class="dataset-list"></div>
           <div id="datasetPreview" class="dataset-preview hidden">
@@ -585,11 +596,11 @@
         </div>
         <div class="modal-footer">
           <div class="import-options">
-            <label>
-              <input type="checkbox" id="createTopicCheck" checked />
+            <label for="customTopicName">
+              <input type="checkbox" id="createTopicCheck" checked / aria-label="Create as new topic">
               Create as new topic
             </label>
-            <input type="text" id="customTopicName" placeholder="Custom topic name (optional)" />
+            <input type="text" id="customTopicName" aria-label="Custom topic name (optional)" placeholder="Custom topic name (optional)" />
           </div>
           <button id="importDatasetConfirmBtn" class="btn btn--primary" disabled>Import Selected Dataset</button>
         </div>
@@ -609,11 +620,11 @@
             <div class="form-row">
               <label>
                 Study Name/ID *
-                <input type="text" id="entryStudyName" placeholder="e.g., COMPLETE 2019" required />
+                <input type="text" aria-label="Study Name/ID *" id="entryStudyName" aria-label="e.g., COMPLETE 2019" placeholder="e.g., COMPLETE 2019" required />
               </label>
               <label>
                 Year
-                <input type="number" id="entryStudyYear" placeholder="2019" min="1900" max="2100" />
+                <input type="number" aria-label="Year" id="entryStudyYear" aria-label="2019" placeholder="2019" min="1900" max="2100" />
               </label>
             </div>
           </div>
@@ -622,13 +633,13 @@
             <h4>Outcome Type</h4>
             <div class="form-row">
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="binary" checked /> Binary (events/n)
+                <input type="radio" name="outcomeType" value="binary" checked / aria-label="Binary (events/n)"> Binary (events/n)
               </label>
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="continuous" /> Continuous (mean/SD/n)
+                <input type="radio" name="outcomeType" value="continuous" / aria-label="Continuous (mean/SD/n)"> Continuous (mean/SD/n)
               </label>
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="precomputed" /> Pre-computed (HR/OR/RR with CI)
+                <input type="radio" name="outcomeType" value="precomputed" / aria-label="Pre-computed (HR/OR/RR with CI)"> Pre-computed (HR/OR/RR with CI)
               </label>
             </div>
           </div>
@@ -638,29 +649,29 @@
             <div class="form-row">
               <label>
                 Treatment Arm Label
-                <input type="text" id="entryTreat1Label" placeholder="e.g., Complete revasc" />
+                <input type="text" aria-label="Treatment Arm Label" id="entryTreat1Label" aria-label="e.g., Complete revasc" placeholder="e.g., Complete revasc" />
               </label>
               <label>
                 Events
-                <input type="number" id="entryTreat1Events" min="0" />
+                <input type="number" aria-label="Events" id="entryTreat1Events" min="0" />
               </label>
               <label>
                 Total N
-                <input type="number" id="entryTreat1N" min="1" />
+                <input type="number" aria-label="Total N" id="entryTreat1N" min="1" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Control Arm Label
-                <input type="text" id="entryTreat2Label" placeholder="e.g., Culprit-only" />
+                <input type="text" aria-label="Control Arm Label" id="entryTreat2Label" aria-label="e.g., Culprit-only" placeholder="e.g., Culprit-only" />
               </label>
               <label>
                 Events
-                <input type="number" id="entryTreat2Events" min="0" />
+                <input type="number" aria-label="Events" id="entryTreat2Events" min="0" />
               </label>
               <label>
                 Total N
-                <input type="number" id="entryTreat2N" min="1" />
+                <input type="number" aria-label="Total N" id="entryTreat2N" min="1" />
               </label>
             </div>
           </div>
@@ -670,37 +681,37 @@
             <div class="form-row">
               <label>
                 Treatment Arm Label
-                <input type="text" id="entryContTreat1Label" placeholder="e.g., Intervention" />
+                <input type="text" aria-label="Treatment Arm Label" id="entryContTreat1Label" aria-label="e.g., Intervention" placeholder="e.g., Intervention" />
               </label>
               <label>
                 Mean
-                <input type="number" id="entryContTreat1Mean" step="any" />
+                <input type="number" aria-label="Mean" id="entryContTreat1Mean" step="any" />
               </label>
               <label>
                 SD
-                <input type="number" id="entryContTreat1SD" step="any" min="0" />
+                <input type="number" aria-label="SD" id="entryContTreat1SD" step="any" min="0" />
               </label>
               <label>
                 N
-                <input type="number" id="entryContTreat1N" min="1" />
+                <input type="number" aria-label="N" id="entryContTreat1N" min="1" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Control Arm Label
-                <input type="text" id="entryContTreat2Label" placeholder="e.g., Control" />
+                <input type="text" aria-label="Control Arm Label" id="entryContTreat2Label" aria-label="e.g., Control" placeholder="e.g., Control" />
               </label>
               <label>
                 Mean
-                <input type="number" id="entryContTreat2Mean" step="any" />
+                <input type="number" aria-label="Mean" id="entryContTreat2Mean" step="any" />
               </label>
               <label>
                 SD
-                <input type="number" id="entryContTreat2SD" step="any" min="0" />
+                <input type="number" aria-label="SD" id="entryContTreat2SD" step="any" min="0" />
               </label>
               <label>
                 N
-                <input type="number" id="entryContTreat2N" min="1" />
+                <input type="number" aria-label="N" id="entryContTreat2N" min="1" />
               </label>
             </div>
           </div>
@@ -710,7 +721,7 @@
             <div class="form-row">
               <label>
                 Effect Measure
-                <select id="entryEffectMeasure">
+                <select aria-label="Effect Measure" id="entryEffectMeasure">
                   <option value="HR">Hazard Ratio (HR)</option>
                   <option value="OR">Odds Ratio (OR)</option>
                   <option value="RR">Risk Ratio (RR)</option>
@@ -720,27 +731,27 @@
               </label>
               <label>
                 Point Estimate
-                <input type="number" id="entryEffectValue" step="any" placeholder="e.g., 0.74" />
+                <input type="number" aria-label="Point Estimate" id="entryEffectValue" step="any" aria-label="e.g., 0.74" placeholder="e.g., 0.74" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 95% CI Lower
-                <input type="number" id="entryCILower" step="any" />
+                <input type="number" aria-label="95% CI Lower" id="entryCILower" step="any" />
               </label>
               <label>
                 95% CI Upper
-                <input type="number" id="entryCIUpper" step="any" />
+                <input type="number" aria-label="95% CI Upper" id="entryCIUpper" step="any" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Treatment Label
-                <input type="text" id="entryPreTreat1" placeholder="e.g., Treatment" />
+                <input type="text" aria-label="Treatment Label" id="entryPreTreat1" aria-label="e.g., Treatment" placeholder="e.g., Treatment" />
               </label>
               <label>
                 Control Label
-                <input type="text" id="entryPreTreat2" placeholder="e.g., Control" />
+                <input type="text" aria-label="Control Label" id="entryPreTreat2" aria-label="e.g., Control" placeholder="e.g., Control" />
               </label>
             </div>
           </div>
@@ -770,7 +781,7 @@
           </div>
           <div class="rob-domains">
             <div class="rob-domain-row">
-              <label>
+              <label for="robD1Notes">
                 <span class="domain-label">D1: Randomization process</span>
                 <select id="robD1" class="rob-select">
                   <option value="">Not assessed</option>
@@ -779,10 +790,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD1Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD1Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD2Notes">
                 <span class="domain-label">D2: Deviations from intended interventions</span>
                 <select id="robD2" class="rob-select">
                   <option value="">Not assessed</option>
@@ -791,10 +802,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD2Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD2Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD3Notes">
                 <span class="domain-label">D3: Missing outcome data</span>
                 <select id="robD3" class="rob-select">
                   <option value="">Not assessed</option>
@@ -803,10 +814,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD3Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD3Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD4Notes">
                 <span class="domain-label">D4: Measurement of the outcome</span>
                 <select id="robD4" class="rob-select">
                   <option value="">Not assessed</option>
@@ -815,10 +826,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD4Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD4Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD5Notes">
                 <span class="domain-label">D5: Selection of reported result</span>
                 <select id="robD5" class="rob-select">
                   <option value="">Not assessed</option>
@@ -827,7 +838,7 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD5Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD5Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
           </div>
           <div class="rob-overall">
@@ -860,7 +871,7 @@
           <div class="import-panel active" id="zenodo-panel">
             <label>
               Zenodo DOI or Record ID:
-              <input type="text" id="zenodoDoi" placeholder="10.5281/zenodo.1234567 or 1234567" />
+              <input type="text" aria-label="Zenodo DOI or Record ID" id="zenodoDoi" aria-label="10.5281/zenodo.1234567 or 1234567" placeholder="10.5281/zenodo.1234567 or 1234567" />
             </label>
             <button id="fetchZenodoBtn" class="btn">Fetch Record</button>
             <div id="zenodoResult" class="import-result"></div>
@@ -868,7 +879,7 @@
           <div class="import-panel" id="github-panel">
             <label>
               GitHub Raw URL:
-              <input type="text" id="githubUrl" placeholder="https://raw.githubusercontent.com/..." />
+              <input type="text" aria-label="GitHub Raw URL" id="githubUrl" aria-label="https://raw.githubusercontent.com/..." placeholder="https://raw.githubusercontent.com/..." />
             </label>
             <button id="fetchGithubBtn" class="btn">Fetch File</button>
             <div id="githubResult" class="import-result"></div>
@@ -876,7 +887,7 @@
           <div class="import-panel" id="csv-panel">
             <label>
               Upload CSV/JSON file:
-              <input type="file" id="csvUpload" accept=".csv,.json" />
+              <input type="file" aria-label="Upload CSV/JSON file" id="csvUpload" accept=".csv,.json" />
             </label>
             <div id="csvResult" class="import-result"></div>
           </div>
@@ -948,7 +959,7 @@
             <button id="wizardFinishBtn" class="btn btn--accent hidden">Get Started</button>
           </div>
           <label class="wizard-dismiss">
-            <input type="checkbox" id="dontShowAgain"> Don't show this again
+            <input type="checkbox" id="dontShowAgain" aria-label="Don't show this again"> Don't show this again
           </label>
         </div>
       </div>
@@ -1060,8 +1071,8 @@
     "pageTitle": "DOAC Plus Antiplatelet Therapy in AF With PCI or ACS | CT.gov Living Meta-Analysis",
     "kicker": "Registry-Native Cardiovascular Evidence",
     "title": "DOAC Plus Antiplatelet Therapy in AF With PCI or ACS Living Meta-Analysis",
-    "subtitle": "Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.",
-    "topicPanelTitle": "CT.gov-validated topic (2 eligible RCTs in snapshot)",
+    "subtitle": "Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio.",
+    "topicPanelTitle": "CT.gov completeness-screened topic (2 eligible RCTs in snapshot)",
     "welcomeTitle": "DOAC Plus Antiplatelet Therapy in AF With PCI or ACS CT.gov review",
     "eligibilityTrialMinimum": 1,
     "analysisStudioName": "DOAC Plus Antiplatelet Therapy in AF With PCI or ACS CT.gov Living Meta-Analysis Studio",
@@ -1080,88 +1091,66 @@
       "topicId": "doac-antiplatelet-af-pci",
       "label": "DOAC Plus Antiplatelet Therapy in AF With PCI or ACS",
       "query": "(\"atrial fibrillation\" AND (PCI OR \"acute coronary syndrome\")) AND (rivaroxaban OR apixaban OR dabigatran OR edoxaban) AND (\"PIONEER AF-PCI\" OR \"RE-DUAL PCI\" OR \"AUGUSTUS\" OR \"ENTRUST-AF PCI\")",
-      "generatedAt": "2026-03-28T18:45:05.888Z",
+      "generatedAt": "2026-04-05T13:16:46.754Z",
       "includedCount": 2,
       "excludedCount": 5,
       "totalEnrollment": 3630,
       "demographicsCoverage": 2,
       "documentCoverage": 1,
+      "analysisEligibleCount": 2,
+      "comparisonReadyStudyCount": 2,
+      "comparisonCount": 3,
       "comparisons": [
         {
-          "studyId": "NCT02866175",
-          "title": "Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention",
-          "t1": "Vitamin K Antagonist Regimen",
-          "t2": "Edoxaban Regimen",
+          "studyId": "NCT01830543",
+          "title": "A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention",
+          "t1": "Rivaroxaban 15 mg",
+          "t2": "Vitamin K Antagonist (VKA)",
           "measure": "logRR",
-          "effect": 0.16653815944176914,
-          "se": 0.1083299872352671,
-          "n1": 755,
-          "n0": 751,
-          "totalN": 1506,
-          "sampleSize": 1506
+          "effect": -0.42521017976150727,
+          "se": 0.12978496739796658,
+          "n1": 696,
+          "n0": 348.5,
+          "totalN": 1044.5,
+          "sampleSize": 1044.5,
+          "comparisonStrategy": "split-shared-comparator",
+          "sharedComparatorSplit": true,
+          "outcomeMetricKind": "proportion"
         },
         {
           "studyId": "NCT01830543",
           "title": "A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention",
           "t1": "Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD)",
-          "t2": "Rivaroxaban 15 mg",
+          "t2": "Vitamin K Antagonist (VKA)",
           "measure": "logRR",
-          "effect": 0.041476405849412847,
-          "se": 0.34796841691057107,
+          "effect": -0.3686497043517172,
+          "se": 0.1274252149191393,
           "n1": 706,
-          "n0": 696,
-          "totalN": 1402,
-          "sampleSize": 1402
+          "n0": 348.5,
+          "totalN": 1054.5,
+          "sampleSize": 1054.5,
+          "comparisonStrategy": "split-shared-comparator",
+          "sharedComparatorSplit": true,
+          "outcomeMetricKind": "proportion"
         },
         {
-          "studyId": "NCT01830543",
-          "title": "A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention",
-          "t1": "Vitamin K Antagonist (VKA)",
-          "t2": "Rivaroxaban 15 mg",
+          "studyId": "NCT02866175",
+          "title": "Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention",
+          "t1": "Edoxaban Regimen",
+          "t2": "Vitamin K Antagonist Regimen",
           "measure": "logRR",
-          "effect": 0.42295736756757896,
-          "se": 0.32013970754006693,
-          "n1": 697,
-          "n0": 696,
-          "totalN": 1393,
-          "sampleSize": 1393
+          "effect": -0.16653815944176922,
+          "se": 0.1083299872352671,
+          "n1": 751,
+          "n0": 755,
+          "totalN": 1506,
+          "sampleSize": 1506,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "count"
         }
       ],
       "includedStudies": [
-        {
-          "nctId": "NCT02866175",
-          "title": "Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention",
-          "status": "COMPLETED",
-          "enrollment": 1506,
-          "documentsCount": 1,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "binary",
-            "title": "Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen",
-            "groups": [
-              {
-                "title": "Edoxaban Regimen",
-                "n": 751,
-                "events": 128,
-                "mean": null,
-                "sd": null
-              },
-              {
-                "title": "Vitamin K Antagonist Regimen",
-                "n": 755,
-                "events": 152,
-                "mean": null,
-                "sd": null
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen",
-              "timeFrame": "Day 1 to 12 months postdose"
-            }
-          ]
-        },
         {
           "nctId": "NCT01830543",
           "title": "A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention",
@@ -1169,30 +1158,49 @@
           "enrollment": 2124,
           "documentsCount": 0,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
             "type": "binary",
             "title": "Percentage of Participants With Clinically Significant Bleeding",
+            "unitOfMeasure": "percentage of participants",
+            "paramType": "NUMBER",
+            "metricKind": "proportion",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
                 "title": "Rivaroxaban 15 mg",
                 "n": 696,
-                "events": 15.7,
+                "events": 109,
                 "mean": null,
-                "sd": null
+                "sd": null,
+                "rawValue": 15.7,
+                "rawUnit": "percentage of participants",
+                "displayPercent": 15.7,
+                "derivation": "reconstructed_from_ctgov_percent"
               },
               {
                 "title": "Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD)",
                 "n": 706,
-                "events": 16.6,
+                "events": 117,
                 "mean": null,
-                "sd": null
+                "sd": null,
+                "rawValue": 16.6,
+                "rawUnit": "percentage of participants",
+                "displayPercent": 16.6,
+                "derivation": "reconstructed_from_ctgov_percent"
               },
               {
                 "title": "Vitamin K Antagonist (VKA)",
                 "n": 697,
-                "events": 24,
+                "events": 167,
                 "mean": null,
-                "sd": null
+                "sd": null,
+                "rawValue": 24,
+                "rawUnit": "percentage of participants",
+                "displayPercent": 24,
+                "derivation": "reconstructed_from_ctgov_percent"
               }
             ]
           },
@@ -1200,6 +1208,55 @@
             {
               "measure": "Percentage of Participants With Clinically Significant Bleeding",
               "timeFrame": "Up to Month 12"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT02866175",
+          "title": "Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention",
+          "status": "COMPLETED",
+          "enrollment": 1506,
+          "documentsCount": 1,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "binary",
+            "title": "Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen",
+            "unitOfMeasure": "Participants",
+            "paramType": "COUNT_OF_PARTICIPANTS",
+            "metricKind": "count",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "Edoxaban Regimen",
+                "n": 751,
+                "events": 128,
+                "mean": null,
+                "sd": null,
+                "rawValue": 128,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
+              },
+              {
+                "title": "Vitamin K Antagonist Regimen",
+                "n": 755,
+                "events": 152,
+                "mean": null,
+                "sd": null,
+                "rawValue": 152,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen",
+              "timeFrame": "Day 1 to 12 months postdose"
             }
           ]
         }

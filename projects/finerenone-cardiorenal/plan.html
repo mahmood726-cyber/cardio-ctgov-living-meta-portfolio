@@ -126,9 +126,11 @@
       <section class="hero">
         <p class="kicker">CT.gov Validation Pack</p>
         <h1>Finerenone Cardiorenal Outcome Trials</h1>
-        <p>Separate cardiovascular living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-03-28. Only randomized comparative records with posted results and extractable numeric outcomes are eligible.</p>
+        <p>Separate CT.gov living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-04-05. Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio, and each generated project still has to meet the minimum 2-trial results threshold.</p>
         <div class="pillbar">
           <span class="pill">Priority tier: Early</span>
+          <span class="pill">Eligibility mode: Full CT.gov results coverage (&gt;=2 RCTs)</span>
+          <span class="pill">Coverage gate: Full CT.gov results coverage</span>
           <span class="pill">Included RCTs: 2</span>
           <span class="pill">Scanned records: 6</span>
           <span class="pill">Pages fetched: 1</span>
@@ -157,8 +159,8 @@
             <tr><td>Population</td><td>Chronic Kidney Disease; Type 2 Diabetes Mellitus</td></tr>
             <tr><td>Interventions</td><td>Finerenone; Placebo</td></tr>
             <tr><td>Comparators</td><td>Finerenone vs Placebo</td></tr>
-            <tr><td>Outcomes</td><td>The First Occurrence of the Composite Endpoint of Onset of Kidney Failure, a Sustained Decrease of eGFR ≥40% From Baseline Over at Least 4 Weeks, or Renal Death; Mean Change in Plasma Biomarker Levels After 36 Months of Treatment Versus 4 Months of Treatment in a Set of 27 Pre-defined Biomarkers</td></tr>
-            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</td></tr>
+            <tr><td>Outcomes</td><td>Mean Change in Plasma Biomarker Levels After 36 Months of Treatment Versus 4 Months of Treatment in a Set of 27 Pre-defined Biomarkers; All-cause Mortality</td></tr>
+            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and at least one recorded numeric CT.gov outcome.</td></tr>
           </tbody>
         </table>
       </section>
@@ -189,7 +191,7 @@
         <tr>
           <td>CT.gov candidate scan started</td>
           <td>ClinicalTrials.gov v2 API</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr>
 
         <tr>
@@ -231,7 +233,7 @@
         <tr>
           <td>Project package generated</td>
           <td>Portfolio build</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr>
           </tbody>
         </table>
@@ -252,7 +254,7 @@
         <tr>
           <td>Question framing</td>
           <td>Topic slug, base query, and keyword pack frozen before generation</td>
-          <td>finerenone-cardiorenal | 2026-03-28</td>
+          <td>finerenone-cardiorenal | 2026-04-05</td>
         </tr>
 
         <tr>
@@ -262,14 +264,20 @@
         </tr>
 
         <tr>
+          <td>Coverage curation</td>
+          <td>Only modern topics where the full randomized evidence base is expected to be available on CT.gov with posted results are allowed into the portfolio</td>
+          <td>Curated as a modern topic where the randomized evidence base is expected to be fully representable from CT.gov records with posted results.</td>
+        </tr>
+
+        <tr>
           <td>Eligibility gate</td>
-          <td>Randomized interventional, completed, posted results, &gt;=2 arms, numeric outcome</td>
+          <td>Randomized interventional, completed, posted results, &gt;=2 arms, recorded numeric CT.gov outcome, and &gt;=2 qualifying CT.gov-result RCTs</td>
           <td>2 included / 4 excluded</td>
         </tr>
 
         <tr>
           <td>Extraction</td>
-          <td>Outcome groups, sponsor, eligibility, documents, and demographics preserved where available</td>
+          <td>Outcome groups, raw CT.gov metrics, sponsor, eligibility, documents, and demographics preserved where available</td>
           <td>2/2 studies with demographics</td>
         </tr>
 
@@ -303,13 +311,19 @@
         <tr>
           <td>Records excluded by registry hard gates</td>
           <td>4</td>
-          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no recorded numeric outcome</td>
         </tr>
 
         <tr>
-          <td>Trials entering the quantitative snapshot</td>
+          <td>Trials entering the CT.gov record snapshot</td>
           <td>2</td>
           <td>Included in validation.json and the live topic app</td>
+        </tr>
+
+        <tr>
+          <td>Trials with contrast-ready outcomes</td>
+          <td>2</td>
+          <td>Recorded metrics safely reducible to counts or means</td>
         </tr>
           </tbody>
         </table>
@@ -323,7 +337,7 @@
           <span class="pill">Completed</span>
           <span class="pill">Posted CT.gov results</span>
           <span class="pill">At least 2 arms</span>
-          <span class="pill">Numeric outcome extractable</span>
+          <span class="pill">Numeric CT.gov outcome recorded</span>
         </div>
       </section>
 
@@ -370,19 +384,6 @@
           <tbody>
             
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02540993" target="_blank" rel="noopener">NCT02540993</a></td>
-          <td>Efficacy and Safety of Finerenone in Subjects With Type 2 Diabetes Mellitus and Diabetic Kidney Disease</td>
-          <td>Bayer (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>5734 (ACTUAL)</td>
-          <td>COMPLETED</td>
-          <td>2015-09-17</td>
-          <td>2020-04-14</td>
-          <td>Participants received finerenone 10 mg or 20 mg once daily in addition to standard of care therapy | Participants received matching placebo once daily in addition to standard of care therapy</td>
-          <td>The First Occurrence of the Composite Endpoint of Onset of Kidney Failure, a Sustained Decrease of eGFR ≥40% From Baseline Over at Least 4 Weeks, or Renal Death</td>
-        </tr>
-
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT05013008" target="_blank" rel="noopener">NCT05013008</a></td>
           <td>An add-on Study to the FIGARO-DKD Study Called FIGARO-BM to Learn About the Link Between Biomarkers (Substances in the Blood Used as Indicators of Biological Processes, Disease Processes or Responses to Medication) and Finerenone in FIGARO-DKD Participants</td>
           <td>Bayer (INDUSTRY)</td>
@@ -393,6 +394,19 @@
           <td>2021-12-31</td>
           <td>Participants received finerenone 10 mg or 20 mg once daily in addition to standard of care therapy in previous interventional Phase 3 trial FIGARO-DKD. No new intervention was administered in this biomarker study. | Participants received matching placebo once daily in addition to standard of care therapy in previous interventional Phase 3 trial FIGARO-DKD. No new intervention was administered in this biomarker study.</td>
           <td>Mean Change in Plasma Biomarker Levels After 36 Months of Treatment Versus 4 Months of Treatment in a Set of 27 Pre-defined Biomarkers</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02540993" target="_blank" rel="noopener">NCT02540993</a></td>
+          <td>Efficacy and Safety of Finerenone in Subjects With Type 2 Diabetes Mellitus and Diabetic Kidney Disease</td>
+          <td>Bayer (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>5734 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2015-09-17</td>
+          <td>2020-04-14</td>
+          <td>Participants received finerenone 10 mg or 20 mg once daily in addition to standard of care therapy | Participants received matching placebo once daily in addition to standard of care therapy</td>
+          <td>All-cause Mortality</td>
         </tr>
           </tbody>
         </table>
@@ -414,19 +428,19 @@
           <tbody>
             
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02540993" target="_blank" rel="noopener">NCT02540993</a></td>
-          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
-          <td>Finerenone: 2833 Participants | Placebo: 2841 Participants | Total: 5674 Participants</td>
-          <td>Finerenone: 65.44 +/- 8.94 Years | Placebo: 65.67 +/- 9.16 Years | Total: 65.56 +/- 9.05 Years</td>
-          <td>Finerenone: F 880 / M 1953 | Placebo: F 811 / M 2030 | Total: F 1691 / M 3983</td>
-        </tr>
-
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT05013008" target="_blank" rel="noopener">NCT05013008</a></td>
           <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
           <td>Finerenone: 478 Participants | Placebo: 443 Participants | Total: 921 Participants</td>
           <td>Finerenone: 63.55 +/- 9.50 years | Placebo: 64.15 +/- 9.65 years | Total: 63.84 +/- 9.57 years</td>
           <td>Finerenone: F 120 / M 358 | Placebo: F 112 / M 331 | Total: F 232 / M 689</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02540993" target="_blank" rel="noopener">NCT02540993</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Finerenone: 2833 Participants | Placebo: 2841 Participants | Total: 5674 Participants</td>
+          <td>Finerenone: 65.44 +/- 8.94 Years | Placebo: 65.67 +/- 9.16 Years | Total: 65.56 +/- 9.05 Years</td>
+          <td>Finerenone: F 880 / M 1953 | Placebo: F 811 / M 2030 | Total: F 1691 / M 3983</td>
         </tr>
           </tbody>
         </table>
@@ -448,17 +462,6 @@
           <tbody>
             
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02540993" target="_blank" rel="noopener">NCT02540993</a></td>
-          <td>The primary objective of this study was to demonstrate whether, in addition to standard of care, finerenone is superior to placebo in delaying the progression of kidney disease, as measured by the composite endpoint of time to first occurrence of kidney failure, a sustained decrease of estimated glomerular filtratio...</td>
-          <td>Inclusion Criteria: * Men or women ≥18 years of age * Type 2 diabetes mellitus (T2D) as defined by the American Diabetes Association * Diagnosis of chronic kidney disease (CKD) with at least one of the following criteria at run-in and screening visits: * pe...</td>
-          <td>The First Occurrence of the Composite Endpoint of Onset of Kidney Failure, a Sustained Decrease of eGFR ≥40% From Baseline Over at Least 4 Weeks, or Renal Death | Time frame: From randomization up until the first occurrence of the primary renal composite endpoint, or censoring at the end of the study, with an averag...</td>
-          <td>
-            <div class="pillbar"><span class="pill">Study Protocol (2019-02-26)</span>
-<span class="pill">Statistical Analysis Plan (2020-02-14)</span></div>
-          </td>
-        </tr>
-
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT05013008" target="_blank" rel="noopener">NCT05013008</a></td>
           <td>Researchers are looking for a better way to treat people who have chronic kidney disease (CKD), a long-term, progressive decrease in the kidneys&#39; ability to work properly. When CKD happens in people with type 2 diabetes mellitus, a condition characterized by high blood sugar levels, CKD is also referred to as diabet...</td>
           <td>Inclusion Criteria: * This study will only include participants who were enrolled in the FIGARO-DKD study (NCT02545049) and had received up to 20 mg finerenone or placebo for ≥24 months. * For each participant, pharmacokinetic (PK) plasma samples from Visit...</td>
@@ -466,6 +469,17 @@
           <td>
             <div class="pillbar"><span class="pill">Study Protocol (2021-06-24)</span>
 <span class="pill">Statistical Analysis Plan (2022-07-13)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02540993" target="_blank" rel="noopener">NCT02540993</a></td>
+          <td>The primary objective of this study was to demonstrate whether, in addition to standard of care, finerenone is superior to placebo in delaying the progression of kidney disease, as measured by the composite endpoint of time to first occurrence of kidney failure, a sustained decrease of estimated glomerular filtratio...</td>
+          <td>Inclusion Criteria: * Men or women ≥18 years of age * Type 2 diabetes mellitus (T2D) as defined by the American Diabetes Association * Diagnosis of chronic kidney disease (CKD) with at least one of the following criteria at run-in and screening visits: * pe...</td>
+          <td>The First Occurrence of the Composite Endpoint of Onset of Kidney Failure, a Sustained Decrease of eGFR ≥40% From Baseline Over at Least 4 Weeks, or Renal Death | Time frame: From randomization up until the first occurrence of the primary renal composite endpoint, or censoring at the end of the study, with an averag...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2019-02-26)</span>
+<span class="pill">Statistical Analysis Plan (2020-02-14)</span></div>
           </td>
         </tr>
           </tbody>
@@ -484,7 +498,7 @@
           <tbody>
             
         <tr>
-          <td>No Extractable Numeric Outcome</td>
+          <td>No Recorded Numeric Outcome</td>
           <td>4</td>
         </tr>
 
@@ -495,7 +509,7 @@
 
         <tr>
           <td>Not Randomized Interventional</td>
-          <td>2</td>
+          <td>3</td>
         </tr>
 
         <tr>
@@ -521,31 +535,31 @@
           <tbody>
             
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT05640180" target="_blank" rel="noopener">NCT05640180</a></td>
-          <td>An Observational Study Called FLAMINgO to Learn More About the Treatment Combination of Finerenone and SGLT2 Inhibitors in People With Long-term Kidney Disease (Chronic Kidney Disease) Together With Type 2 Diabetes by Using Routine Medical Care Data and Past Clinical Study Results</td>
-          <td>No Results Posted, Not Randomized Interventional, No Extractable Numeric Outcome</td>
-          <td>This is an observational study, in which data from the past of people with chronic kidney disease (CKD) together with type 2 diabetes (T2D) are studied. The participants in this study were treated in the past with a type of drug called SGLT2 inhibitor alone...</td>
-        </tr>
-
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT04795726" target="_blank" rel="noopener">NCT04795726</a></td>
           <td>A Study That Uses Data From Routine Eye Examinations of Patients Participating in Studies FIDELIO-DKD and FIGARO-DKD to Explore Whether Finerenone Can Delay the Progression of a Diabetes Complication That Affects the Eyes (Diabetic Retinopathy, DR)</td>
-          <td>No Results Posted, No Extractable Numeric Outcome</td>
-          <td>Diabetic retinopathy (DR) is a diabetes complication caused by damage to the small blood vessels inside the retina at the back of the eye. Diabetic retinopathy may cause mild vision problems or eventually blindness. Diabetes is a condition that makes your b...</td>
-        </tr>
-
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT04477707" target="_blank" rel="noopener">NCT04477707</a></td>
-          <td>A Study That Uses Data From Routine Eye Examinations of Patients Participating in Studies FIDELIO-DKD and FIGARO-DKD to Explore Whether Finerenone Can Delay the Progression of a Diabetes Complication That Affects the Eyes (Diabetic Retinopathy ,DR)</td>
-          <td>No Results Posted, Not Randomized Interventional, No Extractable Numeric Outcome</td>
+          <td>No Results Posted, No Recorded Numeric Outcome</td>
           <td>Diabetic retinopathy (DR) is a diabetes complication caused by damage to the small blood vessels inside the retina at the back of the eye. Diabetic retinopathy may cause mild vision problems or eventually blindness. Diabetes is a condition that makes your b...</td>
         </tr>
 
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT07056595" target="_blank" rel="noopener">NCT07056595</a></td>
           <td>Finerenone in Patients With IgA-nephropathy: Prospective Interventional Trial</td>
-          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, No Recorded Numeric Outcome</td>
           <td>: IgA-nephropathy is the most common glomerulonephritis with the unfavorable prognosis in patients with persistent albuminuria. Finerenone is a new nonsteroidal mineralocorticoid receptor antagonist that has demonstrated efficacy in reducing albuminuria in...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT05640180" target="_blank" rel="noopener">NCT05640180</a></td>
+          <td>An Observational Study Called FLAMINgO to Learn More About the Treatment Combination of Finerenone and SGLT2 Inhibitors in People With Long-term Kidney Disease (Chronic Kidney Disease) Together With Type 2 Diabetes by Using Routine Medical Care Data and Past Clinical Study Results</td>
+          <td>No Results Posted, Not Randomized Interventional, No Recorded Numeric Outcome</td>
+          <td>This is an observational study, in which data from the past of people with chronic kidney disease (CKD) together with type 2 diabetes (T2D) are studied. The participants in this study were treated in the past with a type of drug called SGLT2 inhibitor alone...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04477707" target="_blank" rel="noopener">NCT04477707</a></td>
+          <td>A Study That Uses Data From Routine Eye Examinations of Patients Participating in Studies FIDELIO-DKD and FIGARO-DKD to Explore Whether Finerenone Can Delay the Progression of a Diabetes Complication That Affects the Eyes (Diabetic Retinopathy ,DR)</td>
+          <td>No Results Posted, Not Randomized Interventional, No Recorded Numeric Outcome</td>
+          <td>Diabetic retinopathy (DR) is a diabetes complication caused by damage to the small blood vessels inside the retina at the back of the eye. Diabetic retinopathy may cause mild vision problems or eventually blindness. Diabetes is a condition that makes your b...</td>
         </tr>
           </tbody>
         </table>
@@ -571,18 +585,18 @@
           <tbody>
             
       <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT02540993" target="_blank" rel="noopener">NCT02540993</a></td>
-        <td>Finerenone vs Placebo</td>
-        <td>The First Occurrence of the Composite Endpoint of Onset of Kidney Failure, a Sustained Decrease of eGFR ≥40% From Baseline Over at Least 4 Weeks, or Renal Death</td>
-        <td>5734 (ACTUAL)</td>
-        <td>Documents listed on CT.gov</td>
-      </tr>
-
-      <tr>
         <td><a href="https://clinicaltrials.gov/study/NCT05013008" target="_blank" rel="noopener">NCT05013008</a></td>
         <td>Finerenone vs Placebo</td>
         <td>Mean Change in Plasma Biomarker Levels After 36 Months of Treatment Versus 4 Months of Treatment in a Set of 27 Pre-defined Biomarkers</td>
         <td>951 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02540993" target="_blank" rel="noopener">NCT02540993</a></td>
+        <td>Finerenone vs Placebo</td>
+        <td>All-cause Mortality</td>
+        <td>5734 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
       </tr>
           </tbody>
@@ -603,7 +617,7 @@
         <script>
 (() => {
   const iframe = document.getElementById("reviewerValidationFrame");
-  const context = {"source":"ctgov-portfolio-generator","topicId":"finerenone-cardiorenal","label":"Finerenone Cardiorenal Outcome Trials","query":"(\"chronic kidney disease\" AND \"type 2 diabetes\") AND finerenone AND (\"FIDELIO-DKD\" OR \"FIGARO-DKD\" OR \"FINEARTS\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":2,"excludedCount":4,"totalEnrollment":6685,"demographicsCoverage":2,"documentCoverage":2,"comparisons":[{"studyId":"NCT02540993","title":"Efficacy and Safety of Finerenone in Subjects With Type 2 Diabetes Mellitus and Diabetic Kidney Disease","t1":"Finerenone","t2":"Placebo","measure":"logRR","effect":-0.17153350512110632,"se":0.05427542916076945,"n1":2833,"n0":2841,"totalN":5674,"sampleSize":5674},{"studyId":"NCT05013008","title":"An add-on Study to the FIGARO-DKD Study Called FIGARO-BM to Learn About the Link Between Biomarkers (Substances in the Blood Used as Indicators of Biological Processes, Disease Processes or Responses to Medication) and Finerenone in FIGARO-DKD Participants","t1":"Finerenone","t2":"Placebo","measure":"MD","effect":-0.04800000000000004,"se":0.07683576800338957,"n1":478,"n0":443,"totalN":921,"sampleSize":921}],"includedStudies":[{"nctId":"NCT02540993","title":"Efficacy and Safety of Finerenone in Subjects With Type 2 Diabetes Mellitus and Diabetic Kidney Disease","status":"COMPLETED","enrollment":5734,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"The First Occurrence of the Composite Endpoint of Onset of Kidney Failure, a Sustained Decrease of eGFR ≥40% From Baseline Over at Least 4 Weeks, or Renal Death","groups":[{"title":"Finerenone","n":2833,"events":504,"mean":null,"sd":null},{"title":"Placebo","n":2841,"events":600,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"The First Occurrence of the Composite Endpoint of Onset of Kidney Failure, a Sustained Decrease of eGFR ≥40% From Baseline Over at Least 4 Weeks, or Renal Death","timeFrame":"From randomization up until the first occurrence of the primary renal composite endpoint, or censoring at the end of the study, with an average follow-up time of 32 months"}]},{"nctId":"NCT05013008","title":"An add-on Study to the FIGARO-DKD Study Called FIGARO-BM to Learn About the Link Between Biomarkers (Substances in the Blood Used as Indicators of Biological Processes, Disease Processes or Responses to Medication) and Finerenone in FIGARO-DKD Participants","status":"COMPLETED","enrollment":951,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Mean Change in Plasma Biomarker Levels After 36 Months of Treatment Versus 4 Months of Treatment in a Set of 27 Pre-defined Biomarkers","groups":[{"title":"Finerenone","n":478,"events":null,"mean":1.014,"sd":1.125},{"title":"Placebo","n":443,"events":null,"mean":1.062,"sd":1.201}]},"primaryOutcomes":[{"measure":"Mean Change in Plasma Biomarker Levels After 36 Months of Treatment Versus 4 Months of Treatment in a Set of 27 Pre-defined Biomarkers","timeFrame":"At 4 months (Visit 3) of treatment and 36 months (Visit 11) of treatment"}]}]};
+  const context = {"source":"ctgov-portfolio-generator","topicId":"finerenone-cardiorenal","label":"Finerenone Cardiorenal Outcome Trials","query":"(\"chronic kidney disease\" AND \"type 2 diabetes\") AND finerenone AND (\"FIDELIO-DKD\" OR \"FIGARO-DKD\" OR \"FINEARTS\")","generatedAt":"2026-04-05T13:16:46.754Z","includedCount":2,"excludedCount":4,"totalEnrollment":6685,"demographicsCoverage":2,"documentCoverage":2,"analysisEligibleCount":2,"comparisonReadyStudyCount":2,"comparisonCount":2,"comparisons":[{"studyId":"NCT05013008","title":"An add-on Study to the FIGARO-DKD Study Called FIGARO-BM to Learn About the Link Between Biomarkers (Substances in the Blood Used as Indicators of Biological Processes, Disease Processes or Responses to Medication) and Finerenone in FIGARO-DKD Participants","t1":"Finerenone","t2":"Placebo","measure":"MD","effect":-0.04800000000000004,"se":0.08370865542254109,"n1":387,"n0":386,"totalN":773,"sampleSize":773,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT02540993","title":"Efficacy and Safety of Finerenone in Subjects With Type 2 Diabetes Mellitus and Diabetic Kidney Disease","t1":"Finerenone","t2":"Placebo","measure":"logRR","effect":-0.10527661345302972,"se":0.08921658624488978,"n1":2833,"n0":2841,"totalN":5674,"sampleSize":5674,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"count"}],"includedStudies":[{"nctId":"NCT05013008","title":"An add-on Study to the FIGARO-DKD Study Called FIGARO-BM to Learn About the Link Between Biomarkers (Substances in the Blood Used as Indicators of Biological Processes, Disease Processes or Responses to Medication) and Finerenone in FIGARO-DKD Participants","status":"COMPLETED","enrollment":951,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Mean Change in Plasma Biomarker Levels After 36 Months of Treatment Versus 4 Months of Treatment in a Set of 27 Pre-defined Biomarkers","unitOfMeasure":"Ratio","paramType":"GEOMETRIC_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Finerenone","n":387,"events":null,"mean":1.014,"sd":1.125,"rawValue":1.014,"rawUnit":"Ratio","displayPercent":null,"derivation":null},{"title":"Placebo","n":386,"events":null,"mean":1.062,"sd":1.201,"rawValue":1.062,"rawUnit":"Ratio","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Mean Change in Plasma Biomarker Levels After 36 Months of Treatment Versus 4 Months of Treatment in a Set of 27 Pre-defined Biomarkers","timeFrame":"At 4 months (Visit 3) of treatment and 36 months (Visit 11) of treatment"}]},{"nctId":"NCT02540993","title":"Efficacy and Safety of Finerenone in Subjects With Type 2 Diabetes Mellitus and Diabetic Kidney Disease","status":"COMPLETED","enrollment":5734,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"binary","title":"All-cause Mortality","unitOfMeasure":"Participants","paramType":"COUNT_OF_PARTICIPANTS","metricKind":"count","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Finerenone","n":2833,"events":219,"mean":null,"sd":null,"rawValue":219,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"Placebo","n":2841,"events":244,"mean":null,"sd":null,"rawValue":244,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"}]},"primaryOutcomes":[{"measure":"The First Occurrence of the Composite Endpoint of Onset of Kidney Failure, a Sustained Decrease of eGFR ≥40% From Baseline Over at Least 4 Weeks, or Renal Death","timeFrame":"From randomization up until the first occurrence of the primary renal composite endpoint, or censoring at the end of the study, with an average follow-up time of 32 months"}]}]};
   if (!iframe || !context) return;
   const sendContext = () => {
     if (!iframe.contentWindow) return;

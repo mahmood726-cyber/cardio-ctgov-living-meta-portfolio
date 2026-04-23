@@ -3,6 +3,14 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "validate:generated": "node scripts/validate-generated.mjs"
+    "scan:topics": "node scripts/scan-topics.mjs",
+    "generate:projects": "node scripts/generate-projects.mjs",
+    "validate:generated": "node scripts/validate-generated.mjs",
+    "validate:browser": "node scripts/browser-validate.mjs",
+    "test:smoke": "python tests/test_smoke.py",
+    "validate": "npm run validate:generated && npm run test:smoke"
+  },
+  "devDependencies": {
+    "playwright": "^1.59.1"
   }
 }

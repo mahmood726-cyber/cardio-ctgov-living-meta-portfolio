@@ -17,17 +17,17 @@
         <div class="hero__title">
           <p class="kicker" id="appKicker">Registry-Native Cardiovascular Evidence</p>
           <h1 id="appTitle">ARNI in Heart Failure Living Meta-Analysis</h1>
-          <p class="subtitle" id="appSubtitle">Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.</p>
+          <p class="subtitle" id="appSubtitle">Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio.</p>
         </div>
         <div class="hero__controls">
           <div class="control-card">
             <label>
               New RCT window start
-              <input id="startDate" type="date" />
+              <input aria-label="New RCT window start" id="startDate" type="date" />
             </label>
             <label>
               Status filter
-              <select id="statusFilter" multiple>
+              <select aria-label="Status filter" id="statusFilter" multiple>
                 <option value="COMPLETED" selected>Completed</option>
                 <option value="ACTIVE_NOT_RECRUITING" selected>Active, not recruiting</option>
                 <option value="RECRUITING">Recruiting</option>
@@ -37,14 +37,14 @@
             </label>
             <label>
               Single outcome rule
-              <select id="outcomeRule">
+              <select aria-label="Single outcome rule" id="outcomeRule">
                 <option value="primary">Primary outcome with numeric results</option>
                 <option value="results">Any outcome with numeric results</option>
               </select>
             </label>
             <label>
               Reference treatment (NMA)
-              <input id="referenceTx" type="text" placeholder="e.g., Standard care" />
+              <input aria-label="Reference treatment (NMA)" id="referenceTx" type="text" aria-label="e.g., Standard care" placeholder="e.g., Standard care" />
             </label>
             <button id="updateBtn" class="btn btn--primary">Update from ClinicalTrials.gov</button>
             <button id="fixtureBtn" class="btn">Load Offline Fixture</button>
@@ -55,7 +55,7 @@
           <div class="control-card">
             <label>
               Prior meta-analysis trial IDs (one per line)
-              <textarea id="priorTrials" rows="6" placeholder="NCT01234567"></textarea>
+              <textarea aria-label="Prior meta-analysis trial IDs (one per line)" id="priorTrials" rows="6" aria-label="NCT01234567" placeholder="NCT01234567"></textarea>
             </label>
             <button id="compareBtn" class="btn">Compare Coverage</button>
             <div id="coverageSummary" class="coverage"></div>
@@ -67,21 +67,27 @@
       <section class="panel validation-snapshot">
         <div class="panel__header">
           <h2>CT.gov Validation Snapshot</h2>
-          <div class="panel__meta">Generated 2026-03-28</div>
+          <div class="panel__meta">Generated 2026-04-05</div>
         </div>
         <div class="panel__body">
           <div class="summary-grid">
             <div class="summary-card">
               <h3>Registry Gate</h3>
-              <div class="pill">Included RCTs: 13</div>
+              <div class="pill">Included RCT records: 13</div>
+              <div class="pill">Contrast-ready studies: 13</div>
+              <div class="pill">Direct comparisons: 12</div>
               <div class="pill">Scanned records: 98</div>
               <div class="pill">Pages fetched: 1</div>
               <div class="pill">Priority tier: Build Now</div>
+              <div class="pill">Eligibility mode: Full CT.gov results coverage (&gt;=2 RCTs)</div>
+              <div class="pill">Coverage gate: Full CT.gov results coverage</div>
             </div>
             <div class="summary-card">
               <h3>Eligibility Rules</h3>
-              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, and at least one extractable numeric outcome.</p>
+              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, at least one recorded numeric CT.gov outcome, and topic-level curation that the full randomized evidence base should be captured on CT.gov.</p>
+              <p>Direct pooled contrasts are only emitted when the posted CT.gov metric can be safely reduced to counts or means and the arm structure supports a defensible comparator.</p>
               <p>The validation scan completed within the configured CT.gov page cap.</p>
+              <p class="muted">Curated as a modern topic where the randomized evidence base is expected to be fully representable from CT.gov records with posted results.</p>
             </div>
             <div class="summary-card">
               <h3>Audit Trail</h3>
@@ -99,52 +105,52 @@
             <h3>Included Trial Records</h3>
             <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
               
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT01920711" target="_blank" rel="noopener">
-          NCT01920711
-        </a>
-
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT02627196" target="_blank" rel="noopener">
-          NCT02627196
-        </a>
-
         <a class="pill" href="https://clinicaltrials.gov/study/NCT06029712" target="_blank" rel="noopener">
           NCT06029712
-        </a>
-
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT02816736" target="_blank" rel="noopener">
-          NCT02816736
-        </a>
-
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT03066804" target="_blank" rel="noopener">
-          NCT03066804
         </a>
 
         <a class="pill" href="https://clinicaltrials.gov/study/NCT04164004" target="_blank" rel="noopener">
           NCT04164004
         </a>
 
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT02678312" target="_blank" rel="noopener">
-          NCT02678312
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT04394754" target="_blank" rel="noopener">
+          NCT04394754
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02627196" target="_blank" rel="noopener">
+          NCT02627196
         </a>
 
         <a class="pill" href="https://clinicaltrials.gov/study/NCT02468232" target="_blank" rel="noopener">
           NCT02468232
         </a>
 
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02816736" target="_blank" rel="noopener">
+          NCT02816736
+        </a>
+
         <a class="pill" href="https://clinicaltrials.gov/study/NCT06665919" target="_blank" rel="noopener">
           NCT06665919
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02678312" target="_blank" rel="noopener">
+          NCT02678312
         </a>
 
         <a class="pill" href="https://clinicaltrials.gov/study/NCT02970669" target="_blank" rel="noopener">
           NCT02970669
         </a>
 
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT04394754" target="_blank" rel="noopener">
-          NCT04394754
-        </a>
-
         <a class="pill" href="https://clinicaltrials.gov/study/NCT02554890" target="_blank" rel="noopener">
           NCT02554890
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01920711" target="_blank" rel="noopener">
+          NCT01920711
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT03066804" target="_blank" rel="noopener">
+          NCT03066804
         </a>
 
         <a class="pill" href="https://clinicaltrials.gov/study/NCT00887588" target="_blank" rel="noopener">
@@ -157,7 +163,7 @@
             <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
               
         <div class="pill">
-          No Extractable Numeric Outcome: 82
+          No Recorded Numeric Outcome: 77
         </div>
 
         <div class="pill">
@@ -169,7 +175,7 @@
         </div>
 
         <div class="pill">
-          Not Randomized Interventional: 34
+          Not Randomized Interventional: 35
         </div>
 
         <div class="pill">
@@ -208,11 +214,11 @@
             </div>
             <div class="summary-card">
               <h3>Review Question And PICO</h3>
-              <p><strong>Population:</strong> Heart Failure With Preserved Ejection Fraction; Heart Failure; Heart Failure With Reduced Ejection Fraction; HIV Infections; Pediatric Heart Failure; Heart Failure With Reduced Ejection Fraction (HF-rEF)</p>
-              <p><strong>Interventions:</strong> LCZ696; Valsartan; Device and Medical Management; Medical Management; Individual Tablets; Polypill; LCZ696 (Entresto) + Placebo; Valsartan + Placebo</p>
-              <p><strong>Comparators:</strong> Valsartan vs LCZ696; Medical Management vs Device and Medical Management; Polypill vs Individual Tablets; Valsartan + Placebo vs LCZ696 (Entresto) + Placebo; Individualized Medical Therapy (IMT) Comparator vs Sacubitril/Valsartan (LCZ696); Routine Collection of Patient-Reported Health Status (KCCQ-12 Arm) vs Usual Care</p>
-              <p><strong>Outcomes:</strong> Cumulative Number of Primary Composite Events of Cardiovascular (CV) Death and Total (First and Recurrent) HF Hospitalizations.; Rate of Cardiovascular Mortality and Heart Failure Morbidity; Measured Adherence to GDMT by Pill Count; Change in NT-proBNP; Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) at Week 12; Kansas City Cardiomyopathy Questionnaire-12 Score</p>
-              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</p>
+              <p><strong>Population:</strong> Heart Failure With Reduced Ejection Fraction; HIV Infections; Heart Failure; Congestive Heart Failure; Heart Failure With Reduced Ejection Fraction (HF-rEF); Coronary Artery Disease</p>
+              <p><strong>Interventions:</strong> Individual Tablets; Polypill; Routine Collection of Patient-Reported Health Status (KCCQ-12 Arm); Usual Care; Control; BodyPort; Noom; Conversa</p>
+              <p><strong>Comparators:</strong> Individual Tablets vs Polypill; Routine Collection of Patient-Reported Health Status (KCCQ-12 Arm) vs Usual Care; BodyPort vs Control | Noom vs Control | Shared comparator split across CT.gov treatment arms; Device and Medical Management vs Medical Management; Multi-arm CT.gov record without a resolved shared comparator; Valsartan + Placebo vs LCZ696 (Entresto) + Placebo</p>
+              <p><strong>Outcomes:</strong> Measured Adherence to GDMT by Pill Count; Kansas City Cardiomyopathy Questionnaire-12 Score; Number of Participants With Hospital Admission at 90 Days Post Enrollment; Percent Change in Log 10 Amino-terminal Prohormone of Brain Natriuretic Peptide (NT-proBNP) From Baseline to 6 Months Post-implant; Number of Participants Who Had CEC (Clinical Endpoint Committee) Confirmed Composite Endpoints; Change in NT-proBNP</p>
+              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and at least one recorded numeric CT.gov outcome.</p>
             </div>
           </div>
 
@@ -230,7 +236,7 @@
         <tr>
           <td>CT.gov candidate scan started</td>
           <td>ClinicalTrials.gov v2 API</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr>
         <tr>
           <td>Base query locked</td>
@@ -265,7 +271,7 @@
         <tr>
           <td>Project package generated</td>
           <td>Portfolio build</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr></tbody>
             </table>
           </div>
@@ -289,12 +295,17 @@
         <tr>
           <td>Records excluded by registry hard gates</td>
           <td>85</td>
-          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no recorded numeric outcome</td>
         </tr>
         <tr>
-          <td>Trials entering the quantitative snapshot</td>
+          <td>Trials entering the CT.gov record snapshot</td>
           <td>13</td>
           <td>Included in validation.json and the live topic app</td>
+        </tr>
+        <tr>
+          <td>Trials with contrast-ready outcomes</td>
+          <td>13</td>
+          <td>Recorded metrics safely reducible to counts or means</td>
         </tr></tbody>
             </table>
           </div>
@@ -308,7 +319,7 @@
                   <th>Count</th>
                 </tr>
               </thead>
-              <tbody><tr><td>No Extractable Numeric Outcome</td><td>82</td></tr><tr><td>No Results Posted</td><td>77</td></tr><tr><td>Not Completed</td><td>54</td></tr><tr><td>Not Randomized Interventional</td><td>34</td></tr><tr><td>Fewer Than Two Arms</td><td>27</td></tr></tbody>
+              <tbody><tr><td>No Recorded Numeric Outcome</td><td>77</td></tr><tr><td>No Results Posted</td><td>77</td></tr><tr><td>Not Completed</td><td>54</td></tr><tr><td>Not Randomized Interventional</td><td>35</td></tr><tr><td>Fewer Than Two Arms</td><td>27</td></tr></tbody>
             </table>
           </div>
 
@@ -328,24 +339,6 @@
               </thead>
               <tbody>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT01920711" target="_blank" rel="noopener">NCT01920711</a></td>
-          <td>Efficacy and Safety of LCZ696 Compared to Valsartan, on Morbidity and Mortality in Heart Failure Patients With Preserved Ejection Fraction</td>
-          <td>Novartis Pharmaceuticals (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>4822 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 50 Years to NR | Healthy volunteers: No</td>
-          <td>Participants LCZ696: 2419 Participants | Valsartan: 2403 Participants | Total: 4822 Participants | Sex LCZ696: F 1247 / M 1172 | Valsartan: F 1244 / M 1159 | Total: F 2491 / M 2331</td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02627196" target="_blank" rel="noopener">NCT02627196</a></td>
-          <td>Baroreflex Activation Therapy for Heart Failure</td>
-          <td>CVRx, Inc. (INDUSTRY)</td>
-          <td>NA</td>
-          <td>1090 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 21 Years to NR | Healthy volunteers: No</td>
-          <td>Participants Device and Medical Management: 163 Participants | Medical Management: 160 Participants | Total: 323 Participants | Age Device and Medical Management: 63 +/- 11 years | Medical Management: 63 +/- 10 years | Total: 63 +/- 11 years | Sex Device and Medical Management: F 28 / M 135 | Medical Management: F 35 / M 125 | Total: F 63 / M 260</td>
-        </tr>
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT06029712" target="_blank" rel="noopener">NCT06029712</a></td>
           <td>Heart Failure Polypill at a Safety Net Hospital</td>
           <td>University of California, San Francisco (OTHER)</td>
@@ -353,24 +346,6 @@
           <td>35 (ACTUAL)</td>
           <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
           <td>Participants GDMT Delivered in a Heart Failure Polypill First (Individual Tablets Second): 17 Participants | GDMT Delivered as Individual Tablets First (Polypill Second): 18 Participants | Total: 35 Participants | Sex GDMT Delivered in a Heart Failure Polypill First (Individual Tablets Second): F 2 / M 15 | GDMT Delivered as Individual Tablets First (Polypill Second): F 7 / M 11 | Total: F 9 / M 26</td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02816736" target="_blank" rel="noopener">NCT02816736</a></td>
-          <td>EntrestoTM (LCZ696) In Advanced Heart Failure (LIFE Study)</td>
-          <td>Duke University (OTHER)</td>
-          <td>Phase 4</td>
-          <td>365 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 18 Years to 85 Years | Healthy volunteers: No</td>
-          <td>Participants LCZ696 (Entresto) + Placebo: 179 Participants | Valsartan + Placebo: 186 Participants | Total: 365 Participants | Age LCZ696 (Entresto) + Placebo: 60.0 +/- 13.7 years | Valsartan + Placebo: 58.8 +/- 13.0 years | Total: 59.4 +/- 13.3 years | Sex LCZ696 (Entresto) + Placebo: F 53 / M 126 | Valsartan + Placebo: F 50 / M 136 | Total: F 103 / M 262</td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT03066804" target="_blank" rel="noopener">NCT03066804</a></td>
-          <td>A Randomized, Double-blind Controlled Study Comparing LCZ696 to Medical Therapy for Comorbidities in HFpEF Patients</td>
-          <td>Novartis Pharmaceuticals (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>2572 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 45 Years to NR | Healthy volunteers: No</td>
-          <td>Participants Sacubitril/Valsartan (LCZ696): 1281 Participants | Individualized Medical Therapy (IMT) Comparator: 1285 Participants | Total: 2566 Participants | Sex Sacubitril/Valsartan (LCZ696): F 643 / M 638 | Individualized Medical Therapy (IMT) Comparator: F 658 / M 627 | Total: F 1301 / M 1265</td>
         </tr>
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT04164004" target="_blank" rel="noopener">NCT04164004</a></td>
@@ -382,13 +357,22 @@
           <td>Participants Routine Collection of Patient-Reported Health Status (KCCQ-12 Arm): 624 Participants | Usual Care: 624 Participants | Total: 1248 Participants | Sex Routine Collection of Patient-Reported Health Status (KCCQ-12 Arm): F 248 / M 376 | Usual Care: F 237 / M 387 | Total: F 485 / M 763</td>
         </tr>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02678312" target="_blank" rel="noopener">NCT02678312</a></td>
-          <td>Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure</td>
-          <td>Novartis Pharmaceuticals (INDUSTRY)</td>
-          <td>Phase 2, Phase 3</td>
-          <td>393 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 1 Month to 17 Years | Healthy volunteers: No</td>
-          <td>Participants Part 1: Dose Cohort 1: 17 Participants | Part 1: Dose Cohort 2: 18 Participants | Part 1: Dose Cohort S: 2 Participants | Part 2: LCZ696: 187 Participants | Part 2: Enalapril: 188 Participants | Total: 412 Participants | Sex Part 1: Dose Cohort 1: F 8 / M 9 | Part 1: Dose Cohort 2: F 6 / M 12 | Part 1: Dose Cohort S: F 0 / M 2 | Part 2: LCZ696: F 98 / M 89 | Part 2: Enalapril: F 95 / M 93 | Total: F 207 / M 205</td>
+          <td><a href="https://clinicaltrials.gov/study/NCT04394754" target="_blank" rel="noopener">NCT04394754</a></td>
+          <td>Evaluating Efficacy of Digital Health Technology in the Treatment of Congestive Heart Failure</td>
+          <td>Yale University (OTHER)</td>
+          <td>NA</td>
+          <td>182 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to 79 Years | Healthy volunteers: No</td>
+          <td>Participants Control: 44 Participants | BodyPort: 46 Participants | Noom: 46 Participants | Conversa: 46 Participants | Total: 182 Participants | Sex Control: F 13 / M 31 | BodyPort: F 19 / M 27 | Noom: F 21 / M 25 | Conversa: F 16 / M 30 | Total: F 69 / M 113</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02627196" target="_blank" rel="noopener">NCT02627196</a></td>
+          <td>Baroreflex Activation Therapy for Heart Failure</td>
+          <td>CVRx, Inc. (INDUSTRY)</td>
+          <td>NA</td>
+          <td>1090 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 21 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Device and Medical Management: 163 Participants | Medical Management: 160 Participants | Total: 323 Participants | Age Device and Medical Management: 63 +/- 11 years | Medical Management: 63 +/- 10 years | Total: 63 +/- 11 years | Sex Device and Medical Management: F 28 / M 135 | Medical Management: F 35 / M 125 | Total: F 63 / M 260</td>
         </tr>
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02468232" target="_blank" rel="noopener">NCT02468232</a></td>
@@ -400,6 +384,15 @@
           <td>Participants LCZ696: 111 Participants | Enalapril: 112 Participants | LCZ696 (Core) OLE Epoch: 0 Participants | Enalapril (Core) OLE Epoch: 0 Participants | Total: 223 Participants | Age LCZ696: 68.97 +/- 9.717 years | Enalapril: 66.70 +/- 10.938 years | Total: 67.83 +/- 10.388 years | Sex LCZ696: F 15 / M 96 | Enalapril: F 16 / M 96 | Total: F 31 / M 192</td>
         </tr>
         <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02816736" target="_blank" rel="noopener">NCT02816736</a></td>
+          <td>EntrestoTM (LCZ696) In Advanced Heart Failure (LIFE Study)</td>
+          <td>Duke University (OTHER)</td>
+          <td>Phase 4</td>
+          <td>365 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to 85 Years | Healthy volunteers: No</td>
+          <td>Participants LCZ696 (Entresto) + Placebo: 179 Participants | Valsartan + Placebo: 186 Participants | Total: 365 Participants | Age LCZ696 (Entresto) + Placebo: 60.0 +/- 13.7 years | Valsartan + Placebo: 58.8 +/- 13.0 years | Total: 59.4 +/- 13.3 years | Sex LCZ696 (Entresto) + Placebo: F 53 / M 126 | Valsartan + Placebo: F 50 / M 136 | Total: F 103 / M 262</td>
+        </tr>
+        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT06665919" target="_blank" rel="noopener">NCT06665919</a></td>
           <td>The Study of CYP2C19 Genotype-Guided Clopidogrel Treatment Models</td>
           <td>Vistamedi Ltd. (INDUSTRY)</td>
@@ -407,6 +400,15 @@
           <td>283 (ACTUAL)</td>
           <td>Sex: ALL | Age: 35 Years to 80 Years | Healthy volunteers: No</td>
           <td>Participants Normal Metabolizers of Clopidogrel: 157 Participants | Passive Metabolizers of Clopidogrel: 43 Participants | Unspecified Metabolizers of Clopidogrel: 83 Participants | Total: 283 Participants | Age Normal Metabolizers of Clopidogrel: 63.91 +/- 9.03 years | Passive Metabolizers of Clopidogrel: 66.35 +/- 7.34 years | Unspecified Metabolizers of Clopidogrel: 63.49 +/- 9.96 years | Total: 64.16 +/- 9.10 years | Normal Metabolizers of Clopidogrel: 68.73 +/- 7.15 years | Passive Metabolizers of Clopidogrel: 69.25 +/- 6.96 years | Sex Normal Metabolizers of Clopidogrel: F 56 / M 101 | Passive Metabolizers of Clopidogrel: F 20 / M 23 | Unspecified Metabolizers of Clopidogrel: F 30 / M 53 | Total: F 106 / M 177</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02678312" target="_blank" rel="noopener">NCT02678312</a></td>
+          <td>Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure</td>
+          <td>Novartis Pharmaceuticals (INDUSTRY)</td>
+          <td>Phase 2, Phase 3</td>
+          <td>393 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 1 Month to 17 Years | Healthy volunteers: No</td>
+          <td>Participants Part 1: Dose Cohort 1: 17 Participants | Part 1: Dose Cohort 2: 18 Participants | Part 1: Dose Cohort S: 2 Participants | Part 2: LCZ696: 187 Participants | Part 2: Enalapril: 188 Participants | Total: 412 Participants | Sex Part 1: Dose Cohort 1: F 8 / M 9 | Part 1: Dose Cohort 2: F 6 / M 12 | Part 1: Dose Cohort S: F 0 / M 2 | Part 2: LCZ696: F 98 / M 89 | Part 2: Enalapril: F 95 / M 93 | Total: F 207 / M 205</td>
         </tr>
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02970669" target="_blank" rel="noopener">NCT02970669</a></td>
@@ -418,15 +420,6 @@
           <td>Participants Enalapril: 70 Participants | Sacubitril/Valsartan: 70 Participants | Total: 140 Participants | Age Enalapril: 64.2 years | Sacubitril/Valsartan: 62.3 years | Total: 63.3 years | Sex Enalapril: F 14 / M 56 | Sacubitril/Valsartan: F 18 / M 52 | Total: F 32 / M 108</td>
         </tr>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT04394754" target="_blank" rel="noopener">NCT04394754</a></td>
-          <td>Evaluating Efficacy of Digital Health Technology in the Treatment of Congestive Heart Failure</td>
-          <td>Yale University (OTHER)</td>
-          <td>NA</td>
-          <td>182 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 18 Years to 79 Years | Healthy volunteers: No</td>
-          <td>Participants Control: 44 Participants | BodyPort: 46 Participants | Noom: 46 Participants | Conversa: 46 Participants | Total: 182 Participants | Sex Control: F 13 / M 31 | BodyPort: F 19 / M 27 | Noom: F 21 / M 25 | Conversa: F 16 / M 30 | Total: F 69 / M 113</td>
-        </tr>
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02554890" target="_blank" rel="noopener">NCT02554890</a></td>
           <td>Comparison of Sacubitril/Valsartan Versus Enalapril on Effect on NT-proBNP in Patients Stabilized From an Acute Heart Failure Episode.</td>
           <td>Novartis Pharmaceuticals (INDUSTRY)</td>
@@ -434,6 +427,24 @@
           <td>887 (ACTUAL)</td>
           <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
           <td>Participants Enalapril: 441 Participants | Sacubitril/Valsartan (LCZ696): 440 Participants | Total: 881 Participants | Sex Enalapril: F 133 / M 308 | Sacubitril/Valsartan (LCZ696): F 113 / M 327 | Total: F 246 / M 635</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01920711" target="_blank" rel="noopener">NCT01920711</a></td>
+          <td>Efficacy and Safety of LCZ696 Compared to Valsartan, on Morbidity and Mortality in Heart Failure Patients With Preserved Ejection Fraction</td>
+          <td>Novartis Pharmaceuticals (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>4822 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 50 Years to NR | Healthy volunteers: No</td>
+          <td>Participants LCZ696: 2419 Participants | Valsartan: 2403 Participants | Total: 4822 Participants | Sex LCZ696: F 1247 / M 1172 | Valsartan: F 1244 / M 1159 | Total: F 2491 / M 2331</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03066804" target="_blank" rel="noopener">NCT03066804</a></td>
+          <td>A Randomized, Double-blind Controlled Study Comparing LCZ696 to Medical Therapy for Comorbidities in HFpEF Patients</td>
+          <td>Novartis Pharmaceuticals (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>2572 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 45 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Sacubitril/Valsartan (LCZ696): 1281 Participants | Individualized Medical Therapy (IMT) Comparator: 1285 Participants | Total: 2566 Participants | Sex Sacubitril/Valsartan (LCZ696): F 643 / M 638 | Individualized Medical Therapy (IMT) Comparator: F 658 / M 627 | Total: F 1301 / M 1265</td>
         </tr>
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT00887588" target="_blank" rel="noopener">NCT00887588</a></td>
@@ -461,12 +472,27 @@
               </thead>
               <tbody>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT01920711" target="_blank" rel="noopener">NCT01920711</a></td>
-          <td>The purpose of this study was to evaluate the effect of LCZ696 compared to valsartan in the reduction of cardiovascular death and heart failure(HF) hospitalizations in patients with HF with preserved ejection fraction.</td>
-          <td>Inclusion Criteria: * Left ventricular ejection fraction (LVEF) ≥45% by echo during screening epoch or within 6 months prior to study entry. * Symptom(s) of heart failure (HF) and requiring treatment with diuretic(s)...</td>
-          <td>Cumulative Number of Primary Composite Events of Cardiovascular (CV) Death and Total (First and Recurrent) HF Hospitalizations. | Time frame: Total follow up time (up to 57 months) | The primary objective of this study is to compare LCZ696 to valsartan in r...</td>
-          <td><span class="pill">Study Protocol (2015-12-09)</span>
-<span class="pill">Statistical Analysis Plan (2019-05-28)</span></td>
+          <td><a href="https://clinicaltrials.gov/study/NCT06029712" target="_blank" rel="noopener">NCT06029712</a></td>
+          <td>A novel four-drug regimen for heart failure with reduced ejection fraction (HFrEF) extends patients&#39; life expectancy by an average of 6 years compared to traditional therapies, in addition to improving quality of life. Unfortunately, upt...</td>
+          <td>Inclusion criteria: * Adults age 18+ with heart failure (current or prior NYHA stage II-IV) * Ejection fraction \&lt;50% on the most recent echocardiogram or MRI * Last eGFR \&gt; 30 * Able to conveniently obtain medication...</td>
+          <td>Measured Adherence to GDMT by Pill Count | Time frame: The outcome will be measured 1) following a month of polypill use, and 2) following a month of individual tablet use. | The primary outcome will be overall adherence to GDMT, as determined by pill count...</td>
+          <td><span class="pill">Study Protocol (2023-09-11)</span>
+<span class="pill">Statistical Analysis Plan (2025-10-20)</span>
+<span class="pill">Informed Consent Form (2024-02-15)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04164004" target="_blank" rel="noopener">NCT04164004</a></td>
+          <td>This is a randomized study evaluating the effect of routinely collecting a standardized questionnaire of heart failure health status during heart failure clinic visits. Participants will be randomized to early or delayed implementation o...</td>
+          <td>Inclusion Criteria: * Stanford Heart Failure clinic visit during enrollment period Exclusion Criteria: * Seen in amyloid clinic</td>
+          <td>Kansas City Cardiomyopathy Questionnaire-12 Score | Time frame: Collected at the first heart failure clinic visit at least one year post-randomization or via telephone interview 15 months post-randomization | The first KCCQ-12 score collected one year after...</td>
+          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2023-06-30)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT04394754" target="_blank" rel="noopener">NCT04394754</a></td>
+          <td>The purpose of this study is to determine the efficacy of three novel digital health technologies versus usual care in the management of congestive heart failure, as assessed by a primary outcome of improvement in quality of life, and a...</td>
+          <td>Inclusion Criteria: * Adults greater than or equal to 18 and less than 80 years of age * Enrolled in one of Yale New Haven Hospital&#39;s Disease Management or Heart Failure-focused cardiology clinics * Diagnosed with con...</td>
+          <td>Change in Quality of Life at 90 Days Post Enrollment | Time frame: Day 90 after enrollment | Assessed by the change in score of the Kansas City Cardiomyopathy Questionnaire (KCCQ) survey between baseline scoring (at enrollment) and at 90 days post-enrollmen...</td>
+          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2021-02-16)</span></td>
         </tr>
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02627196" target="_blank" rel="noopener">NCT02627196</a></td>
@@ -477,13 +503,12 @@
 <span class="pill">Statistical Analysis Plan (2022-12-21)</span></td>
         </tr>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT06029712" target="_blank" rel="noopener">NCT06029712</a></td>
-          <td>A novel four-drug regimen for heart failure with reduced ejection fraction (HFrEF) extends patients&#39; life expectancy by an average of 6 years compared to traditional therapies, in addition to improving quality of life. Unfortunately, upt...</td>
-          <td>Inclusion criteria: * Adults age 18+ with heart failure (current or prior NYHA stage II-IV) * Ejection fraction \&lt;50% on the most recent echocardiogram or MRI * Last eGFR \&gt; 30 * Able to conveniently obtain medication...</td>
-          <td>Measured Adherence to GDMT by Pill Count | Time frame: The outcome will be measured 1) following a month of polypill use, and 2) following a month of individual tablet use. | The primary outcome will be overall adherence to GDMT, as determined by pill count...</td>
-          <td><span class="pill">Study Protocol (2023-09-11)</span>
-<span class="pill">Statistical Analysis Plan (2025-10-20)</span>
-<span class="pill">Informed Consent Form (2024-02-15)</span></td>
+          <td><a href="https://clinicaltrials.gov/study/NCT02468232" target="_blank" rel="noopener">NCT02468232</a></td>
+          <td>The purpose of this study was to assess the effect of LCZ696 at a target dose of 200 mg b.i.d. compared to enalapril 10 mg b.i.d., in addition to the background heart failure (HF) treatment, on delaying time to first occurrence of either...</td>
+          <td>Inclusion Criteria: * Written informed consent must be obtained before any assessment is performed. * Outpatients with a diagnosis of CHF NYHA class II-IV and reduced ejection fraction: * LVEF ≤ 35% at Visit 1 (any lo...</td>
+          <td>Number of Participants Who Had CEC (Clinical Endpoint Committee) Confirmed Composite Endpoints | Time frame: up to 40 months | Composite endpoint is defined as either cardiovascular (CV) death or heart failure (HF) hospitalization in Japanese patients with...</td>
+          <td><span class="pill">Study Protocol (2018-11-19)</span>
+<span class="pill">Statistical Analysis Plan (2021-03-11)</span></td>
         </tr>
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02816736" target="_blank" rel="noopener">NCT02816736</a></td>
@@ -495,19 +520,12 @@
 <span class="pill">Informed Consent Form (2019-02-20)</span></td>
         </tr>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT03066804" target="_blank" rel="noopener">NCT03066804</a></td>
-          <td>The purpose of this study is to demonstrate the superiority of LCZ696 over individualized medical therapy for comorbidities in reducing N-terminal pro-brain natriuretic peptide (NT-proBNP) and improving exercise capacity and HF symptoms...</td>
-          <td>Inclusion Criteria: * Left ventricular ejection fraction (LVEF) \&gt;40% by echo within 6 months prior to study entry or during the screening epoch * Symptom(s) of heart failure (HF) requiring treatment with diuretics (i...</td>
-          <td>Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) at Week 12 | Time frame: Baseline, week 12 | To demonstrate that LCZ696 is superior to individualized medical therapy for comorbidities in reducing NT-proBNP from baseline at Week...</td>
-          <td><span class="pill">Study Protocol (2018-09-12)</span>
-<span class="pill">Statistical Analysis Plan (2019-10-29)</span></td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT04164004" target="_blank" rel="noopener">NCT04164004</a></td>
-          <td>This is a randomized study evaluating the effect of routinely collecting a standardized questionnaire of heart failure health status during heart failure clinic visits. Participants will be randomized to early or delayed implementation o...</td>
-          <td>Inclusion Criteria: * Stanford Heart Failure clinic visit during enrollment period Exclusion Criteria: * Seen in amyloid clinic</td>
-          <td>Kansas City Cardiomyopathy Questionnaire-12 Score | Time frame: Collected at the first heart failure clinic visit at least one year post-randomization or via telephone interview 15 months post-randomization | The first KCCQ-12 score collected one year after...</td>
-          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2023-06-30)</span></td>
+          <td><a href="https://clinicaltrials.gov/study/NCT06665919" target="_blank" rel="noopener">NCT06665919</a></td>
+          <td>The study purposed to learn how clopidogrel-based antiplatelet treatment for preventing adverse cardiovascular events after ePCI works in chronic coronary artery disease when guided by personal genetic characteristics for drug metabolism...</td>
+          <td>Inclusion Criteria: * Diagnosed with chronic coronary artery disease; * Undergone elective PCI within the last 12 weeks without procedure-related complications; * LVEF≥38% after index PCI; * Completed informed consent...</td>
+          <td>Number of Study Participants Who Died From Any Cause (Death From Any Cause) | Time frame: within a 12-month of the study follow-up | The event of death from any cause reported by the physician according to the WHO Clinical criteria for the determination of...</td>
+          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2023-06-07)</span>
+<span class="pill">Informed Consent Form (2023-06-07)</span></td>
         </tr>
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02678312" target="_blank" rel="noopener">NCT02678312</a></td>
@@ -519,22 +537,6 @@
 <span class="pill">Statistical Analysis Plan: Statistical Analysis Plan (SAP) for China Sub-CSR (2021-10-25)</span></td>
         </tr>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02468232" target="_blank" rel="noopener">NCT02468232</a></td>
-          <td>The purpose of this study was to assess the effect of LCZ696 at a target dose of 200 mg b.i.d. compared to enalapril 10 mg b.i.d., in addition to the background heart failure (HF) treatment, on delaying time to first occurrence of either...</td>
-          <td>Inclusion Criteria: * Written informed consent must be obtained before any assessment is performed. * Outpatients with a diagnosis of CHF NYHA class II-IV and reduced ejection fraction: * LVEF ≤ 35% at Visit 1 (any lo...</td>
-          <td>Number of Participants Who Had CEC (Clinical Endpoint Committee) Confirmed Composite Endpoints | Time frame: up to 40 months | Composite endpoint is defined as either cardiovascular (CV) death or heart failure (HF) hospitalization in Japanese patients with...</td>
-          <td><span class="pill">Study Protocol (2018-11-19)</span>
-<span class="pill">Statistical Analysis Plan (2021-03-11)</span></td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT06665919" target="_blank" rel="noopener">NCT06665919</a></td>
-          <td>The study purposed to learn how clopidogrel-based antiplatelet treatment for preventing adverse cardiovascular events after ePCI works in chronic coronary artery disease when guided by personal genetic characteristics for drug metabolism...</td>
-          <td>Inclusion Criteria: * Diagnosed with chronic coronary artery disease; * Undergone elective PCI within the last 12 weeks without procedure-related complications; * LVEF≥38% after index PCI; * Completed informed consent...</td>
-          <td>Number of Study Participants Who Died From Any Cause (Death From Any Cause) | Time frame: within a 12-month of the study follow-up | The event of death from any cause reported by the physician according to the WHO Clinical criteria for the determination of...</td>
-          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2023-06-07)</span>
-<span class="pill">Informed Consent Form (2023-06-07)</span></td>
-        </tr>
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02970669" target="_blank" rel="noopener">NCT02970669</a></td>
           <td>The purpose of this study was to investigate the effects of initiation of sacubitril/valsartan vs enalapril treatment on objective measures of both waking activity and sleep in subjects with heart failure with reduced ejection fraction.</td>
           <td>Key Inclusion Criteria: * Written informed consent must be obtained before any assessment is performed. * Men and women between 18 and 80 years of age * Subjects diagnosed with NYHA class II or III heart failure and w...</td>
@@ -543,19 +545,28 @@
 <span class="pill">Statistical Analysis Plan (2018-04-10)</span></td>
         </tr>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT04394754" target="_blank" rel="noopener">NCT04394754</a></td>
-          <td>The purpose of this study is to determine the efficacy of three novel digital health technologies versus usual care in the management of congestive heart failure, as assessed by a primary outcome of improvement in quality of life, and a...</td>
-          <td>Inclusion Criteria: * Adults greater than or equal to 18 and less than 80 years of age * Enrolled in one of Yale New Haven Hospital&#39;s Disease Management or Heart Failure-focused cardiology clinics * Diagnosed with con...</td>
-          <td>Change in Quality of Life at 90 Days Post Enrollment | Time frame: Day 90 after enrollment | Assessed by the change in score of the Kansas City Cardiomyopathy Questionnaire (KCCQ) survey between baseline scoring (at enrollment) and at 90 days post-enrollmen...</td>
-          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2021-02-16)</span></td>
-        </tr>
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02554890" target="_blank" rel="noopener">NCT02554890</a></td>
           <td>The purpose of this study was to assess the effect of in-hospital initiation of sacubitril/valsartan (LCZ696) vs. enalapril on time averaged proportional change in NT-proBNP in patients who have been stabilized following hospitalization...</td>
           <td>Key Inclusion Criteria: 1. Possess the capacity to provide written informed consent which must be obtained before any assessment is performed. 2. Currently hospitalized for ADHF. Patients with a diagnosis of acute hea...</td>
           <td>N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) Values and Time-averaged Change From Baseline | Time frame: Baseline, Week 4 and Week 8 | To assess the effect of in-hospital initiation of sacubitril/valsartan vs. enalapril on the time-averaged percenta...</td>
           <td><span class="pill">Study Protocol (2017-10-05)</span>
 <span class="pill">Statistical Analysis Plan (2018-08-20)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01920711" target="_blank" rel="noopener">NCT01920711</a></td>
+          <td>The purpose of this study was to evaluate the effect of LCZ696 compared to valsartan in the reduction of cardiovascular death and heart failure(HF) hospitalizations in patients with HF with preserved ejection fraction.</td>
+          <td>Inclusion Criteria: * Left ventricular ejection fraction (LVEF) ≥45% by echo during screening epoch or within 6 months prior to study entry. * Symptom(s) of heart failure (HF) and requiring treatment with diuretic(s)...</td>
+          <td>Cumulative Number of Primary Composite Events of Cardiovascular (CV) Death and Total (First and Recurrent) HF Hospitalizations. | Time frame: Total follow up time (up to 57 months) | The primary objective of this study is to compare LCZ696 to valsartan in r...</td>
+          <td><span class="pill">Study Protocol (2015-12-09)</span>
+<span class="pill">Statistical Analysis Plan (2019-05-28)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03066804" target="_blank" rel="noopener">NCT03066804</a></td>
+          <td>The purpose of this study is to demonstrate the superiority of LCZ696 over individualized medical therapy for comorbidities in reducing N-terminal pro-brain natriuretic peptide (NT-proBNP) and improving exercise capacity and HF symptoms...</td>
+          <td>Inclusion Criteria: * Left ventricular ejection fraction (LVEF) \&gt;40% by echo within 6 months prior to study entry or during the screening epoch * Symptom(s) of heart failure (HF) requiring treatment with diuretics (i...</td>
+          <td>Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) at Week 12 | Time frame: Baseline, week 12 | To demonstrate that LCZ696 is superior to individualized medical therapy for comorbidities in reducing NT-proBNP from baseline at Week...</td>
+          <td><span class="pill">Study Protocol (2018-09-12)</span>
+<span class="pill">Statistical Analysis Plan (2019-10-29)</span></td>
         </tr></tbody>
             </table>
           </div>
@@ -575,42 +586,10 @@
               </thead>
               <tbody>
       <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT01920711" target="_blank" rel="noopener">NCT01920711</a></td>
-        <td>Valsartan vs LCZ696</td>
-        <td>Cumulative Number of Primary Composite Events of Cardiovascular (CV) Death and Total (First and Recurrent) HF Hospitalizations.</td>
-        <td>4822 (ACTUAL)</td>
-        <td>Documents listed on CT.gov</td>
-      </tr>
-
-      <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT02627196" target="_blank" rel="noopener">NCT02627196</a></td>
-        <td>Medical Management vs Device and Medical Management</td>
-        <td>Rate of Cardiovascular Mortality and Heart Failure Morbidity</td>
-        <td>1090 (ACTUAL)</td>
-        <td>Documents listed on CT.gov</td>
-      </tr>
-
-      <tr>
         <td><a href="https://clinicaltrials.gov/study/NCT06029712" target="_blank" rel="noopener">NCT06029712</a></td>
-        <td>Polypill vs Individual Tablets</td>
+        <td>Individual Tablets vs Polypill</td>
         <td>Measured Adherence to GDMT by Pill Count</td>
         <td>35 (ACTUAL)</td>
-        <td>Documents listed on CT.gov</td>
-      </tr>
-
-      <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT02816736" target="_blank" rel="noopener">NCT02816736</a></td>
-        <td>Valsartan + Placebo vs LCZ696 (Entresto) + Placebo</td>
-        <td>Change in NT-proBNP</td>
-        <td>365 (ACTUAL)</td>
-        <td>Documents listed on CT.gov</td>
-      </tr>
-
-      <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT03066804" target="_blank" rel="noopener">NCT03066804</a></td>
-        <td>Individualized Medical Therapy (IMT) Comparator vs Sacubitril/Valsartan (LCZ696)</td>
-        <td>Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) at Week 12</td>
-        <td>2572 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
       </tr>
 
@@ -623,34 +602,66 @@
       </tr>
 
       <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT02678312" target="_blank" rel="noopener">NCT02678312</a></td>
-        <td>LCZ696: 0.8 mg/kg (Age Group 2) vs LCZ696: 0.8 mg/kg (Age Group 1) | LCZ696: 3.1 mg/kg (Age Group 1) vs LCZ696: 0.8 mg/kg (Age Group 1)</td>
-        <td>Part 1: Pharmacokinetics of LCZ696 Analytes (Sacubitril, LBQ657, and Valsartan): Maximum Drug Concentration in Plasma (Cmax)</td>
-        <td>393 (ACTUAL)</td>
+        <td><a href="https://clinicaltrials.gov/study/NCT04394754" target="_blank" rel="noopener">NCT04394754</a></td>
+        <td>BodyPort vs Control | Noom vs Control | Shared comparator split across CT.gov treatment arms</td>
+        <td>Number of Participants With Hospital Admission at 90 Days Post Enrollment</td>
+        <td>182 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02627196" target="_blank" rel="noopener">NCT02627196</a></td>
+        <td>Device and Medical Management vs Medical Management</td>
+        <td>Percent Change in Log 10 Amino-terminal Prohormone of Brain Natriuretic Peptide (NT-proBNP) From Baseline to 6 Months Post-implant</td>
+        <td>1090 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
       </tr>
 
       <tr>
         <td><a href="https://clinicaltrials.gov/study/NCT02468232" target="_blank" rel="noopener">NCT02468232</a></td>
-        <td>Enalapril vs LCZ696 | LCZ696 (Core) OLE Epoch vs LCZ696</td>
+        <td>Multi-arm CT.gov record without a resolved shared comparator</td>
         <td>Number of Participants Who Had CEC (Clinical Endpoint Committee) Confirmed Composite Endpoints</td>
         <td>225 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
       </tr>
 
       <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02816736" target="_blank" rel="noopener">NCT02816736</a></td>
+        <td>Valsartan + Placebo vs LCZ696 (Entresto) + Placebo</td>
+        <td>Change in NT-proBNP</td>
+        <td>365 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
         <td><a href="https://clinicaltrials.gov/study/NCT06665919" target="_blank" rel="noopener">NCT06665919</a></td>
-        <td>Passive Metabolizers of Clopidogrel vs Normal Metabolizers of Clopidogrel | Unspecified Metabolizers of Clopidogrel vs Normal Metabolizers of Clopidogrel</td>
+        <td>Multi-arm CT.gov record without a resolved shared comparator</td>
         <td>Number of Study Participants Who Died From Any Cause (Death From Any Cause)</td>
         <td>283 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
       </tr>
 
       <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02678312" target="_blank" rel="noopener">NCT02678312</a></td>
+        <td>Multi-arm CT.gov record without a resolved shared comparator</td>
+        <td>Part 1: Pharmacokinetics of LCZ696 Analytes (Sacubitril, LBQ657, and Valsartan): Maximum Drug Concentration in Plasma (Cmax)</td>
+        <td>393 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
         <td><a href="https://clinicaltrials.gov/study/NCT02970669" target="_blank" rel="noopener">NCT02970669</a></td>
-        <td>Sacubitril/Valsartan vs Enalapril</td>
+        <td>Enalapril vs Sacubitril/Valsartan</td>
         <td>Ratio of Mean Activity Counts Collected During the Most Active 30 Minutes of the Subject&#39;s Day Between Week 8 and Baseline</td>
         <td>140 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02554890" target="_blank" rel="noopener">NCT02554890</a></td>
+        <td>Enalapril vs Sacubitril/Valsartan (LCZ696)</td>
+        <td>N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) Values and Time-averaged Change From Baseline</td>
+        <td>887 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
       </tr></tbody>
             </table>
@@ -673,7 +684,7 @@
             <script>
 (() => {
   const iframe = document.getElementById("reviewerValidationFrame");
-  const context = {"source":"ctgov-portfolio-generator","topicId":"arni-heart-failure","label":"ARNI in Heart Failure","query":"(\"heart failure\") AND (\"sacubitril valsartan\" OR ARNI) AND (\"PARADIGM-HF\" OR \"PARAGON-HF\" OR \"PIONEER-HF\" OR \"LIFE\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":13,"excludedCount":85,"totalEnrollment":12550,"demographicsCoverage":13,"documentCoverage":12,"comparisons":[{"studyId":"NCT01920711","title":"Efficacy and Safety of LCZ696 Compared to Valsartan, on Morbidity and Mortality in Heart Failure Patients With Preserved Ejection Fraction","t1":"Valsartan","t2":"LCZ696","measure":"logRR","effect":0.12851553563735713,"se":0.035715660499832234,"n1":2389,"n0":2407,"totalN":4796,"sampleSize":4796},{"studyId":"NCT02627196","title":"Baroreflex Activation Therapy for Heart Failure","t1":"Medical Management","t2":"Device and Medical Management","measure":"logRR","effect":0.03629000140520043,"se":0.17330076627648047,"n1":160,"n0":159,"totalN":319,"sampleSize":319},{"studyId":"NCT06029712","title":"Heart Failure Polypill at a Safety Net Hospital","t1":"Polypill","t2":"Individual Tablets","measure":"MD","effect":8.700000000000003,"se":5.754290089633283,"n1":27,"n0":27,"totalN":54,"sampleSize":54},{"studyId":"NCT02816736","title":"EntrestoTM (LCZ696) In Advanced Heart Failure (LIFE Study)","t1":"Valsartan + Placebo","t2":"LCZ696 (Entresto) + Placebo","measure":"MD","effect":0.04999999999999999,"se":0.06563600332611334,"n1":158,"n0":155,"totalN":313,"sampleSize":313},{"studyId":"NCT03066804","title":"A Randomized, Double-blind Controlled Study Comparing LCZ696 to Medical Therapy for Comorbidities in HFpEF Patients","t1":"Individualized Medical Therapy (IMT) Comparator","t2":"Sacubitril/Valsartan (LCZ696)","measure":"MD","effect":0.16100000000000003,"se":0.02118502266553994,"n1":1216,"n0":1203,"totalN":2419,"sampleSize":2419},{"studyId":"NCT04164004","title":"Patient-Reported Outcome Measurement in Heart Failure Clinic","t1":"Routine Collection of Patient-Reported Health Status (KCCQ-12 Arm)","t2":"Usual Care","measure":"MD","effect":-0.29999999999999716,"se":1.4142135623730951,"n1":528,"n0":513,"totalN":1041,"sampleSize":1041},{"studyId":"NCT02678312","title":"Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure","t1":"LCZ696: 0.8 mg/kg (Age Group 2)","t2":"LCZ696: 0.8 mg/kg (Age Group 1)","measure":"MD","effect":-344,"se":151.34297614548032,"n1":8,"n0":7,"totalN":15,"sampleSize":15},{"studyId":"NCT02678312","title":"Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure","t1":"LCZ696: 3.1 mg/kg (Age Group 1)","t2":"LCZ696: 0.8 mg/kg (Age Group 1)","measure":"MD","effect":1447,"se":646.7121240772988,"n1":7,"n0":7,"totalN":14,"sampleSize":14},{"studyId":"NCT02678312","title":"Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure","t1":"LCZ696: 3.1 mg/kg (Age Group 2)","t2":"LCZ696: 0.8 mg/kg (Age Group 1)","measure":"MD","effect":26,"se":191.12623602017095,"n1":6,"n0":7,"totalN":13,"sampleSize":13},{"studyId":"NCT02678312","title":"Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure","t1":"LCZ696: 0.4 mg/kg (Age Group 3)","t2":"LCZ696: 0.8 mg/kg (Age Group 1)","measure":"MD","effect":-399,"se":152.7369353776991,"n1":4,"n0":7,"totalN":11,"sampleSize":11},{"studyId":"NCT02678312","title":"Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure","t1":"LCZ696: 1.6 mg/kg (Age Group 3)","t2":"LCZ696: 0.8 mg/kg (Age Group 1)","measure":"MD","effect":-90,"se":168.1688777050362,"n1":5,"n0":7,"totalN":12,"sampleSize":12},{"studyId":"NCT02468232","title":"Study of Efficacy and Safety of LCZ696 in Japanese Patients With Chronic Heart Failure and Reduced Ejection Fraction","t1":"Enalapril","t2":"LCZ696","measure":"logRR","effect":-0.07796154146971193,"se":0.22607529411689065,"n1":112,"n0":111,"totalN":223,"sampleSize":223},{"studyId":"NCT02468232","title":"Study of Efficacy and Safety of LCZ696 in Japanese Patients With Chronic Heart Failure and Reduced Ejection Fraction","t1":"LCZ696 (Core) OLE Epoch","t2":"LCZ696","measure":"logRR","effect":null,"se":null,"n1":null,"n0":111,"totalN":225,"sampleSize":225},{"studyId":"NCT02468232","title":"Study of Efficacy and Safety of LCZ696 in Japanese Patients With Chronic Heart Failure and Reduced Ejection Fraction","t1":"Enalapril (Core) OLE Epoch","t2":"LCZ696","measure":"logRR","effect":null,"se":null,"n1":null,"n0":111,"totalN":225,"sampleSize":225},{"studyId":"NCT06665919","title":"The Study of CYP2C19 Genotype-Guided Clopidogrel Treatment Models","t1":"Passive Metabolizers of Clopidogrel","t2":"Normal Metabolizers of Clopidogrel","measure":"logRR","effect":-0.06805346324501575,"se":0.7691826551640313,"n1":38,"n0":142,"totalN":180,"sampleSize":180},{"studyId":"NCT06665919","title":"The Study of CYP2C19 Genotype-Guided Clopidogrel Treatment Models","t1":"Unspecified Metabolizers of Clopidogrel","t2":"Normal Metabolizers of Clopidogrel","measure":"logRR","effect":0.5738004229273792,"se":0.4965170440682795,"n1":70,"n0":142,"totalN":212,"sampleSize":212},{"studyId":"NCT02970669","title":"Study on the Effects of Sacubitril/Valsartan on Physical Activity and Sleep in Heart Failure With Reduced Ejection Fraction Patients.","t1":"Sacubitril/Valsartan","t2":"Enalapril","measure":"MD","effect":-0.05669999999999986,"se":0.03347595909854833,"n1":64,"n0":60,"totalN":124,"sampleSize":124},{"studyId":"NCT04394754","title":"Evaluating Efficacy of Digital Health Technology in the Treatment of Congestive Heart Failure","t1":"BodyPort","t2":"Control","measure":"logRR","effect":0.3302416868705768,"se":0.330064672067514,"n1":46,"n0":44,"totalN":90,"sampleSize":90},{"studyId":"NCT04394754","title":"Evaluating Efficacy of Digital Health Technology in the Treatment of Congestive Heart Failure","t1":"Noom","t2":"Control","measure":"logRR","effect":0.1967102942460543,"se":0.3433238400921308,"n1":46,"n0":44,"totalN":90,"sampleSize":90},{"studyId":"NCT04394754","title":"Evaluating Efficacy of Digital Health Technology in the Treatment of Congestive Heart Failure","t1":"Conversa","t2":"Control","measure":"logRR","effect":0.3908663086870116,"se":0.324447556869828,"n1":46,"n0":44,"totalN":90,"sampleSize":90},{"studyId":"NCT02554890","title":"Comparison of Sacubitril/Valsartan Versus Enalapril on Effect on NT-proBNP in Patients Stabilized From an Acute Heart Failure Episode.","t1":"Sacubitril/Valsartan (LCZ696)","t2":"Enalapril","measure":"MD","effect":-0.21330000000000005,"se":0.040820320276551185,"n1":440,"n0":441,"totalN":881,"sampleSize":881},{"studyId":"NCT00887588","title":"LCZ696 Compared to Valsartan in Patients With Chronic Heart Failure and Preserved Left-ventricular Ejection Fraction","t1":"Valsartan","t2":"LCZ696","measure":"MD","effect":0.2500000000000001,"se":0.13827377788640463,"n1":132,"n0":134,"totalN":266,"sampleSize":266}],"includedStudies":[{"nctId":"NCT01920711","title":"Efficacy and Safety of LCZ696 Compared to Valsartan, on Morbidity and Mortality in Heart Failure Patients With Preserved Ejection Fraction","status":"COMPLETED","enrollment":4822,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Cumulative Number of Primary Composite Events of Cardiovascular (CV) Death and Total (First and Recurrent) HF Hospitalizations.","groups":[{"title":"LCZ696","n":2407,"events":894,"mean":null,"sd":null},{"title":"Valsartan","n":2389,"events":1009,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Cumulative Number of Primary Composite Events of Cardiovascular (CV) Death and Total (First and Recurrent) HF Hospitalizations.","timeFrame":"Total follow up time (up to 57 months)"}]},{"nctId":"NCT02627196","title":"Baroreflex Activation Therapy for Heart Failure","status":"COMPLETED","enrollment":1090,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Rate of Cardiovascular Mortality and Heart Failure Morbidity","groups":[{"title":"Device and Medical Management","n":159,"events":46,"mean":null,"sd":null},{"title":"Medical Management","n":160,"events":48,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Rate of Cardiovascular Mortality and Heart Failure Morbidity","timeFrame":"From randomization until data-cut date for the endpoint analysis. Median follow-up was 3.6 years per patient."},{"measure":"Major Adverse Neurological and Cardiovascular Events (MANCE)","timeFrame":"6 months post implant"}]},{"nctId":"NCT06029712","title":"Heart Failure Polypill at a Safety Net Hospital","status":"COMPLETED","enrollment":35,"documentsCount":3,"hasDemographics":true,"outcome":{"type":"continuous","title":"Measured Adherence to GDMT by Pill Count","groups":[{"title":"Individual Tablets","n":27,"events":null,"mean":74.6,"sd":21.07623049006007},{"title":"Polypill","n":27,"events":null,"mean":83.3,"sd":21.20878539880258}]},"primaryOutcomes":[{"measure":"Measured Adherence to GDMT by Pill Count","timeFrame":"The outcome will be measured 1) following a month of polypill use, and 2) following a month of individual tablet use."}]},{"nctId":"NCT02816736","title":"EntrestoTM (LCZ696) In Advanced Heart Failure (LIFE Study)","status":"COMPLETED","enrollment":365,"documentsCount":3,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in NT-proBNP","groups":[{"title":"LCZ696 (Entresto) + Placebo","n":155,"events":null,"mean":0.14,"sd":0.65},{"title":"Valsartan + Placebo","n":158,"events":null,"mean":0.19,"sd":0.5}]},"primaryOutcomes":[{"measure":"Change in NT-proBNP","timeFrame":"Baseline, 2, 4, 8, 12, and 24 weeks"}]},{"nctId":"NCT03066804","title":"A Randomized, Double-blind Controlled Study Comparing LCZ696 to Medical Therapy for Comorbidities in HFpEF Patients","status":"COMPLETED","enrollment":2572,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) at Week 12","groups":[{"title":"Sacubitril/Valsartan (LCZ696)","n":1203,"events":null,"mean":0.8218,"sd":0.47248497625903824},{"title":"Individualized Medical Therapy (IMT) Comparator","n":1216,"events":null,"mean":0.9828,"sd":0.5657672914473191}]},"primaryOutcomes":[{"measure":"Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) at Week 12","timeFrame":"Baseline, week 12"},{"measure":"Change From Baseline in 6 Minute Walk Distance (6MWD) at Week 24","timeFrame":"Baseline, week 24"}]},{"nctId":"NCT04164004","title":"Patient-Reported Outcome Measurement in Heart Failure Clinic","status":"COMPLETED","enrollment":1249,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"continuous","title":"Kansas City Cardiomyopathy Questionnaire-12 Score","groups":[{"title":"Routine Collection of Patient-Reported Health Status (KCCQ-12 Arm)","n":528,"events":null,"mean":79.4,"sd":22.978250586152114},{"title":"Usual Care","n":513,"events":null,"mean":79.7,"sd":22.64950330581225}]},"primaryOutcomes":[{"measure":"Kansas City Cardiomyopathy Questionnaire-12 Score","timeFrame":"Collected at the first heart failure clinic visit at least one year post-randomization or via telephone interview 15 months post-randomization"},{"measure":"Kansas City Cardiomyopathy Questionnaire-12 Response Rate","timeFrame":"1 year"}]},{"nctId":"NCT02678312","title":"Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure","status":"COMPLETED","enrollment":393,"documentsCount":3,"hasDemographics":true,"outcome":{"type":"continuous","title":"Part 1: Pharmacokinetics of LCZ696 Analytes (Sacubitril, LBQ657, and Valsartan): Maximum Drug Concentration in Plasma (Cmax)","groups":[{"title":"LCZ696: 0.8 mg/kg (Age Group 1)","n":7,"events":null,"mean":523,"sd":390},{"title":"LCZ696: 0.8 mg/kg (Age Group 2)","n":8,"events":null,"mean":179,"sd":97},{"title":"LCZ696: 3.1 mg/kg (Age Group 1)","n":7,"events":null,"mean":1970,"sd":1666},{"title":"LCZ696: 3.1 mg/kg (Age Group 2)","n":6,"events":null,"mean":549,"sd":298},{"title":"LCZ696: 0.4 mg/kg (Age Group 3)","n":4,"events":null,"mean":124,"sd":80},{"title":"LCZ696: 1.6 mg/kg (Age Group 3)","n":5,"events":null,"mean":433,"sd":181}]},"primaryOutcomes":[{"measure":"Part 1: Pharmacokinetics of LCZ696 Analytes (Sacubitril, LBQ657, and Valsartan): Maximum Drug Concentration in Plasma (Cmax)","timeFrame":"Age group 1: Pre-dose and 0.5, 1, 2, 4, 8, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2; Age groups 2 and 3: Pre-dose and 1, 2, 4, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2"},{"measure":"Part 1: Pharmacokinetics of LCZ696 Analytes (Sacubitril, LBQ657, and Valsartan): Time to Maximum Plasma Concentration (Tmax)","timeFrame":"Age group 1: Pre-dose and 0.5, 1, 2, 4, 8, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2; Age groups 2 and 3: Pre-dose and 1, 2, 4, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2"}]},{"nctId":"NCT02468232","title":"Study of Efficacy and Safety of LCZ696 in Japanese Patients With Chronic Heart Failure and Reduced Ejection Fraction","status":"COMPLETED","enrollment":225,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants Who Had CEC (Clinical Endpoint Committee) Confirmed Composite Endpoints","groups":[{"title":"LCZ696","n":111,"events":30,"mean":null,"sd":null},{"title":"Enalapril","n":112,"events":28,"mean":null,"sd":null},{"title":"LCZ696 (Core) OLE Epoch","n":null,"events":0,"mean":null,"sd":null},{"title":"Enalapril (Core) OLE Epoch","n":null,"events":0,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Participants Who Had CEC (Clinical Endpoint Committee) Confirmed Composite Endpoints","timeFrame":"up to 40 months"},{"measure":"Exposure-adjusted Incident Rate (EAIR) of CEC Confirmed Composite Endpoints","timeFrame":"up to 40 months"}]},{"nctId":"NCT06665919","title":"The Study of CYP2C19 Genotype-Guided Clopidogrel Treatment Models","status":"COMPLETED","enrollment":283,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Study Participants Who Died From Any Cause (Death From Any Cause)","groups":[{"title":"Normal Metabolizers of Clopidogrel","n":142,"events":8,"mean":null,"sd":null},{"title":"Passive Metabolizers of Clopidogrel","n":38,"events":2,"mean":null,"sd":null},{"title":"Unspecified Metabolizers of Clopidogrel","n":70,"events":7,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Study Participants Who Died From Any Cause (Death From Any Cause)","timeFrame":"within a 12-month of the study follow-up"},{"measure":"Number of Study Participants Who Died From Any Cardiovascular Cause (Death From Cardiovascular Cause)","timeFrame":"within a 12-month of the study follow-up"}]},{"nctId":"NCT02970669","title":"Study on the Effects of Sacubitril/Valsartan on Physical Activity and Sleep in Heart Failure With Reduced Ejection Fraction Patients.","status":"COMPLETED","enrollment":140,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Ratio of Mean Activity Counts Collected During the Most Active 30 Minutes of the Subject's Day Between Week 8 and Baseline","groups":[{"title":"Enalapril","n":60,"events":null,"mean":1.0411,"sd":0.19127795301677447},{"title":"Sacubitril/Valsartan","n":64,"events":null,"mean":0.9844,"sd":0.18081632653061228}]},"primaryOutcomes":[{"measure":"Ratio of Mean Activity Counts Collected During the Most Active 30 Minutes of the Subject's Day Between Week 8 and Baseline","timeFrame":"Baseline, week 8"}]},{"nctId":"NCT04394754","title":"Evaluating Efficacy of Digital Health Technology in the Treatment of Congestive Heart Failure","status":"COMPLETED","enrollment":182,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants With Hospital Admission at 90 Days Post Enrollment","groups":[{"title":"Control","n":44,"events":11,"mean":null,"sd":null},{"title":"BodyPort","n":46,"events":16,"mean":null,"sd":null},{"title":"Noom","n":46,"events":14,"mean":null,"sd":null},{"title":"Conversa","n":46,"events":17,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Change in Quality of Life at 90 Days Post Enrollment","timeFrame":"Day 90 after enrollment"}]},{"nctId":"NCT02554890","title":"Comparison of Sacubitril/Valsartan Versus Enalapril on Effect on NT-proBNP in Patients Stabilized From an Acute Heart Failure Episode.","status":"COMPLETED","enrollment":887,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) Values and Time-averaged Change From Baseline","groups":[{"title":"Enalapril","n":441,"events":null,"mean":0.7466,"sd":0.6991071428571426},{"title":"Sacubitril/Valsartan (LCZ696)","n":440,"events":null,"mean":0.5333,"sd":0.4955086701048778}]},"primaryOutcomes":[{"measure":"N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) Values and Time-averaged Change From Baseline","timeFrame":"Baseline, Week 4 and Week 8"}]},{"nctId":"NCT00887588","title":"LCZ696 Compared to Valsartan in Patients With Chronic Heart Failure and Preserved Left-ventricular Ejection Fraction","status":"COMPLETED","enrollment":307,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)","groups":[{"title":"LCZ696","n":134,"events":null,"mean":0.83,"sd":0.9744964739593812},{"title":"Valsartan","n":132,"events":null,"mean":1.08,"sd":1.2602867030670166}]},"primaryOutcomes":[{"measure":"Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)","timeFrame":"Baseline, 12 weeks"}]}]};
+  const context = {"source":"ctgov-portfolio-generator","topicId":"arni-heart-failure","label":"ARNI in Heart Failure","query":"(\"heart failure\") AND (\"sacubitril valsartan\" OR ARNI) AND (\"PARADIGM-HF\" OR \"PARAGON-HF\" OR \"PIONEER-HF\" OR \"LIFE\")","generatedAt":"2026-04-05T13:16:46.754Z","includedCount":13,"excludedCount":85,"totalEnrollment":12550,"demographicsCoverage":13,"documentCoverage":12,"analysisEligibleCount":13,"comparisonReadyStudyCount":10,"comparisonCount":12,"comparisons":[{"studyId":"NCT06029712","title":"Heart Failure Polypill at a Safety Net Hospital","t1":"Individual Tablets","t2":"Polypill","measure":"MD","effect":-8.700000000000003,"se":5.754290089633283,"n1":27,"n0":27,"totalN":54,"sampleSize":54,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT04164004","title":"Patient-Reported Outcome Measurement in Heart Failure Clinic","t1":"Routine Collection of Patient-Reported Health Status (KCCQ-12 Arm)","t2":"Usual Care","measure":"MD","effect":-0.29999999999999716,"se":1.4142135623730951,"n1":528,"n0":513,"totalN":1041,"sampleSize":1041,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT04394754","title":"Evaluating Efficacy of Digital Health Technology in the Treatment of Congestive Heart Failure","t1":"BodyPort","t2":"Control","measure":"logRR","effect":0.3302416868705768,"se":0.4952840842493043,"n1":46,"n0":14.666666666666666,"totalN":60.666666666666664,"sampleSize":60.666666666666664,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"count"},{"studyId":"NCT04394754","title":"Evaluating Efficacy of Digital Health Technology in the Treatment of Congestive Heart Failure","t1":"Noom","t2":"Control","measure":"logRR","effect":0.1967102942460543,"se":0.5042171115097577,"n1":46,"n0":14.666666666666666,"totalN":60.666666666666664,"sampleSize":60.666666666666664,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"count"},{"studyId":"NCT04394754","title":"Evaluating Efficacy of Digital Health Technology in the Treatment of Congestive Heart Failure","t1":"Conversa","t2":"Control","measure":"logRR","effect":0.3908663086870116,"se":0.4915585962247397,"n1":46,"n0":14.666666666666666,"totalN":60.666666666666664,"sampleSize":60.666666666666664,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"count"},{"studyId":"NCT02627196","title":"Baroreflex Activation Therapy for Heart Failure","t1":"Device and Medical Management","t2":"Medical Management","measure":"MD","effect":-24.400000000000002,"se":0.04544271834305805,"n1":120,"n0":123,"totalN":243,"sampleSize":243,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT02816736","title":"EntrestoTM (LCZ696) In Advanced Heart Failure (LIFE Study)","t1":"Valsartan + Placebo","t2":"LCZ696 (Entresto) + Placebo","measure":"MD","effect":0.04999999999999999,"se":0.06563600332611334,"n1":158,"n0":155,"totalN":313,"sampleSize":313,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT02970669","title":"Study on the Effects of Sacubitril/Valsartan on Physical Activity and Sleep in Heart Failure With Reduced Ejection Fraction Patients.","t1":"Enalapril","t2":"Sacubitril/Valsartan","measure":"MD","effect":0.05669999999999986,"se":0.03347595909854833,"n1":60,"n0":64,"totalN":124,"sampleSize":124,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT02554890","title":"Comparison of Sacubitril/Valsartan Versus Enalapril on Effect on NT-proBNP in Patients Stabilized From an Acute Heart Failure Episode.","t1":"Enalapril","t2":"Sacubitril/Valsartan (LCZ696)","measure":"MD","effect":0.21330000000000005,"se":0.040820320276551185,"n1":441,"n0":440,"totalN":881,"sampleSize":881,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT01920711","title":"Efficacy and Safety of LCZ696 Compared to Valsartan, on Morbidity and Mortality in Heart Failure Patients With Preserved Ejection Fraction","t1":"LCZ696","t2":"Valsartan","measure":"MD","effect":1.0264999999999997,"se":0.5259479251789098,"n1":2407,"n0":2389,"totalN":4796,"sampleSize":4796,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT03066804","title":"A Randomized, Double-blind Controlled Study Comparing LCZ696 to Medical Therapy for Comorbidities in HFpEF Patients","t1":"Sacubitril/Valsartan (LCZ696)","t2":"Individualized Medical Therapy (IMT) Comparator","measure":"MD","effect":-0.16100000000000003,"se":0.02118502266553994,"n1":1203,"n0":1216,"totalN":2419,"sampleSize":2419,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT00887588","title":"LCZ696 Compared to Valsartan in Patients With Chronic Heart Failure and Preserved Left-ventricular Ejection Fraction","t1":"LCZ696","t2":"Valsartan","measure":"MD","effect":-0.2500000000000001,"se":0.13827377788640463,"n1":134,"n0":132,"totalN":266,"sampleSize":266,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"}],"includedStudies":[{"nctId":"NCT06029712","title":"Heart Failure Polypill at a Safety Net Hospital","status":"COMPLETED","enrollment":35,"documentsCount":3,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Measured Adherence to GDMT by Pill Count","unitOfMeasure":"adherence ratio expressed in %","paramType":"MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Individual Tablets","n":27,"events":null,"mean":74.6,"sd":21.07623049006007,"rawValue":74.6,"rawUnit":"adherence ratio expressed in %","displayPercent":null,"derivation":null},{"title":"Polypill","n":27,"events":null,"mean":83.3,"sd":21.20878539880258,"rawValue":83.3,"rawUnit":"adherence ratio expressed in %","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Measured Adherence to GDMT by Pill Count","timeFrame":"The outcome will be measured 1) following a month of polypill use, and 2) following a month of individual tablet use."}]},{"nctId":"NCT04164004","title":"Patient-Reported Outcome Measurement in Heart Failure Clinic","status":"COMPLETED","enrollment":1249,"documentsCount":1,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Kansas City Cardiomyopathy Questionnaire-12 Score","unitOfMeasure":"score on a scale","paramType":"MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Routine Collection of Patient-Reported Health Status (KCCQ-12 Arm)","n":528,"events":null,"mean":79.4,"sd":22.978250586152114,"rawValue":79.4,"rawUnit":"score on a scale","displayPercent":null,"derivation":null},{"title":"Usual Care","n":513,"events":null,"mean":79.7,"sd":22.64950330581225,"rawValue":79.7,"rawUnit":"score on a scale","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Kansas City Cardiomyopathy Questionnaire-12 Score","timeFrame":"Collected at the first heart failure clinic visit at least one year post-randomization or via telephone interview 15 months post-randomization"},{"measure":"Kansas City Cardiomyopathy Questionnaire-12 Response Rate","timeFrame":"1 year"}]},{"nctId":"NCT04394754","title":"Evaluating Efficacy of Digital Health Technology in the Treatment of Congestive Heart Failure","status":"COMPLETED","enrollment":182,"documentsCount":1,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"binary","title":"Number of Participants With Hospital Admission at 90 Days Post Enrollment","unitOfMeasure":"Participants","paramType":"COUNT_OF_PARTICIPANTS","metricKind":"count","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Control","n":44,"events":11,"mean":null,"sd":null,"rawValue":11,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"BodyPort","n":46,"events":16,"mean":null,"sd":null,"rawValue":16,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"Noom","n":46,"events":14,"mean":null,"sd":null,"rawValue":14,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"Conversa","n":46,"events":17,"mean":null,"sd":null,"rawValue":17,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"}]},"primaryOutcomes":[{"measure":"Change in Quality of Life at 90 Days Post Enrollment","timeFrame":"Day 90 after enrollment"}]},{"nctId":"NCT02627196","title":"Baroreflex Activation Therapy for Heart Failure","status":"COMPLETED","enrollment":1090,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Percent Change in Log 10 Amino-terminal Prohormone of Brain Natriuretic Peptide (NT-proBNP) From Baseline to 6 Months Post-implant","unitOfMeasure":"Percent change","paramType":"MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Device and Medical Management","n":120,"events":null,"mean":-21.1,"sd":0.4,"rawValue":-21.1,"rawUnit":"Percent change","displayPercent":null,"derivation":null},{"title":"Medical Management","n":123,"events":null,"mean":3.3,"sd":0.3,"rawValue":3.3,"rawUnit":"Percent change","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Rate of Cardiovascular Mortality and Heart Failure Morbidity","timeFrame":"From randomization until data-cut date for the endpoint analysis. Median follow-up was 3.6 years per patient."},{"measure":"Major Adverse Neurological and Cardiovascular Events (MANCE)","timeFrame":"6 months post implant"}]},{"nctId":"NCT02468232","title":"Study of Efficacy and Safety of LCZ696 in Japanese Patients With Chronic Heart Failure and Reduced Ejection Fraction","status":"COMPLETED","enrollment":225,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"binary","title":"Number of Participants Who Had CEC (Clinical Endpoint Committee) Confirmed Composite Endpoints","unitOfMeasure":"Participants","paramType":"COUNT_OF_PARTICIPANTS","metricKind":"count","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"LCZ696","n":111,"events":30,"mean":null,"sd":null,"rawValue":30,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"Enalapril","n":112,"events":28,"mean":null,"sd":null,"rawValue":28,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"LCZ696 (Core) OLE Epoch","n":null,"events":0,"mean":null,"sd":null,"rawValue":0,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"Enalapril (Core) OLE Epoch","n":null,"events":0,"mean":null,"sd":null,"rawValue":0,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"}]},"primaryOutcomes":[{"measure":"Number of Participants Who Had CEC (Clinical Endpoint Committee) Confirmed Composite Endpoints","timeFrame":"up to 40 months"},{"measure":"Exposure-adjusted Incident Rate (EAIR) of CEC Confirmed Composite Endpoints","timeFrame":"up to 40 months"}]},{"nctId":"NCT02816736","title":"EntrestoTM (LCZ696) In Advanced Heart Failure (LIFE Study)","status":"COMPLETED","enrollment":365,"documentsCount":3,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Change in NT-proBNP","unitOfMeasure":"unitless","paramType":"MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"LCZ696 (Entresto) + Placebo","n":155,"events":null,"mean":0.14,"sd":0.65,"rawValue":0.14,"rawUnit":"unitless","displayPercent":null,"derivation":null},{"title":"Valsartan + Placebo","n":158,"events":null,"mean":0.19,"sd":0.5,"rawValue":0.19,"rawUnit":"unitless","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Change in NT-proBNP","timeFrame":"Baseline, 2, 4, 8, 12, and 24 weeks"}]},{"nctId":"NCT06665919","title":"The Study of CYP2C19 Genotype-Guided Clopidogrel Treatment Models","status":"COMPLETED","enrollment":283,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"binary","title":"Number of Study Participants Who Died From Any Cause (Death From Any Cause)","unitOfMeasure":"Participants","paramType":"COUNT_OF_PARTICIPANTS","metricKind":"count","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Normal Metabolizers of Clopidogrel","n":142,"events":8,"mean":null,"sd":null,"rawValue":8,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"Passive Metabolizers of Clopidogrel","n":38,"events":2,"mean":null,"sd":null,"rawValue":2,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"Unspecified Metabolizers of Clopidogrel","n":70,"events":7,"mean":null,"sd":null,"rawValue":7,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"}]},"primaryOutcomes":[{"measure":"Number of Study Participants Who Died From Any Cause (Death From Any Cause)","timeFrame":"within a 12-month of the study follow-up"},{"measure":"Number of Study Participants Who Died From Any Cardiovascular Cause (Death From Cardiovascular Cause)","timeFrame":"within a 12-month of the study follow-up"}]},{"nctId":"NCT02678312","title":"Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure","status":"COMPLETED","enrollment":393,"documentsCount":3,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Part 1: Pharmacokinetics of LCZ696 Analytes (Sacubitril, LBQ657, and Valsartan): Maximum Drug Concentration in Plasma (Cmax)","unitOfMeasure":"nanograms per milliliter (ng/ml)","paramType":"MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"LCZ696: 0.8 mg/kg (Age Group 1)","n":7,"events":null,"mean":523,"sd":390,"rawValue":523,"rawUnit":"nanograms per milliliter (ng/ml)","displayPercent":null,"derivation":null},{"title":"LCZ696: 0.8 mg/kg (Age Group 2)","n":8,"events":null,"mean":179,"sd":97,"rawValue":179,"rawUnit":"nanograms per milliliter (ng/ml)","displayPercent":null,"derivation":null},{"title":"LCZ696: 3.1 mg/kg (Age Group 1)","n":7,"events":null,"mean":1970,"sd":1666,"rawValue":1970,"rawUnit":"nanograms per milliliter (ng/ml)","displayPercent":null,"derivation":null},{"title":"LCZ696: 3.1 mg/kg (Age Group 2)","n":6,"events":null,"mean":549,"sd":298,"rawValue":549,"rawUnit":"nanograms per milliliter (ng/ml)","displayPercent":null,"derivation":null},{"title":"LCZ696: 0.4 mg/kg (Age Group 3)","n":4,"events":null,"mean":124,"sd":80,"rawValue":124,"rawUnit":"nanograms per milliliter (ng/ml)","displayPercent":null,"derivation":null},{"title":"LCZ696: 1.6 mg/kg (Age Group 3)","n":5,"events":null,"mean":433,"sd":181,"rawValue":433,"rawUnit":"nanograms per milliliter (ng/ml)","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Part 1: Pharmacokinetics of LCZ696 Analytes (Sacubitril, LBQ657, and Valsartan): Maximum Drug Concentration in Plasma (Cmax)","timeFrame":"Age group 1: Pre-dose and 0.5, 1, 2, 4, 8, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2; Age groups 2 and 3: Pre-dose and 1, 2, 4, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2"},{"measure":"Part 1: Pharmacokinetics of LCZ696 Analytes (Sacubitril, LBQ657, and Valsartan): Time to Maximum Plasma Concentration (Tmax)","timeFrame":"Age group 1: Pre-dose and 0.5, 1, 2, 4, 8, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2; Age groups 2 and 3: Pre-dose and 1, 2, 4, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2"}]},{"nctId":"NCT02970669","title":"Study on the Effects of Sacubitril/Valsartan on Physical Activity and Sleep in Heart Failure With Reduced Ejection Fraction Patients.","status":"COMPLETED","enrollment":140,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Ratio of Mean Activity Counts Collected During the Most Active 30 Minutes of the Subject's Day Between Week 8 and Baseline","unitOfMeasure":"Ratio","paramType":"GEOMETRIC_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Enalapril","n":60,"events":null,"mean":1.0411,"sd":0.19127795301677447,"rawValue":1.0411,"rawUnit":"Ratio","displayPercent":null,"derivation":null},{"title":"Sacubitril/Valsartan","n":64,"events":null,"mean":0.9844,"sd":0.18081632653061228,"rawValue":0.9844,"rawUnit":"Ratio","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Ratio of Mean Activity Counts Collected During the Most Active 30 Minutes of the Subject's Day Between Week 8 and Baseline","timeFrame":"Baseline, week 8"}]},{"nctId":"NCT02554890","title":"Comparison of Sacubitril/Valsartan Versus Enalapril on Effect on NT-proBNP in Patients Stabilized From an Acute Heart Failure Episode.","status":"COMPLETED","enrollment":887,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) Values and Time-averaged Change From Baseline","unitOfMeasure":"pg/ml","paramType":"GEOMETRIC_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Enalapril","n":441,"events":null,"mean":0.7466,"sd":0.6991071428571426,"rawValue":0.7466,"rawUnit":"pg/ml","displayPercent":null,"derivation":null},{"title":"Sacubitril/Valsartan (LCZ696)","n":440,"events":null,"mean":0.5333,"sd":0.4955086701048778,"rawValue":0.5333,"rawUnit":"pg/ml","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) Values and Time-averaged Change From Baseline","timeFrame":"Baseline, Week 4 and Week 8"}]},{"nctId":"NCT01920711","title":"Efficacy and Safety of LCZ696 Compared to Valsartan, on Morbidity and Mortality in Heart Failure Patients With Preserved Ejection Fraction","status":"COMPLETED","enrollment":4822,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Change in the Clinical Summary Score From Baseline to Month 8 by Kansas City Cardiomyopathy Questionnaire (KCCQ)","unitOfMeasure":"Points on a scale","paramType":"LEAST_SQUARES_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"LCZ696","n":2407,"events":null,"mean":-1.5073,"sd":18.196793994272728,"rawValue":-1.5073,"rawUnit":"Points on a scale","displayPercent":null,"derivation":null},{"title":"Valsartan","n":2389,"events":null,"mean":-2.5338,"sd":18.226381579732166,"rawValue":-2.5338,"rawUnit":"Points on a scale","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Cumulative Number of Primary Composite Events of Cardiovascular (CV) Death and Total (First and Recurrent) HF Hospitalizations.","timeFrame":"Total follow up time (up to 57 months)"}]},{"nctId":"NCT03066804","title":"A Randomized, Double-blind Controlled Study Comparing LCZ696 to Medical Therapy for Comorbidities in HFpEF Patients","status":"COMPLETED","enrollment":2572,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) at Week 12","unitOfMeasure":"Ratio","paramType":"GEOMETRIC_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Sacubitril/Valsartan (LCZ696)","n":1203,"events":null,"mean":0.8218,"sd":0.47248497625903824,"rawValue":0.8218,"rawUnit":"Ratio","displayPercent":null,"derivation":null},{"title":"Individualized Medical Therapy (IMT) Comparator","n":1216,"events":null,"mean":0.9828,"sd":0.5657672914473191,"rawValue":0.9828,"rawUnit":"Ratio","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) at Week 12","timeFrame":"Baseline, week 12"},{"measure":"Change From Baseline in 6 Minute Walk Distance (6MWD) at Week 24","timeFrame":"Baseline, week 24"}]},{"nctId":"NCT00887588","title":"LCZ696 Compared to Valsartan in Patients With Chronic Heart Failure and Preserved Left-ventricular Ejection Fraction","status":"COMPLETED","enrollment":307,"documentsCount":0,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)","unitOfMeasure":"ratio: endpoint/baseline (pg/mL)","paramType":"GEOMETRIC_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"LCZ696","n":134,"events":null,"mean":0.83,"sd":0.9744964739593812,"rawValue":0.83,"rawUnit":"ratio: endpoint/baseline (pg/mL)","displayPercent":null,"derivation":null},{"title":"Valsartan","n":132,"events":null,"mean":1.08,"sd":1.2602867030670166,"rawValue":1.08,"rawUnit":"ratio: endpoint/baseline (pg/mL)","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)","timeFrame":"Baseline, 12 weeks"}]}]};
   if (!iframe || !context) return;
   const sendContext = () => {
     if (!iframe.contentWindow) return;
@@ -695,7 +706,7 @@
       <main class="layout">
         <section class="panel topics">
           <div class="panel__header">
-            <h2 id="topicPanelTitle">CT.gov-validated topic (13 eligible RCTs in snapshot)</h2>
+            <h2 id="topicPanelTitle">CT.gov completeness-screened topic (13 eligible RCTs in snapshot)</h2>
             <div class="topic-stats">
               <span id="topicCount">0</span> topics -
               <span id="trialCount">0</span> trials
@@ -834,7 +845,7 @@
           <div class="dataset-filters">
             <label>
               Source:
-              <select id="datasetSourceFilter">
+              <select aria-label="Source" id="datasetSourceFilter">
                 <option value="all">All Sources</option>
                 <option value="metafor">metafor</option>
                 <option value="meta">meta</option>
@@ -845,7 +856,7 @@
             </label>
             <label>
               Type:
-              <select id="datasetTypeFilter">
+              <select aria-label="Type" id="datasetTypeFilter">
                 <option value="all">All Types</option>
                 <option value="pairwise">Pairwise</option>
                 <option value="network">Network</option>
@@ -853,16 +864,16 @@
                 <option value="continuous">Continuous</option>
               </select>
             </label>
-            <label>
+            <label for="datasetSearch">
               Relevance:
-              <select id="datasetRelevanceFilter">
+              <select aria-label="Relevance" id="datasetRelevanceFilter">
                 <option value="all">All</option>
                 <option value="acs">ACS-specific</option>
                 <option value="cardiovascular">Cardiovascular</option>
                 <option value="classic">Classic examples</option>
               </select>
             </label>
-            <input type="text" id="datasetSearch" placeholder="Search datasets..." />
+            <input type="text" id="datasetSearch" aria-label="Search datasets..." placeholder="Search datasets..." />
           </div>
           <div id="datasetList" class="dataset-list"></div>
           <div id="datasetPreview" class="dataset-preview hidden">
@@ -875,11 +886,11 @@
         </div>
         <div class="modal-footer">
           <div class="import-options">
-            <label>
-              <input type="checkbox" id="createTopicCheck" checked />
+            <label for="customTopicName">
+              <input type="checkbox" id="createTopicCheck" checked / aria-label="Create as new topic">
               Create as new topic
             </label>
-            <input type="text" id="customTopicName" placeholder="Custom topic name (optional)" />
+            <input type="text" id="customTopicName" aria-label="Custom topic name (optional)" placeholder="Custom topic name (optional)" />
           </div>
           <button id="importDatasetConfirmBtn" class="btn btn--primary" disabled>Import Selected Dataset</button>
         </div>
@@ -899,11 +910,11 @@
             <div class="form-row">
               <label>
                 Study Name/ID *
-                <input type="text" id="entryStudyName" placeholder="e.g., COMPLETE 2019" required />
+                <input type="text" aria-label="Study Name/ID *" id="entryStudyName" aria-label="e.g., COMPLETE 2019" placeholder="e.g., COMPLETE 2019" required />
               </label>
               <label>
                 Year
-                <input type="number" id="entryStudyYear" placeholder="2019" min="1900" max="2100" />
+                <input type="number" aria-label="Year" id="entryStudyYear" aria-label="2019" placeholder="2019" min="1900" max="2100" />
               </label>
             </div>
           </div>
@@ -912,13 +923,13 @@
             <h4>Outcome Type</h4>
             <div class="form-row">
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="binary" checked /> Binary (events/n)
+                <input type="radio" name="outcomeType" value="binary" checked / aria-label="Binary (events/n)"> Binary (events/n)
               </label>
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="continuous" /> Continuous (mean/SD/n)
+                <input type="radio" name="outcomeType" value="continuous" / aria-label="Continuous (mean/SD/n)"> Continuous (mean/SD/n)
               </label>
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="precomputed" /> Pre-computed (HR/OR/RR with CI)
+                <input type="radio" name="outcomeType" value="precomputed" / aria-label="Pre-computed (HR/OR/RR with CI)"> Pre-computed (HR/OR/RR with CI)
               </label>
             </div>
           </div>
@@ -928,29 +939,29 @@
             <div class="form-row">
               <label>
                 Treatment Arm Label
-                <input type="text" id="entryTreat1Label" placeholder="e.g., Complete revasc" />
+                <input type="text" aria-label="Treatment Arm Label" id="entryTreat1Label" aria-label="e.g., Complete revasc" placeholder="e.g., Complete revasc" />
               </label>
               <label>
                 Events
-                <input type="number" id="entryTreat1Events" min="0" />
+                <input type="number" aria-label="Events" id="entryTreat1Events" min="0" />
               </label>
               <label>
                 Total N
-                <input type="number" id="entryTreat1N" min="1" />
+                <input type="number" aria-label="Total N" id="entryTreat1N" min="1" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Control Arm Label
-                <input type="text" id="entryTreat2Label" placeholder="e.g., Culprit-only" />
+                <input type="text" aria-label="Control Arm Label" id="entryTreat2Label" aria-label="e.g., Culprit-only" placeholder="e.g., Culprit-only" />
               </label>
               <label>
                 Events
-                <input type="number" id="entryTreat2Events" min="0" />
+                <input type="number" aria-label="Events" id="entryTreat2Events" min="0" />
               </label>
               <label>
                 Total N
-                <input type="number" id="entryTreat2N" min="1" />
+                <input type="number" aria-label="Total N" id="entryTreat2N" min="1" />
               </label>
             </div>
           </div>
@@ -960,37 +971,37 @@
             <div class="form-row">
               <label>
                 Treatment Arm Label
-                <input type="text" id="entryContTreat1Label" placeholder="e.g., Intervention" />
+                <input type="text" aria-label="Treatment Arm Label" id="entryContTreat1Label" aria-label="e.g., Intervention" placeholder="e.g., Intervention" />
               </label>
               <label>
                 Mean
-                <input type="number" id="entryContTreat1Mean" step="any" />
+                <input type="number" aria-label="Mean" id="entryContTreat1Mean" step="any" />
               </label>
               <label>
                 SD
-                <input type="number" id="entryContTreat1SD" step="any" min="0" />
+                <input type="number" aria-label="SD" id="entryContTreat1SD" step="any" min="0" />
               </label>
               <label>
                 N
-                <input type="number" id="entryContTreat1N" min="1" />
+                <input type="number" aria-label="N" id="entryContTreat1N" min="1" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Control Arm Label
-                <input type="text" id="entryContTreat2Label" placeholder="e.g., Control" />
+                <input type="text" aria-label="Control Arm Label" id="entryContTreat2Label" aria-label="e.g., Control" placeholder="e.g., Control" />
               </label>
               <label>
                 Mean
-                <input type="number" id="entryContTreat2Mean" step="any" />
+                <input type="number" aria-label="Mean" id="entryContTreat2Mean" step="any" />
               </label>
               <label>
                 SD
-                <input type="number" id="entryContTreat2SD" step="any" min="0" />
+                <input type="number" aria-label="SD" id="entryContTreat2SD" step="any" min="0" />
               </label>
               <label>
                 N
-                <input type="number" id="entryContTreat2N" min="1" />
+                <input type="number" aria-label="N" id="entryContTreat2N" min="1" />
               </label>
             </div>
           </div>
@@ -1000,7 +1011,7 @@
             <div class="form-row">
               <label>
                 Effect Measure
-                <select id="entryEffectMeasure">
+                <select aria-label="Effect Measure" id="entryEffectMeasure">
                   <option value="HR">Hazard Ratio (HR)</option>
                   <option value="OR">Odds Ratio (OR)</option>
                   <option value="RR">Risk Ratio (RR)</option>
@@ -1010,27 +1021,27 @@
               </label>
               <label>
                 Point Estimate
-                <input type="number" id="entryEffectValue" step="any" placeholder="e.g., 0.74" />
+                <input type="number" aria-label="Point Estimate" id="entryEffectValue" step="any" aria-label="e.g., 0.74" placeholder="e.g., 0.74" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 95% CI Lower
-                <input type="number" id="entryCILower" step="any" />
+                <input type="number" aria-label="95% CI Lower" id="entryCILower" step="any" />
               </label>
               <label>
                 95% CI Upper
-                <input type="number" id="entryCIUpper" step="any" />
+                <input type="number" aria-label="95% CI Upper" id="entryCIUpper" step="any" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Treatment Label
-                <input type="text" id="entryPreTreat1" placeholder="e.g., Treatment" />
+                <input type="text" aria-label="Treatment Label" id="entryPreTreat1" aria-label="e.g., Treatment" placeholder="e.g., Treatment" />
               </label>
               <label>
                 Control Label
-                <input type="text" id="entryPreTreat2" placeholder="e.g., Control" />
+                <input type="text" aria-label="Control Label" id="entryPreTreat2" aria-label="e.g., Control" placeholder="e.g., Control" />
               </label>
             </div>
           </div>
@@ -1060,7 +1071,7 @@
           </div>
           <div class="rob-domains">
             <div class="rob-domain-row">
-              <label>
+              <label for="robD1Notes">
                 <span class="domain-label">D1: Randomization process</span>
                 <select id="robD1" class="rob-select">
                   <option value="">Not assessed</option>
@@ -1069,10 +1080,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD1Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD1Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD2Notes">
                 <span class="domain-label">D2: Deviations from intended interventions</span>
                 <select id="robD2" class="rob-select">
                   <option value="">Not assessed</option>
@@ -1081,10 +1092,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD2Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD2Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD3Notes">
                 <span class="domain-label">D3: Missing outcome data</span>
                 <select id="robD3" class="rob-select">
                   <option value="">Not assessed</option>
@@ -1093,10 +1104,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD3Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD3Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD4Notes">
                 <span class="domain-label">D4: Measurement of the outcome</span>
                 <select id="robD4" class="rob-select">
                   <option value="">Not assessed</option>
@@ -1105,10 +1116,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD4Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD4Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD5Notes">
                 <span class="domain-label">D5: Selection of reported result</span>
                 <select id="robD5" class="rob-select">
                   <option value="">Not assessed</option>
@@ -1117,7 +1128,7 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD5Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD5Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
           </div>
           <div class="rob-overall">
@@ -1150,7 +1161,7 @@
           <div class="import-panel active" id="zenodo-panel">
             <label>
               Zenodo DOI or Record ID:
-              <input type="text" id="zenodoDoi" placeholder="10.5281/zenodo.1234567 or 1234567" />
+              <input type="text" aria-label="Zenodo DOI or Record ID" id="zenodoDoi" aria-label="10.5281/zenodo.1234567 or 1234567" placeholder="10.5281/zenodo.1234567 or 1234567" />
             </label>
             <button id="fetchZenodoBtn" class="btn">Fetch Record</button>
             <div id="zenodoResult" class="import-result"></div>
@@ -1158,7 +1169,7 @@
           <div class="import-panel" id="github-panel">
             <label>
               GitHub Raw URL:
-              <input type="text" id="githubUrl" placeholder="https://raw.githubusercontent.com/..." />
+              <input type="text" aria-label="GitHub Raw URL" id="githubUrl" aria-label="https://raw.githubusercontent.com/..." placeholder="https://raw.githubusercontent.com/..." />
             </label>
             <button id="fetchGithubBtn" class="btn">Fetch File</button>
             <div id="githubResult" class="import-result"></div>
@@ -1166,7 +1177,7 @@
           <div class="import-panel" id="csv-panel">
             <label>
               Upload CSV/JSON file:
-              <input type="file" id="csvUpload" accept=".csv,.json" />
+              <input type="file" aria-label="Upload CSV/JSON file" id="csvUpload" accept=".csv,.json" />
             </label>
             <div id="csvResult" class="import-result"></div>
           </div>
@@ -1238,7 +1249,7 @@
             <button id="wizardFinishBtn" class="btn btn--accent hidden">Get Started</button>
           </div>
           <label class="wizard-dismiss">
-            <input type="checkbox" id="dontShowAgain"> Don't show this again
+            <input type="checkbox" id="dontShowAgain" aria-label="Don't show this again"> Don't show this again
           </label>
         </div>
       </div>
@@ -1350,8 +1361,8 @@
     "pageTitle": "ARNI in Heart Failure | CT.gov Living Meta-Analysis",
     "kicker": "Registry-Native Cardiovascular Evidence",
     "title": "ARNI in Heart Failure Living Meta-Analysis",
-    "subtitle": "Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.",
-    "topicPanelTitle": "CT.gov-validated topic (13 eligible RCTs in snapshot)",
+    "subtitle": "Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio.",
+    "topicPanelTitle": "CT.gov completeness-screened topic (13 eligible RCTs in snapshot)",
     "welcomeTitle": "ARNI in Heart Failure CT.gov review",
     "eligibilityTrialMinimum": 1,
     "analysisStudioName": "ARNI in Heart Failure CT.gov Living Meta-Analysis Studio",
@@ -1370,77 +1381,31 @@
       "topicId": "arni-heart-failure",
       "label": "ARNI in Heart Failure",
       "query": "(\"heart failure\") AND (\"sacubitril valsartan\" OR ARNI) AND (\"PARADIGM-HF\" OR \"PARAGON-HF\" OR \"PIONEER-HF\" OR \"LIFE\")",
-      "generatedAt": "2026-03-28T18:45:05.888Z",
+      "generatedAt": "2026-04-05T13:16:46.754Z",
       "includedCount": 13,
       "excludedCount": 85,
       "totalEnrollment": 12550,
       "demographicsCoverage": 13,
       "documentCoverage": 12,
+      "analysisEligibleCount": 13,
+      "comparisonReadyStudyCount": 10,
+      "comparisonCount": 12,
       "comparisons": [
-        {
-          "studyId": "NCT01920711",
-          "title": "Efficacy and Safety of LCZ696 Compared to Valsartan, on Morbidity and Mortality in Heart Failure Patients With Preserved Ejection Fraction",
-          "t1": "Valsartan",
-          "t2": "LCZ696",
-          "measure": "logRR",
-          "effect": 0.12851553563735713,
-          "se": 0.035715660499832234,
-          "n1": 2389,
-          "n0": 2407,
-          "totalN": 4796,
-          "sampleSize": 4796
-        },
-        {
-          "studyId": "NCT02627196",
-          "title": "Baroreflex Activation Therapy for Heart Failure",
-          "t1": "Medical Management",
-          "t2": "Device and Medical Management",
-          "measure": "logRR",
-          "effect": 0.03629000140520043,
-          "se": 0.17330076627648047,
-          "n1": 160,
-          "n0": 159,
-          "totalN": 319,
-          "sampleSize": 319
-        },
         {
           "studyId": "NCT06029712",
           "title": "Heart Failure Polypill at a Safety Net Hospital",
-          "t1": "Polypill",
-          "t2": "Individual Tablets",
+          "t1": "Individual Tablets",
+          "t2": "Polypill",
           "measure": "MD",
-          "effect": 8.700000000000003,
+          "effect": -8.700000000000003,
           "se": 5.754290089633283,
           "n1": 27,
           "n0": 27,
           "totalN": 54,
-          "sampleSize": 54
-        },
-        {
-          "studyId": "NCT02816736",
-          "title": "EntrestoTM (LCZ696) In Advanced Heart Failure (LIFE Study)",
-          "t1": "Valsartan + Placebo",
-          "t2": "LCZ696 (Entresto) + Placebo",
-          "measure": "MD",
-          "effect": 0.04999999999999999,
-          "se": 0.06563600332611334,
-          "n1": 158,
-          "n0": 155,
-          "totalN": 313,
-          "sampleSize": 313
-        },
-        {
-          "studyId": "NCT03066804",
-          "title": "A Randomized, Double-blind Controlled Study Comparing LCZ696 to Medical Therapy for Comorbidities in HFpEF Patients",
-          "t1": "Individualized Medical Therapy (IMT) Comparator",
-          "t2": "Sacubitril/Valsartan (LCZ696)",
-          "measure": "MD",
-          "effect": 0.16100000000000003,
-          "se": 0.02118502266553994,
-          "n1": 1216,
-          "n0": 1203,
-          "totalN": 2419,
-          "sampleSize": 2419
+          "sampleSize": 54,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
         },
         {
           "studyId": "NCT04164004",
@@ -1453,150 +1418,10 @@
           "n1": 528,
           "n0": 513,
           "totalN": 1041,
-          "sampleSize": 1041
-        },
-        {
-          "studyId": "NCT02678312",
-          "title": "Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure",
-          "t1": "LCZ696: 0.8 mg/kg (Age Group 2)",
-          "t2": "LCZ696: 0.8 mg/kg (Age Group 1)",
-          "measure": "MD",
-          "effect": -344,
-          "se": 151.34297614548032,
-          "n1": 8,
-          "n0": 7,
-          "totalN": 15,
-          "sampleSize": 15
-        },
-        {
-          "studyId": "NCT02678312",
-          "title": "Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure",
-          "t1": "LCZ696: 3.1 mg/kg (Age Group 1)",
-          "t2": "LCZ696: 0.8 mg/kg (Age Group 1)",
-          "measure": "MD",
-          "effect": 1447,
-          "se": 646.7121240772988,
-          "n1": 7,
-          "n0": 7,
-          "totalN": 14,
-          "sampleSize": 14
-        },
-        {
-          "studyId": "NCT02678312",
-          "title": "Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure",
-          "t1": "LCZ696: 3.1 mg/kg (Age Group 2)",
-          "t2": "LCZ696: 0.8 mg/kg (Age Group 1)",
-          "measure": "MD",
-          "effect": 26,
-          "se": 191.12623602017095,
-          "n1": 6,
-          "n0": 7,
-          "totalN": 13,
-          "sampleSize": 13
-        },
-        {
-          "studyId": "NCT02678312",
-          "title": "Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure",
-          "t1": "LCZ696: 0.4 mg/kg (Age Group 3)",
-          "t2": "LCZ696: 0.8 mg/kg (Age Group 1)",
-          "measure": "MD",
-          "effect": -399,
-          "se": 152.7369353776991,
-          "n1": 4,
-          "n0": 7,
-          "totalN": 11,
-          "sampleSize": 11
-        },
-        {
-          "studyId": "NCT02678312",
-          "title": "Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure",
-          "t1": "LCZ696: 1.6 mg/kg (Age Group 3)",
-          "t2": "LCZ696: 0.8 mg/kg (Age Group 1)",
-          "measure": "MD",
-          "effect": -90,
-          "se": 168.1688777050362,
-          "n1": 5,
-          "n0": 7,
-          "totalN": 12,
-          "sampleSize": 12
-        },
-        {
-          "studyId": "NCT02468232",
-          "title": "Study of Efficacy and Safety of LCZ696 in Japanese Patients With Chronic Heart Failure and Reduced Ejection Fraction",
-          "t1": "Enalapril",
-          "t2": "LCZ696",
-          "measure": "logRR",
-          "effect": -0.07796154146971193,
-          "se": 0.22607529411689065,
-          "n1": 112,
-          "n0": 111,
-          "totalN": 223,
-          "sampleSize": 223
-        },
-        {
-          "studyId": "NCT02468232",
-          "title": "Study of Efficacy and Safety of LCZ696 in Japanese Patients With Chronic Heart Failure and Reduced Ejection Fraction",
-          "t1": "LCZ696 (Core) OLE Epoch",
-          "t2": "LCZ696",
-          "measure": "logRR",
-          "effect": null,
-          "se": null,
-          "n1": null,
-          "n0": 111,
-          "totalN": 225,
-          "sampleSize": 225
-        },
-        {
-          "studyId": "NCT02468232",
-          "title": "Study of Efficacy and Safety of LCZ696 in Japanese Patients With Chronic Heart Failure and Reduced Ejection Fraction",
-          "t1": "Enalapril (Core) OLE Epoch",
-          "t2": "LCZ696",
-          "measure": "logRR",
-          "effect": null,
-          "se": null,
-          "n1": null,
-          "n0": 111,
-          "totalN": 225,
-          "sampleSize": 225
-        },
-        {
-          "studyId": "NCT06665919",
-          "title": "The Study of CYP2C19 Genotype-Guided Clopidogrel Treatment Models",
-          "t1": "Passive Metabolizers of Clopidogrel",
-          "t2": "Normal Metabolizers of Clopidogrel",
-          "measure": "logRR",
-          "effect": -0.06805346324501575,
-          "se": 0.7691826551640313,
-          "n1": 38,
-          "n0": 142,
-          "totalN": 180,
-          "sampleSize": 180
-        },
-        {
-          "studyId": "NCT06665919",
-          "title": "The Study of CYP2C19 Genotype-Guided Clopidogrel Treatment Models",
-          "t1": "Unspecified Metabolizers of Clopidogrel",
-          "t2": "Normal Metabolizers of Clopidogrel",
-          "measure": "logRR",
-          "effect": 0.5738004229273792,
-          "se": 0.4965170440682795,
-          "n1": 70,
-          "n0": 142,
-          "totalN": 212,
-          "sampleSize": 212
-        },
-        {
-          "studyId": "NCT02970669",
-          "title": "Study on the Effects of Sacubitril/Valsartan on Physical Activity and Sleep in Heart Failure With Reduced Ejection Fraction Patients.",
-          "t1": "Sacubitril/Valsartan",
-          "t2": "Enalapril",
-          "measure": "MD",
-          "effect": -0.05669999999999986,
-          "se": 0.03347595909854833,
-          "n1": 64,
-          "n0": 60,
-          "totalN": 124,
-          "sampleSize": 124
+          "sampleSize": 1041,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
         },
         {
           "studyId": "NCT04394754",
@@ -1605,11 +1430,14 @@
           "t2": "Control",
           "measure": "logRR",
           "effect": 0.3302416868705768,
-          "se": 0.330064672067514,
+          "se": 0.4952840842493043,
           "n1": 46,
-          "n0": 44,
-          "totalN": 90,
-          "sampleSize": 90
+          "n0": 14.666666666666666,
+          "totalN": 60.666666666666664,
+          "sampleSize": 60.666666666666664,
+          "comparisonStrategy": "split-shared-comparator",
+          "sharedComparatorSplit": true,
+          "outcomeMetricKind": "count"
         },
         {
           "studyId": "NCT04394754",
@@ -1618,11 +1446,14 @@
           "t2": "Control",
           "measure": "logRR",
           "effect": 0.1967102942460543,
-          "se": 0.3433238400921308,
+          "se": 0.5042171115097577,
           "n1": 46,
-          "n0": 44,
-          "totalN": 90,
-          "sampleSize": 90
+          "n0": 14.666666666666666,
+          "totalN": 60.666666666666664,
+          "sampleSize": 60.666666666666664,
+          "comparisonStrategy": "split-shared-comparator",
+          "sharedComparatorSplit": true,
+          "outcomeMetricKind": "count"
         },
         {
           "studyId": "NCT04394754",
@@ -1631,112 +1462,129 @@
           "t2": "Control",
           "measure": "logRR",
           "effect": 0.3908663086870116,
-          "se": 0.324447556869828,
+          "se": 0.4915585962247397,
           "n1": 46,
-          "n0": 44,
-          "totalN": 90,
-          "sampleSize": 90
+          "n0": 14.666666666666666,
+          "totalN": 60.666666666666664,
+          "sampleSize": 60.666666666666664,
+          "comparisonStrategy": "split-shared-comparator",
+          "sharedComparatorSplit": true,
+          "outcomeMetricKind": "count"
+        },
+        {
+          "studyId": "NCT02627196",
+          "title": "Baroreflex Activation Therapy for Heart Failure",
+          "t1": "Device and Medical Management",
+          "t2": "Medical Management",
+          "measure": "MD",
+          "effect": -24.400000000000002,
+          "se": 0.04544271834305805,
+          "n1": 120,
+          "n0": 123,
+          "totalN": 243,
+          "sampleSize": 243,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT02816736",
+          "title": "EntrestoTM (LCZ696) In Advanced Heart Failure (LIFE Study)",
+          "t1": "Valsartan + Placebo",
+          "t2": "LCZ696 (Entresto) + Placebo",
+          "measure": "MD",
+          "effect": 0.04999999999999999,
+          "se": 0.06563600332611334,
+          "n1": 158,
+          "n0": 155,
+          "totalN": 313,
+          "sampleSize": 313,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT02970669",
+          "title": "Study on the Effects of Sacubitril/Valsartan on Physical Activity and Sleep in Heart Failure With Reduced Ejection Fraction Patients.",
+          "t1": "Enalapril",
+          "t2": "Sacubitril/Valsartan",
+          "measure": "MD",
+          "effect": 0.05669999999999986,
+          "se": 0.03347595909854833,
+          "n1": 60,
+          "n0": 64,
+          "totalN": 124,
+          "sampleSize": 124,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
         },
         {
           "studyId": "NCT02554890",
           "title": "Comparison of Sacubitril/Valsartan Versus Enalapril on Effect on NT-proBNP in Patients Stabilized From an Acute Heart Failure Episode.",
-          "t1": "Sacubitril/Valsartan (LCZ696)",
-          "t2": "Enalapril",
+          "t1": "Enalapril",
+          "t2": "Sacubitril/Valsartan (LCZ696)",
           "measure": "MD",
-          "effect": -0.21330000000000005,
+          "effect": 0.21330000000000005,
           "se": 0.040820320276551185,
-          "n1": 440,
-          "n0": 441,
+          "n1": 441,
+          "n0": 440,
           "totalN": 881,
-          "sampleSize": 881
+          "sampleSize": 881,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT01920711",
+          "title": "Efficacy and Safety of LCZ696 Compared to Valsartan, on Morbidity and Mortality in Heart Failure Patients With Preserved Ejection Fraction",
+          "t1": "LCZ696",
+          "t2": "Valsartan",
+          "measure": "MD",
+          "effect": 1.0264999999999997,
+          "se": 0.5259479251789098,
+          "n1": 2407,
+          "n0": 2389,
+          "totalN": 4796,
+          "sampleSize": 4796,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT03066804",
+          "title": "A Randomized, Double-blind Controlled Study Comparing LCZ696 to Medical Therapy for Comorbidities in HFpEF Patients",
+          "t1": "Sacubitril/Valsartan (LCZ696)",
+          "t2": "Individualized Medical Therapy (IMT) Comparator",
+          "measure": "MD",
+          "effect": -0.16100000000000003,
+          "se": 0.02118502266553994,
+          "n1": 1203,
+          "n0": 1216,
+          "totalN": 2419,
+          "sampleSize": 2419,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
         },
         {
           "studyId": "NCT00887588",
           "title": "LCZ696 Compared to Valsartan in Patients With Chronic Heart Failure and Preserved Left-ventricular Ejection Fraction",
-          "t1": "Valsartan",
-          "t2": "LCZ696",
+          "t1": "LCZ696",
+          "t2": "Valsartan",
           "measure": "MD",
-          "effect": 0.2500000000000001,
+          "effect": -0.2500000000000001,
           "se": 0.13827377788640463,
-          "n1": 132,
-          "n0": 134,
+          "n1": 134,
+          "n0": 132,
           "totalN": 266,
-          "sampleSize": 266
+          "sampleSize": 266,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
         }
       ],
       "includedStudies": [
-        {
-          "nctId": "NCT01920711",
-          "title": "Efficacy and Safety of LCZ696 Compared to Valsartan, on Morbidity and Mortality in Heart Failure Patients With Preserved Ejection Fraction",
-          "status": "COMPLETED",
-          "enrollment": 4822,
-          "documentsCount": 2,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "binary",
-            "title": "Cumulative Number of Primary Composite Events of Cardiovascular (CV) Death and Total (First and Recurrent) HF Hospitalizations.",
-            "groups": [
-              {
-                "title": "LCZ696",
-                "n": 2407,
-                "events": 894,
-                "mean": null,
-                "sd": null
-              },
-              {
-                "title": "Valsartan",
-                "n": 2389,
-                "events": 1009,
-                "mean": null,
-                "sd": null
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Cumulative Number of Primary Composite Events of Cardiovascular (CV) Death and Total (First and Recurrent) HF Hospitalizations.",
-              "timeFrame": "Total follow up time (up to 57 months)"
-            }
-          ]
-        },
-        {
-          "nctId": "NCT02627196",
-          "title": "Baroreflex Activation Therapy for Heart Failure",
-          "status": "COMPLETED",
-          "enrollment": 1090,
-          "documentsCount": 2,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "binary",
-            "title": "Rate of Cardiovascular Mortality and Heart Failure Morbidity",
-            "groups": [
-              {
-                "title": "Device and Medical Management",
-                "n": 159,
-                "events": 46,
-                "mean": null,
-                "sd": null
-              },
-              {
-                "title": "Medical Management",
-                "n": 160,
-                "events": 48,
-                "mean": null,
-                "sd": null
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Rate of Cardiovascular Mortality and Heart Failure Morbidity",
-              "timeFrame": "From randomization until data-cut date for the endpoint analysis. Median follow-up was 3.6 years per patient."
-            },
-            {
-              "measure": "Major Adverse Neurological and Cardiovascular Events (MANCE)",
-              "timeFrame": "6 months post implant"
-            }
-          ]
-        },
         {
           "nctId": "NCT06029712",
           "title": "Heart Failure Polypill at a Safety Net Hospital",
@@ -1744,23 +1592,38 @@
           "enrollment": 35,
           "documentsCount": 3,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
             "type": "continuous",
             "title": "Measured Adherence to GDMT by Pill Count",
+            "unitOfMeasure": "adherence ratio expressed in %",
+            "paramType": "MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
                 "title": "Individual Tablets",
                 "n": 27,
                 "events": null,
                 "mean": 74.6,
-                "sd": 21.07623049006007
+                "sd": 21.07623049006007,
+                "rawValue": 74.6,
+                "rawUnit": "adherence ratio expressed in %",
+                "displayPercent": null,
+                "derivation": null
               },
               {
                 "title": "Polypill",
                 "n": 27,
                 "events": null,
                 "mean": 83.3,
-                "sd": 21.20878539880258
+                "sd": 21.20878539880258,
+                "rawValue": 83.3,
+                "rawUnit": "adherence ratio expressed in %",
+                "displayPercent": null,
+                "derivation": null
               }
             ]
           },
@@ -1772,101 +1635,44 @@
           ]
         },
         {
-          "nctId": "NCT02816736",
-          "title": "EntrestoTM (LCZ696) In Advanced Heart Failure (LIFE Study)",
-          "status": "COMPLETED",
-          "enrollment": 365,
-          "documentsCount": 3,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "continuous",
-            "title": "Change in NT-proBNP",
-            "groups": [
-              {
-                "title": "LCZ696 (Entresto) + Placebo",
-                "n": 155,
-                "events": null,
-                "mean": 0.14,
-                "sd": 0.65
-              },
-              {
-                "title": "Valsartan + Placebo",
-                "n": 158,
-                "events": null,
-                "mean": 0.19,
-                "sd": 0.5
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Change in NT-proBNP",
-              "timeFrame": "Baseline, 2, 4, 8, 12, and 24 weeks"
-            }
-          ]
-        },
-        {
-          "nctId": "NCT03066804",
-          "title": "A Randomized, Double-blind Controlled Study Comparing LCZ696 to Medical Therapy for Comorbidities in HFpEF Patients",
-          "status": "COMPLETED",
-          "enrollment": 2572,
-          "documentsCount": 2,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "continuous",
-            "title": "Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) at Week 12",
-            "groups": [
-              {
-                "title": "Sacubitril/Valsartan (LCZ696)",
-                "n": 1203,
-                "events": null,
-                "mean": 0.8218,
-                "sd": 0.47248497625903824
-              },
-              {
-                "title": "Individualized Medical Therapy (IMT) Comparator",
-                "n": 1216,
-                "events": null,
-                "mean": 0.9828,
-                "sd": 0.5657672914473191
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) at Week 12",
-              "timeFrame": "Baseline, week 12"
-            },
-            {
-              "measure": "Change From Baseline in 6 Minute Walk Distance (6MWD) at Week 24",
-              "timeFrame": "Baseline, week 24"
-            }
-          ]
-        },
-        {
           "nctId": "NCT04164004",
           "title": "Patient-Reported Outcome Measurement in Heart Failure Clinic",
           "status": "COMPLETED",
           "enrollment": 1249,
           "documentsCount": 1,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
             "type": "continuous",
             "title": "Kansas City Cardiomyopathy Questionnaire-12 Score",
+            "unitOfMeasure": "score on a scale",
+            "paramType": "MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
                 "title": "Routine Collection of Patient-Reported Health Status (KCCQ-12 Arm)",
                 "n": 528,
                 "events": null,
                 "mean": 79.4,
-                "sd": 22.978250586152114
+                "sd": 22.978250586152114,
+                "rawValue": 79.4,
+                "rawUnit": "score on a scale",
+                "displayPercent": null,
+                "derivation": null
               },
               {
                 "title": "Usual Care",
                 "n": 513,
                 "events": null,
                 "mean": 79.7,
-                "sd": 22.64950330581225
+                "sd": 22.64950330581225,
+                "rawValue": 79.7,
+                "rawUnit": "score on a scale",
+                "displayPercent": null,
+                "derivation": null
               }
             ]
           },
@@ -1882,68 +1688,126 @@
           ]
         },
         {
-          "nctId": "NCT02678312",
-          "title": "Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure",
+          "nctId": "NCT04394754",
+          "title": "Evaluating Efficacy of Digital Health Technology in the Treatment of Congestive Heart Failure",
           "status": "COMPLETED",
-          "enrollment": 393,
-          "documentsCount": 3,
+          "enrollment": 182,
+          "documentsCount": 1,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
-            "type": "continuous",
-            "title": "Part 1: Pharmacokinetics of LCZ696 Analytes (Sacubitril, LBQ657, and Valsartan): Maximum Drug Concentration in Plasma (Cmax)",
+            "type": "binary",
+            "title": "Number of Participants With Hospital Admission at 90 Days Post Enrollment",
+            "unitOfMeasure": "Participants",
+            "paramType": "COUNT_OF_PARTICIPANTS",
+            "metricKind": "count",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
-                "title": "LCZ696: 0.8 mg/kg (Age Group 1)",
-                "n": 7,
-                "events": null,
-                "mean": 523,
-                "sd": 390
+                "title": "Control",
+                "n": 44,
+                "events": 11,
+                "mean": null,
+                "sd": null,
+                "rawValue": 11,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
               },
               {
-                "title": "LCZ696: 0.8 mg/kg (Age Group 2)",
-                "n": 8,
-                "events": null,
-                "mean": 179,
-                "sd": 97
+                "title": "BodyPort",
+                "n": 46,
+                "events": 16,
+                "mean": null,
+                "sd": null,
+                "rawValue": 16,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
               },
               {
-                "title": "LCZ696: 3.1 mg/kg (Age Group 1)",
-                "n": 7,
-                "events": null,
-                "mean": 1970,
-                "sd": 1666
+                "title": "Noom",
+                "n": 46,
+                "events": 14,
+                "mean": null,
+                "sd": null,
+                "rawValue": 14,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
               },
               {
-                "title": "LCZ696: 3.1 mg/kg (Age Group 2)",
-                "n": 6,
-                "events": null,
-                "mean": 549,
-                "sd": 298
-              },
-              {
-                "title": "LCZ696: 0.4 mg/kg (Age Group 3)",
-                "n": 4,
-                "events": null,
-                "mean": 124,
-                "sd": 80
-              },
-              {
-                "title": "LCZ696: 1.6 mg/kg (Age Group 3)",
-                "n": 5,
-                "events": null,
-                "mean": 433,
-                "sd": 181
+                "title": "Conversa",
+                "n": 46,
+                "events": 17,
+                "mean": null,
+                "sd": null,
+                "rawValue": 17,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
               }
             ]
           },
           "primaryOutcomes": [
             {
-              "measure": "Part 1: Pharmacokinetics of LCZ696 Analytes (Sacubitril, LBQ657, and Valsartan): Maximum Drug Concentration in Plasma (Cmax)",
-              "timeFrame": "Age group 1: Pre-dose and 0.5, 1, 2, 4, 8, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2; Age groups 2 and 3: Pre-dose and 1, 2, 4, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2"
+              "measure": "Change in Quality of Life at 90 Days Post Enrollment",
+              "timeFrame": "Day 90 after enrollment"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT02627196",
+          "title": "Baroreflex Activation Therapy for Heart Failure",
+          "status": "COMPLETED",
+          "enrollment": 1090,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "continuous",
+            "title": "Percent Change in Log 10 Amino-terminal Prohormone of Brain Natriuretic Peptide (NT-proBNP) From Baseline to 6 Months Post-implant",
+            "unitOfMeasure": "Percent change",
+            "paramType": "MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "Device and Medical Management",
+                "n": 120,
+                "events": null,
+                "mean": -21.1,
+                "sd": 0.4,
+                "rawValue": -21.1,
+                "rawUnit": "Percent change",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "Medical Management",
+                "n": 123,
+                "events": null,
+                "mean": 3.3,
+                "sd": 0.3,
+                "rawValue": 3.3,
+                "rawUnit": "Percent change",
+                "displayPercent": null,
+                "derivation": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Rate of Cardiovascular Mortality and Heart Failure Morbidity",
+              "timeFrame": "From randomization until data-cut date for the endpoint analysis. Median follow-up was 3.6 years per patient."
             },
             {
-              "measure": "Part 1: Pharmacokinetics of LCZ696 Analytes (Sacubitril, LBQ657, and Valsartan): Time to Maximum Plasma Concentration (Tmax)",
-              "timeFrame": "Age group 1: Pre-dose and 0.5, 1, 2, 4, 8, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2; Age groups 2 and 3: Pre-dose and 1, 2, 4, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2"
+              "measure": "Major Adverse Neurological and Cardiovascular Events (MANCE)",
+              "timeFrame": "6 months post implant"
             }
           ]
         },
@@ -1954,37 +1818,60 @@
           "enrollment": 225,
           "documentsCount": 2,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
             "type": "binary",
             "title": "Number of Participants Who Had CEC (Clinical Endpoint Committee) Confirmed Composite Endpoints",
+            "unitOfMeasure": "Participants",
+            "paramType": "COUNT_OF_PARTICIPANTS",
+            "metricKind": "count",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
                 "title": "LCZ696",
                 "n": 111,
                 "events": 30,
                 "mean": null,
-                "sd": null
+                "sd": null,
+                "rawValue": 30,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
               },
               {
                 "title": "Enalapril",
                 "n": 112,
                 "events": 28,
                 "mean": null,
-                "sd": null
+                "sd": null,
+                "rawValue": 28,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
               },
               {
                 "title": "LCZ696 (Core) OLE Epoch",
                 "n": null,
                 "events": 0,
                 "mean": null,
-                "sd": null
+                "sd": null,
+                "rawValue": 0,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
               },
               {
                 "title": "Enalapril (Core) OLE Epoch",
                 "n": null,
                 "events": 0,
                 "mean": null,
-                "sd": null
+                "sd": null,
+                "rawValue": 0,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
               }
             ]
           },
@@ -2000,36 +1887,104 @@
           ]
         },
         {
+          "nctId": "NCT02816736",
+          "title": "EntrestoTM (LCZ696) In Advanced Heart Failure (LIFE Study)",
+          "status": "COMPLETED",
+          "enrollment": 365,
+          "documentsCount": 3,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "continuous",
+            "title": "Change in NT-proBNP",
+            "unitOfMeasure": "unitless",
+            "paramType": "MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "LCZ696 (Entresto) + Placebo",
+                "n": 155,
+                "events": null,
+                "mean": 0.14,
+                "sd": 0.65,
+                "rawValue": 0.14,
+                "rawUnit": "unitless",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "Valsartan + Placebo",
+                "n": 158,
+                "events": null,
+                "mean": 0.19,
+                "sd": 0.5,
+                "rawValue": 0.19,
+                "rawUnit": "unitless",
+                "displayPercent": null,
+                "derivation": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change in NT-proBNP",
+              "timeFrame": "Baseline, 2, 4, 8, 12, and 24 weeks"
+            }
+          ]
+        },
+        {
           "nctId": "NCT06665919",
           "title": "The Study of CYP2C19 Genotype-Guided Clopidogrel Treatment Models",
           "status": "COMPLETED",
           "enrollment": 283,
           "documentsCount": 2,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
             "type": "binary",
             "title": "Number of Study Participants Who Died From Any Cause (Death From Any Cause)",
+            "unitOfMeasure": "Participants",
+            "paramType": "COUNT_OF_PARTICIPANTS",
+            "metricKind": "count",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
                 "title": "Normal Metabolizers of Clopidogrel",
                 "n": 142,
                 "events": 8,
                 "mean": null,
-                "sd": null
+                "sd": null,
+                "rawValue": 8,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
               },
               {
                 "title": "Passive Metabolizers of Clopidogrel",
                 "n": 38,
                 "events": 2,
                 "mean": null,
-                "sd": null
+                "sd": null,
+                "rawValue": 2,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
               },
               {
                 "title": "Unspecified Metabolizers of Clopidogrel",
                 "n": 70,
                 "events": 7,
                 "mean": null,
-                "sd": null
+                "sd": null,
+                "rawValue": 7,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
               }
             ]
           },
@@ -2045,29 +2000,141 @@
           ]
         },
         {
+          "nctId": "NCT02678312",
+          "title": "Study to Evaluate Safety, Tolerability, Pharmacokinetics and Pharmacodynamics of LCZ696 Followed by a 52-week, Double-blind Study of LCZ696 Compared With Enalapril in Pediatric Patients With Heart Failure",
+          "status": "COMPLETED",
+          "enrollment": 393,
+          "documentsCount": 3,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "continuous",
+            "title": "Part 1: Pharmacokinetics of LCZ696 Analytes (Sacubitril, LBQ657, and Valsartan): Maximum Drug Concentration in Plasma (Cmax)",
+            "unitOfMeasure": "nanograms per milliliter (ng/ml)",
+            "paramType": "MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "LCZ696: 0.8 mg/kg (Age Group 1)",
+                "n": 7,
+                "events": null,
+                "mean": 523,
+                "sd": 390,
+                "rawValue": 523,
+                "rawUnit": "nanograms per milliliter (ng/ml)",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "LCZ696: 0.8 mg/kg (Age Group 2)",
+                "n": 8,
+                "events": null,
+                "mean": 179,
+                "sd": 97,
+                "rawValue": 179,
+                "rawUnit": "nanograms per milliliter (ng/ml)",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "LCZ696: 3.1 mg/kg (Age Group 1)",
+                "n": 7,
+                "events": null,
+                "mean": 1970,
+                "sd": 1666,
+                "rawValue": 1970,
+                "rawUnit": "nanograms per milliliter (ng/ml)",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "LCZ696: 3.1 mg/kg (Age Group 2)",
+                "n": 6,
+                "events": null,
+                "mean": 549,
+                "sd": 298,
+                "rawValue": 549,
+                "rawUnit": "nanograms per milliliter (ng/ml)",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "LCZ696: 0.4 mg/kg (Age Group 3)",
+                "n": 4,
+                "events": null,
+                "mean": 124,
+                "sd": 80,
+                "rawValue": 124,
+                "rawUnit": "nanograms per milliliter (ng/ml)",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "LCZ696: 1.6 mg/kg (Age Group 3)",
+                "n": 5,
+                "events": null,
+                "mean": 433,
+                "sd": 181,
+                "rawValue": 433,
+                "rawUnit": "nanograms per milliliter (ng/ml)",
+                "displayPercent": null,
+                "derivation": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Part 1: Pharmacokinetics of LCZ696 Analytes (Sacubitril, LBQ657, and Valsartan): Maximum Drug Concentration in Plasma (Cmax)",
+              "timeFrame": "Age group 1: Pre-dose and 0.5, 1, 2, 4, 8, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2; Age groups 2 and 3: Pre-dose and 1, 2, 4, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2"
+            },
+            {
+              "measure": "Part 1: Pharmacokinetics of LCZ696 Analytes (Sacubitril, LBQ657, and Valsartan): Time to Maximum Plasma Concentration (Tmax)",
+              "timeFrame": "Age group 1: Pre-dose and 0.5, 1, 2, 4, 8, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2; Age groups 2 and 3: Pre-dose and 1, 2, 4, 10, optional 24 hours post-dose on Day 1 of Period 1 and 2"
+            }
+          ]
+        },
+        {
           "nctId": "NCT02970669",
           "title": "Study on the Effects of Sacubitril/Valsartan on Physical Activity and Sleep in Heart Failure With Reduced Ejection Fraction Patients.",
           "status": "COMPLETED",
           "enrollment": 140,
           "documentsCount": 2,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
             "type": "continuous",
             "title": "Ratio of Mean Activity Counts Collected During the Most Active 30 Minutes of the Subject's Day Between Week 8 and Baseline",
+            "unitOfMeasure": "Ratio",
+            "paramType": "GEOMETRIC_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
                 "title": "Enalapril",
                 "n": 60,
                 "events": null,
                 "mean": 1.0411,
-                "sd": 0.19127795301677447
+                "sd": 0.19127795301677447,
+                "rawValue": 1.0411,
+                "rawUnit": "Ratio",
+                "displayPercent": null,
+                "derivation": null
               },
               {
                 "title": "Sacubitril/Valsartan",
                 "n": 64,
                 "events": null,
                 "mean": 0.9844,
-                "sd": 0.18081632653061228
+                "sd": 0.18081632653061228,
+                "rawValue": 0.9844,
+                "rawUnit": "Ratio",
+                "displayPercent": null,
+                "derivation": null
               }
             ]
           },
@@ -2079,77 +2146,44 @@
           ]
         },
         {
-          "nctId": "NCT04394754",
-          "title": "Evaluating Efficacy of Digital Health Technology in the Treatment of Congestive Heart Failure",
-          "status": "COMPLETED",
-          "enrollment": 182,
-          "documentsCount": 1,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "binary",
-            "title": "Number of Participants With Hospital Admission at 90 Days Post Enrollment",
-            "groups": [
-              {
-                "title": "Control",
-                "n": 44,
-                "events": 11,
-                "mean": null,
-                "sd": null
-              },
-              {
-                "title": "BodyPort",
-                "n": 46,
-                "events": 16,
-                "mean": null,
-                "sd": null
-              },
-              {
-                "title": "Noom",
-                "n": 46,
-                "events": 14,
-                "mean": null,
-                "sd": null
-              },
-              {
-                "title": "Conversa",
-                "n": 46,
-                "events": 17,
-                "mean": null,
-                "sd": null
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Change in Quality of Life at 90 Days Post Enrollment",
-              "timeFrame": "Day 90 after enrollment"
-            }
-          ]
-        },
-        {
           "nctId": "NCT02554890",
           "title": "Comparison of Sacubitril/Valsartan Versus Enalapril on Effect on NT-proBNP in Patients Stabilized From an Acute Heart Failure Episode.",
           "status": "COMPLETED",
           "enrollment": 887,
           "documentsCount": 2,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
             "type": "continuous",
             "title": "N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) Values and Time-averaged Change From Baseline",
+            "unitOfMeasure": "pg/ml",
+            "paramType": "GEOMETRIC_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
                 "title": "Enalapril",
                 "n": 441,
                 "events": null,
                 "mean": 0.7466,
-                "sd": 0.6991071428571426
+                "sd": 0.6991071428571426,
+                "rawValue": 0.7466,
+                "rawUnit": "pg/ml",
+                "displayPercent": null,
+                "derivation": null
               },
               {
                 "title": "Sacubitril/Valsartan (LCZ696)",
                 "n": 440,
                 "events": null,
                 "mean": 0.5333,
-                "sd": 0.4955086701048778
+                "sd": 0.4955086701048778,
+                "rawValue": 0.5333,
+                "rawUnit": "pg/ml",
+                "displayPercent": null,
+                "derivation": null
               }
             ]
           },
@@ -2161,29 +2195,146 @@
           ]
         },
         {
+          "nctId": "NCT01920711",
+          "title": "Efficacy and Safety of LCZ696 Compared to Valsartan, on Morbidity and Mortality in Heart Failure Patients With Preserved Ejection Fraction",
+          "status": "COMPLETED",
+          "enrollment": 4822,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "continuous",
+            "title": "Change in the Clinical Summary Score From Baseline to Month 8 by Kansas City Cardiomyopathy Questionnaire (KCCQ)",
+            "unitOfMeasure": "Points on a scale",
+            "paramType": "LEAST_SQUARES_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "LCZ696",
+                "n": 2407,
+                "events": null,
+                "mean": -1.5073,
+                "sd": 18.196793994272728,
+                "rawValue": -1.5073,
+                "rawUnit": "Points on a scale",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "Valsartan",
+                "n": 2389,
+                "events": null,
+                "mean": -2.5338,
+                "sd": 18.226381579732166,
+                "rawValue": -2.5338,
+                "rawUnit": "Points on a scale",
+                "displayPercent": null,
+                "derivation": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Cumulative Number of Primary Composite Events of Cardiovascular (CV) Death and Total (First and Recurrent) HF Hospitalizations.",
+              "timeFrame": "Total follow up time (up to 57 months)"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT03066804",
+          "title": "A Randomized, Double-blind Controlled Study Comparing LCZ696 to Medical Therapy for Comorbidities in HFpEF Patients",
+          "status": "COMPLETED",
+          "enrollment": 2572,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "continuous",
+            "title": "Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) at Week 12",
+            "unitOfMeasure": "Ratio",
+            "paramType": "GEOMETRIC_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "Sacubitril/Valsartan (LCZ696)",
+                "n": 1203,
+                "events": null,
+                "mean": 0.8218,
+                "sd": 0.47248497625903824,
+                "rawValue": 0.8218,
+                "rawUnit": "Ratio",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "Individualized Medical Therapy (IMT) Comparator",
+                "n": 1216,
+                "events": null,
+                "mean": 0.9828,
+                "sd": 0.5657672914473191,
+                "rawValue": 0.9828,
+                "rawUnit": "Ratio",
+                "displayPercent": null,
+                "derivation": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP) at Week 12",
+              "timeFrame": "Baseline, week 12"
+            },
+            {
+              "measure": "Change From Baseline in 6 Minute Walk Distance (6MWD) at Week 24",
+              "timeFrame": "Baseline, week 24"
+            }
+          ]
+        },
+        {
           "nctId": "NCT00887588",
           "title": "LCZ696 Compared to Valsartan in Patients With Chronic Heart Failure and Preserved Left-ventricular Ejection Fraction",
           "status": "COMPLETED",
           "enrollment": 307,
           "documentsCount": 0,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
             "type": "continuous",
             "title": "Change From Baseline in N-terminal Pro-brain Natriuretic Peptide (NT-proBNP)",
+            "unitOfMeasure": "ratio: endpoint/baseline (pg/mL)",
+            "paramType": "GEOMETRIC_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
                 "title": "LCZ696",
                 "n": 134,
                 "events": null,
                 "mean": 0.83,
-                "sd": 0.9744964739593812
+                "sd": 0.9744964739593812,
+                "rawValue": 0.83,
+                "rawUnit": "ratio: endpoint/baseline (pg/mL)",
+                "displayPercent": null,
+                "derivation": null
               },
               {
                 "title": "Valsartan",
                 "n": 132,
                 "events": null,
                 "mean": 1.08,
-                "sd": 1.2602867030670166
+                "sd": 1.2602867030670166,
+                "rawValue": 1.08,
+                "rawUnit": "ratio: endpoint/baseline (pg/mL)",
+                "displayPercent": null,
+                "derivation": null
               }
             ]
           },

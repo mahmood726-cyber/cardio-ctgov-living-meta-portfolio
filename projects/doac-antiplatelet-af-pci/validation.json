@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-28T18:45:05.888Z",
-  "sourceStartedAt": "2026-03-28T18:44:01.927Z",
+  "generatedAt": "2026-04-05T13:16:46.754Z",
+  "sourceStartedAt": "2026-04-05T13:16:31.341Z",
   "minIncludedTrials": 2,
   "pageSize": 100,
   "maxPages": 8,
@@ -20,372 +20,9 @@
     "pagesFetched": 1,
     "truncated": false,
     "includedCount": 2,
+    "analysisEligibleCount": 2,
     "excludedCount": 5,
     "includedStudies": [
-      {
-        "nctId": "NCT02866175",
-        "title": "Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention",
-        "status": "COMPLETED",
-        "startDate": "2017-02-24",
-        "completionDate": "2019-06-06",
-        "studyType": "INTERVENTIONAL",
-        "allocation": "RANDOMIZED",
-        "officialTitle": "Evaluation of the Safety and Efficacy of an Edoxaban-based Compared to a Vitamin K Antagonist-based Antithrombotic Regimen in Subjects With Atrial Fibrillation Following Successful Percutaneous Coronary Intervention (PCI) With Stent Placement.",
-        "acronym": "ENTRUST-AF-PCI",
-        "briefSummary": "There are insufficient data on the safety and efficacy of edoxaban plus antiplatelet therapy in subjects with atrial fibrillation (AF) following percutaneous intervention (PCI) with stenting. This study is designed to evaluate the safety and to explore the efficacy of an edoxaban-based antithrombotic regimen versus a vitamin K antagonist (VKA)-based antithrombotic regimen in subjects with AF following PCI with stent placement. Bleeding is a central safety outcome in cardiovascular clinical trials, especially for antithrombotic strategies and invasive procedures.",
-        "detailedDescription": "",
-        "sponsor": {
-          "name": "Daiichi Sankyo Europe, GmbH, a Daiichi Sankyo Company",
-          "class": "INDUSTRY"
-        },
-        "phases": [
-          "PHASE3"
-        ],
-        "enrollment": {
-          "count": 1506,
-          "type": "ACTUAL"
-        },
-        "conditions": [
-          "Atrial Fibrillation"
-        ],
-        "eligibility": {
-          "sex": "ALL",
-          "minimumAge": "18 Years",
-          "maximumAge": "",
-          "healthyVolunteers": false,
-          "criteria": "Inclusion Criteria: * Oral anticoagulant (OAC) indication for atrial fibrillation for a period of at least 12 months following successful PCI with stenting. Eligibility is assessed 4 hours after sheath removal and within 5 days after successful PCI with stent placement. If a staged PCI is planned, eligibility is assessed after completion of the last stage. Successful PCI definition: The success of a PCI procedure is defined by 2 interrelated components: angiographic findings, procedural / clinical outcomes as detailed below: Angiographic Success A minimum stenosis diameter of \\< 20% (as visually assessed by angiography - residual blockage or stenosis reduced to less than 20% of the artery's diameter). Sufficient enlargement of the lumen at the target site to improve coronary artery blood flow with final thrombolysis in myocardial infarction (TIMI) flow grade 3 (visually assessed by angiography), without occlusion of a significant side branch, flow-limiting dissection, distal embolization, or angiographic thrombus. Procedural Success No major in-hospital clinical complications(e.g. ongoing International Society on Thrombosis and Haemostasis \\[ISTH\\] major or clinical relevant non-major procedural bleeding at the time of randomization, stroke, emergency coronary artery bypass graft \\[CABG\\]). In summary, a clinically successful PCI requires both anatomic and procedural success along with relief of signs and/or symptoms of myocardial ischemia at the time of randomization. Exc..."
-        },
-        "primaryOutcomes": [
-          {
-            "measure": "Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen",
-            "description": "Participants' first major or clinically relevant non-major bleeding (MCRB) events were reported. International Society on Thrombosis and Hemostasis (ISTH) defined bleeding events included: MCRB, major bleeding, including fatal bleeding (intracranial and non-intracranial), symptomatic intracranial hemorrhage, symptomatic bleeding in a critical area or organ, and clinically overt and causing ≥2.0 g/dL adjusted hemoglobin loss, clinically relevant non-major (CRNM) bleeding, minor bleedings, any bleeding (defined as the composite of major, CRNM, and minor bleeding), life-threatening bleeding, provoked (spontaneous, instrumental/traumatic, unknown) bleeding, and spontaneous bleeding.",
-            "timeFrame": "Day 1 to 12 months postdose"
-          }
-        ],
-        "secondaryOutcomes": [
-          {
-            "measure": "Number of Participants With Adjudicated Major, Clinically Relevant Non-major and Minor Bleeding (All Events) Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist-Based Regimen",
-            "description": "All major, clinically relevant non-major and minor bleeding are reported for the secondary outcome. Participants may have experiences more than 1 bleeding event, all occurrences are reported. Participants with International Society on Thrombosis and Hemostasis (ISTH) defined bleeding events included: major or clinically relevant non-major bleeding (MCRB), major bleeding, including fatal bleeding (intracranial and non-intracranial), symptomatic intracranial hemorrhage, symptomatic bleeding in a critical area or organ, and clinically overt and causing ≥2.0 g/dL adjusted hemoglobin loss, clinically relevant non-major (CRNM) bleeding, minor bleedings, any bleeding (defined as the composite of...",
-            "timeFrame": "Day 1 to 12 months postdose"
-          },
-          {
-            "measure": "Number of Participants With Adjudicated Major, Minor, and Minimal Bleeding by Thrombolysis in Myocardial Infarction (TIMI) Definition Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen",
-            "description": "Thrombolysis in Myocardial Infarction (TIMI) defined bleeding events included: Major bleeding (including fatal bleeding and non-fatal bleeding \\[fulfilling the TIMI major bleeding definition\\], major or minor bleeding, minor bleeding, minimal bleeding, and any bleeding (defined as composite of major, minor, and minimal bleeding)",
-            "timeFrame": "Day 1 to 12 months postdose"
-          },
-          {
-            "measure": "Number of Participants With Bleeding Academic Research Consortium (BARC) Type 1, 2, 3, and 5 Bleeding According to the BARC Definitions Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen",
-            "description": "Bleeding Academic Research Consortium (BARC) bleeding events included: Bleeding (defined by BARC type 3 or 5), bleeding (defined by BARC type 2, 3, or 5), and any bleeding (defined as the composite of BARC type 1, 2, 3, or 5), where increases in BARC type indicate worse outcome. Type 1: bleeding that is not actionable and does not cause the patient to seek unscheduled performance of studies, hospitalization, or treatment by a healthcare professional; may include episodes leading to self-discontinuation of medical therapy by the patient without consultation; Type 2: any overt, actionable sign of hemorrhage that does not fit the criteria for type 3, 4, or 5 but does meet at least one of the...",
-            "timeFrame": "Day 1 to 12 months postdose"
-          }
-        ],
-        "documents": [
-          {
-            "label": "Study Protocol and Statistical Analysis Plan",
-            "filename": "Prot_SAP_000.pdf",
-            "date": "2017-02-28",
-            "hasSap": true,
-            "hasIcf": false,
-            "hasProtocol": true,
-            "url": ""
-          }
-        ],
-        "demographics": {
-          "populationDescription": "",
-          "groups": [
-            {
-              "id": "BG000",
-              "title": "Edoxaban Regimen",
-              "description": "Participants who were randomized to Edoxaban 60 mg once-daily or 30 mg once-daily and clopidogrel 75 mg once-daily (or in the presence of a documented clinical need prasugrel \\[5 mg or 10 mg once-daily\\] or ticagrelor \\[90 mg twice-daily\\] may be used)."
-            },
-            {
-              "id": "BG001",
-              "title": "Vitamin K Antagonist Regimen",
-              "description": "Participants who were randomized to VKA in combination with clopidogrel 75 mg once-daily (or in the presence of a documented clinical need prasugrel \\[5 mg or 10 mg once-daily\\] or ticagrelor \\[90 mg twice-daily\\] may be used) and aspirin (100 mg once-daily, for a minimum of 1..."
-            },
-            {
-              "id": "BG002",
-              "title": "Total",
-              "description": "Total of all reporting groups"
-            }
-          ],
-          "participantCounts": [
-            {
-              "groupId": "BG000",
-              "groupTitle": "Edoxaban Regimen",
-              "value": 751,
-              "unit": "Participants"
-            },
-            {
-              "groupId": "BG001",
-              "groupTitle": "Vitamin K Antagonist Regimen",
-              "value": 755,
-              "unit": "Participants"
-            },
-            {
-              "groupId": "BG002",
-              "groupTitle": "Total",
-              "value": 1506,
-              "unit": "Participants"
-            }
-          ],
-          "ageMean": [
-            {
-              "groupId": "BG000",
-              "groupTitle": "Edoxaban Regimen",
-              "value": "69.4",
-              "spread": "9.74",
-              "unit": "years"
-            },
-            {
-              "groupId": "BG001",
-              "groupTitle": "Vitamin K Antagonist Regimen",
-              "value": "70.1",
-              "spread": "9.51",
-              "unit": "years"
-            },
-            {
-              "groupId": "BG002",
-              "groupTitle": "Total",
-              "value": "69.7",
-              "spread": "9.63",
-              "unit": "years"
-            }
-          ],
-          "sexBreakdown": [
-            {
-              "groupId": "BG000",
-              "groupTitle": "Edoxaban Regimen",
-              "female": 194,
-              "male": 557
-            },
-            {
-              "groupId": "BG001",
-              "groupTitle": "Vitamin K Antagonist Regimen",
-              "female": 192,
-              "male": 563
-            },
-            {
-              "groupId": "BG002",
-              "groupTitle": "Total",
-              "female": 386,
-              "male": 1120
-            }
-          ],
-          "keyMeasures": [
-            {
-              "title": "Age, Categorical",
-              "paramType": "COUNT_OF_PARTICIPANTS",
-              "unit": "Participants",
-              "categories": [
-                {
-                  "title": "<=18 years",
-                  "measurements": [
-                    {
-                      "groupId": "BG000",
-                      "groupTitle": "Edoxaban Regimen",
-                      "value": "0",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG001",
-                      "groupTitle": "Vitamin K Antagonist Regimen",
-                      "value": "0",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG002",
-                      "groupTitle": "Total",
-                      "value": "0",
-                      "spread": ""
-                    }
-                  ]
-                },
-                {
-                  "title": "Between 18 and 65 years",
-                  "measurements": [
-                    {
-                      "groupId": "BG000",
-                      "groupTitle": "Edoxaban Regimen",
-                      "value": "226",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG001",
-                      "groupTitle": "Vitamin K Antagonist Regimen",
-                      "value": "202",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG002",
-                      "groupTitle": "Total",
-                      "value": "428",
-                      "spread": ""
-                    }
-                  ]
-                },
-                {
-                  "title": ">=65 years",
-                  "measurements": [
-                    {
-                      "groupId": "BG000",
-                      "groupTitle": "Edoxaban Regimen",
-                      "value": "525",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG001",
-                      "groupTitle": "Vitamin K Antagonist Regimen",
-                      "value": "553",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG002",
-                      "groupTitle": "Total",
-                      "value": "1078",
-                      "spread": ""
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "title": "Age, Continuous",
-              "paramType": "MEAN",
-              "unit": "years",
-              "categories": [
-                {
-                  "title": "Value",
-                  "measurements": [
-                    {
-                      "groupId": "BG000",
-                      "groupTitle": "Edoxaban Regimen",
-                      "value": "69.4",
-                      "spread": "9.74"
-                    },
-                    {
-                      "groupId": "BG001",
-                      "groupTitle": "Vitamin K Antagonist Regimen",
-                      "value": "70.1",
-                      "spread": "9.51"
-                    },
-                    {
-                      "groupId": "BG002",
-                      "groupTitle": "Total",
-                      "value": "69.7",
-                      "spread": "9.63"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "title": "Sex: Female, Male",
-              "paramType": "COUNT_OF_PARTICIPANTS",
-              "unit": "Participants",
-              "categories": [
-                {
-                  "title": "Female",
-                  "measurements": [
-                    {
-                      "groupId": "BG000",
-                      "groupTitle": "Edoxaban Regimen",
-                      "value": "194",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG001",
-                      "groupTitle": "Vitamin K Antagonist Regimen",
-                      "value": "192",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG002",
-                      "groupTitle": "Total",
-                      "value": "386",
-                      "spread": ""
-                    }
-                  ]
-                },
-                {
-                  "title": "Male",
-                  "measurements": [
-                    {
-                      "groupId": "BG000",
-                      "groupTitle": "Edoxaban Regimen",
-                      "value": "557",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG001",
-                      "groupTitle": "Vitamin K Antagonist Regimen",
-                      "value": "563",
-                      "spread": ""
-                    },
-                    {
-                      "groupId": "BG002",
-                      "groupTitle": "Total",
-                      "value": "1120",
-                      "spread": ""
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "title": "Race and Ethnicity Not Collected",
-              "paramType": "COUNT_OF_PARTICIPANTS",
-              "unit": "Participants",
-              "categories": [
-                {
-                  "title": "Value",
-                  "measurements": [
-                    {
-                      "groupId": "BG002",
-                      "groupTitle": "Total",
-                      "value": "0",
-                      "spread": ""
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        "arms": [
-          {
-            "id": "1",
-            "title": "Participants will be randomized to receive edoxaban 60 mg once-daily or 30 mg once-daily and clopidogrel 75 mg once-daily (or in the presence of a documented clinical need prasugrel \\[5 mg or 10 mg once-daily\\] or ticagrelor \\[90 mg twice-daily\\] may be used) used."
-          },
-          {
-            "id": "2",
-            "title": "Participants will be randomized to receive VKA in combination with clopidogrel 75 mg once-daily (or in the presence of a documented clinical need prasugrel \\[5mg or 10 mg once-daily\\] or ticagrelor \\[90 mg twice-daily\\] may be used) and aspirin (100 mg once-daily, for a minimum of 1 month and up to 12 months duration."
-          }
-        ],
-        "outcome": {
-          "type": "binary",
-          "title": "Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen",
-          "groups": [
-            {
-              "id": "OG000",
-              "title": "Edoxaban Regimen",
-              "n": 751,
-              "events": 128
-            },
-            {
-              "id": "OG001",
-              "title": "Vitamin K Antagonist Regimen",
-              "n": 755,
-              "events": 152
-            }
-          ]
-        },
-        "hasPostedResults": true,
-        "randomized": true,
-        "completed": true,
-        "reasons": [],
-        "eligible": true
-      },
       {
         "nctId": "NCT01830543",
         "title": "A Study Exploring Two Strategies of Rivaroxaban (JNJ39039039; BAY-59-7939) and One of Oral Vitamin K Antagonist in Patients With Atrial Fibrillation Who Undergo Percutaneous Coronary Intervention",
@@ -795,27 +432,421 @@
         "outcome": {
           "type": "binary",
           "title": "Percentage of Participants With Clinically Significant Bleeding",
+          "unitOfMeasure": "percentage of participants",
+          "paramType": "NUMBER",
+          "metricKind": "proportion",
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "groups": [
             {
               "id": "OG000",
               "title": "Rivaroxaban 15 mg",
               "n": 696,
-              "events": 15.7
+              "rawValue": 15.7,
+              "rawUnit": "percentage of participants",
+              "events": 109,
+              "displayPercent": 15.7,
+              "derivation": "reconstructed_from_ctgov_percent"
             },
             {
               "id": "OG001",
               "title": "Rivaroxaban 2.5 mg Twice Daily (BID)/15 mg Once Daily(QD)",
               "n": 706,
-              "events": 16.6
+              "rawValue": 16.6,
+              "rawUnit": "percentage of participants",
+              "events": 117,
+              "displayPercent": 16.6,
+              "derivation": "reconstructed_from_ctgov_percent"
             },
             {
               "id": "OG002",
               "title": "Vitamin K Antagonist (VKA)",
               "n": 697,
-              "events": 24
+              "rawValue": 24,
+              "rawUnit": "percentage of participants",
+              "events": 167,
+              "displayPercent": 24,
+              "derivation": "reconstructed_from_ctgov_percent"
             }
           ]
         },
+        "analysisEligible": true,
+        "hasPostedResults": true,
+        "randomized": true,
+        "completed": true,
+        "reasons": [],
+        "eligible": true
+      },
+      {
+        "nctId": "NCT02866175",
+        "title": "Edoxaban Treatment Versus Vitamin K Antagonist in Patients With Atrial Fibrillation Undergoing Percutaneous Coronary Intervention",
+        "status": "COMPLETED",
+        "startDate": "2017-02-24",
+        "completionDate": "2019-06-06",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Evaluation of the Safety and Efficacy of an Edoxaban-based Compared to a Vitamin K Antagonist-based Antithrombotic Regimen in Subjects With Atrial Fibrillation Following Successful Percutaneous Coronary Intervention (PCI) With Stent Placement.",
+        "acronym": "ENTRUST-AF-PCI",
+        "briefSummary": "There are insufficient data on the safety and efficacy of edoxaban plus antiplatelet therapy in subjects with atrial fibrillation (AF) following percutaneous intervention (PCI) with stenting. This study is designed to evaluate the safety and to explore the efficacy of an edoxaban-based antithrombotic regimen versus a vitamin K antagonist (VKA)-based antithrombotic regimen in subjects with AF following PCI with stent placement. Bleeding is a central safety outcome in cardiovascular clinical trials, especially for antithrombotic strategies and invasive procedures.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Daiichi Sankyo Europe, GmbH, a Daiichi Sankyo Company",
+          "class": "INDUSTRY"
+        },
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 1506,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Atrial Fibrillation"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Oral anticoagulant (OAC) indication for atrial fibrillation for a period of at least 12 months following successful PCI with stenting. Eligibility is assessed 4 hours after sheath removal and within 5 days after successful PCI with stent placement. If a staged PCI is planned, eligibility is assessed after completion of the last stage. Successful PCI definition: The success of a PCI procedure is defined by 2 interrelated components: angiographic findings, procedural / clinical outcomes as detailed below: Angiographic Success A minimum stenosis diameter of \\< 20% (as visually assessed by angiography - residual blockage or stenosis reduced to less than 20% of the artery's diameter). Sufficient enlargement of the lumen at the target site to improve coronary artery blood flow with final thrombolysis in myocardial infarction (TIMI) flow grade 3 (visually assessed by angiography), without occlusion of a significant side branch, flow-limiting dissection, distal embolization, or angiographic thrombus. Procedural Success No major in-hospital clinical complications(e.g. ongoing International Society on Thrombosis and Haemostasis \\[ISTH\\] major or clinical relevant non-major procedural bleeding at the time of randomization, stroke, emergency coronary artery bypass graft \\[CABG\\]). In summary, a clinically successful PCI requires both anatomic and procedural success along with relief of signs and/or symptoms of myocardial ischemia at the time of randomization. Exc..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen",
+            "description": "Participants' first major or clinically relevant non-major bleeding (MCRB) events were reported. International Society on Thrombosis and Hemostasis (ISTH) defined bleeding events included: MCRB, major bleeding, including fatal bleeding (intracranial and non-intracranial), symptomatic intracranial hemorrhage, symptomatic bleeding in a critical area or organ, and clinically overt and causing ≥2.0 g/dL adjusted hemoglobin loss, clinically relevant non-major (CRNM) bleeding, minor bleedings, any bleeding (defined as the composite of major, CRNM, and minor bleeding), life-threatening bleeding, provoked (spontaneous, instrumental/traumatic, unknown) bleeding, and spontaneous bleeding.",
+            "timeFrame": "Day 1 to 12 months postdose"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Number of Participants With Adjudicated Major, Clinically Relevant Non-major and Minor Bleeding (All Events) Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist-Based Regimen",
+            "description": "All major, clinically relevant non-major and minor bleeding are reported for the secondary outcome. Participants may have experiences more than 1 bleeding event, all occurrences are reported. Participants with International Society on Thrombosis and Hemostasis (ISTH) defined bleeding events included: major or clinically relevant non-major bleeding (MCRB), major bleeding, including fatal bleeding (intracranial and non-intracranial), symptomatic intracranial hemorrhage, symptomatic bleeding in a critical area or organ, and clinically overt and causing ≥2.0 g/dL adjusted hemoglobin loss, clinically relevant non-major (CRNM) bleeding, minor bleedings, any bleeding (defined as the composite of...",
+            "timeFrame": "Day 1 to 12 months postdose"
+          },
+          {
+            "measure": "Number of Participants With Adjudicated Major, Minor, and Minimal Bleeding by Thrombolysis in Myocardial Infarction (TIMI) Definition Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen",
+            "description": "Thrombolysis in Myocardial Infarction (TIMI) defined bleeding events included: Major bleeding (including fatal bleeding and non-fatal bleeding \\[fulfilling the TIMI major bleeding definition\\], major or minor bleeding, minor bleeding, minimal bleeding, and any bleeding (defined as composite of major, minor, and minimal bleeding)",
+            "timeFrame": "Day 1 to 12 months postdose"
+          },
+          {
+            "measure": "Number of Participants With Bleeding Academic Research Consortium (BARC) Type 1, 2, 3, and 5 Bleeding According to the BARC Definitions Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen",
+            "description": "Bleeding Academic Research Consortium (BARC) bleeding events included: Bleeding (defined by BARC type 3 or 5), bleeding (defined by BARC type 2, 3, or 5), and any bleeding (defined as the composite of BARC type 1, 2, 3, or 5), where increases in BARC type indicate worse outcome. Type 1: bleeding that is not actionable and does not cause the patient to seek unscheduled performance of studies, hospitalization, or treatment by a healthcare professional; may include episodes leading to self-discontinuation of medical therapy by the patient without consultation; Type 2: any overt, actionable sign of hemorrhage that does not fit the criteria for type 3, 4, or 5 but does meet at least one of the...",
+            "timeFrame": "Day 1 to 12 months postdose"
+          }
+        ],
+        "documents": [
+          {
+            "label": "Study Protocol and Statistical Analysis Plan",
+            "filename": "Prot_SAP_000.pdf",
+            "date": "2017-02-28",
+            "hasSap": true,
+            "hasIcf": false,
+            "hasProtocol": true,
+            "url": ""
+          }
+        ],
+        "demographics": {
+          "populationDescription": "",
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Edoxaban Regimen",
+              "description": "Participants who were randomized to Edoxaban 60 mg once-daily or 30 mg once-daily and clopidogrel 75 mg once-daily (or in the presence of a documented clinical need prasugrel \\[5 mg or 10 mg once-daily\\] or ticagrelor \\[90 mg twice-daily\\] may be used)."
+            },
+            {
+              "id": "BG001",
+              "title": "Vitamin K Antagonist Regimen",
+              "description": "Participants who were randomized to VKA in combination with clopidogrel 75 mg once-daily (or in the presence of a documented clinical need prasugrel \\[5 mg or 10 mg once-daily\\] or ticagrelor \\[90 mg twice-daily\\] may be used) and aspirin (100 mg once-daily, for a minimum of 1..."
+            },
+            {
+              "id": "BG002",
+              "title": "Total",
+              "description": "Total of all reporting groups"
+            }
+          ],
+          "participantCounts": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Edoxaban Regimen",
+              "value": 751,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Vitamin K Antagonist Regimen",
+              "value": 755,
+              "unit": "Participants"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": 1506,
+              "unit": "Participants"
+            }
+          ],
+          "ageMean": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Edoxaban Regimen",
+              "value": "69.4",
+              "spread": "9.74",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Vitamin K Antagonist Regimen",
+              "value": "70.1",
+              "spread": "9.51",
+              "unit": "years"
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "value": "69.7",
+              "spread": "9.63",
+              "unit": "years"
+            }
+          ],
+          "sexBreakdown": [
+            {
+              "groupId": "BG000",
+              "groupTitle": "Edoxaban Regimen",
+              "female": 194,
+              "male": 557
+            },
+            {
+              "groupId": "BG001",
+              "groupTitle": "Vitamin K Antagonist Regimen",
+              "female": 192,
+              "male": 563
+            },
+            {
+              "groupId": "BG002",
+              "groupTitle": "Total",
+              "female": 386,
+              "male": 1120
+            }
+          ],
+          "keyMeasures": [
+            {
+              "title": "Age, Categorical",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "<=18 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban Regimen",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist Regimen",
+                      "value": "0",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Between 18 and 65 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban Regimen",
+                      "value": "226",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist Regimen",
+                      "value": "202",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "428",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": ">=65 years",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban Regimen",
+                      "value": "525",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist Regimen",
+                      "value": "553",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1078",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Age, Continuous",
+              "paramType": "MEAN",
+              "unit": "years",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban Regimen",
+                      "value": "69.4",
+                      "spread": "9.74"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist Regimen",
+                      "value": "70.1",
+                      "spread": "9.51"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "69.7",
+                      "spread": "9.63"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban Regimen",
+                      "value": "194",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist Regimen",
+                      "value": "192",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "386",
+                      "spread": ""
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "groupTitle": "Edoxaban Regimen",
+                      "value": "557",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG001",
+                      "groupTitle": "Vitamin K Antagonist Regimen",
+                      "value": "563",
+                      "spread": ""
+                    },
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "1120",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Race and Ethnicity Not Collected",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unit": "Participants",
+              "categories": [
+                {
+                  "title": "Value",
+                  "measurements": [
+                    {
+                      "groupId": "BG002",
+                      "groupTitle": "Total",
+                      "value": "0",
+                      "spread": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "arms": [
+          {
+            "id": "1",
+            "title": "Participants will be randomized to receive edoxaban 60 mg once-daily or 30 mg once-daily and clopidogrel 75 mg once-daily (or in the presence of a documented clinical need prasugrel \\[5 mg or 10 mg once-daily\\] or ticagrelor \\[90 mg twice-daily\\] may be used) used."
+          },
+          {
+            "id": "2",
+            "title": "Participants will be randomized to receive VKA in combination with clopidogrel 75 mg once-daily (or in the presence of a documented clinical need prasugrel \\[5mg or 10 mg once-daily\\] or ticagrelor \\[90 mg twice-daily\\] may be used) and aspirin (100 mg once-daily, for a minimum of 1 month and up to 12 months duration."
+          }
+        ],
+        "outcome": {
+          "type": "binary",
+          "title": "Number of Participants With Adjudicated Major or Clinically Relevant Non-major Bleeding As First Event Defined by International Society on Thrombosis and Haemostasis Following Edoxaban-based Regimen Compared With Vitamin K Antagonist (VKA)-Based Regimen",
+          "unitOfMeasure": "Participants",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "metricKind": "count",
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Edoxaban Regimen",
+              "n": 751,
+              "rawValue": 128,
+              "rawUnit": "Participants",
+              "events": 128,
+              "derivation": "posted_count"
+            },
+            {
+              "id": "OG001",
+              "title": "Vitamin K Antagonist Regimen",
+              "n": 755,
+              "rawValue": 152,
+              "rawUnit": "Participants",
+              "events": 152,
+              "derivation": "posted_count"
+            }
+          ]
+        },
+        "analysisEligible": true,
         "hasPostedResults": true,
         "randomized": true,
         "completed": true,
@@ -897,13 +928,14 @@
           }
         ],
         "outcome": null,
+        "analysisEligible": false,
         "hasPostedResults": false,
         "randomized": true,
         "completed": false,
         "reasons": [
           "not_completed",
           "no_results_posted",
-          "no_extractable_numeric_outcome"
+          "no_recorded_numeric_outcome"
         ],
         "eligible": false
       },
@@ -974,6 +1006,7 @@
         "demographics": null,
         "arms": [],
         "outcome": null,
+        "analysisEligible": false,
         "hasPostedResults": false,
         "randomized": false,
         "completed": false,
@@ -982,7 +1015,158 @@
           "no_results_posted",
           "not_randomized_interventional",
           "fewer_than_two_arms",
-          "no_extractable_numeric_outcome"
+          "no_recorded_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT05353140",
+        "title": "LAAO Versus NOAC in Patients with AF and PCI",
+        "status": "RECRUITING",
+        "startDate": "2022-09-01",
+        "completionDate": "2029-09-20",
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "officialTitle": "Left Atrial Appendage Occlusion Versus Novel Oral Anti-coagulation in Patients with Atrial Fibrillation and Percutaneous Coronary Intervention: a Randomized, Multicentre, Open-label, Non-inferiority Trial",
+        "acronym": "",
+        "briefSummary": "Atrial fibrillation (AF) coincides with coronary artery disease (CAD) shared common risk factors and pathophysiologic pathways. CAD affects approximately 25% of AF patient according to the trial Atrial Fibrillation Follow-up Investigation of Rhythm Management (AFFIRM), while in the Global Registry of Acute Coronary Events (GRACE) atrial fibrillation affected about 9% of patients with CAD. It is reported that approximately 5-8% of the patients who underwent PCI had concomitated atrial fibrillation. For AF patients who underwent PCI, both antiplatelet and antithrombotic medications are required for preventing stent thrombosis and ischemic stroke, leading to an increased risk of bleeding. Finding a safe and effective balance between the risk of ischaemic events and bleeding complications is challenged by the shared risk factors for either event such as advanced age, congestive heart failure, hypertension, diabetes, previous stroke, etc.. Previous pivotal trials have shown that in patients with atrial fibrillation and requiring antiplatelet treatment, a NOAC plus clopidogrel regimen was associated with a lower incidence of bleeding events as compared with a warfarin-based triple antithrombotic strategy. Therefore, the current expert opinions and consensus of North American Societies recommend a NOAC plus a P2Y12 inhibitor in patients with AF and PCI. However, the NOAC plus clopidogrel strategy still led to 16.8% of clinically significant bleeding (PIONEER AF-PCI). Consequently...",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Xijing Hospital",
+          "class": "OTHER"
+        },
+        "phases": [
+          "NA"
+        ],
+        "enrollment": {
+          "count": 1386,
+          "type": "ESTIMATED"
+        },
+        "conditions": [
+          "Atrial Fibrillation",
+          "Percutaneous Coronary Intervention"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: 1. Successful PCI for unstable angina or CCS 2. Non-valvular atrial ﬁbrillation 3. Concomitant at least one of the following conditions: congestive heart failure, hypertension, ≥65yrs, diabetes, previous stroke, TIA or thromboembolism 4. Eligible for long-term novel oral anti-coagulation (NOAC) therapy 5. Able to understand and provide informed consent and comply with all study procedures/medications Exclusion Criteria: Patients who meet any of the following criteria will be disqualified from participation in the study: Clinical exclusion criteria: 1. Under the age of 18 2. Unable to give informed consent or currently participating in another trial and not yet at its primary endpoint 3. Patient is a woman who is pregnant or nursing (a pregnancy test must be performed within 7 days prior to the index procedure in women of child-bearing potential according to local practice) 4. Concurrent medical condition with a life expectancy of less than 3 years 5. Haemodynamical unstable 6. Known contraindication to medications such as heparin, antiplatelet or anticoagulation drugs, or contrast 7. PCI for ST-elevation myocardial infarction (STEMI) or non-ST-elevation myocardial infarction (NSTEMI), or experienced a peri-procedural myocardial infarction (MI) caused by PCI 8. Known contraindication to LAAO or LAAO is not required 9. Comorbidities other than atrial ﬁbrillation that required long term use of anticoagulation (such as implanted a mechanical valve) 10. The..."
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Major adverse cardiac and cerebrovascular events (MACCE)",
+            "description": "MACCE define as a composite endpoint of any death, any stroke, any myocardial infarction (MI), and systemic embolism (SE).",
+            "timeFrame": "12 months"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "BARC type 2, 3 or 5 bleeding events",
+            "description": "Powered Key secondary endpoint, Bleeding Academic Research Consortium (BARC) defined type 2, 3, 5 bleeding events",
+            "timeFrame": "36 months"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Device: The WATCHMAN/WATCHMAN FLX device\n\nDrug: Rivaroxaban 15 mg QD + Clopidogrel 75mg QD for 45 days, followed by Aspirin 100mg QD + Clopidogrel 75mg QD for 10.5 months after LAAO"
+          },
+          {
+            "id": "2",
+            "title": "Drug: Rivaroxaban 15 mg QD + Clopidogrel 75mg QD for 12 months"
+          }
+        ],
+        "outcome": null,
+        "analysisEligible": false,
+        "hasPostedResults": false,
+        "randomized": true,
+        "completed": false,
+        "reasons": [
+          "not_completed",
+          "no_results_posted",
+          "no_recorded_numeric_outcome"
+        ],
+        "eligible": false
+      },
+      {
+        "nctId": "NCT05068414",
+        "title": "Assessment of the Incidence of Hemorrhagic and Ischemic Events in Post-angioplasty in Anticoagulated Coronary Patients with Atrial Fibrillation",
+        "status": "COMPLETED",
+        "startDate": "2021-04-12",
+        "completionDate": "2024-09-29",
+        "studyType": "OBSERVATIONAL",
+        "allocation": "",
+        "officialTitle": "Evaluation De L'incidence Des Évènements Hémorragiques Et Ischémiques En Post-angioplastie Chez Des Patients Coronariens Anticoagulés Dans Le Cadre D'une Fibrillation Auriculaire",
+        "acronym": "FACOREV",
+        "briefSummary": "Atrial fibrillation (AF) is a supraventricular arrhythmia characterized by uncoordinated and fast atrial activity, and coronary artery disease (chronic and acute coronary syndrome) is characterized by a generally atheromatous narrowing of the coronary arteries. Angioplasty is necessary to restore arterial circulation in coronary artery disease. A dual anti-aggregating therapy is then initiated in these patients in parallel with treatment of AF with anticoagulation. This triple therapy exposes the patient to an increased risk of hemorrhage. The combination of oral anticoagulation with antiplatelet inhibitor in long-term anticoagulated patients requiring stent placement has been studied in several recent trials (e.g. WOEST, PIONEER AF PCI, REDUAL PCI and AUGUSTUS). The results of these studies have formed the basis of the European recommendations of 2017 and 2020, whereby the therapeutic strategy depends on the risk of hemorrhage or ischemia. However, the hemorrhagic risk assessment factors included in the scores overlap with those for ischemic risk. It is therefore difficult to determine the predominant risk for each patient. Thus, uncertainties persist as to the optimal duration of a triple therapy and the optimal recommended dose. In this study, the investigators aim to establish an inventory of the current practices by evaluating the incidence of hemorrhagic and ischemic events in post-angioplasty in anticoagulated coronary patients in the context of atrial fibrillation.",
+        "detailedDescription": "",
+        "sponsor": {
+          "name": "Centre Hospitalier Universitaire de Nīmes",
+          "class": "OTHER"
+        },
+        "phases": [],
+        "enrollment": {
+          "count": 122,
+          "type": "ACTUAL"
+        },
+        "conditions": [
+          "Atrial Fibrillation",
+          "Acute Coronary Syndrome",
+          "Thrombosis",
+          "Hemorrhage"
+        ],
+        "eligibility": {
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "",
+          "healthyVolunteers": false,
+          "criteria": "Inclusion Criteria: * Patient on anti-coagulating therapy before or during hospitalization for atrial fibrillation * Patient hospitalized in the cardiology ward admitted for acute or chronic coronary syndrome requiring coronary angioplasty * The patient must have given their free and informed consent and signed the consent form * The patient must be a member or beneficiary of a health insurance plan Exclusion Criteria: * The subject is in a period of exclusion determined by a previous study * The patient has already been included into this study * It is impossible to give the subject informed information * The patient is under safeguard of justice or state guardianship * Patient pregnant, parturient or breast feeding"
+        },
+        "primaryOutcomes": [
+          {
+            "measure": "Incidence of at least one event from the composite clinical benefit endpoints: death, non-fatal myocardial infarction, ischemic stroke, or major bleeding defined by a Bleeding Academic Research Consortium (BARC) score ≥2",
+            "description": "Number of patients",
+            "timeFrame": "Month 12"
+          }
+        ],
+        "secondaryOutcomes": [
+          {
+            "measure": "Incidence of at least one event from the composite clinical benefit endpoints: death, non-fatal myocardial infarction, ischemic stroke, or major bleeding defined by a Bleeding Academic Research Consortium (BARC) score ≥2",
+            "description": "Number of patients",
+            "timeFrame": "Month 1"
+          },
+          {
+            "measure": "Incidence of at least one event from the composite clinical benefit endpoints: death, non-fatal myocardial infarction, ischemic stroke, or major bleeding defined by a Bleeding Academic Research Consortium (BARC) score ≥2",
+            "description": "Number of patients",
+            "timeFrame": "Month 6"
+          },
+          {
+            "measure": "Occurrence of stent thrombosis",
+            "description": "Number of patients",
+            "timeFrame": "Month 1"
+          }
+        ],
+        "documents": [],
+        "demographics": null,
+        "arms": [
+          {
+            "id": "1",
+            "title": "Arm 1"
+          }
+        ],
+        "outcome": null,
+        "analysisEligible": false,
+        "hasPostedResults": false,
+        "randomized": false,
+        "completed": true,
+        "reasons": [
+          "no_results_posted",
+          "not_randomized_interventional",
+          "fewer_than_two_arms",
+          "no_recorded_numeric_outcome"
         ],
         "eligible": false
       },
@@ -1066,162 +1250,14 @@
           }
         ],
         "outcome": null,
+        "analysisEligible": false,
         "hasPostedResults": false,
         "randomized": true,
         "completed": false,
         "reasons": [
           "not_completed",
           "no_results_posted",
-          "no_extractable_numeric_outcome"
-        ],
-        "eligible": false
-      },
-      {
-        "nctId": "NCT05068414",
-        "title": "Assessment of the Incidence of Hemorrhagic and Ischemic Events in Post-angioplasty in Anticoagulated Coronary Patients with Atrial Fibrillation",
-        "status": "COMPLETED",
-        "startDate": "2021-04-12",
-        "completionDate": "2024-09-29",
-        "studyType": "OBSERVATIONAL",
-        "allocation": "",
-        "officialTitle": "Evaluation De L'incidence Des Évènements Hémorragiques Et Ischémiques En Post-angioplastie Chez Des Patients Coronariens Anticoagulés Dans Le Cadre D'une Fibrillation Auriculaire",
-        "acronym": "FACOREV",
-        "briefSummary": "Atrial fibrillation (AF) is a supraventricular arrhythmia characterized by uncoordinated and fast atrial activity, and coronary artery disease (chronic and acute coronary syndrome) is characterized by a generally atheromatous narrowing of the coronary arteries. Angioplasty is necessary to restore arterial circulation in coronary artery disease. A dual anti-aggregating therapy is then initiated in these patients in parallel with treatment of AF with anticoagulation. This triple therapy exposes the patient to an increased risk of hemorrhage. The combination of oral anticoagulation with antiplatelet inhibitor in long-term anticoagulated patients requiring stent placement has been studied in several recent trials (e.g. WOEST, PIONEER AF PCI, REDUAL PCI and AUGUSTUS). The results of these studies have formed the basis of the European recommendations of 2017 and 2020, whereby the therapeutic strategy depends on the risk of hemorrhage or ischemia. However, the hemorrhagic risk assessment factors included in the scores overlap with those for ischemic risk. It is therefore difficult to determine the predominant risk for each patient. Thus, uncertainties persist as to the optimal duration of a triple therapy and the optimal recommended dose. In this study, the investigators aim to establish an inventory of the current practices by evaluating the incidence of hemorrhagic and ischemic events in post-angioplasty in anticoagulated coronary patients in the context of atrial fibrillation.",
-        "detailedDescription": "",
-        "sponsor": {
-          "name": "Centre Hospitalier Universitaire de Nīmes",
-          "class": "OTHER"
-        },
-        "phases": [],
-        "enrollment": {
-          "count": 122,
-          "type": "ACTUAL"
-        },
-        "conditions": [
-          "Atrial Fibrillation",
-          "Acute Coronary Syndrome",
-          "Thrombosis",
-          "Hemorrhage"
-        ],
-        "eligibility": {
-          "sex": "ALL",
-          "minimumAge": "18 Years",
-          "maximumAge": "",
-          "healthyVolunteers": false,
-          "criteria": "Inclusion Criteria: * Patient on anti-coagulating therapy before or during hospitalization for atrial fibrillation * Patient hospitalized in the cardiology ward admitted for acute or chronic coronary syndrome requiring coronary angioplasty * The patient must have given their free and informed consent and signed the consent form * The patient must be a member or beneficiary of a health insurance plan Exclusion Criteria: * The subject is in a period of exclusion determined by a previous study * The patient has already been included into this study * It is impossible to give the subject informed information * The patient is under safeguard of justice or state guardianship * Patient pregnant, parturient or breast feeding"
-        },
-        "primaryOutcomes": [
-          {
-            "measure": "Incidence of at least one event from the composite clinical benefit endpoints: death, non-fatal myocardial infarction, ischemic stroke, or major bleeding defined by a Bleeding Academic Research Consortium (BARC) score ≥2",
-            "description": "Number of patients",
-            "timeFrame": "Month 12"
-          }
-        ],
-        "secondaryOutcomes": [
-          {
-            "measure": "Incidence of at least one event from the composite clinical benefit endpoints: death, non-fatal myocardial infarction, ischemic stroke, or major bleeding defined by a Bleeding Academic Research Consortium (BARC) score ≥2",
-            "description": "Number of patients",
-            "timeFrame": "Month 1"
-          },
-          {
-            "measure": "Incidence of at least one event from the composite clinical benefit endpoints: death, non-fatal myocardial infarction, ischemic stroke, or major bleeding defined by a Bleeding Academic Research Consortium (BARC) score ≥2",
-            "description": "Number of patients",
-            "timeFrame": "Month 6"
-          },
-          {
-            "measure": "Occurrence of stent thrombosis",
-            "description": "Number of patients",
-            "timeFrame": "Month 1"
-          }
-        ],
-        "documents": [],
-        "demographics": null,
-        "arms": [
-          {
-            "id": "1",
-            "title": "Arm 1"
-          }
-        ],
-        "outcome": null,
-        "hasPostedResults": false,
-        "randomized": false,
-        "completed": true,
-        "reasons": [
-          "no_results_posted",
-          "not_randomized_interventional",
-          "fewer_than_two_arms",
-          "no_extractable_numeric_outcome"
-        ],
-        "eligible": false
-      },
-      {
-        "nctId": "NCT05353140",
-        "title": "LAAO Versus NOAC in Patients with AF and PCI",
-        "status": "RECRUITING",
-        "startDate": "2022-09-01",
-        "completionDate": "2029-09-20",
-        "studyType": "INTERVENTIONAL",
-        "allocation": "RANDOMIZED",
-        "officialTitle": "Left Atrial Appendage Occlusion Versus Novel Oral Anti-coagulation in Patients with Atrial Fibrillation and Percutaneous Coronary Intervention: a Randomized, Multicentre, Open-label, Non-inferiority Trial",
-        "acronym": "",
-        "briefSummary": "Atrial fibrillation (AF) coincides with coronary artery disease (CAD) shared common risk factors and pathophysiologic pathways. CAD affects approximately 25% of AF patient according to the trial Atrial Fibrillation Follow-up Investigation of Rhythm Management (AFFIRM), while in the Global Registry of Acute Coronary Events (GRACE) atrial fibrillation affected about 9% of patients with CAD. It is reported that approximately 5-8% of the patients who underwent PCI had concomitated atrial fibrillation. For AF patients who underwent PCI, both antiplatelet and antithrombotic medications are required for preventing stent thrombosis and ischemic stroke, leading to an increased risk of bleeding. Finding a safe and effective balance between the risk of ischaemic events and bleeding complications is challenged by the shared risk factors for either event such as advanced age, congestive heart failure, hypertension, diabetes, previous stroke, etc.. Previous pivotal trials have shown that in patients with atrial fibrillation and requiring antiplatelet treatment, a NOAC plus clopidogrel regimen was associated with a lower incidence of bleeding events as compared with a warfarin-based triple antithrombotic strategy. Therefore, the current expert opinions and consensus of North American Societies recommend a NOAC plus a P2Y12 inhibitor in patients with AF and PCI. However, the NOAC plus clopidogrel strategy still led to 16.8% of clinically significant bleeding (PIONEER AF-PCI). Consequently...",
-        "detailedDescription": "",
-        "sponsor": {
-          "name": "Xijing Hospital",
-          "class": "OTHER"
-        },
-        "phases": [
-          "NA"
-        ],
-        "enrollment": {
-          "count": 1386,
-          "type": "ESTIMATED"
-        },
-        "conditions": [
-          "Atrial Fibrillation",
-          "Percutaneous Coronary Intervention"
-        ],
-        "eligibility": {
-          "sex": "ALL",
-          "minimumAge": "18 Years",
-          "maximumAge": "",
-          "healthyVolunteers": false,
-          "criteria": "Inclusion Criteria: 1. Successful PCI for unstable angina or CCS 2. Non-valvular atrial ﬁbrillation 3. Concomitant at least one of the following conditions: congestive heart failure, hypertension, ≥65yrs, diabetes, previous stroke, TIA or thromboembolism 4. Eligible for long-term novel oral anti-coagulation (NOAC) therapy 5. Able to understand and provide informed consent and comply with all study procedures/medications Exclusion Criteria: Patients who meet any of the following criteria will be disqualified from participation in the study: Clinical exclusion criteria: 1. Under the age of 18 2. Unable to give informed consent or currently participating in another trial and not yet at its primary endpoint 3. Patient is a woman who is pregnant or nursing (a pregnancy test must be performed within 7 days prior to the index procedure in women of child-bearing potential according to local practice) 4. Concurrent medical condition with a life expectancy of less than 3 years 5. Haemodynamical unstable 6. Known contraindication to medications such as heparin, antiplatelet or anticoagulation drugs, or contrast 7. PCI for ST-elevation myocardial infarction (STEMI) or non-ST-elevation myocardial infarction (NSTEMI), or experienced a peri-procedural myocardial infarction (MI) caused by PCI 8. Known contraindication to LAAO or LAAO is not required 9. Comorbidities other than atrial ﬁbrillation that required long term use of anticoagulation (such as implanted a mechanical valve) 10. The..."
-        },
-        "primaryOutcomes": [
-          {
-            "measure": "Major adverse cardiac and cerebrovascular events (MACCE)",
-            "description": "MACCE define as a composite endpoint of any death, any stroke, any myocardial infarction (MI), and systemic embolism (SE).",
-            "timeFrame": "12 months"
-          }
-        ],
-        "secondaryOutcomes": [
-          {
-            "measure": "BARC type 2, 3 or 5 bleeding events",
-            "description": "Powered Key secondary endpoint, Bleeding Academic Research Consortium (BARC) defined type 2, 3, 5 bleeding events",
-            "timeFrame": "36 months"
-          }
-        ],
-        "documents": [],
-        "demographics": null,
-        "arms": [
-          {
-            "id": "1",
-            "title": "Device: The WATCHMAN/WATCHMAN FLX device\n\nDrug: Rivaroxaban 15 mg QD + Clopidogrel 75mg QD for 45 days, followed by Aspirin 100mg QD + Clopidogrel 75mg QD for 10.5 months after LAAO"
-          },
-          {
-            "id": "2",
-            "title": "Drug: Rivaroxaban 15 mg QD + Clopidogrel 75mg QD for 12 months"
-          }
-        ],
-        "outcome": null,
-        "hasPostedResults": false,
-        "randomized": true,
-        "completed": false,
-        "reasons": [
-          "not_completed",
-          "no_results_posted",
-          "no_extractable_numeric_outcome"
+          "no_recorded_numeric_outcome"
         ],
         "eligible": false
       }
@@ -1229,11 +1265,18 @@
     "exclusionReasons": {
       "not_completed": 4,
       "no_results_posted": 5,
-      "no_extractable_numeric_outcome": 5,
+      "no_recorded_numeric_outcome": 5,
       "not_randomized_interventional": 2,
       "fewer_than_two_arms": 2
     },
+    "ctgovFullCoverage": true,
+    "ctgovCoverageNote": "Curated as a modern topic where the randomized evidence base is expected to be fully representable from CT.gov records with posted results.",
     "portfolioEligible": true,
-    "priorityTier": "early"
+    "portfolioEligibilityMode": "full-ctgov-threshold",
+    "portfolioEligibilityReason": "Included because 2 randomized trial(s) met the standard >=2 CT.gov-results threshold and the topic is curated as full-coverage.",
+    "portfolioExclusionReasons": [],
+    "priorityTier": "early",
+    "comparisonReadyStudyCount": 2,
+    "comparisonCount": 3
   }
 }

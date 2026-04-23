@@ -17,17 +17,17 @@
         <div class="hero__title">
           <p class="kicker" id="appKicker">Registry-Native Cardiovascular Evidence</p>
           <h1 id="appTitle">Antithrombotic Strategies After TAVI/TAVR Living Meta-Analysis</h1>
-          <p class="subtitle" id="appSubtitle">Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.</p>
+          <p class="subtitle" id="appSubtitle">Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio.</p>
         </div>
         <div class="hero__controls">
           <div class="control-card">
             <label>
               New RCT window start
-              <input id="startDate" type="date" />
+              <input aria-label="New RCT window start" id="startDate" type="date" />
             </label>
             <label>
               Status filter
-              <select id="statusFilter" multiple>
+              <select aria-label="Status filter" id="statusFilter" multiple>
                 <option value="COMPLETED" selected>Completed</option>
                 <option value="ACTIVE_NOT_RECRUITING" selected>Active, not recruiting</option>
                 <option value="RECRUITING">Recruiting</option>
@@ -37,14 +37,14 @@
             </label>
             <label>
               Single outcome rule
-              <select id="outcomeRule">
+              <select aria-label="Single outcome rule" id="outcomeRule">
                 <option value="primary">Primary outcome with numeric results</option>
                 <option value="results">Any outcome with numeric results</option>
               </select>
             </label>
             <label>
               Reference treatment (NMA)
-              <input id="referenceTx" type="text" placeholder="e.g., Standard care" />
+              <input aria-label="Reference treatment (NMA)" id="referenceTx" type="text" aria-label="e.g., Standard care" placeholder="e.g., Standard care" />
             </label>
             <button id="updateBtn" class="btn btn--primary">Update from ClinicalTrials.gov</button>
             <button id="fixtureBtn" class="btn">Load Offline Fixture</button>
@@ -55,7 +55,7 @@
           <div class="control-card">
             <label>
               Prior meta-analysis trial IDs (one per line)
-              <textarea id="priorTrials" rows="6" placeholder="NCT01234567"></textarea>
+              <textarea aria-label="Prior meta-analysis trial IDs (one per line)" id="priorTrials" rows="6" aria-label="NCT01234567" placeholder="NCT01234567"></textarea>
             </label>
             <button id="compareBtn" class="btn">Compare Coverage</button>
             <div id="coverageSummary" class="coverage"></div>
@@ -67,21 +67,27 @@
       <section class="panel validation-snapshot">
         <div class="panel__header">
           <h2>CT.gov Validation Snapshot</h2>
-          <div class="panel__meta">Generated 2026-03-28</div>
+          <div class="panel__meta">Generated 2026-04-05</div>
         </div>
         <div class="panel__body">
           <div class="summary-grid">
             <div class="summary-card">
               <h3>Registry Gate</h3>
-              <div class="pill">Included RCTs: 2</div>
+              <div class="pill">Included RCT records: 2</div>
+              <div class="pill">Contrast-ready studies: 2</div>
+              <div class="pill">Direct comparisons: 2</div>
               <div class="pill">Scanned records: 8</div>
               <div class="pill">Pages fetched: 1</div>
               <div class="pill">Priority tier: Early</div>
+              <div class="pill">Eligibility mode: Full CT.gov results coverage (&gt;=2 RCTs)</div>
+              <div class="pill">Coverage gate: Full CT.gov results coverage</div>
             </div>
             <div class="summary-card">
               <h3>Eligibility Rules</h3>
-              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, and at least one extractable numeric outcome.</p>
+              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, at least one recorded numeric CT.gov outcome, and topic-level curation that the full randomized evidence base should be captured on CT.gov.</p>
+              <p>Direct pooled contrasts are only emitted when the posted CT.gov metric can be safely reduced to counts or means and the arm structure supports a defensible comparator.</p>
               <p>The validation scan completed within the configured CT.gov page cap.</p>
+              <p class="muted">Curated as a modern topic where the randomized evidence base is expected to be fully representable from CT.gov records with posted results.</p>
             </div>
             <div class="summary-card">
               <h3>Audit Trail</h3>
@@ -99,12 +105,12 @@
             <h3>Included Trial Records</h3>
             <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
               
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">
-          NCT02943785
-        </a>
-
         <a class="pill" href="https://clinicaltrials.gov/study/NCT02833948" target="_blank" rel="noopener">
           NCT02833948
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">
+          NCT02943785
         </a>
             </div>
           </div>
@@ -113,7 +119,7 @@
             <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
               
         <div class="pill">
-          No Extractable Numeric Outcome: 5
+          No Recorded Numeric Outcome: 5
         </div>
 
         <div class="pill">
@@ -160,11 +166,11 @@
             </div>
             <div class="summary-card">
               <h3>Review Question And PICO</h3>
-              <p><strong>Population:</strong> Atrial Fibrillation; Aortic Valve Stenosis; Cardiovascular Diseases; Heart Valve Diseases; Ventricular Outflow Obstruction; Thrombosis</p>
-              <p><strong>Interventions:</strong> Edoxaban; Vitamin K Antagonist (VKA); ASA + Clopidogrel; Rivaroxaban + ASA</p>
-              <p><strong>Comparators:</strong> Vitamin K Antagonist (VKA) vs Edoxaban; Rivaroxaban + ASA vs ASA + Clopidogrel</p>
-              <p><strong>Outcomes:</strong> Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA; Rate of Patients With at Least One Prosthetic Leaflet With &gt;50% Motion Reduction as Assessed by Cardiac 4DCT-scan</p>
-              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</p>
+              <p><strong>Population:</strong> Aortic Valve Stenosis; Cardiovascular Diseases; Heart Valve Diseases; Ventricular Outflow Obstruction; Thrombosis; Atrial Fibrillation</p>
+              <p><strong>Interventions:</strong> ASA + Clopidogrel; Rivaroxaban + ASA; Edoxaban; Vitamin K Antagonist (VKA)</p>
+              <p><strong>Comparators:</strong> ASA + Clopidogrel vs Rivaroxaban + ASA; Edoxaban vs Vitamin K Antagonist (VKA)</p>
+              <p><strong>Outcomes:</strong> Rate of Patients With at Least One Prosthetic Leaflet With &gt;50% Motion Reduction as Assessed by Cardiac 4DCT-scan; Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA</p>
+              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and at least one recorded numeric CT.gov outcome.</p>
             </div>
           </div>
 
@@ -182,7 +188,7 @@
         <tr>
           <td>CT.gov candidate scan started</td>
           <td>ClinicalTrials.gov v2 API</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr>
         <tr>
           <td>Base query locked</td>
@@ -217,7 +223,7 @@
         <tr>
           <td>Project package generated</td>
           <td>Portfolio build</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr></tbody>
             </table>
           </div>
@@ -241,12 +247,17 @@
         <tr>
           <td>Records excluded by registry hard gates</td>
           <td>6</td>
-          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no recorded numeric outcome</td>
         </tr>
         <tr>
-          <td>Trials entering the quantitative snapshot</td>
+          <td>Trials entering the CT.gov record snapshot</td>
           <td>2</td>
           <td>Included in validation.json and the live topic app</td>
+        </tr>
+        <tr>
+          <td>Trials with contrast-ready outcomes</td>
+          <td>2</td>
+          <td>Recorded metrics safely reducible to counts or means</td>
         </tr></tbody>
             </table>
           </div>
@@ -260,7 +271,7 @@
                   <th>Count</th>
                 </tr>
               </thead>
-              <tbody><tr><td>No Extractable Numeric Outcome</td><td>5</td></tr><tr><td>No Results Posted</td><td>5</td></tr><tr><td>Not Completed</td><td>3</td></tr><tr><td>Not Randomized Interventional</td><td>1</td></tr></tbody>
+              <tbody><tr><td>No Recorded Numeric Outcome</td><td>5</td></tr><tr><td>No Results Posted</td><td>5</td></tr><tr><td>Not Completed</td><td>3</td></tr><tr><td>Not Randomized Interventional</td><td>1</td></tr></tbody>
             </table>
           </div>
 
@@ -280,15 +291,6 @@
               </thead>
               <tbody>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">NCT02943785</a></td>
-          <td>Edoxaban Compared to Standard Care After Heart Valve Replacement Using a Catheter in Patients With Atrial Fibrillation (ENVISAGE-TAVI AF)</td>
-          <td>Daiichi Sankyo (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>1426 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
-          <td>Participants Edoxaban: 713 Participants | Vitamin K Antagonist (VKA): 713 Participants | Total: 1426 Participants | Age Edoxaban: 82.1 +/- 5.4 years | Vitamin K Antagonist (VKA): 82.1 +/- 5.5 years | Total: 82.1 +/- 5.5 years | Sex Edoxaban: F 347 / M 366 | Vitamin K Antagonist (VKA): F 331 / M 382 | Total: F 678 / M 748</td>
-        </tr>
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02833948" target="_blank" rel="noopener">NCT02833948</a></td>
           <td>Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT)</td>
           <td>ECRI bv (INDUSTRY)</td>
@@ -296,6 +298,15 @@
           <td>231 (ACTUAL)</td>
           <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
           <td>Participants ASA + Clopidogrel: 116 Participants | Rivaroxaban + ASA: 115 Participants | Total: 231 Participants | Age ASA + Clopidogrel: 80.5 +/- 6.2 years | Rivaroxaban + ASA: 79.7 +/- 7.3 years | Total: 80.1 +/- 6.7 years | Sex ASA + Clopidogrel: F 42 / M 74 | Rivaroxaban + ASA: F 41 / M 74 | Total: F 83 / M 148</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">NCT02943785</a></td>
+          <td>Edoxaban Compared to Standard Care After Heart Valve Replacement Using a Catheter in Patients With Atrial Fibrillation (ENVISAGE-TAVI AF)</td>
+          <td>Daiichi Sankyo (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>1426 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Edoxaban: 713 Participants | Vitamin K Antagonist (VKA): 713 Participants | Total: 1426 Participants | Age Edoxaban: 82.1 +/- 5.4 years | Vitamin K Antagonist (VKA): 82.1 +/- 5.5 years | Total: 82.1 +/- 5.5 years | Sex Edoxaban: F 347 / M 366 | Vitamin K Antagonist (VKA): F 331 / M 382 | Total: F 678 / M 748</td>
         </tr></tbody>
             </table>
           </div>
@@ -314,18 +325,18 @@
               </thead>
               <tbody>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">NCT02943785</a></td>
-          <td>When the upper chambers of a person&#39;s heart receive or generate irregular electrical signals, it causes abnormal rhythm in the heartbeat. This is called atrial fibrillation. Atrial fibrillation goes along with blood clots that may cause...</td>
-          <td>Inclusion Criteria: * Meets protocol-specified criteria for qualification and contraception * Is willing and able to comply with any restrictions related food, drink and medications * Voluntarily consents to participa...</td>
-          <td>Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA | Time frame: Baseline through study completion, up to 36 months post-dose | The composite endpoint net adver...</td>
-          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2019-07-29)</span></td>
-        </tr>
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02833948" target="_blank" rel="noopener">NCT02833948</a></td>
           <td>The aortic valve is located between the left ventricle and the aorta. Patients with symptomatic, severe aortic valve stenosis conventionally have it surgically replaced requiring direct access to the heart through the chest. Transcathete...</td>
           <td>Inclusion Criteria: * Successful TAVR of a native aortic valve stenosis * By iliofemoral or subclavian access * With any approved/marketed TAVR device * Written informed consent Exclusion Criteria: * Atrial fibrillati...</td>
           <td>Rate of Patients With at Least One Prosthetic Leaflet With &gt;50% Motion Reduction as Assessed by Cardiac 4DCT-scan | Time frame: 3 months | Reduced systolic leaflet excursion is classified as: (I) normal, (II) mildly reduced (\&lt;50%), (III) moderate to severe...</td>
           <td><span class="pill">Study Protocol and Statistical Analysis Plan (2017-05-29)</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">NCT02943785</a></td>
+          <td>When the upper chambers of a person&#39;s heart receive or generate irregular electrical signals, it causes abnormal rhythm in the heartbeat. This is called atrial fibrillation. Atrial fibrillation goes along with blood clots that may cause...</td>
+          <td>Inclusion Criteria: * Meets protocol-specified criteria for qualification and contraception * Is willing and able to comply with any restrictions related food, drink and medications * Voluntarily consents to participa...</td>
+          <td>Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA | Time frame: Baseline through study completion, up to 36 months post-dose | The composite endpoint net adver...</td>
+          <td><span class="pill">Study Protocol and Statistical Analysis Plan (2019-07-29)</span></td>
         </tr></tbody>
             </table>
           </div>
@@ -345,18 +356,18 @@
               </thead>
               <tbody>
       <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">NCT02943785</a></td>
-        <td>Vitamin K Antagonist (VKA) vs Edoxaban</td>
-        <td>Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA</td>
-        <td>1426 (ACTUAL)</td>
+        <td><a href="https://clinicaltrials.gov/study/NCT02833948" target="_blank" rel="noopener">NCT02833948</a></td>
+        <td>ASA + Clopidogrel vs Rivaroxaban + ASA</td>
+        <td>Rate of Patients With at Least One Prosthetic Leaflet With &gt;50% Motion Reduction as Assessed by Cardiac 4DCT-scan</td>
+        <td>231 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
       </tr>
 
       <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT02833948" target="_blank" rel="noopener">NCT02833948</a></td>
-        <td>Rivaroxaban + ASA vs ASA + Clopidogrel</td>
-        <td>Rate of Patients With at Least One Prosthetic Leaflet With &gt;50% Motion Reduction as Assessed by Cardiac 4DCT-scan</td>
-        <td>231 (ACTUAL)</td>
+        <td><a href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">NCT02943785</a></td>
+        <td>Edoxaban vs Vitamin K Antagonist (VKA)</td>
+        <td>Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA</td>
+        <td>1426 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
       </tr></tbody>
             </table>
@@ -379,7 +390,7 @@
             <script>
 (() => {
   const iframe = document.getElementById("reviewerValidationFrame");
-  const context = {"source":"ctgov-portfolio-generator","topicId":"tavi-antithrombotic","label":"Antithrombotic Strategies After TAVI/TAVR","query":"(\"aortic stenosis\" OR TAVI OR TAVR OR \"transcatheter aortic valve\") AND (anticoagulation OR antiplatelet OR apixaban OR edoxaban OR rivaroxaban) AND (\"ATLANTIS\" OR \"ENVISAGE-TAVI AF\" OR \"POPular TAVI\" OR \"GALILEO\" OR \"ADAPT-TAVR\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":2,"excludedCount":6,"totalEnrollment":1657,"demographicsCoverage":2,"documentCoverage":2,"comparisons":[{"studyId":"NCT02943785","title":"Edoxaban Compared to Standard Care After Heart Valve Replacement Using a Catheter in Patients With Atrial Fibrillation (ENVISAGE-TAVI AF)","t1":"Vitamin K Antagonist (VKA)","t2":"Edoxaban","measure":"logRR","effect":-0.07955263170195365,"se":0.09719429306502404,"n1":713,"n0":713,"totalN":1426,"sampleSize":1426},{"studyId":"NCT02833948","title":"Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT)","t1":"Rivaroxaban + ASA","t2":"ASA + Clopidogrel","measure":"logRR","effect":-1.6643385539005486,"se":0.755446108243047,"n1":97,"n0":101,"totalN":198,"sampleSize":198}],"includedStudies":[{"nctId":"NCT02943785","title":"Edoxaban Compared to Standard Care After Heart Valve Replacement Using a Catheter in Patients With Atrial Fibrillation (ENVISAGE-TAVI AF)","status":"COMPLETED","enrollment":1426,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA","groups":[{"title":"Edoxaban","n":713,"events":170,"mean":null,"sd":null},{"title":"Vitamin K Antagonist (VKA)","n":713,"events":157,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA","timeFrame":"Baseline through study completion, up to 36 months post-dose"},{"measure":"Number of Participants Who Experienced Major Bleeding (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA","timeFrame":"Baseline through study completion, up to 36 months post-dose"}]},{"nctId":"NCT02833948","title":"Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT)","status":"COMPLETED","enrollment":231,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Rate of Patients With at Least One Prosthetic Leaflet With >50% Motion Reduction as Assessed by Cardiac 4DCT-scan","groups":[{"title":"ASA + Clopidogrel","n":101,"events":11,"mean":null,"sd":null},{"title":"Rivaroxaban + ASA","n":97,"events":2,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Rate of Patients With at Least One Prosthetic Leaflet With >50% Motion Reduction as Assessed by Cardiac 4DCT-scan","timeFrame":"3 months"}]}]};
+  const context = {"source":"ctgov-portfolio-generator","topicId":"tavi-antithrombotic","label":"Antithrombotic Strategies After TAVI/TAVR","query":"(\"aortic stenosis\" OR TAVI OR TAVR OR \"transcatheter aortic valve\") AND (anticoagulation OR antiplatelet OR apixaban OR edoxaban OR rivaroxaban) AND (\"ATLANTIS\" OR \"ENVISAGE-TAVI AF\" OR \"POPular TAVI\" OR \"GALILEO\" OR \"ADAPT-TAVR\")","generatedAt":"2026-04-05T13:16:46.754Z","includedCount":2,"excludedCount":6,"totalEnrollment":1657,"demographicsCoverage":2,"documentCoverage":2,"analysisEligibleCount":2,"comparisonReadyStudyCount":2,"comparisonCount":2,"comparisons":[{"studyId":"NCT02833948","title":"Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT)","t1":"ASA + Clopidogrel","t2":"Rivaroxaban + ASA","measure":"logRR","effect":1.6643385539005486,"se":0.755446108243047,"n1":101,"n0":97,"totalN":198,"sampleSize":198,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"count"},{"studyId":"NCT02943785","title":"Edoxaban Compared to Standard Care After Heart Valve Replacement Using a Catheter in Patients With Atrial Fibrillation (ENVISAGE-TAVI AF)","t1":"Edoxaban","t2":"Vitamin K Antagonist (VKA)","measure":"logRR","effect":0.07955263170195369,"se":0.09719429306502404,"n1":713,"n0":713,"totalN":1426,"sampleSize":1426,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"count"}],"includedStudies":[{"nctId":"NCT02833948","title":"Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT)","status":"COMPLETED","enrollment":231,"documentsCount":1,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"binary","title":"Rate of Patients With at Least One Prosthetic Leaflet With >50% Motion Reduction as Assessed by Cardiac 4DCT-scan","unitOfMeasure":"Participants","paramType":"COUNT_OF_PARTICIPANTS","metricKind":"count","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"ASA + Clopidogrel","n":101,"events":11,"mean":null,"sd":null,"rawValue":11,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"Rivaroxaban + ASA","n":97,"events":2,"mean":null,"sd":null,"rawValue":2,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"}]},"primaryOutcomes":[{"measure":"Rate of Patients With at Least One Prosthetic Leaflet With >50% Motion Reduction as Assessed by Cardiac 4DCT-scan","timeFrame":"3 months"}]},{"nctId":"NCT02943785","title":"Edoxaban Compared to Standard Care After Heart Valve Replacement Using a Catheter in Patients With Atrial Fibrillation (ENVISAGE-TAVI AF)","status":"COMPLETED","enrollment":1426,"documentsCount":1,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"binary","title":"Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA","unitOfMeasure":"Participants","paramType":"COUNT_OF_PARTICIPANTS","metricKind":"count","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Edoxaban","n":713,"events":170,"mean":null,"sd":null,"rawValue":170,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"Vitamin K Antagonist (VKA)","n":713,"events":157,"mean":null,"sd":null,"rawValue":157,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"}]},"primaryOutcomes":[{"measure":"Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA","timeFrame":"Baseline through study completion, up to 36 months post-dose"},{"measure":"Number of Participants Who Experienced Major Bleeding (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA","timeFrame":"Baseline through study completion, up to 36 months post-dose"}]}]};
   if (!iframe || !context) return;
   const sendContext = () => {
     if (!iframe.contentWindow) return;
@@ -401,7 +412,7 @@
       <main class="layout">
         <section class="panel topics">
           <div class="panel__header">
-            <h2 id="topicPanelTitle">CT.gov-validated topic (2 eligible RCTs in snapshot)</h2>
+            <h2 id="topicPanelTitle">CT.gov completeness-screened topic (2 eligible RCTs in snapshot)</h2>
             <div class="topic-stats">
               <span id="topicCount">0</span> topics -
               <span id="trialCount">0</span> trials
@@ -540,7 +551,7 @@
           <div class="dataset-filters">
             <label>
               Source:
-              <select id="datasetSourceFilter">
+              <select aria-label="Source" id="datasetSourceFilter">
                 <option value="all">All Sources</option>
                 <option value="metafor">metafor</option>
                 <option value="meta">meta</option>
@@ -551,7 +562,7 @@
             </label>
             <label>
               Type:
-              <select id="datasetTypeFilter">
+              <select aria-label="Type" id="datasetTypeFilter">
                 <option value="all">All Types</option>
                 <option value="pairwise">Pairwise</option>
                 <option value="network">Network</option>
@@ -559,16 +570,16 @@
                 <option value="continuous">Continuous</option>
               </select>
             </label>
-            <label>
+            <label for="datasetSearch">
               Relevance:
-              <select id="datasetRelevanceFilter">
+              <select aria-label="Relevance" id="datasetRelevanceFilter">
                 <option value="all">All</option>
                 <option value="acs">ACS-specific</option>
                 <option value="cardiovascular">Cardiovascular</option>
                 <option value="classic">Classic examples</option>
               </select>
             </label>
-            <input type="text" id="datasetSearch" placeholder="Search datasets..." />
+            <input type="text" id="datasetSearch" aria-label="Search datasets..." placeholder="Search datasets..." />
           </div>
           <div id="datasetList" class="dataset-list"></div>
           <div id="datasetPreview" class="dataset-preview hidden">
@@ -581,11 +592,11 @@
         </div>
         <div class="modal-footer">
           <div class="import-options">
-            <label>
-              <input type="checkbox" id="createTopicCheck" checked />
+            <label for="customTopicName">
+              <input type="checkbox" id="createTopicCheck" checked / aria-label="Create as new topic">
               Create as new topic
             </label>
-            <input type="text" id="customTopicName" placeholder="Custom topic name (optional)" />
+            <input type="text" id="customTopicName" aria-label="Custom topic name (optional)" placeholder="Custom topic name (optional)" />
           </div>
           <button id="importDatasetConfirmBtn" class="btn btn--primary" disabled>Import Selected Dataset</button>
         </div>
@@ -605,11 +616,11 @@
             <div class="form-row">
               <label>
                 Study Name/ID *
-                <input type="text" id="entryStudyName" placeholder="e.g., COMPLETE 2019" required />
+                <input type="text" aria-label="Study Name/ID *" id="entryStudyName" aria-label="e.g., COMPLETE 2019" placeholder="e.g., COMPLETE 2019" required />
               </label>
               <label>
                 Year
-                <input type="number" id="entryStudyYear" placeholder="2019" min="1900" max="2100" />
+                <input type="number" aria-label="Year" id="entryStudyYear" aria-label="2019" placeholder="2019" min="1900" max="2100" />
               </label>
             </div>
           </div>
@@ -618,13 +629,13 @@
             <h4>Outcome Type</h4>
             <div class="form-row">
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="binary" checked /> Binary (events/n)
+                <input type="radio" name="outcomeType" value="binary" checked / aria-label="Binary (events/n)"> Binary (events/n)
               </label>
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="continuous" /> Continuous (mean/SD/n)
+                <input type="radio" name="outcomeType" value="continuous" / aria-label="Continuous (mean/SD/n)"> Continuous (mean/SD/n)
               </label>
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="precomputed" /> Pre-computed (HR/OR/RR with CI)
+                <input type="radio" name="outcomeType" value="precomputed" / aria-label="Pre-computed (HR/OR/RR with CI)"> Pre-computed (HR/OR/RR with CI)
               </label>
             </div>
           </div>
@@ -634,29 +645,29 @@
             <div class="form-row">
               <label>
                 Treatment Arm Label
-                <input type="text" id="entryTreat1Label" placeholder="e.g., Complete revasc" />
+                <input type="text" aria-label="Treatment Arm Label" id="entryTreat1Label" aria-label="e.g., Complete revasc" placeholder="e.g., Complete revasc" />
               </label>
               <label>
                 Events
-                <input type="number" id="entryTreat1Events" min="0" />
+                <input type="number" aria-label="Events" id="entryTreat1Events" min="0" />
               </label>
               <label>
                 Total N
-                <input type="number" id="entryTreat1N" min="1" />
+                <input type="number" aria-label="Total N" id="entryTreat1N" min="1" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Control Arm Label
-                <input type="text" id="entryTreat2Label" placeholder="e.g., Culprit-only" />
+                <input type="text" aria-label="Control Arm Label" id="entryTreat2Label" aria-label="e.g., Culprit-only" placeholder="e.g., Culprit-only" />
               </label>
               <label>
                 Events
-                <input type="number" id="entryTreat2Events" min="0" />
+                <input type="number" aria-label="Events" id="entryTreat2Events" min="0" />
               </label>
               <label>
                 Total N
-                <input type="number" id="entryTreat2N" min="1" />
+                <input type="number" aria-label="Total N" id="entryTreat2N" min="1" />
               </label>
             </div>
           </div>
@@ -666,37 +677,37 @@
             <div class="form-row">
               <label>
                 Treatment Arm Label
-                <input type="text" id="entryContTreat1Label" placeholder="e.g., Intervention" />
+                <input type="text" aria-label="Treatment Arm Label" id="entryContTreat1Label" aria-label="e.g., Intervention" placeholder="e.g., Intervention" />
               </label>
               <label>
                 Mean
-                <input type="number" id="entryContTreat1Mean" step="any" />
+                <input type="number" aria-label="Mean" id="entryContTreat1Mean" step="any" />
               </label>
               <label>
                 SD
-                <input type="number" id="entryContTreat1SD" step="any" min="0" />
+                <input type="number" aria-label="SD" id="entryContTreat1SD" step="any" min="0" />
               </label>
               <label>
                 N
-                <input type="number" id="entryContTreat1N" min="1" />
+                <input type="number" aria-label="N" id="entryContTreat1N" min="1" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Control Arm Label
-                <input type="text" id="entryContTreat2Label" placeholder="e.g., Control" />
+                <input type="text" aria-label="Control Arm Label" id="entryContTreat2Label" aria-label="e.g., Control" placeholder="e.g., Control" />
               </label>
               <label>
                 Mean
-                <input type="number" id="entryContTreat2Mean" step="any" />
+                <input type="number" aria-label="Mean" id="entryContTreat2Mean" step="any" />
               </label>
               <label>
                 SD
-                <input type="number" id="entryContTreat2SD" step="any" min="0" />
+                <input type="number" aria-label="SD" id="entryContTreat2SD" step="any" min="0" />
               </label>
               <label>
                 N
-                <input type="number" id="entryContTreat2N" min="1" />
+                <input type="number" aria-label="N" id="entryContTreat2N" min="1" />
               </label>
             </div>
           </div>
@@ -706,7 +717,7 @@
             <div class="form-row">
               <label>
                 Effect Measure
-                <select id="entryEffectMeasure">
+                <select aria-label="Effect Measure" id="entryEffectMeasure">
                   <option value="HR">Hazard Ratio (HR)</option>
                   <option value="OR">Odds Ratio (OR)</option>
                   <option value="RR">Risk Ratio (RR)</option>
@@ -716,27 +727,27 @@
               </label>
               <label>
                 Point Estimate
-                <input type="number" id="entryEffectValue" step="any" placeholder="e.g., 0.74" />
+                <input type="number" aria-label="Point Estimate" id="entryEffectValue" step="any" aria-label="e.g., 0.74" placeholder="e.g., 0.74" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 95% CI Lower
-                <input type="number" id="entryCILower" step="any" />
+                <input type="number" aria-label="95% CI Lower" id="entryCILower" step="any" />
               </label>
               <label>
                 95% CI Upper
-                <input type="number" id="entryCIUpper" step="any" />
+                <input type="number" aria-label="95% CI Upper" id="entryCIUpper" step="any" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Treatment Label
-                <input type="text" id="entryPreTreat1" placeholder="e.g., Treatment" />
+                <input type="text" aria-label="Treatment Label" id="entryPreTreat1" aria-label="e.g., Treatment" placeholder="e.g., Treatment" />
               </label>
               <label>
                 Control Label
-                <input type="text" id="entryPreTreat2" placeholder="e.g., Control" />
+                <input type="text" aria-label="Control Label" id="entryPreTreat2" aria-label="e.g., Control" placeholder="e.g., Control" />
               </label>
             </div>
           </div>
@@ -766,7 +777,7 @@
           </div>
           <div class="rob-domains">
             <div class="rob-domain-row">
-              <label>
+              <label for="robD1Notes">
                 <span class="domain-label">D1: Randomization process</span>
                 <select id="robD1" class="rob-select">
                   <option value="">Not assessed</option>
@@ -775,10 +786,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD1Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD1Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD2Notes">
                 <span class="domain-label">D2: Deviations from intended interventions</span>
                 <select id="robD2" class="rob-select">
                   <option value="">Not assessed</option>
@@ -787,10 +798,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD2Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD2Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD3Notes">
                 <span class="domain-label">D3: Missing outcome data</span>
                 <select id="robD3" class="rob-select">
                   <option value="">Not assessed</option>
@@ -799,10 +810,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD3Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD3Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD4Notes">
                 <span class="domain-label">D4: Measurement of the outcome</span>
                 <select id="robD4" class="rob-select">
                   <option value="">Not assessed</option>
@@ -811,10 +822,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD4Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD4Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD5Notes">
                 <span class="domain-label">D5: Selection of reported result</span>
                 <select id="robD5" class="rob-select">
                   <option value="">Not assessed</option>
@@ -823,7 +834,7 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD5Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD5Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
           </div>
           <div class="rob-overall">
@@ -856,7 +867,7 @@
           <div class="import-panel active" id="zenodo-panel">
             <label>
               Zenodo DOI or Record ID:
-              <input type="text" id="zenodoDoi" placeholder="10.5281/zenodo.1234567 or 1234567" />
+              <input type="text" aria-label="Zenodo DOI or Record ID" id="zenodoDoi" aria-label="10.5281/zenodo.1234567 or 1234567" placeholder="10.5281/zenodo.1234567 or 1234567" />
             </label>
             <button id="fetchZenodoBtn" class="btn">Fetch Record</button>
             <div id="zenodoResult" class="import-result"></div>
@@ -864,7 +875,7 @@
           <div class="import-panel" id="github-panel">
             <label>
               GitHub Raw URL:
-              <input type="text" id="githubUrl" placeholder="https://raw.githubusercontent.com/..." />
+              <input type="text" aria-label="GitHub Raw URL" id="githubUrl" aria-label="https://raw.githubusercontent.com/..." placeholder="https://raw.githubusercontent.com/..." />
             </label>
             <button id="fetchGithubBtn" class="btn">Fetch File</button>
             <div id="githubResult" class="import-result"></div>
@@ -872,7 +883,7 @@
           <div class="import-panel" id="csv-panel">
             <label>
               Upload CSV/JSON file:
-              <input type="file" id="csvUpload" accept=".csv,.json" />
+              <input type="file" aria-label="Upload CSV/JSON file" id="csvUpload" accept=".csv,.json" />
             </label>
             <div id="csvResult" class="import-result"></div>
           </div>
@@ -944,7 +955,7 @@
             <button id="wizardFinishBtn" class="btn btn--accent hidden">Get Started</button>
           </div>
           <label class="wizard-dismiss">
-            <input type="checkbox" id="dontShowAgain"> Don't show this again
+            <input type="checkbox" id="dontShowAgain" aria-label="Don't show this again"> Don't show this again
           </label>
         </div>
       </div>
@@ -1057,8 +1068,8 @@
     "pageTitle": "Antithrombotic Strategies After TAVI/TAVR | CT.gov Living Meta-Analysis",
     "kicker": "Registry-Native Cardiovascular Evidence",
     "title": "Antithrombotic Strategies After TAVI/TAVR Living Meta-Analysis",
-    "subtitle": "Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.",
-    "topicPanelTitle": "CT.gov-validated topic (2 eligible RCTs in snapshot)",
+    "subtitle": "Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio.",
+    "topicPanelTitle": "CT.gov completeness-screened topic (2 eligible RCTs in snapshot)",
     "welcomeTitle": "Antithrombotic Strategies After TAVI/TAVR CT.gov review",
     "eligibilityTrialMinimum": 1,
     "analysisStudioName": "Antithrombotic Strategies After TAVI/TAVR CT.gov Living Meta-Analysis Studio",
@@ -1077,41 +1088,99 @@
       "topicId": "tavi-antithrombotic",
       "label": "Antithrombotic Strategies After TAVI/TAVR",
       "query": "(\"aortic stenosis\" OR TAVI OR TAVR OR \"transcatheter aortic valve\") AND (anticoagulation OR antiplatelet OR apixaban OR edoxaban OR rivaroxaban) AND (\"ATLANTIS\" OR \"ENVISAGE-TAVI AF\" OR \"POPular TAVI\" OR \"GALILEO\" OR \"ADAPT-TAVR\")",
-      "generatedAt": "2026-03-28T18:45:05.888Z",
+      "generatedAt": "2026-04-05T13:16:46.754Z",
       "includedCount": 2,
       "excludedCount": 6,
       "totalEnrollment": 1657,
       "demographicsCoverage": 2,
       "documentCoverage": 2,
+      "analysisEligibleCount": 2,
+      "comparisonReadyStudyCount": 2,
+      "comparisonCount": 2,
       "comparisons": [
+        {
+          "studyId": "NCT02833948",
+          "title": "Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT)",
+          "t1": "ASA + Clopidogrel",
+          "t2": "Rivaroxaban + ASA",
+          "measure": "logRR",
+          "effect": 1.6643385539005486,
+          "se": 0.755446108243047,
+          "n1": 101,
+          "n0": 97,
+          "totalN": 198,
+          "sampleSize": 198,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "count"
+        },
         {
           "studyId": "NCT02943785",
           "title": "Edoxaban Compared to Standard Care After Heart Valve Replacement Using a Catheter in Patients With Atrial Fibrillation (ENVISAGE-TAVI AF)",
-          "t1": "Vitamin K Antagonist (VKA)",
-          "t2": "Edoxaban",
+          "t1": "Edoxaban",
+          "t2": "Vitamin K Antagonist (VKA)",
           "measure": "logRR",
-          "effect": -0.07955263170195365,
+          "effect": 0.07955263170195369,
           "se": 0.09719429306502404,
           "n1": 713,
           "n0": 713,
           "totalN": 1426,
-          "sampleSize": 1426
-        },
-        {
-          "studyId": "NCT02833948",
-          "title": "Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT)",
-          "t1": "Rivaroxaban + ASA",
-          "t2": "ASA + Clopidogrel",
-          "measure": "logRR",
-          "effect": -1.6643385539005486,
-          "se": 0.755446108243047,
-          "n1": 97,
-          "n0": 101,
-          "totalN": 198,
-          "sampleSize": 198
+          "sampleSize": 1426,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "count"
         }
       ],
       "includedStudies": [
+        {
+          "nctId": "NCT02833948",
+          "title": "Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT)",
+          "status": "COMPLETED",
+          "enrollment": 231,
+          "documentsCount": 1,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "binary",
+            "title": "Rate of Patients With at Least One Prosthetic Leaflet With >50% Motion Reduction as Assessed by Cardiac 4DCT-scan",
+            "unitOfMeasure": "Participants",
+            "paramType": "COUNT_OF_PARTICIPANTS",
+            "metricKind": "count",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "ASA + Clopidogrel",
+                "n": 101,
+                "events": 11,
+                "mean": null,
+                "sd": null,
+                "rawValue": 11,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
+              },
+              {
+                "title": "Rivaroxaban + ASA",
+                "n": 97,
+                "events": 2,
+                "mean": null,
+                "sd": null,
+                "rawValue": 2,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Rate of Patients With at Least One Prosthetic Leaflet With >50% Motion Reduction as Assessed by Cardiac 4DCT-scan",
+              "timeFrame": "3 months"
+            }
+          ]
+        },
         {
           "nctId": "NCT02943785",
           "title": "Edoxaban Compared to Standard Care After Heart Valve Replacement Using a Catheter in Patients With Atrial Fibrillation (ENVISAGE-TAVI AF)",
@@ -1119,23 +1188,38 @@
           "enrollment": 1426,
           "documentsCount": 1,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
             "type": "binary",
             "title": "Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA",
+            "unitOfMeasure": "Participants",
+            "paramType": "COUNT_OF_PARTICIPANTS",
+            "metricKind": "count",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
                 "title": "Edoxaban",
                 "n": 713,
                 "events": 170,
                 "mean": null,
-                "sd": null
+                "sd": null,
+                "rawValue": 170,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
               },
               {
                 "title": "Vitamin K Antagonist (VKA)",
                 "n": 713,
                 "events": 157,
                 "mean": null,
-                "sd": null
+                "sd": null,
+                "rawValue": 157,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
               }
             ]
           },
@@ -1147,40 +1231,6 @@
             {
               "measure": "Number of Participants Who Experienced Major Bleeding (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA",
               "timeFrame": "Baseline through study completion, up to 36 months post-dose"
-            }
-          ]
-        },
-        {
-          "nctId": "NCT02833948",
-          "title": "Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT)",
-          "status": "COMPLETED",
-          "enrollment": 231,
-          "documentsCount": 1,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "binary",
-            "title": "Rate of Patients With at Least One Prosthetic Leaflet With >50% Motion Reduction as Assessed by Cardiac 4DCT-scan",
-            "groups": [
-              {
-                "title": "ASA + Clopidogrel",
-                "n": 101,
-                "events": 11,
-                "mean": null,
-                "sd": null
-              },
-              {
-                "title": "Rivaroxaban + ASA",
-                "n": 97,
-                "events": 2,
-                "mean": null,
-                "sd": null
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Rate of Patients With at Least One Prosthetic Leaflet With >50% Motion Reduction as Assessed by Cardiac 4DCT-scan",
-              "timeFrame": "3 months"
             }
           ]
         }

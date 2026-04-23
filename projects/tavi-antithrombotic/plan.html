@@ -126,9 +126,11 @@
       <section class="hero">
         <p class="kicker">CT.gov Validation Pack</p>
         <h1>Antithrombotic Strategies After TAVI/TAVR</h1>
-        <p>Separate cardiovascular living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-03-28. Only randomized comparative records with posted results and extractable numeric outcomes are eligible.</p>
+        <p>Separate CT.gov living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-04-05. Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio, and each generated project still has to meet the minimum 2-trial results threshold.</p>
         <div class="pillbar">
           <span class="pill">Priority tier: Early</span>
+          <span class="pill">Eligibility mode: Full CT.gov results coverage (&gt;=2 RCTs)</span>
+          <span class="pill">Coverage gate: Full CT.gov results coverage</span>
           <span class="pill">Included RCTs: 2</span>
           <span class="pill">Scanned records: 8</span>
           <span class="pill">Pages fetched: 1</span>
@@ -154,11 +156,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>Population</td><td>Atrial Fibrillation; Aortic Valve Stenosis; Cardiovascular Diseases; Heart Valve Diseases; Ventricular Outflow Obstruction; Thrombosis</td></tr>
-            <tr><td>Interventions</td><td>Edoxaban; Vitamin K Antagonist (VKA); ASA + Clopidogrel; Rivaroxaban + ASA</td></tr>
-            <tr><td>Comparators</td><td>Vitamin K Antagonist (VKA) vs Edoxaban; Rivaroxaban + ASA vs ASA + Clopidogrel</td></tr>
-            <tr><td>Outcomes</td><td>Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA; Rate of Patients With at Least One Prosthetic Leaflet With &gt;50% Motion Reduction as Assessed by Cardiac 4DCT-scan</td></tr>
-            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</td></tr>
+            <tr><td>Population</td><td>Aortic Valve Stenosis; Cardiovascular Diseases; Heart Valve Diseases; Ventricular Outflow Obstruction; Thrombosis; Atrial Fibrillation</td></tr>
+            <tr><td>Interventions</td><td>ASA + Clopidogrel; Rivaroxaban + ASA; Edoxaban; Vitamin K Antagonist (VKA)</td></tr>
+            <tr><td>Comparators</td><td>ASA + Clopidogrel vs Rivaroxaban + ASA; Edoxaban vs Vitamin K Antagonist (VKA)</td></tr>
+            <tr><td>Outcomes</td><td>Rate of Patients With at Least One Prosthetic Leaflet With &gt;50% Motion Reduction as Assessed by Cardiac 4DCT-scan; Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA</td></tr>
+            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and at least one recorded numeric CT.gov outcome.</td></tr>
           </tbody>
         </table>
       </section>
@@ -189,7 +191,7 @@
         <tr>
           <td>CT.gov candidate scan started</td>
           <td>ClinicalTrials.gov v2 API</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr>
 
         <tr>
@@ -231,7 +233,7 @@
         <tr>
           <td>Project package generated</td>
           <td>Portfolio build</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr>
           </tbody>
         </table>
@@ -252,7 +254,7 @@
         <tr>
           <td>Question framing</td>
           <td>Topic slug, base query, and keyword pack frozen before generation</td>
-          <td>tavi-antithrombotic | 2026-03-28</td>
+          <td>tavi-antithrombotic | 2026-04-05</td>
         </tr>
 
         <tr>
@@ -262,14 +264,20 @@
         </tr>
 
         <tr>
+          <td>Coverage curation</td>
+          <td>Only modern topics where the full randomized evidence base is expected to be available on CT.gov with posted results are allowed into the portfolio</td>
+          <td>Curated as a modern topic where the randomized evidence base is expected to be fully representable from CT.gov records with posted results.</td>
+        </tr>
+
+        <tr>
           <td>Eligibility gate</td>
-          <td>Randomized interventional, completed, posted results, &gt;=2 arms, numeric outcome</td>
+          <td>Randomized interventional, completed, posted results, &gt;=2 arms, recorded numeric CT.gov outcome, and &gt;=2 qualifying CT.gov-result RCTs</td>
           <td>2 included / 6 excluded</td>
         </tr>
 
         <tr>
           <td>Extraction</td>
-          <td>Outcome groups, sponsor, eligibility, documents, and demographics preserved where available</td>
+          <td>Outcome groups, raw CT.gov metrics, sponsor, eligibility, documents, and demographics preserved where available</td>
           <td>2/2 studies with demographics</td>
         </tr>
 
@@ -303,13 +311,19 @@
         <tr>
           <td>Records excluded by registry hard gates</td>
           <td>6</td>
-          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no recorded numeric outcome</td>
         </tr>
 
         <tr>
-          <td>Trials entering the quantitative snapshot</td>
+          <td>Trials entering the CT.gov record snapshot</td>
           <td>2</td>
           <td>Included in validation.json and the live topic app</td>
+        </tr>
+
+        <tr>
+          <td>Trials with contrast-ready outcomes</td>
+          <td>2</td>
+          <td>Recorded metrics safely reducible to counts or means</td>
         </tr>
           </tbody>
         </table>
@@ -323,7 +337,7 @@
           <span class="pill">Completed</span>
           <span class="pill">Posted CT.gov results</span>
           <span class="pill">At least 2 arms</span>
-          <span class="pill">Numeric outcome extractable</span>
+          <span class="pill">Numeric CT.gov outcome recorded</span>
         </div>
       </section>
 
@@ -370,19 +384,6 @@
           <tbody>
             
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">NCT02943785</a></td>
-          <td>Edoxaban Compared to Standard Care After Heart Valve Replacement Using a Catheter in Patients With Atrial Fibrillation (ENVISAGE-TAVI AF)</td>
-          <td>Daiichi Sankyo (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>1426 (ACTUAL)</td>
-          <td>COMPLETED</td>
-          <td>2017-03-21</td>
-          <td>2021-02-28</td>
-          <td>Edoxaban-based regimen 60 mg and 30 mg film coated tablet for once-daily oral use, and 15 mg film coated tablet in case of transitioning at the end of treatment. Dosing must follow the locally approved label. | VKA-based regimen oral VKA tablets as selected and provided by the site and used in accordance with the local label. The Investigator will monitor the patient and adjust the VKA dose to maintain the dose within target.</td>
-          <td>Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA</td>
-        </tr>
-
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02833948" target="_blank" rel="noopener">NCT02833948</a></td>
           <td>Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT)</td>
           <td>ECRI bv (INDUSTRY)</td>
@@ -393,6 +394,19 @@
           <td>2019-03-06</td>
           <td>ASA (Acetylsalicylic acid) 75-100mg + Clopidogrel 75mg for 90 days, followed by ASA 75-100mg monotherapy | Rivaroxaban 10mg + ASA 75-100mg for 90 days, followed by rivaroxaban 10mg monotherapy</td>
           <td>Rate of Patients With at Least One Prosthetic Leaflet With &gt;50% Motion Reduction as Assessed by Cardiac 4DCT-scan</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">NCT02943785</a></td>
+          <td>Edoxaban Compared to Standard Care After Heart Valve Replacement Using a Catheter in Patients With Atrial Fibrillation (ENVISAGE-TAVI AF)</td>
+          <td>Daiichi Sankyo (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>1426 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2017-03-21</td>
+          <td>2021-02-28</td>
+          <td>Edoxaban-based regimen 60 mg and 30 mg film coated tablet for once-daily oral use, and 15 mg film coated tablet in case of transitioning at the end of treatment. Dosing must follow the locally approved label. | VKA-based regimen oral VKA tablets as selected and provided by the site and used in accordance with the local label. The Investigator will monitor the patient and adjust the VKA dose to maintain the dose within target.</td>
+          <td>Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA</td>
         </tr>
           </tbody>
         </table>
@@ -414,19 +428,19 @@
           <tbody>
             
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">NCT02943785</a></td>
-          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
-          <td>Edoxaban: 713 Participants | Vitamin K Antagonist (VKA): 713 Participants | Total: 1426 Participants</td>
-          <td>Edoxaban: 82.1 +/- 5.4 years | Vitamin K Antagonist (VKA): 82.1 +/- 5.5 years | Total: 82.1 +/- 5.5 years</td>
-          <td>Edoxaban: F 347 / M 366 | Vitamin K Antagonist (VKA): F 331 / M 382 | Total: F 678 / M 748</td>
-        </tr>
-
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02833948" target="_blank" rel="noopener">NCT02833948</a></td>
           <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
           <td>ASA + Clopidogrel: 116 Participants | Rivaroxaban + ASA: 115 Participants | Total: 231 Participants</td>
           <td>ASA + Clopidogrel: 80.5 +/- 6.2 years | Rivaroxaban + ASA: 79.7 +/- 7.3 years | Total: 80.1 +/- 6.7 years</td>
           <td>ASA + Clopidogrel: F 42 / M 74 | Rivaroxaban + ASA: F 41 / M 74 | Total: F 83 / M 148</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">NCT02943785</a></td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Edoxaban: 713 Participants | Vitamin K Antagonist (VKA): 713 Participants | Total: 1426 Participants</td>
+          <td>Edoxaban: 82.1 +/- 5.4 years | Vitamin K Antagonist (VKA): 82.1 +/- 5.5 years | Total: 82.1 +/- 5.5 years</td>
+          <td>Edoxaban: F 347 / M 366 | Vitamin K Antagonist (VKA): F 331 / M 382 | Total: F 678 / M 748</td>
         </tr>
           </tbody>
         </table>
@@ -448,22 +462,22 @@
           <tbody>
             
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">NCT02943785</a></td>
-          <td>When the upper chambers of a person&#39;s heart receive or generate irregular electrical signals, it causes abnormal rhythm in the heartbeat. This is called atrial fibrillation. Atrial fibrillation goes along with blood clots that may cause mainly strokes and less often other diseases, such as a heart attack. Some patie...</td>
-          <td>Inclusion Criteria: * Meets protocol-specified criteria for qualification and contraception * Is willing and able to comply with any restrictions related food, drink and medications * Voluntarily consents to participate and provides written informed consent...</td>
-          <td>Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA | Time frame: Baseline through study completion, up to 36 months post-dose | The composite endpoint net adverse clinical events (NACE) included all-cause death, myocardi...</td>
-          <td>
-            <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2019-07-29)</span></div>
-          </td>
-        </tr>
-
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02833948" target="_blank" rel="noopener">NCT02833948</a></td>
           <td>The aortic valve is located between the left ventricle and the aorta. Patients with symptomatic, severe aortic valve stenosis conventionally have it surgically replaced requiring direct access to the heart through the chest. Transcatheter aortic valve replacement (TAVR) is now a well-established alternative for trea...</td>
           <td>Inclusion Criteria: * Successful TAVR of a native aortic valve stenosis * By iliofemoral or subclavian access * With any approved/marketed TAVR device * Written informed consent Exclusion Criteria: * Atrial fibrillation (AF), current or previous, with an on...</td>
           <td>Rate of Patients With at Least One Prosthetic Leaflet With &gt;50% Motion Reduction as Assessed by Cardiac 4DCT-scan | Time frame: 3 months | Reduced systolic leaflet excursion is classified as: (I) normal, (II) mildly reduced (\&lt;50%), (III) moderate to severely reduced (\&gt;50%), and (IV) immobile. Reduced systolic leaf...</td>
           <td>
             <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2017-05-29)</span></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">NCT02943785</a></td>
+          <td>When the upper chambers of a person&#39;s heart receive or generate irregular electrical signals, it causes abnormal rhythm in the heartbeat. This is called atrial fibrillation. Atrial fibrillation goes along with blood clots that may cause mainly strokes and less often other diseases, such as a heart attack. Some patie...</td>
+          <td>Inclusion Criteria: * Meets protocol-specified criteria for qualification and contraception * Is willing and able to comply with any restrictions related food, drink and medications * Voluntarily consents to participate and provides written informed consent...</td>
+          <td>Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA | Time frame: Baseline through study completion, up to 36 months post-dose | The composite endpoint net adverse clinical events (NACE) included all-cause death, myocardi...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol and Statistical Analysis Plan (2019-07-29)</span></div>
           </td>
         </tr>
           </tbody>
@@ -482,7 +496,7 @@
           <tbody>
             
         <tr>
-          <td>No Extractable Numeric Outcome</td>
+          <td>No Recorded Numeric Outcome</td>
           <td>5</td>
         </tr>
 
@@ -519,45 +533,45 @@
           <tbody>
             
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02556203" target="_blank" rel="noopener">NCT02556203</a></td>
-          <td>Global Study Comparing a rivAroxaban-based Antithrombotic Strategy to an antipLatelet-based Strategy After Transcatheter aortIc vaLve rEplacement to Optimize Clinical Outcomes</td>
-          <td>Not Completed</td>
-          <td>To assess whether a rivaroxaban-based anticoagulation strategy, following successful TAVR, compared to an antiplatelet-based strategy, is superior in reducing death or first thromboembolic events (DTE). To assess the primary bleeding events (PBE) of the riv...</td>
-        </tr>
-
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT06000943" target="_blank" rel="noopener">NCT06000943</a></td>
-          <td>Ischemic And Bleeding Risk Assessment After TAVR</td>
-          <td>Not Completed, No Results Posted, Not Randomized Interventional, No Extractable Numeric Outcome</td>
-          <td>Transcatheter aortic valve replacement (TAVR) represents an effective treatment to improve symptoms and prognosis in patients with symptomatic severe aortic stenosis (AS) (1-2). Giving an established uniform approach towards anticoagulation and antithrombot...</td>
-        </tr>
-
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT03284827" target="_blank" rel="noopener">NCT03284827</a></td>
-          <td>Anticoagulant Versus Dual Antiplatelet Therapy for Preventing Leaflet Thrombosis and Cerebral Embolization After Transcatheter Aortic Valve Replacement</td>
-          <td>No Results Posted, No Extractable Numeric Outcome</td>
-          <td>This trial is to compare the efficacy of NOAC(Novel Oral Anticoagulants) with edoxaban vs. dual antiplatelet therapy (DAPT) for prevention of leaflet thrombosis (documented by cardiac CT imaging) and cerebral embolization (documented with brainDiffusion-wei...</td>
-        </tr>
-
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT06168370" target="_blank" rel="noopener">NCT06168370</a></td>
-          <td>Personalized, CT-guided Antithrombotic Therapy Versus Lifelong Single Antiplatelet Therapy to Reduce Thromboembolic and Bleeding Events in Non-atrial Fibrillation Patients After Transcatheter Aortic Valve Implantation</td>
-          <td>Not Completed, No Results Posted, No Extractable Numeric Outcome</td>
-          <td>The POPular ATLANTIS trial aims to investigate CT-guided antithrombotic therapy compared to lifelong single antiplatelet therapy after a transcatheter aortic valve implantation (TAVI) procedure. Only patients without an indication for anticoagulants will be...</td>
-        </tr>
-
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02664649" target="_blank" rel="noopener">NCT02664649</a></td>
           <td>Anti-Thrombotic Strategy After Trans-Aortic Valve Implantation for Aortic Stenosis</td>
-          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>No Results Posted, No Recorded Numeric Outcome</td>
           <td>ATLANTIS is a multicenter, phase IIIb, prospective, open-label, randomized trial. The objective of this study is to demonstrate superiority of a strategy of anticoagulation with apixaban (Anti-Xa Group) as compared to the current standard of care in patient...</td>
         </tr>
 
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02247128" target="_blank" rel="noopener">NCT02247128</a></td>
           <td>Antiplatelet Therapy for Patients Undergoing Transcatheter Aortic Valve Implantation</td>
-          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>No Results Posted, No Recorded Numeric Outcome</td>
           <td>At present, a variety of antithrombotic regimens are prescribed in the early postprocedure period after transcatheter aortic valve implantation (TAVI). Dual antiplatelet therapy (DAPT) using aspirin and a thienopyridine in the initial period after TAVI is t...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03284827" target="_blank" rel="noopener">NCT03284827</a></td>
+          <td>Anticoagulant Versus Dual Antiplatelet Therapy for Preventing Leaflet Thrombosis and Cerebral Embolization After Transcatheter Aortic Valve Replacement</td>
+          <td>No Results Posted, No Recorded Numeric Outcome</td>
+          <td>This trial is to compare the efficacy of NOAC(Novel Oral Anticoagulants) with edoxaban vs. dual antiplatelet therapy (DAPT) for prevention of leaflet thrombosis (documented by cardiac CT imaging) and cerebral embolization (documented with brainDiffusion-wei...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06000943" target="_blank" rel="noopener">NCT06000943</a></td>
+          <td>Ischemic And Bleeding Risk Assessment After TAVR</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, No Recorded Numeric Outcome</td>
+          <td>Transcatheter aortic valve replacement (TAVR) represents an effective treatment to improve symptoms and prognosis in patients with symptomatic severe aortic stenosis (AS) (1-2). Giving an established uniform approach towards anticoagulation and antithrombot...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT06168370" target="_blank" rel="noopener">NCT06168370</a></td>
+          <td>Personalized, CT-guided Antithrombotic Therapy Versus Lifelong Single Antiplatelet Therapy to Reduce Thromboembolic and Bleeding Events in Non-atrial Fibrillation Patients After Transcatheter Aortic Valve Implantation</td>
+          <td>Not Completed, No Results Posted, No Recorded Numeric Outcome</td>
+          <td>The POPular ATLANTIS trial aims to investigate CT-guided antithrombotic therapy compared to lifelong single antiplatelet therapy after a transcatheter aortic valve implantation (TAVI) procedure. Only patients without an indication for anticoagulants will be...</td>
+        </tr>
+
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02556203" target="_blank" rel="noopener">NCT02556203</a></td>
+          <td>Global Study Comparing a rivAroxaban-based Antithrombotic Strategy to an antipLatelet-based Strategy After Transcatheter aortIc vaLve rEplacement to Optimize Clinical Outcomes</td>
+          <td>Not Completed</td>
+          <td>To assess whether a rivaroxaban-based anticoagulation strategy, following successful TAVR, compared to an antiplatelet-based strategy, is superior in reducing death or first thromboembolic events (DTE). To assess the primary bleeding events (PBE) of the riv...</td>
         </tr>
           </tbody>
         </table>
@@ -583,18 +597,18 @@
           <tbody>
             
       <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">NCT02943785</a></td>
-        <td>Vitamin K Antagonist (VKA) vs Edoxaban</td>
-        <td>Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA</td>
-        <td>1426 (ACTUAL)</td>
+        <td><a href="https://clinicaltrials.gov/study/NCT02833948" target="_blank" rel="noopener">NCT02833948</a></td>
+        <td>ASA + Clopidogrel vs Rivaroxaban + ASA</td>
+        <td>Rate of Patients With at Least One Prosthetic Leaflet With &gt;50% Motion Reduction as Assessed by Cardiac 4DCT-scan</td>
+        <td>231 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
       </tr>
 
       <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT02833948" target="_blank" rel="noopener">NCT02833948</a></td>
-        <td>Rivaroxaban + ASA vs ASA + Clopidogrel</td>
-        <td>Rate of Patients With at Least One Prosthetic Leaflet With &gt;50% Motion Reduction as Assessed by Cardiac 4DCT-scan</td>
-        <td>231 (ACTUAL)</td>
+        <td><a href="https://clinicaltrials.gov/study/NCT02943785" target="_blank" rel="noopener">NCT02943785</a></td>
+        <td>Edoxaban vs Vitamin K Antagonist (VKA)</td>
+        <td>Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA</td>
+        <td>1426 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
       </tr>
           </tbody>
@@ -615,7 +629,7 @@
         <script>
 (() => {
   const iframe = document.getElementById("reviewerValidationFrame");
-  const context = {"source":"ctgov-portfolio-generator","topicId":"tavi-antithrombotic","label":"Antithrombotic Strategies After TAVI/TAVR","query":"(\"aortic stenosis\" OR TAVI OR TAVR OR \"transcatheter aortic valve\") AND (anticoagulation OR antiplatelet OR apixaban OR edoxaban OR rivaroxaban) AND (\"ATLANTIS\" OR \"ENVISAGE-TAVI AF\" OR \"POPular TAVI\" OR \"GALILEO\" OR \"ADAPT-TAVR\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":2,"excludedCount":6,"totalEnrollment":1657,"demographicsCoverage":2,"documentCoverage":2,"comparisons":[{"studyId":"NCT02943785","title":"Edoxaban Compared to Standard Care After Heart Valve Replacement Using a Catheter in Patients With Atrial Fibrillation (ENVISAGE-TAVI AF)","t1":"Vitamin K Antagonist (VKA)","t2":"Edoxaban","measure":"logRR","effect":-0.07955263170195365,"se":0.09719429306502404,"n1":713,"n0":713,"totalN":1426,"sampleSize":1426},{"studyId":"NCT02833948","title":"Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT)","t1":"Rivaroxaban + ASA","t2":"ASA + Clopidogrel","measure":"logRR","effect":-1.6643385539005486,"se":0.755446108243047,"n1":97,"n0":101,"totalN":198,"sampleSize":198}],"includedStudies":[{"nctId":"NCT02943785","title":"Edoxaban Compared to Standard Care After Heart Valve Replacement Using a Catheter in Patients With Atrial Fibrillation (ENVISAGE-TAVI AF)","status":"COMPLETED","enrollment":1426,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA","groups":[{"title":"Edoxaban","n":713,"events":170,"mean":null,"sd":null},{"title":"Vitamin K Antagonist (VKA)","n":713,"events":157,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA","timeFrame":"Baseline through study completion, up to 36 months post-dose"},{"measure":"Number of Participants Who Experienced Major Bleeding (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA","timeFrame":"Baseline through study completion, up to 36 months post-dose"}]},{"nctId":"NCT02833948","title":"Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT)","status":"COMPLETED","enrollment":231,"documentsCount":1,"hasDemographics":true,"outcome":{"type":"binary","title":"Rate of Patients With at Least One Prosthetic Leaflet With >50% Motion Reduction as Assessed by Cardiac 4DCT-scan","groups":[{"title":"ASA + Clopidogrel","n":101,"events":11,"mean":null,"sd":null},{"title":"Rivaroxaban + ASA","n":97,"events":2,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Rate of Patients With at Least One Prosthetic Leaflet With >50% Motion Reduction as Assessed by Cardiac 4DCT-scan","timeFrame":"3 months"}]}]};
+  const context = {"source":"ctgov-portfolio-generator","topicId":"tavi-antithrombotic","label":"Antithrombotic Strategies After TAVI/TAVR","query":"(\"aortic stenosis\" OR TAVI OR TAVR OR \"transcatheter aortic valve\") AND (anticoagulation OR antiplatelet OR apixaban OR edoxaban OR rivaroxaban) AND (\"ATLANTIS\" OR \"ENVISAGE-TAVI AF\" OR \"POPular TAVI\" OR \"GALILEO\" OR \"ADAPT-TAVR\")","generatedAt":"2026-04-05T13:16:46.754Z","includedCount":2,"excludedCount":6,"totalEnrollment":1657,"demographicsCoverage":2,"documentCoverage":2,"analysisEligibleCount":2,"comparisonReadyStudyCount":2,"comparisonCount":2,"comparisons":[{"studyId":"NCT02833948","title":"Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT)","t1":"ASA + Clopidogrel","t2":"Rivaroxaban + ASA","measure":"logRR","effect":1.6643385539005486,"se":0.755446108243047,"n1":101,"n0":97,"totalN":198,"sampleSize":198,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"count"},{"studyId":"NCT02943785","title":"Edoxaban Compared to Standard Care After Heart Valve Replacement Using a Catheter in Patients With Atrial Fibrillation (ENVISAGE-TAVI AF)","t1":"Edoxaban","t2":"Vitamin K Antagonist (VKA)","measure":"logRR","effect":0.07955263170195369,"se":0.09719429306502404,"n1":713,"n0":713,"totalN":1426,"sampleSize":1426,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"count"}],"includedStudies":[{"nctId":"NCT02833948","title":"Comparison of a Rivaroxaban-based Strategy With an Antiplatelet-based Strategy Following Successful TAVR for the Prevention of Leaflet Thickening and Reduced Leaflet Motion as Evaluated by Four-dimensional, Volume-rendered Computed Tomography (4DCT)","status":"COMPLETED","enrollment":231,"documentsCount":1,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"binary","title":"Rate of Patients With at Least One Prosthetic Leaflet With >50% Motion Reduction as Assessed by Cardiac 4DCT-scan","unitOfMeasure":"Participants","paramType":"COUNT_OF_PARTICIPANTS","metricKind":"count","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"ASA + Clopidogrel","n":101,"events":11,"mean":null,"sd":null,"rawValue":11,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"Rivaroxaban + ASA","n":97,"events":2,"mean":null,"sd":null,"rawValue":2,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"}]},"primaryOutcomes":[{"measure":"Rate of Patients With at Least One Prosthetic Leaflet With >50% Motion Reduction as Assessed by Cardiac 4DCT-scan","timeFrame":"3 months"}]},{"nctId":"NCT02943785","title":"Edoxaban Compared to Standard Care After Heart Valve Replacement Using a Catheter in Patients With Atrial Fibrillation (ENVISAGE-TAVI AF)","status":"COMPLETED","enrollment":1426,"documentsCount":1,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"binary","title":"Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA","unitOfMeasure":"Participants","paramType":"COUNT_OF_PARTICIPANTS","metricKind":"count","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Edoxaban","n":713,"events":170,"mean":null,"sd":null,"rawValue":170,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"Vitamin K Antagonist (VKA)","n":713,"events":157,"mean":null,"sd":null,"rawValue":157,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"}]},"primaryOutcomes":[{"measure":"Number of Participants Who Experienced Net Adverse Clinical Events (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA","timeFrame":"Baseline through study completion, up to 36 months post-dose"},{"measure":"Number of Participants Who Experienced Major Bleeding (Adjudicated Data) Based on ISTH Criteria in Participants Taking Edoxaban vs VKA","timeFrame":"Baseline through study completion, up to 36 months post-dose"}]}]};
   if (!iframe || !context) return;
   const sendContext = () => {
     if (!iframe.contentWindow) return;

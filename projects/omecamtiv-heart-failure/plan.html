@@ -126,9 +126,11 @@
       <section class="hero">
         <p class="kicker">CT.gov Validation Pack</p>
         <h1>Omecamtiv Mecarbil in Heart Failure</h1>
-        <p>Separate cardiovascular living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-03-28. Only randomized comparative records with posted results and extractable numeric outcomes are eligible.</p>
+        <p>Separate CT.gov living-meta project generated from the live ClinicalTrials.gov v2 API on 2026-04-05. Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio, and each generated project still has to meet the minimum 2-trial results threshold.</p>
         <div class="pillbar">
           <span class="pill">Priority tier: Promising</span>
+          <span class="pill">Eligibility mode: Full CT.gov results coverage (&gt;=2 RCTs)</span>
+          <span class="pill">Coverage gate: Full CT.gov results coverage</span>
           <span class="pill">Included RCTs: 3</span>
           <span class="pill">Scanned records: 5</span>
           <span class="pill">Pages fetched: 1</span>
@@ -154,11 +156,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td>Population</td><td>Modified Release Oral Formulation; Left Ventricular Systolic Dysfunction; Chronic Heart Failure; History of Chronic Heart Failure; Left Ventricular Ejection Fraction; Pharmacokinetics</td></tr>
-            <tr><td>Interventions</td><td>Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1; Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2; Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2; Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F1; Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F2; Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg SCT-F2; Placebo; Omecamtiv Mecarbil</td></tr>
-            <tr><td>Comparators</td><td>Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2 vs Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1 | Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2 vs Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1; Omecamtiv Mecarbil vs Placebo</td></tr>
-            <tr><td>Outcomes</td><td>Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7); Time to Cardiovascular Death or First Heart Failure Event; Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20</td></tr>
-            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</td></tr>
+            <tr><td>Population</td><td>Heart Failure With Reduced Ejection Fraction; Modified Release Oral Formulation; Left Ventricular Systolic Dysfunction; Chronic Heart Failure; History of Chronic Heart Failure; Left Ventricular Ejection Fraction</td></tr>
+            <tr><td>Interventions</td><td>Omecamtiv Mecarbil; Placebo; Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1; Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2; Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2; Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F1; Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F2; Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg SCT-F2</td></tr>
+            <tr><td>Comparators</td><td>Omecamtiv Mecarbil vs Placebo; Multi-arm CT.gov record without a resolved shared comparator; Omecamtiv Mecarbil: Outpatients vs Placebo: Oupatients | Placebo: Inpatients vs Placebo: Oupatients | Shared comparator split across CT.gov treatment arms</td></tr>
+            <tr><td>Outcomes</td><td>Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20; Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7); Change From Baseline in Kansas City Cardiomyopathy Questionnaire Total Symptom Score (KCCQ TSS) at Week 24</td></tr>
+            <tr><td>Design</td><td>Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and at least one recorded numeric CT.gov outcome.</td></tr>
           </tbody>
         </table>
       </section>
@@ -189,7 +191,7 @@
         <tr>
           <td>CT.gov candidate scan started</td>
           <td>ClinicalTrials.gov v2 API</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr>
 
         <tr>
@@ -231,7 +233,7 @@
         <tr>
           <td>Project package generated</td>
           <td>Portfolio build</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr>
           </tbody>
         </table>
@@ -252,7 +254,7 @@
         <tr>
           <td>Question framing</td>
           <td>Topic slug, base query, and keyword pack frozen before generation</td>
-          <td>omecamtiv-heart-failure | 2026-03-28</td>
+          <td>omecamtiv-heart-failure | 2026-04-05</td>
         </tr>
 
         <tr>
@@ -262,14 +264,20 @@
         </tr>
 
         <tr>
+          <td>Coverage curation</td>
+          <td>Only modern topics where the full randomized evidence base is expected to be available on CT.gov with posted results are allowed into the portfolio</td>
+          <td>Curated as a modern topic where the randomized evidence base is expected to be fully representable from CT.gov records with posted results.</td>
+        </tr>
+
+        <tr>
           <td>Eligibility gate</td>
-          <td>Randomized interventional, completed, posted results, &gt;=2 arms, numeric outcome</td>
+          <td>Randomized interventional, completed, posted results, &gt;=2 arms, recorded numeric CT.gov outcome, and &gt;=2 qualifying CT.gov-result RCTs</td>
           <td>3 included / 2 excluded</td>
         </tr>
 
         <tr>
           <td>Extraction</td>
-          <td>Outcome groups, sponsor, eligibility, documents, and demographics preserved where available</td>
+          <td>Outcome groups, raw CT.gov metrics, sponsor, eligibility, documents, and demographics preserved where available</td>
           <td>3/3 studies with demographics</td>
         </tr>
 
@@ -303,13 +311,19 @@
         <tr>
           <td>Records excluded by registry hard gates</td>
           <td>2</td>
-          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no recorded numeric outcome</td>
         </tr>
 
         <tr>
-          <td>Trials entering the quantitative snapshot</td>
+          <td>Trials entering the CT.gov record snapshot</td>
           <td>3</td>
           <td>Included in validation.json and the live topic app</td>
+        </tr>
+
+        <tr>
+          <td>Trials with contrast-ready outcomes</td>
+          <td>3</td>
+          <td>Recorded metrics safely reducible to counts or means</td>
         </tr>
           </tbody>
         </table>
@@ -323,7 +337,7 @@
           <span class="pill">Completed</span>
           <span class="pill">Posted CT.gov results</span>
           <span class="pill">At least 2 arms</span>
-          <span class="pill">Numeric outcome extractable</span>
+          <span class="pill">Numeric CT.gov outcome recorded</span>
         </div>
       </section>
 
@@ -370,6 +384,19 @@
           <tbody>
             
         <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">NCT03759392</a></td>
+          <td>Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure</td>
+          <td>Cytokinetics (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>276 (ACTUAL)</td>
+          <td>COMPLETED</td>
+          <td>2019-04-09</td>
+          <td>2022-01-06</td>
+          <td>Omecamtiv mecarbil was administered as an oral modified-release tablet twice daily for up to 20 weeks. Participants randomized to this arm started at an omecamtiv mecarbil dose of 25 mg twice daily. The dose could be increased based on plasma concentrations at Weeks 2 and 6. | Participants randomized this arm received placebo tablets (matching the appearance of the omecamtiv mecarbil tablets) twice daily for up to 20 weeks.</td>
+          <td>Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20</td>
+        </tr>
+
+        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT01786512" target="_blank" rel="noopener">NCT01786512</a></td>
           <td>COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure</td>
           <td>Cytokinetics (INDUSTRY)</td>
@@ -392,20 +419,7 @@
           <td>2017-01-06</td>
           <td>2020-09-14</td>
           <td>Participants received oral omecamtiv mecarbil (OM) twice daily in addition to standard heart failure therapy. The starting dose of OM was 25 mg; At week 4, participants with week 2 OM predose plasma concentrations \&lt; 200 ng/mL had their dose increased to 50 mg BID; participants with week 2 predose plasma concentrations ≥ 200 and \&lt; 300 ng/mL had their dose increased to 37.5 mg BID and participants with week 2 predose plasma concentrations ≥ 300 ng/mL and \&lt; 1000 ng/mL maintained a 25 mg BID dosing regimen. | Participants received matching placebo tablets twice a day in addition to standard heart failure therapy.</td>
-          <td>Time to Cardiovascular Death or First Heart Failure Event</td>
-        </tr>
-
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">NCT03759392</a></td>
-          <td>Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure</td>
-          <td>Cytokinetics (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>276 (ACTUAL)</td>
-          <td>COMPLETED</td>
-          <td>2019-04-09</td>
-          <td>2022-01-06</td>
-          <td>Omecamtiv mecarbil was administered as an oral modified-release tablet twice daily for up to 20 weeks. Participants randomized to this arm started at an omecamtiv mecarbil dose of 25 mg twice daily. The dose could be increased based on plasma concentrations at Weeks 2 and 6. | Participants randomized this arm received placebo tablets (matching the appearance of the omecamtiv mecarbil tablets) twice daily for up to 20 weeks.</td>
-          <td>Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20</td>
+          <td>Change From Baseline in Kansas City Cardiomyopathy Questionnaire Total Symptom Score (KCCQ TSS) at Week 24</td>
         </tr>
           </tbody>
         </table>
@@ -427,6 +441,14 @@
           <tbody>
             
         <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">NCT03759392</a></td>
+          <td>Sex: ALL | Age: 18 Years to 85 Years | Healthy volunteers: No</td>
+          <td>Omecamtiv Mecarbil: 185 Participants | Placebo: 91 Participants | Total: 276 Participants</td>
+          <td>Omecamtiv Mecarbil: 63.3 +/- 9.64 years | Placebo: 64.4 +/- 11.41 years | Total: 63.6 +/- 10.25 years</td>
+          <td>Omecamtiv Mecarbil: F 27 / M 158 | Placebo: F 15 / M 76 | Total: F 42 / M 234</td>
+        </tr>
+
+        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT01786512" target="_blank" rel="noopener">NCT01786512</a></td>
           <td>Sex: ALL | Age: 18 Years to 85 Years | Healthy volunteers: No</td>
           <td>Dose-escalation Cohort 1: Placebo: 11 Participants | Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1: 11 Participants | Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2: 14 Participants | Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2: 13 Participants | Dose-escalation Cohort 2: Placebo: 10 Participants | Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F1: 11 Participants | Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F2: 12 Participants | Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg SCT-F2: 14 Participants</td>
@@ -440,14 +462,6 @@
           <td>Placebo: 4112 Participants | Omecamtiv Mecarbil: 4120 Participants | Total: 8232 Participants</td>
           <td>Placebo: 64.5 +/- 11.4 years | Omecamtiv Mecarbil: 64.5 +/- 11.3 years | Total: 64.5 +/- 11.4 years</td>
           <td>Placebo: F 874 / M 3238 | Omecamtiv Mecarbil: F 875 / M 3245 | Total: F 1749 / M 6483</td>
-        </tr>
-
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">NCT03759392</a></td>
-          <td>Sex: ALL | Age: 18 Years to 85 Years | Healthy volunteers: No</td>
-          <td>Omecamtiv Mecarbil: 185 Participants | Placebo: 91 Participants | Total: 276 Participants</td>
-          <td>Omecamtiv Mecarbil: 63.3 +/- 9.64 years | Placebo: 64.4 +/- 11.41 years | Total: 63.6 +/- 10.25 years</td>
-          <td>Omecamtiv Mecarbil: F 27 / M 158 | Placebo: F 15 / M 76 | Total: F 42 / M 234</td>
         </tr>
           </tbody>
         </table>
@@ -469,6 +483,17 @@
           <tbody>
             
         <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">NCT03759392</a></td>
+          <td>The purpose of this study is to evaluate the effect of treatment with omecamtiv mecarbil compared with placebo on exercise capacity as determined by cardiopulmonary exercise testing following 20 weeks of treatment with omecamtiv mecarbil or placebo</td>
+          <td>Inclusion Criteria * Male or female, greater than or equal to 18 to lesser than or equal to 85 years of age * History of chronic HF, defined as requiring continuous treatment with medications for HF for a minimum of 3 months before screening * New York Hear...</td>
+          <td>Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20 | Time frame: Baseline and Week 20 | The effect of treatment on exercise capacity, as assessed by peak oxygen uptake, was assessed during cardiopulmonary exercise testing (CPET) with gas-exchange analysis. Cycle ergometry was t...</td>
+          <td>
+            <div class="pillbar"><span class="pill">Study Protocol (2021-06-30)</span>
+<span class="pill">Statistical Analysis Plan (2022-01-05)</span></div>
+          </td>
+        </tr>
+
+        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT01786512" target="_blank" rel="noopener">NCT01786512</a></td>
           <td>The primary objectives of this study are (i) to select an oral modified release (MR) formulation and dose of omecamtiv mecarbil for chronic twice daily (BID) dosing in adults with heart failure and left ventricular systolic dysfunction and (ii) to characterize its pharmacokinetics (PK) over 20 weeks of treatment.</td>
           <td>Inclusion Criteria: * History of chronic heart failure (HF), defined as requiring treatment for HF for a minimum of 4 weeks prior to screening * Treated with stable, optimal pharmacological therapy for ≥ 4 weeks * History of left ventricular ejection fracti...</td>
@@ -488,17 +513,6 @@
 <span class="pill">Statistical Analysis Plan (2020-06-16)</span></div>
           </td>
         </tr>
-
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">NCT03759392</a></td>
-          <td>The purpose of this study is to evaluate the effect of treatment with omecamtiv mecarbil compared with placebo on exercise capacity as determined by cardiopulmonary exercise testing following 20 weeks of treatment with omecamtiv mecarbil or placebo</td>
-          <td>Inclusion Criteria * Male or female, greater than or equal to 18 to lesser than or equal to 85 years of age * History of chronic HF, defined as requiring continuous treatment with medications for HF for a minimum of 3 months before screening * New York Hear...</td>
-          <td>Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20 | Time frame: Baseline and Week 20 | The effect of treatment on exercise capacity, as assessed by peak oxygen uptake, was assessed during cardiopulmonary exercise testing (CPET) with gas-exchange analysis. Cycle ergometry was t...</td>
-          <td>
-            <div class="pillbar"><span class="pill">Study Protocol (2021-06-30)</span>
-<span class="pill">Statistical Analysis Plan (2022-01-05)</span></div>
-          </td>
-        </tr>
           </tbody>
         </table>
       </section>
@@ -515,7 +529,7 @@
           <tbody>
             
         <tr>
-          <td>No Extractable Numeric Outcome</td>
+          <td>No Recorded Numeric Outcome</td>
           <td>2</td>
         </tr>
 
@@ -559,14 +573,14 @@
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT04464525" target="_blank" rel="noopener">NCT04464525</a></td>
           <td>Omecamtiv Mecarbil Post-trial Access Study</td>
-          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Extractable Numeric Outcome</td>
+          <td>Not Completed, No Results Posted, Not Randomized Interventional, Fewer Than Two Arms, No Recorded Numeric Outcome</td>
           <td>The primary objective of this study is to provide access to omecamtiv mecarbil for participants who have completed GALACTIC-HF 20110203.</td>
         </tr>
 
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT01300013" target="_blank" rel="noopener">NCT01300013</a></td>
           <td>Study to Evaluate the Safety and Efficacy of IV Infusion Treatment With Omecamtiv Mecarbil in Subjects With Left Ventricular Systolic Dysfunction Hospitalized for Acute Heart Failure (ATOMIC-AHF)</td>
-          <td>No Results Posted, No Extractable Numeric Outcome</td>
+          <td>No Results Posted, No Recorded Numeric Outcome</td>
           <td>The primary objective of the study is to evaluate the effect of 48 hours of intravenous (IV) omecamtiv mecarbil compared with placebo on dyspnea in subjects with left ventricular systolic dysfunction hospitalized for acute heart failure. This is a multicent...</td>
         </tr>
           </tbody>
@@ -593,8 +607,16 @@
           <tbody>
             
       <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">NCT03759392</a></td>
+        <td>Omecamtiv Mecarbil vs Placebo</td>
+        <td>Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20</td>
+        <td>276 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
         <td><a href="https://clinicaltrials.gov/study/NCT01786512" target="_blank" rel="noopener">NCT01786512</a></td>
-        <td>Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2 vs Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1 | Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2 vs Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1</td>
+        <td>Multi-arm CT.gov record without a resolved shared comparator</td>
         <td>Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)</td>
         <td>544 (ACTUAL)</td>
         <td>Registry record only</td>
@@ -602,17 +624,9 @@
 
       <tr>
         <td><a href="https://clinicaltrials.gov/study/NCT02929329" target="_blank" rel="noopener">NCT02929329</a></td>
-        <td>Omecamtiv Mecarbil vs Placebo</td>
-        <td>Time to Cardiovascular Death or First Heart Failure Event</td>
+        <td>Omecamtiv Mecarbil: Outpatients vs Placebo: Oupatients | Placebo: Inpatients vs Placebo: Oupatients | Shared comparator split across CT.gov treatment arms</td>
+        <td>Change From Baseline in Kansas City Cardiomyopathy Questionnaire Total Symptom Score (KCCQ TSS) at Week 24</td>
         <td>8256 (ACTUAL)</td>
-        <td>Documents listed on CT.gov</td>
-      </tr>
-
-      <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT03759392" target="_blank" rel="noopener">NCT03759392</a></td>
-        <td>Omecamtiv Mecarbil vs Placebo</td>
-        <td>Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20</td>
-        <td>276 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
       </tr>
           </tbody>
@@ -633,7 +647,7 @@
         <script>
 (() => {
   const iframe = document.getElementById("reviewerValidationFrame");
-  const context = {"source":"ctgov-portfolio-generator","topicId":"omecamtiv-heart-failure","label":"Omecamtiv Mecarbil in Heart Failure","query":"(\"heart failure\") AND (\"omecamtiv mecarbil\" OR omecamtiv) AND (\"GALACTIC-HF\" OR \"ATOMIC-AHF\" OR \"COSMIC-HF\" OR \"METEORIC-HF\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":3,"excludedCount":2,"totalEnrollment":9076,"demographicsCoverage":3,"documentCoverage":2,"comparisons":[{"studyId":"NCT01786512","title":"COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure","t1":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2","t2":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1","measure":"MD","effect":8,"se":31.341182400887725,"n1":14,"n0":10,"totalN":24,"sampleSize":24},{"studyId":"NCT01786512","title":"COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure","t1":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2","t2":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1","measure":"MD","effect":-22,"se":23.840998946546488,"n1":13,"n0":10,"totalN":23,"sampleSize":23},{"studyId":"NCT01786512","title":"COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure","t1":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F1","t2":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1","measure":"MD","effect":299,"se":40.8441427869407,"n1":10,"n0":10,"totalN":20,"sampleSize":20},{"studyId":"NCT01786512","title":"COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure","t1":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F2","t2":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1","measure":"MD","effect":309,"se":45.57429897730438,"n1":11,"n0":10,"totalN":21,"sampleSize":21},{"studyId":"NCT01786512","title":"COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure","t1":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg SCT-F2","t2":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1","measure":"MD","effect":408,"se":57.60482122679862,"n1":14,"n0":10,"totalN":24,"sampleSize":24},{"studyId":"NCT02929329","title":"Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction","t1":"Omecamtiv Mecarbil","t2":"Placebo","measure":"logRR","effect":-0.05714818955566682,"se":0.22829052868938512,"n1":4120,"n0":4112,"totalN":8232,"sampleSize":8232},{"studyId":"NCT03759392","title":"Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure","t1":"Omecamtiv Mecarbil","t2":"Placebo","measure":"MD","effect":-0.44599999999999995,"se":0.29612949869947097,"n1":162,"n0":81,"totalN":243,"sampleSize":243}],"includedStudies":[{"nctId":"NCT01786512","title":"COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure","status":"COMPLETED","enrollment":544,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)","groups":[{"title":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1","n":10,"events":null,"mean":193,"sd":58.8},{"title":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2","n":14,"events":null,"mean":201,"sd":94.4},{"title":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2","n":13,"events":null,"mean":171,"sd":53.8},{"title":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F1","n":10,"events":null,"mean":492,"sd":115},{"title":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F2","n":11,"events":null,"mean":502,"sd":138},{"title":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg SCT-F2","n":14,"events":null,"mean":601,"sd":204}]},"primaryOutcomes":[{"measure":"Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)","timeFrame":"Day 7 at predose and at 0.5, 1, 2, 3, 4, 6, 8, 12, 24, 48, and 72 hours, and 7 days post-dose."},{"measure":"Dose Escalation Phase: Time to Maximum Observed Plasma Concentration (Tmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)","timeFrame":"Day 7 at predose and at 0.5, 1, 2, 3, 4, 6, 8, 12, 24, 48, and 72 hours, and 7 days post-dose."}]},{"nctId":"NCT02929329","title":"Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction","status":"COMPLETED","enrollment":8256,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Time to Cardiovascular Death or First Heart Failure Event","groups":[{"title":"Placebo","n":4112,"events":39.1,"mean":null,"sd":null},{"title":"Omecamtiv Mecarbil","n":4120,"events":37,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time to Cardiovascular Death or First Heart Failure Event","timeFrame":"From randomization to up to earliest of last confirmed survival status date or analysis cut-off date (07 August 2020); the overall median duration of follow-up was 21.8 months up to a maximum of 42 months."}]},{"nctId":"NCT03759392","title":"Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure","status":"COMPLETED","enrollment":276,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20","groups":[{"title":"Omecamtiv Mecarbil","n":162,"events":null,"mean":-0.239,"sd":2.1866570101412797},{"title":"Placebo","n":81,"events":null,"mean":0.207,"sd":2.1708}]},"primaryOutcomes":[{"measure":"Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20","timeFrame":"Baseline and Week 20"}]}]};
+  const context = {"source":"ctgov-portfolio-generator","topicId":"omecamtiv-heart-failure","label":"Omecamtiv Mecarbil in Heart Failure","query":"(\"heart failure\") AND (\"omecamtiv mecarbil\" OR omecamtiv) AND (\"GALACTIC-HF\" OR \"ATOMIC-AHF\" OR \"COSMIC-HF\" OR \"METEORIC-HF\")","generatedAt":"2026-04-05T13:16:46.754Z","includedCount":3,"excludedCount":2,"totalEnrollment":9076,"demographicsCoverage":3,"documentCoverage":2,"analysisEligibleCount":3,"comparisonReadyStudyCount":2,"comparisonCount":4,"comparisons":[{"studyId":"NCT03759392","title":"Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure","t1":"Omecamtiv Mecarbil","t2":"Placebo","measure":"MD","effect":-0.44599999999999995,"se":0.29612949869947097,"n1":162,"n0":81,"totalN":243,"sampleSize":243,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT02929329","title":"Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction","t1":"Omecamtiv Mecarbil: Outpatients","t2":"Placebo: Oupatients","measure":"MD","effect":-0.45999999999999996,"se":0.68,"n1":2715,"n0":901.3333333333334,"totalN":3616.3333333333335,"sampleSize":3616.3333333333335,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"continuous"},{"studyId":"NCT02929329","title":"Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction","t1":"Placebo: Inpatients","t2":"Placebo: Oupatients","measure":"MD","effect":14.86,"se":0.9224424101265075,"n1":835,"n0":901.3333333333334,"totalN":1736.3333333333335,"sampleSize":1736.3333333333335,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"continuous"},{"studyId":"NCT02929329","title":"Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction","t1":"Omecamtiv Mecarbil: Inpatients","t2":"Placebo: Oupatients","measure":"MD","effect":17.36,"se":0.9147677300823417,"n1":868,"n0":901.3333333333334,"totalN":1769.3333333333335,"sampleSize":1769.3333333333335,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"continuous"}],"includedStudies":[{"nctId":"NCT03759392","title":"Study to Assess the Effect of Omecamtiv Mecarbil on Exercise Capacity in Subjects With Heart Failure","status":"COMPLETED","enrollment":276,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20","unitOfMeasure":"mL/min/kg","paramType":"LEAST_SQUARES_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Omecamtiv Mecarbil","n":162,"events":null,"mean":-0.239,"sd":2.1866570101412797,"rawValue":-0.239,"rawUnit":"mL/min/kg","displayPercent":null,"derivation":null},{"title":"Placebo","n":81,"events":null,"mean":0.207,"sd":2.1708,"rawValue":0.207,"rawUnit":"mL/min/kg","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Change in Peak Oxygen Uptake on Cardiopulmonary Exercise Testing From Baseline to Week 20","timeFrame":"Baseline and Week 20"}]},{"nctId":"NCT01786512","title":"COSMIC-HF - Chronic Oral Study of Myosin Activation to Increase Contractility in Heart Failure","status":"COMPLETED","enrollment":544,"documentsCount":0,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)","unitOfMeasure":"ng/mL","paramType":"MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F1","n":10,"events":null,"mean":193,"sd":58.8,"rawValue":193,"rawUnit":"ng/mL","displayPercent":null,"derivation":null},{"title":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg M-F2","n":14,"events":null,"mean":201,"sd":94.4,"rawValue":201,"rawUnit":"ng/mL","displayPercent":null,"derivation":null},{"title":"Dose-escalation Cohort 1: Omecamtiv Mecarbil 25 mg SCT-F2","n":13,"events":null,"mean":171,"sd":53.8,"rawValue":171,"rawUnit":"ng/mL","displayPercent":null,"derivation":null},{"title":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F1","n":10,"events":null,"mean":492,"sd":115,"rawValue":492,"rawUnit":"ng/mL","displayPercent":null,"derivation":null},{"title":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg M-F2","n":11,"events":null,"mean":502,"sd":138,"rawValue":502,"rawUnit":"ng/mL","displayPercent":null,"derivation":null},{"title":"Dose-escalation Cohort 2: Omecamtiv Mecarbil 50 mg SCT-F2","n":14,"events":null,"mean":601,"sd":204,"rawValue":601,"rawUnit":"ng/mL","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Dose Escalation Phase: Maximum Observed Plasma Concentration (Cmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)","timeFrame":"Day 7 at predose and at 0.5, 1, 2, 3, 4, 6, 8, 12, 24, 48, and 72 hours, and 7 days post-dose."},{"measure":"Dose Escalation Phase: Time to Maximum Observed Plasma Concentration (Tmax) of Omecamtiv Mecarbil Following the Last Dose (Day 7)","timeFrame":"Day 7 at predose and at 0.5, 1, 2, 3, 4, 6, 8, 12, 24, 48, and 72 hours, and 7 days post-dose."}]},{"nctId":"NCT02929329","title":"Registrational Study With Omecamtiv Mecarbil (AMG 423) to Treat Chronic Heart Failure With Reduced Ejection Fraction","status":"COMPLETED","enrollment":8256,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Change From Baseline in Kansas City Cardiomyopathy Questionnaire Total Symptom Score (KCCQ TSS) at Week 24","unitOfMeasure":"scores on a scale","paramType":"LEAST_SQUARES_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Placebo: Oupatients","n":2704,"events":null,"mean":6.29,"sd":17.68,"rawValue":6.29,"rawUnit":"scores on a scale","displayPercent":null,"derivation":null},{"title":"Omecamtiv Mecarbil: Outpatients","n":2715,"events":null,"mean":5.83,"sd":17.71592503935372,"rawValue":5.83,"rawUnit":"scores on a scale","displayPercent":null,"derivation":null},{"title":"Placebo: Inpatients","n":835,"events":null,"mean":21.15,"sd":20.51642025305584,"rawValue":21.15,"rawUnit":"scores on a scale","displayPercent":null,"derivation":null},{"title":"Omecamtiv Mecarbil: Inpatients","n":868,"events":null,"mean":23.65,"sd":20.62328780771873,"rawValue":23.65,"rawUnit":"scores on a scale","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Time to Cardiovascular Death or First Heart Failure Event","timeFrame":"From randomization to up to earliest of last confirmed survival status date or analysis cut-off date (07 August 2020); the overall median duration of follow-up was 21.8 months up to a maximum of 42 months."}]}]};
   if (!iframe || !context) return;
   const sendContext = () => {
     if (!iframe.contentWindow) return;

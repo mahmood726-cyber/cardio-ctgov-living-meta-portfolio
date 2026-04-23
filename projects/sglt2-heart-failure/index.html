@@ -17,17 +17,17 @@
         <div class="hero__title">
           <p class="kicker" id="appKicker">Registry-Native Cardiovascular Evidence</p>
           <h1 id="appTitle">SGLT2 Inhibitors in Heart Failure Living Meta-Analysis</h1>
-          <p class="subtitle" id="appSubtitle">Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.</p>
+          <p class="subtitle" id="appSubtitle">Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio.</p>
         </div>
         <div class="hero__controls">
           <div class="control-card">
             <label>
               New RCT window start
-              <input id="startDate" type="date" />
+              <input aria-label="New RCT window start" id="startDate" type="date" />
             </label>
             <label>
               Status filter
-              <select id="statusFilter" multiple>
+              <select aria-label="Status filter" id="statusFilter" multiple>
                 <option value="COMPLETED" selected>Completed</option>
                 <option value="ACTIVE_NOT_RECRUITING" selected>Active, not recruiting</option>
                 <option value="RECRUITING">Recruiting</option>
@@ -37,14 +37,14 @@
             </label>
             <label>
               Single outcome rule
-              <select id="outcomeRule">
+              <select aria-label="Single outcome rule" id="outcomeRule">
                 <option value="primary">Primary outcome with numeric results</option>
                 <option value="results">Any outcome with numeric results</option>
               </select>
             </label>
             <label>
               Reference treatment (NMA)
-              <input id="referenceTx" type="text" placeholder="e.g., Standard care" />
+              <input aria-label="Reference treatment (NMA)" id="referenceTx" type="text" aria-label="e.g., Standard care" placeholder="e.g., Standard care" />
             </label>
             <button id="updateBtn" class="btn btn--primary">Update from ClinicalTrials.gov</button>
             <button id="fixtureBtn" class="btn">Load Offline Fixture</button>
@@ -55,7 +55,7 @@
           <div class="control-card">
             <label>
               Prior meta-analysis trial IDs (one per line)
-              <textarea id="priorTrials" rows="6" placeholder="NCT01234567"></textarea>
+              <textarea aria-label="Prior meta-analysis trial IDs (one per line)" id="priorTrials" rows="6" aria-label="NCT01234567" placeholder="NCT01234567"></textarea>
             </label>
             <button id="compareBtn" class="btn">Compare Coverage</button>
             <div id="coverageSummary" class="coverage"></div>
@@ -67,21 +67,27 @@
       <section class="panel validation-snapshot">
         <div class="panel__header">
           <h2>CT.gov Validation Snapshot</h2>
-          <div class="panel__meta">Generated 2026-03-28</div>
+          <div class="panel__meta">Generated 2026-04-05</div>
         </div>
         <div class="panel__body">
           <div class="summary-grid">
             <div class="summary-card">
               <h3>Registry Gate</h3>
-              <div class="pill">Included RCTs: 4</div>
+              <div class="pill">Included RCT records: 4</div>
+              <div class="pill">Contrast-ready studies: 4</div>
+              <div class="pill">Direct comparisons: 4</div>
               <div class="pill">Scanned records: 37</div>
               <div class="pill">Pages fetched: 1</div>
               <div class="pill">Priority tier: Promising</div>
+              <div class="pill">Eligibility mode: Full CT.gov results coverage (&gt;=2 RCTs)</div>
+              <div class="pill">Coverage gate: Full CT.gov results coverage</div>
             </div>
             <div class="summary-card">
               <h3>Eligibility Rules</h3>
-              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, and at least one extractable numeric outcome.</p>
+              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, at least one recorded numeric CT.gov outcome, and topic-level curation that the full randomized evidence base should be captured on CT.gov.</p>
+              <p>Direct pooled contrasts are only emitted when the posted CT.gov metric can be safely reduced to counts or means and the arm structure supports a defensible comparator.</p>
               <p>The validation scan completed within the configured CT.gov page cap.</p>
+              <p class="muted">Curated as a modern topic where the randomized evidence base is expected to be fully representable from CT.gov records with posted results.</p>
             </div>
             <div class="summary-card">
               <h3>Audit Trail</h3>
@@ -99,20 +105,20 @@
             <h3>Included Trial Records</h3>
             <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
               
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT03057951" target="_blank" rel="noopener">
-          NCT03057951
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT03619213" target="_blank" rel="noopener">
+          NCT03619213
         </a>
 
         <a class="pill" href="https://clinicaltrials.gov/study/NCT03057977" target="_blank" rel="noopener">
           NCT03057977
         </a>
 
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT03036124" target="_blank" rel="noopener">
-          NCT03036124
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT03057951" target="_blank" rel="noopener">
+          NCT03057951
         </a>
 
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT03619213" target="_blank" rel="noopener">
-          NCT03619213
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT03036124" target="_blank" rel="noopener">
+          NCT03036124
         </a>
             </div>
           </div>
@@ -121,7 +127,7 @@
             <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
               
         <div class="pill">
-          No Extractable Numeric Outcome: 29
+          No Recorded Numeric Outcome: 27
         </div>
 
         <div class="pill">
@@ -172,11 +178,11 @@
             </div>
             <div class="summary-card">
               <h3>Review Question And PICO</h3>
-              <p><strong>Population:</strong> Heart Failure; Chronic Heart Failure With Reduced Ejection Fraction (HFrEF); Heart Failure With Preserved Ejection Fraction</p>
-              <p><strong>Interventions:</strong> Placebo; 10 mg Empagliflozin; Dapa 10 mg</p>
-              <p><strong>Comparators:</strong> 10 mg Empagliflozin vs Placebo; Dapa 10 mg vs Placebo</p>
-              <p><strong>Outcomes:</strong> Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF); Time to the First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF); Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.</p>
-              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</p>
+              <p><strong>Population:</strong> Heart Failure With Preserved Ejection Fraction; Heart Failure; Chronic Heart Failure With Reduced Ejection Fraction (HFrEF)</p>
+              <p><strong>Interventions:</strong> Dapa 10 mg; Placebo; 10 mg Empagliflozin</p>
+              <p><strong>Comparators:</strong> Dapa 10 mg vs Placebo; 10 mg Empagliflozin vs Placebo</p>
+              <p><strong>Outcomes:</strong> Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.; eGFR (CKD-EPI) cr Slope of Change From Baseline</p>
+              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and at least one recorded numeric CT.gov outcome.</p>
             </div>
           </div>
 
@@ -194,7 +200,7 @@
         <tr>
           <td>CT.gov candidate scan started</td>
           <td>ClinicalTrials.gov v2 API</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr>
         <tr>
           <td>Base query locked</td>
@@ -229,7 +235,7 @@
         <tr>
           <td>Project package generated</td>
           <td>Portfolio build</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr></tbody>
             </table>
           </div>
@@ -253,12 +259,17 @@
         <tr>
           <td>Records excluded by registry hard gates</td>
           <td>33</td>
-          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no recorded numeric outcome</td>
         </tr>
         <tr>
-          <td>Trials entering the quantitative snapshot</td>
+          <td>Trials entering the CT.gov record snapshot</td>
           <td>4</td>
           <td>Included in validation.json and the live topic app</td>
+        </tr>
+        <tr>
+          <td>Trials with contrast-ready outcomes</td>
+          <td>4</td>
+          <td>Recorded metrics safely reducible to counts or means</td>
         </tr></tbody>
             </table>
           </div>
@@ -272,7 +283,7 @@
                   <th>Count</th>
                 </tr>
               </thead>
-              <tbody><tr><td>No Extractable Numeric Outcome</td><td>29</td></tr><tr><td>No Results Posted</td><td>27</td></tr><tr><td>Not Completed</td><td>22</td></tr><tr><td>Not Randomized Interventional</td><td>9</td></tr><tr><td>Fewer Than Two Arms</td><td>5</td></tr></tbody>
+              <tbody><tr><td>No Recorded Numeric Outcome</td><td>27</td></tr><tr><td>No Results Posted</td><td>27</td></tr><tr><td>Not Completed</td><td>22</td></tr><tr><td>Not Randomized Interventional</td><td>9</td></tr><tr><td>Fewer Than Two Arms</td><td>5</td></tr></tbody>
             </table>
           </div>
 
@@ -292,13 +303,13 @@
               </thead>
               <tbody>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT03057951" target="_blank" rel="noopener">NCT03057951</a></td>
-          <td>EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Preserved Ejection Fraction (EMPEROR-Preserved)</td>
-          <td>Boehringer Ingelheim (INDUSTRY)</td>
+          <td><a href="https://clinicaltrials.gov/study/NCT03619213" target="_blank" rel="noopener">NCT03619213</a></td>
+          <td>Dapagliflozin Evaluation to Improve the LIVEs of Patients With PReserved Ejection Fraction Heart Failure.</td>
+          <td>AstraZeneca (INDUSTRY)</td>
           <td>Phase 3</td>
-          <td>5988 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
-          <td>Participants Placebo: 2991 Participants | 10 mg Empagliflozin: 2997 Participants | Total: 5988 Participants | Age Placebo: 71.9 +/- 9.6 Years | 10 mg Empagliflozin: 71.8 +/- 9.3 Years | Total: 71.9 +/- 9.4 Years | Sex Placebo: F 1338 / M 1653 | 10 mg Empagliflozin: F 1338 / M 1659 | Total: F 2676 / M 3312</td>
+          <td>6263 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 40 Years to 130 Years | Healthy volunteers: No</td>
+          <td>Participants Dapa 10 mg: 3131 Participants | Placebo: 3132 Participants | Total: 6263 Participants | Age Dapa 10 mg: 71.8 +/- 9.6 Years | Placebo: 71.5 +/- 9.5 Years | Total: 71.7 +/- 9.6 Years | Sex Dapa 10 mg: F 1364 / M 1767 | Placebo: F 1383 / M 1749 | Total: F 2747 / M 3516</td>
         </tr>
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT03057977" target="_blank" rel="noopener">NCT03057977</a></td>
@@ -310,6 +321,15 @@
           <td>Participants Placebo: 1867 Participants | 10 mg Empagliflozin: 1863 Participants | Total: 3730 Participants | Age Placebo: 66.5 +/- 11.2 Years | 10 mg Empagliflozin: 67.2 +/- 10.8 Years | Total: 66.8 +/- 11.0 Years | Sex Placebo: F 456 / M 1411 | 10 mg Empagliflozin: F 437 / M 1426 | Total: F 893 / M 2837</td>
         </tr>
         <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03057951" target="_blank" rel="noopener">NCT03057951</a></td>
+          <td>EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Preserved Ejection Fraction (EMPEROR-Preserved)</td>
+          <td>Boehringer Ingelheim (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>5988 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Placebo: 2991 Participants | 10 mg Empagliflozin: 2997 Participants | Total: 5988 Participants | Age Placebo: 71.9 +/- 9.6 Years | 10 mg Empagliflozin: 71.8 +/- 9.3 Years | Total: 71.9 +/- 9.4 Years | Sex Placebo: F 1338 / M 1653 | 10 mg Empagliflozin: F 1338 / M 1659 | Total: F 2676 / M 3312</td>
+        </tr>
+        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT03036124" target="_blank" rel="noopener">NCT03036124</a></td>
           <td>Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic Heart Failure</td>
           <td>AstraZeneca (INDUSTRY)</td>
@@ -317,15 +337,6 @@
           <td>4744 (ACTUAL)</td>
           <td>Sex: ALL | Age: 18 Years to 130 Years | Healthy volunteers: No</td>
           <td>Participants Dapa 10mg: 2373 Participants | Placebo: 2371 Participants | Total: 4744 Participants | Age Dapa 10mg: 66.2 +/- 11.0 Years | Placebo: 66.5 +/- 10.8 Years | Total: 66.3 +/- 10.9 Years | Sex Dapa 10mg: F 564 / M 1809 | Placebo: F 545 / M 1826 | Total: F 1109 / M 3635</td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT03619213" target="_blank" rel="noopener">NCT03619213</a></td>
-          <td>Dapagliflozin Evaluation to Improve the LIVEs of Patients With PReserved Ejection Fraction Heart Failure.</td>
-          <td>AstraZeneca (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>6263 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 40 Years to 130 Years | Healthy volunteers: No</td>
-          <td>Participants Dapa 10 mg: 3131 Participants | Placebo: 3132 Participants | Total: 6263 Participants | Age Dapa 10 mg: 71.8 +/- 9.6 Years | Placebo: 71.5 +/- 9.5 Years | Total: 71.7 +/- 9.6 Years | Sex Dapa 10 mg: F 1364 / M 1767 | Placebo: F 1383 / M 1749 | Total: F 2747 / M 3516</td>
         </tr></tbody>
             </table>
           </div>
@@ -344,12 +355,12 @@
               </thead>
               <tbody>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT03057951" target="_blank" rel="noopener">NCT03057951</a></td>
-          <td>This is a study in adults with chronic heart failure. People with chronic heart failure may need to be hospitalised for their condition. Some people with chronic heart failure may eventually die from their condition. The purpose of the s...</td>
-          <td>Inclusion criteria: * Male or female patient, age \&gt;= 18 years at screening. For Japan only: Age \&gt;=20 years at screening * Patients with chronic HF (Chronic Heart Failure) NYHA (New York Heart Association classificat...</td>
-          <td>Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF) | Time frame: From randomization until completion of the planned treatment phase, up to 1403 days. | Failure with preserved Ejection Fraction...</td>
-          <td><span class="pill">Study Protocol (2016-11-09)</span>
-<span class="pill">Statistical Analysis Plan (2017-02-21)</span></td>
+          <td><a href="https://clinicaltrials.gov/study/NCT03619213" target="_blank" rel="noopener">NCT03619213</a></td>
+          <td>This is an international, multicentre, parallel-group, event-driven, randomised, double-blind, placebo-controlled study in HFpEF patients, evaluating the effect of dapagliflozin 10 mg versus placebo, given once daily in addition to backg...</td>
+          <td>Inclusion Criteria: 1. Provision of signed informed consent prior to any study specific procedures. 2. Male or female patients age ≥40 years. 3. Documented diagnosis of symptomatic heart failure (NYHA class II-IV) at...</td>
+          <td>Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure. | Time frame: Up to 42.1 months | Dual primary efficacy Primary endpoint analysed in all patients randomised (Full analysis s...</td>
+          <td><span class="pill">Study Protocol (2020-11-12)</span>
+<span class="pill">Statistical Analysis Plan (2021-12-08)</span></td>
         </tr>
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT03057977" target="_blank" rel="noopener">NCT03057977</a></td>
@@ -360,20 +371,20 @@
 <span class="pill">Statistical Analysis Plan (2020-06-19)</span></td>
         </tr>
         <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT03057951" target="_blank" rel="noopener">NCT03057951</a></td>
+          <td>This is a study in adults with chronic heart failure. People with chronic heart failure may need to be hospitalised for their condition. Some people with chronic heart failure may eventually die from their condition. The purpose of the s...</td>
+          <td>Inclusion criteria: * Male or female patient, age \&gt;= 18 years at screening. For Japan only: Age \&gt;=20 years at screening * Patients with chronic HF (Chronic Heart Failure) NYHA (New York Heart Association classificat...</td>
+          <td>Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF) | Time frame: From randomization until completion of the planned treatment phase, up to 1403 days. | Failure with preserved Ejection Fraction...</td>
+          <td><span class="pill">Study Protocol (2016-11-09)</span>
+<span class="pill">Statistical Analysis Plan (2017-02-21)</span></td>
+        </tr>
+        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT03036124" target="_blank" rel="noopener">NCT03036124</a></td>
           <td>The purpose of this study is to evaluate the effect of dapagliflozin on the incidence of worsening heart failure or cardiovascular death in patients with chronic heart failure with reduced ejection fraction</td>
           <td>Inclusion Criteria: * Provision of signed informed consent prior to any study specific procedures * Male or female, aged ≥18 years * Established documented diagnosis of symptomatic HFrEF (NYHA functional class II-IV),...</td>
           <td>Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure. | Time frame: Up to 27.8 months. | Primary efficacy</td>
           <td><span class="pill">Study Protocol (2017-10-26)</span>
 <span class="pill">Statistical Analysis Plan (2019-07-23)</span></td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT03619213" target="_blank" rel="noopener">NCT03619213</a></td>
-          <td>This is an international, multicentre, parallel-group, event-driven, randomised, double-blind, placebo-controlled study in HFpEF patients, evaluating the effect of dapagliflozin 10 mg versus placebo, given once daily in addition to backg...</td>
-          <td>Inclusion Criteria: 1. Provision of signed informed consent prior to any study specific procedures. 2. Male or female patients age ≥40 years. 3. Documented diagnosis of symptomatic heart failure (NYHA class II-IV) at...</td>
-          <td>Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure. | Time frame: Up to 42.1 months | Dual primary efficacy Primary endpoint analysed in all patients randomised (Full analysis s...</td>
-          <td><span class="pill">Study Protocol (2020-11-12)</span>
-<span class="pill">Statistical Analysis Plan (2021-12-08)</span></td>
         </tr></tbody>
             </table>
           </div>
@@ -393,18 +404,26 @@
               </thead>
               <tbody>
       <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT03057951" target="_blank" rel="noopener">NCT03057951</a></td>
-        <td>10 mg Empagliflozin vs Placebo</td>
-        <td>Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)</td>
-        <td>5988 (ACTUAL)</td>
+        <td><a href="https://clinicaltrials.gov/study/NCT03619213" target="_blank" rel="noopener">NCT03619213</a></td>
+        <td>Dapa 10 mg vs Placebo</td>
+        <td>Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.</td>
+        <td>6263 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
       </tr>
 
       <tr>
         <td><a href="https://clinicaltrials.gov/study/NCT03057977" target="_blank" rel="noopener">NCT03057977</a></td>
         <td>10 mg Empagliflozin vs Placebo</td>
-        <td>Time to the First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)</td>
+        <td>eGFR (CKD-EPI) cr Slope of Change From Baseline</td>
         <td>3730 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT03057951" target="_blank" rel="noopener">NCT03057951</a></td>
+        <td>10 mg Empagliflozin vs Placebo</td>
+        <td>eGFR (CKD-EPI) cr Slope of Change From Baseline</td>
+        <td>5988 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
       </tr>
 
@@ -413,14 +432,6 @@
         <td>Dapa 10 mg vs Placebo</td>
         <td>Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.</td>
         <td>4744 (ACTUAL)</td>
-        <td>Documents listed on CT.gov</td>
-      </tr>
-
-      <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT03619213" target="_blank" rel="noopener">NCT03619213</a></td>
-        <td>Dapa 10 mg vs Placebo</td>
-        <td>Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.</td>
-        <td>6263 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
       </tr></tbody>
             </table>
@@ -443,7 +454,7 @@
             <script>
 (() => {
   const iframe = document.getElementById("reviewerValidationFrame");
-  const context = {"source":"ctgov-portfolio-generator","topicId":"sglt2-heart-failure","label":"SGLT2 Inhibitors in Heart Failure","query":"(\"heart failure\") AND (dapagliflozin OR empagliflozin OR sotagliflozin OR canagliflozin OR ertugliflozin) AND (\"DAPA-HF\" OR \"DELIVER\" OR \"EMPEROR\" OR \"SOLOIST\" OR \"EMPEROR-Preserved\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":4,"excludedCount":33,"totalEnrollment":20725,"demographicsCoverage":4,"documentCoverage":4,"comparisons":[{"studyId":"NCT03057951","title":"EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Preserved Ejection Fraction (EMPEROR-Preserved)","t1":"10 mg Empagliflozin","t2":"Placebo","measure":"logRR","effect":-0.23616535774137173,"se":0.5103379715032488,"n1":2997,"n0":2991,"totalN":5988,"sampleSize":5988},{"studyId":"NCT03057977","title":"EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Reduced Ejection Fraction (EMPEROR-Reduced)","t1":"10 mg Empagliflozin","t2":"Placebo","measure":"logRR","effect":-0.2842682638083418,"se":0.33159945902738164,"n1":1863,"n0":1867,"totalN":3730,"sampleSize":3730},{"studyId":"NCT03036124","title":"Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic Heart Failure","t1":"Dapa 10 mg","t2":"Placebo","measure":"logRR","effect":-0.26360592059725635,"se":0.06115173732098436,"n1":2373,"n0":2371,"totalN":4744,"sampleSize":4744},{"studyId":"NCT03619213","title":"Dapagliflozin Evaluation to Improve the LIVEs of Patients With PReserved Ejection Fraction Heart Failure.","t1":"Dapa 10 mg","t2":"Placebo","measure":"logRR","effect":-0.17481499634356099,"se":0.054348851716151676,"n1":3131,"n0":3132,"totalN":6263,"sampleSize":6263}],"includedStudies":[{"nctId":"NCT03057951","title":"EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Preserved Ejection Fraction (EMPEROR-Preserved)","status":"COMPLETED","enrollment":5988,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)","groups":[{"title":"Placebo","n":2991,"events":8.67,"mean":null,"sd":null},{"title":"10 mg Empagliflozin","n":2997,"events":6.86,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)","timeFrame":"From randomization until completion of the planned treatment phase, up to 1403 days."}]},{"nctId":"NCT03057977","title":"EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Reduced Ejection Fraction (EMPEROR-Reduced)","status":"COMPLETED","enrollment":3730,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Time to the First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)","groups":[{"title":"Placebo","n":1867,"events":21,"mean":null,"sd":null},{"title":"10 mg Empagliflozin","n":1863,"events":15.77,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time to the First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)","timeFrame":"From randomisation until completion of the planned treatment period, up to 1040 days."}]},{"nctId":"NCT03036124","title":"Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic Heart Failure","status":"COMPLETED","enrollment":4744,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.","groups":[{"title":"Dapa 10 mg","n":2373,"events":386,"mean":null,"sd":null},{"title":"Placebo","n":2371,"events":502,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.","timeFrame":"Up to 27.8 months."}]},{"nctId":"NCT03619213","title":"Dapagliflozin Evaluation to Improve the LIVEs of Patients With PReserved Ejection Fraction Heart Failure.","status":"COMPLETED","enrollment":6263,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.","groups":[{"title":"Dapa 10 mg","n":3131,"events":512,"mean":null,"sd":null},{"title":"Placebo","n":3132,"events":610,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.","timeFrame":"Up to 42.1 months"},{"measure":"Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure for LVEF <60% Subpopulation","timeFrame":"Up to 42.1 months"}]}]};
+  const context = {"source":"ctgov-portfolio-generator","topicId":"sglt2-heart-failure","label":"SGLT2 Inhibitors in Heart Failure","query":"(\"heart failure\") AND (dapagliflozin OR empagliflozin OR sotagliflozin OR canagliflozin OR ertugliflozin) AND (\"DAPA-HF\" OR \"DELIVER\" OR \"EMPEROR\" OR \"SOLOIST\" OR \"EMPEROR-Preserved\")","generatedAt":"2026-04-05T13:16:46.754Z","includedCount":4,"excludedCount":33,"totalEnrollment":20725,"demographicsCoverage":4,"documentCoverage":4,"analysisEligibleCount":4,"comparisonReadyStudyCount":4,"comparisonCount":4,"comparisons":[{"studyId":"NCT03619213","title":"Dapagliflozin Evaluation to Improve the LIVEs of Patients With PReserved Ejection Fraction Heart Failure.","t1":"Dapa 10 mg","t2":"Placebo","measure":"logRR","effect":-0.17481499634356099,"se":0.054348851716151676,"n1":3131,"n0":3132,"totalN":6263,"sampleSize":6263,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"count"},{"studyId":"NCT03057977","title":"EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Reduced Ejection Fraction (EMPEROR-Reduced)","t1":"10 mg Empagliflozin","t2":"Placebo","measure":"MD","effect":1.732,"se":0.32244379355168246,"n1":1799,"n0":1792,"totalN":3591,"sampleSize":3591,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT03057951","title":"EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Preserved Ejection Fraction (EMPEROR-Preserved)","t1":"10 mg Empagliflozin","t2":"Placebo","measure":"MD","effect":1.3630000000000002,"se":0.002827465790939376,"n1":2925,"n0":2911,"totalN":5836,"sampleSize":5836,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT03036124","title":"Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic Heart Failure","t1":"Dapa 10 mg","t2":"Placebo","measure":"logRR","effect":-0.26360592059725635,"se":0.06115173732098436,"n1":2373,"n0":2371,"totalN":4744,"sampleSize":4744,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"count"}],"includedStudies":[{"nctId":"NCT03619213","title":"Dapagliflozin Evaluation to Improve the LIVEs of Patients With PReserved Ejection Fraction Heart Failure.","status":"COMPLETED","enrollment":6263,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"binary","title":"Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.","unitOfMeasure":"Participants","paramType":"COUNT_OF_PARTICIPANTS","metricKind":"count","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Dapa 10 mg","n":3131,"events":512,"mean":null,"sd":null,"rawValue":512,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"Placebo","n":3132,"events":610,"mean":null,"sd":null,"rawValue":610,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"}]},"primaryOutcomes":[{"measure":"Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.","timeFrame":"Up to 42.1 months"},{"measure":"Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure for LVEF \u003c60% Subpopulation","timeFrame":"Up to 42.1 months"}]},{"nctId":"NCT03057977","title":"EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Reduced Ejection Fraction (EMPEROR-Reduced)","status":"COMPLETED","enrollment":3730,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"eGFR (CKD-EPI) cr Slope of Change From Baseline","unitOfMeasure":"Milliliter/minute/1.73 meters squared","paramType":"MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Placebo","n":1792,"events":null,"mean":-2.278,"sd":9.694032803740662,"rawValue":-2.278,"rawUnit":"Milliliter/minute/1.73 meters squared","displayPercent":null,"derivation":null},{"title":"10 mg Empagliflozin","n":1799,"events":null,"mean":-0.546,"sd":9.628118767443617,"rawValue":-0.546,"rawUnit":"Milliliter/minute/1.73 meters squared","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Time to the First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)","timeFrame":"From randomisation until completion of the planned treatment period, up to 1040 days."}]},{"nctId":"NCT03057951","title":"EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Preserved Ejection Fraction (EMPEROR-Preserved)","status":"COMPLETED","enrollment":5988,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"eGFR (CKD-EPI) cr Slope of Change From Baseline","unitOfMeasure":"mL/min/ 1.73 meters squared/year","paramType":"MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Placebo","n":2911,"events":null,"mean":-2.616,"sd":0.108,"rawValue":-2.616,"rawUnit":"mL/min/ 1.73 meters squared/year","displayPercent":null,"derivation":null},{"title":"10 mg Empagliflozin","n":2925,"events":null,"mean":-1.253,"sd":0.108,"rawValue":-1.253,"rawUnit":"mL/min/ 1.73 meters squared/year","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)","timeFrame":"From randomization until completion of the planned treatment phase, up to 1403 days."}]},{"nctId":"NCT03036124","title":"Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic Heart Failure","status":"COMPLETED","enrollment":4744,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"binary","title":"Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.","unitOfMeasure":"Participants","paramType":"COUNT_OF_PARTICIPANTS","metricKind":"count","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Dapa 10 mg","n":2373,"events":386,"mean":null,"sd":null,"rawValue":386,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"},{"title":"Placebo","n":2371,"events":502,"mean":null,"sd":null,"rawValue":502,"rawUnit":"Participants","displayPercent":null,"derivation":"posted_count"}]},"primaryOutcomes":[{"measure":"Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.","timeFrame":"Up to 27.8 months."}]}]};
   if (!iframe || !context) return;
   const sendContext = () => {
     if (!iframe.contentWindow) return;
@@ -465,7 +476,7 @@
       <main class="layout">
         <section class="panel topics">
           <div class="panel__header">
-            <h2 id="topicPanelTitle">CT.gov-validated topic (4 eligible RCTs in snapshot)</h2>
+            <h2 id="topicPanelTitle">CT.gov completeness-screened topic (4 eligible RCTs in snapshot)</h2>
             <div class="topic-stats">
               <span id="topicCount">0</span> topics -
               <span id="trialCount">0</span> trials
@@ -604,7 +615,7 @@
           <div class="dataset-filters">
             <label>
               Source:
-              <select id="datasetSourceFilter">
+              <select aria-label="Source" id="datasetSourceFilter">
                 <option value="all">All Sources</option>
                 <option value="metafor">metafor</option>
                 <option value="meta">meta</option>
@@ -615,7 +626,7 @@
             </label>
             <label>
               Type:
-              <select id="datasetTypeFilter">
+              <select aria-label="Type" id="datasetTypeFilter">
                 <option value="all">All Types</option>
                 <option value="pairwise">Pairwise</option>
                 <option value="network">Network</option>
@@ -623,16 +634,16 @@
                 <option value="continuous">Continuous</option>
               </select>
             </label>
-            <label>
+            <label for="datasetSearch">
               Relevance:
-              <select id="datasetRelevanceFilter">
+              <select aria-label="Relevance" id="datasetRelevanceFilter">
                 <option value="all">All</option>
                 <option value="acs">ACS-specific</option>
                 <option value="cardiovascular">Cardiovascular</option>
                 <option value="classic">Classic examples</option>
               </select>
             </label>
-            <input type="text" id="datasetSearch" placeholder="Search datasets..." />
+            <input type="text" id="datasetSearch" aria-label="Search datasets..." placeholder="Search datasets..." />
           </div>
           <div id="datasetList" class="dataset-list"></div>
           <div id="datasetPreview" class="dataset-preview hidden">
@@ -645,11 +656,11 @@
         </div>
         <div class="modal-footer">
           <div class="import-options">
-            <label>
-              <input type="checkbox" id="createTopicCheck" checked />
+            <label for="customTopicName">
+              <input type="checkbox" id="createTopicCheck" checked / aria-label="Create as new topic">
               Create as new topic
             </label>
-            <input type="text" id="customTopicName" placeholder="Custom topic name (optional)" />
+            <input type="text" id="customTopicName" aria-label="Custom topic name (optional)" placeholder="Custom topic name (optional)" />
           </div>
           <button id="importDatasetConfirmBtn" class="btn btn--primary" disabled>Import Selected Dataset</button>
         </div>
@@ -669,11 +680,11 @@
             <div class="form-row">
               <label>
                 Study Name/ID *
-                <input type="text" id="entryStudyName" placeholder="e.g., COMPLETE 2019" required />
+                <input type="text" aria-label="Study Name/ID *" id="entryStudyName" aria-label="e.g., COMPLETE 2019" placeholder="e.g., COMPLETE 2019" required />
               </label>
               <label>
                 Year
-                <input type="number" id="entryStudyYear" placeholder="2019" min="1900" max="2100" />
+                <input type="number" aria-label="Year" id="entryStudyYear" aria-label="2019" placeholder="2019" min="1900" max="2100" />
               </label>
             </div>
           </div>
@@ -682,13 +693,13 @@
             <h4>Outcome Type</h4>
             <div class="form-row">
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="binary" checked /> Binary (events/n)
+                <input type="radio" name="outcomeType" value="binary" checked / aria-label="Binary (events/n)"> Binary (events/n)
               </label>
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="continuous" /> Continuous (mean/SD/n)
+                <input type="radio" name="outcomeType" value="continuous" / aria-label="Continuous (mean/SD/n)"> Continuous (mean/SD/n)
               </label>
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="precomputed" /> Pre-computed (HR/OR/RR with CI)
+                <input type="radio" name="outcomeType" value="precomputed" / aria-label="Pre-computed (HR/OR/RR with CI)"> Pre-computed (HR/OR/RR with CI)
               </label>
             </div>
           </div>
@@ -698,29 +709,29 @@
             <div class="form-row">
               <label>
                 Treatment Arm Label
-                <input type="text" id="entryTreat1Label" placeholder="e.g., Complete revasc" />
+                <input type="text" aria-label="Treatment Arm Label" id="entryTreat1Label" aria-label="e.g., Complete revasc" placeholder="e.g., Complete revasc" />
               </label>
               <label>
                 Events
-                <input type="number" id="entryTreat1Events" min="0" />
+                <input type="number" aria-label="Events" id="entryTreat1Events" min="0" />
               </label>
               <label>
                 Total N
-                <input type="number" id="entryTreat1N" min="1" />
+                <input type="number" aria-label="Total N" id="entryTreat1N" min="1" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Control Arm Label
-                <input type="text" id="entryTreat2Label" placeholder="e.g., Culprit-only" />
+                <input type="text" aria-label="Control Arm Label" id="entryTreat2Label" aria-label="e.g., Culprit-only" placeholder="e.g., Culprit-only" />
               </label>
               <label>
                 Events
-                <input type="number" id="entryTreat2Events" min="0" />
+                <input type="number" aria-label="Events" id="entryTreat2Events" min="0" />
               </label>
               <label>
                 Total N
-                <input type="number" id="entryTreat2N" min="1" />
+                <input type="number" aria-label="Total N" id="entryTreat2N" min="1" />
               </label>
             </div>
           </div>
@@ -730,37 +741,37 @@
             <div class="form-row">
               <label>
                 Treatment Arm Label
-                <input type="text" id="entryContTreat1Label" placeholder="e.g., Intervention" />
+                <input type="text" aria-label="Treatment Arm Label" id="entryContTreat1Label" aria-label="e.g., Intervention" placeholder="e.g., Intervention" />
               </label>
               <label>
                 Mean
-                <input type="number" id="entryContTreat1Mean" step="any" />
+                <input type="number" aria-label="Mean" id="entryContTreat1Mean" step="any" />
               </label>
               <label>
                 SD
-                <input type="number" id="entryContTreat1SD" step="any" min="0" />
+                <input type="number" aria-label="SD" id="entryContTreat1SD" step="any" min="0" />
               </label>
               <label>
                 N
-                <input type="number" id="entryContTreat1N" min="1" />
+                <input type="number" aria-label="N" id="entryContTreat1N" min="1" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Control Arm Label
-                <input type="text" id="entryContTreat2Label" placeholder="e.g., Control" />
+                <input type="text" aria-label="Control Arm Label" id="entryContTreat2Label" aria-label="e.g., Control" placeholder="e.g., Control" />
               </label>
               <label>
                 Mean
-                <input type="number" id="entryContTreat2Mean" step="any" />
+                <input type="number" aria-label="Mean" id="entryContTreat2Mean" step="any" />
               </label>
               <label>
                 SD
-                <input type="number" id="entryContTreat2SD" step="any" min="0" />
+                <input type="number" aria-label="SD" id="entryContTreat2SD" step="any" min="0" />
               </label>
               <label>
                 N
-                <input type="number" id="entryContTreat2N" min="1" />
+                <input type="number" aria-label="N" id="entryContTreat2N" min="1" />
               </label>
             </div>
           </div>
@@ -770,7 +781,7 @@
             <div class="form-row">
               <label>
                 Effect Measure
-                <select id="entryEffectMeasure">
+                <select aria-label="Effect Measure" id="entryEffectMeasure">
                   <option value="HR">Hazard Ratio (HR)</option>
                   <option value="OR">Odds Ratio (OR)</option>
                   <option value="RR">Risk Ratio (RR)</option>
@@ -780,27 +791,27 @@
               </label>
               <label>
                 Point Estimate
-                <input type="number" id="entryEffectValue" step="any" placeholder="e.g., 0.74" />
+                <input type="number" aria-label="Point Estimate" id="entryEffectValue" step="any" aria-label="e.g., 0.74" placeholder="e.g., 0.74" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 95% CI Lower
-                <input type="number" id="entryCILower" step="any" />
+                <input type="number" aria-label="95% CI Lower" id="entryCILower" step="any" />
               </label>
               <label>
                 95% CI Upper
-                <input type="number" id="entryCIUpper" step="any" />
+                <input type="number" aria-label="95% CI Upper" id="entryCIUpper" step="any" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Treatment Label
-                <input type="text" id="entryPreTreat1" placeholder="e.g., Treatment" />
+                <input type="text" aria-label="Treatment Label" id="entryPreTreat1" aria-label="e.g., Treatment" placeholder="e.g., Treatment" />
               </label>
               <label>
                 Control Label
-                <input type="text" id="entryPreTreat2" placeholder="e.g., Control" />
+                <input type="text" aria-label="Control Label" id="entryPreTreat2" aria-label="e.g., Control" placeholder="e.g., Control" />
               </label>
             </div>
           </div>
@@ -830,7 +841,7 @@
           </div>
           <div class="rob-domains">
             <div class="rob-domain-row">
-              <label>
+              <label for="robD1Notes">
                 <span class="domain-label">D1: Randomization process</span>
                 <select id="robD1" class="rob-select">
                   <option value="">Not assessed</option>
@@ -839,10 +850,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD1Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD1Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD2Notes">
                 <span class="domain-label">D2: Deviations from intended interventions</span>
                 <select id="robD2" class="rob-select">
                   <option value="">Not assessed</option>
@@ -851,10 +862,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD2Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD2Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD3Notes">
                 <span class="domain-label">D3: Missing outcome data</span>
                 <select id="robD3" class="rob-select">
                   <option value="">Not assessed</option>
@@ -863,10 +874,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD3Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD3Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD4Notes">
                 <span class="domain-label">D4: Measurement of the outcome</span>
                 <select id="robD4" class="rob-select">
                   <option value="">Not assessed</option>
@@ -875,10 +886,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD4Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD4Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD5Notes">
                 <span class="domain-label">D5: Selection of reported result</span>
                 <select id="robD5" class="rob-select">
                   <option value="">Not assessed</option>
@@ -887,7 +898,7 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD5Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD5Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
           </div>
           <div class="rob-overall">
@@ -920,7 +931,7 @@
           <div class="import-panel active" id="zenodo-panel">
             <label>
               Zenodo DOI or Record ID:
-              <input type="text" id="zenodoDoi" placeholder="10.5281/zenodo.1234567 or 1234567" />
+              <input type="text" aria-label="Zenodo DOI or Record ID" id="zenodoDoi" aria-label="10.5281/zenodo.1234567 or 1234567" placeholder="10.5281/zenodo.1234567 or 1234567" />
             </label>
             <button id="fetchZenodoBtn" class="btn">Fetch Record</button>
             <div id="zenodoResult" class="import-result"></div>
@@ -928,7 +939,7 @@
           <div class="import-panel" id="github-panel">
             <label>
               GitHub Raw URL:
-              <input type="text" id="githubUrl" placeholder="https://raw.githubusercontent.com/..." />
+              <input type="text" aria-label="GitHub Raw URL" id="githubUrl" aria-label="https://raw.githubusercontent.com/..." placeholder="https://raw.githubusercontent.com/..." />
             </label>
             <button id="fetchGithubBtn" class="btn">Fetch File</button>
             <div id="githubResult" class="import-result"></div>
@@ -936,7 +947,7 @@
           <div class="import-panel" id="csv-panel">
             <label>
               Upload CSV/JSON file:
-              <input type="file" id="csvUpload" accept=".csv,.json" />
+              <input type="file" aria-label="Upload CSV/JSON file" id="csvUpload" accept=".csv,.json" />
             </label>
             <div id="csvResult" class="import-result"></div>
           </div>
@@ -1008,7 +1019,7 @@
             <button id="wizardFinishBtn" class="btn btn--accent hidden">Get Started</button>
           </div>
           <label class="wizard-dismiss">
-            <input type="checkbox" id="dontShowAgain"> Don't show this again
+            <input type="checkbox" id="dontShowAgain" aria-label="Don't show this again"> Don't show this again
           </label>
         </div>
       </div>
@@ -1121,8 +1132,8 @@
     "pageTitle": "SGLT2 Inhibitors in Heart Failure | CT.gov Living Meta-Analysis",
     "kicker": "Registry-Native Cardiovascular Evidence",
     "title": "SGLT2 Inhibitors in Heart Failure Living Meta-Analysis",
-    "subtitle": "Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.",
-    "topicPanelTitle": "CT.gov-validated topic (4 eligible RCTs in snapshot)",
+    "subtitle": "Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio.",
+    "topicPanelTitle": "CT.gov completeness-screened topic (4 eligible RCTs in snapshot)",
     "welcomeTitle": "SGLT2 Inhibitors in Heart Failure CT.gov review",
     "eligibilityTrialMinimum": 1,
     "analysisStudioName": "SGLT2 Inhibitors in Heart Failure CT.gov Living Meta-Analysis Studio",
@@ -1141,38 +1152,63 @@
       "topicId": "sglt2-heart-failure",
       "label": "SGLT2 Inhibitors in Heart Failure",
       "query": "(\"heart failure\") AND (dapagliflozin OR empagliflozin OR sotagliflozin OR canagliflozin OR ertugliflozin) AND (\"DAPA-HF\" OR \"DELIVER\" OR \"EMPEROR\" OR \"SOLOIST\" OR \"EMPEROR-Preserved\")",
-      "generatedAt": "2026-03-28T18:45:05.888Z",
+      "generatedAt": "2026-04-05T13:16:46.754Z",
       "includedCount": 4,
       "excludedCount": 33,
       "totalEnrollment": 20725,
       "demographicsCoverage": 4,
       "documentCoverage": 4,
+      "analysisEligibleCount": 4,
+      "comparisonReadyStudyCount": 4,
+      "comparisonCount": 4,
       "comparisons": [
         {
-          "studyId": "NCT03057951",
-          "title": "EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Preserved Ejection Fraction (EMPEROR-Preserved)",
-          "t1": "10 mg Empagliflozin",
+          "studyId": "NCT03619213",
+          "title": "Dapagliflozin Evaluation to Improve the LIVEs of Patients With PReserved Ejection Fraction Heart Failure.",
+          "t1": "Dapa 10 mg",
           "t2": "Placebo",
           "measure": "logRR",
-          "effect": -0.23616535774137173,
-          "se": 0.5103379715032488,
-          "n1": 2997,
-          "n0": 2991,
-          "totalN": 5988,
-          "sampleSize": 5988
+          "effect": -0.17481499634356099,
+          "se": 0.054348851716151676,
+          "n1": 3131,
+          "n0": 3132,
+          "totalN": 6263,
+          "sampleSize": 6263,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "count"
         },
         {
           "studyId": "NCT03057977",
           "title": "EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Reduced Ejection Fraction (EMPEROR-Reduced)",
           "t1": "10 mg Empagliflozin",
           "t2": "Placebo",
-          "measure": "logRR",
-          "effect": -0.2842682638083418,
-          "se": 0.33159945902738164,
-          "n1": 1863,
-          "n0": 1867,
-          "totalN": 3730,
-          "sampleSize": 3730
+          "measure": "MD",
+          "effect": 1.732,
+          "se": 0.32244379355168246,
+          "n1": 1799,
+          "n0": 1792,
+          "totalN": 3591,
+          "sampleSize": 3591,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT03057951",
+          "title": "EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Preserved Ejection Fraction (EMPEROR-Preserved)",
+          "t1": "10 mg Empagliflozin",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": 1.3630000000000002,
+          "se": 0.002827465790939376,
+          "n1": 2925,
+          "n0": 2911,
+          "totalN": 5836,
+          "sampleSize": 5836,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
         },
         {
           "studyId": "NCT03036124",
@@ -1185,125 +1221,13 @@
           "n1": 2373,
           "n0": 2371,
           "totalN": 4744,
-          "sampleSize": 4744
-        },
-        {
-          "studyId": "NCT03619213",
-          "title": "Dapagliflozin Evaluation to Improve the LIVEs of Patients With PReserved Ejection Fraction Heart Failure.",
-          "t1": "Dapa 10 mg",
-          "t2": "Placebo",
-          "measure": "logRR",
-          "effect": -0.17481499634356099,
-          "se": 0.054348851716151676,
-          "n1": 3131,
-          "n0": 3132,
-          "totalN": 6263,
-          "sampleSize": 6263
+          "sampleSize": 4744,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "count"
         }
       ],
       "includedStudies": [
-        {
-          "nctId": "NCT03057951",
-          "title": "EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Preserved Ejection Fraction (EMPEROR-Preserved)",
-          "status": "COMPLETED",
-          "enrollment": 5988,
-          "documentsCount": 2,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "binary",
-            "title": "Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)",
-            "groups": [
-              {
-                "title": "Placebo",
-                "n": 2991,
-                "events": 8.67,
-                "mean": null,
-                "sd": null
-              },
-              {
-                "title": "10 mg Empagliflozin",
-                "n": 2997,
-                "events": 6.86,
-                "mean": null,
-                "sd": null
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)",
-              "timeFrame": "From randomization until completion of the planned treatment phase, up to 1403 days."
-            }
-          ]
-        },
-        {
-          "nctId": "NCT03057977",
-          "title": "EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Reduced Ejection Fraction (EMPEROR-Reduced)",
-          "status": "COMPLETED",
-          "enrollment": 3730,
-          "documentsCount": 2,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "binary",
-            "title": "Time to the First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)",
-            "groups": [
-              {
-                "title": "Placebo",
-                "n": 1867,
-                "events": 21,
-                "mean": null,
-                "sd": null
-              },
-              {
-                "title": "10 mg Empagliflozin",
-                "n": 1863,
-                "events": 15.77,
-                "mean": null,
-                "sd": null
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Time to the First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)",
-              "timeFrame": "From randomisation until completion of the planned treatment period, up to 1040 days."
-            }
-          ]
-        },
-        {
-          "nctId": "NCT03036124",
-          "title": "Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic Heart Failure",
-          "status": "COMPLETED",
-          "enrollment": 4744,
-          "documentsCount": 2,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "binary",
-            "title": "Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.",
-            "groups": [
-              {
-                "title": "Dapa 10 mg",
-                "n": 2373,
-                "events": 386,
-                "mean": null,
-                "sd": null
-              },
-              {
-                "title": "Placebo",
-                "n": 2371,
-                "events": 502,
-                "mean": null,
-                "sd": null
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.",
-              "timeFrame": "Up to 27.8 months."
-            }
-          ]
-        },
         {
           "nctId": "NCT03619213",
           "title": "Dapagliflozin Evaluation to Improve the LIVEs of Patients With PReserved Ejection Fraction Heart Failure.",
@@ -1311,23 +1235,38 @@
           "enrollment": 6263,
           "documentsCount": 2,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
             "type": "binary",
             "title": "Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.",
+            "unitOfMeasure": "Participants",
+            "paramType": "COUNT_OF_PARTICIPANTS",
+            "metricKind": "count",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
                 "title": "Dapa 10 mg",
                 "n": 3131,
                 "events": 512,
                 "mean": null,
-                "sd": null
+                "sd": null,
+                "rawValue": 512,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
               },
               {
                 "title": "Placebo",
                 "n": 3132,
                 "events": 610,
                 "mean": null,
-                "sd": null
+                "sd": null,
+                "rawValue": 610,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
               }
             ]
           },
@@ -1339,6 +1278,153 @@
             {
               "measure": "Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure for LVEF \u003c60% Subpopulation",
               "timeFrame": "Up to 42.1 months"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT03057977",
+          "title": "EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Reduced Ejection Fraction (EMPEROR-Reduced)",
+          "status": "COMPLETED",
+          "enrollment": 3730,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "continuous",
+            "title": "eGFR (CKD-EPI) cr Slope of Change From Baseline",
+            "unitOfMeasure": "Milliliter/minute/1.73 meters squared",
+            "paramType": "MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "Placebo",
+                "n": 1792,
+                "events": null,
+                "mean": -2.278,
+                "sd": 9.694032803740662,
+                "rawValue": -2.278,
+                "rawUnit": "Milliliter/minute/1.73 meters squared",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "10 mg Empagliflozin",
+                "n": 1799,
+                "events": null,
+                "mean": -0.546,
+                "sd": 9.628118767443617,
+                "rawValue": -0.546,
+                "rawUnit": "Milliliter/minute/1.73 meters squared",
+                "displayPercent": null,
+                "derivation": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Time to the First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)",
+              "timeFrame": "From randomisation until completion of the planned treatment period, up to 1040 days."
+            }
+          ]
+        },
+        {
+          "nctId": "NCT03057951",
+          "title": "EMPagliflozin outcomE tRial in Patients With chrOnic heaRt Failure With Preserved Ejection Fraction (EMPEROR-Preserved)",
+          "status": "COMPLETED",
+          "enrollment": 5988,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "continuous",
+            "title": "eGFR (CKD-EPI) cr Slope of Change From Baseline",
+            "unitOfMeasure": "mL/min/ 1.73 meters squared/year",
+            "paramType": "MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "Placebo",
+                "n": 2911,
+                "events": null,
+                "mean": -2.616,
+                "sd": 0.108,
+                "rawValue": -2.616,
+                "rawUnit": "mL/min/ 1.73 meters squared/year",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "10 mg Empagliflozin",
+                "n": 2925,
+                "events": null,
+                "mean": -1.253,
+                "sd": 0.108,
+                "rawValue": -1.253,
+                "rawUnit": "mL/min/ 1.73 meters squared/year",
+                "displayPercent": null,
+                "derivation": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Time to First Event of Adjudicated Cardiovascular (CV) Death or Adjudicated Hospitalisation for Heart Failure (HHF)",
+              "timeFrame": "From randomization until completion of the planned treatment phase, up to 1403 days."
+            }
+          ]
+        },
+        {
+          "nctId": "NCT03036124",
+          "title": "Study to Evaluate the Effect of Dapagliflozin on the Incidence of Worsening Heart Failure or Cardiovascular Death in Patients With Chronic Heart Failure",
+          "status": "COMPLETED",
+          "enrollment": 4744,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "binary",
+            "title": "Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.",
+            "unitOfMeasure": "Participants",
+            "paramType": "COUNT_OF_PARTICIPANTS",
+            "metricKind": "count",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "Dapa 10 mg",
+                "n": 2373,
+                "events": 386,
+                "mean": null,
+                "sd": null,
+                "rawValue": 386,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
+              },
+              {
+                "title": "Placebo",
+                "n": 2371,
+                "events": 502,
+                "mean": null,
+                "sd": null,
+                "rawValue": 502,
+                "rawUnit": "Participants",
+                "displayPercent": null,
+                "derivation": "posted_count"
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Subjects Included in the Composite Endpoint of CV Death, Hospitalization Due to Heart Failure or Urgent Visit Due to Heart Failure.",
+              "timeFrame": "Up to 27.8 months."
             }
           ]
         }

@@ -17,17 +17,17 @@
         <div class="hero__title">
           <p class="kicker" id="appKicker">Registry-Native Cardiovascular Evidence</p>
           <h1 id="appTitle">PCSK9 Inhibition in Atherosclerotic Cardiovascular Disease Living Meta-Analysis</h1>
-          <p class="subtitle" id="appSubtitle">Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.</p>
+          <p class="subtitle" id="appSubtitle">Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio.</p>
         </div>
         <div class="hero__controls">
           <div class="control-card">
             <label>
               New RCT window start
-              <input id="startDate" type="date" />
+              <input aria-label="New RCT window start" id="startDate" type="date" />
             </label>
             <label>
               Status filter
-              <select id="statusFilter" multiple>
+              <select aria-label="Status filter" id="statusFilter" multiple>
                 <option value="COMPLETED" selected>Completed</option>
                 <option value="ACTIVE_NOT_RECRUITING" selected>Active, not recruiting</option>
                 <option value="RECRUITING">Recruiting</option>
@@ -37,14 +37,14 @@
             </label>
             <label>
               Single outcome rule
-              <select id="outcomeRule">
+              <select aria-label="Single outcome rule" id="outcomeRule">
                 <option value="primary">Primary outcome with numeric results</option>
                 <option value="results">Any outcome with numeric results</option>
               </select>
             </label>
             <label>
               Reference treatment (NMA)
-              <input id="referenceTx" type="text" placeholder="e.g., Standard care" />
+              <input aria-label="Reference treatment (NMA)" id="referenceTx" type="text" aria-label="e.g., Standard care" placeholder="e.g., Standard care" />
             </label>
             <button id="updateBtn" class="btn btn--primary">Update from ClinicalTrials.gov</button>
             <button id="fixtureBtn" class="btn">Load Offline Fixture</button>
@@ -55,7 +55,7 @@
           <div class="control-card">
             <label>
               Prior meta-analysis trial IDs (one per line)
-              <textarea id="priorTrials" rows="6" placeholder="NCT01234567"></textarea>
+              <textarea aria-label="Prior meta-analysis trial IDs (one per line)" id="priorTrials" rows="6" aria-label="NCT01234567" placeholder="NCT01234567"></textarea>
             </label>
             <button id="compareBtn" class="btn">Compare Coverage</button>
             <div id="coverageSummary" class="coverage"></div>
@@ -67,21 +67,27 @@
       <section class="panel validation-snapshot">
         <div class="panel__header">
           <h2>CT.gov Validation Snapshot</h2>
-          <div class="panel__meta">Generated 2026-03-28</div>
+          <div class="panel__meta">Generated 2026-04-05</div>
         </div>
         <div class="panel__body">
           <div class="summary-grid">
             <div class="summary-card">
               <h3>Registry Gate</h3>
-              <div class="pill">Included RCTs: 11</div>
+              <div class="pill">Included RCT records: 11</div>
+              <div class="pill">Contrast-ready studies: 10</div>
+              <div class="pill">Direct comparisons: 13</div>
               <div class="pill">Scanned records: 19</div>
               <div class="pill">Pages fetched: 1</div>
               <div class="pill">Priority tier: Build Now</div>
+              <div class="pill">Eligibility mode: Full CT.gov results coverage (&gt;=2 RCTs)</div>
+              <div class="pill">Coverage gate: Full CT.gov results coverage</div>
             </div>
             <div class="summary-card">
               <h3>Eligibility Rules</h3>
-              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, and at least one extractable numeric outcome.</p>
+              <p>Randomized interventional design, completed status, posted CT.gov results, at least two arms, at least one recorded numeric CT.gov outcome, and topic-level curation that the full randomized evidence base should be captured on CT.gov.</p>
+              <p>Direct pooled contrasts are only emitted when the posted CT.gov metric can be safely reduced to counts or means and the arm structure supports a defensible comparator.</p>
               <p>The validation scan completed within the configured CT.gov page cap.</p>
+              <p class="muted">Curated as a modern topic where the randomized evidence base is expected to be fully representable from CT.gov records with posted results.</p>
             </div>
             <div class="summary-card">
               <h3>Audit Trail</h3>
@@ -99,48 +105,48 @@
             <h3>Included Trial Records</h3>
             <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
               
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT01926782" target="_blank" rel="noopener">
-          NCT01926782
-        </a>
-
         <a class="pill" href="https://clinicaltrials.gov/study/NCT02023879" target="_blank" rel="noopener">
           NCT02023879
         </a>
 
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT02107898" target="_blank" rel="noopener">
-          NCT02107898
-        </a>
-
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT02584504" target="_blank" rel="noopener">
-          NCT02584504
-        </a>
-
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT01507831" target="_blank" rel="noopener">
-          NCT01507831
-        </a>
-
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT02984982" target="_blank" rel="noopener">
-          NCT02984982
-        </a>
-
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT01764633" target="_blank" rel="noopener">
-          NCT01764633
-        </a>
-
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT02207634" target="_blank" rel="noopener">
-          NCT02207634
-        </a>
-
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT01663402" target="_blank" rel="noopener">
-          NCT01663402
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01617655" target="_blank" rel="noopener">
+          NCT01617655
         </a>
 
         <a class="pill" href="https://clinicaltrials.gov/study/NCT01623115" target="_blank" rel="noopener">
           NCT01623115
         </a>
 
-        <a class="pill" href="https://clinicaltrials.gov/study/NCT01617655" target="_blank" rel="noopener">
-          NCT01617655
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02984982" target="_blank" rel="noopener">
+          NCT02984982
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01507831" target="_blank" rel="noopener">
+          NCT01507831
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02584504" target="_blank" rel="noopener">
+          NCT02584504
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01764633" target="_blank" rel="noopener">
+          NCT01764633
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01926782" target="_blank" rel="noopener">
+          NCT01926782
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02107898" target="_blank" rel="noopener">
+          NCT02107898
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT01663402" target="_blank" rel="noopener">
+          NCT01663402
+        </a>
+
+        <a class="pill" href="https://clinicaltrials.gov/study/NCT02207634" target="_blank" rel="noopener">
+          NCT02207634
         </a>
             </div>
           </div>
@@ -149,7 +155,7 @@
             <div class="topic-stats" style="flex-wrap: wrap; gap: 8px;">
               
         <div class="pill">
-          No Extractable Numeric Outcome: 6
+          No Recorded Numeric Outcome: 6
         </div>
 
         <div class="pill">
@@ -200,11 +206,11 @@
             </div>
             <div class="summary-card">
               <h3>Review Question And PICO</h3>
-              <p><strong>Population:</strong> Hypercholesterolemia; Acute Coronary Syndrome; Dyslipidemia; Atherosclerotic Cardiovascular Disease; Hypercholesterolaemia</p>
-              <p><strong>Interventions:</strong> Placebo Q2W Without Concomitant Statin; Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin; Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin; Placebo Q2W; Alirocumab 75 mg Q2W/Up to 150 mg Q2W (Calibrator); Alirocumab 150 mg Q4W/Up to 150 mg Q2W; Alirocumab 75 mg/Up to 150 mg Q2W; Alirocumab 150 mg Q4W</p>
-              <p><strong>Comparators:</strong> Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin vs Placebo Q2W Without Concomitant Statin | Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin vs Placebo Q2W Without Concomitant Statin; Alirocumab 75 mg Q2W/Up to 150 mg Q2W (Calibrator) vs Placebo Q2W | Alirocumab 150 mg Q4W/Up to 150 mg Q2W vs Placebo Q2W; Alirocumab 75 mg/Up to 150 mg Q2W vs Placebo Q2W; Alirocumab 150 mg Q4W vs Placebo Q2W | Alirocumab 150 mg Q2W vs Placebo Q2W; Alirocumab 150 mg Q2W vs Placebo Q2W; Alirocumab vs Standard of Care</p>
-              <p><strong>Outcomes:</strong> Percent Change From Baseline in Calculated LDL-C in Participants Not Receiving Concomitant Statin Therapy - ITT Analysis; Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis); Percent Change From Baseline in Calculated LDL-C at Week 12- Intent to Treat (ITT) Analysis; Percentage of Participants Who Experienced Adverse Events (AEs); Percent Change From Baseline in Normalized Total Atheroma Volume (TAV) at Week 36; Time to Cardiovascular Death, Myocardial Infarction, Hospitalization for Unstable Angina, Stroke, or Coronary Revascularization</p>
-              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and extractable numeric outcomes.</p>
+              <p><strong>Population:</strong> Hypercholesterolemia; Hypercholesterolaemia; Acute Coronary Syndrome; Dyslipidemia; Atherosclerotic Cardiovascular Disease</p>
+              <p><strong>Interventions:</strong> Placebo Q2W; Alirocumab 75 mg Q2W/Up to 150 mg Q2W (Calibrator); Alirocumab 150 mg Q4W/Up to 150 mg Q2W; Alirocumab 150 mg Q2W; Placebo; Alirocumab 75 mg/Up to 150 mg Q2W; Standard of Care; Alirocumab</p>
+              <p><strong>Comparators:</strong> Alirocumab 75 mg Q2W/Up to 150 mg Q2W (Calibrator) vs Placebo Q2W | Alirocumab 150 mg Q4W/Up to 150 mg Q2W vs Placebo Q2W | Shared comparator split across CT.gov treatment arms; Alirocumab 150 mg Q2W vs Placebo Q2W; Alirocumab 75 mg/Up to 150 mg Q2W vs Placebo; Alirocumab vs Standard of Care; Alirocumab 150 mg Q4W vs Placebo Q2W | Alirocumab 150 mg Q2W vs Placebo Q2W | Shared comparator split across CT.gov treatment arms; Evolocumab vs Placebo</p>
+              <p><strong>Outcomes:</strong> Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis); Percent Change From Baseline in Calculated LDL-C at Week 24 - ITT Analysis; Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT) Analysis; Percent Change From Baseline in Normalized Total Atheroma Volume (TAV) at Week 36; Percentage of Participants Who Experienced Adverse Events (AEs); Percent Change From Baseline in Calculated LDL-C at Week 12- Intent to Treat (ITT) Analysis</p>
+              <p><strong>Design:</strong> Randomized interventional ClinicalTrials.gov records with posted results, at least two arms, and at least one recorded numeric CT.gov outcome.</p>
             </div>
           </div>
 
@@ -222,7 +228,7 @@
         <tr>
           <td>CT.gov candidate scan started</td>
           <td>ClinicalTrials.gov v2 API</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr>
         <tr>
           <td>Base query locked</td>
@@ -257,7 +263,7 @@
         <tr>
           <td>Project package generated</td>
           <td>Portfolio build</td>
-          <td>2026-03-28</td>
+          <td>2026-04-05</td>
         </tr></tbody>
             </table>
           </div>
@@ -281,12 +287,17 @@
         <tr>
           <td>Records excluded by registry hard gates</td>
           <td>8</td>
-          <td>Not randomized, incomplete, missing results, insufficient arms, or no numeric outcome</td>
+          <td>Not randomized, incomplete, missing results, insufficient arms, or no recorded numeric outcome</td>
         </tr>
         <tr>
-          <td>Trials entering the quantitative snapshot</td>
+          <td>Trials entering the CT.gov record snapshot</td>
           <td>11</td>
           <td>Included in validation.json and the live topic app</td>
+        </tr>
+        <tr>
+          <td>Trials with contrast-ready outcomes</td>
+          <td>10</td>
+          <td>Recorded metrics safely reducible to counts or means</td>
         </tr></tbody>
             </table>
           </div>
@@ -300,7 +311,7 @@
                   <th>Count</th>
                 </tr>
               </thead>
-              <tbody><tr><td>No Extractable Numeric Outcome</td><td>6</td></tr><tr><td>No Results Posted</td><td>5</td></tr><tr><td>Not Completed</td><td>5</td></tr><tr><td>Fewer Than Two Arms</td><td>4</td></tr><tr><td>Not Randomized Interventional</td><td>4</td></tr></tbody>
+              <tbody><tr><td>No Recorded Numeric Outcome</td><td>6</td></tr><tr><td>No Results Posted</td><td>5</td></tr><tr><td>Not Completed</td><td>5</td></tr><tr><td>Fewer Than Two Arms</td><td>4</td></tr><tr><td>Not Randomized Interventional</td><td>4</td></tr></tbody>
             </table>
           </div>
 
@@ -320,15 +331,6 @@
               </thead>
               <tbody>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT01926782" target="_blank" rel="noopener">NCT01926782</a></td>
-          <td>Study to Evaluate the Efficacy and Safety of an Every Four Weeks Treatment Regimen of Alirocumab (REGN727/ SAR236553) in Patients With Primary Hypercholesterolemia (ODYSSEY CHOICE 1)</td>
-          <td>Regeneron Pharmaceuticals (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>803 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
-          <td>Participants Placebo Q2W With Concomitant Statin: 157 Participants | Alirocumab 75 mg Q2W/Up 150 mg Q2W With Concomitant Statin: 78 Participants | Alirocumab 300 mg Q4W/Up 150 mg Q2W With Concomitant Statin: 312 Participants | Placebo Q2W Without Concomitant Statin: 73 Participants | Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin: 37 Participants | Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin: 146 Participants | Total: 803 Participants | Age Placebo Q2W With Concomitant Statin: 61.6 +/- 9.7 years | Alirocumab 75 mg Q2W/Up 150 mg Q2W With Concomitant Statin: 60.7 +/- 9.1 years | Alirocumab 300 mg Q4W/Up 150 mg Q2W With Concomitant Statin: 61.6 +/- 10 years | Placebo Q2W Without Concomitant Statin: 59.4 +/- 10.2 years | Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin: 59.3 +/- 11.3 years | Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin: 59.2 +/- 10.8 years | Sex Placebo Q2W With Concomitant Statin: F 56 / M 101 | Alirocumab 75 mg Q2W/Up 150 mg Q2W With Concomitant Statin: F 27 / M 51 | Alirocumab 300 mg Q4W/Up 150 mg Q2W With Concomitant Statin: F 122 / M 190 | Placebo Q2W Without Concomitant Statin: F 33 / M 40 | Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin: F 23 / M 14 | Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin: F 80 / M 66</td>
-        </tr>
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02023879" target="_blank" rel="noopener">NCT02023879</a></td>
           <td>Phase III Study To Evaluate Alirocumab in Patients With Hypercholesterolemia Not Treated With a Statin (ODYSSEY CHOICE II)</td>
           <td>Sanofi (INDUSTRY)</td>
@@ -338,67 +340,13 @@
           <td>Participants Placebo Q2W: 58 Participants | Alirocumab 75 mg Q2W/Up to 150 mg Q2W (Calibrator): 116 Participants | Alirocumab 150 mg Q4W/Up to 150 mg Q2W: 59 Participants | Total: 233 Participants | Age Placebo Q2W: 63.1 +/- 10.7 years | Alirocumab 75 mg Q2W/Up to 150 mg Q2W (Calibrator): 62.5 +/- 9.9 years | Alirocumab 150 mg Q4W/Up to 150 mg Q2W: 64.2 +/- 10.0 years | Total: 63.1 +/- 10.1 years | Sex Placebo Q2W: F 27 / M 31 | Alirocumab 75 mg Q2W/Up to 150 mg Q2W (Calibrator): F 47 / M 69 | Alirocumab 150 mg Q4W/Up to 150 mg Q2W: F 29 / M 30 | Total: F 103 / M 130</td>
         </tr>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02107898" target="_blank" rel="noopener">NCT02107898</a></td>
-          <td>Efficacy and Safety Evaluation of Alirocumab in Patients With Heterozygous Familial Hypercholesterolemia or High Cardiovascular Risk Patients With Hypercholesterolemia on Lipid Modifying Therapy (ODYSSEY JAPAN)</td>
+          <td><a href="https://clinicaltrials.gov/study/NCT01617655" target="_blank" rel="noopener">NCT01617655</a></td>
+          <td>Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia (ODYSSEY HIGH FH)</td>
           <td>Sanofi (INDUSTRY)</td>
           <td>Phase 3</td>
-          <td>216 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 20 Years to 80 Years | Healthy volunteers: No</td>
-          <td>Participants Placebo Q2W: 72 Participants | Alirocumab 75 mg/Up to 150 mg Q2W: 144 Participants | Total: 216 Participants | Age Placebo Q2W: 61.8 +/- 9.0 years | Alirocumab 75 mg/Up to 150 mg Q2W: 60.3 +/- 9.7 years | Total: 60.8 +/- 9.5 years | Sex Placebo Q2W: F 25 / M 47 | Alirocumab 75 mg/Up to 150 mg Q2W: F 60 / M 84 | Total: F 85 / M 131</td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02584504" target="_blank" rel="noopener">NCT02584504</a></td>
-          <td>Efficacy and Safety of Alirocumab in Patients With Hypercholesterolemia Not Adequately Controlled With Non-statin Lipid Modifying Therapy or the Lowest Strength of Statin</td>
-          <td>Sanofi (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>163 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 20 Years to NR | Healthy volunteers: No</td>
-          <td>Participants Alirocumab 150 mg Q4W: 54 Participants | Alirocumab 150 mg Q2W: 53 Participants | Placebo Q2W: 56 Participants | Total: 163 Participants | Age Alirocumab 150 mg Q4W: 62.6 +/- 9.8 years | Alirocumab 150 mg Q2W: 63.6 +/- 10.4 years | Placebo Q2W: 64.6 +/- 10.0 years | Total: 63.6 +/- 10.1 years | Sex Alirocumab 150 mg Q4W: F 21 / M 33 | Alirocumab 150 mg Q2W: F 20 / M 33 | Placebo Q2W: F 19 / M 37 | Total: F 60 / M 103</td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT01507831" target="_blank" rel="noopener">NCT01507831</a></td>
-          <td>Long-term Safety and Tolerability of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in High Cardiovascular Risk Patients With Hypercholesterolemia (ODYSSEY Long Term)</td>
-          <td>Sanofi (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>2341 (ACTUAL)</td>
+          <td>107 (ACTUAL)</td>
           <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
-          <td>Participants Placebo Q2W: 788 Participants | Alirocumab 150 mg Q2W: 1553 Participants | Total: 2341 Participants | Age Placebo Q2W: 60.6 +/- 10.4 years | Alirocumab 150 mg Q2W: 60.4 +/- 10.4 years | Total: 60.5 +/- 10.4 years | Sex Placebo Q2W: F 314 / M 474 | Alirocumab 150 mg Q2W: F 570 / M 983 | Total: F 884 / M 1457</td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02984982" target="_blank" rel="noopener">NCT02984982</a></td>
-          <td>Evaluation of Effect of Alirocumab on Coronary Atheroma Volume in Japanese Patients Hospitalized for Acute Coronary Syndrome With Hypercholesterolemia</td>
-          <td>Sanofi (INDUSTRY)</td>
-          <td>Phase 4</td>
-          <td>206 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 20 Years to NR | Healthy volunteers: No</td>
-          <td>Participants Standard of Care: 102 Participants | Alirocumab: 104 Participants | Total: 206 Participants | Age Standard of Care: 60.0 +/- 11.9 years | Alirocumab: 61.7 +/- 10.9 years | Total: 60.9 +/- 11.4 years | Sex Standard of Care: F 19 / M 83 | Alirocumab: F 21 / M 83 | Total: F 40 / M 166</td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT01764633" target="_blank" rel="noopener">NCT01764633</a></td>
-          <td>Further Cardiovascular Outcomes Research With PCSK9 Inhibition in Subjects With Elevated Risk</td>
-          <td>Amgen (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>27564 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 40 Years to 85 Years | Healthy volunteers: No</td>
-          <td>Participants Placebo: 13780 Participants | Evolocumab: 13784 Participants | Total: 27564 Participants | Age Placebo: 62.5 +/- 8.9 years | Evolocumab: 62.5 +/- 9.1 years | Total: 62.5 +/- 9.0 years | Sex Placebo: F 3382 / M 10398 | Evolocumab: F 3387 / M 10397 | Total: F 6769 / M 20795</td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02207634" target="_blank" rel="noopener">NCT02207634</a></td>
-          <td>Evaluating PCSK9 Binding antiBody Influence oN coGnitive HeAlth in High cardiovascUlar Risk Subjects</td>
-          <td>Amgen (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>1974 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 40 Years to 85 Years | Healthy volunteers: No</td>
-          <td>Participants Placebo: 990 Participants | Evolocumab: 984 Participants | Total: 1974 Participants | Age Placebo: 62.7 +/- 8.7 years | Evolocumab: 62.9 +/- 8.7 years | Total: 62.8 +/- 8.7 years | Sex Placebo: F 274 / M 716 | Evolocumab: F 269 / M 715 | Total: F 543 / M 1431</td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT01663402" target="_blank" rel="noopener">NCT01663402</a></td>
-          <td>ODYSSEY Outcomes: Evaluation of Cardiovascular Outcomes After an Acute Coronary Syndrome During Treatment With Alirocumab</td>
-          <td>Sanofi (INDUSTRY)</td>
-          <td>Phase 3</td>
-          <td>18924 (ACTUAL)</td>
-          <td>Sex: ALL | Age: 40 Years to NR | Healthy volunteers: No</td>
-          <td>Participants Placebo: 9462 Participants | Alirocumab 75 mg Q2W/Up to 150 mg Q2W: 9462 Participants | Total: 18924 Participants | Age Placebo: 58.6 +/- 9.4 years | Alirocumab 75 mg Q2W/Up to 150 mg Q2W: 58.5 +/- 9.3 years | Total: 58.6 +/- 9.3 years | Sex Placebo: F 2372 / M 7090 | Alirocumab 75 mg Q2W/Up to 150 mg Q2W: F 2390 / M 7072 | Total: F 4762 / M 14162</td>
+          <td>Participants Placebo Q2W: 35 Participants | Alirocumab 150 mg Q2W: 72 Participants | Total: 107 Participants | Age Placebo Q2W: 52.1 +/- 11.2 years | Alirocumab 150 mg Q2W: 49.8 +/- 14.2 years | Total: 50.6 +/- 13.3 years | Sex Placebo Q2W: F 13 / M 22 | Alirocumab 150 mg Q2W: F 37 / M 35 | Total: F 50 / M 57</td>
         </tr>
         <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT01623115" target="_blank" rel="noopener">NCT01623115</a></td>
@@ -410,13 +358,76 @@
           <td>Participants Placebo: 163 Participants | Alirocumab 75 mg/Up to 150 mg Q2W: 323 Participants | Total: 486 Participants | Age Placebo: 51.7 +/- 12.3 years | Alirocumab 75 mg/Up to 150 mg Q2W: 52.1 +/- 12.9 years | Total: 51.9 +/- 12.7 years | Sex Placebo: F 69 / M 94 | Alirocumab 75 mg/Up to 150 mg Q2W: F 143 / M 180 | Total: F 212 / M 274</td>
         </tr>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT01617655" target="_blank" rel="noopener">NCT01617655</a></td>
-          <td>Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia (ODYSSEY HIGH FH)</td>
+          <td><a href="https://clinicaltrials.gov/study/NCT02984982" target="_blank" rel="noopener">NCT02984982</a></td>
+          <td>Evaluation of Effect of Alirocumab on Coronary Atheroma Volume in Japanese Patients Hospitalized for Acute Coronary Syndrome With Hypercholesterolemia</td>
+          <td>Sanofi (INDUSTRY)</td>
+          <td>Phase 4</td>
+          <td>206 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 20 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Standard of Care: 102 Participants | Alirocumab: 104 Participants | Total: 206 Participants | Age Standard of Care: 60.0 +/- 11.9 years | Alirocumab: 61.7 +/- 10.9 years | Total: 60.9 +/- 11.4 years | Sex Standard of Care: F 19 / M 83 | Alirocumab: F 21 / M 83 | Total: F 40 / M 166</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01507831" target="_blank" rel="noopener">NCT01507831</a></td>
+          <td>Long-term Safety and Tolerability of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in High Cardiovascular Risk Patients With Hypercholesterolemia (ODYSSEY Long Term)</td>
           <td>Sanofi (INDUSTRY)</td>
           <td>Phase 3</td>
-          <td>107 (ACTUAL)</td>
+          <td>2341 (ACTUAL)</td>
           <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
-          <td>Participants Placebo Q2W: 35 Participants | Alirocumab 150 mg Q2W: 72 Participants | Total: 107 Participants | Age Placebo Q2W: 52.1 +/- 11.2 years | Alirocumab 150 mg Q2W: 49.8 +/- 14.2 years | Total: 50.6 +/- 13.3 years | Sex Placebo Q2W: F 13 / M 22 | Alirocumab 150 mg Q2W: F 37 / M 35 | Total: F 50 / M 57</td>
+          <td>Participants Placebo Q2W: 788 Participants | Alirocumab 150 mg Q2W: 1553 Participants | Total: 2341 Participants | Age Placebo Q2W: 60.6 +/- 10.4 years | Alirocumab 150 mg Q2W: 60.4 +/- 10.4 years | Total: 60.5 +/- 10.4 years | Sex Placebo Q2W: F 314 / M 474 | Alirocumab 150 mg Q2W: F 570 / M 983 | Total: F 884 / M 1457</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02584504" target="_blank" rel="noopener">NCT02584504</a></td>
+          <td>Efficacy and Safety of Alirocumab in Patients With Hypercholesterolemia Not Adequately Controlled With Non-statin Lipid Modifying Therapy or the Lowest Strength of Statin</td>
+          <td>Sanofi (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>163 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 20 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Alirocumab 150 mg Q4W: 54 Participants | Alirocumab 150 mg Q2W: 53 Participants | Placebo Q2W: 56 Participants | Total: 163 Participants | Age Alirocumab 150 mg Q4W: 62.6 +/- 9.8 years | Alirocumab 150 mg Q2W: 63.6 +/- 10.4 years | Placebo Q2W: 64.6 +/- 10.0 years | Total: 63.6 +/- 10.1 years | Sex Alirocumab 150 mg Q4W: F 21 / M 33 | Alirocumab 150 mg Q2W: F 20 / M 33 | Placebo Q2W: F 19 / M 37 | Total: F 60 / M 103</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01764633" target="_blank" rel="noopener">NCT01764633</a></td>
+          <td>Further Cardiovascular Outcomes Research With PCSK9 Inhibition in Subjects With Elevated Risk</td>
+          <td>Amgen (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>27564 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 40 Years to 85 Years | Healthy volunteers: No</td>
+          <td>Participants Placebo: 13780 Participants | Evolocumab: 13784 Participants | Total: 27564 Participants | Age Placebo: 62.5 +/- 8.9 years | Evolocumab: 62.5 +/- 9.1 years | Total: 62.5 +/- 9.0 years | Sex Placebo: F 3382 / M 10398 | Evolocumab: F 3387 / M 10397 | Total: F 6769 / M 20795</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01926782" target="_blank" rel="noopener">NCT01926782</a></td>
+          <td>Study to Evaluate the Efficacy and Safety of an Every Four Weeks Treatment Regimen of Alirocumab (REGN727/ SAR236553) in Patients With Primary Hypercholesterolemia (ODYSSEY CHOICE 1)</td>
+          <td>Regeneron Pharmaceuticals (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>803 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 18 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Placebo Q2W With Concomitant Statin: 157 Participants | Alirocumab 75 mg Q2W/Up 150 mg Q2W With Concomitant Statin: 78 Participants | Alirocumab 300 mg Q4W/Up 150 mg Q2W With Concomitant Statin: 312 Participants | Placebo Q2W Without Concomitant Statin: 73 Participants | Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin: 37 Participants | Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin: 146 Participants | Total: 803 Participants | Age Placebo Q2W With Concomitant Statin: 61.6 +/- 9.7 years | Alirocumab 75 mg Q2W/Up 150 mg Q2W With Concomitant Statin: 60.7 +/- 9.1 years | Alirocumab 300 mg Q4W/Up 150 mg Q2W With Concomitant Statin: 61.6 +/- 10 years | Placebo Q2W Without Concomitant Statin: 59.4 +/- 10.2 years | Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin: 59.3 +/- 11.3 years | Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin: 59.2 +/- 10.8 years | Sex Placebo Q2W With Concomitant Statin: F 56 / M 101 | Alirocumab 75 mg Q2W/Up 150 mg Q2W With Concomitant Statin: F 27 / M 51 | Alirocumab 300 mg Q4W/Up 150 mg Q2W With Concomitant Statin: F 122 / M 190 | Placebo Q2W Without Concomitant Statin: F 33 / M 40 | Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin: F 23 / M 14 | Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin: F 80 / M 66</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02107898" target="_blank" rel="noopener">NCT02107898</a></td>
+          <td>Efficacy and Safety Evaluation of Alirocumab in Patients With Heterozygous Familial Hypercholesterolemia or High Cardiovascular Risk Patients With Hypercholesterolemia on Lipid Modifying Therapy (ODYSSEY JAPAN)</td>
+          <td>Sanofi (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>216 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 20 Years to 80 Years | Healthy volunteers: No</td>
+          <td>Participants Placebo Q2W: 72 Participants | Alirocumab 75 mg/Up to 150 mg Q2W: 144 Participants | Total: 216 Participants | Age Placebo Q2W: 61.8 +/- 9.0 years | Alirocumab 75 mg/Up to 150 mg Q2W: 60.3 +/- 9.7 years | Total: 60.8 +/- 9.5 years | Sex Placebo Q2W: F 25 / M 47 | Alirocumab 75 mg/Up to 150 mg Q2W: F 60 / M 84 | Total: F 85 / M 131</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01663402" target="_blank" rel="noopener">NCT01663402</a></td>
+          <td>ODYSSEY Outcomes: Evaluation of Cardiovascular Outcomes After an Acute Coronary Syndrome During Treatment With Alirocumab</td>
+          <td>Sanofi (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>18924 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 40 Years to NR | Healthy volunteers: No</td>
+          <td>Participants Placebo: 9462 Participants | Alirocumab 75 mg Q2W/Up to 150 mg Q2W: 9462 Participants | Total: 18924 Participants | Age Placebo: 58.6 +/- 9.4 years | Alirocumab 75 mg Q2W/Up to 150 mg Q2W: 58.5 +/- 9.3 years | Total: 58.6 +/- 9.3 years | Sex Placebo: F 2372 / M 7090 | Alirocumab 75 mg Q2W/Up to 150 mg Q2W: F 2390 / M 7072 | Total: F 4762 / M 14162</td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02207634" target="_blank" rel="noopener">NCT02207634</a></td>
+          <td>Evaluating PCSK9 Binding antiBody Influence oN coGnitive HeAlth in High cardiovascUlar Risk Subjects</td>
+          <td>Amgen (INDUSTRY)</td>
+          <td>Phase 3</td>
+          <td>1974 (ACTUAL)</td>
+          <td>Sex: ALL | Age: 40 Years to 85 Years | Healthy volunteers: No</td>
+          <td>Participants Placebo: 990 Participants | Evolocumab: 984 Participants | Total: 1974 Participants | Age Placebo: 62.7 +/- 8.7 years | Evolocumab: 62.9 +/- 8.7 years | Total: 62.8 +/- 8.7 years | Sex Placebo: F 274 / M 716 | Evolocumab: F 269 / M 715 | Total: F 543 / M 1431</td>
         </tr></tbody>
             </table>
           </div>
@@ -435,13 +446,6 @@
               </thead>
               <tbody>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT01926782" target="_blank" rel="noopener">NCT01926782</a></td>
-          <td>To determine the efficacy, long-term safety, and tolerability of alirocumab 300 mg every 4 weeks (Q4W), in comparison with placebo, as well as its potential as a starting regimen. The dose regimen of 75 mg every 2 weeks (Q2W), as used in...</td>
-          <td>Inclusion Criteria: 1. Men and women \&gt; age 18 or legal age of majority with elevated LDL-C 2. Patients not having adequate control of their hypercholesterolemia based on their individual level of CVD risk 3. Willing...</td>
-          <td>Percent Change From Baseline in Calculated LDL-C in Participants Not Receiving Concomitant Statin Therapy - ITT Analysis | Time frame: From Baseline to Week 24 | Adjusted LS means and standard errors at Week 24 and at averaged Week 21 to 24 from MMRM includ...</td>
-          <td><span class="muted">No CT.gov documents listed.</span></td>
-        </tr>
-        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT02023879" target="_blank" rel="noopener">NCT02023879</a></td>
           <td>Primary Objective: To demonstrate the reduction of low-density lipoprotein cholesterol (LDL-C) by a regimen of Alirocumab including a starting dose of 150 mg every 4 weeks (Q4W) as add-on to non-statin lipid modifying background therapy...</td>
           <td>Inclusion criteria: Participants with primary hypercholesterolemia (heterozygous familial hypercholesterolemia \[heFH\] or non-FH) not adequately controlled with their non-statin LMT (either ezetimibe or fenofibrate)...</td>
@@ -449,25 +453,17 @@
           <td><span class="muted">No CT.gov documents listed.</span></td>
         </tr>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02107898" target="_blank" rel="noopener">NCT02107898</a></td>
-          <td>Primary Objective: To demonstrate the reduction of low-density lipoprotein cholesterol (LDL-C) by alirocumab as add-on therapy to stable daily statin therapy with or without other lipid modifying therapy in comparison with placebo after...</td>
-          <td>Inclusion criteria: Participants with heterozygous familial hypercholesterolemia or non-familial hypercholesterolemia who were not adequately controlled with a stable daily dose of statin with or without other lipid m...</td>
-          <td>Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis) | Time frame: From Baseline to Week 24 | Adjusted least-squares (LS) means and standard errors at Week 24 were obtained from a mixed-effect model with repeated meas...</td>
+          <td><a href="https://clinicaltrials.gov/study/NCT01617655" target="_blank" rel="noopener">NCT01617655</a></td>
+          <td>Alirocumab (SAR236553/REGN727) is a fully human monoclonal antibody that binds PCSK9 (proprotein convertase subtilisin/kexin type 9). Primary Objective of the study: To evaluate the effect of alirocumab on low-density lipoprotein cholest...</td>
+          <td>Inclusion criteria: * Participants with heterozygous familial hypercholesterolemia who were not adequately controlled with their lipid-modifying therapy. Exclusion criteria: * Age \&lt; 18 years * LDL-C \&lt; 160 mg/dL (\&lt;...</td>
+          <td>Percent Change From Baseline in Calculated LDL-C at Week 24 - ITT Analysis | Time frame: From Baseline to Week 52 | Adjusted Least-squares (LS) means and standard errors at Week 24 were obtained from a mixed-effect model with repeated measures (MMRM) to acc...</td>
           <td><span class="muted">No CT.gov documents listed.</span></td>
         </tr>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02584504" target="_blank" rel="noopener">NCT02584504</a></td>
-          <td>Primary Objective: To demonstrate the reduction of low-density lipoprotein cholesterol (LDL-C) by alirocumab administration as add-on therapy to non-statin lipid modifying therapy (LMT) including diet therapy alone or the lowest strength...</td>
-          <td>Inclusion criteria : Participants with hypercholesterolemia (heFH or non-FH) receiving non statin LMTs or the lowest strength of statin. Exclusion criteria: * LDL-C \&lt;100 mg/dL (\&lt;2.59 mmol/L) at the screening visit (...</td>
-          <td>Percent Change From Baseline in Calculated LDL-C at Week 12- Intent to Treat (ITT) Analysis | Time frame: From Baseline to Week 12 | Adjusted Least-squares (LS) means and standard errors at Week 12 were obtained from a mixed-effect model with repeated measu...</td>
-          <td><span class="pill">Study Protocol (2017-04-26)</span>
-<span class="pill">Statistical Analysis Plan (2016-06-17)</span></td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT01507831" target="_blank" rel="noopener">NCT01507831</a></td>
-          <td>Alirocumab (SAR236553/REGN727) is a fully human monoclonal antibody that binds PCSK9 (proprotein convertase subtilisin/kexin type 9). Primary Objective of the study: To evaluate the long-term safety and tolerability of alirocumab in high...</td>
-          <td>Inclusion criteria: Either A or B below and who were not adequately controlled with their lipid-modifying therapy: A) Participants with heterozygous familial hypercholesterolemia (heFH) with or without established cor...</td>
-          <td>Percentage of Participants Who Experienced Adverse Events (AEs) | Time frame: Up to 10 weeks after last study drug administration (maximum of 86 weeks) | Reported adverse events are treatment-emergent adverse events that is AEs that developed/worsened durin...</td>
+          <td><a href="https://clinicaltrials.gov/study/NCT01623115" target="_blank" rel="noopener">NCT01623115</a></td>
+          <td>Alirocumab (SAR236553/REGN727) is a fully human monoclonal antibody that binds PCSK9 (proprotein convertase subtilisin/kexin type 9). Primary Objective of the study: To evaluate the effect of alirocumab on low-density lipoprotein cholest...</td>
+          <td>Inclusion criteria: * Participants with heterozygous familial hypercholesterolemia who were not adequately controlled with their lipid-modifying therapy Exclusion criteria: * Age \&lt; 18 years or legal age of adulthood,...</td>
+          <td>Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT) Analysis | Time frame: From Baseline to Week 52 | Adjusted Least-squares (LS) means and standard errors at Week 24 were obtained from a mixed-effect model with repeated meas...</td>
           <td><span class="muted">No CT.gov documents listed.</span></td>
         </tr>
         <tr>
@@ -479,6 +475,21 @@
 <span class="pill">Statistical Analysis Plan (2018-10-11)</span></td>
         </tr>
         <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT01507831" target="_blank" rel="noopener">NCT01507831</a></td>
+          <td>Alirocumab (SAR236553/REGN727) is a fully human monoclonal antibody that binds PCSK9 (proprotein convertase subtilisin/kexin type 9). Primary Objective of the study: To evaluate the long-term safety and tolerability of alirocumab in high...</td>
+          <td>Inclusion criteria: Either A or B below and who were not adequately controlled with their lipid-modifying therapy: A) Participants with heterozygous familial hypercholesterolemia (heFH) with or without established cor...</td>
+          <td>Percentage of Participants Who Experienced Adverse Events (AEs) | Time frame: Up to 10 weeks after last study drug administration (maximum of 86 weeks) | Reported adverse events are treatment-emergent adverse events that is AEs that developed/worsened durin...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02584504" target="_blank" rel="noopener">NCT02584504</a></td>
+          <td>Primary Objective: To demonstrate the reduction of low-density lipoprotein cholesterol (LDL-C) by alirocumab administration as add-on therapy to non-statin lipid modifying therapy (LMT) including diet therapy alone or the lowest strength...</td>
+          <td>Inclusion criteria : Participants with hypercholesterolemia (heFH or non-FH) receiving non statin LMTs or the lowest strength of statin. Exclusion criteria: * LDL-C \&lt;100 mg/dL (\&lt;2.59 mmol/L) at the screening visit (...</td>
+          <td>Percent Change From Baseline in Calculated LDL-C at Week 12- Intent to Treat (ITT) Analysis | Time frame: From Baseline to Week 12 | Adjusted Least-squares (LS) means and standard errors at Week 12 were obtained from a mixed-effect model with repeated measu...</td>
+          <td><span class="pill">Study Protocol (2017-04-26)</span>
+<span class="pill">Statistical Analysis Plan (2016-06-17)</span></td>
+        </tr>
+        <tr>
           <td><a href="https://clinicaltrials.gov/study/NCT01764633" target="_blank" rel="noopener">NCT01764633</a></td>
           <td>The primary objective was to evaluate the effect of treatment with evolocumab, compared with placebo, on the risk for cardiovascular death, myocardial infarction, stroke, hospitalization for unstable angina, or coronary revascularization...</td>
           <td>Inclusion Criteria: * Male or female ≥ 40 to ≤ 85 years of age * History of clinically evident cardiovascular disease at high risk for a recurrent event * Fasting low-density lipoprotein cholesterol (LDL-C) ≥ 70 mg/dL...</td>
@@ -486,10 +497,17 @@
           <td><span class="muted">No CT.gov documents listed.</span></td>
         </tr>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT02207634" target="_blank" rel="noopener">NCT02207634</a></td>
-          <td>This study evaluated change over time in neurocognitive testing in patients receiving statin therapy in combination with evolocumab (AMG 145), compared with patients receiving statin therapy in combination with placebo.</td>
-          <td>Inclusion Criteria: * Randomized into Study 20110118 (FOURIER; NCT01764633) Exclusion Criteria: * Current or known past diagnosis of dementia or mild cognitive impairment (MCI)</td>
-          <td>Mean Change From Baseline in Spatial Working Memory Strategy Index of Executive Function (6-8 Boxes) Z Score | Time frame: Assessments were conducted at Baseline and at weeks 24, 48, 96, 144 and end of study visit (median time on study was 19.4 months). | A...</td>
+          <td><a href="https://clinicaltrials.gov/study/NCT01926782" target="_blank" rel="noopener">NCT01926782</a></td>
+          <td>To determine the efficacy, long-term safety, and tolerability of alirocumab 300 mg every 4 weeks (Q4W), in comparison with placebo, as well as its potential as a starting regimen. The dose regimen of 75 mg every 2 weeks (Q2W), as used in...</td>
+          <td>Inclusion Criteria: 1. Men and women \&gt; age 18 or legal age of majority with elevated LDL-C 2. Patients not having adequate control of their hypercholesterolemia based on their individual level of CVD risk 3. Willing...</td>
+          <td>Percent Change From Baseline in Calculated LDL-C in Participants Not Receiving Concomitant Statin Therapy - ITT Analysis | Time frame: From Baseline to Week 24 | Adjusted LS means and standard errors at Week 24 and at averaged Week 21 to 24 from MMRM includ...</td>
+          <td><span class="muted">No CT.gov documents listed.</span></td>
+        </tr>
+        <tr>
+          <td><a href="https://clinicaltrials.gov/study/NCT02107898" target="_blank" rel="noopener">NCT02107898</a></td>
+          <td>Primary Objective: To demonstrate the reduction of low-density lipoprotein cholesterol (LDL-C) by alirocumab as add-on therapy to stable daily statin therapy with or without other lipid modifying therapy in comparison with placebo after...</td>
+          <td>Inclusion criteria: Participants with heterozygous familial hypercholesterolemia or non-familial hypercholesterolemia who were not adequately controlled with a stable daily dose of statin with or without other lipid m...</td>
+          <td>Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis) | Time frame: From Baseline to Week 24 | Adjusted least-squares (LS) means and standard errors at Week 24 were obtained from a mixed-effect model with repeated meas...</td>
           <td><span class="muted">No CT.gov documents listed.</span></td>
         </tr>
         <tr>
@@ -501,17 +519,10 @@
 <span class="pill">Statistical Analysis Plan (2017-10-11)</span></td>
         </tr>
         <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT01623115" target="_blank" rel="noopener">NCT01623115</a></td>
-          <td>Alirocumab (SAR236553/REGN727) is a fully human monoclonal antibody that binds PCSK9 (proprotein convertase subtilisin/kexin type 9). Primary Objective of the study: To evaluate the effect of alirocumab on low-density lipoprotein cholest...</td>
-          <td>Inclusion criteria: * Participants with heterozygous familial hypercholesterolemia who were not adequately controlled with their lipid-modifying therapy Exclusion criteria: * Age \&lt; 18 years or legal age of adulthood,...</td>
-          <td>Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT) Analysis | Time frame: From Baseline to Week 52 | Adjusted Least-squares (LS) means and standard errors at Week 24 were obtained from a mixed-effect model with repeated meas...</td>
-          <td><span class="muted">No CT.gov documents listed.</span></td>
-        </tr>
-        <tr>
-          <td><a href="https://clinicaltrials.gov/study/NCT01617655" target="_blank" rel="noopener">NCT01617655</a></td>
-          <td>Alirocumab (SAR236553/REGN727) is a fully human monoclonal antibody that binds PCSK9 (proprotein convertase subtilisin/kexin type 9). Primary Objective of the study: To evaluate the effect of alirocumab on low-density lipoprotein cholest...</td>
-          <td>Inclusion criteria: * Participants with heterozygous familial hypercholesterolemia who were not adequately controlled with their lipid-modifying therapy. Exclusion criteria: * Age \&lt; 18 years * LDL-C \&lt; 160 mg/dL (\&lt;...</td>
-          <td>Percent Change From Baseline in Calculated LDL-C at Week 24 - ITT Analysis | Time frame: From Baseline to Week 52 | Adjusted Least-squares (LS) means and standard errors at Week 24 were obtained from a mixed-effect model with repeated measures (MMRM) to acc...</td>
+          <td><a href="https://clinicaltrials.gov/study/NCT02207634" target="_blank" rel="noopener">NCT02207634</a></td>
+          <td>This study evaluated change over time in neurocognitive testing in patients receiving statin therapy in combination with evolocumab (AMG 145), compared with patients receiving statin therapy in combination with placebo.</td>
+          <td>Inclusion Criteria: * Randomized into Study 20110118 (FOURIER; NCT01764633) Exclusion Criteria: * Current or known past diagnosis of dementia or mild cognitive impairment (MCI)</td>
+          <td>Mean Change From Baseline in Spatial Working Memory Strategy Index of Executive Function (6-8 Boxes) Z Score | Time frame: Assessments were conducted at Baseline and at weeks 24, 48, 96, 144 and end of study visit (median time on study was 19.4 months). | A...</td>
           <td><span class="muted">No CT.gov documents listed.</span></td>
         </tr></tbody>
             </table>
@@ -532,42 +543,26 @@
               </thead>
               <tbody>
       <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT01926782" target="_blank" rel="noopener">NCT01926782</a></td>
-        <td>Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin vs Placebo Q2W Without Concomitant Statin | Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin vs Placebo Q2W Without Concomitant Statin</td>
-        <td>Percent Change From Baseline in Calculated LDL-C in Participants Not Receiving Concomitant Statin Therapy - ITT Analysis</td>
-        <td>803 (ACTUAL)</td>
-        <td>Registry record only</td>
-      </tr>
-
-      <tr>
         <td><a href="https://clinicaltrials.gov/study/NCT02023879" target="_blank" rel="noopener">NCT02023879</a></td>
-        <td>Alirocumab 75 mg Q2W/Up to 150 mg Q2W (Calibrator) vs Placebo Q2W | Alirocumab 150 mg Q4W/Up to 150 mg Q2W vs Placebo Q2W</td>
+        <td>Alirocumab 75 mg Q2W/Up to 150 mg Q2W (Calibrator) vs Placebo Q2W | Alirocumab 150 mg Q4W/Up to 150 mg Q2W vs Placebo Q2W | Shared comparator split across CT.gov treatment arms</td>
         <td>Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)</td>
         <td>233 (ACTUAL)</td>
         <td>Registry record only</td>
       </tr>
 
       <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT02107898" target="_blank" rel="noopener">NCT02107898</a></td>
-        <td>Alirocumab 75 mg/Up to 150 mg Q2W vs Placebo Q2W</td>
-        <td>Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)</td>
-        <td>216 (ACTUAL)</td>
+        <td><a href="https://clinicaltrials.gov/study/NCT01617655" target="_blank" rel="noopener">NCT01617655</a></td>
+        <td>Alirocumab 150 mg Q2W vs Placebo Q2W</td>
+        <td>Percent Change From Baseline in Calculated LDL-C at Week 24 - ITT Analysis</td>
+        <td>107 (ACTUAL)</td>
         <td>Registry record only</td>
       </tr>
 
       <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT02584504" target="_blank" rel="noopener">NCT02584504</a></td>
-        <td>Alirocumab 150 mg Q4W vs Placebo Q2W | Alirocumab 150 mg Q2W vs Placebo Q2W</td>
-        <td>Percent Change From Baseline in Calculated LDL-C at Week 12- Intent to Treat (ITT) Analysis</td>
-        <td>163 (ACTUAL)</td>
-        <td>Documents listed on CT.gov</td>
-      </tr>
-
-      <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT01507831" target="_blank" rel="noopener">NCT01507831</a></td>
-        <td>Alirocumab 150 mg Q2W vs Placebo Q2W</td>
-        <td>Percentage of Participants Who Experienced Adverse Events (AEs)</td>
-        <td>2341 (ACTUAL)</td>
+        <td><a href="https://clinicaltrials.gov/study/NCT01623115" target="_blank" rel="noopener">NCT01623115</a></td>
+        <td>Alirocumab 75 mg/Up to 150 mg Q2W vs Placebo</td>
+        <td>Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT) Analysis</td>
+        <td>486 (ACTUAL)</td>
         <td>Registry record only</td>
       </tr>
 
@@ -580,6 +575,22 @@
       </tr>
 
       <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT01507831" target="_blank" rel="noopener">NCT01507831</a></td>
+        <td>Alirocumab 150 mg Q2W vs Placebo Q2W</td>
+        <td>Percentage of Participants Who Experienced Adverse Events (AEs)</td>
+        <td>2341 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02584504" target="_blank" rel="noopener">NCT02584504</a></td>
+        <td>Alirocumab 150 mg Q4W vs Placebo Q2W | Alirocumab 150 mg Q2W vs Placebo Q2W | Shared comparator split across CT.gov treatment arms</td>
+        <td>Percent Change From Baseline in Calculated LDL-C at Week 12- Intent to Treat (ITT) Analysis</td>
+        <td>163 (ACTUAL)</td>
+        <td>Documents listed on CT.gov</td>
+      </tr>
+
+      <tr>
         <td><a href="https://clinicaltrials.gov/study/NCT01764633" target="_blank" rel="noopener">NCT01764633</a></td>
         <td>Evolocumab vs Placebo</td>
         <td>Time to Cardiovascular Death, Myocardial Infarction, Hospitalization for Unstable Angina, Stroke, or Coronary Revascularization</td>
@@ -588,27 +599,27 @@
       </tr>
 
       <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT02207634" target="_blank" rel="noopener">NCT02207634</a></td>
-        <td>Evolocumab vs Placebo</td>
-        <td>Mean Change From Baseline in Spatial Working Memory Strategy Index of Executive Function (6-8 Boxes) Z Score</td>
-        <td>1974 (ACTUAL)</td>
+        <td><a href="https://clinicaltrials.gov/study/NCT01926782" target="_blank" rel="noopener">NCT01926782</a></td>
+        <td>Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin vs Placebo Q2W Without Concomitant Statin | Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin vs Placebo Q2W Without Concomitant Statin | Shared comparator split across CT.gov treatment arms</td>
+        <td>Percent Change From Baseline in Calculated LDL-C in Participants Not Receiving Concomitant Statin Therapy - ITT Analysis</td>
+        <td>803 (ACTUAL)</td>
+        <td>Registry record only</td>
+      </tr>
+
+      <tr>
+        <td><a href="https://clinicaltrials.gov/study/NCT02107898" target="_blank" rel="noopener">NCT02107898</a></td>
+        <td>Alirocumab 75 mg/Up to 150 mg Q2W vs Placebo Q2W</td>
+        <td>Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)</td>
+        <td>216 (ACTUAL)</td>
         <td>Registry record only</td>
       </tr>
 
       <tr>
         <td><a href="https://clinicaltrials.gov/study/NCT01663402" target="_blank" rel="noopener">NCT01663402</a></td>
         <td>Alirocumab 75 mg Q2W/Up to 150 mg Q2W vs Placebo</td>
-        <td>Time to First Occurrence of Major Adverse Cardiovascular Event (MACE); Percentage of Observed Participants With Outcome Measure Events During the Study</td>
+        <td>Percent Change From Baseline in Calculated LDL-C at Months 4, 12, and 48: ITT Analysis</td>
         <td>18924 (ACTUAL)</td>
         <td>Documents listed on CT.gov</td>
-      </tr>
-
-      <tr>
-        <td><a href="https://clinicaltrials.gov/study/NCT01623115" target="_blank" rel="noopener">NCT01623115</a></td>
-        <td>Alirocumab 75 mg/Up to 150 mg Q2W vs Placebo</td>
-        <td>Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT) Analysis</td>
-        <td>486 (ACTUAL)</td>
-        <td>Registry record only</td>
       </tr></tbody>
             </table>
           </div>
@@ -630,7 +641,7 @@
             <script>
 (() => {
   const iframe = document.getElementById("reviewerValidationFrame");
-  const context = {"source":"ctgov-portfolio-generator","topicId":"pcsk9-ascvd","label":"PCSK9 Inhibition in Atherosclerotic Cardiovascular Disease","query":"(\"cardiovascular disease\" OR \"acute coronary syndrome\" OR coronary) AND (evolocumab OR alirocumab OR inclisiran OR PCSK9) AND (\"FOURIER\" OR \"ODYSSEY\" OR \"EVOPACS\" OR \"PACMAN-AMI\")","generatedAt":"2026-03-28T18:45:05.888Z","includedCount":11,"excludedCount":8,"totalEnrollment":53017,"demographicsCoverage":11,"documentCoverage":3,"comparisons":[{"studyId":"NCT01926782","title":"Study to Evaluate the Efficacy and Safety of an Every Four Weeks Treatment Regimen of Alirocumab (REGN727/ SAR236553) in Patients With Primary Hypercholesterolemia (ODYSSEY CHOICE 1)","t1":"Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin","t2":"Placebo Q2W Without Concomitant Statin","measure":"MD","effect":-49.900000000000006,"se":4.580392996239516,"n1":37,"n0":71,"totalN":108,"sampleSize":108},{"studyId":"NCT01926782","title":"Study to Evaluate the Efficacy and Safety of an Every Four Weeks Treatment Regimen of Alirocumab (REGN727/ SAR236553) in Patients With Primary Hypercholesterolemia (ODYSSEY CHOICE 1)","t1":"Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin","t2":"Placebo Q2W Without Concomitant Statin","measure":"MD","effect":-52.400000000000006,"se":3.301514803843836,"n1":144,"n0":71,"totalN":215,"sampleSize":215},{"studyId":"NCT02023879","title":"Phase III Study To Evaluate Alirocumab in Patients With Hypercholesterolemia Not Treated With a Statin (ODYSSEY CHOICE II)","t1":"Alirocumab 75 mg Q2W/Up to 150 mg Q2W (Calibrator)","t2":"Placebo Q2W","measure":"MD","effect":-58.2,"se":2.8017851452243803,"n1":115,"n0":57,"totalN":172,"sampleSize":172},{"studyId":"NCT02023879","title":"Phase III Study To Evaluate Alirocumab in Patients With Hypercholesterolemia Not Treated With a Statin (ODYSSEY CHOICE II)","t1":"Alirocumab 150 mg Q4W/Up to 150 mg Q2W","t2":"Placebo Q2W","measure":"MD","effect":-56.400000000000006,"se":3.252691193458119,"n1":58,"n0":57,"totalN":115,"sampleSize":115},{"studyId":"NCT02107898","title":"Efficacy and Safety Evaluation of Alirocumab in Patients With Heterozygous Familial Hypercholesterolemia or High Cardiovascular Risk Patients With Hypercholesterolemia on Lipid Modifying Therapy (ODYSSEY JAPAN)","t1":"Alirocumab 75 mg/Up to 150 mg Q2W","t2":"Placebo Q2W","measure":"MD","effect":-64.1,"se":2.2203603311174516,"n1":143,"n0":72,"totalN":215,"sampleSize":215},{"studyId":"NCT02584504","title":"Efficacy and Safety of Alirocumab in Patients With Hypercholesterolemia Not Adequately Controlled With Non-statin Lipid Modifying Therapy or the Lowest Strength of Statin","t1":"Alirocumab 150 mg Q4W","t2":"Placebo Q2W","measure":"MD","effect":-39.5,"se":3.1112698372208096,"n1":54,"n0":56,"totalN":110,"sampleSize":110},{"studyId":"NCT02584504","title":"Efficacy and Safety of Alirocumab in Patients With Hypercholesterolemia Not Adequately Controlled With Non-statin Lipid Modifying Therapy or the Lowest Strength of Statin","t1":"Alirocumab 150 mg Q2W","t2":"Placebo Q2W","measure":"MD","effect":-65.8,"se":3.1827660925679098,"n1":53,"n0":56,"totalN":109,"sampleSize":109},{"studyId":"NCT01507831","title":"Long-term Safety and Tolerability of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in High Cardiovascular Risk Patients With Hypercholesterolemia (ODYSSEY Long Term)","t1":"Alirocumab 150 mg Q2W","t2":"Placebo Q2W","measure":"logRR","effect":-0.6948612587236096,"se":0.15017554498066685,"n1":1550,"n0":788,"totalN":2338,"sampleSize":2338},{"studyId":"NCT02984982","title":"Evaluation of Effect of Alirocumab on Coronary Atheroma Volume in Japanese Patients Hospitalized for Acute Coronary Syndrome With Hypercholesterolemia","t1":"Alirocumab","t2":"Standard of Care","measure":"MD","effect":-1.65,"se":1.3577186748365804,"n1":93,"n0":89,"totalN":182,"sampleSize":182},{"studyId":"NCT01764633","title":"Further Cardiovascular Outcomes Research With PCSK9 Inhibition in Subjects With Elevated Risk","t1":"Evolocumab","t2":"Placebo","measure":"logRR","effect":-0.12695503943127973,"se":0.8284695499459641,"n1":13784,"n0":13780,"totalN":27564,"sampleSize":27564},{"studyId":"NCT02207634","title":"Evaluating PCSK9 Binding antiBody Influence oN coGnitive HeAlth in High cardiovascUlar Risk Subjects","t1":"Evolocumab","t2":"Placebo","measure":"MD","effect":-0.007199999999999998,"se":0.04894107887423844,"n1":586,"n0":616,"totalN":1202,"sampleSize":1202},{"studyId":"NCT01663402","title":"ODYSSEY Outcomes: Evaluation of Cardiovascular Outcomes After an Acute Coronary Syndrome During Treatment With Alirocumab","t1":"Alirocumab 75 mg Q2W/Up to 150 mg Q2W","t2":"Placebo","measure":"logRR","effect":-0.1556533097117934,"se":0.441748657249601,"n1":9462,"n0":9462,"totalN":18924,"sampleSize":18924},{"studyId":"NCT01623115","title":"Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia Not Adequately Controlled With Their Lipid-Modifying Therapy","t1":"Alirocumab 75 mg/Up to 150 mg Q2W","t2":"Placebo","measure":"MD","effect":-57.9,"se":2.7202941017470885,"n1":322,"n0":163,"totalN":485,"sampleSize":485},{"studyId":"NCT01617655","title":"Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia (ODYSSEY HIGH FH)","t1":"Alirocumab 150 mg Q2W","t2":"Placebo Q2W","measure":"MD","effect":-39.1,"se":6.021627686929839,"n1":71,"n0":35,"totalN":106,"sampleSize":106}],"includedStudies":[{"nctId":"NCT01926782","title":"Study to Evaluate the Efficacy and Safety of an Every Four Weeks Treatment Regimen of Alirocumab (REGN727/ SAR236553) in Patients With Primary Hypercholesterolemia (ODYSSEY CHOICE 1)","status":"COMPLETED","enrollment":803,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Percent Change From Baseline in Calculated LDL-C in Participants Not Receiving Concomitant Statin Therapy - ITT Analysis","groups":[{"title":"Placebo Q2W Without Concomitant Statin","n":71,"events":null,"mean":-0.3,"sd":22.75060438757617},{"title":"Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin","n":37,"events":null,"mean":-50.2,"sd":22.506221362103414},{"title":"Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin","n":144,"events":null,"mean":-52.7,"sd":22.799999999999997}]},"primaryOutcomes":[{"measure":"Percent Change From Baseline in Calculated LDL-C in Participants Not Receiving Concomitant Statin Therapy - ITT Analysis","timeFrame":"From Baseline to Week 24"},{"measure":"Percent Change From Baseline in Calculated LDL-C in Participants Receiving Concomitant Statin Therapy - Intent-to-Treat (ITT Analysis)","timeFrame":"From Baseline to Week 24"}]},{"nctId":"NCT02023879","title":"Phase III Study To Evaluate Alirocumab in Patients With Hypercholesterolemia Not Treated With a Statin (ODYSSEY CHOICE II)","status":"COMPLETED","enrollment":233,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)","groups":[{"title":"Placebo Q2W","n":57,"events":null,"mean":4.7,"sd":17.364619201122725},{"title":"Alirocumab 75 mg Q2W/Up to 150 mg Q2W (Calibrator)","n":115,"events":null,"mean":-53.5,"sd":17.158088471621774},{"title":"Alirocumab 150 mg Q4W/Up to 150 mg Q2W","n":58,"events":null,"mean":-51.7,"sd":17.51627814348699}]},"primaryOutcomes":[{"measure":"Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)","timeFrame":"From Baseline to Week 24"}]},{"nctId":"NCT02107898","title":"Efficacy and Safety Evaluation of Alirocumab in Patients With Heterozygous Familial Hypercholesterolemia or High Cardiovascular Risk Patients With Hypercholesterolemia on Lipid Modifying Therapy (ODYSSEY JAPAN)","status":"COMPLETED","enrollment":216,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)","groups":[{"title":"Placebo Q2W","n":72,"events":null,"mean":1.6,"sd":15.273506473629425},{"title":"Alirocumab 75 mg/Up to 150 mg Q2W","n":143,"events":null,"mean":-62.5,"sd":15.545738966031818}]},"primaryOutcomes":[{"measure":"Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)","timeFrame":"From Baseline to Week 24"}]},{"nctId":"NCT02584504","title":"Efficacy and Safety of Alirocumab in Patients With Hypercholesterolemia Not Adequately Controlled With Non-statin Lipid Modifying Therapy or the Lowest Strength of Statin","status":"COMPLETED","enrollment":163,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Percent Change From Baseline in Calculated LDL-C at Week 12- Intent to Treat (ITT) Analysis","groups":[{"title":"Alirocumab 150 mg Q4W","n":54,"events":null,"mean":-43.8,"sd":16.166632302368978},{"title":"Alirocumab 150 mg Q2W","n":53,"events":null,"mean":-70.1,"sd":16.74425274534519},{"title":"Placebo Q2W","n":56,"events":null,"mean":-4.3,"sd":16.463292501805345}]},"primaryOutcomes":[{"measure":"Percent Change From Baseline in Calculated LDL-C at Week 12- Intent to Treat (ITT) Analysis","timeFrame":"From Baseline to Week 12"}]},{"nctId":"NCT01507831","title":"Long-term Safety and Tolerability of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in High Cardiovascular Risk Patients With Hypercholesterolemia (ODYSSEY Long Term)","status":"COMPLETED","enrollment":2341,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Percentage of Participants Who Experienced Adverse Events (AEs)","groups":[{"title":"Placebo Q2W","n":788,"events":82.5,"mean":null,"sd":null},{"title":"Alirocumab 150 mg Q2W","n":1550,"events":81,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Percentage of Participants Who Experienced Adverse Events (AEs)","timeFrame":"Up to 10 weeks after last study drug administration (maximum of 86 weeks)"}]},{"nctId":"NCT02984982","title":"Evaluation of Effect of Alirocumab on Coronary Atheroma Volume in Japanese Patients Hospitalized for Acute Coronary Syndrome With Hypercholesterolemia","status":"COMPLETED","enrollment":206,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"continuous","title":"Percent Change From Baseline in Normalized Total Atheroma Volume (TAV) at Week 36","groups":[{"title":"Standard of Care","n":89,"events":null,"mean":-3.14,"sd":9.150961698094905},{"title":"Alirocumab","n":93,"events":null,"mean":-4.79,"sd":9.161468222943308}]},"primaryOutcomes":[{"measure":"Percent Change From Baseline in Normalized Total Atheroma Volume (TAV) at Week 36","timeFrame":"Baseline, Week 36"}]},{"nctId":"NCT01764633","title":"Further Cardiovascular Outcomes Research With PCSK9 Inhibition in Subjects With Elevated Risk","status":"COMPLETED","enrollment":27564,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"binary","title":"Time to Cardiovascular Death, Myocardial Infarction, Hospitalization for Unstable Angina, Stroke, or Coronary Revascularization","groups":[{"title":"Placebo","n":13780,"events":3.11,"mean":null,"sd":null},{"title":"Evolocumab","n":13784,"events":2.74,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time to Cardiovascular Death, Myocardial Infarction, Hospitalization for Unstable Angina, Stroke, or Coronary Revascularization","timeFrame":"Events that occurred from randomization to the last confirmed survival status date; the median duration of follow-up was 26 months. KM estimates at 6, 12, 18, 24, 30 and 36 months are reported."}]},{"nctId":"NCT02207634","title":"Evaluating PCSK9 Binding antiBody Influence oN coGnitive HeAlth in High cardiovascUlar Risk Subjects","status":"COMPLETED","enrollment":1974,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Mean Change From Baseline in Spatial Working Memory Strategy Index of Executive Function (6-8 Boxes) Z Score","groups":[{"title":"Placebo","n":616,"events":null,"mean":0.1206,"sd":0.8496827567816189},{"title":"Evolocumab","n":586,"events":null,"mean":0.1134,"sd":0.84664275392877}]},"primaryOutcomes":[{"measure":"Mean Change From Baseline in Spatial Working Memory Strategy Index of Executive Function (6-8 Boxes) Z Score","timeFrame":"Assessments were conducted at Baseline and at weeks 24, 48, 96, 144 and end of study visit (median time on study was 19.4 months)."}]},{"nctId":"NCT01663402","title":"ODYSSEY Outcomes: Evaluation of Cardiovascular Outcomes After an Acute Coronary Syndrome During Treatment With Alirocumab","status":"COMPLETED","enrollment":18924,"documentsCount":2,"hasDemographics":true,"outcome":{"type":"binary","title":"Time to First Occurrence of Major Adverse Cardiovascular Event (MACE); Percentage of Observed Participants With Outcome Measure Events During the Study","groups":[{"title":"Placebo","n":9462,"events":11.1,"mean":null,"sd":null},{"title":"Alirocumab 75 mg Q2W/Up to 150 mg Q2W","n":9462,"events":9.5,"mean":null,"sd":null}]},"primaryOutcomes":[{"measure":"Time to First Occurrence of Major Adverse Cardiovascular Event (MACE); Percentage of Observed Participants With Outcome Measure Events During the Study","timeFrame":"From randomization up to 64 months"}]},{"nctId":"NCT01623115","title":"Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia Not Adequately Controlled With Their Lipid-Modifying Therapy","status":"COMPLETED","enrollment":486,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT) Analysis","groups":[{"title":"Placebo","n":163,"events":null,"mean":9.1,"sd":28.08771973656815},{"title":"Alirocumab 75 mg/Up to 150 mg Q2W","n":322,"events":null,"mean":-48.8,"sd":28.71097351188218}]},"primaryOutcomes":[{"measure":"Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT) Analysis","timeFrame":"From Baseline to Week 52"}]},{"nctId":"NCT01617655","title":"Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia (ODYSSEY HIGH FH)","status":"COMPLETED","enrollment":107,"documentsCount":0,"hasDemographics":true,"outcome":{"type":"continuous","title":"Percent Change From Baseline in Calculated LDL-C at Week 24 - ITT Analysis","groups":[{"title":"Placebo Q2W","n":35,"events":null,"mean":-6.6,"sd":28.98879093718812},{"title":"Alirocumab 150 mg Q2W","n":71,"events":null,"mean":-45.7,"sd":29.491524206117255}]},"primaryOutcomes":[{"measure":"Percent Change From Baseline in Calculated LDL-C at Week 24 - ITT Analysis","timeFrame":"From Baseline to Week 52"}]}]};
+  const context = {"source":"ctgov-portfolio-generator","topicId":"pcsk9-ascvd","label":"PCSK9 Inhibition in Atherosclerotic Cardiovascular Disease","query":"(\"cardiovascular disease\" OR \"acute coronary syndrome\" OR coronary) AND (evolocumab OR alirocumab OR inclisiran OR PCSK9) AND (\"FOURIER\" OR \"ODYSSEY\" OR \"EVOPACS\" OR \"PACMAN-AMI\")","generatedAt":"2026-04-05T13:16:46.754Z","includedCount":11,"excludedCount":8,"totalEnrollment":53017,"demographicsCoverage":11,"documentCoverage":3,"analysisEligibleCount":10,"comparisonReadyStudyCount":10,"comparisonCount":13,"comparisons":[{"studyId":"NCT02023879","title":"Phase III Study To Evaluate Alirocumab in Patients With Hypercholesterolemia Not Treated With a Statin (ODYSSEY CHOICE II)","t1":"Alirocumab 75 mg Q2W/Up to 150 mg Q2W (Calibrator)","t2":"Placebo Q2W","measure":"MD","effect":-58.2,"se":3.624913792078372,"n1":115,"n0":28.5,"totalN":143.5,"sampleSize":143.5,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"continuous"},{"studyId":"NCT02023879","title":"Phase III Study To Evaluate Alirocumab in Patients With Hypercholesterolemia Not Treated With a Statin (ODYSSEY CHOICE II)","t1":"Alirocumab 150 mg Q4W/Up to 150 mg Q2W","t2":"Placebo Q2W","measure":"MD","effect":-56.400000000000006,"se":3.983716857408418,"n1":58,"n0":28.5,"totalN":86.5,"sampleSize":86.5,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"continuous"},{"studyId":"NCT01617655","title":"Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia (ODYSSEY HIGH FH)","t1":"Alirocumab 150 mg Q2W","t2":"Placebo Q2W","measure":"MD","effect":-39.1,"se":6.021627686929839,"n1":71,"n0":35,"totalN":106,"sampleSize":106,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT01623115","title":"Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia Not Adequately Controlled With Their Lipid-Modifying Therapy","t1":"Alirocumab 75 mg/Up to 150 mg Q2W","t2":"Placebo","measure":"MD","effect":-57.9,"se":2.7202941017470885,"n1":322,"n0":163,"totalN":485,"sampleSize":485,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT02984982","title":"Evaluation of Effect of Alirocumab on Coronary Atheroma Volume in Japanese Patients Hospitalized for Acute Coronary Syndrome With Hypercholesterolemia","t1":"Alirocumab","t2":"Standard of Care","measure":"MD","effect":-1.65,"se":1.3577186748365804,"n1":93,"n0":89,"totalN":182,"sampleSize":182,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT01507831","title":"Long-term Safety and Tolerability of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in High Cardiovascular Risk Patients With Hypercholesterolemia (ODYSSEY Long Term)","t1":"Alirocumab 150 mg Q2W","t2":"Placebo Q2W","measure":"logRR","effect":-0.01779713591695199,"se":0.02050470821770158,"n1":1550,"n0":788,"totalN":2338,"sampleSize":2338,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"proportion"},{"studyId":"NCT02584504","title":"Efficacy and Safety of Alirocumab in Patients With Hypercholesterolemia Not Adequately Controlled With Non-statin Lipid Modifying Therapy or the Lowest Strength of Statin","t1":"Alirocumab 150 mg Q4W","t2":"Placebo Q2W","measure":"MD","effect":-39.5,"se":3.8105117766515306,"n1":54,"n0":28,"totalN":82,"sampleSize":82,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"continuous"},{"studyId":"NCT02584504","title":"Efficacy and Safety of Alirocumab in Patients With Hypercholesterolemia Not Adequately Controlled With Non-statin Lipid Modifying Therapy or the Lowest Strength of Statin","t1":"Alirocumab 150 mg Q2W","t2":"Placebo Q2W","measure":"MD","effect":-65.8,"se":3.869108424430621,"n1":53,"n0":28,"totalN":81,"sampleSize":81,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"continuous"},{"studyId":"NCT01926782","title":"Study to Evaluate the Efficacy and Safety of an Every Four Weeks Treatment Regimen of Alirocumab (REGN727/ SAR236553) in Patients With Primary Hypercholesterolemia (ODYSSEY CHOICE 1)","t1":"Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin","t2":"Placebo Q2W Without Concomitant Statin","measure":"MD","effect":-49.900000000000006,"se":5.316954015223378,"n1":37,"n0":35.5,"totalN":72.5,"sampleSize":72.5,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"continuous"},{"studyId":"NCT01926782","title":"Study to Evaluate the Efficacy and Safety of an Every Four Weeks Treatment Regimen of Alirocumab (REGN727/ SAR236553) in Patients With Primary Hypercholesterolemia (ODYSSEY CHOICE 1)","t1":"Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin","t2":"Placebo Q2W Without Concomitant Statin","measure":"MD","effect":-52.400000000000006,"se":4.264973622427225,"n1":144,"n0":35.5,"totalN":179.5,"sampleSize":179.5,"comparisonStrategy":"split-shared-comparator","sharedComparatorSplit":true,"outcomeMetricKind":"continuous"},{"studyId":"NCT02107898","title":"Efficacy and Safety Evaluation of Alirocumab in Patients With Heterozygous Familial Hypercholesterolemia or High Cardiovascular Risk Patients With Hypercholesterolemia on Lipid Modifying Therapy (ODYSSEY JAPAN)","t1":"Alirocumab 75 mg/Up to 150 mg Q2W","t2":"Placebo Q2W","measure":"MD","effect":-64.1,"se":2.2203603311174516,"n1":143,"n0":72,"totalN":215,"sampleSize":215,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT01663402","title":"ODYSSEY Outcomes: Evaluation of Cardiovascular Outcomes After an Acute Coronary Syndrome During Treatment With Alirocumab","t1":"Alirocumab 75 mg Q2W/Up to 150 mg Q2W","t2":"Placebo","measure":"MD","effect":-60.199999999999996,"se":0.4242640687119285,"n1":8602,"n0":8750,"totalN":17352,"sampleSize":17352,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"},{"studyId":"NCT02207634","title":"Evaluating PCSK9 Binding antiBody Influence oN coGnitive HeAlth in High cardiovascUlar Risk Subjects","t1":"Evolocumab","t2":"Placebo","measure":"MD","effect":-0.007199999999999998,"se":0.04894107887423844,"n1":586,"n0":616,"totalN":1202,"sampleSize":1202,"comparisonStrategy":"direct","sharedComparatorSplit":false,"outcomeMetricKind":"continuous"}],"includedStudies":[{"nctId":"NCT02023879","title":"Phase III Study To Evaluate Alirocumab in Patients With Hypercholesterolemia Not Treated With a Statin (ODYSSEY CHOICE II)","status":"COMPLETED","enrollment":233,"documentsCount":0,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)","unitOfMeasure":"percent change","paramType":"LEAST_SQUARES_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Placebo Q2W","n":57,"events":null,"mean":4.7,"sd":17.364619201122725,"rawValue":4.7,"rawUnit":"percent change","displayPercent":null,"derivation":null},{"title":"Alirocumab 75 mg Q2W/Up to 150 mg Q2W (Calibrator)","n":115,"events":null,"mean":-53.5,"sd":17.158088471621774,"rawValue":-53.5,"rawUnit":"percent change","displayPercent":null,"derivation":null},{"title":"Alirocumab 150 mg Q4W/Up to 150 mg Q2W","n":58,"events":null,"mean":-51.7,"sd":17.51627814348699,"rawValue":-51.7,"rawUnit":"percent change","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)","timeFrame":"From Baseline to Week 24"}]},{"nctId":"NCT01617655","title":"Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia (ODYSSEY HIGH FH)","status":"COMPLETED","enrollment":107,"documentsCount":0,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Percent Change From Baseline in Calculated LDL-C at Week 24 - ITT Analysis","unitOfMeasure":"percent change","paramType":"LEAST_SQUARES_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Placebo Q2W","n":35,"events":null,"mean":-6.6,"sd":28.98879093718812,"rawValue":-6.6,"rawUnit":"percent change","displayPercent":null,"derivation":null},{"title":"Alirocumab 150 mg Q2W","n":71,"events":null,"mean":-45.7,"sd":29.491524206117255,"rawValue":-45.7,"rawUnit":"percent change","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Percent Change From Baseline in Calculated LDL-C at Week 24 - ITT Analysis","timeFrame":"From Baseline to Week 52"}]},{"nctId":"NCT01623115","title":"Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia Not Adequately Controlled With Their Lipid-Modifying Therapy","status":"COMPLETED","enrollment":486,"documentsCount":0,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT) Analysis","unitOfMeasure":"percent change","paramType":"LEAST_SQUARES_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Placebo","n":163,"events":null,"mean":9.1,"sd":28.08771973656815,"rawValue":9.1,"rawUnit":"percent change","displayPercent":null,"derivation":null},{"title":"Alirocumab 75 mg/Up to 150 mg Q2W","n":322,"events":null,"mean":-48.8,"sd":28.71097351188218,"rawValue":-48.8,"rawUnit":"percent change","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT) Analysis","timeFrame":"From Baseline to Week 52"}]},{"nctId":"NCT02984982","title":"Evaluation of Effect of Alirocumab on Coronary Atheroma Volume in Japanese Patients Hospitalized for Acute Coronary Syndrome With Hypercholesterolemia","status":"COMPLETED","enrollment":206,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Percent Change From Baseline in Normalized Total Atheroma Volume (TAV) at Week 36","unitOfMeasure":"percent change","paramType":"LEAST_SQUARES_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Standard of Care","n":89,"events":null,"mean":-3.14,"sd":9.150961698094905,"rawValue":-3.14,"rawUnit":"percent change","displayPercent":null,"derivation":null},{"title":"Alirocumab","n":93,"events":null,"mean":-4.79,"sd":9.161468222943308,"rawValue":-4.79,"rawUnit":"percent change","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Percent Change From Baseline in Normalized Total Atheroma Volume (TAV) at Week 36","timeFrame":"Baseline, Week 36"}]},{"nctId":"NCT01507831","title":"Long-term Safety and Tolerability of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in High Cardiovascular Risk Patients With Hypercholesterolemia (ODYSSEY Long Term)","status":"COMPLETED","enrollment":2341,"documentsCount":0,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"binary","title":"Percentage of Participants Who Experienced Adverse Events (AEs)","unitOfMeasure":"percentage of participants","paramType":"NUMBER","metricKind":"proportion","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Placebo Q2W","n":788,"events":650,"mean":null,"sd":null,"rawValue":82.5,"rawUnit":"percentage of participants","displayPercent":82.5,"derivation":"reconstructed_from_ctgov_percent"},{"title":"Alirocumab 150 mg Q2W","n":1550,"events":1256,"mean":null,"sd":null,"rawValue":81,"rawUnit":"percentage of participants","displayPercent":81,"derivation":"reconstructed_from_ctgov_percent"}]},"primaryOutcomes":[{"measure":"Percentage of Participants Who Experienced Adverse Events (AEs)","timeFrame":"Up to 10 weeks after last study drug administration (maximum of 86 weeks)"}]},{"nctId":"NCT02584504","title":"Efficacy and Safety of Alirocumab in Patients With Hypercholesterolemia Not Adequately Controlled With Non-statin Lipid Modifying Therapy or the Lowest Strength of Statin","status":"COMPLETED","enrollment":163,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Percent Change From Baseline in Calculated LDL-C at Week 12- Intent to Treat (ITT) Analysis","unitOfMeasure":"percent change","paramType":"LEAST_SQUARES_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Alirocumab 150 mg Q4W","n":54,"events":null,"mean":-43.8,"sd":16.166632302368978,"rawValue":-43.8,"rawUnit":"percent change","displayPercent":null,"derivation":null},{"title":"Alirocumab 150 mg Q2W","n":53,"events":null,"mean":-70.1,"sd":16.74425274534519,"rawValue":-70.1,"rawUnit":"percent change","displayPercent":null,"derivation":null},{"title":"Placebo Q2W","n":56,"events":null,"mean":-4.3,"sd":16.463292501805345,"rawValue":-4.3,"rawUnit":"percent change","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Percent Change From Baseline in Calculated LDL-C at Week 12- Intent to Treat (ITT) Analysis","timeFrame":"From Baseline to Week 12"}]},{"nctId":"NCT01764633","title":"Further Cardiovascular Outcomes Research With PCSK9 Inhibition in Subjects With Elevated Risk","status":"COMPLETED","enrollment":27564,"documentsCount":0,"hasDemographics":true,"analysisEligible":false,"analysisReason":"ctgov_metric_recorded_as_rate_or_time_to_event_estimate","outcome":{"type":"recorded","title":"Time to Cardiovascular Death, Myocardial Infarction, Hospitalization for Unstable Angina, Stroke, or Coronary Revascularization","unitOfMeasure":"percentage of participants","paramType":"NUMBER","metricKind":"rate","analysisEligible":false,"analysisReason":"ctgov_metric_recorded_as_rate_or_time_to_event_estimate","groups":[{"title":"Placebo","n":13276,"events":null,"mean":null,"sd":null,"rawValue":3.11,"rawUnit":"percentage of participants","displayPercent":null,"derivation":null},{"title":"Evolocumab","n":13349,"events":null,"mean":null,"sd":null,"rawValue":2.74,"rawUnit":"percentage of participants","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Time to Cardiovascular Death, Myocardial Infarction, Hospitalization for Unstable Angina, Stroke, or Coronary Revascularization","timeFrame":"Events that occurred from randomization to the last confirmed survival status date; the median duration of follow-up was 26 months. KM estimates at 6, 12, 18, 24, 30 and 36 months are reported."}]},{"nctId":"NCT01926782","title":"Study to Evaluate the Efficacy and Safety of an Every Four Weeks Treatment Regimen of Alirocumab (REGN727/ SAR236553) in Patients With Primary Hypercholesterolemia (ODYSSEY CHOICE 1)","status":"COMPLETED","enrollment":803,"documentsCount":0,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Percent Change From Baseline in Calculated LDL-C in Participants Not Receiving Concomitant Statin Therapy - ITT Analysis","unitOfMeasure":"percent change","paramType":"LEAST_SQUARES_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Placebo Q2W Without Concomitant Statin","n":71,"events":null,"mean":-0.3,"sd":22.75060438757617,"rawValue":-0.3,"rawUnit":"percent change","displayPercent":null,"derivation":null},{"title":"Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin","n":37,"events":null,"mean":-50.2,"sd":22.506221362103414,"rawValue":-50.2,"rawUnit":"percent change","displayPercent":null,"derivation":null},{"title":"Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin","n":144,"events":null,"mean":-52.7,"sd":22.799999999999997,"rawValue":-52.7,"rawUnit":"percent change","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Percent Change From Baseline in Calculated LDL-C in Participants Not Receiving Concomitant Statin Therapy - ITT Analysis","timeFrame":"From Baseline to Week 24"},{"measure":"Percent Change From Baseline in Calculated LDL-C in Participants Receiving Concomitant Statin Therapy - Intent-to-Treat (ITT Analysis)","timeFrame":"From Baseline to Week 24"}]},{"nctId":"NCT02107898","title":"Efficacy and Safety Evaluation of Alirocumab in Patients With Heterozygous Familial Hypercholesterolemia or High Cardiovascular Risk Patients With Hypercholesterolemia on Lipid Modifying Therapy (ODYSSEY JAPAN)","status":"COMPLETED","enrollment":216,"documentsCount":0,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)","unitOfMeasure":"percent change","paramType":"LEAST_SQUARES_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Placebo Q2W","n":72,"events":null,"mean":1.6,"sd":15.273506473629425,"rawValue":1.6,"rawUnit":"percent change","displayPercent":null,"derivation":null},{"title":"Alirocumab 75 mg/Up to 150 mg Q2W","n":143,"events":null,"mean":-62.5,"sd":15.545738966031818,"rawValue":-62.5,"rawUnit":"percent change","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)","timeFrame":"From Baseline to Week 24"}]},{"nctId":"NCT01663402","title":"ODYSSEY Outcomes: Evaluation of Cardiovascular Outcomes After an Acute Coronary Syndrome During Treatment With Alirocumab","status":"COMPLETED","enrollment":18924,"documentsCount":2,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Percent Change From Baseline in Calculated LDL-C at Months 4, 12, and 48: ITT Analysis","unitOfMeasure":"Percent change","paramType":"LEAST_SQUARES_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Placebo","n":8750,"events":null,"mean":4.4,"sd":28.06243040080456,"rawValue":4.4,"rawUnit":"Percent change","displayPercent":null,"derivation":null},{"title":"Alirocumab 75 mg Q2W/Up to 150 mg Q2W","n":8602,"events":null,"mean":-55.8,"sd":27.824090281624663,"rawValue":-55.8,"rawUnit":"Percent change","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Time to First Occurrence of Major Adverse Cardiovascular Event (MACE); Percentage of Observed Participants With Outcome Measure Events During the Study","timeFrame":"From randomization up to 64 months"}]},{"nctId":"NCT02207634","title":"Evaluating PCSK9 Binding antiBody Influence oN coGnitive HeAlth in High cardiovascUlar Risk Subjects","status":"COMPLETED","enrollment":1974,"documentsCount":0,"hasDemographics":true,"analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","outcome":{"type":"continuous","title":"Mean Change From Baseline in Spatial Working Memory Strategy Index of Executive Function (6-8 Boxes) Z Score","unitOfMeasure":"Z score","paramType":"LEAST_SQUARES_MEAN","metricKind":"continuous","analysisEligible":true,"analysisReason":"ctgov_numeric_contrast_ready","groups":[{"title":"Placebo","n":616,"events":null,"mean":0.1206,"sd":0.8496827567816189,"rawValue":0.1206,"rawUnit":"Z score","displayPercent":null,"derivation":null},{"title":"Evolocumab","n":586,"events":null,"mean":0.1134,"sd":0.84664275392877,"rawValue":0.1134,"rawUnit":"Z score","displayPercent":null,"derivation":null}]},"primaryOutcomes":[{"measure":"Mean Change From Baseline in Spatial Working Memory Strategy Index of Executive Function (6-8 Boxes) Z Score","timeFrame":"Assessments were conducted at Baseline and at weeks 24, 48, 96, 144 and end of study visit (median time on study was 19.4 months)."}]}]};
   if (!iframe || !context) return;
   const sendContext = () => {
     if (!iframe.contentWindow) return;
@@ -652,7 +663,7 @@
       <main class="layout">
         <section class="panel topics">
           <div class="panel__header">
-            <h2 id="topicPanelTitle">CT.gov-validated topic (11 eligible RCTs in snapshot)</h2>
+            <h2 id="topicPanelTitle">CT.gov completeness-screened topic (11 eligible RCTs in snapshot)</h2>
             <div class="topic-stats">
               <span id="topicCount">0</span> topics -
               <span id="trialCount">0</span> trials
@@ -791,7 +802,7 @@
           <div class="dataset-filters">
             <label>
               Source:
-              <select id="datasetSourceFilter">
+              <select aria-label="Source" id="datasetSourceFilter">
                 <option value="all">All Sources</option>
                 <option value="metafor">metafor</option>
                 <option value="meta">meta</option>
@@ -802,7 +813,7 @@
             </label>
             <label>
               Type:
-              <select id="datasetTypeFilter">
+              <select aria-label="Type" id="datasetTypeFilter">
                 <option value="all">All Types</option>
                 <option value="pairwise">Pairwise</option>
                 <option value="network">Network</option>
@@ -810,16 +821,16 @@
                 <option value="continuous">Continuous</option>
               </select>
             </label>
-            <label>
+            <label for="datasetSearch">
               Relevance:
-              <select id="datasetRelevanceFilter">
+              <select aria-label="Relevance" id="datasetRelevanceFilter">
                 <option value="all">All</option>
                 <option value="acs">ACS-specific</option>
                 <option value="cardiovascular">Cardiovascular</option>
                 <option value="classic">Classic examples</option>
               </select>
             </label>
-            <input type="text" id="datasetSearch" placeholder="Search datasets..." />
+            <input type="text" id="datasetSearch" aria-label="Search datasets..." placeholder="Search datasets..." />
           </div>
           <div id="datasetList" class="dataset-list"></div>
           <div id="datasetPreview" class="dataset-preview hidden">
@@ -832,11 +843,11 @@
         </div>
         <div class="modal-footer">
           <div class="import-options">
-            <label>
-              <input type="checkbox" id="createTopicCheck" checked />
+            <label for="customTopicName">
+              <input type="checkbox" id="createTopicCheck" checked / aria-label="Create as new topic">
               Create as new topic
             </label>
-            <input type="text" id="customTopicName" placeholder="Custom topic name (optional)" />
+            <input type="text" id="customTopicName" aria-label="Custom topic name (optional)" placeholder="Custom topic name (optional)" />
           </div>
           <button id="importDatasetConfirmBtn" class="btn btn--primary" disabled>Import Selected Dataset</button>
         </div>
@@ -856,11 +867,11 @@
             <div class="form-row">
               <label>
                 Study Name/ID *
-                <input type="text" id="entryStudyName" placeholder="e.g., COMPLETE 2019" required />
+                <input type="text" aria-label="Study Name/ID *" id="entryStudyName" aria-label="e.g., COMPLETE 2019" placeholder="e.g., COMPLETE 2019" required />
               </label>
               <label>
                 Year
-                <input type="number" id="entryStudyYear" placeholder="2019" min="1900" max="2100" />
+                <input type="number" aria-label="Year" id="entryStudyYear" aria-label="2019" placeholder="2019" min="1900" max="2100" />
               </label>
             </div>
           </div>
@@ -869,13 +880,13 @@
             <h4>Outcome Type</h4>
             <div class="form-row">
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="binary" checked /> Binary (events/n)
+                <input type="radio" name="outcomeType" value="binary" checked / aria-label="Binary (events/n)"> Binary (events/n)
               </label>
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="continuous" /> Continuous (mean/SD/n)
+                <input type="radio" name="outcomeType" value="continuous" / aria-label="Continuous (mean/SD/n)"> Continuous (mean/SD/n)
               </label>
               <label class="radio-label">
-                <input type="radio" name="outcomeType" value="precomputed" /> Pre-computed (HR/OR/RR with CI)
+                <input type="radio" name="outcomeType" value="precomputed" / aria-label="Pre-computed (HR/OR/RR with CI)"> Pre-computed (HR/OR/RR with CI)
               </label>
             </div>
           </div>
@@ -885,29 +896,29 @@
             <div class="form-row">
               <label>
                 Treatment Arm Label
-                <input type="text" id="entryTreat1Label" placeholder="e.g., Complete revasc" />
+                <input type="text" aria-label="Treatment Arm Label" id="entryTreat1Label" aria-label="e.g., Complete revasc" placeholder="e.g., Complete revasc" />
               </label>
               <label>
                 Events
-                <input type="number" id="entryTreat1Events" min="0" />
+                <input type="number" aria-label="Events" id="entryTreat1Events" min="0" />
               </label>
               <label>
                 Total N
-                <input type="number" id="entryTreat1N" min="1" />
+                <input type="number" aria-label="Total N" id="entryTreat1N" min="1" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Control Arm Label
-                <input type="text" id="entryTreat2Label" placeholder="e.g., Culprit-only" />
+                <input type="text" aria-label="Control Arm Label" id="entryTreat2Label" aria-label="e.g., Culprit-only" placeholder="e.g., Culprit-only" />
               </label>
               <label>
                 Events
-                <input type="number" id="entryTreat2Events" min="0" />
+                <input type="number" aria-label="Events" id="entryTreat2Events" min="0" />
               </label>
               <label>
                 Total N
-                <input type="number" id="entryTreat2N" min="1" />
+                <input type="number" aria-label="Total N" id="entryTreat2N" min="1" />
               </label>
             </div>
           </div>
@@ -917,37 +928,37 @@
             <div class="form-row">
               <label>
                 Treatment Arm Label
-                <input type="text" id="entryContTreat1Label" placeholder="e.g., Intervention" />
+                <input type="text" aria-label="Treatment Arm Label" id="entryContTreat1Label" aria-label="e.g., Intervention" placeholder="e.g., Intervention" />
               </label>
               <label>
                 Mean
-                <input type="number" id="entryContTreat1Mean" step="any" />
+                <input type="number" aria-label="Mean" id="entryContTreat1Mean" step="any" />
               </label>
               <label>
                 SD
-                <input type="number" id="entryContTreat1SD" step="any" min="0" />
+                <input type="number" aria-label="SD" id="entryContTreat1SD" step="any" min="0" />
               </label>
               <label>
                 N
-                <input type="number" id="entryContTreat1N" min="1" />
+                <input type="number" aria-label="N" id="entryContTreat1N" min="1" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Control Arm Label
-                <input type="text" id="entryContTreat2Label" placeholder="e.g., Control" />
+                <input type="text" aria-label="Control Arm Label" id="entryContTreat2Label" aria-label="e.g., Control" placeholder="e.g., Control" />
               </label>
               <label>
                 Mean
-                <input type="number" id="entryContTreat2Mean" step="any" />
+                <input type="number" aria-label="Mean" id="entryContTreat2Mean" step="any" />
               </label>
               <label>
                 SD
-                <input type="number" id="entryContTreat2SD" step="any" min="0" />
+                <input type="number" aria-label="SD" id="entryContTreat2SD" step="any" min="0" />
               </label>
               <label>
                 N
-                <input type="number" id="entryContTreat2N" min="1" />
+                <input type="number" aria-label="N" id="entryContTreat2N" min="1" />
               </label>
             </div>
           </div>
@@ -957,7 +968,7 @@
             <div class="form-row">
               <label>
                 Effect Measure
-                <select id="entryEffectMeasure">
+                <select aria-label="Effect Measure" id="entryEffectMeasure">
                   <option value="HR">Hazard Ratio (HR)</option>
                   <option value="OR">Odds Ratio (OR)</option>
                   <option value="RR">Risk Ratio (RR)</option>
@@ -967,27 +978,27 @@
               </label>
               <label>
                 Point Estimate
-                <input type="number" id="entryEffectValue" step="any" placeholder="e.g., 0.74" />
+                <input type="number" aria-label="Point Estimate" id="entryEffectValue" step="any" aria-label="e.g., 0.74" placeholder="e.g., 0.74" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 95% CI Lower
-                <input type="number" id="entryCILower" step="any" />
+                <input type="number" aria-label="95% CI Lower" id="entryCILower" step="any" />
               </label>
               <label>
                 95% CI Upper
-                <input type="number" id="entryCIUpper" step="any" />
+                <input type="number" aria-label="95% CI Upper" id="entryCIUpper" step="any" />
               </label>
             </div>
             <div class="form-row">
               <label>
                 Treatment Label
-                <input type="text" id="entryPreTreat1" placeholder="e.g., Treatment" />
+                <input type="text" aria-label="Treatment Label" id="entryPreTreat1" aria-label="e.g., Treatment" placeholder="e.g., Treatment" />
               </label>
               <label>
                 Control Label
-                <input type="text" id="entryPreTreat2" placeholder="e.g., Control" />
+                <input type="text" aria-label="Control Label" id="entryPreTreat2" aria-label="e.g., Control" placeholder="e.g., Control" />
               </label>
             </div>
           </div>
@@ -1017,7 +1028,7 @@
           </div>
           <div class="rob-domains">
             <div class="rob-domain-row">
-              <label>
+              <label for="robD1Notes">
                 <span class="domain-label">D1: Randomization process</span>
                 <select id="robD1" class="rob-select">
                   <option value="">Not assessed</option>
@@ -1026,10 +1037,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD1Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD1Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD2Notes">
                 <span class="domain-label">D2: Deviations from intended interventions</span>
                 <select id="robD2" class="rob-select">
                   <option value="">Not assessed</option>
@@ -1038,10 +1049,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD2Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD2Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD3Notes">
                 <span class="domain-label">D3: Missing outcome data</span>
                 <select id="robD3" class="rob-select">
                   <option value="">Not assessed</option>
@@ -1050,10 +1061,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD3Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD3Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD4Notes">
                 <span class="domain-label">D4: Measurement of the outcome</span>
                 <select id="robD4" class="rob-select">
                   <option value="">Not assessed</option>
@@ -1062,10 +1073,10 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD4Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD4Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
             <div class="rob-domain-row">
-              <label>
+              <label for="robD5Notes">
                 <span class="domain-label">D5: Selection of reported result</span>
                 <select id="robD5" class="rob-select">
                   <option value="">Not assessed</option>
@@ -1074,7 +1085,7 @@
                   <option value="high">High risk</option>
                 </select>
               </label>
-              <input type="text" id="robD5Notes" placeholder="Notes (optional)" class="rob-notes" />
+              <input type="text" id="robD5Notes" aria-label="Notes (optional)" placeholder="Notes (optional)" class="rob-notes" />
             </div>
           </div>
           <div class="rob-overall">
@@ -1107,7 +1118,7 @@
           <div class="import-panel active" id="zenodo-panel">
             <label>
               Zenodo DOI or Record ID:
-              <input type="text" id="zenodoDoi" placeholder="10.5281/zenodo.1234567 or 1234567" />
+              <input type="text" aria-label="Zenodo DOI or Record ID" id="zenodoDoi" aria-label="10.5281/zenodo.1234567 or 1234567" placeholder="10.5281/zenodo.1234567 or 1234567" />
             </label>
             <button id="fetchZenodoBtn" class="btn">Fetch Record</button>
             <div id="zenodoResult" class="import-result"></div>
@@ -1115,7 +1126,7 @@
           <div class="import-panel" id="github-panel">
             <label>
               GitHub Raw URL:
-              <input type="text" id="githubUrl" placeholder="https://raw.githubusercontent.com/..." />
+              <input type="text" aria-label="GitHub Raw URL" id="githubUrl" aria-label="https://raw.githubusercontent.com/..." placeholder="https://raw.githubusercontent.com/..." />
             </label>
             <button id="fetchGithubBtn" class="btn">Fetch File</button>
             <div id="githubResult" class="import-result"></div>
@@ -1123,7 +1134,7 @@
           <div class="import-panel" id="csv-panel">
             <label>
               Upload CSV/JSON file:
-              <input type="file" id="csvUpload" accept=".csv,.json" />
+              <input type="file" aria-label="Upload CSV/JSON file" id="csvUpload" accept=".csv,.json" />
             </label>
             <div id="csvResult" class="import-result"></div>
           </div>
@@ -1195,7 +1206,7 @@
             <button id="wizardFinishBtn" class="btn btn--accent hidden">Get Started</button>
           </div>
           <label class="wizard-dismiss">
-            <input type="checkbox" id="dontShowAgain"> Don't show this again
+            <input type="checkbox" id="dontShowAgain" aria-label="Don't show this again"> Don't show this again
           </label>
         </div>
       </div>
@@ -1307,8 +1318,8 @@
     "pageTitle": "PCSK9 Inhibition in Atherosclerotic Cardiovascular Disease | CT.gov Living Meta-Analysis",
     "kicker": "Registry-Native Cardiovascular Evidence",
     "title": "PCSK9 Inhibition in Atherosclerotic Cardiovascular Disease Living Meta-Analysis",
-    "subtitle": "Only randomized comparative trials with posted ClinicalTrials.gov results and extractable numeric outcomes are eligible.",
-    "topicPanelTitle": "CT.gov-validated topic (11 eligible RCTs in snapshot)",
+    "subtitle": "Only topics curated to have full randomized evidence coverage on CT.gov with posted results are eligible for this portfolio.",
+    "topicPanelTitle": "CT.gov completeness-screened topic (11 eligible RCTs in snapshot)",
     "welcomeTitle": "PCSK9 Inhibition in Atherosclerotic Cardiovascular Disease CT.gov review",
     "eligibilityTrialMinimum": 1,
     "analysisStudioName": "PCSK9 Inhibition in Atherosclerotic Cardiovascular Disease CT.gov Living Meta-Analysis Studio",
@@ -1327,39 +1338,16 @@
       "topicId": "pcsk9-ascvd",
       "label": "PCSK9 Inhibition in Atherosclerotic Cardiovascular Disease",
       "query": "(\"cardiovascular disease\" OR \"acute coronary syndrome\" OR coronary) AND (evolocumab OR alirocumab OR inclisiran OR PCSK9) AND (\"FOURIER\" OR \"ODYSSEY\" OR \"EVOPACS\" OR \"PACMAN-AMI\")",
-      "generatedAt": "2026-03-28T18:45:05.888Z",
+      "generatedAt": "2026-04-05T13:16:46.754Z",
       "includedCount": 11,
       "excludedCount": 8,
       "totalEnrollment": 53017,
       "demographicsCoverage": 11,
       "documentCoverage": 3,
+      "analysisEligibleCount": 10,
+      "comparisonReadyStudyCount": 10,
+      "comparisonCount": 13,
       "comparisons": [
-        {
-          "studyId": "NCT01926782",
-          "title": "Study to Evaluate the Efficacy and Safety of an Every Four Weeks Treatment Regimen of Alirocumab (REGN727/ SAR236553) in Patients With Primary Hypercholesterolemia (ODYSSEY CHOICE 1)",
-          "t1": "Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin",
-          "t2": "Placebo Q2W Without Concomitant Statin",
-          "measure": "MD",
-          "effect": -49.900000000000006,
-          "se": 4.580392996239516,
-          "n1": 37,
-          "n0": 71,
-          "totalN": 108,
-          "sampleSize": 108
-        },
-        {
-          "studyId": "NCT01926782",
-          "title": "Study to Evaluate the Efficacy and Safety of an Every Four Weeks Treatment Regimen of Alirocumab (REGN727/ SAR236553) in Patients With Primary Hypercholesterolemia (ODYSSEY CHOICE 1)",
-          "t1": "Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin",
-          "t2": "Placebo Q2W Without Concomitant Statin",
-          "measure": "MD",
-          "effect": -52.400000000000006,
-          "se": 3.301514803843836,
-          "n1": 144,
-          "n0": 71,
-          "totalN": 215,
-          "sampleSize": 215
-        },
         {
           "studyId": "NCT02023879",
           "title": "Phase III Study To Evaluate Alirocumab in Patients With Hypercholesterolemia Not Treated With a Statin (ODYSSEY CHOICE II)",
@@ -1367,11 +1355,14 @@
           "t2": "Placebo Q2W",
           "measure": "MD",
           "effect": -58.2,
-          "se": 2.8017851452243803,
+          "se": 3.624913792078372,
           "n1": 115,
-          "n0": 57,
-          "totalN": 172,
-          "sampleSize": 172
+          "n0": 28.5,
+          "totalN": 143.5,
+          "sampleSize": 143.5,
+          "comparisonStrategy": "split-shared-comparator",
+          "sharedComparatorSplit": true,
+          "outcomeMetricKind": "continuous"
         },
         {
           "studyId": "NCT02023879",
@@ -1380,128 +1371,14 @@
           "t2": "Placebo Q2W",
           "measure": "MD",
           "effect": -56.400000000000006,
-          "se": 3.252691193458119,
+          "se": 3.983716857408418,
           "n1": 58,
-          "n0": 57,
-          "totalN": 115,
-          "sampleSize": 115
-        },
-        {
-          "studyId": "NCT02107898",
-          "title": "Efficacy and Safety Evaluation of Alirocumab in Patients With Heterozygous Familial Hypercholesterolemia or High Cardiovascular Risk Patients With Hypercholesterolemia on Lipid Modifying Therapy (ODYSSEY JAPAN)",
-          "t1": "Alirocumab 75 mg/Up to 150 mg Q2W",
-          "t2": "Placebo Q2W",
-          "measure": "MD",
-          "effect": -64.1,
-          "se": 2.2203603311174516,
-          "n1": 143,
-          "n0": 72,
-          "totalN": 215,
-          "sampleSize": 215
-        },
-        {
-          "studyId": "NCT02584504",
-          "title": "Efficacy and Safety of Alirocumab in Patients With Hypercholesterolemia Not Adequately Controlled With Non-statin Lipid Modifying Therapy or the Lowest Strength of Statin",
-          "t1": "Alirocumab 150 mg Q4W",
-          "t2": "Placebo Q2W",
-          "measure": "MD",
-          "effect": -39.5,
-          "se": 3.1112698372208096,
-          "n1": 54,
-          "n0": 56,
-          "totalN": 110,
-          "sampleSize": 110
-        },
-        {
-          "studyId": "NCT02584504",
-          "title": "Efficacy and Safety of Alirocumab in Patients With Hypercholesterolemia Not Adequately Controlled With Non-statin Lipid Modifying Therapy or the Lowest Strength of Statin",
-          "t1": "Alirocumab 150 mg Q2W",
-          "t2": "Placebo Q2W",
-          "measure": "MD",
-          "effect": -65.8,
-          "se": 3.1827660925679098,
-          "n1": 53,
-          "n0": 56,
-          "totalN": 109,
-          "sampleSize": 109
-        },
-        {
-          "studyId": "NCT01507831",
-          "title": "Long-term Safety and Tolerability of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in High Cardiovascular Risk Patients With Hypercholesterolemia (ODYSSEY Long Term)",
-          "t1": "Alirocumab 150 mg Q2W",
-          "t2": "Placebo Q2W",
-          "measure": "logRR",
-          "effect": -0.6948612587236096,
-          "se": 0.15017554498066685,
-          "n1": 1550,
-          "n0": 788,
-          "totalN": 2338,
-          "sampleSize": 2338
-        },
-        {
-          "studyId": "NCT02984982",
-          "title": "Evaluation of Effect of Alirocumab on Coronary Atheroma Volume in Japanese Patients Hospitalized for Acute Coronary Syndrome With Hypercholesterolemia",
-          "t1": "Alirocumab",
-          "t2": "Standard of Care",
-          "measure": "MD",
-          "effect": -1.65,
-          "se": 1.3577186748365804,
-          "n1": 93,
-          "n0": 89,
-          "totalN": 182,
-          "sampleSize": 182
-        },
-        {
-          "studyId": "NCT01764633",
-          "title": "Further Cardiovascular Outcomes Research With PCSK9 Inhibition in Subjects With Elevated Risk",
-          "t1": "Evolocumab",
-          "t2": "Placebo",
-          "measure": "logRR",
-          "effect": -0.12695503943127973,
-          "se": 0.8284695499459641,
-          "n1": 13784,
-          "n0": 13780,
-          "totalN": 27564,
-          "sampleSize": 27564
-        },
-        {
-          "studyId": "NCT02207634",
-          "title": "Evaluating PCSK9 Binding antiBody Influence oN coGnitive HeAlth in High cardiovascUlar Risk Subjects",
-          "t1": "Evolocumab",
-          "t2": "Placebo",
-          "measure": "MD",
-          "effect": -0.007199999999999998,
-          "se": 0.04894107887423844,
-          "n1": 586,
-          "n0": 616,
-          "totalN": 1202,
-          "sampleSize": 1202
-        },
-        {
-          "studyId": "NCT01663402",
-          "title": "ODYSSEY Outcomes: Evaluation of Cardiovascular Outcomes After an Acute Coronary Syndrome During Treatment With Alirocumab",
-          "t1": "Alirocumab 75 mg Q2W/Up to 150 mg Q2W",
-          "t2": "Placebo",
-          "measure": "logRR",
-          "effect": -0.1556533097117934,
-          "se": 0.441748657249601,
-          "n1": 9462,
-          "n0": 9462,
-          "totalN": 18924,
-          "sampleSize": 18924
-        },
-        {
-          "studyId": "NCT01623115",
-          "title": "Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia Not Adequately Controlled With Their Lipid-Modifying Therapy",
-          "t1": "Alirocumab 75 mg/Up to 150 mg Q2W",
-          "t2": "Placebo",
-          "measure": "MD",
-          "effect": -57.9,
-          "se": 2.7202941017470885,
-          "n1": 322,
-          "n0": 163,
-          "totalN": 485,
-          "sampleSize": 485
+          "n0": 28.5,
+          "totalN": 86.5,
+          "sampleSize": 86.5,
+          "comparisonStrategy": "split-shared-comparator",
+          "sharedComparatorSplit": true,
+          "outcomeMetricKind": "continuous"
         },
         {
           "studyId": "NCT01617655",
@@ -1514,10 +1391,538 @@
           "n1": 71,
           "n0": 35,
           "totalN": 106,
-          "sampleSize": 106
+          "sampleSize": 106,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT01623115",
+          "title": "Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia Not Adequately Controlled With Their Lipid-Modifying Therapy",
+          "t1": "Alirocumab 75 mg/Up to 150 mg Q2W",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": -57.9,
+          "se": 2.7202941017470885,
+          "n1": 322,
+          "n0": 163,
+          "totalN": 485,
+          "sampleSize": 485,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT02984982",
+          "title": "Evaluation of Effect of Alirocumab on Coronary Atheroma Volume in Japanese Patients Hospitalized for Acute Coronary Syndrome With Hypercholesterolemia",
+          "t1": "Alirocumab",
+          "t2": "Standard of Care",
+          "measure": "MD",
+          "effect": -1.65,
+          "se": 1.3577186748365804,
+          "n1": 93,
+          "n0": 89,
+          "totalN": 182,
+          "sampleSize": 182,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT01507831",
+          "title": "Long-term Safety and Tolerability of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in High Cardiovascular Risk Patients With Hypercholesterolemia (ODYSSEY Long Term)",
+          "t1": "Alirocumab 150 mg Q2W",
+          "t2": "Placebo Q2W",
+          "measure": "logRR",
+          "effect": -0.01779713591695199,
+          "se": 0.02050470821770158,
+          "n1": 1550,
+          "n0": 788,
+          "totalN": 2338,
+          "sampleSize": 2338,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "proportion"
+        },
+        {
+          "studyId": "NCT02584504",
+          "title": "Efficacy and Safety of Alirocumab in Patients With Hypercholesterolemia Not Adequately Controlled With Non-statin Lipid Modifying Therapy or the Lowest Strength of Statin",
+          "t1": "Alirocumab 150 mg Q4W",
+          "t2": "Placebo Q2W",
+          "measure": "MD",
+          "effect": -39.5,
+          "se": 3.8105117766515306,
+          "n1": 54,
+          "n0": 28,
+          "totalN": 82,
+          "sampleSize": 82,
+          "comparisonStrategy": "split-shared-comparator",
+          "sharedComparatorSplit": true,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT02584504",
+          "title": "Efficacy and Safety of Alirocumab in Patients With Hypercholesterolemia Not Adequately Controlled With Non-statin Lipid Modifying Therapy or the Lowest Strength of Statin",
+          "t1": "Alirocumab 150 mg Q2W",
+          "t2": "Placebo Q2W",
+          "measure": "MD",
+          "effect": -65.8,
+          "se": 3.869108424430621,
+          "n1": 53,
+          "n0": 28,
+          "totalN": 81,
+          "sampleSize": 81,
+          "comparisonStrategy": "split-shared-comparator",
+          "sharedComparatorSplit": true,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT01926782",
+          "title": "Study to Evaluate the Efficacy and Safety of an Every Four Weeks Treatment Regimen of Alirocumab (REGN727/ SAR236553) in Patients With Primary Hypercholesterolemia (ODYSSEY CHOICE 1)",
+          "t1": "Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin",
+          "t2": "Placebo Q2W Without Concomitant Statin",
+          "measure": "MD",
+          "effect": -49.900000000000006,
+          "se": 5.316954015223378,
+          "n1": 37,
+          "n0": 35.5,
+          "totalN": 72.5,
+          "sampleSize": 72.5,
+          "comparisonStrategy": "split-shared-comparator",
+          "sharedComparatorSplit": true,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT01926782",
+          "title": "Study to Evaluate the Efficacy and Safety of an Every Four Weeks Treatment Regimen of Alirocumab (REGN727/ SAR236553) in Patients With Primary Hypercholesterolemia (ODYSSEY CHOICE 1)",
+          "t1": "Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin",
+          "t2": "Placebo Q2W Without Concomitant Statin",
+          "measure": "MD",
+          "effect": -52.400000000000006,
+          "se": 4.264973622427225,
+          "n1": 144,
+          "n0": 35.5,
+          "totalN": 179.5,
+          "sampleSize": 179.5,
+          "comparisonStrategy": "split-shared-comparator",
+          "sharedComparatorSplit": true,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT02107898",
+          "title": "Efficacy and Safety Evaluation of Alirocumab in Patients With Heterozygous Familial Hypercholesterolemia or High Cardiovascular Risk Patients With Hypercholesterolemia on Lipid Modifying Therapy (ODYSSEY JAPAN)",
+          "t1": "Alirocumab 75 mg/Up to 150 mg Q2W",
+          "t2": "Placebo Q2W",
+          "measure": "MD",
+          "effect": -64.1,
+          "se": 2.2203603311174516,
+          "n1": 143,
+          "n0": 72,
+          "totalN": 215,
+          "sampleSize": 215,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT01663402",
+          "title": "ODYSSEY Outcomes: Evaluation of Cardiovascular Outcomes After an Acute Coronary Syndrome During Treatment With Alirocumab",
+          "t1": "Alirocumab 75 mg Q2W/Up to 150 mg Q2W",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": -60.199999999999996,
+          "se": 0.4242640687119285,
+          "n1": 8602,
+          "n0": 8750,
+          "totalN": 17352,
+          "sampleSize": 17352,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
+        },
+        {
+          "studyId": "NCT02207634",
+          "title": "Evaluating PCSK9 Binding antiBody Influence oN coGnitive HeAlth in High cardiovascUlar Risk Subjects",
+          "t1": "Evolocumab",
+          "t2": "Placebo",
+          "measure": "MD",
+          "effect": -0.007199999999999998,
+          "se": 0.04894107887423844,
+          "n1": 586,
+          "n0": 616,
+          "totalN": 1202,
+          "sampleSize": 1202,
+          "comparisonStrategy": "direct",
+          "sharedComparatorSplit": false,
+          "outcomeMetricKind": "continuous"
         }
       ],
       "includedStudies": [
+        {
+          "nctId": "NCT02023879",
+          "title": "Phase III Study To Evaluate Alirocumab in Patients With Hypercholesterolemia Not Treated With a Statin (ODYSSEY CHOICE II)",
+          "status": "COMPLETED",
+          "enrollment": 233,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "continuous",
+            "title": "Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)",
+            "unitOfMeasure": "percent change",
+            "paramType": "LEAST_SQUARES_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "Placebo Q2W",
+                "n": 57,
+                "events": null,
+                "mean": 4.7,
+                "sd": 17.364619201122725,
+                "rawValue": 4.7,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "Alirocumab 75 mg Q2W/Up to 150 mg Q2W (Calibrator)",
+                "n": 115,
+                "events": null,
+                "mean": -53.5,
+                "sd": 17.158088471621774,
+                "rawValue": -53.5,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "Alirocumab 150 mg Q4W/Up to 150 mg Q2W",
+                "n": 58,
+                "events": null,
+                "mean": -51.7,
+                "sd": 17.51627814348699,
+                "rawValue": -51.7,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)",
+              "timeFrame": "From Baseline to Week 24"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01617655",
+          "title": "Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia (ODYSSEY HIGH FH)",
+          "status": "COMPLETED",
+          "enrollment": 107,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "continuous",
+            "title": "Percent Change From Baseline in Calculated LDL-C at Week 24 - ITT Analysis",
+            "unitOfMeasure": "percent change",
+            "paramType": "LEAST_SQUARES_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "Placebo Q2W",
+                "n": 35,
+                "events": null,
+                "mean": -6.6,
+                "sd": 28.98879093718812,
+                "rawValue": -6.6,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "Alirocumab 150 mg Q2W",
+                "n": 71,
+                "events": null,
+                "mean": -45.7,
+                "sd": 29.491524206117255,
+                "rawValue": -45.7,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Percent Change From Baseline in Calculated LDL-C at Week 24 - ITT Analysis",
+              "timeFrame": "From Baseline to Week 52"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01623115",
+          "title": "Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia Not Adequately Controlled With Their Lipid-Modifying Therapy",
+          "status": "COMPLETED",
+          "enrollment": 486,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "continuous",
+            "title": "Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT) Analysis",
+            "unitOfMeasure": "percent change",
+            "paramType": "LEAST_SQUARES_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "Placebo",
+                "n": 163,
+                "events": null,
+                "mean": 9.1,
+                "sd": 28.08771973656815,
+                "rawValue": 9.1,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "Alirocumab 75 mg/Up to 150 mg Q2W",
+                "n": 322,
+                "events": null,
+                "mean": -48.8,
+                "sd": 28.71097351188218,
+                "rawValue": -48.8,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT) Analysis",
+              "timeFrame": "From Baseline to Week 52"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT02984982",
+          "title": "Evaluation of Effect of Alirocumab on Coronary Atheroma Volume in Japanese Patients Hospitalized for Acute Coronary Syndrome With Hypercholesterolemia",
+          "status": "COMPLETED",
+          "enrollment": 206,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "continuous",
+            "title": "Percent Change From Baseline in Normalized Total Atheroma Volume (TAV) at Week 36",
+            "unitOfMeasure": "percent change",
+            "paramType": "LEAST_SQUARES_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "Standard of Care",
+                "n": 89,
+                "events": null,
+                "mean": -3.14,
+                "sd": 9.150961698094905,
+                "rawValue": -3.14,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "Alirocumab",
+                "n": 93,
+                "events": null,
+                "mean": -4.79,
+                "sd": 9.161468222943308,
+                "rawValue": -4.79,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Percent Change From Baseline in Normalized Total Atheroma Volume (TAV) at Week 36",
+              "timeFrame": "Baseline, Week 36"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01507831",
+          "title": "Long-term Safety and Tolerability of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in High Cardiovascular Risk Patients With Hypercholesterolemia (ODYSSEY Long Term)",
+          "status": "COMPLETED",
+          "enrollment": 2341,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "binary",
+            "title": "Percentage of Participants Who Experienced Adverse Events (AEs)",
+            "unitOfMeasure": "percentage of participants",
+            "paramType": "NUMBER",
+            "metricKind": "proportion",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "Placebo Q2W",
+                "n": 788,
+                "events": 650,
+                "mean": null,
+                "sd": null,
+                "rawValue": 82.5,
+                "rawUnit": "percentage of participants",
+                "displayPercent": 82.5,
+                "derivation": "reconstructed_from_ctgov_percent"
+              },
+              {
+                "title": "Alirocumab 150 mg Q2W",
+                "n": 1550,
+                "events": 1256,
+                "mean": null,
+                "sd": null,
+                "rawValue": 81,
+                "rawUnit": "percentage of participants",
+                "displayPercent": 81,
+                "derivation": "reconstructed_from_ctgov_percent"
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Percentage of Participants Who Experienced Adverse Events (AEs)",
+              "timeFrame": "Up to 10 weeks after last study drug administration (maximum of 86 weeks)"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT02584504",
+          "title": "Efficacy and Safety of Alirocumab in Patients With Hypercholesterolemia Not Adequately Controlled With Non-statin Lipid Modifying Therapy or the Lowest Strength of Statin",
+          "status": "COMPLETED",
+          "enrollment": 163,
+          "documentsCount": 2,
+          "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
+          "outcome": {
+            "type": "continuous",
+            "title": "Percent Change From Baseline in Calculated LDL-C at Week 12- Intent to Treat (ITT) Analysis",
+            "unitOfMeasure": "percent change",
+            "paramType": "LEAST_SQUARES_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
+            "groups": [
+              {
+                "title": "Alirocumab 150 mg Q4W",
+                "n": 54,
+                "events": null,
+                "mean": -43.8,
+                "sd": 16.166632302368978,
+                "rawValue": -43.8,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "Alirocumab 150 mg Q2W",
+                "n": 53,
+                "events": null,
+                "mean": -70.1,
+                "sd": 16.74425274534519,
+                "rawValue": -70.1,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "Placebo Q2W",
+                "n": 56,
+                "events": null,
+                "mean": -4.3,
+                "sd": 16.463292501805345,
+                "rawValue": -4.3,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Percent Change From Baseline in Calculated LDL-C at Week 12- Intent to Treat (ITT) Analysis",
+              "timeFrame": "From Baseline to Week 12"
+            }
+          ]
+        },
+        {
+          "nctId": "NCT01764633",
+          "title": "Further Cardiovascular Outcomes Research With PCSK9 Inhibition in Subjects With Elevated Risk",
+          "status": "COMPLETED",
+          "enrollment": 27564,
+          "documentsCount": 0,
+          "hasDemographics": true,
+          "analysisEligible": false,
+          "analysisReason": "ctgov_metric_recorded_as_rate_or_time_to_event_estimate",
+          "outcome": {
+            "type": "recorded",
+            "title": "Time to Cardiovascular Death, Myocardial Infarction, Hospitalization for Unstable Angina, Stroke, or Coronary Revascularization",
+            "unitOfMeasure": "percentage of participants",
+            "paramType": "NUMBER",
+            "metricKind": "rate",
+            "analysisEligible": false,
+            "analysisReason": "ctgov_metric_recorded_as_rate_or_time_to_event_estimate",
+            "groups": [
+              {
+                "title": "Placebo",
+                "n": 13276,
+                "events": null,
+                "mean": null,
+                "sd": null,
+                "rawValue": 3.11,
+                "rawUnit": "percentage of participants",
+                "displayPercent": null,
+                "derivation": null
+              },
+              {
+                "title": "Evolocumab",
+                "n": 13349,
+                "events": null,
+                "mean": null,
+                "sd": null,
+                "rawValue": 2.74,
+                "rawUnit": "percentage of participants",
+                "displayPercent": null,
+                "derivation": null
+              }
+            ]
+          },
+          "primaryOutcomes": [
+            {
+              "measure": "Time to Cardiovascular Death, Myocardial Infarction, Hospitalization for Unstable Angina, Stroke, or Coronary Revascularization",
+              "timeFrame": "Events that occurred from randomization to the last confirmed survival status date; the median duration of follow-up was 26 months. KM estimates at 6, 12, 18, 24, 30 and 36 months are reported."
+            }
+          ]
+        },
         {
           "nctId": "NCT01926782",
           "title": "Study to Evaluate the Efficacy and Safety of an Every Four Weeks Treatment Regimen of Alirocumab (REGN727/ SAR236553) in Patients With Primary Hypercholesterolemia (ODYSSEY CHOICE 1)",
@@ -1525,30 +1930,49 @@
           "enrollment": 803,
           "documentsCount": 0,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
             "type": "continuous",
             "title": "Percent Change From Baseline in Calculated LDL-C in Participants Not Receiving Concomitant Statin Therapy - ITT Analysis",
+            "unitOfMeasure": "percent change",
+            "paramType": "LEAST_SQUARES_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
                 "title": "Placebo Q2W Without Concomitant Statin",
                 "n": 71,
                 "events": null,
                 "mean": -0.3,
-                "sd": 22.75060438757617
+                "sd": 22.75060438757617,
+                "rawValue": -0.3,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
               },
               {
                 "title": "Alirocumab 75 mg Q2W/Up 150 mg Q2W Without Concomitant Statin",
                 "n": 37,
                 "events": null,
                 "mean": -50.2,
-                "sd": 22.506221362103414
+                "sd": 22.506221362103414,
+                "rawValue": -50.2,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
               },
               {
                 "title": "Alirocumab 300 mg Q4W/Up 150 mg Q2W Without Concomitant Statin",
                 "n": 144,
                 "events": null,
                 "mean": -52.7,
-                "sd": 22.799999999999997
+                "sd": 22.799999999999997,
+                "rawValue": -52.7,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
               }
             ]
           },
@@ -1564,70 +1988,44 @@
           ]
         },
         {
-          "nctId": "NCT02023879",
-          "title": "Phase III Study To Evaluate Alirocumab in Patients With Hypercholesterolemia Not Treated With a Statin (ODYSSEY CHOICE II)",
-          "status": "COMPLETED",
-          "enrollment": 233,
-          "documentsCount": 0,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "continuous",
-            "title": "Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)",
-            "groups": [
-              {
-                "title": "Placebo Q2W",
-                "n": 57,
-                "events": null,
-                "mean": 4.7,
-                "sd": 17.364619201122725
-              },
-              {
-                "title": "Alirocumab 75 mg Q2W/Up to 150 mg Q2W (Calibrator)",
-                "n": 115,
-                "events": null,
-                "mean": -53.5,
-                "sd": 17.158088471621774
-              },
-              {
-                "title": "Alirocumab 150 mg Q4W/Up to 150 mg Q2W",
-                "n": 58,
-                "events": null,
-                "mean": -51.7,
-                "sd": 17.51627814348699
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)",
-              "timeFrame": "From Baseline to Week 24"
-            }
-          ]
-        },
-        {
           "nctId": "NCT02107898",
           "title": "Efficacy and Safety Evaluation of Alirocumab in Patients With Heterozygous Familial Hypercholesterolemia or High Cardiovascular Risk Patients With Hypercholesterolemia on Lipid Modifying Therapy (ODYSSEY JAPAN)",
           "status": "COMPLETED",
           "enrollment": 216,
           "documentsCount": 0,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
             "type": "continuous",
             "title": "Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)",
+            "unitOfMeasure": "percent change",
+            "paramType": "LEAST_SQUARES_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
                 "title": "Placebo Q2W",
                 "n": 72,
                 "events": null,
                 "mean": 1.6,
-                "sd": 15.273506473629425
+                "sd": 15.273506473629425,
+                "rawValue": 1.6,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
               },
               {
                 "title": "Alirocumab 75 mg/Up to 150 mg Q2W",
                 "n": 143,
                 "events": null,
                 "mean": -62.5,
-                "sd": 15.545738966031818
+                "sd": 15.545738966031818,
+                "rawValue": -62.5,
+                "rawUnit": "percent change",
+                "displayPercent": null,
+                "derivation": null
               }
             ]
           },
@@ -1635,183 +2033,6 @@
             {
               "measure": "Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT Analysis)",
               "timeFrame": "From Baseline to Week 24"
-            }
-          ]
-        },
-        {
-          "nctId": "NCT02584504",
-          "title": "Efficacy and Safety of Alirocumab in Patients With Hypercholesterolemia Not Adequately Controlled With Non-statin Lipid Modifying Therapy or the Lowest Strength of Statin",
-          "status": "COMPLETED",
-          "enrollment": 163,
-          "documentsCount": 2,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "continuous",
-            "title": "Percent Change From Baseline in Calculated LDL-C at Week 12- Intent to Treat (ITT) Analysis",
-            "groups": [
-              {
-                "title": "Alirocumab 150 mg Q4W",
-                "n": 54,
-                "events": null,
-                "mean": -43.8,
-                "sd": 16.166632302368978
-              },
-              {
-                "title": "Alirocumab 150 mg Q2W",
-                "n": 53,
-                "events": null,
-                "mean": -70.1,
-                "sd": 16.74425274534519
-              },
-              {
-                "title": "Placebo Q2W",
-                "n": 56,
-                "events": null,
-                "mean": -4.3,
-                "sd": 16.463292501805345
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Percent Change From Baseline in Calculated LDL-C at Week 12- Intent to Treat (ITT) Analysis",
-              "timeFrame": "From Baseline to Week 12"
-            }
-          ]
-        },
-        {
-          "nctId": "NCT01507831",
-          "title": "Long-term Safety and Tolerability of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in High Cardiovascular Risk Patients With Hypercholesterolemia (ODYSSEY Long Term)",
-          "status": "COMPLETED",
-          "enrollment": 2341,
-          "documentsCount": 0,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "binary",
-            "title": "Percentage of Participants Who Experienced Adverse Events (AEs)",
-            "groups": [
-              {
-                "title": "Placebo Q2W",
-                "n": 788,
-                "events": 82.5,
-                "mean": null,
-                "sd": null
-              },
-              {
-                "title": "Alirocumab 150 mg Q2W",
-                "n": 1550,
-                "events": 81,
-                "mean": null,
-                "sd": null
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Percentage of Participants Who Experienced Adverse Events (AEs)",
-              "timeFrame": "Up to 10 weeks after last study drug administration (maximum of 86 weeks)"
-            }
-          ]
-        },
-        {
-          "nctId": "NCT02984982",
-          "title": "Evaluation of Effect of Alirocumab on Coronary Atheroma Volume in Japanese Patients Hospitalized for Acute Coronary Syndrome With Hypercholesterolemia",
-          "status": "COMPLETED",
-          "enrollment": 206,
-          "documentsCount": 2,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "continuous",
-            "title": "Percent Change From Baseline in Normalized Total Atheroma Volume (TAV) at Week 36",
-            "groups": [
-              {
-                "title": "Standard of Care",
-                "n": 89,
-                "events": null,
-                "mean": -3.14,
-                "sd": 9.150961698094905
-              },
-              {
-                "title": "Alirocumab",
-                "n": 93,
-                "events": null,
-                "mean": -4.79,
-                "sd": 9.161468222943308
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Percent Change From Baseline in Normalized Total Atheroma Volume (TAV) at Week 36",
-              "timeFrame": "Baseline, Week 36"
-            }
-          ]
-        },
-        {
-          "nctId": "NCT01764633",
-          "title": "Further Cardiovascular Outcomes Research With PCSK9 Inhibition in Subjects With Elevated Risk",
-          "status": "COMPLETED",
-          "enrollment": 27564,
-          "documentsCount": 0,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "binary",
-            "title": "Time to Cardiovascular Death, Myocardial Infarction, Hospitalization for Unstable Angina, Stroke, or Coronary Revascularization",
-            "groups": [
-              {
-                "title": "Placebo",
-                "n": 13780,
-                "events": 3.11,
-                "mean": null,
-                "sd": null
-              },
-              {
-                "title": "Evolocumab",
-                "n": 13784,
-                "events": 2.74,
-                "mean": null,
-                "sd": null
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Time to Cardiovascular Death, Myocardial Infarction, Hospitalization for Unstable Angina, Stroke, or Coronary Revascularization",
-              "timeFrame": "Events that occurred from randomization to the last confirmed survival status date; the median duration of follow-up was 26 months. KM estimates at 6, 12, 18, 24, 30 and 36 months are reported."
-            }
-          ]
-        },
-        {
-          "nctId": "NCT02207634",
-          "title": "Evaluating PCSK9 Binding antiBody Influence oN coGnitive HeAlth in High cardiovascUlar Risk Subjects",
-          "status": "COMPLETED",
-          "enrollment": 1974,
-          "documentsCount": 0,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "continuous",
-            "title": "Mean Change From Baseline in Spatial Working Memory Strategy Index of Executive Function (6-8 Boxes) Z Score",
-            "groups": [
-              {
-                "title": "Placebo",
-                "n": 616,
-                "events": null,
-                "mean": 0.1206,
-                "sd": 0.8496827567816189
-              },
-              {
-                "title": "Evolocumab",
-                "n": 586,
-                "events": null,
-                "mean": 0.1134,
-                "sd": 0.84664275392877
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Mean Change From Baseline in Spatial Working Memory Strategy Index of Executive Function (6-8 Boxes) Z Score",
-              "timeFrame": "Assessments were conducted at Baseline and at weeks 24, 48, 96, 144 and end of study visit (median time on study was 19.4 months)."
             }
           ]
         },
@@ -1822,23 +2043,38 @@
           "enrollment": 18924,
           "documentsCount": 2,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
-            "type": "binary",
-            "title": "Time to First Occurrence of Major Adverse Cardiovascular Event (MACE); Percentage of Observed Participants With Outcome Measure Events During the Study",
+            "type": "continuous",
+            "title": "Percent Change From Baseline in Calculated LDL-C at Months 4, 12, and 48: ITT Analysis",
+            "unitOfMeasure": "Percent change",
+            "paramType": "LEAST_SQUARES_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
                 "title": "Placebo",
-                "n": 9462,
-                "events": 11.1,
-                "mean": null,
-                "sd": null
+                "n": 8750,
+                "events": null,
+                "mean": 4.4,
+                "sd": 28.06243040080456,
+                "rawValue": 4.4,
+                "rawUnit": "Percent change",
+                "displayPercent": null,
+                "derivation": null
               },
               {
                 "title": "Alirocumab 75 mg Q2W/Up to 150 mg Q2W",
-                "n": 9462,
-                "events": 9.5,
-                "mean": null,
-                "sd": null
+                "n": 8602,
+                "events": null,
+                "mean": -55.8,
+                "sd": 27.824090281624663,
+                "rawValue": -55.8,
+                "rawUnit": "Percent change",
+                "displayPercent": null,
+                "derivation": null
               }
             ]
           },
@@ -1850,70 +2086,51 @@
           ]
         },
         {
-          "nctId": "NCT01623115",
-          "title": "Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia Not Adequately Controlled With Their Lipid-Modifying Therapy",
+          "nctId": "NCT02207634",
+          "title": "Evaluating PCSK9 Binding antiBody Influence oN coGnitive HeAlth in High cardiovascUlar Risk Subjects",
           "status": "COMPLETED",
-          "enrollment": 486,
+          "enrollment": 1974,
           "documentsCount": 0,
           "hasDemographics": true,
+          "analysisEligible": true,
+          "analysisReason": "ctgov_numeric_contrast_ready",
           "outcome": {
             "type": "continuous",
-            "title": "Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT) Analysis",
+            "title": "Mean Change From Baseline in Spatial Working Memory Strategy Index of Executive Function (6-8 Boxes) Z Score",
+            "unitOfMeasure": "Z score",
+            "paramType": "LEAST_SQUARES_MEAN",
+            "metricKind": "continuous",
+            "analysisEligible": true,
+            "analysisReason": "ctgov_numeric_contrast_ready",
             "groups": [
               {
                 "title": "Placebo",
-                "n": 163,
+                "n": 616,
                 "events": null,
-                "mean": 9.1,
-                "sd": 28.08771973656815
+                "mean": 0.1206,
+                "sd": 0.8496827567816189,
+                "rawValue": 0.1206,
+                "rawUnit": "Z score",
+                "displayPercent": null,
+                "derivation": null
               },
               {
-                "title": "Alirocumab 75 mg/Up to 150 mg Q2W",
-                "n": 322,
+                "title": "Evolocumab",
+                "n": 586,
                 "events": null,
-                "mean": -48.8,
-                "sd": 28.71097351188218
+                "mean": 0.1134,
+                "sd": 0.84664275392877,
+                "rawValue": 0.1134,
+                "rawUnit": "Z score",
+                "displayPercent": null,
+                "derivation": null
               }
             ]
           },
           "primaryOutcomes": [
             {
-              "measure": "Percent Change From Baseline in Calculated LDL-C at Week 24 - Intent-to-Treat (ITT) Analysis",
-              "timeFrame": "From Baseline to Week 52"
-            }
-          ]
-        },
-        {
-          "nctId": "NCT01617655",
-          "title": "Efficacy and Safety of Alirocumab (SAR236553/REGN727) Versus Placebo on Top of Lipid-Modifying Therapy in Patients With Heterozygous Familial Hypercholesterolemia (ODYSSEY HIGH FH)",
-          "status": "COMPLETED",
-          "enrollment": 107,
-          "documentsCount": 0,
-          "hasDemographics": true,
-          "outcome": {
-            "type": "continuous",
-            "title": "Percent Change From Baseline in Calculated LDL-C at Week 24 - ITT Analysis",
-            "groups": [
-              {
-                "title": "Placebo Q2W",
-                "n": 35,
-                "events": null,
-                "mean": -6.6,
-                "sd": 28.98879093718812
-              },
-              {
-                "title": "Alirocumab 150 mg Q2W",
-                "n": 71,
-                "events": null,
-                "mean": -45.7,
-                "sd": 29.491524206117255
-              }
-            ]
-          },
-          "primaryOutcomes": [
-            {
-              "measure": "Percent Change From Baseline in Calculated LDL-C at Week 24 - ITT Analysis",
-              "timeFrame": "From Baseline to Week 52"
+              "measure": "Mean Change From Baseline in Spatial Working Memory Strategy Index of Executive Function (6-8 Boxes) Z Score",
+              "timeFrame": "Assessments were conducted at Baseline and at weeks 24, 48, 96, 144 and end of study visit (median time on study was 19.4 months)."
             }
           ]
         }
