@@ -8,10 +8,7 @@ Generated portfolio of CT.gov-native topic reviews backed by the shared ESC livi
 - `scripts/generate-projects.mjs`: emits the project folders and portfolio index
 - `scripts/validate-generated.mjs`: structural validation of generated output
 - `scripts/browser-validate.mjs`: browser-level smoke validation
-- `open_app.ps1`: local browser launcher with static-server support
-- `stop_local_server.ps1`: stops the local launcher server
-- `package_release.ps1`: creates a timestamped release zip under `release/`
-- `generate_release_notes.ps1`: writes timestamped release notes under `release/`
+- `tests/test_smoke.py`: offline smoke test of the committed portfolio structure
 - `generated/`: portfolio manifest, validation snapshot, and browser validation output
 - `projects/`: generated topic apps, plans, and `validation.json` files
 
@@ -28,9 +25,19 @@ This repo now includes:
 
 ## Quick Start
 
-1. Run `powershell -ExecutionPolicy Bypass -File .\open_app.ps1` to start the local launcher and open the portfolio. The launcher serves `C:\Projects` so generated topic apps can load shared assets from sibling repos; do not open topic `index.html` files directly from disk.
-2. Run `powershell -ExecutionPolicy Bypass -File .\run_validation.ps1` for the standard validation path.
-3. Run `powershell -ExecutionPolicy Bypass -File .\package_release.ps1` when you need a release snapshot and matching release notes.
+Generated topic apps load shared assets from the sibling `esc-acs-living-meta`
+repo via relative paths, so serve the parent directory rather than opening a
+topic `index.html` directly from disk (for example
+`python -m http.server` from the directory that contains both repos).
+
+The npm scripts cover the generation and validation pipeline:
+
+1. `npm run generate:projects` regenerates the project folders and portfolio
+   index from `generated/topic-validation.json` and the sibling app template.
+2. `npm run validate:generated` runs the structural validation of the generated
+   output.
+3. `npm run test:smoke` runs the offline structural smoke test in `tests/`.
+4. `npm run validate` runs `validate:generated` followed by `test:smoke`.
 
 ## Related Repo
 
